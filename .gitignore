@@ -2,7 +2,7 @@
 
 blog/
 #wp-content/
-wp-content/uploads/
+#wp-content/uploads/
 staging/
 
 
