@@ -1,0 +1,274 @@
+.info-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .info {
+    margin-left: 10px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    &:after {
+      content: "";
+      width: 14px;
+      height: 15px;
+      background: url(../images/info-icon.svg) 0 0 no-repeat;
+      position: absolute;
+      top: -4px;
+      transform: translateY(-50%);
+      left: 0;
+    }
+
+    .info-content {
+      width: 315px;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 4px 4px 30px 0px rgba(227, 233, 245, 0.38);
+
+      padding: 15px;
+      position: absolute;
+
+      top: 25px;
+      left: -75px;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      visibility: hidden;
+      text-align: left;
+      line-height: initial;
+      z-index: 9;
+      h4 {
+        font-size: 14px;
+        color: $black;
+        margin: 0 0 5px;
+      }
+      p {
+        font-size: 11px;
+        color: $black;
+        line-height: 160%;
+        margin: 0 0 5px;
+        font-weight: normal;
+      }
+
+      .kmore {
+        font-size: 11px;
+        margin: 10px 0 0;
+        text-decoration: underline;
+        position: relative;
+        color: $black;
+        &:after {
+          content: "";
+          background: url(../images/know-arrow.png) 0 0 no-repeat;
+          width: 8px;
+          display: inline-block;
+          height: 8px;
+          margin-left: 5px;
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+          text-decoration: none;
+          color: $black;
+          &:after {
+            margin-left: 10px;
+          }
+        }
+      }
+
+      &:before {
+        content: "";
+        clear: both;
+        display: block;
+        background: url(../images/poly.svg) 0 0 no-repeat;
+        background-size: 100%;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: -15px;
+        left: 70px;
+      }
+    }
+
+    &:hover {
+      .info-content {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.button-section {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
+
+  .nccr {
+    font-size: 13px;
+    display: block;
+    margin: 20px 0 0;
+    text-align: center;
+  }
+  .devide {
+    padding: 0 10px;
+    display: inline-block;
+    position: relative;
+    color: $white;
+    opacity: 0.3;
+    font-size: 12px;
+    &:before {
+      content: "";
+      clear: both;
+      display: block;
+      width: 1px;
+      height: 16px;
+      position: absolute;
+      background: $white;
+      top: -20px;
+      left: 19px;
+      opacity: 0.3;
+    }
+
+    &:after {
+      content: "";
+      content: "";
+      clear: both;
+      display: block;
+      width: 1px;
+      height: 16px;
+      background: $white;
+      position: absolute;
+      bottom: -20px;
+      left: 19px;
+      opacity: 0.3;
+    }
+  }
+
+  .free-con {
+    a {
+      color: $white;
+      opacity: 0.5;
+      text-decoration: underline;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .info-wrap {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+    font-size: 13px;
+    margin: 8px 0 0;
+    .info {
+      &:after {
+        top: 0;
+      }
+      .info-content {
+        top: 28px;
+      }
+    }
+  }
+}
+
+.bg-blue-linear .info-wrap .info .info-content p {
+  color: $black !important;
+}
+
+
+@media only screen and (max-width: 1600px) {
+
+}
+
+@media only screen and (max-width: 1440px) {
+
+
+}
+
+
+@media only screen and (max-width: 1320px) {
+  .info-wrap {
+    .info {
+      .info-content {
+        width: 280px;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .second-level-section{
+    .form-right-box{
+      .head{
+        .info-wrap {
+          .info {
+            .info-content {
+              width:230px;
+            }
+          }
+        }
+      }
+    }
+  }  
+}
+
+@media only screen and (max-width: 991px) {
+  .second-level-section{
+    .form-right-box{
+      .head{
+        .info-wrap {
+          .info {
+            .info-content {
+              width:280px;
+            }
+          }
+        }
+      }
+    }
+  } 
+}
+
+@media only screen and (max-width: 767px) {
+
+
+  .button-section {
+    .btn-div{flex-basis: 100%; text-align: center;
+      .cta-wrap{justify-content: center;}
+      .cta-btn{justify-content: center;}
+    }
+  
+    .nccr {
+      font-size: 13px;
+      display: block;
+      margin: 20px 0 0;
+      text-align: center;
+    }
+    .devide {
+      width: 100%;
+      text-align: center;
+      padding: 5px;
+      &:before {
+        width: 16px;
+    height: 1px;
+    display: inline-block;
+    position: initial;
+    margin-right: 5px;
+    vertical-align: middle;
+      }
+  
+      &:after {
+        width: 16px;
+    height: 1px;
+    display: inline-block;
+    position: initial;
+    margin-left: 5px;
+    vertical-align: middle;
+      }
+    }
+
+    
+    
+  } 
+
+}

@@ -3,8 +3,8 @@
 blog/
 #wp-content/
 #wp-content/uploads/
-staging/
-
+#staging/
+staging/wp-content/uploads/
 
 robots.txt
 .DS_Store
