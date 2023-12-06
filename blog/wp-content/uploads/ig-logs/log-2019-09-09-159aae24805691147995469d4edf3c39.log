@@ -1,0 +1,7 @@
+2019-09-09T09:58:45+00:00 INFO Saving Another Batch
+1) /home/valuecoc/public_html/blog/wp-cron.php(133): do_action_ref_array('woocommerce_cle...', Array)
+2) /home/valuecoc/public_html/blog/wp-includes/plugin.php(531): WP_Hook->do_action(Array)
+3) /home/valuecoc/public_html/blog/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+4) /home/valuecoc/public_html/blog/wp-includes/class-wp-hook.php(286): WC_Privacy->queue_cleanup_personal_data()
+5) /home/valuecoc/public_html/blog/wp-content/plugins/woocommerce/includes/class-wc-privacy.php(131): WP_Background_Process->save()
+

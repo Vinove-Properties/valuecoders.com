@@ -5,7 +5,9 @@
 #wp-content/uploads/
 #staging/
 #staging/wp-content/uploads/
-blog/wp-content/uploads/
+#blog/wp-content/uploads/
+#!blog/wp-content/uploads/2023
+blog/wp-content/_temp
 
 robots.txt
 .DS_Store
