@@ -1,0 +1,214 @@
+.global-counter {
+  .content-box {
+    em {
+      font-weight: 500;
+      font-size: 14px;
+      color: #ffb81d;
+      text-transform: uppercase;
+      font-style: normal;
+    }
+    h4 {
+      margin: 40px 0 0;
+    }
+    p{
+    &:first-child{margin:0;}
+    }
+    
+    .award-logo {
+      padding: 25px 0 0;
+      .logo-box {
+        width: 80px;
+        height: 78px;
+        background: url(../images/award-logo.svg) 0 0 no-repeat;
+        display: inline-block;
+        background-position: 0 0;
+        margin-right: 30px;
+        &.logo2 {
+          width: 130px;
+          background-position: -116px 0;
+        }
+        &.logo3 {
+          background-position: -283px 0;
+          width: 50px;
+        }
+        &.logo4 {
+          width: 90px;
+          background-position: -372px 0;
+        }
+        &.logo5 {
+          background-position: -527px 0;
+          width: 113px;
+        }
+      }
+    }
+
+    .a-dotted{position: relative; color: #656565;
+      &:after{content:''; width:84px; height:1px; border-bottom:1px dotted #656565; position: absolute; left:0; bottom:0;}
+      &:hover{color:#212121;
+      &:after{border-color:#212121;}
+      }
+      }
+  }
+
+  .image-box {
+    text-align: right;
+  }
+}
+
+.global-companies {
+  .image-box {
+    flex-basis: 48%;
+  }
+  .content-box {
+    padding-left: 70px;
+    flex-basis: 52%;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        flex-basis: 50%;
+        margin: 10px 0;
+        padding: 0 15px 0 28px;
+        position: relative;
+        &:before {
+          content: "";
+          display: block;
+          background: url(../images/tick-icon.png) no-repeat;
+          width: 18px;
+          height: 15px;
+          position: absolute;
+          top: 5px;
+          left: 0;
+        }
+      }
+    }
+
+  }
+
+  &.hire-global {
+    .content-box {
+      padding-right: 70px;
+      padding-left: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .global-counter {
+    .content-box {
+      .award-logo {
+        .logo-box {
+          margin-right: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1320px) {
+  .global-counter {
+    .content-box {
+      h4 {
+        margin: 30px 0 0;
+      }
+      .award-logo {
+        padding: 20px 0 0;
+        .logo-box {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+  .global-companies {
+    .content-box {
+      padding-left: 50px;
+      ul {
+        li {
+          margin: 10px 0 0;
+        }
+      }
+    }
+    &.hire-global {
+      .content-box {
+        padding-right: 50px;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .global-counter {
+    .image-box {
+      text-align: left;
+      margin: 30px 0 0;
+    }
+    .content-box {
+      .award-logo {
+        .logo-box {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+
+  .global-companies {
+    .image-box {
+      flex-basis: 100%;
+      order: 2;
+      margin: 30px 0 0;
+      text-align: center;
+    }
+    .content-box {
+      padding-left: 0;
+      flex-basis: 100%;
+      order: 1;
+    }
+
+    &.hire-global {
+      .content-box {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .global-counter {
+    .content-box {
+      small {
+        font-size: 13px;
+      }
+      h4 {
+        margin: 20px 0 0;
+      }
+    }
+  }
+
+  .global-companies {
+    .content-box {
+      ul {
+        li {
+          flex-basis: 100%;
+          padding: 0 15px 0 25px;
+          line-height: 24px;
+          &:before {
+            content: "";
+            background-size: 100%;
+            width: 14px;
+            height: 13px;
+          }
+        }
+      }
+    }
+
+    &.hire-global {
+      .content-box {
+        padding-right:0;
+        padding-left: 0;
+      }
+    }
+  }
+}

@@ -1,7 +1,8 @@
 */\.htaccess
 
 blog/
-wp-content/
+#wp-content/
+wp-content/uploads/
 staging/
 
 
