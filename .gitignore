@@ -1,10 +1,11 @@
 */\.htaccess
 
-blog/
+#blog/
 #wp-content/
 #wp-content/uploads/
 #staging/
 #staging/wp-content/uploads/
+blog/wp-content/uploads/
 
 robots.txt
 .DS_Store

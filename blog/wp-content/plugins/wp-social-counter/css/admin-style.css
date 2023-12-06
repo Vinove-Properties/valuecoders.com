@@ -1,0 +1,45 @@
+/* line 17, admin-style.scss */
+.form-table + h2 {
+  border-bottom: 2px dashed #cecece;
+  padding-bottom: 10px; }
+/* line 22, admin-style.scss */
+.form-table th {
+  padding-left: 15px; }
+
+/* line 29, admin-style.scss */
+.field-type-images label {
+  position: relative;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: inline-block; }
+/* line 35, admin-style.scss */
+.field-type-images img {
+  opacity: .5; }
+/* line 38, admin-style.scss */
+.field-type-images input:checked + img {
+  opacity: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); }
+/* line 43, admin-style.scss */
+.field-type-images input {
+  opacity: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 10px; }
+
+@media screen and (max-width: 960px) {
+  /* line 53, admin-style.scss */
+  .field-type-images img {
+    max-width: 100px;
+    height: auto !important; } }
+/* line 60, admin-style.scss */
+#wpsc-generate-data i {
+  display: none; }
+/* line 63, admin-style.scss */
+#wpsc-generate-data .spinner {
+  float: none; }
+/* line 67, admin-style.scss */
+#wpsc-generate-data.active i {
+  display: inline-block;
+  color: #4CAF50; }
+
+/*# sourceMappingURL=admin-style.css.map */

@@ -1,0 +1,5 @@
+keyword,link,add_same_link,link_once,force_insert,limit_inserts,insert_limit,select_links,set_priority,priority_setting,prioritize_longtail,restrict_date,restricted_date,case_sensitive,restrict_to_cats,restrict_term_
+Keyword,Link,Add Link if post already has link?,Only link once per post?,Override 'One link per sentence' rule?,Limit how many autolinks are created?,Link insertion limit,Select links before inserting?,Set priority for link insertion?,Link insertion priority,Prioritize long-tail keywords,Only add links to posts published after specific date?,Specific date,Make keyword search case sensitive,Restrict autolinks to specific categories,Specific category ids
+"a","https://ex.com/6",1,1,0,0,0,0,1,5,0,0,,0,0,""
+"do","https://en.wikipedia.org/wiki/Pizza_Do",1,1,0,1,5,0,0,1,1,0,,0,0,""
+"This has more key-words","https://en.wikipedia.org/wiki/Pizza_keyword_priority",1,1,0,1,5,0,0,5,1,0,,0,0,""

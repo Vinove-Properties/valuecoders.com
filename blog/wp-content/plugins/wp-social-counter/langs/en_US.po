@@ -1,0 +1,485 @@
+# Copyright (C) 2015 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Social Counter\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2016-11-25 23:18+0700\n"
+"PO-Revision-Date: 2016-11-25 23:18+0700\n"
+"Last-Translator: \n"
+"Language-Team: wpthms.com <wpthms@gmail.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:1,2c;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:4c,1,2\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../inc/admin/settings.php:29 ../inc/admin/settings.php:34
+msgid "General Settings"
+msgstr ""
+
+#: ../inc/admin/settings.php:48
+msgid "Layout"
+msgstr ""
+
+#: ../inc/admin/settings.php:49
+msgid ""
+"Select default design. You can also override design using shortcode/widget"
+msgstr ""
+
+#: ../inc/admin/settings.php:66
+msgid "Design style"
+msgstr ""
+
+#: ../inc/admin/settings.php:67
+msgid "Select style design."
+msgstr ""
+
+#: ../inc/admin/settings.php:81
+msgid "Shape"
+msgstr ""
+
+#: ../inc/admin/settings.php:82
+msgid "This option only applies to default design style"
+msgstr ""
+
+#: ../inc/admin/settings.php:85 ../inc/public/widget.php:95
+msgid "Square"
+msgstr ""
+
+#: ../inc/admin/settings.php:86 ../inc/public/widget.php:96
+msgid "Round"
+msgstr ""
+
+#: ../inc/admin/settings.php:87 ../inc/public/widget.php:97
+msgid "Cirle"
+msgstr ""
+
+#: ../inc/admin/settings.php:92
+msgid "Color Style"
+msgstr ""
+
+#: ../inc/admin/settings.php:93
+msgid "Select color style"
+msgstr ""
+
+#: ../inc/admin/settings.php:96 ../inc/public/widget.php:111
+msgid "Default - Color"
+msgstr ""
+
+#: ../inc/admin/settings.php:97 ../inc/public/widget.php:112
+msgid "Gray"
+msgstr ""
+
+#: ../inc/admin/settings.php:98 ../inc/public/widget.php:113
+msgid "Black"
+msgstr ""
+
+#: ../inc/admin/settings.php:99 ../inc/public/widget.php:114
+msgid "Plain color"
+msgstr ""
+
+#: ../inc/admin/settings.php:111
+msgid "Number format"
+msgstr ""
+
+#: ../inc/admin/settings.php:112
+msgid "Select number format"
+msgstr ""
+
+#: ../inc/admin/settings.php:115 ../inc/public/widget.php:127
+msgid "Default - 15332"
+msgstr ""
+
+#: ../inc/admin/settings.php:116 ../inc/public/widget.php:128
+msgid "Grouped of thousands - 15,332"
+msgstr ""
+
+#: ../inc/admin/settings.php:117 ../inc/public/widget.php:129
+msgid "Shortened - 15.3k"
+msgstr ""
+
+#: ../inc/admin/settings.php:122
+msgid "Preload Cache"
+msgstr ""
+
+#: ../inc/admin/settings.php:123
+msgid ""
+"Preload data for the first initialization or generate new data. You should "
+"use this action when you enable/disable services as well."
+msgstr ""
+
+#: ../inc/admin/settings.php:123
+msgid "By default, new data will be automatically refreshed in 24 hours."
+msgstr ""
+
+#: ../inc/admin/settings.php:131
+msgid "Services"
+msgstr ""
+
+#: ../inc/admin/settings.php:137 ../inc/public/frontend.php:113
+#: ../inc/public/frontend.php:114
+msgid "Comments"
+msgstr ""
+
+#: ../inc/admin/settings.php:156 ../inc/admin/settings.php:162
+#: ../inc/public/frontend.php:55
+msgid "Facebook"
+msgstr ""
+
+#: ../inc/admin/settings.php:163 ../inc/admin/settings.php:194
+#: ../inc/admin/settings.php:235 ../inc/admin/settings.php:261
+#: ../inc/admin/settings.php:293 ../inc/admin/settings.php:323
+#: ../inc/admin/settings.php:367
+msgid "Enable"
+msgstr ""
+
+#: ../inc/admin/settings.php:168
+msgid "Facebook Page ID"
+msgstr ""
+
+#: ../inc/admin/settings.php:170
+msgid "Your Facebook page ID, numeric ID or your custom page slug address."
+msgstr ""
+
+#: ../inc/admin/settings.php:174
+msgid "Facebook App ID"
+msgstr ""
+
+#: ../inc/admin/settings.php:176
+msgid ""
+"How to generate App ID and App Secret? You need to create an app on Facebook "
+"Developer site:"
+msgstr ""
+
+#: ../inc/admin/settings.php:180
+msgid "Facebook App Secret"
+msgstr ""
+
+#: ../inc/admin/settings.php:187 ../inc/admin/settings.php:193
+#: ../inc/public/frontend.php:62
+msgid "Twitter"
+msgstr ""
+
+#: ../inc/admin/settings.php:199
+msgid "Twitter Username"
+msgstr ""
+
+#: ../inc/admin/settings.php:201
+msgid "Your username, for example: Google"
+msgstr ""
+
+#: ../inc/admin/settings.php:205
+msgid "Twitter Consumer key"
+msgstr ""
+
+#: ../inc/admin/settings.php:207
+msgid "Create an App on Twitter Application Management and get these keys."
+msgstr ""
+
+#: ../inc/admin/settings.php:211
+msgid "Twitter Consumer secret"
+msgstr ""
+
+#: ../inc/admin/settings.php:216
+msgid "Twitter Access Token"
+msgstr ""
+
+#: ../inc/admin/settings.php:221
+msgid "Twitter Access Token Secret"
+msgstr ""
+
+#: ../inc/admin/settings.php:228 ../inc/admin/settings.php:234
+msgid "Google Plus"
+msgstr ""
+
+#: ../inc/admin/settings.php:240
+msgid "Google Plus ID"
+msgstr ""
+
+#: ../inc/admin/settings.php:242
+msgid ""
+"Your numeric id or custom ID. <br>Something like this https://plus.google."
+"com/<a>116899029375914044550</a> or https://plus.google.com/<a>+google</a>"
+msgstr ""
+
+#: ../inc/admin/settings.php:246
+msgid "Google Plus API key"
+msgstr ""
+
+#: ../inc/admin/settings.php:248
+msgid ""
+"How can i get Google API key? <br>Step 1: You need to create a project in <a "
+"href=\"https://console.developers.google.com/project\" target=\"_blank"
+"\">Google APIs</a> <br>Step 2: Go to <a href=\"//console.developers.google."
+"com/apis\">API Manager</a> -> Library -> select Google+ API -> Enable. "
+"<br>Step 3: Go to <a href=\"//console.developers.google.com/apis/credentials"
+"\" target=\"_blank\">Credentials</a> -> Create credentials -> API key."
+msgstr ""
+
+#: ../inc/admin/settings.php:254 ../inc/admin/settings.php:260
+#: ../inc/public/frontend.php:76
+msgid "Youtube"
+msgstr ""
+
+#: ../inc/admin/settings.php:266
+msgid "Youtube Channel ID"
+msgstr ""
+
+#: ../inc/admin/settings.php:268
+msgid "How to find your channel ID?"
+msgstr ""
+
+#: ../inc/admin/settings.php:272
+msgid "Youtube Channel URL"
+msgstr ""
+
+#: ../inc/admin/settings.php:274
+msgid "for example: https://www.youtube.com/Google"
+msgstr ""
+
+#: ../inc/admin/settings.php:278
+msgid "Youtube API key and "
+msgstr ""
+
+#: ../inc/admin/settings.php:280
+msgid ""
+"How can i get Google API key? <br>Step 1: You need to create a project in <a "
+"href=\"https://console.developers.google.com/project\" target=\"_blank"
+"\">Google APIs</a> <br>Step 2: Go to <a href=\"//console.developers.google."
+"com/apis\">API Manager</a> -> Library -> select YouTube Data API -> Enable. "
+"<br>Step 3: Go to <a href=\"//console.developers.google.com/apis/credentials"
+"\" target=\"_blank\">Credentials</a> -> Create credentials -> API key."
+msgstr ""
+
+#: ../inc/admin/settings.php:286 ../inc/admin/settings.php:292
+#: ../inc/public/frontend.php:83
+msgid "Instagram"
+msgstr ""
+
+#: ../inc/admin/settings.php:298
+msgid "Instagram Username"
+msgstr ""
+
+#: ../inc/admin/settings.php:303
+msgid "Instagram User ID"
+msgstr ""
+
+#: ../inc/admin/settings.php:305
+msgid "How to get User ID and Access Token ?"
+msgstr ""
+
+#: ../inc/admin/settings.php:309
+msgid "Instagram Access Token"
+msgstr ""
+
+#: ../inc/admin/settings.php:316 ../inc/admin/settings.php:322
+#: ../inc/public/frontend.php:90
+msgid "Pinterest"
+msgstr ""
+
+#: ../inc/admin/settings.php:329
+msgid "Pinterest Username"
+msgstr ""
+
+#: ../inc/admin/settings.php:331
+msgid "For example: pinterest"
+msgstr ""
+
+#: ../inc/admin/settings.php:360
+msgid "Mailchimp Subscribers"
+msgstr ""
+
+#: ../inc/admin/settings.php:366
+msgid "Mailchimp"
+msgstr ""
+
+#: ../inc/admin/settings.php:373
+msgid "Mailchimp API key"
+msgstr ""
+
+#: ../inc/admin/settings.php:374
+msgid "Get your API key!"
+msgstr ""
+
+#: ../inc/admin/settings.php:379
+msgid "Mailchimp list"
+msgstr ""
+
+#: ../inc/admin/settings.php:388
+msgid "Extra"
+msgstr ""
+
+#: ../inc/admin/settings.php:394
+msgid "Registered users"
+msgstr ""
+
+#: ../inc/admin/settings.php:395
+msgid "Show number of registered users"
+msgstr ""
+
+#: ../inc/admin/settings.php:401
+msgid "Approved Comments"
+msgstr ""
+
+#: ../inc/admin/settings.php:402
+msgid "Show number of approved comments on your site"
+msgstr ""
+
+#: ../inc/admin/settings.php:409
+msgid "System Info."
+msgstr ""
+
+#: ../inc/admin/settings.php:441
+msgid "Settings"
+msgstr ""
+
+#: ../inc/admin/settings.php:455 ../inc/admin/settings.php:456
+#: ../inc/admin/settings.php:475 ../inc/public/widget.php:18
+msgid "WP Social Counter"
+msgstr ""
+
+#: ../inc/admin/settings.php:651
+msgid "New cache is generating, please be patient!"
+msgstr ""
+
+#: ../inc/admin/settings.php:652
+msgid ""
+"This action will generate new cache for services, are you sure you want to "
+"do this? Note that you must keep this window open during the process."
+msgstr ""
+
+#: ../inc/admin/settings.php:666
+msgid "I want to place social counter elsewhere, how can i do it?"
+msgstr ""
+
+#: ../inc/admin/settings.php:668
+msgid ""
+"If you want to place WP Social Counter manually, you can use shortcode or "
+"use php function like following:"
+msgstr ""
+
+#: ../inc/admin/settings.php:671
+msgid "Shortcode:"
+msgstr ""
+
+#: ../inc/admin/settings.php:688
+msgid "PHP function:"
+msgstr ""
+
+#: ../inc/admin/settings.php:704
+msgid ""
+"Step 3: Go edit page/post, then look for WP Social Counter setting box, and "
+"overriding sidebars."
+msgstr ""
+
+#: ../inc/admin/settings.php:709
+msgid "How to use?"
+msgstr ""
+
+#: ../inc/admin/settings.php:788
+msgid "You need to enter api key then save to update this field."
+msgstr ""
+
+#: ../inc/admin/settings.php:821
+msgid "No List found"
+msgstr ""
+
+#: ../inc/admin/settings.php:824
+msgid "Select list you wish to retrieve number of subscriber"
+msgstr ""
+
+#: ../inc/public/frontend.php:56
+msgid "Likes"
+msgstr ""
+
+#: ../inc/public/frontend.php:63 ../inc/public/frontend.php:70
+#: ../inc/public/frontend.php:84 ../inc/public/frontend.php:91
+msgid "Followers"
+msgstr ""
+
+#: ../inc/public/frontend.php:69
+msgid "Google+"
+msgstr ""
+
+#: ../inc/public/frontend.php:77
+msgid "Subscribers"
+msgstr ""
+
+#: ../inc/public/frontend.php:98 ../inc/public/frontend.php:99
+msgid "Readers"
+msgstr ""
+
+#: ../inc/public/frontend.php:105 ../inc/public/frontend.php:106
+msgid "Users"
+msgstr ""
+
+#: ../inc/public/widget.php:15
+msgid ""
+"Display the number of fans/subscribers/followers from Facebook, Google+, "
+"Twitter, Youtube and other social media networks."
+msgstr ""
+
+#: ../inc/public/widget.php:49
+msgid "Follow Us"
+msgstr ""
+
+#: ../inc/public/widget.php:58
+msgid "Title:"
+msgstr ""
+
+#: ../inc/public/widget.php:62
+msgid "Layout:"
+msgstr ""
+
+#: ../inc/public/widget.php:66 ../inc/public/widget.php:81
+msgid "Default"
+msgstr ""
+
+#: ../inc/public/widget.php:67
+msgid "2 Columns"
+msgstr ""
+
+#: ../inc/public/widget.php:68
+msgid "3 Columns"
+msgstr ""
+
+#: ../inc/public/widget.php:77
+msgid "Design:"
+msgstr ""
+
+#: ../inc/public/widget.php:82
+msgid "Alt"
+msgstr ""
+
+#: ../inc/public/widget.php:91
+msgid "Shape:"
+msgstr ""
+
+#: ../inc/public/widget.php:107
+msgid "Style:"
+msgstr ""
+
+#: ../inc/public/widget.php:123
+msgid "Number Format:"
+msgstr ""
+
+#, fuzzy
+#~ msgctxt "admin - tag delimiter"
+#~ msgid ","
+#~ msgstr " "
+
+#~ msgctxt "entry tags separator"
+#~ msgid ", "
+#~ msgstr ", "
+
+#, fuzzy
+#~ msgctxt "entry categories separator"
+#~ msgid ", "
+#~ msgstr ", "

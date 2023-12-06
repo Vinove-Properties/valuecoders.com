@@ -1,0 +1,7 @@
+<!-- Handcrafted by wpthms.com  -->
+<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+	<!-- <circle cx="40" cy="40" r="38" fill="rgba(0,0,0,0.85)" stroke="none"></circle> -->
+	<circle r="38" cy="40" cx="40" stroke-width="4" stroke="#fff" fill="none"></circle>
+	<polygon stroke="none" points="32,28 52,40 32,52" fill="#fff" stroke-linejoin="round"></polygon>
+	<!-- <polygon fill="none" points="35,30 52,40 35,50" stroke="#fff" stroke-width="4" stroke-linejoin="round"></polygon> -->
+</svg>

@@ -1,0 +1,72 @@
+@mixin clearfix() {
+    zoom: 1;
+
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+form h2{
+}
+.form-table{
+	& +h2{
+	    border-bottom: 2px dashed #cecece;
+	    padding-bottom: 10px;
+
+	}
+	th{
+	    padding-left: 15px;
+	}
+    
+}
+	
+.field-type-images{
+	label{
+	    position: relative;
+	    margin-right: 10px;
+	    margin-bottom: 10px;
+	    display: inline-block;
+	}
+	img{
+	    opacity: .5;
+	}
+	input:checked + img{
+	    opacity: 1;
+	    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+	}
+
+	input{
+	    opacity:0;
+	    position:absolute;
+	    bottom: 10px;
+	    left: 10px;
+	}
+
+}
+
+@media screen and ( max-width: 960px ){
+    .field-type-images img{
+        max-width: 100px;
+        height: auto !important;
+
+    }    
+}
+#wpsc-generate-data{
+	i{
+		display: none;
+	}
+	.spinner{ 
+		float: none;
+	}
+	&.active{
+		i{
+			display: inline-block;
+			color: #4CAF50;
+		}
+	}
+}

@@ -1,0 +1,9 @@
+<wpml-config>    
+    <admin-texts>
+        <key name="wp_real_review">
+            <key name="desc_title" />
+            <key name="pros_title" />
+            <key name="cons_title" />
+        </key>
+    </admin-texts> 
+</wpml-config>

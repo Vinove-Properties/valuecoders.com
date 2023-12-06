@@ -1,0 +1,5 @@
+[Oct 12 05:15:55] 
+[Oct 12 05:15:55] ==DUPLICATOR INSTALLER BOOTSTRAP v1.4.5==
+[Oct 12 05:15:55] ----------------------------------------------------
+[Oct 12 05:15:55] Installer bootstrap start
+[Oct 12 05:15:55] [ERROR] Archive file not found!

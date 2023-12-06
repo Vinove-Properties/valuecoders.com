@@ -1,0 +1,107 @@
+.popup-section {
+	 width: 100%;
+}
+ .popup-section .popup-wrapper {
+	 z-index: 999;
+	 display: none;
+	 position: fixed;
+	 left: 0;
+	 right: 0;
+	 margin: 0 auto;
+	 top: 0;
+	 width: 100%;
+	 height: 100%;
+	 background-color: black;
+	 background-color: rgba(0, 0, 0, 0.6);
+}
+ .popup-section .popup-wrapper .popWrap {
+	 width: 100%;
+	 height: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .popup-section .popup-wrapper .popWrap .popup-content {
+	 width: 612px;
+	 background: #fff;
+	 border-radius: 25px;
+	 padding: 36px 70px;
+	 text-align: center;
+	 position: relative;
+}
+ .popup-section .popup-wrapper .popWrap .popup-content h2 {
+	 color: #ffad00;
+	 font-weight: bold;
+	 font-size: 32px;
+	 margin: 0 0 5px;
+	 line-height: 40px;
+}
+ .popup-section .popup-wrapper .popWrap .popup-content h3 {
+	 font-size: 24px;
+	 line-height: 32px;
+	 font-weight: 600;
+	 margin: 0 0 15px;
+	 color: #05164d;
+}
+ .popup-section .popup-wrapper .popWrap .popup-content p {
+	 color: #666;
+}
+ .popup-section .popup-wrapper .popWrap .popup-content .ctasec {
+	 margin: 20px 0 0;
+}
+ .popup-section .popup-wrapper .popWrap .popup-content .ctasec a {
+	 display: inline-block;
+	 border: 1px solid #05164d;
+	 margin: 15px auto 0;
+	 padding: 15px 20px;
+	 font-weight: 500;
+	 color: #05164d;
+	 border-radius: 8px;
+	 min-width: 376px;
+}
+ .popup-section .popup-wrapper .popWrap .popup-content .ctasec a.book-btn {
+	 background: #ffad00;
+	 border-color: #ffad00;
+}
+ .popup-section .popup-wrapper .popWrap .popup-content .ctasec a:hover {
+	 background: #05164d;
+	 color: #fff;
+	 border-color: #05164d;
+}
+ .popup-section .popup-wrapper .popWrap .popup-content .closeicon {
+	 cursor: pointer;
+	 position: absolute;
+	 right: 18px;
+	 top: 10px;
+	 background: none;
+}
+ .popup-section .exit-intent-popup {
+	 display: none;
+}
+ .popup-section .exit-intent-popup.visible {
+	 display: block;
+}
+ @media only screen and (max-width: 991px) {
+	 .popup-section .popup-wrapper .popWrap .popup-content {
+		 width: 90%;
+		 border-radius: 20px;
+		 padding: 30px 35px;
+	}
+	 .popup-section .popup-wrapper .popWrap .popup-content h2 {
+		 font-size: 27px;
+		 line-height: 32px;
+	}
+	 .popup-section .popup-wrapper .popWrap .popup-content h3 {
+		 font-size: 18px;
+		 line-height: 26px;
+		 margin: 0 0 10px;
+	}
+	 .popup-section .popup-wrapper .popWrap .popup-content .ctasec {
+		 margin: 20px 0 0;
+	}
+	 .popup-section .popup-wrapper .popWrap .popup-content .ctasec a {
+		 padding: 12px 20px;
+		 margin: 10px 0 0;
+		 min-width: auto;
+	}
+}

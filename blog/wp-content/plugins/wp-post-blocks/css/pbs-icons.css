@@ -1,0 +1,304 @@
+@font-face {
+  font-family: 'wp-pbs-icons';
+  src:
+    url('../fonts/wp-pbs-icons.ttf?p82ib3') format('truetype'),
+    url('../fonts/wp-pbs-icons.woff?p82ib3') format('woff'),
+    url('../fonts/wp-pbs-icons.svg?p82ib3#wp-pbs-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="pbsi-"], [class*=" pbsi-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'wp-pbs-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pbs{
+  font-size: 48px;
+}
+
+.pbsi-post_block_section_heading,
+.pbsi-post_block_brick_tax,
+.pbsi-post_block_brick_hybrid_tax,
+.pbsi-post_block_brick_hybrid_tax_1x2,
+.pbsi-post_block_theme_loop,
+.pbsi-post_block_14{
+  color: #7fb9d4;
+}
+.pbsi-post_block_dual_v4:before {
+  content: "\e955";
+}
+.pbsi-post_block_hybrid_1x1x4:before {
+  content: "\e956";
+}
+.pbsi-post_block_hybrid_1x2_v5:before {
+  content: "\e957";
+}
+.pbsi-post_block_hybrid_1x2x3:before {
+  content: "\e958";
+}
+.pbsi-post_block_hybrid_1x2x2_v2:before {
+  content: "\e952";
+}
+.pbsi-post_block_hybrid_1x2x2:before {
+  content: "\e953";
+}
+.pbsi-post_block_hybrid_1x2x4:before {
+  content: "\e954";
+}
+.pbsi-default:before {
+  content: "\e900";
+}
+.pbsi-post_block_1:before {
+  content: "\e901";
+}
+.pbsi-post_block_2:before {
+  content: "\e902";
+}
+.pbsi-post_block_3:before {
+  content: "\e903";
+}
+.pbsi-post_block_4:before {
+  content: "\e904";
+}
+.pbsi-post_block_5:before {
+  content: "\e905";
+}
+.pbsi-post_block_6:before {
+  content: "\e906";
+}
+.pbsi-post_block_7:before {
+  content: "\e907";
+}
+.pbsi-post_block_8:before {
+  content: "\e908";
+}
+.pbsi-post_block_9:before {
+  content: "\e909";
+}
+.pbsi-post_block_10:before {
+  content: "\e90a";
+}
+.pbsi-post_block_11:before {
+  content: "\e90b";
+}
+.pbsi-post_block_12:before {
+  content: "\e90c";
+}
+.pbsi-post_block_13:before {
+  content: "\e90d";
+}
+.pbsi-post_block_14:before {
+  content: "\e90e";
+}
+.pbsi-post_block_brick_1x2_v2:before {
+  content: "\e90f";
+}
+.pbsi-post_block_brick_1x2_v3:before {
+  content: "\e910";
+}
+.pbsi-post_block_brick_1x2_v4:before {
+  content: "\e911";
+}
+.pbsi-post_block_brick_1x2:before {
+  content: "\e912";
+}
+.pbsi-post_block_brick_1x3_v2:before {
+  content: "\e913";
+}
+.pbsi-post_block_brick_1x3_v3:before {
+  content: "\e914";
+}
+.pbsi-post_block_brick_1x3_v4:before {
+  content: "\e915";
+}
+.pbsi-post_block_brick_1x3:before {
+  content: "\e916";
+}
+.pbsi-post_block_brick_1x4_v2:before {
+  content: "\e917";
+}
+.pbsi-post_block_brick_1x4_v3:before {
+  content: "\e918";
+}
+.pbsi-post_block_brick_1x6:before {
+  content: "\e919";
+}
+.pbsi-post_block_brick_2x2x3:before {
+  content: "\e91a";
+}
+.pbsi-post_block_brick_2x3:before {
+  content: "\e91b";
+}
+.pbsi-post_block_brick_2x3x2:before {
+  content: "\e91c";
+}
+.pbsi-post_block_brick_2x4:before {
+  content: "\e91d";
+}
+.pbsi-post_block_brick_2x5:before {
+  content: "\e91e";
+}
+.pbsi-post_block_brick_carousel:before {
+  content: "\e91f";
+}
+.pbsi-post_block_brick_dual:before {
+  content: "\e920";
+}
+.pbsi-post_block_brick_grid4_v2:before {
+  content: "\e921";
+}
+.pbsi-post_block_brick_grid4:before {
+  content: "\e922";
+}
+.pbsi-post_block_brick_grid5:before {
+  content: "\e923";
+}
+.pbsi-post_block_brick_grid6_v2:before {
+  content: "\e924";
+}
+.pbsi-post_block_brick_grid6_v3:before {
+  content: "\e925";
+}
+.pbsi-post_block_brick_grid6:before {
+  content: "\e926";
+}
+.pbsi-post_block_brick_hybrid_tax:before {
+  content: "\e927";
+}
+.pbsi-post_block_brick_hybrid_tax_1x2:before {
+  content: "\e928";
+}
+.pbsi-post_block_brick_quad:before {
+  content: "\e929";
+}
+.pbsi-post_block_brick_quint:before {
+  content: "\e92a";
+}
+.pbsi-post_block_brick_single:before {
+  content: "\e92b";
+}
+.pbsi-post_block_brick_symmetry:before {
+  content: "\e92c";
+}
+.pbsi-post_block_brick_tax:before {
+  content: "\e92d";
+}
+.pbsi-post_block_brick_triple:before {
+  content: "\e92e";
+}
+.pbsi-post_block_brick:before {
+  content: "\e92f";
+}
+.pbsi-post_block_carousel:before {
+  content: "\e930";
+}
+.pbsi-post_block_dual_v2:before {
+  content: "\e931";
+}
+.pbsi-post_block_dual_v3:before {
+  content: "\e932";
+}
+.pbsi-post_block_dual:before {
+  content: "\e933";
+}
+.pbsi-post_block_hybrid_1x2_v2:before {
+  content: "\e934";
+}
+.pbsi-post_block_hybrid_1x2_v3:before {
+  content: "\e935";
+}
+.pbsi-post_block_hybrid_1x2_v4:before {
+  content: "\e936";
+}
+.pbsi-post_block_hybrid_1x2:before {
+  content: "\e937";
+}
+.pbsi-post_block_hybrid_1x2x5:before {
+  content: "\e938";
+}
+.pbsi-post_block_hybrid_1x3_v2:before {
+  content: "\e939";
+}
+.pbsi-post_block_hybrid_1x3_v3:before {
+  content: "\e93a";
+}
+.pbsi-post_block_hybrid_1x3_v4:before {
+  content: "\e93b";
+}
+.pbsi-post_block_hybrid_1x3_v5:before {
+  content: "\e93c";
+}
+.pbsi-post_block_hybrid_1x3:before {
+  content: "\e93d";
+}
+.pbsi-post_block_hybrid_1x4_v2:before {
+  content: "\e93e";
+}
+.pbsi-post_block_hybrid_1x4_v3:before {
+  content: "\e93f";
+}
+.pbsi-post_block_hybrid_1x4:before {
+  content: "\e940";
+}
+.pbsi-post_block_hybrid_1x5_v2:before {
+  content: "\e941";
+}
+.pbsi-post_block_hybrid_1x5:before {
+  content: "\e942";
+}
+.pbsi-post_block_hybrid_2x1x2:before {
+  content: "\e943";
+}
+.pbsi-post_block_hybrid_2x1x5:before {
+  content: "\e944";
+}
+.pbsi-post_block_hybrid_2x5:before {
+  content: "\e945";
+}
+.pbsi-post_block_hybrid_3x2:before {
+  content: "\e946";
+}
+.pbsi-post_block_hybrid_3x3:before {
+  content: "\e947";
+}
+.pbsi-post_block_quad_v2:before {
+  content: "\e948";
+}
+.pbsi-post_block_quad:before {
+  content: "\e949";
+}
+.pbsi-post_block_quint_v2:before {
+  content: "\e94a";
+}
+.pbsi-post_block_quint:before {
+  content: "\e94b";
+}
+.pbsi-post_block_section_heading:before {
+  content: "\e94c";
+}
+.pbsi-post_block_slider:before {
+  content: "\e94d";
+}
+.pbsi-post_block_theme_loop:before {
+  content: "\e94e";
+}
+.pbsi-post_block_triple_v2:before {
+  content: "\e94f";
+}
+.pbsi-post_block_triple_v3:before {
+  content: "\e950";
+}
+.pbsi-post_block_triple:before {
+  content: "\e951";
+}

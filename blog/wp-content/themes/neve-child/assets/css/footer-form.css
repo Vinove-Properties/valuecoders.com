@@ -1,0 +1,611 @@
+.padding-b-150 {
+  padding-bottom: 150px; }
+
+.padding-t-150 {
+  padding-top: 150px; }
+
+.bg-dark-theme {
+  background-color: #181732; }
+  .bg-dark-theme .bg-dark-theme {
+    background-color: #1D1C39; }
+
+.bg-voilet {
+  background-color: #2B294D; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type=number] {
+  -moz-appearance: textfield; }
+
+.contact-us-section ::placeholder {
+  color: #fff;
+  font-family: 'noto_sansmedium', sans-serif;
+  text-transform: capitalize;
+  opacity: 1; }
+.contact-us-section .input-field {
+  color: #fff; }
+.contact-us-section input,
+.contact-us-section textarea {
+  font-family: 'noto_sansmedium', sans-serif; }
+
+.day .bg-voilet,
+.day .bg-dark-theme {
+  background-color: #F7F7F9; }
+.day .bg-dark-theme .bg-dark-theme {
+  background-color: #fff; }
+.day .contact-us-section ::placeholder {
+  color: #373658;
+  opacity: 0.5; }
+.day .contact-us-section .input-field {
+  color: #1D1D1D;
+  opacity: 1; }
+
+.contact-us-section {
+  position: relative; }
+  .contact-us-section ::-webkit-scrollbar {
+    width: 6px;
+    height: 85px;
+    border-radius: 5px;
+    overflow: scroll; }
+  .contact-us-section ::-webkit-scrollbar-track {
+    border-radius: 5px; }
+  .contact-us-section ::-webkit-scrollbar-thumb {
+    background: #60B741;
+    border-radius: 10px; }
+  .contact-us-section ::-webkit-scrollbar-thumb:hover {
+    background: #FFB81D; }
+  .contact-us-section .left-box {
+    flex-basis: 44%;
+    padding: 130px 90px;
+    border-radius: 10px 0 0 10px; }
+    .contact-us-section .left-box p {
+      font-size: 18px;
+      line-height: 28px;
+      margin-top: 8px;
+      position: relative;
+      margin-bottom: 0; }
+    .contact-us-section .left-box h2 {
+      font-size: 34px; }
+    .contact-us-section .left-box h3 {
+      color: #BDB7B7; }
+    .contact-us-section .left-box .profile-outer {
+      margin-top: 20px; }
+      .contact-us-section .left-box .profile-outer .profile-pic:nth-child(2) {
+        display: none; }
+    .contact-us-section .left-box .profile-pic {
+      margin-right: 10px;
+      text-align: center;
+      color: #fff;
+      font-size: 14px; }
+      .contact-us-section .left-box .profile-pic i {
+        background: url("https://www.valuecoders.com/wp-content/themes/valuecoders/images/account-manager-profiles-sprite.png") 2px 4px no-repeat;
+        width: 60px;
+        height: 60px;
+        display: block;
+        margin: 0 auto 7px; }
+        .contact-us-section .left-box .profile-pic i.pic2 {
+          background-position: -68px 4px; }
+        .contact-us-section .left-box .profile-pic i.pic3 {
+          background-position: -137px 4px; }
+        .contact-us-section .left-box .profile-pic i.pic4 {
+          background-position: -207px 4px; }
+  .contact-us-section h2 {
+    margin-bottom: 40px; }
+  .contact-us-section .list-box {
+    padding-left: 60px;
+    position: relative; }
+    .contact-us-section .list-box::before {
+      clear: both;
+      color: #fff;
+      background: #FFB81D;
+      font-size: 18px;
+      line-height: 21.09px;
+      border-radius: 50px;
+      height: 40px;
+      width: 40px;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      z-index: 1; }
+  .contact-us-section .side-dash1 p {
+    padding-bottom: 40px; }
+  .contact-us-section .side-dash1::before {
+    content: "1"; }
+  .contact-us-section .side-dash1::after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 100%;
+    border-left: 0.8px dashed rgba(223, 223, 223, 0.5);
+    width: 4px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 0; }
+  .contact-us-section .side-dash2::before {
+    content: "2"; }
+  .contact-us-section .right-box {
+    flex-basis: 56%;
+    padding: 160px 70px;
+    border-radius: 0 10px 10px 0; }
+  .contact-us-section .form-text-cont {
+    flex-basis: 50%;
+    margin-bottom: 15px; }
+    .contact-us-section .form-text-cont.verror label {
+      color: #DC0019; }
+  .contact-us-section .form-text-cont:nth-child(2n -1) {
+    padding-right: 35px; }
+  .contact-us-section .input-field {
+    border: 0.5px solid #fff;
+    padding: 18px 35px 18px 15px;
+    background: transparent;
+    width: 100%;
+    font-size: 18px;
+    line-height: 25px;
+    outline: 0; }
+  .contact-us-section .form-control small,
+  .contact-us-section .user-input small {
+    display: none;
+    font-size: 13px;
+    margin-top: 5px;
+    line-height: 0.6;
+  }
+  .contact-us-section .width-full .user-input {
+    border: 0.5px solid #fff;
+    padding: 18px 15px;
+    background: transparent;
+    width: 100%;
+    font-size: 18px;
+    line-height: 25px;
+    height: 200px;
+    margin-bottom: 30px;
+    padding-right: 35px;
+    }
+    .contact-us-section .width-full .user-input small {
+      display: block;
+      opacity: 0; }
+    .contact-us-section .width-full .user-input.form-control.verror {
+      border-color: red; }
+    .contact-us-section .width-full .user-input.success::after {
+      top: 27px; }
+  .contact-us-section .width-full.verror .user-input {
+    border-color: #DC0019 !important; }
+  .contact-us-section .comment-input {
+    height: 90px;
+    resize: none;
+    background: none;
+    outline: 0;
+    border: none;
+    overflow-y: auto;
+    padding: 0; }
+  .contact-us-section .drop-input {
+    position: relative;
+    bottom: 0;
+    left: 0; }
+  .contact-us-section .drop-box {
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 0.5px solid #fff;
+    font-size: 12px; }
+  .contact-us-section .checkout-submit {
+    background: #60B741;
+    border: 0;
+    outline: 0;
+    color: #1D1C39;
+    padding: 12px 27px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    font-weight: 600; }
+    .contact-us-section .checkout-submit:focus, .contact-us-section .checkout-submit:hover {
+      background-color: #fff;
+      color: #1D1C39; }
+  .contact-us-section .user-input.checkout {
+    text-align: right; }
+  .contact-us-section .user-input {
+    position: relative; }
+    .contact-us-section .user-input.success::after {
+      content: "";
+      background: url("https://www.valuecoders.com/wp-content/themes/valuecoders/images/success-icon.png") top center no-repeat;
+      background-size: 100%;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      width: 14px;
+      height: 14px;
+      transform: translateY(-50%);
+      z-index: 1; }
+  .contact-us-section #fileElem {
+    display: none; }
+  .contact-us-section .error {
+    color: #DC0019 !important;
+    opacity: 0.9;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 13px; }
+  .contact-us-section .form-text-cont.width-full {
+    flex-basis: 100%;
+    padding-right: 0; }
+  .contact-us-section #drop-area {
+    border: none;
+    margin-top: 10px;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    padding: 0; }
+    .contact-us-section #drop-area .button {
+      background: none;
+      color: #fff !important;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 5px 10px;
+      border: 0.5px solid #fff;
+      font-size: 12px;
+      border-radius: 0;
+      line-height: 1.6; }
+      .contact-us-section #drop-area .button:focus {
+        background: rgba(76, 76, 76, 0.7); }
+  .contact-us-section #gallery {
+    margin-bottom: 15px; }
+    .contact-us-section #gallery div {
+      display: inline-flex;
+      margin-right: 10px;
+      vertical-align: baseline;
+      align-items: flex-start;
+      position: relative;
+      transition: all 0.3s ease-in-out; }
+      .contact-us-section #gallery div button, .contact-us-section #gallery div a {
+        text-decoration: none;
+        background: #FFB81D;
+        padding: 4px;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+        border: 0; }
+        .contact-us-section #gallery div button:focus, .contact-us-section #gallery div a:focus {
+          background: #f30909; }
+  .contact-us-section #file-type-error {
+    font-size: 13px;
+    color: #DC0019;
+    margin-bottom: 10px; }
+  .contact-us-section .loader {
+    border: 5px solid #9F9F9F;
+    border-radius: 50%;
+    border-top: 5px solid #3498db;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    display: none; }
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  .contact-us-section .gal-loader {
+    position: relative;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: none; }
+    .contact-us-section .gal-loader.active {
+      background: rgba(0, 0, 0, 0.1); }
+      .contact-us-section .gal-loader.active .loader {
+        display: block; }
+    .contact-us-section .gal-loader.show-me {
+      display: block;
+      min-height: 100px; }
+  .contact-us-section .autocomplete-items {
+    display: none; }
+    .contact-us-section .autocomplete-items.has-data {
+      display: block;
+      height: 170px;
+      overflow-y: auto;
+      position: absolute;
+      top: 68px;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      box-shadow: 0px 6px 9px rgba(1, 0, 12, 0.43);
+      background: #1d1c39;
+      border-radius: 5px;
+      z-index: 2; }
+      .contact-us-section .autocomplete-items.has-data div {
+        color: #fff;
+        border-bottom: 1px solid #05142B;
+        background-color: #1D1C39;
+        padding: 10px;
+        font-size: 14px;
+        cursor: pointer;
+        padding: 15px 20px; }
+        .contact-us-section .autocomplete-items.has-data div.autocomplete-active, .contact-us-section .autocomplete-items.has-data div:hover {
+          background-color: rgba(0, 0, 0, 0.05); }
+  .contact-us-section .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px; }
+    .contact-us-section .form-group ::placeholder {
+      opacity: 0.5; }
+  .contact-us-section .quizQ {
+    background: #1D1C39 url("https://www.valuecoders.com/wp-content/themes/valuecoders/images/line-image.png") no-repeat top 8px left 15px;
+    border: 1px dashed #B8B8B8;
+    position: relative;
+    height: 70px;
+    line-height: 50px;
+    border-radius: 4px;
+    width: 191px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2%; }
+    .contact-us-section .quizQ span {
+      font-size: 30px; }
+  .contact-us-section .refreshbtn {
+    background: url("https://www.valuecoders.com/wp-content/themes/valuecoders/images/refresh-button.png") no-repeat;
+    width: 29px;
+    height: 24px;
+    margin-right: 14px;
+    padding-left: 20px;
+    cursor: pointer;
+    transition: all .5s ease 0s; }
+    .contact-us-section .refreshbtn:active {
+      transform: rotate(360deg); }
+  .contact-us-section .equal {
+    margin: 0 18px;
+    font-size: 25px; }
+  .contact-us-section .quizAns {
+    position: relative; }
+    .contact-us-section .quizAns input {
+      font-size: 30px;
+      background: transparent;
+      width: 94px;
+      height: 70px;
+      display: inline-flex;
+      text-align: center;
+      border: 1px solid #B8B8B8;
+      border-radius: 4px;
+      color: #fff; }
+    .contact-us-section .quizAns .error {
+      margin-left: 10px;
+      color: #DC0019;
+      font-size: 13px; }
+  .contact-us-section .verror small, .contact-us-section .verror label {
+    color: #DC0019 !important;
+    opacity: 0.9 !important;
+    display: block; }
+  .contact-us-section .verror .input-field,
+  .contact-us-section .verror .nice-select {
+    border-color: #DC0019 !important; }
+
+.day .contact-us-section .input-field,
+.day .contact-us-section .drop-box {
+  border: 0.5px solid #212121; }
+.day .contact-us-section .input-field {
+  background: #fff; }
+.day .contact-us-section .width-full .user-input {
+  border: 0.5px solid #212121;
+  background: #fff; }
+.day .contact-us-section .width-full .input-field {
+  border: 0; }
+.day .contact-us-section .left-box {
+  background-color: #FFB81D; }
+  .day .contact-us-section .left-box h2,
+  .day .contact-us-section .left-box h3,
+  .day .contact-us-section .left-box p {
+    color: #fff; }
+.day .contact-us-section .list-box::before {
+  color: #000;
+  background: #fff; }
+.day .contact-us-section .side-dash1::after {
+  border-left: 0.8px dashed rgba(255, 255, 255, 0.5); }
+.day .contact-us-section .checkout-submit {
+  color: #fff; }
+  .day .contact-us-section .checkout-submit:focus, .day .contact-us-section .checkout-submit:hover {
+    background: #FFB81D; }
+.day .contact-us-section #drop-area .button {
+  color: #212121 !important;
+  border: 0.5px solid #212121; }
+  .day .contact-us-section #drop-area .button:focus {
+    background: rgba(76, 76, 76, 0.3); }
+.day .contact-us-section.bg-dark-theme .bg-voilet {
+  background-color: #fff; }
+.day .contact-us-section .verror .input-field {
+  border-color: red; }
+.day .contact-us-section .autocomplete-items.has-data {
+  box-shadow: 0 1px 7px 5px #ddd;
+  background: #fff; }
+  .day .contact-us-section .autocomplete-items.has-data div {
+    color: #000;
+    background: #fff; }
+    .day .contact-us-section .autocomplete-items.has-data div.autocomplete-active, .day .contact-us-section .autocomplete-items.has-data div:hover {
+      background-color: rgba(0, 0, 0, 0.05); }
+.day .contact-us-section .quizAns input {
+  color: #212121; }
+.day .contact-us-section .quizQ {
+  background: #fff url("https://www.valuecoders.com/wp-content/themes/valuecoders/images/line-image-dark.png") no-repeat top 8px left 15px; }
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .safari_only, a, span.title, .checkout-submit {
+      font-weight: 500 !important; } } }
+@-moz-document url-prefix() {
+  a, span.title, .checkout-submit {
+    font-weight: 500 !important; } }
+@media only screen and (max-width: 1600px) {
+  .padding-b-150 {
+    padding-bottom: 100px; }
+
+  .padding-t-150 {
+    padding-top: 100px; }
+
+  .contact-us-section .left-box,
+  .contact-us-section .right-box {
+    padding: 80px 60px; }
+  .contact-us-section .left-box p {
+    font-size: 16px; }
+  .contact-us-section .input-field {
+    font-size: 16px; } }
+@media only screen and (max-width: 1440px) {
+  .contact-us-section .left-box,
+  .contact-us-section .right-box {
+    padding: 70px 50px; }
+  .contact-us-section .left-box h2 {
+    font-size: 30px; }
+  .contact-us-section #gallery div a {
+    width: 16px;
+    height: 16px;
+    font-size: 10px; }
+  .contact-us-section .width-full .user-input {
+    margin-bottom: 30px; } }
+@media only screen and (max-width: 1320px) {
+  .contact-us-section .left-box h2 { font-size: 32px; line-height: 38px; }
+
+  .container,
+  .hero-section::after,
+  .second-level-section::after,
+  .hero-img-section h1 {
+    max-width: 1160px; }
+
+  .second-level-section .col-estimate-box h3 {
+    font-size: 18px;
+    line-height: 22px; }
+  .second-level-section .col-estimate-box .inner-content {
+    padding: 15px; }
+    .second-level-section .col-estimate-box .inner-content p {
+      margin-top: 2px;
+      font-size: 16px; }
+
+  .client-logo-box-section h4 {
+    font-size: 12px; }
+
+  .sample-profile-no-img-section .sample-block {
+    padding: 40px 8px; }
+
+  .open-free-trial::after {
+    width: 25px;
+    height: 25px;
+    background-position: 4px -34px; }
+
+  .tech-stack-updated-section .logo-list-box {
+    padding: 15px 10px 25px; }
+  .tech-stack-updated-section.for-tech-icons .logo-list-box {
+    padding: 30px 20px; }
+  .tech-stack-updated-section.for-tech-icons .icon-box {
+    margin: 3px; }
+
+  .footer span,
+  .footer a {
+    font-size: 12px; }
+
+  .breadcrumbs {
+    font-size: 12px; }
+    .breadcrumbs a {
+      font-size: 12px; }
+
+  .day .open-free-trial::after {
+    background-position: -20px -34px; } }
+@media only screen and (max-width: 1200px) {
+  .contact-us-section .left-box,
+  .contact-us-section .right-box {
+    padding: 50px 30px; }
+  .contact-us-section .user-input.success::after {
+    right: 8px; } }
+@media only screen and (max-width: 991px) {
+  .padding-t-150 {
+    padding-top: 60px; }
+
+  .padding-b-150 {
+    padding-bottom: 60px; }
+
+  .contact-us-section .left-box {
+    flex-basis: 100%; }
+  .contact-us-section .right-box {
+    flex-basis: 100%; } }
+@media only screen and (max-width: 767px) {
+  .contact-us-section .left-box h2 {
+    font-size: 20px;
+    margin-bottom: 30px; }
+  .contact-us-section .left-box,
+  .contact-us-section .right-box {
+    padding: 30px 15px; }
+  .contact-us-section .left-box p {
+    font-size: 14px;
+    line-height: 22px; }
+  .contact-us-section .left-box .profile-pic {
+    margin-right: 2px; }
+  .contact-us-section .list-box {
+    padding-left: 40px; }
+    .contact-us-section .list-box::before {
+      font-size: 16px;
+      line-height: 24px;
+      height: 30px;
+      width: 30px; }
+  .contact-us-section .side-dash1 p {
+    padding-bottom: 20px; }
+  .contact-us-section .side-dash1::after {
+    left: 15px; }
+  .contact-us-section .input-field {
+    padding: 12px 35px 12px 15px; }
+  .contact-us-section .comment-input {
+    padding: 0; }
+  .contact-us-section .form-text-cont {
+    flex-basis: 100%; }
+    .contact-us-section .form-text-cont:nth-child(2n -1) {
+      padding-right: 0; }
+  .contact-us-section #drop-area .button {
+    padding: 5px 6px;
+    font-size: 10px; }
+  .contact-us-section .form-group {
+    align-items: baseline; }
+  .contact-us-section .autocomplete-items.has-data {
+    top: 56px; }
+  .contact-us-section .quizQ {
+    background-position: -38px 6px;
+    padding-left: 15px;
+    width: 140px; }
+    .contact-us-section .quizQ span {
+      font-size: 24px; }
+  .contact-us-section .refreshbtn {
+    width: 20px;
+    height: 20px;
+    background-size: 100%; }
+  .contact-us-section .quizAns .error {
+    display: block; }
+
+  .day .contact-us-section .quizQ {
+    background-position: -38px 6px; } }
+
+/*# sourceMappingURL=footer-form.css.map */
