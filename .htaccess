@@ -1,0 +1,255 @@
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+# Prevent Direct Access Rewrite Rules
+RewriteRule private/([a-zA-Z0-9]+)$ index.php?pda_v3_pf=$1 [L]
+RewriteCond %{REQUEST_FILENAME} -s
+RewriteCond %{HTTP_USER_AGENT} !facebookexternalhit/[0-9]
+RewriteCond %{HTTP_USER_AGENT} !Twitterbot/[0-9]
+RewriteCond %{HTTP_USER_AGENT} !Googlebot/[0-9]
+RewriteRule wp-content/uploads/_pda(\/[A-Za-z0-9_@.\/&+-]+)+\.([A-Za-z0-9_@.\/&+-]+)$ index.php?pda_v3_pf=$1&is_direct_access=true&file_type=$2 [QSA,L]
+# Prevent Direct Access Rewrite Rules End
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+
+# END WordPress
+
+#live-site Redirection Rules //Tarun sir Rocks
+Redirect 301 /managed-it-outsourcing-services-india https://www.valuecoders.com/
+Redirect 301 /hire-developers/hire-content-writers https://www.valuecoders.com/hire-developers
+Redirect 301 /hire-developers/hire-wpecommerce-developers https://www.valuecoders.com/hire-developers/hire-ecommerce-developers
+Redirect 301 /hire-developers/hire-erc-developers https://www.valuecoders.com/hire-developers/hire-blockchain-developers
+Redirect 301 /hire-developers/hire-stellar-developers https://www.valuecoders.com/hire-developers/hire-blockchain-developers
+Redirect 301 /hire-developers/hire-multichain-developers https://www.valuecoders.com/hire-developers/hire-blockchain-developers
+Redirect 301 /hire-developers/hire-next-js-developers https://www.valuecoders.com/hire-developers/hire-front-end-developers
+Redirect 301 /hire-developers/hire-cryptocurrency-exchange-developers https://www.valuecoders.com/hire-developers/hire-cryptocurrency-app-developers
+Redirect 301 /hire-developers/hire-opencart-developers https://www.valuecoders.com/hire-developers/hire-ecommerce-developers
+Redirect 301 /hire-developers/hire-wpf-application-developers https://www.valuecoders.com/hire-developers/hire-front-end-developers
+Redirect 301 /hire-developers/hire-flask-developers https://www.valuecoders.com/hire-developers/hire-web-app-developers
+Redirect 301 /hire-developers/hire-jenkins-testers https://www.valuecoders.com/hire-developers/hire-software-qa-testers
+Redirect 301 /hire-developers/hire-moodle-developers https://www.valuecoders.com/hire-developers
+Redirect 301 /hire-developers/hire-mysql-developers https://www.valuecoders.com/hire-developers
+Redirect 301 /on-demand-food-delivery-software-solution https://www.valuecoders.com/custom-software-development-services-company
+#Redirect 301 /big-data-application-development-services-company https://www.valuecoders.com/custom-software-development-services-company
+Redirect 301 /hire-developers/hire-appium-testers https://www.valuecoders.com/hire-developers/hire-software-qa-testers
+Redirect 301 /hire-developers/hire-selenium-testers https://www.valuecoders.com/hire-developers/hire-software-qa-testers
+#Redirect 301 /hire-developers/hire-solidity-developers https://www.valuecoders.com/hire-developers/hire-blockchain-developers
+Redirect 301 /hadoop-consulting-development-services-company https://www.valuecoders.com/custom-software-development-services-company
+Redirect 301 /taxi-booking-softwares-solution https://www.valuecoders.com/custom-software-development-services-company
+Redirect 301 /appointment-booking-software-solution https://www.valuecoders.com/custom-software-development-services-company
+Redirect 301 /hire-developers/hire-apache-hadoop-developers https://www.valuecoders.com/hire-developers
+Redirect 301 /hire-developers/hire-cakephp-developers https://www.valuecoders.com/hire-developers/hire-php-developers
+Redirect 301 /hire-developers/hire-codeigniter-developers https://www.valuecoders.com/hire-developers/hire-php-developers
+Redirect 301 /hire-developers/hire-electron-js-developers https://www.valuecoders.com/hire-developers/hire-front-end-developers
+#Redirect 301 /hire-developers/hire-html-developers https://www.valuecoders.com/hire-developers
+Redirect 301 /hire-developers/hire-nuxt-js-developers https://www.valuecoders.com/hire-developers/hire-front-end-developers
+Redirect 301 /hire-developers/hire-renative-developers https://www.valuecoders.com/hire-developers/hire-mobile-app-developers
+Redirect 301 /hire-developers/hire-seo-experts https://www.valuecoders.com/hire-developers
+#Redirect 301 /hire-developers/hire-symfony-developers https://www.valuecoders.com/hire-developers/hire-php-developers
+#Redirect 301 /hire-developers/hire-typescript-developers https://www.valuecoders.com/hire-developers/hire-front-end-developers
+Redirect 301 /hire-developers/hire-web-designers https://www.valuecoders.com/hire-developers/hire-front-end-developers
+Redirect 301 /hire-developers/hire-woocommerce-developers https://www.valuecoders.com/hire-developers/hire-ecommerce-developers
+Redirect 301 /hire-developers/hire-yii-developers https://www.valuecoders.com/hire-developers/hire-php-developers
+Redirect 301 /hire-developers/hire-cryptocurrency-develpoment-company https://www.valuecoders.com/hire-developers/hire-cryptocurrency-app-developers
+Redirect 301 /hire-developers/hire-ppc-experts https://www.valuecoders.com/hire-developers
+Redirect 301 /hire-developers/hire-smo-experts https://www.valuecoders.com/hire-developers
+Redirect 301 /hire-developers/hire-blockchain-wallet-developers https://www.valuecoders.com/hire-developers/hire-blockchain-developers
+Redirect 301 /valuecoders-vs-remote-vs-deel https://www.valuecoders.com/blog/outsourcing-and-off-shoring/remote-com-vs-deel-com-vs-valuecoders-rely-upon-the-best/
+
+#Redirect 301 /industries/retail-ecommerce-software-developmentt https://www.valuecoders.com/ecommerce-development-services-company
+#Redirect 301 /industries/banking-financial-services https://www.valuecoders.com/custom-software-development-services-company
+#Redirect 301 /industries/isv-software-development-services https://www.valuecoders.com/custom-software-development-services-companyy
+#Redirect 301 /industries/education-elearning-software-development https://www.valuecoders.com/custom-software-development-services-company
+#Redirect 301 /industries/logistics-transportation-software-development https://www.valuecoders.com/custom-software-development-services-company
+#Redirect 301 /fintech-software-development-company https://www.valuecoders.com/custom-software-development-services-company
+Redirect 301 /our-team https://www.valuecoders.com/about
+
+Redirect 301 /testing-qa https://www.valuecoders.com/software-quality-assurance-testing-services-company
+Redirect 301 /custom-software-development-services-company/ https://www.valuecoders.com/custom-software-development-services-company
+Redirect 301 /services/application-development https://www.valuecoders.com/application-development
+Redirect 301 /hire-developers/hire-iphone-developers https://www.valuecoders.com/hire-developers/hire-ios-developers
+
+Redirect 301 /case-studies/shopping-network-app-android-and-ios https://www.valuecoders.com/case-studies/
+Redirect 301 /case-studies/report-management-system-insurance-agents https://www.valuecoders.com/case-studies/
+Redirect 301 /case-studies/cross-platform-mobile-app-pos https://www.valuecoders.com/case-studies/
+Redirect 301 /case-studies/building-online-store https://www.valuecoders.com/case-studies/
+Redirect 301 /hire-developers/hire-html5-developers https://www.valuecoders.com/hire-developers/hire-html-developers
+
+Redirect 301 /progressive-web-app-development-company https://www.valuecoders.com/progressive-webapp-development-company
+
+
+Redirect 301 /hire-developers/hire-azur-developers https://www.valuecoders.com/hire-developers/hire-azure-developers
+#Temp Redirection page will #release2
+#Redirect 301 /hire-developers/hire-hyperledger-developers https://www.valuecoders.com/hire-developers
+#Redirect 301 /hire-developers/hire-sharepoint-developers https://www.valuecoders.com/hire-developers
+
+#25.08.22
+Redirect 301 /it-consulting https://www.valuecoders.com/software-consulting
+Redirect 301 /startup-consulting-services-company https://www.valuecoders.com/startup-consulting-services
+Redirect 301 /ecommerce-consulting https://www.valuecoders.com/ecommerce-consulting-services
+
+#new removed pge rules Vivek Sir
+Redirect 301 /google-app-engine-services-company  https://www.valuecoders.com/amazon-aws-partner-company-india
+Redirect 301 /ecommerce-software-solutions https://www.valuecoders.com/ecommerce-development-services-company
+Redirect 301 /hire-developers/how-hire-dedicated-software-development-teams https://www.valuecoders.com/dedicated-development-teams
+Redirect 301 /web-app-development https://www.valuecoders.com/web-application-development
+Redirect 301 /mobile-app-development https://www.valuecoders.com/mobile-application-development
+Redirect 301 /our-approach https://www.valuecoders.com/about
+Redirect 301 /hire-indian-developers https://www.valuecoders.com/hire-developers
+Redirect 301 /business-intelligence-testing-services https://www.valuecoders.com/microsoft-power-bi-development-services-company
+Redirect 301 /hire-developers/hire-software-qa-testers https://www.valuecoders.com/software-quality-assurance-testing-services-company
+Redirect 301 /human-resources-solutions https://www.valuecoders.com/hr-software-solutions
+
+#Redirection added 17.05.2020 VA
+Redirect 301 /how-hire-dedicated-software-development-teams https://www.valuecoders.com/dedicated-development-teams
+Redirect 301 /progressive-webapp-development-company https://www.valuecoders.com/application-development
+Redirect 301 /business-intelligence-integration-services https://www.valuecoders.com/microsoft-power-bi-development-services-company
+Redirect 301 /agencies-software-development-services https://www.valuecoders.com/industries/isv-software-development-services
+Redirect 301 /lms-software-solution https://www.valuecoders.com/industries/education-elearning-software-development
+Redirect 301 /serverless-development-india https://www.valuecoders.com/serverless-development
+Redirect 301 /hire-developers/hire-serverless-developers https://www.valuecoders.com/serverless-development
+Redirect 301 /sitemap.xml https://www.valuecoders.com/page-sitemap.xml
+Redirect 301 /mean-stack-developers https://www.valuecoders.com/hire-developers/hire-mean-stack-developers
+Redirect 301 /digital-transformation-development-services https://www.valuecoders.com/digital-transformation-services
+Redirect 301 /software-quality-assurance-testing-services-company https://www.valuecoders.com/software-quality-assurance-testing-services
+Redirect 301 /digital-financial-management-consulting-services https://www.valuecoders.com/digital-financial-management
+
+# 2 AUG 2022 Devna
+Redirect 301 /white-label-outsourcing-services https://www.valuecoders.com/white-label-services
+Redirect 301 /software-qa-testing-services-company https://www.valuecoders.com/software-quality-assurance-testing-services
+Redirect 301 /outsource-software-development-services https://www.valuecoders.com/software-outsourcing-services-company
+Redirect 301 /ecommerce-development-services-company https://www.valuecoders.com/ecommerce-development-services
+Redirect 301 /valuecoders-vs-toptal-vs-upwork https://www.valuecoders.com/blog/top-and-best-companies/upwork-vs-toptal-vs-valuecoders/
+
+#12july2023 Rajesh
+Redirect 301 /document-management https://www.valuecoders.com/document-management-services
+
+#16AUG2023 Rajesh
+Redirect 301 /data-science https://www.valuecoders.com/data-engineering
+Redirect 301 /data-science-consulting-services https://www.valuecoders.com/data-engineering/data-science-consulting-services
+Redirect 301 /artificial-intelligence https://www.valuecoders.com/ai
+Redirect 301 /ai-ml-development-services-company https://www.valuecoders.com/ai
+Redirect 301 /fintech-software-development-company https://www.valuecoders.com/industries/fintech-software-development-company
+Redirect 301 /artificial-intelligence-ai-development-company https://www.valuecoders.com/ai/application-development-company
+Redirect 301 /data-analytics-consulting https://www.valuecoders.com/data-engineering/data-analytics-consulting-services
+Redirect 301 /devops-consulting-engineering-services-company https://www.valuecoders.com/cloud-services/devops-consulting
+
+#redirect 302 below pages 12092019
+Redirect 302 /hire-developers/hire-zend-developers /hire-developers/hire-laravel-developers
+#Redirect 302 /devops-development-company /devops-consulting-engineering-services-company
+Redirect 302 /google-cloud-platform-services /google-cloud-partner-company-india
+Redirect 302 /microsoft-azure-cloud-development-services /microsoft-azure-partner-company-india
+#Redirect 302 /amazon-aws-cloud-computing-services /amazon-aws-partner-company-india 
+
+Redirect 301 /contact-us https://www.valuecoders.com/contact
+
+Redirect 302 /hire-developers/hire-prestashop-developers /hire-developers/hire-magento-developers
+
+Redirect 302 /hire-developers/hire-meteorjs-developers /hire-developers/hire-reactjs-developers
+Redirect 302 /hire-developers/hire-vaadin-developers /hire-developers/hire-java-developers
+Redirect 302 /hire-developers/hire-objectiveC-developers /hire-developers/hire-ios-developers
+#Redirect 302 /hire-developers/hire-swift-developers /hire-developers/hire-ios-developers
+Redirect 302 /web-app-developers.php /hire-developers/hire-web-app-developers
+Redirect 302 /co-development /it-staff-augmentation-services
+Redirect 302 /mule.php /contact
+Redirect 302 /nopcommerce.php /hire-developers/hire-magento-developers
+Redirect 302 /one-minute-feedback.php /contact
+Redirect 302 /os-commerce.php /hire-developers/hire-magento-developers
+Redirect 302 /phonegap.php /hire-developers/hire-ios-developers
+Redirect 302 /snecha.php /hire-developers/hire-angularjs-developers
+Redirect 302 /startup.php /
+Redirect 302 /story-book-app-ipad.php /contact
+Redirect 302 /unity3d.php /hire-developers/hire-mobile-app-developers
+Redirect 302 /virtual-assistants.php /ar-vr-development-company
+Redirect 302 /windows-app.php /hire-developers
+Redirect 302 /zencart.php /hire-developers/hire-magento-developers
+Redirect 302 /hire-optimizely-developers.php /hire-developers
+RewriteRule ^hire-developers/$ hire-developers
+Redirect 302 /hire-remote-team.php /hire-developers
+Redirect 302 /data-entry.php /hire-developers
+Redirect 302 /firebase.php /hire-developers
+Redirect 302 /hire-devops-engineers-experts-developers.php /hire-developers
+
+Redirect 302 /isv.php /industries/isv-software-development-services
+Redirect 302 /joomla.php /hire-developers/hire-wordpress-developers
+Redirect 302 /jquery.php /hire-developers/hire-angularjs-developers
+Redirect 302 /communication-channels.php /contact
+
+Redirect 302 /contact-us.php /contact
+Redirect 302 /digital-agency.php /industries/agencies-software-development-services
+Redirect 302 /drupal-commerce.php /hire-developers/hire-drupal-developers
+Redirect 302 /enterprise-gov.php /industries/isv-software-development-services
+
+Redirect 302 /automative-companies-software-development-services.php /industries/automotive-companies-software-development-services
+Redirect 302 //bootstrap.php /hire-developers/hire-front-end-developers
+Redirect 302 /case-studies.php /case-studies/
+Redirect 302 /cold-fusion.php /hire-developers/hire-php-developers
+
+Redirect 302 /GoFoodie.php /case-studies/
+Redirect 302 /Moments-App.php /case-studies/
+Redirect 302 /hire-developers/hire-joomla-developers https://www.valuecoders.com/hire-developers/hire-wordpress-developers
+Redirect 302 /contactrequest-a-quote https://www.valuecoders.com/contact
+Redirect 302 /technologies https://www.valuecoders.com/hire-developers
+Redirect 302 /process https://www.valuecoders.com/our-approach
+Redirect 302 /hire-developers/hire-virtual-assistants https://www.valuecoders.com/hire-developers
+Redirect 302 /hire-developers/hire-servoy-developers https://www.valuecoders.com/hire-developers
+Redirect 302 /hire-developers/hire-quality-assurance-professionals https://www.valuecoders.com/hire-developers/hire-software-qa-testers
+Redirect 302 /hire-developers/hire-mule-developers https://www.valuecoders.com/hire-developers/hire-wordpress-developers 
+Redirect 302 /hire-developers/hire-data-entry-operators https://www.valuecoders.com/hire-developers
+Redirect 302 /hire-developers/hire-coldfusion-developers https://www.valuecoders.com/hire-developers/hire-php-developers
+Redirect 302 /hire-developers/hire-bootstrap-developers https://www.valuecoders.com/hire-developers/hire-front-end-developers
+Redirect 302 /hire-developers/hire-unity-3d-developers https://www.valuecoders.com/hire-developers
+Redirect 302 /hire-developers/hire-nopcommerce-developers https://www.valuecoders.com/hire-developers/hire-magento-developers
+
+<Files xmlrpc.php>
+order deny,allow
+deny from all
+#allow from xxx.xxx.xxx.xxx
+</Files>
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php8_module>
+   php_flag display_errors Off
+   php_value max_execution_time 150
+   php_value max_input_time 60
+   php_value max_input_vars 1000
+   php_value memory_limit 512M
+   php_value post_max_size 64M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php80"
+   php_value upload_max_filesize 20M
+   php_flag zlib.output_compression Off
+</IfModule>
+<IfModule lsapi_module>
+   php_flag display_errors Off
+   php_value max_execution_time 150
+   php_value max_input_time 60
+   php_value max_input_vars 1000
+   php_value memory_limit 512M
+   php_value post_max_size 64M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php80"
+   php_value upload_max_filesize 20M
+   php_flag zlib.output_compression Off
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php80” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php80 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

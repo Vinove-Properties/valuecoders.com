@@ -1,0 +1,9 @@
+*/\.htaccess
+
+blog/
+wp-content/
+staging/
+
+
+robots.txt
+.DS_Store
