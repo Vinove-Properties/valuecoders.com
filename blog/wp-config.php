@@ -21,6 +21,8 @@ define('SECURE_AUTH_SALT', '1/Skw~8+*l`{Bwz0 _;HWP;GT5VU6tNsN}S<CATk%k,mSs^olO-G
 define('LOGGED_IN_SALT',   ';4lhWe^IZ,l}&3YTL.$Rd#(^q=mSUY^[n?J,oF)VK;8+85SJOm jB&Y~4YE>+9~H');
 define('NONCE_SALT',       '@CgJ[- BmqwLhq2-%J 4~Tv(m~G|k+.U,a@vmReu;<lPm-pgF@cXBv):E-;A&Q_M');
 
+$table_prefix = 'wp_';
+
 define( 'WP_DEBUG', false );
 define( 'WP_DEBUG_LOG', true );
 define( 'FS_METHOD', 'direct' );

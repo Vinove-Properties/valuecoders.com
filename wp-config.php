@@ -1,7 +1,9 @@
 <?php
-define( 'DB_NAME', 'valuecoders-com-site-prod-db' );
-define( 'DB_USER', 'valuecoders-com-site-prod-db-user' );
-define( 'DB_PASSWORD', '9MBjL7MMeOhbsKN' );
+
+define( 'DB_NAME', 'valuecoders.com' );
+define( 'DB_USER', 'phpmyadmin' );
+define( 'DB_PASSWORD', 'root' );
+
 define( 'DB_HOST', 'localhost' );
 define( 'DB_CHARSET', 'utf8' );
 define( 'DB_COLLATE', '' );
@@ -15,10 +17,13 @@ define('SECURE_AUTH_SALT', 'R(W{%7B*$NI^b.X0#fh]KH]9 wnc,-v<$[M,9V^tm xd5j#>LWA%
 define('LOGGED_IN_SALT',   '6hu0yugq&cor1l-#i~&loA$Y`ci|So<(J]-g>w|45nq5+*s1l=gY|N-QS27?SUZW');
 define('NONCE_SALT',       '8h;{wJ_Mj,!u<v=~szFxQ7CStg8~Ot*.W9zV0-yC|CL~/rsN;p:Id,[RI(ix+Nz5');
 
+$table_prefix = 'wp_';
+
 define( 'WP_DEBUG', false );
 define( 'WP_DEBUG_LOG', true );
 define( 'FS_METHOD', 'direct' );
 define( 'WP_POST_REVISIONS', false );
+
 define( 'WP_HOME', 'https://www.valuecoders.com' );
 define( 'WP_SITEURL', 'https://www.valuecoders.com' );
 
