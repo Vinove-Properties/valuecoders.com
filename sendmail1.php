@@ -38,6 +38,25 @@ function nbHasData( $array, $key ){
     return (isset($array[$key]) && !empty($array[$key])) ? $array[$key] : '';
 }
 
+function generateTicketID() {
+    $alphabeticChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $ticketID = '';
+
+    // Generate 3 random uppercase alphabetic characters
+    for ($i = 0; $i < 3; $i++) {
+        $ticketID .= $alphabeticChars[rand(0, strlen($alphabeticChars) - 1)];
+    }
+
+    // Append a hyphen (optional, can be removed if you prefer ABC1234 format)
+    $ticketID .= '-';
+
+    // Generate 4 random digits
+    for ($i = 0; $i < 4; $i++) {
+        $ticketID .= rand(0, 9);
+    }
+    return $ticketID;
+}
+
 function logSpamException( $arrPostParams, $note = '' ){ 
     $user_name      = nbHasData($arrPostParams, 'user-name');
     $user_email     = nbHasData($arrPostParams, 'user-email');
@@ -285,16 +304,11 @@ false;
 }
 
 function storeLeadsData( $data ){
-    if($_SERVER['SERVER_NAME']=='beta.vinove.com'){
+    if( ($_SERVER['SERVER_NAME']=='www.valuecoders.com') || ($_SERVER['SERVER_NAME'] == 'valuecoders.com')  ){
         $servername = "localhost";
-        $username   = "betavinc_vcwp";
-        $password   = "e-l#OWI-BO78";
-        $dbname     = "betavinc_vcwp";
-    }elseif( ($_SERVER['SERVER_NAME']=='www.valuecoders.com') || ($_SERVER['SERVER_NAME'] == 'valuecoders.com')  ){
-        $servername = "localhost";
-        $username   = "valuecoc_wpsite";
-        $password   = "W@89Uz*3J!gp6>dA";
-        $dbname     = "valuecoc_vclive0606";
+        $username   = "valuecoders-com-crm-prod-db-user";
+        $password   = "5CxYSHEaVglFgCA";
+        $dbname     = "valuecoders-com-crm-prod-db";
     }else{
         $servername = "localhost";
         $username   = "phpmyadmin";
@@ -419,24 +433,6 @@ function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $email
         die;
     }
 
-    // if($emailTo == "ankur@valuecoders.com" ){
-    //     $fbody = $body;
-    //     $fbody = "\n\n".date("F j, Y, g:i a")."\n".$fbody;
-    //     $fbody = str_replace("<br>","\n",$fbody);
-    //     $file = fopen("/home/vc-leads/site","a");
-    //     //$file = fopen("/var/www/html/EditBackups/vcmail","a");
-    //     fwrite($file,$fbody);
-    //     fclose($file);
-    // }
-    /*
-    //Temp Remove #2
-    $httpRef = ( isset( $_SERVER['HTTP_REFERER'] ) && !empty( $_SERVER['HTTP_REFERER'] ) ) ? $_SERVER['HTTP_REFERER'] : '';
-    if( $httpRef && ( strpos( $httpRef, "valuecoders.com" ) === false ) ){
-    header( 'location:thanks.php?spam=123' );
-    die;
-    }
-    */
-    
     $mail = new PHPMailer(true);
     $smtp = new SMTP;
     try{
@@ -446,12 +442,22 @@ function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $email
         }  
 
         $mail->isSMTP();
+
+        /*
         $mail->Host         = "hub.vinove.com"; // SMTP server
         $mail->SMTPSecure   = 'tls';
         $mail->Port         = 25;
         $mail->SMTPAuth     = true;
         $mail->Username     = 'sales@valuecoders.com';
-        $mail->Password     = 'dZ.RNp&$~D;;';//'Q5viPQQ,sap+';
+        $mail->Password     = 'dZ.RNp&$~D;;';
+        */
+        
+        $mail->Host         = "smtp.gmail.com"; // SMTP server
+        $mail->SMTPSecure   = 'ssl';
+        $mail->Port         = 465;
+        $mail->SMTPAuth     = true;
+        $mail->Username     = 'do-not-reply@valuecoders.com';
+        $mail->Password     = 'ejgscotvrntggvap';
 
         if( $type == "lead" ){
             $mail->setFrom( $userEmail, $cname );
@@ -558,10 +564,12 @@ function zohoCrmUpdate_v2( $argArrData, $leadSource='', $owner_id = 658520861, $
         $body .= " Client Details:".$varEmail.'Last-name'.$varLastName.'First Name'.$varFirstName."<br>";
         $body .= " Client Details:".print_r($varEmail.$varLastName.$varFirstName,1);
         
+        /*
         $file = fopen("/home/valuecoc/leads/zoho-logs.txt","a");
         $zlead = PHP_EOL.$varEmail.":".$body;
         fwrite($file, $zlead);
         fclose($file);
+        */
     }else{
         $zo_requirement = "";
         
@@ -675,20 +683,26 @@ function zohoCrmUpdate_v2( $argArrData, $leadSource='', $owner_id = 658520861, $
                     $response  = curl_exec($curl);
                     curl_close( $curl );
                     $response   = json_decode( $response );
+                    
+                    /*
                     $file       = fopen("/home/valuecoc/leads/zoho-logs2023.txt","a");
                     $zlead      = PHP_EOL.$varEmail.":".$body1;
                     fwrite( $file, $zlead );
-                    fclose( $file );                    
+                    fclose( $file );
+                    */
+
                     return $lead_id;
                 }           
             endif;
             $body1 .= "Details are:".print_r($response,1);
             $lead_id = ( isset( $response->data[0] ) ) ? $response->data[0]->details->id : 0;            
             //$file = fopen("/home/valuecoc/leads/zoho-logs.txt","a");
+            /*
             $file = fopen("/home/valuecoc/leads/zoho-logs2023.txt","a");
             $zlead = PHP_EOL.$varEmail.":".$body1;
             fwrite( $file, $zlead );
             fclose($file);
+            */
         }
 
     }
@@ -796,16 +810,14 @@ if( $isAjay === true ){
     
     $eSender = splEmailData( $user_country );
     if( isset( $eSender['mail_to'] ) ){
-    $mailSent = smtpEmailFunction( $eSender['mail_to'], "Inquiry with ValueCoders", $Mailbody, "lead", 
-    $ajxData['email'], [], ["parvesh@vinove.com"], [], $ajxData['name'] );    
+    //$mailSent = 
+        smtpEmailFunction( $eSender['mail_to'], "Inquiry with ValueCoders", $Mailbody, "lead", 
+        $ajxData['email'], [], ["parvesh@vinove.com", "nitin.baluni@mail.vinove.com"], [], $ajxData['name'] );
     }
-
     $leadReq = "How Can We Help : ".$ajxData['how_can'];
-
-    if( $mailSent === true ){
         if( isset( $ajxData['lead_id'] ) && ($ajxData['lead_id'] != 0) ){
-            echo json_encode( array( 'success' => true, 'mail_data' => $Mailbody, 'lead_id' => $ajxData['lead_id'] ) );
-            die;
+        echo json_encode( array( 'success' => true, 'mail_data' => $Mailbody, 'lead_id' => $ajxData['lead_id'] ) );
+        die;
         }
         $arrZoho_v2 = array(
         'Email' => $ajxData['email'],
@@ -828,10 +840,14 @@ if( $isAjay === true ){
         $lead_id = zohoCrmUpdate_v2( $arrZoho_v2, $utm_source, $eSender['lead_to'], false );
         echo json_encode( array( 'success' => true, 'mail_data' => $Mailbody, 'zoho_data' => $arrZoho_v2, 
         'lead_id' => $lead_id ) );
-    }else{
+        
+        /*
+        if( $mailSent === true ){
+        }else{
         echo json_encode( array( 'success' => false, 'mail_data' => $Mailbody, 
         'thank_url' => 'https://www.valuecoders.com/thanks?email-error=true' ) );
-    }
+        }
+        */
     die;
 }else{
     if( isset( $_POST['vform-type'] ) && $_POST['vform-type'] == "contact" ){
@@ -851,6 +867,7 @@ if( $isAjay === true ){
 
 function sendmail_function($arrPostParams, $uploaded_files_names_param){
     global $arrEmail;
+    $ticketID   = generateTicketID();
     /*$isContact = (isset($arrPostParams['vform-type']) && ($arrPostParams['vform-type'] == "contact")) ? true : false;*/
     $isContact      = false;
     $vcUserCountry  = ($isContact === true) ? vcGetCountryByCode( $arrPostParams['user-country'] ) : 
@@ -1057,8 +1074,8 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
     */
 
     array_shift( $arrEmail );
-    //$bccEmails = ['parvesh@vinove.com', 'nitin.baluni@mail.vinove.com'];
-    $bccEmails  = ['parvesh@vinove.com'];
+    $bccEmails      = ['parvesh@vinove.com', 'nitin.baluni@mail.vinove.com'];
+    //$bccEmails    = ['parvesh@vinove.com'];
     $sampledata = [
     'name'          => $user_name,
     'email'         => $user_email,
@@ -1100,7 +1117,7 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
 
             $attachmentDoc = [];
             if( isset( $_POST['nda'] ) ){
-            $attachmentDoc = ['/home/valuecoc/public_html/common/download-pdf/ValueCoders-NDA.pdf'];    
+            $attachmentDoc = ['/home/valuecoders-com/public_html/download-pdf/ValueCoders-NDA.pdf'];    
             }
 
             if( $arrPostParams['we-help'] == "career" ){
@@ -1112,10 +1129,11 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
             
             smtpEmailFunction( $user_email, "ValueCoders - We've received your request", $autoEmailBody, "auto", $user_email, [], [], $attachmentDoc );
             $eSender = splEmailData( $user_country );
+            
             if( isset( $eSender['mail_to'] ) ){
-            $tempEmailSubject = "Inquiry with ValueCoders";
+            $tempEmailSubject = "Inquiry with ValueCoders [".$ticketID."]";
             if( isset($arrPostParams['is_free_trial']) && ($arrPostParams['is_free_trial'] == "true") ){
-            $tempEmailSubject = "Request for 7-Day Trial";    
+            $tempEmailSubject = "Request for 7-Day Trial [".$ticketID."]";    
             }
             
             smtpEmailFunction( $eSender['mail_to'], $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], 
