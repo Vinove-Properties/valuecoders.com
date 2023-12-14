@@ -275,8 +275,8 @@ $array_apac = [
     elseif( checkInArray( $is_country, $array_africa ) ){
         $consoleArray = array( 
             'region'    => 'africa', 
-            'lead_to'   => $zoho_id['sanjiv'], 
-            'mail_to'   => 'sanjiv@valuecoders.com', 
+            'lead_to'   => $zoho_id['akhil'], 
+            'mail_to'   => 'akhil@valuecoders.com', 
             'mail_cc'   => []
         );
     }
@@ -309,7 +309,7 @@ $array_apac = [
             'region'    => 'uk',
             'lead_to'   => $zoho_id['akhil'],
             'mail_to'   => 'akhil@valuecoders.com',
-            'mail_cc'   => ['neha.raina@valuecoders.com']
+            'mail_cc'   => []
         );
     }
     elseif( checkInArray( $is_country, $array_usa ) ){
