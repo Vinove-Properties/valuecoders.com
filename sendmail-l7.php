@@ -60,6 +60,25 @@ function get_client_ip_user() {
 	return $ip;
 }
 
+function generateTicketID() {
+    $alphabeticChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $ticketID = '';
+
+    // Generate 3 random uppercase alphabetic characters
+    for ($i = 0; $i < 3; $i++) {
+        $ticketID .= $alphabeticChars[rand(0, strlen($alphabeticChars) - 1)];
+    }
+
+    // Append a hyphen (optional, can be removed if you prefer ABC1234 format)
+    $ticketID .= '-';
+
+    // Generate 4 random digits
+    for ($i = 0; $i < 4; $i++) {
+        $ticketID .= rand(0, 9);
+    }
+    return $ticketID;
+}
+
 function getSpamEmailsListings( $jsonFile ){
     if( !file_exists( $jsonFile ) ){
         return [];
@@ -86,9 +105,9 @@ function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $email
         $fbody = $body;
         $fbody = "\n\n".date("F j, Y, g:i a")."\n".$fbody;
         $fbody = str_replace("<br>","\n",$fbody);
-        $file = fopen("/home/vc-leads/landing","a");
+        /*$file = fopen("/home/vc-leads/landing","a");
         fwrite($file,$fbody);
-        fclose($file);
+        fclose($file);*/
     }
     
     /*
@@ -107,12 +126,21 @@ function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $email
             throw new Exception('Connect failed!');
         }  
         $mail->isSMTP();
+        /*
         $mail->Host         = "hub.vinove.com"; // SMTP server
         $mail->SMTPSecure   = 'tls';
         $mail->Port         = 25;
         $mail->SMTPAuth     = true;
         $mail->Username     = 'sales@valuecoders.com';
         $mail->Password     = 'dZ.RNp&$~D;;';//'Q5viPQQ,sap+';
+        */
+        
+        $mail->Host         = "smtp.gmail.com"; // SMTP server
+        $mail->SMTPSecure   = 'ssl';
+        $mail->Port         = 465;
+        $mail->SMTPAuth     = true;
+        $mail->Username     = 'do-not-reply@valuecoders.com';
+        $mail->Password     = 'ejgscotvrntggvap';
         //Recipients
         //= "" $emailFrom = "sales@valuecoders.com", $replyTo = "do-not-reply@mail.valuecoders.com",
         if( $type == "lead" ){
@@ -310,10 +338,10 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861)
                     curl_close( $curl );
                     $response   = json_decode( $response );
                     //vc_dd( $response );
-                    $file       = fopen("/home/valuecoc/leads/zoho-logs2023.txt","a");
+                    /*$file       = fopen("/home/valuecoc/leads/zoho-logs2023.txt","a");
                     $zlead      = PHP_EOL.$varEmail.":".$body1;
                     fwrite( $file, $zlead );
-                    fclose( $file );
+                    fclose( $file );*/
                 }           
             endif;
             $body1 .= "Details are:".print_r($response,1)."<br>";
@@ -619,8 +647,8 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param,$token){
     */
 
     //array_shift( $arrEmail );
-    //$bccEmails = ['parvesh@vinove.com', 'nitin.baluni@mail.vinove.com'];
-    $bccEmails = ['parvesh@vinove.com'];
+    $bccEmails = ['parvesh@vinove.com', 'nitin.baluni@mail.vinove.com'];
+    //$bccEmails = ['parvesh@vinove.com'];
     
     if(!$isSpam) {
         $varRefererURL = isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : "";
@@ -671,10 +699,12 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param,$token){
             die;
             }
             */
+
             if( $isDmTpl === true ){
+                $EmailSubject = "Inquiry with ValueCoders - Digital Marketing [".$ticketID."]";
                 smtpEmailFunction(
                 "parvesh@vinove.com", 
-                "Inquiry with ValueCoders - Digital Marketing", 
+                $EmailSubject, 
                 $Mailbody,
                 "lead",
                 $user_email,
@@ -686,10 +716,11 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param,$token){
                 );
             }else{
                 $eSender = splEmailData( $user_country );
+                $EmailSubject = "Inquiry with ValueCoders [".$ticketID."]";
                 if( isset( $eSender['mail_to'] ) ){
                     smtpEmailFunction(
                     $eSender['mail_to'], 
-                    "Inquiry with ValueCoders", 
+                    $EmailSubject, 
                     $Mailbody, 
                     "lead", 
                     $user_email, 
