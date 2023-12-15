@@ -288,7 +288,7 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
                 $zoho_data = array(
                 'id'                    => $lead_id,
                 'Lead_Status'           => "Not Contacted Yet",
-                'Owner'                 => 658520861,
+                'Owner'                 => 720093253,
                 'Sales_Qualified_Lead'  => "No",
                 'Is_Duplicate'          => "Yes"
                 );
