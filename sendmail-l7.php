@@ -231,10 +231,7 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
     $headers .= "From: vkavasthi@gmail.com <vkavasthi@gmail.com>" . "\r\n";
     $headers .= "Reply-To: vkavasthi@gmail.com\r\n";
     curl_close( $curl );
-    $file       = fopen(IH_LOGFILE,"a");
-    //$zlead      = PHP_EOL.$varEmail.":".print_r($err,1);
-    fwrite( $file, PHP_EOL.print_r($response, 1) );
-    fclose( $file );
+
     if( !$err ){
         $zo_requirement = "Url: ".$varURL. "File Uploaded: ".$varUploadedFiles." Requirements:" .$varRequirements;
         $QfLead = "Yes";        
@@ -317,17 +314,17 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
                 ),
                 ));
 
-                $response  = curl_exec($curl);
-                $file       = fopen(IH_LOGFILE,"a");
-                //$zlead      = PHP_EOL.print_r( $response, 1 );
-                //$zlead      = PHP_EOL.print_r( $response, 1 );
-                fwrite( $file, "Success Lead #001" );
-                fclose( $file );
-
+                $response  = curl_exec($curl);                
                 curl_close( $curl );
+
                 $crmException   = $response;
                 $response       = json_decode( $response );
                 
+                $file       = fopen(IH_LOGFILE,"a");
+                $zlead      = PHP_EOL.print_r( $response, 1 );
+                fwrite( $file, $zlead );
+                fclose( $file );
+
                 $rspCode    = ['DUPLICATE_DATA', 'SUCCESS'];
                 $statusCode = (isset($response->data[0]) && !empty($response->data[0]->code)) ? $response->data[0]->code : '';
             
@@ -340,20 +337,16 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
             endif;
         }else{
             $file       = fopen(IH_LOGFILE,"a");
-            //$zlead      = PHP_EOL.$varEmail.":".print_r($err,1);
-            fwrite( $file, "Success Lead #002" );
+            $zlead      = PHP_EOL.$varEmail.":".print_r($err,1);
+            fwrite( $file, $zlead );
             fclose( $file );
         }
     }else{
         $file       = fopen(IH_LOGFILE,"a");
-        //$zlead      = PHP_EOL.$varEmail.":".print_r($err,1);
-        fwrite( $file, "Success Lead #003" );
+        $zlead      = PHP_EOL.$varEmail.":".print_r($err,1);
+        fwrite( $file, $zlead );
         fclose( $file );
     }
-    $file       = fopen(IH_LOGFILE,"a");
-    //$zlead      = PHP_EOL.$varEmail.":".print_r($err,1);
-    fwrite( $file, "Success Lead #DEFAULT " );
-    fclose( $file );
     return true;
 }
 
