@@ -316,8 +316,9 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
 
                 $response  = curl_exec($curl);
                 $file       = fopen(IH_LOGFILE,"a");
-                $zlead      = PHP_EOL.$varEmail.":".print_r($response,1);
-                fwrite( $file, $zlead );
+                //$zlead      = PHP_EOL.print_r( $response, 1 );
+                //$zlead      = PHP_EOL.print_r( $response, 1 );
+                fwrite( $file, "Success Lead #001" );
                 fclose( $file );
 
                 curl_close( $curl );
@@ -336,14 +337,14 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
             endif;
         }else{
             $file       = fopen(IH_LOGFILE,"a");
-            $zlead      = PHP_EOL.$varEmail.":".print_r($err,1);
-            fwrite( $file, $zlead );
+            //$zlead      = PHP_EOL.$varEmail.":".print_r($err,1);
+            fwrite( $file, "Success Lead #002" );
             fclose( $file );
         }
     }else{
         $file       = fopen(IH_LOGFILE,"a");
-        $zlead      = PHP_EOL.$varEmail.":".print_r($err,1);
-        fwrite( $file, $zlead );
+        //$zlead      = PHP_EOL.$varEmail.":".print_r($err,1);
+        fwrite( $file, "Success Lead #003" );
         fclose( $file );
     }
     return true;
