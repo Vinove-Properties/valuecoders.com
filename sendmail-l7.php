@@ -331,7 +331,7 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
                 if( !empty( $statusCode ) && !in_array($statusCode, $rspCode) ){
                 $user_name = $varFirstName.' '.$varLastName;
                 smtpEmailFunction( "web@vinove.com", "Zoho CRM error - ValueCoders LP", $crmException, "lead", 
-                $varEmail, [], ['nitin.baluni@mail.vinove.com'], [], $user_name );
+                $varEmail, [], [], [], $user_name );
                 }                
             }
             endif;
