@@ -137,7 +137,7 @@ function logSpamException( $arrPostParams, $note = '' ){
     
     // Live
     smtpEmailFunction("parvesh@vinove.com", "Inquiry with ValueCoders - Spam Exception", $Mailbody, "lead", 
-    $user_email, ['spam@vinove.com'], [], [], $user_name);
+    $user_email, ['web@vinove.com'], [], [], $user_name);
     
     // Test
     /*smtpEmailFunction("nitin.baluni@mail.vinove.com", "Inquiry with ValueCoders - Spam Exception", $Mailbody, "lead", 
@@ -639,7 +639,7 @@ function zohoCrmUpdate_v2( $argArrData, $leadSource='', $owner_id = 658520861, $
         }else{
             $body1 = '';
             $crmException   = $response;
-            $response       = json_decode($response);
+            $response       = json_decode( $response );
             
             $rspCode    = ['DUPLICATE_DATA', 'SUCCESS'];
             $statusCode = (isset($response->data[0]) && !empty($response->data[0]->code)) ? $response->data[0]->code : '';

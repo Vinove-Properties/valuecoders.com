@@ -202,8 +202,10 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
     $varDescription = $argArrData['Description'];
     $user_country = (isset($_POST['user-country']) && $_POST['user-country'])?$_POST['user-country']:"";
     $user_country_arr = @explode("(",$user_country);
+    
     if(isset($user_country_arr[0]) && $user_country_arr[0])
     $user_country =  trim($user_country_arr[0]);
+
     $varURL = $argArrData['URL'];
     $varUploadedFiles = $argArrData['File Uploaded'];
     $varRequirements = $argArrData['Requirements'];
@@ -229,7 +231,8 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
     $headers .= "From: vkavasthi@gmail.com <vkavasthi@gmail.com>" . "\r\n";
     $headers .= "Reply-To: vkavasthi@gmail.com\r\n";
     curl_close( $curl );
-    if(!$err){
+    
+    if( !$err ){
         $zo_requirement = "Url: ".$varURL. "File Uploaded: ".$varUploadedFiles." Requirements:" .$varRequirements;
         $QfLead = "Yes";        
         $zoho_data = array(
@@ -312,6 +315,11 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
                 ));
 
                 $response  = curl_exec($curl);
+                $file       = fopen(IH_LOGFILE,"a");
+                $zlead      = PHP_EOL.$varEmail.":".print_r($response,1);
+                fwrite( $file, $zlead );
+                fclose( $file );
+
                 curl_close( $curl );
                 $crmException   = $response;
                 $response       = json_decode( $response );
@@ -323,12 +331,7 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
                     $user_name = $varFirstName.' '.$varLastName;
                     smtpEmailFunction( "web@vinove.com", "Zoho CRM error - ValueCoders LP", $crmException, "lead", 
                     $varEmail, [], ['nitin.baluni@mail.vinove.com'], [], $user_name );
-                }
-
-                $file       = fopen(IH_LOGFILE,"a");
-                $zlead      = PHP_EOL.$varEmail.":".print_r($response,1);
-                fwrite( $file, $zlead );
-                fclose( $file );
+                }                
             }
             endif;
         }else{
@@ -644,7 +647,7 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param,$token){
     $bccEmails = ['parvesh@vinove.com', 'nitin.baluni@mail.vinove.com'];
     //$bccEmails = ['parvesh@vinove.com'];
     
-    if(!$isSpam) {
+    if(!$isSpam){
         $varRefererURL = isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : "";
         //$result = checkCaptcha($token);
         //if($result) {
