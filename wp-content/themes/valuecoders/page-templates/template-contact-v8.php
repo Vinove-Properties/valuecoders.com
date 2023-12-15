@@ -269,6 +269,7 @@ get_header();
 						<input type="hidden" name="frmqueryString" value="<?php the_permalink(); ?>">
 						<input type="hidden" name="page_url" value="<?php the_permalink(); ?>">
 						<input type="hidden" name="vform-type" value="contact">
+						<input type="hidden" id="e-ticket-id" name="e-ticket-id" value="">
 						<input type="submit" id="submitButton" class="checkout-submit" value="Send your request" />
 					</div>
 					<p class="note">Note : We Respect Your Privacy! Your details will never be shared with anyone for marketing purposes.</p>

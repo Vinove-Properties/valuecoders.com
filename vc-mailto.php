@@ -14,58 +14,11 @@ $zoho_id = [
     'sanjiv'    => 779804104, 
     'atul'      => 641628594, 
     'ankur'     => 658520861,
-    'neha'      => 720093253
+    'neha'      => 720093253,
+    'pa'        => 668293911
 ];
 
-$array_other = [
-'Andorra',
-'Albania',
-'Antarctica',
-'Åland Islands',
-'Bosnia and Herzegovina',
-'Saint Barthélemy',
-'Bouvet Island',
-'Belarus',
-'Congo, the Democratic Republic of the',
-'Cook Islands',
-'Curaçao',
-'Western Sahara',
-'Faroe Islands',
-'French Guiana',
-'Guernsey',
-'Gibralta',
-'Greenland',
-'Guadeloupe',
-'Heard Island and McDonald Islands',
-'Isle of Man',
-'Jersey',
-'Liechtenstein',
-'Monaco',
-'Moldova, Republic of',
-'Montenegro',
-'Collectivity of Saint Martin',
-'Macedonia, the former Yugoslav Republic of',
-'Martinique',
-'New Caledonia',
-'French Polynesia',
-'Saint Pierre and Miquelon',
-'Réunion',
-'Serbia',
-'Russian Federation',
-'Sudan',
-'Saint Helena, Ascension and Tristan da Cunha',
-'San Marino',
-'Sint Maarten',
-'Syrian Arab Republic',
-'Swaziland',
-'Eswatini',
-'French Southern Territories',
-'Ukraine',
-'Holy See',
-'Wallis and Futuna',
-'Mayotte'
-];
-
+$array_other = ['Congo, the Democratic Republic of the', 'Curaçao'];
 
 $array_africa = [
 'Angola',
@@ -110,6 +63,9 @@ $array_africa = [
 'Senegal',
 'Somalia',
 'South Sudan',
+'Sudan',
+'Swaziland',
+'Eswatini',
 'Sao Tome and Principe',
 'Chad',
 'Togo',
@@ -134,43 +90,89 @@ $array_me = [
 'Qatar',
 'Saudi Arabia',
 'Iraq',
-'Yemen'
+'Yemen',
+'Syrian Arab Republic'
 ];
 
 $array_europe = [
-'Switzerland',
-'Iceland',
-'Norway',
-'Turkey',
-'Austria',
-'Belgium',
-'Bulgaria',
-'Czechia',
-'Germany',
-'Denmark',
-'Estonia',
-'Spain',
-'Finland',
-'France',
-'Greece',
-'Croatia',
-'Hungary',
-'Ireland',
-'Italy',
-'Lithuania',
-'Luxembourg',
-'Latvia',
-'Malta',
-'Netherlands',
-'Poland',
-'Portugal',
-'Romania',
-'Sweden',
-'Slovenia',
-'Slovakia'
+    "Åland Islands",
+    "Albania",
+    "Andorra",
+    "Antarctica",
+    "Armenia",
+    "Austria",
+    "Azerbaijan",
+    "Belarus",
+    "Belgium",
+    "Bosnia and Herzegovina",
+    "Bouvet Island",
+    "Bulgaria",
+    "Collectivity of Saint Martin",
+    "Croatia",
+    "Cyprus",
+    "Czechia",
+    "Denmark",
+    "Estonia",
+    "Faroe Islands",
+    "Finland",
+    "France",
+    "French Guiana",
+    "French Polynesia",
+    "French Southern Territories",
+    "Georgia",
+    "Germany",
+    "Gibraltar",
+    "Greece",
+    "Greenland",
+    "Guadeloupe",
+    "Guernsey",
+    "Heard Island and McDonald Islands",
+    "Holy See",
+    "Hungary",
+    "Iceland",
+    "Ireland",
+    "Isle of Man",
+    "Italy",
+    "Jersey",
+    "Latvia",
+    "Liechtenstein",
+    "Lithuania",
+    "Luxembourg",
+    "Macedonia, the former Yugoslav Republic of",
+    "Malta",
+    "Martinique",
+    "Mayotte",
+    "Moldova, Republic of",
+    "Monaco",
+    "Montenegro",
+    "Netherlands",
+    "New Caledonia",
+    "Norway",
+    "Poland",
+    "Portugal",
+    "Réunion",
+    "Romania",
+    "Russian Federation",
+    "Saint Barthélemy",
+    "Saint Helena, Ascension and Tristan da Cunha",
+    "Saint Pierre and Miquelon",
+    "San Marino",
+    "Serbia",
+    "Sint Maarten",
+    "Slovakia",
+    "Slovenia",
+    "Spain",
+    "Sweden",
+    "Switzerland",
+    "Turkey",
+    "Ukraine",
+    "Wallis and Futuna",
+    "Western Sahara"
 ];
 
 $array_uk   = ['United Kingdom', 'uk', 'UK'];
+
+// USA Segrated in 2 new Regin #North America #Latin America
 $array_usa  = [
     'United States of America', 
     'USA', 
@@ -192,8 +194,59 @@ $array_usa  = [
     'Canada'
 ];
 
+$array_north_america = ['Canada', 'United States', 'United States of America','USA', 'usa'];
+$array_latin_america = [
+    "Anguilla",
+    "Antigua and Barbuda",
+    "Argentina",
+    "Aruba",
+    "Bahamas",
+    "Barbados",
+    "Belize",
+    "Bermuda",
+    "Bolivia, Plurinational State of",
+    "Brazil",
+    "Cayman Islands",
+    "Chile",
+    "Colombia",
+    "Costa Rica",
+    "Cuba",
+    "Curaçao",
+    "Dominica",
+    "Dominican Republic",
+    "Ecuador",
+    "El Salvador",
+    "Falkland Islands (Malvinas)",
+    "Grenada",
+    "Guatemala",
+    "Guyana",
+    "Haiti",
+    "Honduras",
+    "Jamaica",
+    "Mexico",
+    "Montserrat",
+    "Nicaragua",
+    "Panama",
+    "Paraguay",
+    "Peru",
+    "Puerto Rico",
+    "Saint Kitts and Nevis",
+    "Saint Lucia",
+    "Saint Vincent and the Grenadines",
+    "South Georgia and the South Sandwich Islands",
+    "Suriname",
+    "Trinidad and Tobago",
+    "Turks and Caicos Islands",
+    "Uruguay",
+    "Venezuela",
+    "Virgin Islands, British",
+    "Virgin Islands, U.S."
+];
+
+
 $array_apac = [
 'American Samoa',
+'Cook Islands',
 'Australia',
 'Afghanistan',
 'Bangladesh',
@@ -252,55 +305,54 @@ $array_apac = [
 'Uzbekistan',
 'Kazakhstan',
 'Syria',
-'Azerbaijan',
 'Tajikistan',
 'Laos',
 'Lebanon',
 'Kyrgyzstan',
 'Turkmenistan',
 'Palestine',
-'Georgia',
-'Armenia',
-'Cyprus'
 ];  
     $consoleArray = [];
     if( checkInArray( $is_country, $array_other ) ){
         $consoleArray = array( 
-            'region'    => 'other',
-            'lead_to'   => $zoho_id['neha'], 
-            'mail_to'   => 'neha.raina@valuecoders.com', 
-            'mail_cc'   => ['sanjiv@valuecoders.com', 'akhil@valuecoders.com']
+        'region'    => 'other',
+        'lead_to'   => $zoho_id['pa'], 
+        'mail_to'   => 'akhil@valuecoders.com', 
+        'mail_cc'   => ['sanjiv@valuecoders.com', 'neha.raina@valuecoders.com']
         );
     }
+    
     elseif( checkInArray( $is_country, $array_africa ) ){
         $consoleArray = array( 
             'region'    => 'africa', 
             'lead_to'   => $zoho_id['akhil'], 
             'mail_to'   => 'akhil@valuecoders.com', 
-            'mail_cc'   => []
+            'mail_cc'   => ['neha.raina@valuecoders.com']
         );
     }
+    
     elseif( checkInArray( $is_country, $array_me ) ){
         $consoleArray = array( 
             'region'    => 'middle-east', 
             'lead_to'   => $zoho_id['sanjiv'], 
             'mail_to'   => 'sanjiv@valuecoders.com', 
-            'mail_cc'   => []
+            'mail_cc'   => ['neha.raina@valuecoders.com']
         );
     }
+
     elseif( checkInArray( $is_country, $array_europe ) ){
         $consoleArray = array( 
             'region'    => 'europe', 
             'lead_to'   => $zoho_id['sanjiv'], 
             'mail_to'   => 'sanjiv@valuecoders.com', 
-            'mail_cc'   => []
+            'mail_cc'   => ['neha.raina@valuecoders.com']
         );
     }
     elseif( checkInArray( $is_country, $array_apac ) ){
         $consoleArray = array(
             'region'    => 'apac',
-            'lead_to'   => $zoho_id['akhil'],
-            'mail_to'   => 'akhil@valuecoders.com',
+            'lead_to'   => $zoho_id['sanjiv'],
+            'mail_to'   => 'sanjiv@valuecoders.com',
             'mail_cc'   => ['neha.raina@valuecoders.com']
         );
     }
@@ -309,9 +361,10 @@ $array_apac = [
             'region'    => 'uk',
             'lead_to'   => $zoho_id['akhil'],
             'mail_to'   => 'akhil@valuecoders.com',
-            'mail_cc'   => []
+            'mail_cc'   => ['neha.raina@valuecoders.com']
         );
     }
+    /*
     elseif( checkInArray( $is_country, $array_usa ) ){
         $consoleArray = array(
             'region'    => 'usa', 
@@ -320,6 +373,25 @@ $array_apac = [
             'mail_cc'   => ['neha.raina@valuecoders.com'] 
         );
     }
+    */
+    elseif( checkInArray( $is_country, $array_north_america ) ){
+        $consoleArray = array(
+            'region'    => 'usa', 
+            'lead_to'   => $zoho_id['akhil'],
+            'mail_to'   => 'akhil@valuecoders.com',
+            'mail_cc'   => ['neha.raina@valuecoders.com', 'sanjiv@valuecoders.com'] 
+        );
+    }
+
+    elseif( checkInArray( $is_country, $array_latin_america ) ){
+        $consoleArray = array(
+            'region'    => 'usa', 
+            'lead_to'   => $zoho_id['akhil'],
+            'mail_to'   => 'akhil@valuecoders.com',
+            'mail_cc'   => ['neha.raina@valuecoders.com'] 
+        );
+    }
+    
     elseif( strtolower($is_country) == 'india' ){
         $consoleArray = array( 
             'region'    => 'india', 
@@ -327,8 +399,9 @@ $array_apac = [
             'mail_to'   => 'akhil@valuecoders.com', 
             'mail_cc'   => ['neha.raina@valuecoders.com'] 
         );
-    }else{
-        $consoleArray = array( 
+    }
+    else{
+         $consoleArray = array(
             'region'    => 'na', 
             'lead_to'   => $zoho_id['neha'],
             'mail_to'   => 'neha.raina@valuecoders.com', 
@@ -338,5 +411,7 @@ $array_apac = [
     return $consoleArray;
 }
 
-// $datacheck = splEmailData('asdasd');
-// print_r( $datacheck );
+/*
+$datacheck = splEmailData('UK');
+print_r( $datacheck );
+*/

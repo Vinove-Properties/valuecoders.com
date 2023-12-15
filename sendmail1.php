@@ -1,4 +1,7 @@
 <?php
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 if( ($_SERVER['REQUEST_METHOD'] == 'GET') && realpath(__FILE__) == realpath( $_SERVER['SCRIPT_FILENAME'] ) ){
     header( 'HTTP/1.0 403 Forbidden', TRUE, 403 );
     die("HEY BOAT.. Go Away");
@@ -722,8 +725,7 @@ $uploaded_files_names = $_POST['Uploadedfilename'];
 
 if( $isAjay === true ){
     if( isset($_SERVER['SERVER_NAME']) && ($_SERVER['SERVER_NAME'] == "localhost") ){
-        echo json_encode( array( 'success' => true ) );
-        die;
+        //echo json_encode( array( 'success' => true ) ); die;
     }
 
     $captcha = (isset($ajxData['grecaptcha']) && !empty($ajxData['grecaptcha'])) ? $ajxData['grecaptcha'] : false;
@@ -809,45 +811,61 @@ if( $isAjay === true ){
     } 
     
     $eSender = splEmailData( $user_country );
+    $ajxTicketID   = generateTicketID();
     if( isset( $eSender['mail_to'] ) ){
-    //$mailSent = 
-        smtpEmailFunction( $eSender['mail_to'], "Inquiry with ValueCoders", $Mailbody, "lead", 
-        $ajxData['email'], [], ["parvesh@vinove.com", "nitin.baluni@mail.vinove.com"], [], $ajxData['name'] );
+    smtpEmailFunction( $eSender['mail_to'], "Inquiry with ValueCoders [".$ajxTicketID."]", $Mailbody, "lead", 
+    $ajxData['email'], [], ["parvesh@vinove.com", "nitin.baluni@mail.vinove.com"], [], $ajxData['name'] );
     }
+
     $leadReq = "How Can We Help : ".$ajxData['how_can'];
-        if( isset( $ajxData['lead_id'] ) && ($ajxData['lead_id'] != 0) ){
-        echo json_encode( array( 'success' => true, 'mail_data' => $Mailbody, 'lead_id' => $ajxData['lead_id'] ) );
-        die;
-        }
-        $arrZoho_v2 = array(
-        'Email' => $ajxData['email'],
-        'First Name' => $firstn,
-        'Last Name' => $lastn,
-        'Phone' => $ajxData['phone'],
-        'Country' => $user_country,
-        'Lead Status' => 'Not Contacted Yet',
-        'Lead Source' => $lead_source,
-        'UTM Source' => $utm_source,
-        'Property' => 'ValueCoders',
-        'IP Address' => $varIPAdd,
-        'Description' => $leadReq,
-        'URL' => "",
-        'File Uploaded' => "",
-        'Requirements' => $leadReq,
-        'refurl' => $varRefererURL
-        );
-        //$eSender = splEmailData( $user_country );
-        $lead_id = zohoCrmUpdate_v2( $arrZoho_v2, $utm_source, $eSender['lead_to'], false );
-        echo json_encode( array( 'success' => true, 'mail_data' => $Mailbody, 'zoho_data' => $arrZoho_v2, 
-        'lead_id' => $lead_id ) );
-        
-        /*
-        if( $mailSent === true ){
-        }else{
-        echo json_encode( array( 'success' => false, 'mail_data' => $Mailbody, 
-        'thank_url' => 'https://www.valuecoders.com/thanks?email-error=true' ) );
-        }
-        */
+    if( isset( $ajxData['lead_id'] ) && ($ajxData['lead_id'] != 0) ){
+    echo json_encode(
+        array( 
+            'success' => true, 
+            'mail_data' => $Mailbody, 
+            'lead_id' => $ajxData['lead_id'], 
+            'ticket_id' => $ajxTicketID 
+        ) 
+    );
+    die;
+    }
+
+    $arrZoho_v2 = array(
+    'Email' => $ajxData['email'],
+    'First Name' => $firstn,
+    'Last Name' => $lastn,
+    'Phone' => $ajxData['phone'],
+    'Country' => $user_country,
+    'Lead Status' => 'Not Contacted Yet',
+    'Lead Source' => $lead_source,
+    'UTM Source' => $utm_source,
+    'Property' => 'ValueCoders',
+    'IP Address' => $varIPAdd,
+    'Description' => $leadReq,
+    'URL' => "",
+    'File Uploaded' => "",
+    'Requirements' => $leadReq,
+    'refurl' => $varRefererURL
+    );
+    //$eSender = splEmailData( $user_country );
+    $lead_id = zohoCrmUpdate_v2( $arrZoho_v2, $utm_source, $eSender['lead_to'], false );
+    echo json_encode( 
+        array( 
+        'success' => true, 
+        'mail_data' => $Mailbody, 
+        'zoho_data' => $arrZoho_v2, 
+        'lead_id' => $lead_id,
+        'ticket_id' => $ajxTicketID
+        ) 
+    );
+    
+    /*
+    if( $mailSent === true ){
+    }else{
+    echo json_encode( array( 'success' => false, 'mail_data' => $Mailbody, 
+    'thank_url' => 'https://www.valuecoders.com/thanks?email-error=true' ) );
+    }
+    */
     die;
 }else{
     if( isset( $_POST['vform-type'] ) && $_POST['vform-type'] == "contact" ){
@@ -867,7 +885,8 @@ if( $isAjay === true ){
 
 function sendmail_function($arrPostParams, $uploaded_files_names_param){
     global $arrEmail;
-    $ticketID   = generateTicketID();
+    $ticketID = (isset($arrPostParams['e-ticket-id']) && !empty($arrPostParams['e-ticket-id'])) ? $arrPostParams['e-ticket-id'] :  generateTicketID();
+
     /*$isContact = (isset($arrPostParams['vform-type']) && ($arrPostParams['vform-type'] == "contact")) ? true : false;*/
     $isContact      = false;
     $vcUserCountry  = ($isContact === true) ? vcGetCountryByCode( $arrPostParams['user-country'] ) : 

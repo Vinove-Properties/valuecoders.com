@@ -1,10 +1,11 @@
 */\.htaccess
-#staging/wp-config.php
-#l/wp-config.php
-#blog/wp-config.php
-#case-studies/wp-config.php
 
 wp-config.php
+staging/wp-config.php
+l/wp-config.php
+blog/wp-config.php
+case-studies/wp-config.php
+
 data/*
 uploads/*
 wp-content/*
@@ -34,5 +35,5 @@ staging/wp-admin/*
 staging/wp-includes/*
 !staging/wp-content/themes/
 
-robots.txt
+#robots.txt
 .DS_Store
