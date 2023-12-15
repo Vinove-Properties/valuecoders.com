@@ -1,8 +1,8 @@
 <?php
 //print_r($_POST); die;
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -11,6 +11,8 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 require 'vc-mailto.php';
+
+define('IH_LOGFILE', '/home/valuecoders-com/public_html/log/crm.log');
 
 ob_start();
 session_start();
@@ -187,8 +189,7 @@ $varDateAdded = date('Y-m-d H:i:s');
 
 
 //zohocrm api v2 update --23-Dec-2019
-function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861)
-{
+function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
     $varEmail = $argArrData['Email'];
     $varLastName = $argArrData['Last Name'];
     $varFirstName = $argArrData['First Name'];
@@ -217,8 +218,7 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861)
         CURLOPT_TIMEOUT => 30,
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
         CURLOPT_CUSTOMREQUEST => "POST",
-        CURLOPT_POSTFIELDS => $postData,
-
+        CURLOPT_POSTFIELDS => $postData
     ));
     $response = curl_exec($curl);
     $arrRefreshTokResponse =json_decode($response,true);
@@ -229,23 +229,7 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861)
     $headers .= "From: vkavasthi@gmail.com <vkavasthi@gmail.com>" . "\r\n";
     $headers .= "Reply-To: vkavasthi@gmail.com\r\n";
     curl_close( $curl );
-    if ($err) {
-        $body = "";
-        $body .= "Dear Admin,"."<br>".$curl;
-        $body .= "error"."==".curl_errno($curl)."<br/>";
-        $response2 = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-
-
-        $body .= "error response"."==".$response2."<br/>";
-        $body .= "error "."==".$err."<br/>";
-        $body .= "erro1r "."==".print_r($err,1)."<br/>";
-        $body .= " RESPONSE Details are:".print_r($response2,1)."<br>";
-        $body .= " Client Details:".$varEmail.'Last-name'.$varLastName.'First Name'.$varFirstName."<br>";
-        $body .= " Client Details:".print_r($varEmail.$varLastName.$varFirstName,1)."<br>";
-            
-      //@mail("marketing@vinove.com", "VC : Website", $body, $headers);
-      smtpEmailFunction( "marketing@vinove.com", "VC : Website", $body, "lead", $varEmail );
-    } else {
+    if(!$err){
         $zo_requirement = "Url: ".$varURL. "File Uploaded: ".$varUploadedFiles." Requirements:" .$varRequirements;
         $QfLead = "Yes";        
         $zoho_data = array(
@@ -271,11 +255,6 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861)
         $sJSON  = str_replace('{','[{',$sJSON);
         $sJSON  = str_replace('}','}]',$sJSON);
         $postLeadData = '{"data":' . $sJSON . '}';
-
-        /*
-        $postLeadData = "{\n    \"data\": [\n        {\n            \"Last_Name\": \"$varLastName\",\n            \"First_Name\": \"$varFirstName\",\n            \"Email\": \"$varEmail\",\n            \"Country1\": \"$user_country\",\n            \"Phone\": \"$varPhoneNo\",\n            \"Lead_Source\": \"$varLeadSource\",\n            \"Lead_Status\": \"$varLeadStatus\",\n  \"Owner\":\"$owner_id\",\n            \"Sales_Qualified_Lead\": \"$QfLead\",\n            \"Description\": \"Url: $varURL                    File Uploaded: $varUploadedFiles                    Requirements: $varRequirements\"  ,\n            \"UTM_Source\":  \"$varUTMSource\",\n        \t\"Property\": \"$varProperty\",\n            \"IP_Address1\": \"$varIPAddress\",\n            \"Ref_Url\": \"$varRefURL\"\n        }\n        \n    ],\n    \"trigger\": [\n        \"approval\",\n        \"workflow\",\n        \"blueprint\"\n    ]\n}";
-        */
-
         curl_setopt_array($curl, array(
             CURLOPT_URL => "https://www.zohoapis.com/crm/v2/Leads",//US DC .com, IN DC .in
             CURLOPT_RETURNTRANSFER => true,
@@ -297,62 +276,76 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861)
 
         curl_close($curl);
 
-        if ($err) {
-            echo "cURL Error #:" . $err;
-        } else {
+        if(!$err){
             $body1 = '';
             $response = json_decode($response);
             if( isset( $response->data[0] ) &&  ($response->data[0]->code == "DUPLICATE_DATA") ) :
-                $lead_id = ( isset( $response->data[0] ) ) ? $response->data[0]->details->id : 0;
-                if( $lead_id !== 0 ){
-                    $zoho_data = array(
-                    'id'                    => $lead_id,
-                    'Lead_Status'           => "Not Contacted Yet",
-                    'Owner'                 => 658520861,
-                    'Sales_Qualified_Lead'  => "No",
-                    'Is_Duplicate'          => "Yes"
-                    );
+            $lead_id = ( isset( $response->data[0] ) ) ? $response->data[0]->details->id : 0;
+            if( $lead_id !== 0 ){
+                $zoho_data = array(
+                'id'                    => $lead_id,
+                'Lead_Status'           => "Not Contacted Yet",
+                'Owner'                 => 658520861,
+                'Sales_Qualified_Lead'  => "No",
+                'Is_Duplicate'          => "Yes"
+                );
 
-                    $curl   = curl_init();        
-                    $sJSON  = json_encode( $zoho_data );
-                    $sJSON  = str_replace('{','[{',$sJSON);
-                    $sJSON  = str_replace('}','}]',$sJSON);
-                    $postLeadData = '{"data":' . $sJSON . '}';
-                    curl_setopt_array($curl, array(
-                    CURLOPT_URL => "https://www.zohoapis.com/crm/v2/Leads",
-                    CURLOPT_RETURNTRANSFER => true,
-                    CURLOPT_ENCODING => "",
-                    CURLOPT_MAXREDIRS => 10,
-                    CURLOPT_TIMEOUT => 30,
-                    CURLOPT_HTTP_VERSION    => CURL_HTTP_VERSION_1_1,
-                    CURLOPT_CUSTOMREQUEST   => "PUT",
-                    CURLOPT_POSTFIELDS      => $postLeadData,
-                    CURLOPT_HTTPHEADER      => array(
-                    "authorization: Zoho-oauthtoken $varAccessToken",
-                    "cache-control: no-cache",
-                    "content-type: application/json"
-                    ),
-                    ));
+                $curl   = curl_init();        
+                $sJSON  = json_encode( $zoho_data );
+                $sJSON  = str_replace('{','[{',$sJSON);
+                $sJSON  = str_replace('}','}]',$sJSON);
+                $postLeadData = '{"data":' . $sJSON . '}';
+                curl_setopt_array($curl, array(
+                CURLOPT_URL => "https://www.zohoapis.com/crm/v2/Leads",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION    => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST   => "PUT",
+                CURLOPT_POSTFIELDS      => $postLeadData,
+                CURLOPT_HTTPHEADER      => array(
+                "authorization: Zoho-oauthtoken $varAccessToken",
+                "cache-control: no-cache",
+                "content-type: application/json"
+                ),
+                ));
 
-                    $response  = curl_exec($curl);
-                    curl_close( $curl );
-                    $response   = json_decode( $response );
-                    //vc_dd( $response );
-                    /*$file       = fopen("/home/valuecoc/leads/zoho-logs2023.txt","a");
-                    $zlead      = PHP_EOL.$varEmail.":".$body1;
-                    fwrite( $file, $zlead );
-                    fclose( $file );*/
-                }           
+                $response  = curl_exec($curl);
+                curl_close( $curl );
+                $crmException   = $response;
+                $response       = json_decode( $response );
+                
+                $rspCode    = ['DUPLICATE_DATA', 'SUCCESS'];
+                $statusCode = (isset($response->data[0]) && !empty($response->data[0]->code)) ? $response->data[0]->code : '';
+            
+                if( !empty( $statusCode ) && !in_array($statusCode, $rspCode) ){
+                    $user_name = $varFirstName.' '.$varLastName;
+                    smtpEmailFunction( "web@vinove.com", "Zoho CRM error - ValueCoders LP", $crmException, "lead", 
+                    $varEmail, [], ['nitin.baluni@mail.vinove.com'], [], $user_name );
+                }
+
+                $file       = fopen(IH_LOGFILE,"a");
+                $zlead      = PHP_EOL.$varEmail.":".print_r($response,1);
+                fwrite( $file, $zlead );
+                fclose( $file );
+            }
             endif;
-            $body1 .= "Details are:".print_r($response,1)."<br>";
-
-            //@mail("marketing@vinove.com", "VC : Website", $body1, $headers);
-            smtpEmailFunction( "marketing@vinove.com", "VC : Website", $body1, "lead", $varEmail );
+        }else{
+            $file       = fopen(IH_LOGFILE,"a");
+            $zlead      = PHP_EOL.$varEmail.":".print_r($err,1);
+            fwrite( $file, $zlead );
+            fclose( $file );
         }
-
+    }else{
+        $file       = fopen(IH_LOGFILE,"a");
+        $zlead      = PHP_EOL.$varEmail.":".print_r($err,1);
+        fwrite( $file, $zlead );
+        fclose( $file );
     }
     return true;
 }
+
 function checkSpamEmail($email) {
 
     $emailDomain = explode(".",$email);
@@ -440,6 +433,7 @@ sendmail_function($_POST, '','');
 function sendmail_function($arrPostParams, $uploaded_files_names_param,$token){
     //$time_start = microtime(true);
     global $arrEmail;
+    $ticketID   = generateTicketID();
     $autoEmailBody = 'Greetings! <br><br>
     Thank you for contacting us here at ValueCoders.<br><br>
     This auto-reply is just to let you know that we have received your email and will get back to you with a (human) response as soon as possible.<br><br>
