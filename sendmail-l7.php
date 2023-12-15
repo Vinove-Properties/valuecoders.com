@@ -190,26 +190,26 @@ $varDateAdded = date('Y-m-d H:i:s');
 
 //zohocrm api v2 update --23-Dec-2019
 function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
-    $varEmail = $argArrData['Email'];
-    $varLastName = $argArrData['Last Name'];
-    $varFirstName = $argArrData['First Name'];
-    $varPhoneNo = $argArrData['Phone'];
-    $varLeadStatus = $argArrData['Lead Status'];
-    $varLeadSource = $argArrData['Lead Source'];
-    $varUTMSource = $argArrData['UTM Source'];
-    $varProperty = $argArrData['Property'];
-    $varIPAddress = $argArrData['IP Address'];
+    $varEmail       = $argArrData['Email'];
+    $varLastName    = $argArrData['Last Name'];
+    $varFirstName   = $argArrData['First Name'];
+    $varPhoneNo     = $argArrData['Phone'];
+    $varLeadStatus  = $argArrData['Lead Status'];
+    $varLeadSource  = $argArrData['Lead Source'];
+    $varUTMSource   = $argArrData['UTM Source'];
+    $varProperty    = $argArrData['Property'];
+    $varIPAddress   = $argArrData['IP Address'];
     $varDescription = $argArrData['Description'];
-    $user_country = (isset($_POST['user-country']) && $_POST['user-country'])?$_POST['user-country']:"";
+    $user_country   = (isset($_POST['user-country']) && $_POST['user-country'])?$_POST['user-country']:"";
     $user_country_arr = @explode("(",$user_country);
     
     if(isset($user_country_arr[0]) && $user_country_arr[0])
-    $user_country =  trim($user_country_arr[0]);
+    $user_country   = trim($user_country_arr[0]);
 
-    $varURL = $argArrData['URL'];
-    $varUploadedFiles = $argArrData['File Uploaded'];
-    $varRequirements = $argArrData['Requirements'];
-    $varRefURL = $argArrData['refurl'];
+    $varURL             = $argArrData['URL'];
+    $varUploadedFiles   = $argArrData['File Uploaded'];
+    $varRequirements    = $argArrData['Requirements'];
+    $varRefURL          = $argArrData['refurl'];
     $postData = 'refresh_token='. REFRESH_TOKEN.'&client_id='.CLIENT_ID.'&client_secret='.CLIENT_SECRET.'&grant_type='.'refresh_token';
     $curl = curl_init();
     curl_setopt_array($curl, array(
@@ -231,7 +231,10 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
     $headers .= "From: vkavasthi@gmail.com <vkavasthi@gmail.com>" . "\r\n";
     $headers .= "Reply-To: vkavasthi@gmail.com\r\n";
     curl_close( $curl );
-    
+    $file       = fopen(IH_LOGFILE,"a");
+    //$zlead      = PHP_EOL.$varEmail.":".print_r($err,1);
+    fwrite( $file, PHP_EOL.print_r($response, 1) );
+    fclose( $file );
     if( !$err ){
         $zo_requirement = "Url: ".$varURL. "File Uploaded: ".$varUploadedFiles." Requirements:" .$varRequirements;
         $QfLead = "Yes";        
@@ -329,9 +332,9 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
                 $statusCode = (isset($response->data[0]) && !empty($response->data[0]->code)) ? $response->data[0]->code : '';
             
                 if( !empty( $statusCode ) && !in_array($statusCode, $rspCode) ){
-                    $user_name = $varFirstName.' '.$varLastName;
-                    smtpEmailFunction( "web@vinove.com", "Zoho CRM error - ValueCoders LP", $crmException, "lead", 
-                    $varEmail, [], ['nitin.baluni@mail.vinove.com'], [], $user_name );
+                $user_name = $varFirstName.' '.$varLastName;
+                smtpEmailFunction( "web@vinove.com", "Zoho CRM error - ValueCoders LP", $crmException, "lead", 
+                $varEmail, [], ['nitin.baluni@mail.vinove.com'], [], $user_name );
                 }                
             }
             endif;
@@ -347,6 +350,10 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
         fwrite( $file, "Success Lead #003" );
         fclose( $file );
     }
+    $file       = fopen(IH_LOGFILE,"a");
+    //$zlead      = PHP_EOL.$varEmail.":".print_r($err,1);
+    fwrite( $file, "Success Lead #DEFAULT " );
+    fclose( $file );
     return true;
 }
 
