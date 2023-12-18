@@ -8,7 +8,8 @@ $input_fld =
 ];
 
 function splEmailData( $is_country ){
-$zoho_id = [
+    $is_country = trim( $is_country );
+    $zoho_id = [
     'avi'       => 664032580, 
     'akhil'     => 708323463, 
     'sanjiv'    => 779804104, 
@@ -16,7 +17,7 @@ $zoho_id = [
     'ankur'     => 658520861,
     'neha'      => 720093253,
     'pa'        => 668293911
-];
+    ];
 
 $array_other = ['Congo, the Democratic Republic of the', 'Curaçao'];
 
@@ -311,7 +312,7 @@ $array_apac = [
 'Kyrgyzstan',
 'Turkmenistan',
 'Palestine',
-];  
+];
     $consoleArray = [];
     if( checkInArray( $is_country, $array_other ) ){
         $consoleArray = array( 
