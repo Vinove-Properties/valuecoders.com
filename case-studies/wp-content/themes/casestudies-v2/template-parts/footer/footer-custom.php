@@ -27,8 +27,9 @@
       <div class="footer-last">
         <picture>
           <source type="image/webp" srcset="https://www.valuecoders.com/wp-content/themes/valuecoders/images/footer-iso-logo.webp">
-          <source type="image/png" srcset="https://www.valuecoders.com/wp-content/themes/valuecoders/footer-iso-logo.png">
-          <img loading="lazy" src="https://www.valuecoders.com/wp-content/themes/valuecoders/footer-iso-logo.png" alt="Valuecoders" width="97" height="69">
+          <source type="image/png" srcset="https://www.valuecoders.com/wp-content/themes/valuecoders/images/footer-iso-logo.png">
+          <img loading="lazy" src="https://www.valuecoders.com/wp-content/themes/valuecoders/images/footer-iso-logo.png" 
+          alt="Valuecoders" width="97" height="69">
         </picture>
         <a href="https://www.facebook.com/ValueCoders" target="_blank"><i class="social-icon facebook"></i></a>
         <a href="https://twitter.com/ValueCoders" target="_blank"><i class="social-icon twitter"></i></a>
