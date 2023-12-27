@@ -1066,7 +1066,7 @@ if( isset( $hmodel['enable'] ) && ($hmodel['enable'] == "yes") ) :
 endif;
 }else{ 
 $forceDisble = get_field('disbale-hm');
-if( $forceDisble !== "no" ){
+if( $forceDisble !== "yes" ){
 ?>
 <section class="three-column-icon-section bg-white padding-t-150 padding-b-150 hiring-models-col">
   <div class="container">
