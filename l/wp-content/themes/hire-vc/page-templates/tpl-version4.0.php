@@ -1130,7 +1130,9 @@ if( $isDmPage === true ){
     </div>
   </div>
 </section>
-<?php endif; ?>
+<?php 
+}
+endif; ?>
 
 <?php 
 $faqs = get_field('vc-faq');
