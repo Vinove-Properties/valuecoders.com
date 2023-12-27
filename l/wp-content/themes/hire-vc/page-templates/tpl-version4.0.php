@@ -1064,7 +1064,10 @@ if( isset( $hmodel['enable'] ) && ($hmodel['enable'] == "yes") ) :
 </section>
 <?php 
 endif;
-}else{ ?>
+}else{ 
+$forceDisble = get_field('disbale-hm');
+if( $forceDisble !== "no" ){
+?>
 <section class="three-column-icon-section bg-white padding-t-150 padding-b-150 hiring-models-col">
   <div class="container">
     <div class="head-txt text-center">
@@ -1132,7 +1135,9 @@ endif;
     </div>
   </div>
 </section>
-<?php } ?>
+<?php 
+}
+} ?>
 
 
 <?php 
