@@ -993,9 +993,9 @@ if( isset($iserve['is_enable']) && $iserve['is_enable'] == "yes" ) :
 ?>
 
 <?php 
-if( $isDmPage === true ){ 
 $hmodel = get_field('hrm-col');
 if( isset( $hmodel['enable'] ) && ($hmodel['enable'] == "yes") ) :  
+if( $isDmPage === true ){ 
 ?>
 <section class="three-column-icon-section bg-white padding-t-150 padding-b-150 hiring-models-col">
   <div class="container">
@@ -1062,9 +1062,7 @@ if( isset( $hmodel['enable'] ) && ($hmodel['enable'] == "yes") ) :
     </div>
   </div>
 </section>
-<?php 
-endif;
-}else{ ?>
+<?php }else{ ?>
 <section class="three-column-icon-section bg-white padding-t-150 padding-b-150 hiring-models-col">
   <div class="container">
     <div class="head-txt text-center">
@@ -1132,8 +1130,7 @@ endif;
     </div>
   </div>
 </section>
-<?php } ?>
-
+<?php endif; ?>
 
 <?php 
 $faqs = get_field('vc-faq');
