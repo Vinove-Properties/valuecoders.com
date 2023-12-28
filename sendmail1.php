@@ -135,11 +135,11 @@ function logSpamException( $arrPostParams, $note = '' ){
     }
     
     
-    // Live
-    smtpEmailFunction("parvesh@vinove.com", "Inquiry with ValueCoders - Spam Exception", $Mailbody, "lead", 
-    $user_email, ['web@vinove.com'], [], [], $user_name);
+    //Live
+    smtpEmailFunction( "web@vinove.com", "Inquiry with ValueCoders - Spam Exception", $Mailbody, "lead", 
+    $user_email, [], [], [], $user_name );
     
-    // Test
+    //Test
     /*smtpEmailFunction("nitin.baluni@mail.vinove.com", "Inquiry with ValueCoders - Spam Exception", $Mailbody, "lead", 
     $user_email, [], [], [], $user_name);*/
 }
