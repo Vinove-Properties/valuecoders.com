@@ -70,10 +70,6 @@ function logSpamException( $arrPostParams, $note = '' ){
 
     $pageRefererURL = isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : "";        
     $ip_addr        = get_client_ip_user();
-    
-    if( $ip_addr == "141.95.234.1" ){
-        return false;
-    }
 
     $Mailbody = "";
     $bodyBr    = "<br>";
