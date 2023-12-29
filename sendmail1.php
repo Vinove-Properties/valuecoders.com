@@ -260,7 +260,7 @@ define('ACESS_TOKEN','1000.cae698c21d5f8adc4f5f8e1ae60a3c39.6008000ac10c5df23ebf
 define('REFRESH_TOKEN','1000.b4d2d568df487f80bc73675a27101c45.d7cc4b483d0157d16f672e86dc354d62');
 
 $arrEmail = array('parvesh@vinove.com', 'akhil@valuecoders.com');
-$deny_ips = array( '146.185.253.167', '146.185.253.165' );
+$deny_ips = array( '146.185.253.167', '146.185.253.165', '141.95.234.1' );
 function get_client_ip_user() {
     if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
               $_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
@@ -350,6 +350,7 @@ $ip = get_client_ip_user();
 if( (array_search($ip, $deny_ips))!== FALSE ) {
     die("locked IP");
 }
+
 function hiddenBoatField( $type = "list" ){
     $botFields = [
         'first_name',
