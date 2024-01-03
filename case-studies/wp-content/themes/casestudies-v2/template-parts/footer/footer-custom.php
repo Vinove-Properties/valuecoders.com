@@ -13,7 +13,7 @@
   <div class="container">
     <div class="dis-flex">
       <div class="footer-left">
-        <span class="copy">Copyright © 2004 - 2022. All Rights Reserved. All Rights Reserved. A Vinove Company.</span>
+        <span class="copy">Copyright © 2004 - <?php echo date("Y"); ?>. All Rights Reserved. All Rights Reserved. A Vinove Company.</span>
         <span class="footer-link">
         <a href="https://www.valuecoders.com/partnership-program">Become a Partner</a> <span class="divider">|</span>
         <a href="https://www.valuecoders.com/privacy-policy">Privacy Policy</a> <span class="divider">|</span>
