@@ -170,9 +170,9 @@ function logSpamException( $arrPostParams, $note = '' ){
 function temp_logSpamEmails( $formData ){
     if( ($_SERVER['SERVER_NAME']=='www.valuecoders.com') || ($_SERVER['SERVER_NAME'] == 'valuecoders.com')  ){
         $servername = "localhost";
-        $username   = "valuecoc_wpsite";
-        $password   = "W@89Uz*3J!gp6>dA";
-        $dbname     = "valuecoc_vclive0606";
+        $username   = "valuecoders-com-crm-prod-db-user";
+        $password   = "5CxYSHEaVglFgCA";
+        $dbname     = "valuecoders-com-crm-prod-db";
     }else{
         $servername = "localhost";
         $username   = "phpmyadmin";

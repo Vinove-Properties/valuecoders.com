@@ -24,8 +24,8 @@ define( 'WP_DEBUG_LOG', true );
 define( 'FS_METHOD', 'direct' );
 define( 'WP_POST_REVISIONS', false );
 
-define( 'WP_HOME', 'https://www.valuecoders.com' );
-define( 'WP_SITEURL', 'https://www.valuecoders.com' );
+define( 'WP_HOME', 'http://localhost/valuecoders.com' );
+define( 'WP_SITEURL', 'http://localhost/valuecoders.com' );
 
 define( 'WP_MEMORY_LIMIT', '256M' );
 define('DISALLOW_FILE_EDIT', true);

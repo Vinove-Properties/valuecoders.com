@@ -17,12 +17,12 @@
   }
   $is_staging = ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'v2wp' ) !== false) )  ?  true : false;
   if( $is_staging ){
-  $site_url   = 'https://www.valuecoders.com/v2wp/';
+  $site_url   = 'https://www.valuecoders.com/staging/';
   }else{
   $site_url   = 'https://www.valuecoders.com/';
   }  
   if( isset($_SERVER['HTTP_HOST']) && ($_SERVER['HTTP_HOST'] == "localhost") ){
-    $site_url   = 'http://localhost/valuecoders-v2/wp/';
+    $site_url   = 'http://localhost/valuecoders.com/staging/';
   }
   $tpl_url    = $site_url.'wp-content/themes/valuecoders';
   $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] : 'master';

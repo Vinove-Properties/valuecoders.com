@@ -1,10 +1,22 @@
 <?php
-define( 'DB_NAME', 'valuecoders-com-site-dev-db' );
-define( 'DB_USER', 'valuecoders-com-site-dev-db-user' );
-define( 'DB_PASSWORD', 'cxNhChQKq6rV1k7' );
-define( 'DB_HOST', 'localhost' );
-define( 'DB_CHARSET', 'utf8' );
-define( 'DB_COLLATE', '' );
+define( 'V_ENV', 'localhost' );
+if( V_ENV == "localhost" ){
+	define( 'DB_NAME', 'staging.valuecoders' );
+	define( 'DB_USER', 'phpmyadmin' );
+	define( 'DB_PASSWORD', 'root' );
+	define( 'DB_HOST', 'localhost' );	
+	define( 'WP_HOME', 'http://localhost/valuecoders.com/staging/' );
+	define( 'WP_SITEURL', 'http://localhost/valuecoders.com/staging/' );
+}else{
+	define( 'DB_NAME', 'valuecoders-com-site-dev-db' );
+	define( 'DB_USER', 'valuecoders-com-site-dev-db-user' );
+	define( 'DB_PASSWORD', 'cxNhChQKq6rV1k7' );
+	define( 'DB_HOST', 'localhost' );
+	define( 'WP_HOME', 'https://www.valuecoders.com/staging/' );
+	define( 'WP_SITEURL', 'https://www.valuecoders.com/staging/' );
+}
+
+
 
 define('AUTH_KEY',         'BNVKx:4+cuz67W9AZTn//ftMd{rGO,znIq3~uSb6:!.!)l)vX6x/:GC&Y+7FErq=');
 define('SECURE_AUTH_KEY',  'QWm!vU+q./N(W>2*hp~<X|p5w%rg$*5/=-Q3SC#S^EB^t-1<24?&R!3lr,kPTRiI');
@@ -17,14 +29,15 @@ define('NONCE_SALT',       '8h;{wJ_Mj,!u<v=~szFxQ7CStg8~Ot*.W9zV0-yC|CL~/rsN;p:I
 
 $table_prefix = 'wp_';
 
+define( 'DB_CHARSET', 'utf8' );
+define( 'DB_COLLATE', '' );
+
 define( 'WP_DEBUG', false );
 define( 'WP_DEBUG_LOG', true );
 define( 'FS_METHOD', 'direct' );
 define( 'WP_POST_REVISIONS', false );
-define( 'WP_HOME', 'https://www.valuecoders.com/staging/' );
-define( 'WP_SITEURL', 'https://www.valuecoders.com/staging/' );
 
-define( 'WP_MEMORY_LIMIT', '256M' );
+//define( 'WP_MEMORY_LIMIT', '256M' );
 define('DISALLOW_FILE_EDIT', true);
 
 /** Absolute path to the WordPress directory. */
