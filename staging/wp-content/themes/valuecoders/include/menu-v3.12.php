@@ -605,9 +605,9 @@
             <div class="container landing-menu devops" id="m-cloud_services">
             <div class="dis-flex">
             <div class="flex-3">
-            <a href="<?php echo $site_url; ?>amazon-aws-partner-company-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon6.svg" class="menuicon" alt="menuicon" style="left:-5px"><span class="title">Amazon AWS</span>
+            <a href="<?php echo $site_url; ?>cloud-services/amazon-cloud"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon6.svg" class="menuicon" alt="menuicon" style="left:-5px"><span class="title">Amazon AWS</span>
             </a>
-            <a href="<?php echo $site_url; ?>microsoft-azure-partner-company-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devops-02.svg" class="menuicon" alt="menuicon"><span class="title">Azure</span>
+            <a href="<?php echo $site_url; ?>cloud-services/azure-cloud"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devops-02.svg" class="menuicon" alt="menuicon"><span class="title">Azure</span>
             </a>
             <a href="<?php echo $site_url; ?>cloud-services/google-cloud"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/gcloud.svg" class="menuicon" alt="menuicon"><span class="title">Google Cloud</span>
             </a>
