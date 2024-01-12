@@ -609,6 +609,8 @@
             </a>
             <a href="<?php echo $site_url; ?>microsoft-azure-partner-company-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devops-02.svg" class="menuicon" alt="menuicon"><span class="title">Azure</span>
             </a>
+            <a href="<?php echo $site_url; ?>cloud-services/google-cloud"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/gcloud.svg" class="menuicon" alt="menuicon"><span class="title">Google Cloud</span>
+            </a>
             </div>
             </div>
             </div>
