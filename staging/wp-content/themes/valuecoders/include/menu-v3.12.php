@@ -407,20 +407,20 @@
                 <div class="container landing-menu devops single-row-ico" id="m-analytics">
                   <div class="dis-flex">
                     <div class="flex-3">
-                      <a href="<?php echo $site_url; ?>cloud-services/devops-consulting"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cs-icon-1.svg" class="menuicon" alt="menuicon"><span class="title">DevOps Consulting </span>
-                      Tech-tuned operational excellence</a>
+                      <a href="<?php echo $site_url; ?>cloud-services/strategy-consulting"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cloud-01.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Strategy & Consulting</span>
+                      Strategic Cloud Guidance</a>
 
-                      <a href="<?php echo $site_url; ?>cloud-services/it-infrastructure-automation"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cs-icon-2.svg" class="menuicon" alt="menuicon"><span class="title">Infrastructure Automation </span>
-                      Automate, advance, achieve</a>
+                      <a href="<?php echo $site_url; ?>cloud-services/cloud-migration"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cloud-02.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Migration</span>
+                      Seamless, Swift Cloud Transition</a>
 
-                      <a href="<?php echo $site_url; ?>cloud-services/continuous-integration-continous-delivery"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cs-icon-3.svg" class="menuicon" alt="menuicon"><span class="title">CI/CD </span>
-                      Seamless code, swift deliveries</a>
+                      <a href="<?php echo $site_url; ?>cloud-services/devops-automation"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cloud-03.svg" class="menuicon" alt="menuicon"><span class="title">DevOps as a Service</span>
+                      Effortless DevOps Integration</a>
 
-                      <a href="<?php echo $site_url; ?>cloud-services/microservices-and-containerization"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cs-icon-4.svg" class="menuicon" alt="menuicon"><span class="title">Microservices & Containerization </span>
-                      Crafting agile, efficient systems</a>
+                      <a href="<?php echo $site_url; ?>cloud-services/cloud-managed-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cloud-04.svg" class="menuicon" alt="menuicon"><span class="title">24x7 Managed Services</span>
+                      Round-the-Clock Seamless Service</a>
 
-                      <a href="<?php echo $site_url; ?>cloud-services/devops-monitoring-logging"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cs-icon-5.svg" class="menuicon" alt="menuicon"><span class="title">DevOps Monitoring & Logging </span>
-                      Capture every component, deliver better</a>
+                      <a href="<?php echo $site_url; ?>cloud-services/cloud-finops-service"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cloud-05.svg" class="menuicon" alt="menuicon"><span class="title">Cloud FinOps Services</span>
+                      Cloud Savings Made Simple</a>
                     </div>
                   </div>
                 </div>
