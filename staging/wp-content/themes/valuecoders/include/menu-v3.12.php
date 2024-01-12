@@ -39,7 +39,7 @@
   enterprises : For Enterprises
   agencies : For Agencies
   */
-  $mcat     = 'devops';
+  //$mcat     = 'devops';
   $pcatArray = [
     'engineering'     => ['name' => 'Product Engineering', 'slug' => 'outsource-software-product-development-services', 
     'icon' => 'company_icon1.svg'],
