@@ -15,7 +15,7 @@
       }
       return $is_mobile;
   }
-  $is_staging = ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'v2wp' ) !== false) )  ?  true : false;
+  $is_staging = ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'staging' ) !== false) )  ?  true : false;
   if( $is_staging ){
   $site_url   = 'https://www.valuecoders.com/staging/';
   }else{
