@@ -113,7 +113,9 @@ function loadReCapJS(){
   pxBody.dataset.gcaploaded = 1;
 }    
 </script>
-
+<?php if( is_home() || is_front_page() ) : ?>
+<link rel="preload" as="video" href="<?php bloginfo('template_url'); ?>/video/home-video.mp4">
+<?php endif; ?>
 </head>
 <body id="themeAdd" <?php body_class(); ?> data-mpid="<?php global $post; echo $post->ID; ?>" data-ptemplate="<?php echo basename( get_page_template() ); ?>" data-gcaploaded="0">
 <?php 
