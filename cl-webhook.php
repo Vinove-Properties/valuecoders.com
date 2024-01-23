@@ -317,31 +317,29 @@ if( isset( $json['event'] ) && $json['event'] == "invitee.created" ){
         $utm_medium = $json['payload']['tracking']['utm_medium'];
     }
     
-    $flds       = $json['payload']['questions_and_answers'];
-    $phone      = $flds[0]['answer'];
-    $phoneee    = explode(" ", $phone);
-
+    $phone      = $json['payload']['text_reminder_number'];
+    $phoneee    = explode(" ", $phone);    
     $country    = ( isset( $phoneee[0] ) ) ? globalCountryListAry( $phoneee[0] ) : "N/A";
-
-    $comment    = $flds[1]['answer'];
-
-    //$company    = $flds[1]['answer'];
-    //$teamSize   = $flds[2]['answer'];    
     $email      = $json['payload']['email'];
+
+    $flds       = $json['payload']['questions_and_answers'];
+    $comment    = $flds[0]['answer'];
+    $startFrm   = $flds[1]['answer'];
+    $howLong    = $flds[2]['answer'];
     
-    $tempLog = fopen(CL_LOGFILE,"a");
-    fwrite($tempLog, $email.print_r($json, true)."\n");
-    fclose($tempLog);
-    
-    define('lpCLIENT_ID','1000.HHBBESCGHT72F17RR04XKA5RTC2HBP');
-    define('lpCLIENT_SECRET','c3f840bd0c1203afe8219131c9c02ba077a71bab74');
-    define('lpREFRESH_TOKEN','1000.f86847ee4d9b9150d8204cc66a0a036f.f73323cfb515800e6b33d8ec53c26017');
+    if( !empty($startFrm) ){
+        $comment .= "\n When are you looking to start : ".$startFrm;
+    }
+
+    if( !empty($howLong) ){
+        $comment .= "\n How long would you need the professionals for : ".$howLong;
+    }
 
     /*Zoho CRM Code Starts Here*/
-    $CLIENT_ID      = '1000.HHBBESCGHT72F17RR04XKA5RTC2HBP';
-    $CLIENT_SECRET  = 'c3f840bd0c1203afe8219131c9c02ba077a71bab74';
-    $REFRESH_TOKEN  = '1000.f86847ee4d9b9150d8204cc66a0a036f.f73323cfb515800e6b33d8ec53c26017';
-    $owner_id       = 5725664;
+    $CLIENT_ID      = '1000.BMJ414JAF95SXHD4YKRK0FJ3JC57VH';
+    $CLIENT_SECRET  = 'e9a796ffde50de7a3198d63f134196d125bae343d0';
+    $REFRESH_TOKEN  = '1000.b4d2d568df487f80bc73675a27101c45.d7cc4b483d0157d16f672e86dc354d62';
+    $owner_id       = 658520861;
     $postData       = 'refresh_token='.$REFRESH_TOKEN.'&client_id='.$CLIENT_ID.'&client_secret='.$CLIENT_SECRET.'&grant_type='.'refresh_token';
     $curl = curl_init();
     curl_setopt_array( $curl, array(
@@ -366,9 +364,8 @@ if( isset( $json['event'] ) && $json['event'] == "invitee.created" ){
     'First_Name'    => $firtName,
     'Last_Name'     => (!empty($lastName)) ? $lastName : "NA",
     'Email'         => $json['payload']['email'],
-    'Company'       => "",
+    'Country'       => $country,
     'Country1'      => $country,
-    'Country'      => $country,
     'Phone'         => $phone,
     'Lead_Source'   => "Calendly Direct",
     'Lead_Status'   => "Not Contacted",
@@ -463,8 +460,7 @@ if( isset( $json['event'] ) && $json['event'] == "invitee.created" ){
                     fwrite( $file, "Error in Zoho Entry :".$err );
                     fclose( $file );    
                 }
-                curl_close( $curl );
-                
+                curl_close( $curl );                
             }
         endif;
     }else{
