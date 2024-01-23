@@ -339,7 +339,7 @@ if( isset( $json['event'] ) && $json['event'] == "invitee.created" ){
     $CLIENT_ID      = '1000.BMJ414JAF95SXHD4YKRK0FJ3JC57VH';
     $CLIENT_SECRET  = 'e9a796ffde50de7a3198d63f134196d125bae343d0';
     $REFRESH_TOKEN  = '1000.b4d2d568df487f80bc73675a27101c45.d7cc4b483d0157d16f672e86dc354d62';
-    $owner_id       = 658520861;
+    $owner_id       = 668293911;
     $postData       = 'refresh_token='.$REFRESH_TOKEN.'&client_id='.$CLIENT_ID.'&client_secret='.$CLIENT_SECRET.'&grant_type='.'refresh_token';
     $curl = curl_init();
     curl_setopt_array( $curl, array(
