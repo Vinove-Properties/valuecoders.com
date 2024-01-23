@@ -39,7 +39,7 @@
   enterprises : For Enterprises
   agencies : For Agencies
   */
-  $mcat     = 'ai-ml';
+  //$mcat     = 'ai-ml';
   $pcatArray = [
     'engineering'     => ['name' => 'Product Engineering', 'slug' => 'outsource-software-product-development-services', 
     'icon' => 'company_icon1.svg'],
