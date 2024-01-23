@@ -1,11 +1,16 @@
 <?php
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting( E_ALL );
 
 $data = file_get_contents('php://input');
 $json = json_decode($data, true);
+
+define('CL_LOGFILE', '/home/valuecoders-com/public_html/log/crm.log');
+$file       = fopen(CL_LOGFILE,"a");
+fwrite( $file, PHP_EOL."ADMIN API REQ - updated : ".time().print_r($json,true) );
+fclose( $file );
+
 if( isset( $json['event'] ) && ($json['event'] == "invitee.created") ) :
     $event_url  = $json['payload']['event'];
     $ecurl      = curl_init();
