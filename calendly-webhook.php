@@ -1,13 +1,13 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting( E_ALL );
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting( E_ALL );
 
 $data = file_get_contents('php://input');
 $json = json_decode($data, true);
 
 define('CL_LOGFILE', '/home/valuecoders-com/public_html/log/crm.log');
-$file       = fopen(CL_LOGFILE,"a");
+$file = fopen(CL_LOGFILE,"a");
 fwrite( $file, PHP_EOL."ADMIN API REQ - updated : ".time().print_r($json,true) );
 fclose( $file );
 
