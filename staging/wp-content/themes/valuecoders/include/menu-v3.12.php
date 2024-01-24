@@ -564,12 +564,12 @@
             </li>
             <?php if( $mcat === 'ai-ml' ) : ?>
             <li class="menu-item-has-children for-company" id="ai-ml-technologies">
-              <a href="javascript:void(0)">Solutions</a> <span class="arrow-btn"></span>
+              <a href="javascript:void(0)">Industries</a> <span class="arrow-btn"></span>
               <div class="menu-mega container">
                 <div class="container w-900 demand-teams">
                   <div class="dis-flex">
                     <div class="flex-3">
-                      <span class="head">INDUSTRIES</span>
+                      <!--<span class="head">INDUSTRIES</span>-->
                       <a href="<?php echo $site_url; ?>ai/fintech"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/aisol-01.svg" class="menuicon" alt="menuicon"><span class="title">AI/ML for Finance</span>
                       AI revolution in finance</a>
                       <a href="<?php echo $site_url; ?>ai/manufacturing"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/aisol-02.svg" class="menuicon" alt="menuicon"><span class="title">AI/ML for Manufacturing</span>
@@ -582,7 +582,7 @@
                       Advanced AI healthcare solutions</a>
                     </div>
                     <div class="flex-3 bg-light">
-                      <span class="head" style="opacity:0;">Data Science &amp; Analytics</span>
+                      <!--<span class="head">Data Science &amp; Analytics</span>-->
                       <a href="<?php echo $site_url; ?>ai/it"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/aisol-06.svg" class="menuicon" alt="menuicon"><span class="title">AI/ML for IT</span>
                       AI/ML IT innovations</a>
                       <a href="<?php echo $site_url; ?>ai/logistics"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/aisol-07.svg" class="menuicon" alt="menuicon"><span class="title">AI/ML for Logistics</span>
