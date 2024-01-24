@@ -6,7 +6,7 @@
 			<div class="entry-meta">
 				<div class="author-mid-row">
 				<?php valuecoders_posted_by(); ?>
-				<?php valuecoders_posted_on(); ?>
+				<?php //valuecoders_posted_on(); ?>
 				</div>
 			</div>
 			<?php endif; ?>	
