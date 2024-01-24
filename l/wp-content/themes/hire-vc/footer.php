@@ -34,7 +34,7 @@ $isUKAddr   = (isset($usAddr) && ($usAddr == 'yes')) ? true : false;
       </div>
       <div class="flex-4">
       <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/india-flag.svg" alt="Valuecoders" width="33" height="24"><strong>INDIA</strong></p>  
-      <p>1001, 10th Floor, Tower-B, Unitech Cyber Park, Sector - 39, Gurgaon, Haryana, India- 122001</p>
+      <p>10th Floor, Tower-B, Unitech Cyber Park, Sector - 39, Gurugram, Haryana-122001</p>
       </div>
       <div class="flex-4">
       <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/india-flag.svg" alt="Valuecoders" width="33" height="24"><strong>INDIA</strong></p>  
@@ -56,7 +56,7 @@ $isUKAddr   = (isset($usAddr) && ($usAddr == 'yes')) ? true : false;
       </div>
       <div class="flex-4">
         <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/india-flag.svg" alt="Valuecoders" width="33" height="24"><strong>INDIA</strong></p>
-        <p>1001, 10th Floor, Tower-B, Unitech Cyber Park, Sector - 39, Gurgaon, Haryana, India- 122001</p>
+        <p>10th Floor, Tower-B, Unitech Cyber Park, Sector - 39, Gurugram, Haryana-122001</p>
       </div>
       <div class="flex-4">
         <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/india-flag.svg" alt="Valuecoders" width="33" height="24"><strong>INDIA</strong></p>
