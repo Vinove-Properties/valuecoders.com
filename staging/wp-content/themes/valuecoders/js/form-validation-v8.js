@@ -430,8 +430,13 @@ async function vcStepOneCheckert(){
 				let expFld 		= document.getElementById("exp-date-col");				
 				let careerFld 	= document.getElementById("career-col");
 				let lblReq 		= document.getElementById("lbl-requirement");
+				let eTicketID   = document.getElementById("e-ticket-id"); 
 
+				if( "ticket_id" in response ){
+					eTicketID.value = response.ticket_id;
+				}
 				leadInput.value = response.lead_id;
+
 				stepOne.style.display = "none";
 				stepTwo.style.display = "block";
 				clearPerFilledValidation();

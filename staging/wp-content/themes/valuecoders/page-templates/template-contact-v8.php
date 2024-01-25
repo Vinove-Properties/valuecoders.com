@@ -269,6 +269,7 @@ get_header();
 						<input type="hidden" name="frmqueryString" value="<?php the_permalink(); ?>">
 						<input type="hidden" name="page_url" value="<?php the_permalink(); ?>">
 						<input type="hidden" name="vform-type" value="contact">
+						<input type="hidden" id="e-ticket-id" name="e-ticket-id" value="">
 						<input type="submit" id="submitButton" class="checkout-submit" value="Send your request" />
 					</div>
 					<p class="note">Note : We Respect Your Privacy! Your details will never be shared with anyone for marketing purposes.</p>
@@ -322,7 +323,7 @@ get_header();
   </div>
   <div class="last-block">
     <ul class="faddress-col">
-      <li><strong>Gurugram :</strong> Regus, 1053A, 10th Floor, Tower-B, Unitech Cyber Park, Sector - 39, Gurugram, Haryana-122001</li>
+      <li><strong>Gurugram : </strong>1053A, 10th Floor, Tower-B, Unitech Cyber Park Sector - 39, Gurgaon 122001, Haryana</li>
       <li><strong>Noida :</strong> 3rd Floor, Fusion Square, 5A & 5B, Sector 126, Noida 201303</li>
       <li><strong>US :</strong> 5900 Balcones Drive, STE 100, Austin , TX 78731, USA</li>
       <li><strong>UK :</strong> 167-169 Great Portland Street, 5th Floor, London W1W 5PF, United Kingdom</li>
