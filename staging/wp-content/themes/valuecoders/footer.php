@@ -26,16 +26,27 @@ foreach($relatedServices as $row){
 echo '</div></div></section>';
 }
 //endif;
-?>
-   
-<?php 
 if( !is_page_template( 'page-templates/template-thankyou.php' ) ){
    require_once 'include/footer.php';
 }
 ?>
+<div class="popup-section">
+   <div id="intentPopup" class="popup-wrapper exit-intent-popup">
+      <div class="popWrap">
+         <div class="popup-content">
+            <span class="closeicon" onclick="closeIntPopUp('intentPopup', false);">
+               <img loading="lazy" width="11" height="11" src="<?php bloginfo('template_url'); ?>/dev-img/cross-image.svg">
+            </span>
+            <h2>Stay With Us</h2>
+            <h3>Are you looking for the perfect partner for your next software project?</h3>
+            <p>Let's discuss how we can bring your vision to life.</p>
+            <div class="ctasec"><a href="<?php echo site_url('/contact'); ?>" class="book-btn" rel="follow">Book a Free Consultation</a></div>
+         </div>
+      </div>
+   </div>
+</div>
 
 <?php wp_footer(); ?>
-
 <?php 
 global $post;
 $ogImage = 'https://www.valuecoders.com/common/images-2/home-og.png';
