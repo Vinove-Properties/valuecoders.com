@@ -2304,3 +2304,127 @@ body.page-template-template-testimonials .client-video-section iframe,
   position: initial !important;
   height: 260px;
 }
+
+$color_1: #ffad00;
+$color_2: #05164d;
+$color_3: #666;
+$color_4: #fff;
+$background-color_1: #000;
+$background-color_2: rgba(0,0,0,.6);
+$border-color_1: #ffad00;
+$border-color_2: #05164d;
+
+.popup-section {
+	width: 100%;
+	.popup-wrapper {
+		z-index: 999;
+		display: none;
+		position: fixed;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $background-color_1;
+		background-color: $background-color_2;
+		.popWrap {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.popup-content {
+				width: 612px;
+				background: #fff;
+				border-radius: 25px;
+				padding: 36px 70px;
+				text-align: center;
+				position: relative;
+				h2 {
+					color: $color_1;
+					font-weight: 700;
+					font-size: 32px;
+					margin: 0 0 5px;
+					line-height: 40px;
+				}
+				h3 {
+					font-size: 24px;
+					line-height: 32px;
+					font-weight: 600;
+					margin: 0 0 15px;
+					color: $color_2;
+				}
+				p {
+					color: $color_3;
+				}
+				.ctasec {
+					margin: 20px 0 0;
+					a {
+						display: inline-block;
+						border: 1px solid #05164d;
+						margin: 15px auto 0;
+						padding: 15px 20px;
+						font-weight: 500;
+						color: $color_2;
+						border-radius: 8px;
+						min-width: 376px;
+						&:hover {
+							background: #05164d;
+							color: $color_4;
+							border-color: $border-color_2;
+						}
+					}
+					a.book-btn {
+						background: #ffad00;
+						border-color: $border-color_1;
+					}
+				}
+				.closeicon {
+					cursor: pointer;
+					position: absolute;
+					right: 18px;
+					top: 10px;
+					background: 0 0;
+				}
+			}
+		}
+	}
+	.exit-intent-popup {
+		display: none;
+	}
+	.exit-intent-popup.visible {
+		display: block;
+	}
+}
+@media only screen and (max-width: 991px) {
+	.popup-section {
+		.popup-wrapper {
+			.popWrap {
+				.popup-content {
+					width: 90%;
+					border-radius: 20px;
+					padding: 30px 35px;
+					h2 {
+						font-size: 27px;
+						line-height: 32px;
+					}
+					h3 {
+						font-size: 18px;
+						line-height: 26px;
+						margin: 0 0 10px;
+					}
+					.ctasec {
+						margin: 20px 0 0;
+						a {
+							padding: 12px 20px;
+							margin: 10px 0 0;
+							min-width: auto;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

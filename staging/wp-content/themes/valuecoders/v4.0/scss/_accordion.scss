@@ -244,6 +244,17 @@
       }
     }
   }
+
+  &.list-full{
+    .accordian-row{
+      .col-right{
+        ul{
+          li{flex-basis: 100%;}
+        }
+      }
+    } 
+    
+  }
 }
 
 .bg-blue-section {
