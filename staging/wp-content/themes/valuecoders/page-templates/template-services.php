@@ -32,8 +32,12 @@ $bannerImageSrc = getVcWebpSrcURL( $cmnBanner );
 
 			if( isset( $bcCategory ) && ($bcCategory == "solutions") ){
 			echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Solutions</span> '.$bct;		
-			}else{
-			echo '<a href="'.get_bloginfo('url').'">Home</a> <a href="'.site_url('/software-development-services-company').'">Services</a> '.$bct;
+			}elseif( isset( $bcCategory ) && ($bcCategory == "industries") ){
+      echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Industries</span> '.$bct;   
+      }
+      else{
+			echo '<a href="'.get_bloginfo('url').'">Home</a> 
+      <a href="'.site_url('/software-development-services-company').'">Services</a> '.$bct;
 			}
 			?>
 			</div>
