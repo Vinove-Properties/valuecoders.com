@@ -608,10 +608,10 @@
                     <div class="dis-flex last-list">
                       <div class="width-100 last-list">
                         <a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers">AI Engineers</a>
-                        <!--<a href="<?php echo $site_url; ?>hire-developers/hire-rpa-developers">LLM Engineers</a>-->
-                        <!--<a href="<?php echo $site_url; ?>ai/midjourney-development-services">GPT Experts</a>-->
+                        <a href="<?php echo $site_url; ?>hire-developers/hire-llm-engineers">LLM Engineers</a>
+                        <a href="<?php echo $site_url; ?>hire-developers/hire-gpt-expert">GPT Experts</a>
                         <a href="<?php echo $site_url; ?>hire-developers/hire-data-scientists">Data Scientists</a>
-                        <!--<a href="<?php echo $site_url; ?>ai/transformer-model-development-services">ML Engineers</a>-->
+                       <a href="<?php echo $site_url; ?>hire-developers/hire-ml-engineers">ML Engineers</a>
                       </div>
                     </div>
                   </div>
