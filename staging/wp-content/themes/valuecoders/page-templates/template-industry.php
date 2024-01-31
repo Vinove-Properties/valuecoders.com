@@ -393,10 +393,11 @@ if( $iswEnabled == "yes" ){
     </div>
   </div>
 </section>
+<!-- WHy Hire Developer From VC -->
 <?php 
 }
 endif; ?>
-<!-- WHy Hire Developer From VC -->
+
 
 <?php 
 $clientele 		= get_field( 'vc-clients' );
@@ -419,8 +420,9 @@ if( $clientele['is_enabled'] == 'yes' ) :
     </div>
   </div>
 </section>
-<?php endif; ?>
 <!-- ValueCoder clientele #Ends Here -->
+<?php endif; ?>
+
 <section id="et-two" class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70">
 		<div class="container">
 		<div class="head-txt text-center">
