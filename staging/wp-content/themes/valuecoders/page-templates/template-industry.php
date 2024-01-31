@@ -166,7 +166,7 @@ $tabLoop 		= $tabSec['tab-loop'];
 }
 ?>
 <?php if( !is_page(1087) ){ ?>
-<section class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70">
+<section id="et-one" class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70">
 	<div class="container">
       <div class="head-txt text-center">
 			<h2>
@@ -421,7 +421,7 @@ if( $clientele['is_enabled'] == 'yes' ) :
 </section>
 <?php endif; ?>
 <!-- ValueCoder clientele #Ends Here -->
-<section class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70">
+<section id="et-two" class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70">
 		<div class="container">
 		<div class="head-txt text-center">
 		<h2>
