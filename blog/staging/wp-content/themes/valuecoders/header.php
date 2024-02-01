@@ -27,8 +27,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
     
     if( is_author() ) {
       get_template_part('inc/author', 'section');
-    }else{ ?>
-
+    }else{
+      if( !is_single() ) :
+    ?>
     <section class="search-section padding-t-100 padding-b-120" data-dir="<?php echo get_template_directory(); ?>">
     <div class="container">
     <div class="blog-search-outer"> 
@@ -68,17 +69,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
       }
       echo '</div>';  
      }
-     endif;   
-   
-
-  /*if( is_archive() ){
-    echo '<header class="page-header">';
-    the_archive_title( '<h1 class="page-title">', '</h1>' );
-    the_archive_description( '<div class="archive-description">', '</div>' );
-    echo '</header>';
-  }*/
-
+     endif;
+  endif;      
   }
+
   ?>
 
     </div>
