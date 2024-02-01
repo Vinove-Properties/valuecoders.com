@@ -22,7 +22,7 @@
   $site_url   = 'https://www.valuecoders.com/';
   }  
   if( isset($_SERVER['HTTP_HOST']) && ($_SERVER['HTTP_HOST'] == "localhost") ){
-    $site_url   = 'http://localhost/valuecoders-v2/wp/';
+    $site_url   = 'https://www.valuecoders.com/';
   }
   $tpl_url    = $site_url.'wp-content/themes/valuecoders';
   $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] : 'master';

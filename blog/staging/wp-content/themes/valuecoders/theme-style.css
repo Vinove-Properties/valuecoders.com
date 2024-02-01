@@ -788,13 +788,7 @@ form input[type="submit"] {
 .tocsec{overflow-y: auto;
   height:330px;   padding-right: 10px;}
 
-#vcb-col-left h3 {
-    color: rgba(33, 33, 33, 1);
-    text-transform: uppercase;
-    font-weight: 300;
-   margin:0 0 15px;
-   padding:0  15px;
-}
+
 .vcb-col-left h2 {
 	display: none;
 }
@@ -2281,7 +2275,7 @@ h1, .single h1.entry-title {
 }
 /*New Section added in for blog custom banner*/
 
-
+.breadcrumbs{display:none;}
 .arrow-icon::after {
   content: "";
   position: absolute;
@@ -2478,7 +2472,7 @@ line-height: 40px;}
 .rightcustom p{color:#fff;}
 .margin-40 {margin: 20px 0;}
 .vcb-col-right img{margin:30px auto !important;}
-#vcb-col-left h3{margin:0 0 20px;}
+
 
 .post-rel-sec .reBox img{margin:0 !important;}
 

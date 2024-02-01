@@ -23,52 +23,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
     <?php 
     $root_dir = ( $_SERVER['DOCUMENT_ROOT'] ) ? $_SERVER['DOCUMENT_ROOT'] : '';
     require_once get_stylesheet_directory().'/menu-v3.12.php';
+
     
     if( is_author() ) {
       get_template_part('inc/author', 'section');
     }else{ ?>
-    <section class="search-section <?php echo (is_single()) ? 'detailed-section' : ''; ?> padding-t-100 padding-b-120" data-dir="<?php echo get_template_directory(); ?>">
-        <div class="container">
-        <?php 
-    if( is_single() ){
-    global $post;  
-    $author_id    = $post->post_author; 
-    $commentCount = ( get_comments_number($post->ID) > 1 ) ? get_comments_number($post->ID).' Comments' : get_comments_number($post->ID).' Comment';
-    echo '<div class="top-header-section">';
-    get_template_part('inc/search', 'popup');
-    echo '<div class="single-post-container">
-                  <div class="top-header-banner">
-                      <h1>'.get_the_title().'</h1>
-                      
-                      <!--
-                      <div class="posted-details">
-                      <ul>
-                          <li><img src="'.get_bloginfo('template_url').'/images/blog-testi-img.png" align="Posted By"> By '.get_the_author_meta( 'user_nicename' , $author_id ).'</li>
-                          <li>'.do_shortcode('[rt_reading_time label="" postfix="min read"]').'</li>
-                          <li>'.$commentCount.'</li>
-                      </ul>
-                      </div>
-                      -->
 
-                      <div class="social-icon-box">
-                          <div class="share-icon">
-                              <i></i> <span>Share</span>
-                          </div>
-                          <div class="social-icons">
-                              <a href="http://twitter.com/intent/tweet?text='.get_the_title().'&url='.get_the_permalink().'" class="a2a_button_twitter" target="_blank" rel="noopener noreferrer"></a>
-                              <a href="https://www.facebook.com/sharer?u='.get_the_permalink().'&t='.get_the_title().'.." class="a2a_button_facebook" target="_blank" rel="noopener noreferrer"></a>
-                              <a href="http://www.linkedin.com/shareArticle?mini=true&url='.get_the_permalink().'&title='.get_the_title().'" class="a2a_button_linkedin" target="_blank" rel="noopener noreferrer"></a>
-                          </div>
-                      </div>
-                  </div>
-              </div>';
-    echo '</div></div>';
-    /*
-    <a href="#" class="for-insta"></a>
-    <a href="#" class="for-youtube"></a>
-    */
-    }else{ 
-    ?>
+    <section class="search-section padding-t-100 padding-b-120" data-dir="<?php echo get_template_directory(); ?>">
+    <div class="container">
     <div class="blog-search-outer"> 
     <div class="blog-heading">
     <?php if( is_front_page() || is_home() ) { ?>    
@@ -118,7 +80,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
 
   }
   ?>
+
     </div>
+  
 </section>
-<?php } ?>
+
 <main id="content" class="neve-main">

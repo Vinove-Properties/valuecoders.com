@@ -1,49 +1,44 @@
 <?php
+
 define( 'V_ENV', 'localhost' );
+
 if( V_ENV == "localhost" ){
-	define( 'DB_NAME', 'staging.valuecoders' );
-	define( 'DB_USER', 'phpmyadmin' );
-	define( 'DB_PASSWORD', 'root' );
+	define( 'DB_NAME', 'staging-valuecoders.com');
+	define( 'DB_USER', 'root' );
+	define( 'DB_PASSWORD', '' );
 	define( 'DB_HOST', 'localhost' );	
 	define( 'WP_HOME', 'http://localhost/valuecoders.com/staging/' );
 	define( 'WP_SITEURL', 'http://localhost/valuecoders.com/staging/' );
 }else{
-	define( 'DB_NAME', 'valuecoders-com-site-dev-db' );
-	define( 'DB_USER', 'valuecoders-com-site-dev-db-user' );
-	define( 'DB_PASSWORD', 'cxNhChQKq6rV1k7' );
-	define( 'DB_HOST', 'localhost' );
-	define( 'WP_HOME', 'https://www.valuecoders.com/staging/' );
-	define( 'WP_SITEURL', 'https://www.valuecoders.com/staging/' );
+	define( 'WP_CACHE', false );
+	define( 'DB_NAME', 'pixelcrayons-com-site-dev-db' );
+	define( 'DB_USER', 'pixelcrayons-com-site-dev-db-user' );
+	define( 'DB_PASSWORD', 'VklvCkkVt4O4kxQ' );
 }
 
 
+define( 'DB_CHARSET', 'utf8mb4' );
+define( 'DB_COLLATE', '' );
+define( 'WP_POST_REVISIONS', false );
 
-define('AUTH_KEY',         'BNVKx:4+cuz67W9AZTn//ftMd{rGO,znIq3~uSb6:!.!)l)vX6x/:GC&Y+7FErq=');
-define('SECURE_AUTH_KEY',  'QWm!vU+q./N(W>2*hp~<X|p5w%rg$*5/=-Q3SC#S^EB^t-1<24?&R!3lr,kPTRiI');
-define('LOGGED_IN_KEY',    'rFo7IP%xpV6(nq[jx|Jgyrj/8)d@:eSK/H^-0r_hP%uts=T=ZgF_)6Q1E*usFo7.');
-define('NONCE_KEY',        'VMC.%7V-X&nJ]WnCj&vr!wEQc-BD@iK-RzWRwZ)cL>&#a+U:(QCn:;K&[3>aUWA@');
-define('AUTH_SALT',        'NKMSA RCA^,cY~r?YZ ?dCjEc{fk-W;I^_B}PUl%iE8~4+p<1k!UP 41|NyAX{T^');
-define('SECURE_AUTH_SALT', 'R(W{%7B*$NI^b.X0#fh]KH]9 wnc,-v<$[M,9V^tm xd5j#>LWA%O,F~!0u;C8^]');
-define('LOGGED_IN_SALT',   '6hu0yugq&cor1l-#i~&loA$Y`ci|So<(J]-g>w|45nq5+*s1l=gY|N-QS27?SUZW');
-define('NONCE_SALT',       '8h;{wJ_Mj,!u<v=~szFxQ7CStg8~Ot*.W9zV0-yC|CL~/rsN;p:Id,[RI(ix+Nz5');
+
+define( 'AUTH_KEY',         '{KpI`LP(}Cye|3(7~V]NjT_J]NTzA4Os#r<~u&y@?6M32-YcBq0EZzzK[;4Li)t2' );
+define( 'SECURE_AUTH_KEY',  '/*?,2{L%<~z1v,OY&Se=/xfF m()`|I$cae2#&7hv*/EP$1ITh32]/Z>lM=7b`m4' );
+define( 'LOGGED_IN_KEY',    'gi(fqRIt41:+*i-&$?Mq}WG~MzB(zV]uA>oW2%5{pn^il^av!Us{fS.}-AzI83K>' );
+define( 'NONCE_KEY',        '@D3_pG<15V,GY:()-kKEjU d U,5(vgpf@dyQ1tjRT`&1Dni/TDS%i0m)1?]zd5<' );
+define( 'AUTH_SALT',        '7vG1#iSs8.Txfd$f~1/&Q- ]31];1A45L^v**WBuDDgp1|V{0x|vFQUAg-cxW[Zh' );
+define( 'SECURE_AUTH_SALT', 'v[G=HA]BXlyhhR~RyK6:U$*Lg0t1Eq*@=F6syM+>IA5i1,B!F-,78e0_Nm?zUDK)' );
+define( 'LOGGED_IN_SALT',   'CfjU!MSkh_Rjf)g)]3i:^/`b36&%jWn6=9s0oP!0XHCZ+QQOA?sJhTMv&]r1N:VM' );
+define( 'NONCE_SALT',       ');r%cVW1L&-+WMwV[?6n=q/-6(ep35+tV=6-Z+f_GU0M[K5sXfOUaxMY#k;%yXGP' );
 
 $table_prefix = 'wp_';
 
-define( 'DB_CHARSET', 'utf8' );
-define( 'DB_COLLATE', '' );
 
-define( 'WP_DEBUG', false );
-define( 'WP_DEBUG_LOG', true );
-define( 'FS_METHOD', 'direct' );
-define( 'WP_POST_REVISIONS', false );
 
-//define( 'WP_MEMORY_LIMIT', '256M' );
-define('DISALLOW_FILE_EDIT', true);
 
-/** Absolute path to the WordPress directory. */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', __DIR__ . '/' );
 }
 
-/** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';

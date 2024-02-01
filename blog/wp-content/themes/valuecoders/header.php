@@ -27,6 +27,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
     if( is_author() ) {
       get_template_part('inc/author', 'section');
     }else{ ?>
+
     <section class="search-section <?php echo (is_single()) ? 'detailed-section' : ''; ?> padding-t-100 padding-b-120" data-dir="<?php echo get_template_directory(); ?>">
         <div class="container">
         <?php 
