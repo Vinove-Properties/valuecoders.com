@@ -99,8 +99,6 @@ border-radius: 0 5px 5px 0;}
 .detail-page{padding:60px 0 80px;}
 .second-row {width: 100%; position: relative; display: flex; justify-content: space-between;}
 .buyers-guide {overflow: hidden; position: relative; }
-
-
 .customcta {width:100%; padding:15px 15px 30px; text-align: center;  margin-top:20px; position: relative; border-radius:10px; background: linear-gradient(180deg,#05164D 0%,#10297B 100%);}
 .customcta img{display:block; margin:0 auto 10px;}
 .customcta .btn-container .white-btn {border-radius: 10px; background: #fff; color: #fff; font-size: 16px;
@@ -160,6 +158,7 @@ top:0; background:#FFAD00; color:#000000; border-radius: 0 5px 5px 0; border:0; 
 
 .vcb-col-right .detail-subsbox{margin: 40px 0 0;}
 .vcb-col-right .detail-subsbox h3{margin: 0 0 15px;}
+.ctaRit .btn-sec{justify-content: right;}
 
 
 /*Media Query Start From Here*/
@@ -172,6 +171,14 @@ top:0; background:#FFAD00; color:#000000; border-radius: 0 5px 5px 0; border:0; 
 .detail-subsbox h3{margin:0 0 10px;}
 .customcta.padd1{padding:20px;}
 .customcta .btn-container .white-btn{padding: 13px 20px;}
+.cta-section .ctaRit{flex-basis: 30%;}
+.cta-section .colMid{left: 10%;}
+.cta-section .colLeft p span{margin: 0 2px;}
+}
+
+@media (max-width: 1012px){
+.cta-section .ctaRit {flex-basis: 33%;}
+.cta-section .colMid{left: 7%;}
 }
 
 @media (max-width: 991px){
