@@ -18,6 +18,14 @@ blog/wp-admin/*
 blog/wp-includes/*
 !blog/wp-content/themes/
 
+#Staging Blog theme setup only.
+blog/staging/*
+!blog/staging/wp-content/
+blog/staging/wp-content/*
+!blog/staging/wp-content/themes/
+blog/staging/wp-content/themes/*
+!blog/staging/wp-content/themes/valuecoders/
+
 case-studies/wp-content/*
 case-studies/wp-admin/*
 case-studies/wp-includes/*
