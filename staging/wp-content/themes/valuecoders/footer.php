@@ -29,6 +29,8 @@ echo '</div></div></section>';
 if( !is_page_template( 'page-templates/template-thankyou.php' ) ){
    require_once 'include/footer.php';
 }
+
+if( !is_page_template( 'page-templates/template-contact-v8.php' ) ) :
 ?>
 <div class="popup-section">
    <div id="intentPopup" class="popup-wrapper exit-intent-popup">
@@ -45,8 +47,9 @@ if( !is_page_template( 'page-templates/template-thankyou.php' ) ){
       </div>
    </div>
 </div>
-
-<?php wp_footer(); ?>
+<?php 
+endif;
+wp_footer(); ?>
 <?php 
 global $post;
 $ogImage = 'https://www.valuecoders.com/common/images-2/home-og.png';
