@@ -2359,7 +2359,7 @@ h1, .single h1.entry-title {
   width: 304px;
   height: 475px;
 }
-
+.experts-talk-first-section .btn-sec{justify-content: center;}
 .ez-toc-widget-container nav ol li, .ez-toc-widget-container nav ul li{margin: 0 0 8px;}
 
 @media screen and (max-width: 1600px) {

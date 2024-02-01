@@ -9,14 +9,11 @@
     </div>
     <div class="cta-wrap margin-t-50  justify-center">
       <div class="cta-btn">
-        <a href="https://www.valuecoders.com/contact">
-        Talk To Our Experts
-        <span class="arrow-wrap">
-        <span class="arrow primera"></span>
-        <span class="arrow segunda next"></span>
-        <span class="arrow last"></span>
-        </span>
-        </a>
+      <div class="btn-sec">
+<a href="https://www.valuecoders.com/contact"  class="btn rounded"><span class="text-white"> Talk To Our Experts</span></a>
+</div>
+
+        
       </div>
     </div>
   </div>

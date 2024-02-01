@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-
 <section class="banner-section">
   <div class="container">
   <?php 
@@ -23,11 +22,11 @@
             width="270" height="170">
         </picture>
       </div>
-      
-
-      <div class="ctaRit"><div class="btn-sec">
-<a href="https://www.valuecoders.com/contact" target="_blank" class="btn rounded"><span class="text-white">Book A Free Consultation</span></a>
-</div></div>
+      <div class="ctaRit">
+        <div class="btn-sec">
+          <a href="https://www.valuecoders.com/contact" target="_blank" class="btn rounded"><span class="text-white">Book A Free Consultation</span></a>
+        </div>
+      </div>
     </div>
   </div>
   <?php endif; ?>
@@ -82,42 +81,36 @@
   </div>
 </div>
 <main id="primary" class="site-main  detail-page">
-<?php
-global $post;
-get_header();
-$TocDisable   = get_post_meta( $post->ID, '_ez-toc-disabled', true);
-$isTocDisable = ( isset( $TocDisable ) && ($TocDisable == "1") ) ? true : false;
-$exPostId = [29846];
-if( in_array($post->ID, $exPostId) ){
-$isTocDisable = true;    
-}
-$author_id    = $post->post_author; 
-?>
-
-
-<div class="container archive-container">
+  <?php
+    global $post;
+    get_header();
+    $TocDisable   = get_post_meta( $post->ID, '_ez-toc-disabled', true);
+    $isTocDisable = ( isset( $TocDisable ) && ($TocDisable == "1") ) ? true : false;
+    $exPostId = [29846];
+    if( in_array($post->ID, $exPostId) ){
+    $isTocDisable = true;    
+    }
+    $author_id    = $post->post_author; 
+    ?>
+  <div class="container archive-container">
     <div class="second-row" id="stickytoc">
-        <div class="buyers-guide">                        
-   
-      <div class="vcb-col-left" id="vcb-col-left">
-
-      <div class="customcta padd1">
+      <div class="buyers-guide">
+        <div class="vcb-col-left" id="vcb-col-left">
+          <div class="customcta padd1">
             <div class="cushed">A Complete Guide to<br> IT Outsourcing 2023</div>
             <div class="btn-container">
               <a class="white-btn" href="javascript:void(0);">Download Now</a>
             </div>
           </div>
-
-      <?php if( $isTocDisable === false ) : ?>  
-      <div class="table-c">
+          <?php if( $isTocDisable === false ) : ?>  
+          <div class="table-c">
             <h3>Table of Contents</h3>
-        <div class="tocsec">
-          <?php dynamic_sidebar('sidebar-1'); ?>
-        </div>
-        </div>
-        <?php endif; ?>
-
-        <?php 
+            <div class="tocsec">
+              <?php dynamic_sidebar('sidebar-1'); ?>
+            </div>
+          </div>
+          <?php endif; ?>
+          <?php 
             $sbCTA = get_field('sb-cta');  
             if( (isset( $sbCTA['required'] ) && ($sbCTA['required'] != "no"))  || (!isset( $sbCTA['required']) ) ) :
             $sbText  = (isset( $sbCTA['text'] ) && !empty($sbCTA['heading'])) ? $sbCTA['heading'] : 'Want to Outshine Competitors?';
@@ -128,45 +121,36 @@ $author_id    = $post->post_author;
             </picture>
             <div class="cushed"><?php echo $sbText; ?></div>
             <div class="btn-container">
-            <div class="btn-sec">
-<a href="https://www.valuecoders.com/contact" target="_blank" class="btn rounded" data-wpel-link="external" rel="nofollow external noopener noreferrer"><span class="text-white">Book A Free Consultation</span></a>
-</div>            </div>
+              <div class="btn-sec">
+                <a href="https://www.valuecoders.com/contact" target="_blank" class="btn rounded" data-wpel-link="external" rel="nofollow external noopener noreferrer"><span class="text-white">Book A Free Consultation</span></a>
+              </div>
+            </div>
           </div>
           <?php endif; ?>
-
           <div class="detail-subsbox">
             <h3>Subscribe to our blog</h3>
             <?php echo do_shortcode('[email-subscribers-form id="1"]'); ?>
           </div>
-        
-      </div>
-  
-
-
-        <div class="vcb-col-right <?php echo ( $isTocDisable === true ) ? ' no-toc-row' : ''; ?>" id="vcb-col-right">
-            <article id="post-<?php echo esc_attr( get_the_ID() ); ?>" class="nv-single-post-wrap">
-                <?php             
-                Postpdf();
-                if( have_posts() ) :
-                while( have_posts() ) : the_post();
-                    the_content();
-                endwhile;
-                if( comments_open() || get_comments_number() ){
-                    //comments_template();
-                }
-                endif;
-                ?>
-            </article>
-        </div>    
         </div>
+        <div class="vcb-col-right <?php echo ( $isTocDisable === true ) ? ' no-toc-row' : ''; ?>" id="vcb-col-right">
+          <article id="post-<?php echo esc_attr( get_the_ID() ); ?>" class="nv-single-post-wrap">
+            <?php             
+              Postpdf();
+              if( have_posts() ) :
+              while( have_posts() ) : the_post();
+                  the_content();
+              endwhile;
+              if( comments_open() || get_comments_number() ){
+                  //comments_template();
+              }
+              endif;
+              ?>
+          </article>
+        </div>
+      </div>
     </div>
-</div>
-
-
+  </div>
 </main>
-
 <?php 
-
-
-get_template_part('inc/file', 'pdownload');
-get_footer();?>
+  get_template_part('inc/file', 'pdownload');
+  get_footer();?>
