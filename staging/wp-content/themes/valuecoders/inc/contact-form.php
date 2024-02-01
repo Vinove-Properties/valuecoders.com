@@ -662,10 +662,13 @@
   countriesData.addEventListener("keydown", checkCont);
   countriesData.addEventListener("focusout", checkCont);
   
+  /*
+  // Phone Humber Optional
   phone.addEventListener("keyup", checkPhone);
   phone.addEventListener("keypress", checkPhone);
   phone.addEventListener("keydown", checkPhone);
   phone.addEventListener("focusout", checkPhone);
+  */
   
   email.addEventListener("keyup", checkEmailEvent);
   email.addEventListener("keypress", checkEmailEvent);
@@ -733,7 +736,7 @@
 		    checkLength(countriesData,3,255);
         
         checkLength(phone,10,10);
-        phonenumber(phone);
+        //phonenumber(phone); // Optional
         if( input.name != "captcha" ){
             //showSucces(input);
         }
@@ -752,7 +755,7 @@
       }else if( input.name == "user-req" ){
       	showError(input, `Please Fill Requirement`);	
       }else if( input.name == "user-phone" ){
-      	showError(input, `Please Fill Phone`);	
+      	//showError(input, `Please Fill Phone`);	
       }else if( input.name == "user-email" ){
       	showError(input, `Please Fill Email`);	
       }else if( input.name == "user-country" ){
@@ -792,11 +795,12 @@
   }
   
   async function vcCmnFormValidation( hasQuiz ){
-  	checkRequired( [username, email, phone, countriesData, uRequirement, captcha] );
+  	//checkRequired( [username, email, phone, countriesData, uRequirement, captcha] );
+    checkRequired( [username, email, countriesData, uRequirement, captcha] );
   	if(
   		( vcSpaceChecker(email.value.trim()) === true ) && 
   		( vcSpaceChecker(username.value.trim()) === true ) && 
-  		( vcSpaceChecker(phone.value.trim()) === true ) && 
+  		//( vcSpaceChecker(phone.value.trim()) === true ) && 
   		( vcSpaceChecker(countriesData.value.trim()) ===true ) && 
   		( vcSpaceChecker(uRequirement.value.trim()) === true ) &&
   		( vcSpaceChecker(captcha.value.trim()) === true ) 
@@ -806,10 +810,12 @@
   		  return false;
   		}
 
+      /*
       const phoneRjx = /^[A-Za-z0123456789()\s.+-]+$/;
       if( !phoneRjx.test( phone.value.trim() ) ){
         return false;
       }
+      */
 
   		if( validateMquiz() === false){
         return false;
