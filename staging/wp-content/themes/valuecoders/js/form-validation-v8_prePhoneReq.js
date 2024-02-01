@@ -137,14 +137,10 @@ expDate.addEventListener("change", function(e){
 		rdates.style.display = "none";
 	}
 });
-
-/*
-Optional Phone Fld
 phone.addEventListener("keyup", checkPhone);
 phone.addEventListener("keypress", checkPhone);
-phone.addEventListener("focusout", checkPhone);
-*/
 //phone.addEventListener("keydown", ws_checkphonenumber);
+phone.addEventListener("focusout", checkPhone);
 
 var getKeyCode = function (str) {
     return str.charCodeAt(str.length - 1);
@@ -239,7 +235,8 @@ function checkLength(input, min ,max) {
 		}else if( input.name == "user-req"  ){
 			showError(input, `Please Fill Requirement`);	
 		}else if( input.name == "user-phone"  ){
-			//showError(input, `Please Fill Valid Phone Number`);	
+			//console.log( input.value.length );
+			showError(input, `Please Fill Valid Phone Number`);	
 		}else if( input.name == "user-email"  ){
 			showError(input, `Please Fill Email`);	
 		}else if( input.name == "user-country"  ){
@@ -334,15 +331,14 @@ function clearPerFilledValidation(){
 }
 
 async function vcStepOneCheckert(){
-    //let reqFlds = [username, email, countriesData, phone, weHelp];
-    let reqFlds = [username, email, countriesData, weHelp];
+    let reqFlds = [username, email, countriesData, phone, weHelp];
 	checkRequired( reqFlds );
 	let stepOne = document.getElementById('vc-fstep1');
 	let stepTwo = document.getElementById('vc-fstep2');
 	if(
 		( vcSpaceChecker(email.value.trim()) === true ) && 
 		( vcSpaceChecker(username.value.trim()) === true ) && 
-		//( vcSpaceChecker(phone.value.trim()) === true ) &&
+		( vcSpaceChecker(phone.value.trim()) === true ) &&
 		( vcSpaceChecker(weHelp.value.trim()) === true )
 	){ 
 		const sre = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -368,11 +364,9 @@ async function vcStepOneCheckert(){
 			stepOneValidation = false;
 		}
 
-		/*
 		if( phone.value.trim().length < 6 ){
 			stepOneValidation = false;
 		}
-		*/
 
 
 	}else{
@@ -497,8 +491,7 @@ function dovcstep_one(){
 }
 
 async function vcCmnFormValidation(){
-	//let cmnFld 		= [username, email, phone, countriesData, uRequirement];
-	let cmnFld 		= [username, email, countriesData, uRequirement];
+	let cmnFld 		= [username, email, phone, countriesData, uRequirement];
 	let cf_array 	= [weHelp,expDate];
 	let reqCheck  	= true;
 
@@ -523,7 +516,7 @@ async function vcCmnFormValidation(){
 	if(
 	( vcSpaceChecker(email.value.trim()) === true ) && 
 	( vcSpaceChecker(username.value.trim()) === true ) && 
-	//( vcSpaceChecker(phone.value.trim()) === true ) && 
+	( vcSpaceChecker(phone.value.trim()) === true ) && 
 	( vcSpaceChecker(countriesData.value.trim()) ===true ) && 
 	( reqCheck === true ) 
 	){ 
