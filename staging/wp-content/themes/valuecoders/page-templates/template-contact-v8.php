@@ -62,7 +62,7 @@ get_header();
 						</div>
 						<div class="form-text-cont">
 							<div class="lbl-row">
-								<label for="cont_phpne">Phone Number *</label>
+								<label for="cont_phpne">Phone Number</label>
 							</div>
 							<div class="user-input">
 								<input id="cont_phpne" type="tel" maxlength="30" name="user-phone" class="input-field flg-input">
