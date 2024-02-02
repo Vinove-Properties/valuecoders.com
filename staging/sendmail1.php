@@ -230,7 +230,8 @@ function validatereCaptchaResponse( $captcha, $formdata ){
 
 
 if( $isAjay === false ){ 
-    $array_ifields = ['user-name', 'user-email', 'user-country', 'user-phone'];
+    //$array_ifields = ['user-name', 'user-email', 'user-country', 'user-phone'];
+    $array_ifields = ['user-name', 'user-email', 'user-country'];
     foreach( $array_ifields as $field ){
         if( !isset( $_POST[$field] ) || empty( $_POST[$field] )  ){
             header('location:thanks');
