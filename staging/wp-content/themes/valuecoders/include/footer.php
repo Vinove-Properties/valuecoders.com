@@ -136,8 +136,8 @@ var data = "total_points=" + total_points + "&user_ip=" + user_ip + "&rating_pag
     <div class="footer-last">
     <picture>
     <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/images/footer-iso-logo.webp">
-    <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/footer-iso-logo.png">
-    <img loading="lazy" src="<?php bloginfo('template_url'); ?>/footer-iso-logo.png" alt="Valuecoders" width="97" height="69">
+    <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/images/footer-iso-logo.png">
+    <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/footer-iso-logo.png" alt="Valuecoders" width="97" height="69">
     </picture>    
     <a href="https://www.facebook.com/ValueCoders" target="_blank"><i class="social-icon facebook vlazy"></i></a>
     <a href="https://twitter.com/ValueCoders" target="_blank"><i class="social-icon twitter vlazy"></i></a>
