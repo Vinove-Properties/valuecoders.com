@@ -89,7 +89,7 @@
           </div>
           <div class="form-text-cont">
             <div class="user-input">
-              <input type="text" autocomplete="off" class="input-field" id="cont_phpne" placeholder="Phone Number" value="" name="user-phone" />
+              <input type="text" autocomplete="off" class="input-field" id="cont_phpne" placeholder="Phone Number (Optional)" value="" name="user-phone" />
               <small>Error Message</small>
             </div>
           </div>

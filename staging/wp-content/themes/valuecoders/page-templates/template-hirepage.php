@@ -65,7 +65,7 @@
           </div>
           <span class="devide">OR</span>
           <div class="free-con">
-            <a href="https://calendly.com/valuecoders/dedicated-teams" target="_self">Request Free Consultation</a>
+            <a href="https://calendly.com/valuecoders/dedicated-teams?utm_term=<?php echo get_permalink(); ?>" target="_self">Book A Call</a>
           </div>
         </div>
       </div>
