@@ -308,6 +308,11 @@ if( isset( $json['event'] ) && $json['event'] == "invitee.created" ){
         $ipAddress  = $utmsrc[1];
         $hasDataID  = ( isset( $utmsrc[2] ) ) ? $utmsrc[2] : 0;
     }
+    
+    if( isset( $json['payload']['tracking']['utm_term'] ) && !empty( $json['payload']['tracking']['utm_term'] ) ){
+        $followPageUrl = $json['payload']['tracking']['utm_term'];
+    }
+
 
     if( isset( $json['payload']['tracking']['utm_campaign'] ) ){
         $utm_campaign = $json['payload']['tracking']['utm_campaign'];
@@ -322,7 +327,19 @@ if( isset( $json['event'] ) && $json['event'] == "invitee.created" ){
     $country    = ( isset( $phoneee[0] ) ) ? globalCountryListAry( $phoneee[0] ) : "N/A";
     $email      = $json['payload']['email'];
 
+    $comment    = "";
     $flds       = $json['payload']['questions_and_answers'];
+    if( $flds ){
+        foreach( $flds as $row){
+            $comment .= "\n".$row['question']." : ".$row['answer'];
+        }
+    }
+
+    if( !empty( $followPageUrl ) ){
+        $comment .= "\n Source Page : ".$followPageUrl;
+    }
+
+    /*
     $comment    = $flds[0]['answer'];
     $startFrm   = $flds[1]['answer'];
     $howLong    = $flds[2]['answer'];
@@ -334,6 +351,7 @@ if( isset( $json['event'] ) && $json['event'] == "invitee.created" ){
     if( !empty($howLong) ){
         $comment .= "\n How long would you need the professionals for : ".$howLong;
     }
+    */
 
     /*Zoho CRM Code Starts Here*/
     $CLIENT_ID      = '1000.BMJ414JAF95SXHD4YKRK0FJ3JC57VH';
