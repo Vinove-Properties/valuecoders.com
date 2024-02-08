@@ -782,7 +782,7 @@ form input[type="submit"] {
 
 .vcb-col-left {
   float: left;
-  width: 350px;
+  width: 320px;
   text-align: right;
 }
 .tocsec{overflow-y: auto;
@@ -844,9 +844,10 @@ display:none !important;
 .ez-toc-widget-container nav ul {
   display: block;
   list-style-type: none;
-  padding: 2px 0 0;
+  padding:0;
   border-left: 0;
-  margin-top: 6px;
+  margin-top:0;
+  direction: initial;
 }
 .ez-toc-widget-container nav ol ol,
 .ez-toc-widget-container nav ul ul {
@@ -902,10 +903,7 @@ display:none !important;
 
 }
 
-.vcb-col-left.sticky {
-  position: fixed;
-  top: 130px;
-}
+
 .es_caption {
   display: none;
 }
@@ -1868,7 +1866,7 @@ text-align: center;
  
  
     .vcb-col-left {
-	    width: 350px;
+	    width: 320px;
     }
     .vcb-col-right {
 	    width: calc(100% - 350px);
