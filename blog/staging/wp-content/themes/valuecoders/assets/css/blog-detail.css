@@ -144,7 +144,7 @@ font-weight: 400; font-size:14px; line-height:22px;}
 .ez-toc-widget-container nav ol li:before {content: counters(item, ".") " "; counter-increment: item;}
 
 .detail-subsbox{ width:100%; background:rgba(242, 243, 255, 1);  border-radius:10px; padding:20px 15px; margin:30px 0 0;}
-.detail-subsbox h3{color: #000000; font-size: 16px; margin:0 0 15px; text-align: left; font-weight:500; text-transform: inherit;}
+.detail-subsbox h3{color: #000000; font-size: 16px; margin:0 0 10px; text-align: left; font-weight:500; text-transform: inherit;}
 .detail-subsbox form{width:100%; position: relative;}
 .detail-subsbox .es-field-wrap label{font-size: 0;}
 .detail-subsbox .es-field-wrap br{display:none;}
@@ -162,6 +162,10 @@ top:0; background:#FFAD00; color:#000000; border-radius: 0 5px 5px 0; border:0; 
 
 
 /*Media Query Start From Here*/
+@media (max-width: 1680px){
+.tocsec {height: 130px;}
+.table-c h3 {font-size: 16px; margin: 0 0 8px;}
+}
 
 
 @media (max-width: 1440px){

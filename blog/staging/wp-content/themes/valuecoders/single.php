@@ -109,6 +109,11 @@
             </div>
           </div>
           <?php endif; ?>
+          <div class="detail-subsbox">
+            <h3>Subscribe to our blog</h3>
+            <?php echo do_shortcode('[email-subscribers-form id="1"]'); ?>
+          </div>
+
           <?php 
             $sbCTA = get_field('sb-cta');  
             if( (isset( $sbCTA['required'] ) && ($sbCTA['required'] != "no"))  || (!isset( $sbCTA['required']) ) ) :
@@ -126,10 +131,7 @@
             </div>
           </div>
           <?php endif; ?>
-          <div class="detail-subsbox">
-            <h3>Subscribe to our blog</h3>
-            <?php echo do_shortcode('[email-subscribers-form id="1"]'); ?>
-          </div>
+         
         </div>
         <div class="vcb-col-right <?php echo ( $isTocDisable === true ) ? ' no-toc-row' : ''; ?>" id="vcb-col-right">
           <article id="post-<?php echo esc_attr( get_the_ID() ); ?>" class="nv-single-post-wrap">
