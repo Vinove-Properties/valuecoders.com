@@ -48,8 +48,7 @@
                       <div class="author-img"><img loading="lazy" src="'.get_template_directory_uri().'/assets/images/author.png" width="52" height="52" alt="Pixelcrayons"/></div>
                       <ul class="entry-meta">
     <li class="meta author vcard">
-    <span class="author-name fn">Written by
-    <a href="'.get_the_author_link().'" title="'.get_the_author().'" rel="author">'.get_the_author().'</a></span>
+    <span class="author-name fn">Written by '.get_the_author_posts_link().'</span>
     </li>    
     </ul>
     </div>
