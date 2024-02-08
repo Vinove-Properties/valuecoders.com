@@ -117,7 +117,7 @@
           <?php 
             $sbCTA = get_field('sb-cta');  
             if( (isset( $sbCTA['required'] ) && ($sbCTA['required'] != "no"))  || (!isset( $sbCTA['required']) ) ) :
-            $sbText  = (isset( $sbCTA['text'] ) && !empty($sbCTA['heading'])) ? $sbCTA['heading'] : 'Struggling with Tech Complexity?';
+            $sbText  = (isset( $sbCTA['text'] ) && !empty($sbCTA['text'])) ? $sbCTA['text'] : 'Struggling with Tech Complexity?';
             ?>
           <div class="customcta">
             <picture>
