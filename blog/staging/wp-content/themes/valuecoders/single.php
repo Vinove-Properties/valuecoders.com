@@ -49,7 +49,7 @@
                       <ul class="entry-meta">
     <li class="meta author vcard">
     <span class="author-name fn">Written by
-    <a href="https://www.valuecoders.com/blog" title="https://www.valuecoders.com/blog" rel="author">'.get_the_author().'</a></span>
+    <a href="'.get_the_author_link().'" title="'.get_the_author().'" rel="author">'.get_the_author().'</a></span>
     </li>    
     </ul>
     </div>
