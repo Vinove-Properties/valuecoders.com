@@ -57,8 +57,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
     </div>
      <?php 
      if( is_front_page() || is_home() || is_archive() ) :
-      global $wp;
-        $current_url = home_url( add_query_arg( array(), $wp->request ) );
+    global $wp;
+    $current_url = home_url( add_query_arg( array(), $wp->request ) );
        //echo '<pre>'.$current_url.'</pre>';
      $vcategory = get_terms( ['taxonomy'=>'category', 'hide_empty' => true, 'orderby' => 'name', 'order' => 'ASC' ] );
      if( $vcategory ){

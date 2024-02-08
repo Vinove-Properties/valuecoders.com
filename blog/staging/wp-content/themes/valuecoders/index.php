@@ -1,5 +1,4 @@
- <?php get_header(); ?>
- 
+<?php get_header(); ?> 
 <div class="container archive-container">
 	<div class="blog-div ">	    
 		<?php

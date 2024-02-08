@@ -5,8 +5,9 @@
   <?php 
     $topCTA = get_field('ptop-cta');  
     if( (isset( $topCTA['required'] ) && ($topCTA['required'] != "no"))  || (!isset( $topCTA['required']) ) ) :
-    $heading  = ( isset( $topCTA['heading'] ) && !empty( $topCTA['heading'] ) ) ? $topCTA['heading'] : 'Experience Next-gen Digital Services';
-    $text     = ( isset( $topCTA['text'] ) && !empty( $topCTA['text'] ) ) ? $topCTA['text'] : "Let's together thrive in digital age.";
+    $heading  = ( isset( $topCTA['heading'] ) && !empty( $topCTA['heading'] ) ) ? $topCTA['heading'] : 'Build for Tomorrow';
+    $text     = ( isset( $topCTA['text'] ) && !empty( $topCTA['text'] ) ) ? $topCTA['text'] : "Create solutions that last. Partner with ValueCoders for software solutions that set you apart.";
+
     $text2     = ( isset( $topCTA['text2'] ) && !empty( $topCTA['text2'] ) ) ? $topCTA['text2'] : "Software Engineering  <span>|</span> Digital Marketing  <span>|</span> Dedicated Teams";
     ?>
   <div class="cta-section">
@@ -14,7 +15,7 @@
       <div class="colLeft">
         <div class="ct-head"><?php echo $heading; ?></div>
         <p><?php echo $text; ?></p>
-        <p><strong><?php echo $text2; ?></strong></p>
+        <!-- <p><strong><?php echo $text2; ?></strong></p> -->
       </div>
       <div class="colMid">
         <picture>
@@ -30,6 +31,7 @@
     </div>
   </div>
   <?php endif; ?>
+  
   <?php 
     if( is_single() ){
     global $post;  
@@ -51,7 +53,6 @@
     </li>    
     </ul>
     </div>
-            
                       
     <div class="social-icon-box">
     <div class="share-head">
@@ -68,9 +69,7 @@
     </div></div>';
     echo '</div></div>';
     }else{ 
-    ?>
-  <?php 
-    }
+    } 
     ?>
 </section>
 <div class="detail-image">
@@ -95,13 +94,13 @@
   <div class="container archive-container">
     <div class="second-row" id="stickytoc">
       <div class="buyers-guide">
-        <div class="vcb-col-left" id="vcb-col-left">
+        <div class="vcb-col-left" id="vcb-col-left">          
+          <?php /* ?>
           <div class="customcta padd1">
-            <div class="cushed">A Complete Guide to<br> IT Outsourcing 2023</div>
-            <div class="btn-container">
-              <a class="white-btn" href="javascript:void(0);">Download Now</a>
-            </div>
+          <div class="cushed">A Complete Guide to<br> IT Outsourcing 2023</div>
+          <div class="btn-container"><a class="white-btn" href="javascript:void(0);">Download Now</a></div>
           </div>
+          <?php */ ?>
           <?php if( $isTocDisable === false ) : ?>  
           <div class="table-c">
             <h3>Table of Contents</h3>
@@ -113,7 +112,7 @@
           <?php 
             $sbCTA = get_field('sb-cta');  
             if( (isset( $sbCTA['required'] ) && ($sbCTA['required'] != "no"))  || (!isset( $sbCTA['required']) ) ) :
-            $sbText  = (isset( $sbCTA['text'] ) && !empty($sbCTA['heading'])) ? $sbCTA['heading'] : 'Want to Outshine Competitors?';
+            $sbText  = (isset( $sbCTA['text'] ) && !empty($sbCTA['heading'])) ? $sbCTA['heading'] : 'Struggling with Tech Complexity?';
             ?>
           <div class="customcta">
             <picture>

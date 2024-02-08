@@ -4,12 +4,16 @@
     <?php
       $categories = get_the_category();
       if ( ! empty( $categories ) ) {
-          foreach ( $categories as $category ) {
-              echo '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) .'</a>';
-          }
+      foreach ( $categories as $category ) {
+          echo '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) .'</a>';
       }
-      ?>
-    <?php the_title(); ?>
+      }
+      if( get_field('bc-title') ){
+        the_field('bc-title');
+      }else{
+        the_title();
+      }
+      ?>    
   </div>
   <div class="searchdiv">
     <button  class="searchsubmit" value="search" id="myBtn"></button>
