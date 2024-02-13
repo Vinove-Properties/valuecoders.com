@@ -522,15 +522,15 @@
                     </div>
                     <div class="flex-4">
                       <span class="head">ML &amp; Advanced Analytics</span>
-                      <a href="<?php echo $site_url; ?>machine-learning-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon05.svg" class="menuicon" alt="menuicon"><span class="title">ML Development</span>
+                      <a href="<?php echo $site_url; ?>machine-learning/development"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon05.svg" class="menuicon" alt="menuicon"><span class="title">ML Development</span>
                       Harnessing Data Power</a>
-                      <a href="<?php echo $site_url; ?>computer-vision-software-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon07.svg" class="menuicon" alt="menuicon"><span class="title">Computer Vision Solutions</span>
+                      <a href="<?php echo $site_url; ?>machine-learning/computer-vision-software-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon07.svg" class="menuicon" alt="menuicon"><span class="title">Computer Vision Solutions</span>
                       Transforming visual data</a>
                       <a href="<?php echo $site_url; ?>machine-learning/mlops-consulting-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon08.svg" class="menuicon" alt="menuicon"><span class="title">MLOps Consulting</span>
                       ML operations optimized</a>
-                      <a href="<?php echo $site_url; ?>rpa-development-services-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon08.svg" class="menuicon" alt="menuicon"><span class="title">RPA Services</span>
+                      <a href="<?php echo $site_url; ?>machine-learning/rpa-development-services-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon08.svg" class="menuicon" alt="menuicon"><span class="title">RPA Services</span>
                       Efficient RPA automation</a>
-                      <a href="<?php echo $site_url; ?>machine-learning-solutions" class="view-more">View More</a>
+                      <a href="<?php echo $site_url; ?>machine-learning" class="view-more">View More</a>
                     </div>
                     <div class="flex-4">
                       <span class="head">Generative AI</span>
@@ -927,6 +927,7 @@
                               <a href="<?php echo $site_url; ?>react-js-development-services-company">React</a>
                               <a href="<?php echo $site_url; ?>best-react-native-development-services-company-india">React Native</a>
                               <a href="<?php echo $site_url; ?>top-wordpress-development-services-company-india">Wordpress</a>
+                              <a href="<?php echo $site_url; ?>strapi-development-services">Strapi</a>
                             </div>
                           </div>
                         </div>
@@ -955,7 +956,7 @@
                           </div>
                           <div class="hr-menu-mega">
                             <a href="<?php echo $site_url; ?>microsoft-power-bi-development-services-company">Microsoft Power BI</a>
-                            <a href="<?php echo $site_url; ?>salesforce-development">Salesforce</a>
+                            <a href="<?php echo $site_url; ?>salesforce">Salesforce</a>
                             <a href="<?php echo $site_url; ?>sharepoint-application-development-services-company">SharePoint</a>
                             <a href="<?php echo $site_url; ?>microsoft-dynamics">Microsoft Dynamics</a>
                             <a href="<?php echo $site_url; ?>microsoft-power-platform">Microsoft Power Platforms</a>
