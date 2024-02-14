@@ -88,7 +88,7 @@
             <div class="row load-posts">
                <div class="nopost"></div>
                <div class="lode_mor_btn hidepost">
-                  <span class="ajax-loader"><img src="https://www.valuecoders.com/beta_cs/wp-content/themes/casestudies-v2/assets/img/ajax-loader.gif" height="32" width="32" alt="Loader" id="loaderImg" style="display: none;"></span>
+                  <span class="ajax-loader"><img src="https://www.valuecoders.com/case-studies/wp-content/themes/casestudies-v2/assets/img/ajax-loader.gif" height="32" width="32" alt="Loader" id="loaderImg" style="display: none;"></span>
                   <div class="cta-wrap justify-center">
                      <div class="cta-btn">
                         <a href="javascript:void(0);" id="load_more_post">
