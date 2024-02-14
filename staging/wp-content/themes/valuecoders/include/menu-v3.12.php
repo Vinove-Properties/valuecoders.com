@@ -761,7 +761,7 @@
                             <a href="<?php echo $site_url; ?>hire-developers/hire-tensorflow-developers" title="Tensorflow">TensorFlow</a>
                           </div>
                           <div class="hr-list-item">
-                            <a href="<?php echo $site_url; ?>services/low-code-no-code-services" class="margin-t-40 title">Low-Code</a>
+                            <a href="<?php echo $site_url; ?>services/low-code-no-code" class="margin-t-40 title">Low-Code</a>
                             <span class="hr-arrow-btn"></span>
                           </div>
                           <div class="hr-menu-mega">
