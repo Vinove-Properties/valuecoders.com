@@ -1637,7 +1637,7 @@ if( property_exists($json, 'country') ){
                                     <picture>
                                         <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/images/email-sent-icon.webp">
                                         <source type="image/png" srcset="<?php echo get_template_directory_uri(); ?>/images/email-sent-icon.png">
-                                        <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/email-sent-icon.svg" alt="Valuecoders" width="92" height="82">
+                                        <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/images/email-sent-icon.png" alt="Valuecoders" width="92" height="82">
                                     </picture>
                                     <h3>Check your mailbox, please.</h3>
                                     <p class="clr-gray">You might have received the mail with the subject line-</p>
