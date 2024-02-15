@@ -1020,6 +1020,7 @@ const bannerImg     = document.querySelector(".bannerIMG");
 titleBoxes.forEach((box) =>{
     box.addEventListener("mouseover", () => {
         const imgPath = box.getAttribute("data-img-hover");
+        console.log( imgPath );
         bannerImg.setAttribute("src", imgPath);
     });
     /*

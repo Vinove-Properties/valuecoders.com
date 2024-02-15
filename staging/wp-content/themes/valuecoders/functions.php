@@ -1519,7 +1519,7 @@ function getCmnIndustriesv4(){
 	<button aria-label="Previous" class="glider-prev">«</button>
 	<button aria-label="Next" class="glider-next">»</button>
 	</div>
-	<img class="bannerIMG" src="'.$defbanner.'" alt="Tile">
+	<img loading="lazy" class="bannerIMG" src="'.$defbanner.'" alt="Tile">
 	</div>
 	</section>';
 }
