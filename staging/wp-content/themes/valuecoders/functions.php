@@ -1,6 +1,7 @@
 <?php
 if ( ! defined( '_S_VERSION' ) ) {
-	define( '_S_VERSION', '24.678.678' );
+	//define( '_S_VERSION', '24.678.678' );
+	define( '_S_VERSION', time() );
 }
 
 function isStaggingVersion(){
@@ -1482,6 +1483,45 @@ function getCmnIndustries( $bg, $content ){ ?>
 </div>
 </section>
 <?php   
+}
+
+function getCmnIndustriesv4(){
+	echo '<section class="industry-section">
+	<div class="container">
+	<div class="ind-title">Industries</div>
+	</div>
+	<div class="changingTileWrap">        
+	<div class="tileFloat industry-slider glider-contain">
+	<div class="glider" id="htpl-glider">';
+	$defbanner = get_bloginfo('template_url').'/v4.0/images/homeindus-01.png';
+	$vcIndus = get_field('vc-indv4', 'option');
+	if( $vcIndus ){
+	$indx = 0;	
+	foreach( $vcIndus as $row ){ $indx++;
+	if( $indx === 1 ){
+	$defbanner = $row['image']['url'];
+	}
+	$ind_thumbnail = getVcWebpSrcURL( $row['image'] );	
+	echo '<div class="tile-box ind-box" id="tile-'.$indx.'" data-img-hover="'.$ind_thumbnail.'">
+	  <div class="tile-box-in">
+	    <div class="tileHeadMain">'.$row['title'].'</div>
+	    <div class="floatingTileInfo">
+	      <div class="tileHead">'.$row['title'].'</div>
+	      <p>'.$row['description'].'</p>
+	      <div class="cta-box"><a class="stretched-link" href="'.vc_siteurl($row['link']).'">Learn more</a></div>
+	    </div>
+	  </div>
+	</div>';	
+		}
+	}
+
+	echo '</div>
+	<button aria-label="Previous" class="glider-prev">«</button>
+	<button aria-label="Next" class="glider-next">»</button>
+	</div>
+	<img class="bannerIMG" src="'.$defbanner.'" alt="Tile">
+	</div>
+	</section>';
 }
 
 // Pre Load Required Images.

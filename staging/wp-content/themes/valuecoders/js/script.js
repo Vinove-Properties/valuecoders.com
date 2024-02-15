@@ -1022,14 +1022,17 @@ titleBoxes.forEach((box) =>{
         const imgPath = box.getAttribute("data-img-hover");
         bannerImg.setAttribute("src", imgPath);
     });
+    /*
     box.addEventListener("mouseout", () => {
-        const lastHoverImg = box.lastChild.getAttribute("src");        
+        const lastHoverImg = box.getAttribute("src");
         bannerImg.setAttribute("src", lastHoverImg);
         box.removeChild(box.lastChild);
     });
+    */
 
 });
 }
+
 function hireTbl_showMore(e){
     e.classList.toggle('active');
     if (e.innerHTML === 'View More'){ 
