@@ -7,7 +7,7 @@
   get_header(); 
   $vcBtn = get_field('vc-cta', $thisPostID);
   ?>
-<section class="second-level-section" style="background-image:url(<?php bloginfo('template_url'); ?>/v4.0/images/hire-banner.webp);">
+<section class="second-level-section vlazy" style="background-image:url(<?php bloginfo('template_url'); ?>/v4.0/images/hire-banner.webp);">
   <div class="container">
     <div class="breadcrumbs">
       <?php 
