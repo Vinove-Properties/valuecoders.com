@@ -5,7 +5,7 @@ if ( ! defined( '_S_VERSION' ) ) {
 }
 
 function isStaggingVersion(){
-	return ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'v2wp' ) !== false) )  ?  true : false;
+	return ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'staging' ) !== false) )  ?  true : false;
 }
 
 function valuecoders_setup(){
