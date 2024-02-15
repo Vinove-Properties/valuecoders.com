@@ -478,6 +478,55 @@ if( isset( $json['event'] ) && $json['event'] == "invitee.created" ){
                     fwrite( $file, "Error in Zoho Entry :".$err );
                     fclose( $file );    
                 }
+                curl_close( $curl );
+
+                date_default_timezone_set('Asia/Kolkata'); // Set the timezone to IST
+                $currentDateTime = new DateTime();
+                $formattedDate = $currentDateTime->format('jS F Y \a\t g:i A');
+
+                $notesRequest = 'https://www.zohoapis.com/crm/v2/Leads/'.$lead_id.'/Notes';
+                $notes_data = [
+                'Note_Content'  => 'New Inquiry Received from ValueCoders on '.$formattedDate.' Content below:'."\n ".$comment,
+                'se_module'     => 'Leads'
+                ];
+                $nJSON  = json_encode( $notes_data );
+                $nJSON  = str_replace('{','[{',$nJSON);
+                $nJSON  = str_replace('}','}]',$nJSON);
+                $postNotesData = '{"data":' . $nJSON . '}';
+
+                $curl   = curl_init();        
+                $sJSON  = json_encode( $zoho_data );
+                $sJSON  = str_replace('{','[{',$sJSON);
+                $sJSON  = str_replace('}','}]',$sJSON);
+                $postLeadData = '{"data":' . $sJSON . '}';
+                curl_setopt_array($curl, array(
+                CURLOPT_URL => $notesRequest,
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION    => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST   => "POST",
+                CURLOPT_POSTFIELDS      => $postNotesData,
+                CURLOPT_HTTPHEADER      => array(
+                "authorization: Zoho-oauthtoken $varAccessToken",
+                "cache-control: no-cache",
+                "content-type: application/json"
+                ),
+                ));
+
+                $response   = curl_exec($curl);
+                $err        = curl_error($curl);
+                if( !$err ){
+                    $response   = json_decode( $response );
+                    $file       = fopen(CL_LOGFILE,"a");
+                    fwrite( $file, PHP_EOL."Notes : ".print_r($response,1) );
+                    fclose( $file );    
+                }else{
+                    $file       = fopen(CL_LOGFILE,"a");
+                    fwrite( $file, "Error Notes : ".$err );
+                    fclose( $file );    
+                }
                 curl_close( $curl );                
             }
         endif;
