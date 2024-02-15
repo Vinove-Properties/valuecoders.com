@@ -335,8 +335,10 @@ if( isset( $json['event'] ) && $json['event'] == "invitee.created" ){
         }
     }
 
+    $calBlockStatus = "Calendly Direct";
     if( !empty( $followPageUrl ) ){
         $comment .= "\n Source Page : ".$followPageUrl;
+        $calBlockStatus = "From website landed to Calendly";
     }
 
     /*
@@ -486,7 +488,7 @@ if( isset( $json['event'] ) && $json['event'] == "invitee.created" ){
 
                 $notesRequest = 'https://www.zohoapis.com/crm/v2/Leads/'.$lead_id.'/Notes';
                 $notes_data = [
-                'Note_Content'  => 'New Inquiry Received from ValueCoders on '.$formattedDate.' Content below:'."\n ".$comment,
+                'Note_Content'  => 'New Inquiry Received from ValueCoders on '.$formattedDate.'. Content below:'."\n ".$comment."\n Calendly Booking : ".$calBlockStatus,
                 'se_module'     => 'Leads'
                 ];
                 $nJSON  = json_encode( $notes_data );
