@@ -610,14 +610,11 @@
         <h3 class="accordion-toggle"><span>Upholding Coding Best Practices</span></h3>
         <div class="accordion-content">
           <ul>
-            <li>We follow established coding guidelines and utilize style check tools to maintain high standards.</li>
-            <li>Prioritizing robust security practices to protect data integrity.</li>
+            <li>Following established coding guidelines and utilizing style check tools to maintain high standards, while prioritizing robust security practices.</li>
             <li>Using descriptive variable names and in-code comments for better readability and maintainability.</li>
             <li>Comprehensive documentation for every codebase, ensuring clarity and ease of future updates.</li>
             <li>Breaking down code into concise, focused units for simplicity and effectiveness.</li>
-            <li>Leveraging the latest APIs, third-party libraries, and version control tools for streamlined development.</li>
-            <li>Ensuring our code is portable and functions seamlessly across different platforms.</li>
-            <li>Striving for a balanced approach to standardization and automation to optimize development processes.</li>
+            <li>Leveraging the latest APIs, third-party libraries, and version control tools for streamlined development.</li>            
           </ul>
         </div>
       </div>
@@ -625,15 +622,17 @@
         <h3 class="accordion-toggle"><span>Unit Testing</span></h3>
         <div class="accordion-content">
           <ul>
-            <li>Implementing rigorous unit testing to validate each component of the code, ensuring its reliability and performance.</li>
+            <li>Integrating continuous integration tools to automatically run unit tests on new code submissions, ensuring immediate feedback on code integrity.</li>
+            <li>Utilizing test-driven development (TDD) practices to encourage the creation of tests before writing code, leading to more robust and error-free components.</li>
           </ul>
         </div>
       </div>
       <div class="accordionItem">
-        <h3 class="accordion-toggle "><span>Code Review Practices</span></h3>
+        <h3 class="accordion-toggle"><span>Code Review Practices</span></h3>
         <div class="accordion-content">
         <ul>
-        <li>Conducting meticulous code reviews to uphold quality, enhance functionality, and prevent potential issues.</li>          
+        <li>Incorporating automated code scanning tools to detect vulnerabilities and code smells before manual review, streamlining the review process.</li>          
+        <li>Establishing a peer review culture where developers are encouraged to provide constructive feedback, promoting knowledge sharing and collaborative improvement.</li>
         </ul>
         </div>
       </div>
@@ -641,7 +640,8 @@
         <h3 class="accordion-toggle"><span>Code Quality Metrics</span></h3>
         <div class="accordion-content">
           <ul>
-            <li>Employing a set of stringent code quality metrics to measure and ensure the highest standards are consistently met.</li>            
+            <li>Adopting complexity metrics to identify overly complex code that may be harder to maintain and test, aiming for simplicity and readability.</li>            
+            <li>Tracking technical debt metrics to quantify the cost of rework associated with quick fixes versus proper solutions, guiding towards long-term code health.</li>
           </ul>
         </div>
       </div>
