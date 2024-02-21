@@ -591,9 +591,7 @@
     <div class="col-left">
       <div class="head-txt">
         <h2>How We Ensure Code Quality</h2>
-        <p>Beyond our foundational practices, we continuously refine our methodologies and adopt cutting-edge tools to stay ahead in ensuring code quality. Our commitment extends to fostering a culture of excellence where every team member is empowered to innovate and contribute to the high standards we set. </p>
-
-<p>This holistic approach not only elevates the quality of our software but also ensures that our solutions are scalable, secure, and aligned with the evolving needs of our clients.  </p>
+        <p>At the core of our development process, we prioritize code quality, implementing stringent testing, detailed reviews, and industry-best practices to deliver software that excels in both functionality and longevity.</p>
       </div>
       <div class="image-wrap">
         <?php 
@@ -612,11 +610,10 @@
         <h3 class="accordion-toggle"><span>Upholding Coding Best Practices</span></h3>
         <div class="accordion-content">
           <ul>
-            <li>Following established coding guidelines and utilizing style check tools to maintain high standards, while prioritizing robust security practices.</li>
+            
             <li>Using descriptive variable names and in-code comments for better readability and maintainability.</li>
             <li>Comprehensive documentation for every codebase, ensuring clarity and ease of future updates.</li>
-            <li>Breaking down code into concise, focused units for simplicity and effectiveness.</li>
-            <li>Leveraging the latest APIs, third-party libraries, and version control tools for streamlined development.</li>            
+                        
           </ul>
         </div>
       </div>
