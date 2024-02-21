@@ -610,14 +610,14 @@
         <h3 class="accordion-toggle"><span>Upholding Coding Best Practices</span></h3>
         <div class="accordion-content">
           <ul>
-            <li>Following Coding Guidelines and Leveraging Style Checking Tools</li>
-            <li>Prioritizing Data Security Practices</li>
-            <li>Employing Descriptive Variable Names and In-Code Comments</li>
-            <li>Comprehensive Code Documentation</li>
-            <li>Breaking Code into Concise, Focused Units</li>
-            <li>Harnessing Frameworks' APIs, Third-Party Libraries, and Version Control Tools</li>
-            <li>Ensuring Code Portability Across Platforms</li>
-            <li>Achieving Reasonable Standardization and Automation</li>
+            <li>We follow established coding guidelines and utilize style check tools to maintain high standards.</li>
+            <li>Prioritizing robust security practices to protect data integrity.</li>
+            <li>Using descriptive variable names and in-code comments for better readability and maintainability.</li>
+            <li>Comprehensive documentation for every codebase, ensuring clarity and ease of future updates.</li>
+            <li>Breaking down code into concise, focused units for simplicity and effectiveness.</li>
+            <li>Leveraging the latest APIs, third-party libraries, and version control tools for streamlined development.</li>
+            <li>Ensuring our code is portable and functions seamlessly across different platforms.</li>
+            <li>Striving for a balanced approach to standardization and automation to optimize development processes.</li>
           </ul>
         </div>
       </div>
@@ -625,44 +625,23 @@
         <h3 class="accordion-toggle"><span>Unit Testing</span></h3>
         <div class="accordion-content">
           <ul>
-            <li>Following Coding Guidelines and Leveraging Style Checking Tools</li>
-            <li>Prioritizing Data Security Practices</li>
-            <li>Employing Descriptive Variable Names and In-Code Comments</li>
-            <li>Comprehensive Code Documentation</li>
-            <li>Breaking Code into Concise, Focused Units</li>
-            <li>Harnessing Frameworks' APIs, Third-Party Libraries, and Version Control Tools</li>
-            <li>Ensuring Code Portability Across Platforms</li>
-            <li>Achieving Reasonable Standardization and Automation</li>
+            <li>Implementing rigorous unit testing to validate each component of the code, ensuring its reliability and performance.</li>
           </ul>
         </div>
       </div>
       <div class="accordionItem">
         <h3 class="accordion-toggle "><span>Code Review Practices</span></h3>
         <div class="accordion-content">
-          <ul>
-            <li>Following Coding Guidelines and Leveraging Style Checking Tools</li>
-            <li>Prioritizing Data Security Practices</li>
-            <li>Employing Descriptive Variable Names and In-Code Comments</li>
-            <li>Comprehensive Code Documentation</li>
-            <li>Breaking Code into Concise, Focused Units</li>
-            <li>Harnessing Frameworks' APIs, Third-Party Libraries, and Version Control Tools</li>
-            <li>Ensuring Code Portability Across Platforms</li>
-            <li>Achieving Reasonable Standardization and Automation</li>
-          </ul>
+        <ul>
+        <li>Conducting meticulous code reviews to uphold quality, enhance functionality, and prevent potential issues.</li>          
+        </ul>
         </div>
       </div>
       <div class="accordionItem">
         <h3 class="accordion-toggle"><span>Code Quality Metrics</span></h3>
         <div class="accordion-content">
           <ul>
-            <li>Following Coding Guidelines and Leveraging Style Checking Tools</li>
-            <li>Prioritizing Data Security Practices</li>
-            <li>Employing Descriptive Variable Names and In-Code Comments</li>
-            <li>Comprehensive Code Documentation</li>
-            <li>Breaking Code into Concise, Focused Units</li>
-            <li>Harnessing Frameworks' APIs, Third-Party Libraries, and Version Control Tools</li>
-            <li>Ensuring Code Portability Across Platforms</li>
-            <li>Achieving Reasonable Standardization and Automation</li>
+            <li>Employing a set of stringent code quality metrics to measure and ensure the highest standards are consistently met.</li>            
           </ul>
         </div>
       </div>
