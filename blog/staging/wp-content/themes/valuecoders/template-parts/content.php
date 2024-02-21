@@ -1,5 +1,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('vc-bcard'); ?>>
-	<div class="blog-thumb"><?php valuecoders_post_thumbnail(); ?></div>
+	<div class="blog-thumb">
+		<?php valuecoders_post_thumbnail(); ?>			
+	</div>
 	<div class="blog-outer">
 		<div class="blog-content">
 			<?php if( !is_author() ) : ?>	
