@@ -493,3 +493,24 @@ if( count( $techno ) === 1 ){ ?>
 }
 endif;
 }
+
+
+function expert_talk_cta( $text, $btnText = "Contact Us", $itype = "one", $elmClasses = " padding-t-70 padding-b-70" ){
+return '<section class="lets-discuss-cta bg-blue-linear '.$elmClasses.'">
+<div class="container">
+  <div class="dis-flex justify-sb">
+    <div class="left-sec">
+      <div class="head-txt">'.$text.'</div>
+      '.get_cmnCTA_v3($btnText, false).'
+    </div>
+    <div class="right-sec">
+      <picture class="icon-box">
+        <source type="image/webp" srcset="'.get_bloginfo('template_url').'/v4.0/images/cta-image.png">
+        <source type="image/png" srcset="'.get_bloginfo('template_url').'/v4.0/images/cta-image.png">
+        <img loading="lazy" src="'.get_bloginfo('template_url').'/images/cta-image.png" alt="valuecoders" width="345" height="206">
+      </picture>
+    </div>
+  </div>
+</div>
+</section>';
+}

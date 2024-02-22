@@ -1,21 +1,27 @@
+
 <section class="client-img-section padding-t-120 padding-b-120">
   <div class="container">
   <div class="dis-flex justify-sb items-center">
     <div class="flex-2 left-box">
       <div class="head-txt">
-        <!--<h5>WE ARE INDIA’S</h5>-->
+        <?php 
+        if( isset($args['content']) && !empty( $args['content'] ) ){
+          echo $args['content'];
+        }else{
+        ?>
         <h2>Experience Excellence with ValueCoders</h2>
         <p>Embrace the transformative power of technology with ValueCoders, where our expertise meets your vision. </p>
-        <p>From startups to big enterprises, development organizations to digital agencies, and SMEs to Governments, we cater to varied software requirements, delivering tailor-made solutions that drive innovation, efficiency, and growth.</p>
-      </div>
-      <ul>
+        <p>From startups to big enterprises, development organizations to digital agencies, and SMEs to Governments, we cater to varied software requirements, delivering tailor-made solutions that drive innovation, efficiency, and growth.</p>      
+        <ul>
         <li>Ongoing internal L&D programs </li>
         <li>Experienced product development</li>
         <li>Transparency & accountability</li>
         <li>Daily/weekly/monthly reporting</li>
         <li>Ongoing internal L&D programs</li>
         <li>Experienced product development</li>
-      </ul>
+        </ul>
+        <?php } ?>
+      </div>
     </div>
     <div class="flex-2 right-box">
       <div class="client-section">

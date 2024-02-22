@@ -1425,6 +1425,15 @@ function cmnCTA_v3( $cta_text, $is_center = true ){
 	</div>';
 }
 
+function get_cmnCTA_v3( $cta_text, $is_center = true ){
+	$isCenter = ( $is_center === true ) ? " justify-center" : "";
+	return '<div class="btn-sec margin-t-50 '.$isCenter.'">
+	<a href="'.site_url('/contact').'" class="btn rounded">
+	<span class="text-white">Contact Us</span>
+	</a>
+	</div>';
+}
+
 function hireCmn_cta(){
 	return '<div class="button-section margin-t-50 ustify-center">
 	<div class="btn-div">

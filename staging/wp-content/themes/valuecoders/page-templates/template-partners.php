@@ -34,23 +34,7 @@ get_header();
 		</div>
 	</div>
 </section>
-<div class="client-logo-box-section dis-flex items-center justify-sb bg-dark-theme">
-	<div class="container">
-	<div class="dis-flex">
-	  <div class="logo-heading"><h4>Trusted by startups<br> and Fortune 500 companies</h4></div>
-	  <div class="logo-box-outer dis-flex">
-	    <div class="logo-box logo1"></div>
-	    <div class="logo-box logo2"></div>
-	    <div class="logo-box logo3"></div>
-	    <div class="logo-box logo4"></div>
-	    <div class="logo-box logo5"></div>
-	    <div class="logo-box logo6"></div>
-	    <div class="logo-box logo7"></div>
-	    <div class="logo-box logo8"></div>
-	  </div>
-	</div>
-	</div>
-</div>
+<?php get_template_part('inc/cmn', 'startups'); ?>
 
 <?php 
 $threeSteps = get_field('three-steps');

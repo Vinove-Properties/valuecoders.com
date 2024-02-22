@@ -256,39 +256,15 @@ if( $techStacks && ($techStacks['is_enable'] == "yes") ) :
 
 <?php
 $whyChoose = get_field('why-choose');
-if( $whyChoose ) :
 $iswEnabled = $whyChoose['is_enable'];
-if( $iswEnabled == "yes" ){	
-?>
-<section class="global-counter padding-t-120 padding-b-120">
-	<div class="container">
-		<div class="dis-flex justify-sb items-center">
-		<div class="flex-2 content-box top-content tick-icon-list">
-		<?php echo $whyChoose['content']; ?>	      
-		<h4>Awards &amp; Certifications -</h4>
-		<div class="award-logo dis-flex">
-		<div class="logo-box logo1"></div>
-		<div class="logo-box logo2"></div>
-		<div class="logo-box logo3"></div>
-		<div class="logo-box logo4"></div>
-		<div class="logo-box logo5"></div>
-		</div>
-		</div>
-		<div class="flex-2 image-box">
-		<picture>
-		<img loading="lazy" src="<?php bloginfo('template_url'); ?>/v3.0/images/counter-image.svg" width="543" height="500" alt="valuecoders">
-		</picture>
-		</div>
-		</div>
-	</div>
-</section>
-<?php 
+if( isset( $whyChoose['is_enable'] ) && ( $whyChoose['is_enable'] == "yes" ) ){
+	get_template_part( 'include/why', 'hirev4.0', ['content' => $whyChoose['content']] );
 }
-endif; 
 ?>
 
 
 <?php 
+/*
 $clientele = get_field( 'vc-clients' );
 if( $clientele['is_enabled'] == 'yes' ) :
 ?>
@@ -308,8 +284,11 @@ if( $clientele['is_enabled'] == 'yes' ) :
 </div>
 </div>
 </section>
-<?php endif; ?>
 <!-- ValueCoder clientele #Ends Here -->
+<?php endif; 
+*/
+?>
+
 
 <?php 
 $faqs 		= get_field('faq-group');

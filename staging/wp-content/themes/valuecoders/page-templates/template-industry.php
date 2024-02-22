@@ -41,21 +41,7 @@ $vcBtn = get_field('vc-cta', $thisPostID);
 	</div>
 </section>
 
-<?php 
-$tbsBG = get_field('tbs-bg');
-$tbsBG = (isset( $tbsBG ) && !is_array( $tbsBG )) ? $tbsBG : 'bg-light-theme';
-?>
-<div class="client-logo-box-section dis-flex items-center justify-sb <?php echo $tbsBG; ?>">
-  <div class="container">
-    <div class="dis-flex">
-      <div class="logo-heading">
-        <h4>Trusted by startups<br> and Fortune 500 companies</h4>
-      </div>
-      <div class="logo-box-outer dis-flex vlazy">
-      </div>
-    </div>
-  </div>
-</div>
+<?php get_template_part('inc/cmn', 'startups'); ?>
 
 <?php if( is_page(1087) ){ //ISV page 
 /*
@@ -165,27 +151,17 @@ $tabLoop 		= $tabSec['tab-loop'];
 <?php } 
 }
 ?>
-<?php if( !is_page(1087) ){ ?>
-<section id="et-one" class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70">
-	<div class="container">
-      <div class="head-txt text-center">
-			<h2>
-			<?php 
-			echo (isset($vcBtn['title-one']) && !empty($vcBtn['title-one'])) ? $vcBtn['title-one'] : 
-			"Get these benefits with ValueCoders' guidance"; ?>
-			</h2>
-			<p>
-			<?php 
-			echo (isset($vcBtn['text-one']) && !empty($vcBtn['text-one'])) ? $vcBtn['text-one'] : 
-			"Get free consultation and let us know your project idea to turn it into an amazing digital product."; ?></p>
-			</div>
-			<?php
-			$ctaTxt_one = (isset($vcBtn['link-one']) && !empty($vcBtn['link-one'])) ? $vcBtn['link-one'] : "Talk To Our Experts";  
-			cmnCTA_v3($ctaTxt_one); 
-			?>
-		</div>
-</section>
-<?php } ?>
+<?php 
+if( !is_page(1087) ){ 
+$eOneHeading  = (isset($vcBtn['title-one']) && !empty($vcBtn['title-one'])) ? $vcBtn['title-one'] : "Let's Discuss Your Project";
+$eOneBody     = (isset($vcBtn['text-one']) && !empty($vcBtn['text-one'])) ? $vcBtn['text-one'] : "Get free consultation and let us know your project idea to turn it into an amazing digital product.";
+$eOnelt = (isset($vcBtn['link-one']) && !empty($vcBtn['link-one'])) ? $vcBtn['link-one'] : 
+"Book a Free Consultation"; 
+$eCtaOne = '<h2>'.$eOneHeading.'</h2>';
+$eCtaOne .= '<p>'.$eOneBody.'</p>';
+echo expert_talk_cta( $eCtaOne, $eOnelt );	
+} 
+?>
 
 <?php  
 $solutions = get_field('solutions');
@@ -356,50 +332,23 @@ endif;
 
 <?php
 $whyhire = get_field('why-valuecoders');
-if( $whyhire ) :
-$iswEnabled = $whyhire['is_enabled'];
-if( $iswEnabled == "yes" ){	
-?>
- <section class="global-counter padding-t-120 padding-b-120 <?php echo $whyhire['sc_background']; ?>">
-  <div class="container">
-    <div class="dis-flex justify-sb items-center">
-      <div class="flex-2 content-box tick-icon-list">
-        <?php 
-        echo $whyhire['content']; 
-        if( $whyhire['options'] ){
-        	echo '<ul>';
-        	foreach( $whyhire['options'] as $row ){
-        		echo '<li>'.$row['title'].'</li>';
-        	}
-        	echo '</ul>';
-        }
-        
-        ?>        
-        <h4>Awards &amp; Certifications -</h4>
-        <div class="award-logo dis-flex">
-          <div class="logo-box logo1 vlazy"></div>
-          <div class="logo-box logo2 vlazy"></div>
-          <div class="logo-box logo3 vlazy"></div>
-          <div class="logo-box logo4 vlazy"></div>
-          <div class="logo-box logo5 vlazy"></div>
-        </div>
-      </div>
-      <div class="flex-2 image-box">
-        <picture>
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v3.0/images/counter-image.svg" 
-          width="543" height="500" alt="valuecoders">
-        </picture>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- WHy Hire Developer From VC -->
-<?php 
+if( isset( $whyhire['is_enabled'] ) && ($whyhire['is_enabled'] == "yes") ){	
+$whContent = $whyhire['content']; 
+if( $whyhire['options'] ){
+	$whContent .= '<ul>';
+	foreach( $whyhire['options'] as $row ){
+	$whContent .= '<li>'.$row['title'].'</li>';
+	}
+	$whContent .= '</ul>';
 }
-endif; ?>
+get_template_part( 'include/why', 'hirev4.0', ['content' => $whContent] );   	
+}
+?>
 
 
 <?php 
+//Section Hide in version 4.0
+/*
 $clientele 		= get_field( 'vc-clients' );
 if( $clientele['is_enabled'] == 'yes' ) :  
 ?>
@@ -421,29 +370,21 @@ if( $clientele['is_enabled'] == 'yes' ) :
   </div>
 </section>
 <!-- ValueCoder clientele #Ends Here -->
-<?php endif; ?>
+<?php endif; 
+*/
+?>
 
-<section id="et-two" class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70">
-		<div class="container">
-		<div class="head-txt text-center">
-		<h2>
-		<?php 
-		echo (isset($vcBtn['title-two']) && !empty($vcBtn['title-two'])) ? $vcBtn['title-two'] : 
-		"Have any questions?"; ?>				
-		</h2>
-		<p>
-		<?php 
-		echo (isset($vcBtn['text-two']) && !empty($vcBtn['text-two'])) ? $vcBtn['text-two'] : 
-		"Our managers will consult you about choosing a web-based solution for your needs."; 
-		?>
-		</p>
-		</div>
-		<?php
-		$ctaTxt_two = (isset($vcBtn['link-two']) && !empty($vcBtn['link-two'])) ? $vcBtn['link-two'] : "Talk To Our Experts";
-		cmnCTA_v3( $ctaTxt_two ); 
-		?>
-		</div>
-</section>
+
+<?php 
+$eTwoHeading  = (isset($vcBtn['title-two']) && !empty($vcBtn['title-two'])) ? $vcBtn['title-two'] : "Got a Project in Mind? Tell Us More";
+$eTwoBody     = (isset($vcBtn['text-two']) && !empty($vcBtn['text-two'])) ? $vcBtn['text-two'] : "Drop us a line and we'll get back to you immediately to schedule a call and discuss your needs personally.";
+$eTwolt = (isset($vcBtn['link-two']) && !empty($vcBtn['link-two'])) ? $vcBtn['link-two'] : 
+"Talk To Our Experts"; 
+
+$eCtatwo = '<h2>'.$eTwoHeading.'</h2>';
+$eCtatwo .= '<p>'.$eTwoBody.'</p>';
+echo expert_talk_cta( $eCtatwo, $eTwolt );
+?>
 
 <?php 
 $guideTopics 	= get_field('guide-topics');

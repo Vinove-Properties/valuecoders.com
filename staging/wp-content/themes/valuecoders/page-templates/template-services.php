@@ -210,17 +210,10 @@ if( isset( $ctoSection['is_enabled'] ) && ($ctoSection['is_enabled'] == "yes") )
     <!--CTO Page Section Ends-->
 <?php endif;
 
-if(is_page(14198)) : ?>
-<section class="experts-talk-first-section bg-blue-linear padding-t-120 padding-b-120">
-<div class="container">
-<div class="head-txt text-center">
-<h2>Looking for an expert CTO?</h2>
-<p>Most experienced CTOs will start working on your project as soon as possible.<br> Contact our managers to describe your requirements.</p>
-</div>
-<?php cmnCTA_v3('Book a Free Consultation'); ?>
-</div>
-</section>
-<?php endif;
+if(is_page(14198)) :   
+echo expert_talk_cta('<h2>Looking for an expert CTO?</h2><p>Most experienced CTOs will start working on your project as soon as possible.<br> Contact our managers to describe your requirements.</p>', 'Book a Free Consultation');  
+endif;
+
 if( is_page( 'application-maintenance' ) ) : 
 	dynamic_sidebar('app-maintenance');
 endif; 
@@ -381,26 +374,15 @@ if( $sectionType == "grid" ){
 }
 ?>
 
-<section class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70 nnn" id="experts-cta-222">
-<div class="container">
-<div class="head-txt text-center">
-<h2>
 <?php 
-echo (isset($vcBtn['title-one']) && !empty($vcBtn['title-one'])) ? $vcBtn['title-one'] : 
-"Let's Discuss Your Project"; ?>
-</h2>
-<p>
-<?php 
-echo (isset($vcBtn['text-one']) && !empty($vcBtn['text-one'])) ? $vcBtn['text-one'] : 
-"Get free consultation and let us know your project idea to turn it into an amazing digital product."; ?></p>
-</div>
-<?php 
-$ctaOne = (isset($vcBtn['link-one']) && !empty($vcBtn['link-one'])) ? $vcBtn['link-one'] : 
+$eOneHeading  = (isset($vcBtn['title-one']) && !empty($vcBtn['title-one'])) ? $vcBtn['title-one'] : "Let's Discuss Your Project";
+$eOneBody     = (isset($vcBtn['text-one']) && !empty($vcBtn['text-one'])) ? $vcBtn['text-one'] : "Get free consultation and let us know your project idea to turn it into an amazing digital product.";
+$eOnelt = (isset($vcBtn['link-one']) && !empty($vcBtn['link-one'])) ? $vcBtn['link-one'] : 
 "Book a Free Consultation"; 
-cmnCTA_v3($ctaOne); 
+$eCtaOne = '<h2>'.$eOneHeading.'</h2>';
+$eCtaOne .= '<p>'.$eOneBody.'</p>';
+echo expert_talk_cta( $eCtaOne, $eOnelt );
 ?>
-</div>
-</section>
 
 <?php
 if( is_page( [15820,15827] ) ){
@@ -460,16 +442,8 @@ $headText   = fnextractHeadins('h2', $htContent );
 <?php 
 $ucSolutions = get_field('v3-ucsolutions', $pageID);
 if( isset( $ucSolutions['is_enabled'] ) && ($ucSolutions['is_enabled'] == "yes") ) :
+echo expert_talk_cta( '<h2>Ready to unlock the power of machine learning?</h2><p>Discover how our state-of-the-art solutions can drive innovation and transform your business.</p>', 'Talk To Our Experts' );
 ?>
-<section class="experts-talk-first-section bg-blue-linear padding-t-120 padding-b-120">
-  <div class="container">
-    <div class="head-txt text-center">
-      <h2>Ready to unlock the power of machine learning?</h2>
-      <p>Discover how our state-of-the-art solutions can drive innovation and transform your business.</p>
-    </div>
-    <?php cmnCTA_v3('Talk To Our Experts'); ?>
-  </div>
-</section>
 
 <section class="accordion-section padding-t-120 <?php echo $blueBG; ?>" id="acf-v3-ucsolutions">
 <div class="dis-flex accordian-row">
@@ -945,17 +919,11 @@ $gridType = ( isset($ibox['grid-column']) && !empty($ibox['grid-column']) ) ? $i
 endif; 
 ?>
 
-<?php if( is_page( [16008] ) ){ ?>
-<section class="experts-talk-first-section bg-blue-linear padding-t-120 padding-b-120">
-<div class="container">
-<div class="head-txt text-center">
-<h2>Elevate Your Brand with Midjourney Solutions!</h2>
-<p>Enhance Your Brand with Customized AI-Generated Visuals by Midjourney Solutions.</p>
-</div>
-<?php cmnCTA_v3('Book a Free Consultation'); ?>
-</div>
-</section>  
-<?php } ?> 
+<?php 
+if( is_page( [16008] ) ){ 
+echo expert_talk_cta( '<h2>Elevate Your Brand with Midjourney Solutions!</h2><p>Enhance Your Brand with Customized AI-Generated Visuals by Midjourney Solutions.</p>', 'Book a Free Consultation' );
+} 
+?> 
 
 <?php 
 if( !is_page( [15820,15827] ) ){
@@ -963,17 +931,11 @@ if( !is_page( [15820,15827] ) ){
 }
 ?>
 
-<?php if( is_page( [16006] ) ){ ?>
-<section class="experts-talk-first-section bg-blue-linear padding-t-120 padding-b-120">
-<div class="container">
-<div class="head-txt text-center">
-<h2>Elevate Your Brand with Midjourney Solutions!</h2>
-<p>Enhance Your Brand with Customized AI-Generated Visuals by Midjourney Solutions.</p>
-</div>
-<?php cmnCTA_v3('Book a Free Consultation'); ?>
-</div>
-</section>  
-<?php } ?> 
+<?php 
+if( is_page( [16006] ) ){
+echo expert_talk_cta('<h2>Elevate Your Brand with Midjourney Solutions!</h2><p>Enhance Your Brand with Customized AI-Generated Visuals by Midjourney Solutions.</p>', 'Book a Free Consultation');  
+} 
+?> 
 
 
 <?php if( is_page('dedicated-development-teams') ) : ?>
@@ -1215,50 +1177,29 @@ $flexGrid 	= (isset($serv_opts['grid_column']) && !empty($serv_opts['grid_column
 </section>
 <?php endif; ?>
 
-<?php get_template_part('include/why', 'hirev4.0'); ?>
+<?php //get_template_part('include/why', 'hirev4.0'); ?>
 
 <?php  
 $vcProfile = get_field('vc-profile');
 if( $vcProfile ) :
 $vcProfileEnable = $vcProfile['is_enable'];
-if( $vcProfileEnable == "yes" ) { ?>
-<section class="global-counter padding-t-120 <?php echo $vcProfile['sc_background']; ?>" id="acf-vc-profile">
-  <div class="container">
-    <div class="dis-flex justify-sb items-center">
-      <div class="flex-2 content-box tick-icon-list">
-      	<?php echo $vcProfile['top-content']; ?>
-        <?php 
-        $profileContent = $vcProfile['content']; 
-        $proText         = vCodeRemoveUlTags( $profileContent );
-        echo $proText;
-        echo '<ul>
-          <li>India\'s Top 1% Software Talent</li>
-          <li>Trusted by Startups to Fortune 500</li>
-          <li>Idea to Deployment, We Handle All</li>
-          <li>Time-Zone Friendly: Global Presence</li>
-          <li>Top-tier Data Security Protocols</li>
-          <li>On-time Delivery, No Surprises</li>
-          '.$vcProfile['add-pointers'].'
-        </ul>';
-        ?>
-        <h4>Awards & Certifications -</h4>
-        <div class="award-logo dis-flex">
-          <div class="logo-box logo1 vlazy"></div>
-          <div class="logo-box logo2 vlazy"></div>
-          <div class="logo-box logo3 vlazy"></div>
-          <div class="logo-box logo4 vlazy"></div>
-          <div class="logo-box logo5 vlazy"></div>
-        </div>
-      </div>
-      <div class="flex-2 image-box">
-        <picture>
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v3.0/images/counter-image.svg" width="543" height="500" alt="valuecoders">
-        </picture>
-      </div>
-    </div>
-  </div>
-</section>
-<?php } endif; ?>
+if( $vcProfileEnable == "yes" ) { 
+
+$whContent        =  $vcProfile['top-content']; 
+$profileContent   = $vcProfile['content']; 
+$proText          = vCodeRemoveUlTags( $profileContent );
+$whContent .=  $proText;
+$whContent .=  '<ul>
+<li>India\'s Top 1% Software Talent</li>
+<li>Trusted by Startups to Fortune 500</li>
+<li>Idea to Deployment, We Handle All</li>
+<li>Time-Zone Friendly: Global Presence</li>
+<li>Top-tier Data Security Protocols</li>
+<li>On-time Delivery, No Surprises</li>
+'.$vcProfile['add-pointers'].'
+</ul>';
+get_template_part( 'include/why', 'hirev4.0', ['content' => $whContent] );   
+} endif; ?>
 
 <?php
 $whyhire = get_field('vprofile-icons');
@@ -1408,6 +1349,8 @@ endif;
 ?>
 
 <?php 
+//Section Removed in Common Section Update Version 4.0
+/*
 $clientele = get_field( 'vc-clients' );
 if( $clientele['is_enabled'] == 'yes' ) :
 ?>
@@ -1439,7 +1382,9 @@ if( $clientele['is_enabled'] == 'yes' ) :
     </div>
   </div>
 </section>
-<?php endif; ?>
+<?php endif; 
+*/
+?>
 <!-- ValueCoder clientele #Ends Here -->
 
 <?php 
@@ -1469,26 +1414,16 @@ $headText   = fnextractHeadins('h2', $htContent );
 </section>
 <?php endif; ?>
 
-<section class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70" id="exp-talk-3">
-	<div class="container">
-		<div class="head-txt text-center">
-			<h2>
-			<?php 
-			echo (isset($vcBtn['title-two']) && !empty($vcBtn['title-two'])) ? $vcBtn['title-two'] : 
-			"Got a Project in Mind? Tell Us More"; ?>
-			</h2>
-			<p>
-			<?php 
-			echo (isset($vcBtn['text-two']) && !empty($vcBtn['text-two'])) ? $vcBtn['text-two'] : 
-			"Drop us a line and we'll get back to you immediately to schedule a call and discuss your needs personally."; ?></p>
-		</div>
-    <?php 
-    $ctaTwo = (isset($vcBtn['link-two']) && !empty($vcBtn['link-two'])) ? $vcBtn['link-two'] : 
-      "Talk To Our Experts"; 
-    cmnCTA_v3( $ctaTwo );
-    ?>
-	</div>
-</section>
+<?php 
+$eTwoHeading  = (isset($vcBtn['title-two']) && !empty($vcBtn['title-two'])) ? $vcBtn['title-two'] : "Got a Project in Mind? Tell Us More";
+$eTwoBody     = (isset($vcBtn['text-two']) && !empty($vcBtn['text-two'])) ? $vcBtn['text-two'] : "Drop us a line and we'll get back to you immediately to schedule a call and discuss your needs personally.";
+$eTwolt = (isset($vcBtn['link-two']) && !empty($vcBtn['link-two'])) ? $vcBtn['link-two'] : 
+"Talk To Our Experts"; 
+
+$eCtatwo = '<h2>'.$eTwoHeading.'</h2>';
+$eCtatwo .= '<p>'.$eTwoBody.'</p>';
+echo expert_talk_cta( $eCtatwo, $eTwolt );
+?>
 
 <?php 
 $uga_content = get_field('v3-concolumn');
