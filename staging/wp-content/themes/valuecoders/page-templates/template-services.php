@@ -54,7 +54,10 @@ $bannerImageSrc = getVcWebpSrcURL( $cmnBanner );
     </div>
   </div>
 </section>
-<?php vcTrustedStartups($thisPostID); ?>
+<?php 
+get_template_part('inc/cmn', 'startups');
+//vcTrustedStartups($thisPostID); 
+?>
 
 <?php 
 $achv = get_field('v3-achievements');
@@ -1211,6 +1214,8 @@ $flexGrid 	= (isset($serv_opts['grid_column']) && !empty($serv_opts['grid_column
   </div>
 </section>
 <?php endif; ?>
+
+<?php get_template_part('include/why', 'hirev4.0'); ?>
 
 <?php  
 $vcProfile = get_field('vc-profile');
