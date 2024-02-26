@@ -324,7 +324,7 @@ if( isset( $json['event'] ) && $json['event'] == "invitee.created" ){
     
     $phone      = $json['payload']['text_reminder_number'];
     $phoneee    = explode(" ", $phone);    
-    $country    = ( isset( $phoneee[0] ) ) ? globalCountryListAry( $phoneee[0] ) : "N/A";
+    $country    = ( isset( $phoneee[0] ) ) ? globalCountryListAry( $phoneee[0] ) : "";
     $email      = $json['payload']['email'];
 
     $comment    = "";
