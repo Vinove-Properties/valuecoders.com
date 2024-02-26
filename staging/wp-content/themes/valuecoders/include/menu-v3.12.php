@@ -150,7 +150,10 @@
       <div class="header-item-center">
         <nav class="menu mob-nav" id="menu">
           <a href="<?php echo $site_url; ?>" class="brand">
-          <img loading="lazy" src="<?php echo $tpl_url; ?>/images/logo-v2.svg" alt="Valuecoders" class="dark-theme-logo" width="260" height="46">
+          <!-- 
+          <img loading="lazy" src="<?php echo $tpl_url; ?>/images/logo-v2.svg" alt="Valuecoders" class="dark-theme-logo" width="260" height="46"> 
+          -->
+          <img loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/logo-light.svg" alt="Valuecoders" class="dark-theme-logo" width="400" height="88">
           </a>
           <ul>
             <li class="menu-item-has-children">
