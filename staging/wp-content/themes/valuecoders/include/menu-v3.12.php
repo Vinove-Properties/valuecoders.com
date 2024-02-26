@@ -80,11 +80,16 @@
       <div class="header-item-left">
         <a href="<?php echo $site_url; ?>" class="brand">
           <div class="large">
-            <img loading="lazy" src="<?php echo $tpl_url; ?>/images/logo-v2.svg" alt="Valuecoders" class="dark-theme-logo" width="277" height="49">
+            <!-- 
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/images/logo-v2.svg" alt="Valuecoders" class="dark-theme-logo" width="277" height="49"> 
+            -->
+            <img loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/logo-light.svg" alt="Valuecoders" class="dark-theme-logo" width="400" height="88">
           </div>
           <div class="small">
-            <img loading="lazy" src="<?php echo $tpl_url; ?>/images/vc-logo-dark.png" alt="Valuecoders" 
-              class="dark-theme-logo sm" width="66" height="66">
+            <!-- 
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/images/vc-logo-dark.png" alt="Valuecoders" class="dark-theme-logo sm" width="66" height="66"> 
+            -->
+            <img loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/logo-small.svg" alt="Valuecoders" class="dark-theme-logo sm" width="80" height="80">
           </div>
         </a>
         <?php 
