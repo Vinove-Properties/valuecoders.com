@@ -15,9 +15,9 @@
       }
       return $is_mobile;
   }
-  $is_staging = ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'staging' ) !== false) )  ?  true : false;
+  $is_staging = ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'v2wp' ) !== false) )  ?  true : false;
   if( $is_staging ){
-  $site_url   = 'https://www.valuecoders.com/staging/';
+  $site_url   = 'https://www.valuecoders.com/v2wp/';
   }else{
   $site_url   = 'https://www.valuecoders.com/';
   }  
@@ -39,7 +39,7 @@
   enterprises : For Enterprises
   agencies : For Agencies
   */
-  //$mcat     = 'ai-ml';
+  //$mcat     = 'devops';
   $pcatArray = [
     'engineering'     => ['name' => 'Product Engineering', 'slug' => 'outsource-software-product-development-services', 
     'icon' => 'company_icon1.svg'],
@@ -69,7 +69,7 @@
       $mainServiceLink = '<a href="'.$site_url.$combArray[$mcat]['slug'].'">Services</a>';  
     }
     */
-  
+
     $mainServiceLink = '<a href="'.$site_url.$combArray[$mcat]['slug'].'">Services</a>';  
   }
   ?>
@@ -80,22 +80,24 @@
       <div class="header-item-left">
         <a href="<?php echo $site_url; ?>" class="brand">
           <div class="large">
-            <img loading="lazy" src="<?php echo $tpl_url; ?>/images/logo-v2.svg" alt="Valuecoders" class="dark-theme-logo" width="277" height="49">
-            <img loading="lazy" src="<?php echo $tpl_url; ?>/images/dark-logo.svg" alt="Valuecoders" class="light-theme-logo" width="277" height="49">
+            <!-- <img loading="lazy" src="<?php echo $tpl_url; ?>/images/logo-v2.svg" alt="Valuecoders" class="dark-theme-logo" width="277" height="49"> -->
+            <img loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/logo-light.svg" alt="Valuecoders" class="dark-theme-logo" width="400" height="88">
           </div>
           <div class="small">
-            <img loading="lazy" src="<?php echo $tpl_url; ?>/images/vc-logo-dark.png" alt="Valuecoders" 
-              class="dark-theme-logo sm" width="66" height="66">
+            <!-- <img loading="lazy" src="<?php echo $tpl_url; ?>/images/vc-logo-dark.png" alt="Valuecoders" 
+              class="dark-theme-logo sm" width="66" height="66"> -->
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/logo-small.svg" alt="Valuecoders" class="dark-theme-logo sm" width="80" height="80">
           </div>
         </a>
+
         <?php 
-          if( in_array( $mcat, array_keys( $pcatArray ) ) ) :
-          ?>
+        if( in_array( $mcat, array_keys( $pcatArray ) ) ) :
+        ?>
         <div class="menu">
           <ul>
             <li class="menu-item-has-children small-menu for-product">
               <!--<a href="<?php echo $site_url; ?>software-development-services-company">Services</a>-->
-              <a href="<?php echo $site_url.$pcatArray[$mcat]['slug']; ?>"><?php echo $pcatArray[$mcat]['name']; ?></a>
+                <a href="<?php echo $site_url.$pcatArray[$mcat]['slug']; ?>"><?php echo $pcatArray[$mcat]['name']; ?></a>
               <span class="arrow-btn"></span>
               <div class="small-menu-inner menu-mega">
                 <?php 
@@ -110,10 +112,10 @@
           </ul>
         </div>
         <?php 
-          endif; 
-            
-          if( in_array( $mcat, array_keys( $psubcatArray ) ) ) :
-          ?>
+        endif; 
+          
+        if( in_array( $mcat, array_keys( $psubcatArray ) ) ) :
+        ?>
         <div class="menu">
           <ul>
             <li class="menu-item-has-children small-menu for-product">
@@ -141,20 +143,24 @@
           <div class="bar3"></div>
         </div>
       </div>
+
       <!-- Navbar Section -->
       <?php if( !isset( $_GET['l'] ) ) : ?>
       <div class="header-item-center">
         <nav class="menu mob-nav" id="menu">
           <a href="<?php echo $site_url; ?>" class="brand">
-          <img loading="lazy" src="<?php echo $tpl_url; ?>/images/logo-v2.svg" alt="Valuecoders" class="dark-theme-logo" width="260" height="46">
+          <!-- 
+            <img loading="lazy" src="<?php echo $tpl_url; ?>/images/logo-v2.svg" alt="Valuecoders" class="dark-theme-logo" width="260" height="46"> 
+          -->
+          <img loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/logo-light.svg" alt="Valuecoders" class="dark-theme-logo" width="400" height="88">
           </a>
           <ul>
             <li class="menu-item-has-children">
               <?php echo $mainServiceLink; ?> <span class="arrow-btn"></span>
               <div class="menu-mega container">
                 <?php 
-                  if( $mcat == "master" ){
-                  ?>
+                if( $mcat == "master" ){
+                ?>
                 <div class="container landing-menu" id="landing-menu">
                   <div class="dis-flex">
                     <div class="flex-3">
@@ -180,11 +186,11 @@
                         <a href="<?php echo $site_url; ?>business-intelligence-consulting-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/service_icon6.svg" class="menuicon" alt="menuicon"><span class="title">Analytics</span>
                         Business Intelligence, custom dashboard</a> 
                         -->
-                      <a href="<?php echo $site_url; ?>data-engineering"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/data-science.svg" class="menuicon" alt="menuicon"><span class="title">Data Engineering</span>
-                      Accelerate growth with data science</a>
-                      <a href="<?php echo $site_url; ?>ai"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/chat-gpt.svg" class="menuicon" alt="menuicon"><span class="title">AI & ML
-                      </span>
-                      Drive technological innovation</a>
+                        <a href="<?php echo $site_url; ?>data-engineering"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/data-science.svg" class="menuicon" alt="menuicon"><span class="title">Data Engineering</span>
+                        Accelerate growth with data science</a>
+                        <a href="<?php echo $site_url; ?>ai"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/chat-gpt.svg" class="menuicon" alt="menuicon"><span class="title">AI & ML
+                        </span>
+                        Drive technological innovation</a>
                     </div>
                     <div class="flex-3">
                       <span class="head">BY CLIENT TYPE</span>
@@ -294,11 +300,11 @@
                       <span class="head">Expertise</span>
                       <a href="<?php echo $site_url; ?>it-staff-augmentation-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/on-demands-icon2.svg" class="menuicon" alt="menuicon"><span class="title">Staff Augmentation</span>
                       Access top technical resources on-demand</a>
-                      <a href="<?php echo $site_url; ?>hire-developers/hire-software-developers-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/service_icon2.svg" class="menuicon" alt="menuicon"><span class="title">Hire Software Developers</span>
+                      <a href="<?php echo $site_url; ?>hire-developers"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/service_icon2.svg" class="menuicon" alt="menuicon"><span class="title">Hire Developers</span>
                       Work with skilled & dedicated developers</a>
                     </div>
                     <div class="flex-3 bg-light">
-                      <span class="head">Solutions</span>
+                        <span class="head">Solutions</span>
                       <a href="<?php echo $site_url; ?>offshore-software-development-center-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/service_icon7.svg" class="menuicon" alt="menuicon"><span class="title">Offshore Development Center</span>
                       Unleash the power of offshore development</a>
                       <a href="<?php echo $site_url; ?>offshore-software-development-services-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/service_icon8.svg" class="menuicon" alt="menuicon"><span class="title">Offshore Software Development</span>
@@ -316,10 +322,13 @@
                       <span class="head">our expertise</span>
                       <a href="<?php echo $site_url; ?>ecommerce-consulting-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ecommerce-icon2.svg" class="menuicon" alt="menuicon"><span class="title">eCommerce Consulting</span>
                       Your store, our success strategy</a>
+                      
                       <a href="<?php echo $site_url; ?>ecommerce-web-design"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ecommerce-icon4.svg" class="menuicon" alt="menuicon"><span class="title">eCommerce Web Design</span>
                       Designing conversion pathways</a>
+
                       <a href="<?php echo $site_url; ?>ecommerce/maintenance-support"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ecom-icon3.svg" class="menuicon" alt="menuicon"><span class="title">eCommerce Maintenance & Support</span>
                       Elevate every eExperience</a>
+
                       <a href="<?php echo $site_url; ?>ecommerce/implementation-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ecom-icon4.svg" class="menuicon" alt="menuicon"><span class="title">eCommerce Implementation</span>
                       Bring digital storefronts to life</a>
                     </div>
@@ -373,45 +382,50 @@
                 </div>
                 <?php }elseif( $mcat == "devops"){ ?>
                 <!-- DevOps Menu Here -->
-                <!-- 
-                  <div class=" container w-14 landing-menu analytics" id="m-analytics-old-na">
-                     <div class="dis-flex">
-                       <div class="flex-3">
-                         <span class="head">Dashboards & Analytics</span>
-                         <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon1.svg" class="menuicon" alt="menuicon"><span class="title">Big Data Consulting</span>
-                         Precisely analyze large data sets</a>
-                         <a href="<?php echo $site_url; ?>business-intelligence-consulting-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon2.svg" class="menuicon" alt="menuicon"><span class="title">BI Consulting Services</span>
-                         Enhance business decision making</a>
-                       </div>
-                       <div class="flex-3">
-                         <a href="<?php echo $site_url; ?>bi-implementation"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon3.svg" class="menuicon" alt="menuicon"><span class="title">BI Implementation</span>
-                         BI consulting, data management, & reporting</a>
-                         <a href="<?php echo $site_url; ?>microsoft-power-bi-development-services-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon4.svg" class="menuicon" alt="menuicon"><span class="title">Microsoft Power BI</span>
-                         Custom reports and dashboards for clients</a>
-                       </div>
-                       <div class="flex-3">
-                         <span class="head">DevOps</span>
-                         <a href="<?php echo $site_url; ?>cloud-services/devops-consulting"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon5.svg" class="menuicon" alt="menuicon"><span class="title">DevOps Consulting</span>
-                         Leverage collaboration, monitoring, & cloud adoption, etc</a>
-                         <a href="<?php echo $site_url; ?>amazon-aws-partner-company-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon6.svg" class="menuicon" style="left:-5px" alt="menuicon"><span class="title">Amazon AWS</span>
-                         Seamless development and deployment of AWS cloud applications</a>
-                       </div>
-                     </div>
-                   </div>
-                   -->
+               <!-- 
+               <div class=" container w-14 landing-menu analytics" id="m-analytics-old-na">
+                  <div class="dis-flex">
+                    <div class="flex-3">
+                      <span class="head">Dashboards & Analytics</span>
+                      <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon1.svg" class="menuicon" alt="menuicon"><span class="title">Big Data Consulting</span>
+                      Precisely analyze large data sets</a>
+                      <a href="<?php echo $site_url; ?>business-intelligence-consulting-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon2.svg" class="menuicon" alt="menuicon"><span class="title">BI Consulting Services</span>
+                      Enhance business decision making</a>
+                    </div>
+                    <div class="flex-3">
+                      <a href="<?php echo $site_url; ?>bi-implementation"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon3.svg" class="menuicon" alt="menuicon"><span class="title">BI Implementation</span>
+                      BI consulting, data management, & reporting</a>
+                      <a href="<?php echo $site_url; ?>microsoft-power-bi-development-services-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon4.svg" class="menuicon" alt="menuicon"><span class="title">Microsoft Power BI</span>
+                      Custom reports and dashboards for clients</a>
+                    </div>
+                    <div class="flex-3">
+                      <span class="head">DevOps</span>
+                      <a href="<?php echo $site_url; ?>cloud-services/devops-consulting"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon5.svg" class="menuicon" alt="menuicon"><span class="title">DevOps Consulting</span>
+                      Leverage collaboration, monitoring, & cloud adoption, etc</a>
+                      <a href="<?php echo $site_url; ?>amazon-aws-partner-company-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon6.svg" class="menuicon" style="left:-5px" alt="menuicon"><span class="title">Amazon AWS</span>
+                      Seamless development and deployment of AWS cloud applications</a>
+                    </div>
+                  </div>
+                </div>
+                -->
+
                 <div class="container landing-menu devops single-row-ico" id="m-analytics">
                   <div class="dis-flex">
                     <div class="flex-3">
-                      <a href="<?php echo $site_url; ?>cloud-services/strategy-consulting"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cloud-01.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Strategy & Consulting</span>
-                      Strategic Cloud Guidance</a>
-                      <a href="<?php echo $site_url; ?>cloud-services/cloud-migration"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cloud-02.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Migration</span>
-                      Seamless, Swift Cloud Transition</a>
-                      <a href="<?php echo $site_url; ?>cloud-services/devops-automation"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cloud-03.svg" class="menuicon" alt="menuicon"><span class="title">DevOps as a Service</span>
-                      Effortless DevOps Integration</a>
-                      <a href="<?php echo $site_url; ?>cloud-services/cloud-managed-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cloud-04.svg" class="menuicon" alt="menuicon"><span class="title">24x7 Managed Services</span>
-                      Round-the-Clock Seamless Service</a>
-                      <a href="<?php echo $site_url; ?>cloud-services/cloud-finops-service"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cloud-05.svg" class="menuicon" alt="menuicon"><span class="title">Cloud FinOps Services</span>
-                      Cloud Savings Made Simple</a>
+                      <a href="<?php echo $site_url; ?>cloud-services/devops-consulting"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cs-icon-1.svg" class="menuicon" alt="menuicon"><span class="title">DevOps Consulting </span>
+                      Tech-tuned operational excellence</a>
+
+                      <a href="<?php echo $site_url; ?>cloud-services/it-infrastructure-automation"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cs-icon-2.svg" class="menuicon" alt="menuicon"><span class="title">Infrastructure Automation </span>
+                      Automate, advance, achieve</a>
+
+                      <a href="<?php echo $site_url; ?>cloud-services/continuous-integration-continous-delivery"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cs-icon-3.svg" class="menuicon" alt="menuicon"><span class="title">CI/CD </span>
+                      Seamless code, swift deliveries</a>
+
+                      <a href="<?php echo $site_url; ?>cloud-services/microservices-and-containerization"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cs-icon-4.svg" class="menuicon" alt="menuicon"><span class="title">Microservices & Containerization </span>
+                      Crafting agile, efficient systems</a>
+
+                      <a href="<?php echo $site_url; ?>cloud-services/devops-monitoring-logging"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/cs-icon-5.svg" class="menuicon" alt="menuicon"><span class="title">DevOps Monitoring & Logging </span>
+                      Capture every component, deliver better</a>
                     </div>
                   </div>
                 </div>
@@ -476,143 +490,109 @@
                 </div>
                 <?php }elseif( $mcat == "data-science"){ ?>
                 <div class="container w-900 demand-teams" id="m-data-science">
-                  <div class="dis-flex">
-                    <div class="flex-3">
-                      <span class="head">Business Intelligence (BI)</span>
-                      <a href="<?php echo $site_url; ?>business-intelligence-consulting-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-07.svg" class="menuicon" alt="menuicon"><span class="title">BI Consulting</span>
-                      Guiding success with BI insights</a>
-                      <a href="<?php echo $site_url; ?>bi-implementation"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-08.svg" class="menuicon" alt="menuicon"><span class="title">BI Implementation</span>
-                      Implementing BI, driving growth</a>
-                      <a href="<?php echo $site_url; ?>microsoft-power-bi-development-services-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-09.svg" class="menuicon" alt="menuicon"><span class="title">Microsoft Power BI</span>Powering decisions with Microsoft BI</a>
-                      <a href="<?php echo $site_url; ?>data-engineering/bi-reporting-dashboard"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-10.svg" class="menuicon" alt="menuicon"><span class="title">BI Reporting & Dashboard</span>
-                      Visualizing success with BI</a>
-                      <a href="<?php echo $site_url; ?>data-engineering/bi-support-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-11.svg" class="menuicon" alt="menuicon"><span class="title">BI Support and Maintenance</span>
-                      Maintaining success with BI</a>
-                    </div>
-                    <div class="flex-3 bg-light">
-                      <span class="head">Data Science & Analytics</span>
-                      <a href="<?php echo $site_url; ?>data-engineering/data-science-consulting-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-01.svg" class="menuicon" alt="menuicon"><span class="title">Data Science Consulting</span>
-                      Transforming data into insights</a>
-                      <a href="<?php echo $site_url; ?>hire-developers/hire-data-scientists"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-02.svg" class="menuicon" alt="menuicon"><span class="title">Hire Expert Data Scientists</span>
-                      Hire brilliance, harness data power</a>
-                      <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-03.svg" class="menuicon" alt="menuicon"><span class="title">Big Data Solutions</span>
-                      Harnessing power of big data</a>
-                      <a href="<?php echo $site_url; ?>data-engineering/data-analytics-consulting-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-04.svg" class="menuicon" alt="menuicon"><span class="title">Data Analytics Consulting</span>
-                      Transforming data into action</a>
-                      <a href="<?php echo $site_url; ?>data-analytics"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-05.svg" class="menuicon" alt="menuicon"><span class="title">Predictive Analytics Solutions</span>
-                      Forecasting success with data</a>
-                      <a href="<?php echo $site_url; ?>data-engineering/data-visualization-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-06.svg" class="menuicon" alt="menuicon"><span class="title">Data Visualization</span>
-                      Visualizing data, simplifying decisions</a>
-                    </div>
-                  </div>
+                <div class="dis-flex">
+                <div class="flex-3">
+                <span class="head">Business Intelligence (BI)</span>
+                <a href="<?php echo $site_url; ?>business-intelligence-consulting-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-07.svg" class="menuicon" alt="menuicon"><span class="title">BI Consulting</span>
+                Guiding success with BI insights</a>
+                <a href="<?php echo $site_url; ?>bi-implementation"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-08.svg" class="menuicon" alt="menuicon"><span class="title">BI Implementation</span>
+                Implementing BI, driving growth</a>
+                <a href="<?php echo $site_url; ?>microsoft-power-bi-development-services-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-09.svg" class="menuicon" alt="menuicon"><span class="title">Microsoft Power BI</span>Powering decisions with Microsoft BI</a>
+                <a href="<?php echo $site_url; ?>data-engineering/bi-reporting-dashboard"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-10.svg" class="menuicon" alt="menuicon"><span class="title">BI Reporting & Dashboard</span>
+                Visualizing success with BI</a>
+                <a href="<?php echo $site_url; ?>data-engineering/bi-support-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-11.svg" class="menuicon" alt="menuicon"><span class="title">BI Support and Maintenance</span>
+                Maintaining success with BI</a>
+                </div>
+                <div class="flex-3 bg-light">
+                <span class="head">Data Science & Analytics</span>
+                <a href="<?php echo $site_url; ?>data-engineering/data-science-consulting-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-01.svg" class="menuicon" alt="menuicon"><span class="title">Data Science Consulting</span>
+                Transforming data into insights</a>
+                <a href="<?php echo $site_url; ?>hire-developers/hire-data-scientists"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-02.svg" class="menuicon" alt="menuicon"><span class="title">Hire Expert Data Scientists</span>
+                Hire brilliance, harness data power</a>
+                <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-03.svg" class="menuicon" alt="menuicon"><span class="title">Big Data Solutions</span>
+                Harnessing power of big data</a>
+                <a href="<?php echo $site_url; ?>data-engineering/data-analytics-consulting-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-04.svg" class="menuicon" alt="menuicon"><span class="title">Data Analytics Consulting</span>
+                Transforming data into action</a>
+                <a href="<?php echo $site_url; ?>data-analytics"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-05.svg" class="menuicon" alt="menuicon"><span class="title">Predictive Analytics Solutions</span>
+                Forecasting success with data</a>
+                <a href="<?php echo $site_url; ?>data-engineering/data-visualization-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/de-06.svg" class="menuicon" alt="menuicon"><span class="title">Data Visualization</span>
+                Visualizing data, simplifying decisions</a>
+                </div>
+                
+                </div>
                 </div>
                 <?php }elseif( $mcat == "ai-ml"){ ?>
-                <div class=" container w-100 landing-menu artificial-intell" id="artificial-intelligence">
-                  <div class="dis-flex">
-                    <div class="flex-4">
-                      <span class="head">Artificial Intelligence (AI)</span>
-                      <a href="<?php echo $site_url; ?>ai/application-development-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon01.svg" class="menuicon" alt="menuicon"><span class="title">AI Development</span>
-                      Advancing intelligent solutions</a>
-                      <a href="<?php echo $site_url; ?>ai/consulting-services-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon02.svg" class="menuicon" alt="menuicon"><span class="title">AI Consulting</span>
-                      Navigating AI's future</a>
-                      <a href="<?php echo $site_url; ?>chatbot-development-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon03.svg" class="menuicon" alt="menuicon"><span class="title">AI Chatbot Development</span>
-                      Future-ready chatbots</a>
-                      <a href="<?php echo $site_url; ?>ai/mobile-app-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon04.svg" class="menuicon" alt="menuicon"><span class="title">AI-Powered App Development</span>
-                      Innovative AI mobile apps</a>
-                      <a href="<?php echo $site_url; ?>ai" class="view-more">View More</a>
-                    </div>
-                    <div class="flex-4">
-                      <span class="head">ML &amp; Advanced Analytics</span>
-                      <a href="<?php echo $site_url; ?>machine-learning-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon05.svg" class="menuicon" alt="menuicon"><span class="title">ML Development</span>
-                      Harnessing Data Power</a>
-                      <a href="<?php echo $site_url; ?>computer-vision-software-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon07.svg" class="menuicon" alt="menuicon"><span class="title">Computer Vision Solutions</span>
-                      Transforming visual data</a>
-                      <a href="<?php echo $site_url; ?>machine-learning/mlops-consulting-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon08.svg" class="menuicon" alt="menuicon"><span class="title">MLOps Consulting</span>
-                      ML operations optimized</a>
-                      <a href="<?php echo $site_url; ?>rpa-development-services-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon08.svg" class="menuicon" alt="menuicon"><span class="title">RPA Services</span>
-                      Efficient RPA automation</a>
-                      <a href="<?php echo $site_url; ?>machine-learning-solutions" class="view-more">View More</a>
-                    </div>
-                    <div class="flex-4">
-                      <span class="head">Generative AI</span>
-                      <a href="<?php echo $site_url; ?>ai/generative-ai-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon09.svg" class="menuicon" alt="menuicon"><span class="title">Generative AI Development</span>
-                      Creating AI possibilities</a>
-                      <a href="<?php echo $site_url; ?>ai/generative-ai-integration-service"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon10.svg" class="menuicon" alt="menuicon"><span class="title">Generative AI Integration</span>
-                      Elevate with generative AI</a>
-                      <a href="<?php echo $site_url; ?>ai/generative-ai-consulting-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon11.svg" class="menuicon" alt="menuicon"><span class="title">Generative AI Consulting</span>
-                      Guided generative growth</a>
-                      <a href="<?php echo $site_url; ?>ai/stable-diffusion-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon12.svg" class="menuicon" alt="menuicon"><span class="title">Stable Diffusion Development</span>
-                      Stable AI, peak performance</a>
-                      <a href="<?php echo $site_url; ?>ai/generative-ai-services" class="view-more">View More</a>
-                    </div>
-                    <div class="flex-4">
-                      <span class="head">Expertise</span>
-                      <a href="<?php echo $site_url; ?>ai/large-language-model"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-01.svg" class="menuicon" alt="menuicon"><span class="title">LLM Services</span>
-                      Advanced language model solutions</a>
-                      <a href="<?php echo $site_url; ?>ai/adaptive-ai-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-02.svg" class="menuicon" alt="menuicon"><span class="title">Adaptive AI Development</span>
-                      Custom, adaptive AI solutions</a>
-                      <a href="<?php echo $site_url; ?>chatgpt-solutions"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-03.svg" class="menuicon" alt="menuicon"><span class="title">Custom GPT Solutions</span>
-                      Personalized GPT technologies</a>
-                      <a href="<?php echo $site_url; ?>ai/transformer-model-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-04.svg" class="menuicon" alt="menuicon"><span class="title">Transformer Model</span>
-                      Cutting-edge transformer tech</a>
-                      <a href="<?php echo $site_url; ?>chatgpt-solutions" class="view-more" style="opacity:0;">View More</a>
-                    </div>
-                  </div>
-                </div>
+                  <div class=" container w-100 landing-menu artificial-intell" id="artificial-intelligence">
+         <div class="dis-flex">
+            <div class="flex-4">
+               <span class="head">Artificial Intelligence (AI)</span>
+               <a href="<?php echo $site_url; ?>ai/application-development-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon01.svg" class="menuicon" alt="menuicon"><span class="title">AI Development</span>
+               Advancing intelligent solutions</a>
+               <a href="<?php echo $site_url; ?>ai/consulting-services-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon02.svg" class="menuicon" alt="menuicon"><span class="title">AI Consulting</span>
+               Navigating AI's future</a>
+               <a href="<?php echo $site_url; ?>chatbot-development-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon03.svg" class="menuicon" alt="menuicon"><span class="title">AI Chatbot Development</span>
+               Future-ready chatbots</a>
+               <a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon04.svg" class="menuicon" alt="menuicon"><span class="title">Hire AI Engineers</span>
+               AI talent, on-demand</a>
+               <a href="<?php echo $site_url; ?>ai" class="view-more">View More</a>
+            </div>
+            <div class="flex-4">
+               <span class="head">ML &amp; Advanced Analytics</span>
+               <a href="<?php echo $site_url; ?>machine-learning-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon05.svg" class="menuicon" alt="menuicon"><span class="title">ML Development</span>
+               Harnessing Data Power</a>
+               <a href="<?php echo $site_url; ?>machine-learning/embeddings-as-a-service"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon06.svg" class="menuicon" alt="menuicon"><span class="title">Embeddings as a Service</span>
+               Embed, enhance, excel</a>
+               <a href="<?php echo $site_url; ?>computer-vision-software-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon07.svg" class="menuicon" alt="menuicon"><span class="title">Computer Vision Solutions</span>
+               Transforming visual data</a>
+               <a href="<?php echo $site_url; ?>machine-learning/mlops-consulting-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon08.svg" class="menuicon" alt="menuicon"><span class="title">MLOps Consulting</span>
+               ML operations optimized</a>
+               <a href="<?php echo $site_url; ?>machine-learning-solutions" class="view-more">View More</a>
+            </div>
+            <div class="flex-4">
+               <span class="head">Generative AI</span>
+               <a href="<?php echo $site_url; ?>ai/generative-ai-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon09.svg" class="menuicon" alt="menuicon"><span class="title">Generative AI Development</span>
+               Creating AI possibilities</a>
+               <a href="<?php echo $site_url; ?>ai/generative-ai-integration-service"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon10.svg" class="menuicon" alt="menuicon"><span class="title">Generative AI Integration</span>
+               Elevate with generative AI</a>
+               <a href="<?php echo $site_url; ?>ai/generative-ai-consulting-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon11.svg" class="menuicon" alt="menuicon"><span class="title">Generative AI Consulting</span>
+               Guided generative growth</a>
+               <a href="<?php echo $site_url; ?>ai/adaptive-ai-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon12.svg" class="menuicon" alt="menuicon"><span class="title">Adaptive AI Development</span>
+               Innovate, adapt, advance</a>
+               <a href="<?php echo $site_url; ?>ai/generative-ai-services" class="view-more">View More</a>
+            </div>
+            <div class="flex-4">
+               <span class="head">ChatGPT Solutions</span>
+               <a href="<?php echo $site_url; ?>ai/chatgpt-solutions/finance"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon13.svg" class="menuicon" alt="menuicon"><span class="title">ChatGPT for Finance</span>
+               AI-Driven financial insights</a>
+               <a href="<?php echo $site_url; ?>ai/chatgpt-solutions/manufacturing"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon14.svg" class="menuicon" alt="menuicon"><span class="title">ChatGPT for Manufacturing</span>
+               Optimize and grow with AI</a>
+               <a href="<?php echo $site_url; ?>ai/chatgpt-solutions/automotive"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon15.svg" class="menuicon" alt="menuicon"><span class="title">ChatGPT for Automotive</span>
+               Leverage AI for excellence</a>
+               <a href="<?php echo $site_url; ?>ai/chatgpt-solutions/hospitality"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/ai-icon16.svg" class="menuicon" alt="menuicon"><span class="title">ChatGPT for Hospitality</span>
+               Enhance customer experience</a>
+               <a href="<?php echo $site_url; ?>chatgpt-solutions" class="view-more">View More</a>
+            </div>
+         </div>
+      </div>
                 <?php } ?>  
               </div>
               <!-- //Mega-Menu -->
             </li>
-            <?php if( $mcat === 'ai-ml' ) : ?>
-            <li class="menu-item-has-children for-company" id="ai-ml-technologies">
-              <a href="javascript:void(0)">Industries</a> <span class="arrow-btn"></span>
-              <div class="menu-mega container">
-                <div class="container w-900 demand-teams">
-                  <div class="dis-flex">
-                    <div class="flex-3">
-                      <!--<span class="head">INDUSTRIES</span>-->
-                      <a href="<?php echo $site_url; ?>ai/fintech"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/aisol-01.svg" class="menuicon" alt="menuicon"><span class="title">AI/ML for Finance</span>
-                      AI revolution in finance</a>
-                      <a href="<?php echo $site_url; ?>ai/manufacturing"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/aisol-02.svg" class="menuicon" alt="menuicon"><span class="title">AI/ML for Manufacturing</span>
-                      AI-enhanced manufacturing processes</a>
-                      <a href="<?php echo $site_url; ?>ai/automotive"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/aisol-03.svg" class="menuicon" alt="menuicon"><span class="title">AI/ML for Automotive</span>
-                      AI-driven automotive innovations</a>
-                      <a href="<?php echo $site_url; ?>ai/hospitality"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/aisol-04.svg" class="menuicon" alt="menuicon"><span class="title">AI/ML for Hospitality</span>
-                      AI hospitality enhancements</a>
-                      <a href="<?php echo $site_url; ?>ai/healthcare"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/aisol-05.svg" class="menuicon" alt="menuicon"><span class="title">AI/ML for Healthcare</span>
-                      Advanced AI healthcare solutions</a>
-                    </div>
-                    <div class="flex-3 bg-light">
-                      <!--<span class="head">Data Science &amp; Analytics</span>-->
-                      <a href="<?php echo $site_url; ?>ai/it"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/aisol-06.svg" class="menuicon" alt="menuicon"><span class="title">AI/ML for IT</span>
-                      AI/ML IT innovations</a>
-                      <a href="<?php echo $site_url; ?>ai/logistics"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/aisol-07.svg" class="menuicon" alt="menuicon"><span class="title">AI/ML for Logistics</span>
-                      AI logistics optimization</a>
-                      <a href="<?php echo $site_url; ?>ai/legal"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/aisol-08.svg" class="menuicon" alt="menuicon"><span class="title">AI/ML for Legal Services</span>
-                      AI modernizing legal services</a>
-                      <a href="<?php echo $site_url; ?>ai/education"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/aisol-09.svg" class="menuicon" alt="menuicon"><span class="title">AI/ML for Education</span>
-                      Transformative educational AI</a>
-                      <a href="<?php echo $site_url; ?>ai/marketing-advertising"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/aisol-10.svg" class="menuicon" alt="menuicon"><span class="title">AI/ML for Marketing & Advertising</span>
-                      AI-driven marketing strategies</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <?php endif; ?>
+
             <?php if( $mcat === 'ai-ml' ) : ?>
             <li class="menu-item-has-children small-menu for-company" id="ai-ml-technologies">
-              <a href="javascript:void(0)">Hire</a> <span class="arrow-btn"></span>
+              <a href="javascript:void(0)">Expertise</a> <span class="arrow-btn"></span>
               <div class="small-menu-inner menu-mega ai-techmenu">
                 <div class="dis-flex">
                   <div class="width-100 for-padding hiremenu header-menu active" id="b0-aiml">
                     <div class="dis-flex last-list">
-                      <div class="width-100 last-list">
-                        <a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers">AI Engineers</a>
-                        <a href="<?php echo $site_url; ?>hire-developers/hire-llm-engineers">LLM Engineers</a>
-                        <a href="<?php echo $site_url; ?>hire-developers/hire-gpt-expert">GPT Experts</a>
-                        <a href="<?php echo $site_url; ?>hire-developers/hire-data-scientists">Data Scientists</a>
-                       <a href="<?php echo $site_url; ?>hire-developers/hire-ml-engineers">ML Engineers</a>
+                      <div class="width-100 last-list">                        
+                        <a href="<?php echo $site_url; ?>hire-developers/hire-action-transformer-developers">Action Transformer</a>
+                        <a href="<?php echo $site_url; ?>hire-developers/hire-rpa-developers">Robotic Process Automation</a>
+                        <a href="<?php echo $site_url; ?>ai/midjourney-development-services">Midjourney</a>
+                        <a href="<?php echo $site_url; ?>hire-developers/hire-prompt-engineers">Prompt Engineers</a>
+                        <a href="<?php echo $site_url; ?>ai/transformer-model-development-services">Transformer Model</a>
+                        <a href="<?php echo $site_url; ?>ai/large-language-model-development">Large Language Model</a>
                       </div>
                     </div>
                   </div>
@@ -620,29 +600,31 @@
               </div>
             </li>
             <?php endif; ?>
+
             <?php if( $mcat === "devops" ) : ?>
             <li class="menu-item-has-children">
-              <a href="https://www.valuecoders.com/cloud-services/devops-consulting">Technologies</a> <span class="arrow-btn"></span>
-              <div class="menu-mega container">
-                <div class="container landing-menu devops" id="m-cloud_services">
-                  <div class="dis-flex">
-                    <div class="flex-3">
-                      <a href="<?php echo $site_url; ?>cloud-services/amazon-cloud"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon6.svg" class="menuicon" alt="menuicon" style="left:-5px"><span class="title">Amazon AWS</span>
-                      </a>
-                      <a href="<?php echo $site_url; ?>cloud-services/azure-cloud"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devops-02.svg" class="menuicon" alt="menuicon"><span class="title">Azure</span>
-                      </a>
-                      <a href="<?php echo $site_url; ?>cloud-services/google-cloud"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/gcloud.svg" class="menuicon" alt="menuicon"><span class="title">Google Cloud</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <a href="https://www.valuecoders.com/cloud-services/devops-consulting">Technologies</a> <span class="arrow-btn"></span>
+            <div class="menu-mega container">
+
+
+            <div class="container landing-menu devops" id="m-cloud_services">
+            <div class="dis-flex">
+            <div class="flex-3">
+            <a href="<?php echo $site_url; ?>amazon-aws-partner-company-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon6.svg" class="menuicon" alt="menuicon" style="left:-5px"><span class="title">Amazon AWS</span>
+            </a>
+            <a href="<?php echo $site_url; ?>microsoft-azure-partner-company-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/devops-02.svg" class="menuicon" alt="menuicon"><span class="title">Azure</span>
+            </a>
+            </div>
+            </div>
+            </div>
+            </div>
             </li>
             <?php endif; ?>
+
             <?php if( $mcat === "demand-teams" ) : ?>
             <!-- Section Added By Nitin Baluni -->
             <li class="menu-item-has-children">
-              <a href="<?php echo $site_url; ?>hire-developers">Hire Developers</a> <span class="arrow-btn"></span>
+              <a href="<?php echo $site_url; ?>hire-developers">Technologies</a> <span class="arrow-btn"></span>
               <div class="menu-mega container">
                 <div class="container">
                   <div class="dis-flex">
@@ -780,10 +762,11 @@
             </li>
             <!-- // Section Added By Nitin Baluni ENDS -->
             <?php endif; ?>
+
             <?php 
-              // Hide Solution Menu Is Page Catrgoty is : eCommerce
-              if( !in_array( $mcat, ['ecommerce', 'demand-teams', 'agencies', 'startups', 'devops', 'data-science', 'ai-ml'] ) ) :
-              ?>
+            // Hide Solution Menu Is Page Catrgoty is : eCommerce
+            if( !in_array( $mcat, ['ecommerce', 'demand-teams', 'agencies', 'startups', 'devops', 'data-science', 'ai-ml'] ) ) :
+            ?>
             <!-- Solutions -->
             <li class="menu-item-has-children">
               <a href="javascript:void(0)">Solutions</a> <span class="arrow-btn"></span>
@@ -820,6 +803,7 @@
                 <?php }else{ ?>  
                 <div class="container">
                   <div class="dis-flex">
+                    
                     <div class="width-55 detail-list without-icon">
                       <span class="head">Solutions</span>
                       <div class="dis-flex">
@@ -851,6 +835,7 @@
                           <a href="<?php echo $site_url; ?>erp"><span class="title">Enterprise Resource Planning</span>Enhance enterprise efficiency</a>
                           <a href="<?php echo $site_url; ?>document-management-services"><span class="title">Document Management</span>
                           Digitize documents seamlessly</a>
+
                           <a href="<?php echo $site_url; ?>rpa-development-services-company"><span class="title">Robotic Process Automation</span>
                           Automate, Simplify, Excel</a>
                         </div>
@@ -874,6 +859,7 @@
                           Next-gen manufacturing mastery</a>
                           <a href="<?php echo $site_url; ?>industries/telecommunications"><span class="title">Telecommunications</span>
                           Connect digital dimensions</a>
+                          
                         </div>
                         <div class="flex-2">
                           <a href="<?php echo $site_url; ?>industries/education-elearning-software-development"><span class="title">Education & eLearning</span>
@@ -885,7 +871,9 @@
                           <a href="<?php echo $site_url; ?>industries/logistics-transportation-software-development"><span class="title">Logistics & Transportation</span>
                           Efficient logistics & fleet management</a>
                           <a href="<?php echo $site_url; ?>industries/media-software-development-services"><span class="title">Media & Entertainment</span>Media & OTT apps, ERP, & more</a>
+
                           <a href="<?php echo $site_url; ?>industries/professional-services-software-development"><span class="title">Professional Services</span>Craft client success</a>
+
                           <a href="<?php echo $site_url; ?>industries/oil-gas"><span class="title">Oil & Gas</span>Innovate energy engagements</a>
                         </div>
                       </div>
@@ -895,8 +883,11 @@
                 <?php } ?>
               </div>
             </li>
+
+            
+
             <?php 
-              if( !in_array($mcat, ['devops', 'demand-teams', 'qa-testing', 'enterprises', 'data-science', 'ai-ml']) ) : ?>
+            if( !in_array($mcat, ['devops', 'demand-teams', 'qa-testing', 'enterprises', 'data-science', 'ai-ml']) ) : ?>
             <!-- Technology -->
             <li class="menu-item-has-children">
               <a href="javascript:void(0)">Technologies</a> <span class="arrow-btn"></span>
@@ -1011,8 +1002,15 @@
             </li>
             <?php endif; ?>
             <li class="cta-wrap">
-              <div class="btn-sec">
-                <a href="<?php echo $site_url; ?>contact" class="btn rounded"><span class="text-white">Get Started</span></a>
+              <div class="cta-btn">
+                <a href="<?php echo $site_url; ?>contact" id="cta">
+                Contact Us
+                <span class="arrow-wrap">
+                <span class="arrow primera"></span>
+                <span class="arrow segunda next"></span>
+                <span class="arrow last"></span>
+                </span>
+                </a>
               </div>
             </li>
           </ul>

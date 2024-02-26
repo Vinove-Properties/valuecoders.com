@@ -4,7 +4,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link rel="icon" href="<?php bloginfo('template_url'); ?>/images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="<?php bloginfo('template_url'); ?>/dev-img/favicons.svg" type="image/x-icon">
 	<?php 
 	if( !wp_is_mobile() ) : 
   ?>
