@@ -385,7 +385,7 @@ if( isset( $json['event'] ) && $json['event'] == "invitee.created" ){
     'Last_Name'     => (!empty($lastName)) ? $lastName : "NA",
     'Email'         => $json['payload']['email'],
     'Country'       => $country,
-    'Country1'      => $country,
+    //'Country1'      => $country,
     'Phone'         => $phone,
     'Lead_Source'   => "Calendly Direct",
     'Lead_Status'   => "Not Contacted Yet",
