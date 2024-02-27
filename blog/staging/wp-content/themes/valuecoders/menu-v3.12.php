@@ -81,11 +81,10 @@
         <a href="<?php echo $site_url; ?>" class="brand">
           <div class="large">
             <?php 
-            //if( is_single() ){
+            if( is_single() ){
             echo '<img loading="lazy" src="'.get_bloginfo('template_url').'/dev-img/lg-dark.svg" alt="Valuecoders" class="dark-theme-logo-lg" width="400" height="88">';  
-            //}else{
+            }
             echo '<img loading="lazy" src="'.$tpl_url.'/dev-img/logo-light.svg" alt="Valuecoders" class="dark-theme-logo" width="400" height="88">';
-            //}
             ?>
           </div>
           <div class="small">
