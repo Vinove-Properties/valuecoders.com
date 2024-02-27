@@ -15,9 +15,9 @@
       }
       return $is_mobile;
   }
-  $is_staging = ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'v2wp' ) !== false) )  ?  true : false;
+  $is_staging = ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'staging' ) !== false) )  ?  true : false;
   if( $is_staging ){
-  $site_url   = 'https://www.valuecoders.com/v2wp/';
+  $site_url   = 'https://www.valuecoders.com/staging/';
   }else{
   $site_url   = 'https://www.valuecoders.com/';
   }  
@@ -80,13 +80,18 @@
       <div class="header-item-left">
         <a href="<?php echo $site_url; ?>" class="brand">
           <div class="large">
-            <!-- <img loading="lazy" src="<?php echo $tpl_url; ?>/images/logo-v2.svg" alt="Valuecoders" class="dark-theme-logo" width="277" height="49"> -->
-            <img loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/logo-light.svg" alt="Valuecoders" class="dark-theme-logo" width="400" height="88">
+            <?php 
+            //if( is_single() ){
+            echo '<img loading="lazy" src="'.get_bloginfo('template_url').'/dev-img/lg-dark.svg" alt="Valuecoders" class="dark-theme-logo-lg" width="400" height="88">';  
+            //}else{
+            echo '<img loading="lazy" src="'.$tpl_url.'/dev-img/logo-light.svg" alt="Valuecoders" class="dark-theme-logo" width="400" height="88">';
+            //}
+            ?>
           </div>
           <div class="small">
             <!-- <img loading="lazy" src="<?php echo $tpl_url; ?>/images/vc-logo-dark.png" alt="Valuecoders" 
               class="dark-theme-logo sm" width="66" height="66"> -->
-              <img loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/logo-small.svg" alt="Valuecoders" class="dark-theme-logo sm" width="80" height="80">
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/logo-small.svg" alt="Valuecoders" class="dark-theme-logo-lg sm" width="80" height="80">
           </div>
         </a>
 

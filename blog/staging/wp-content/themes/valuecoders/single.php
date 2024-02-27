@@ -37,6 +37,16 @@
     global $post;  
     $author_id    = $post->post_author; 
     $commentCount = ( get_comments_number($post->ID) > 1 ) ? get_comments_number($post->ID).' Comments' : get_comments_number($post->ID).' Comment';
+    $authThumbnail    = get_template_directory_uri().'/assets/images/author.png';
+    $authorThumbnail  = get_field( 'auth-thumb', 'user_'.$author_id );
+    if( $authorThumbnail && isset( $authorThumbnail['url'] ) ){
+      $authThumbnail = $authorThumbnail['url'];
+    }else{  
+      $user_avtar   = get_user_meta( $author_id, 'wp_user_avatars', true );
+      if( $user_avtar ){
+        $authThumbnail = isset( $user_avtar['full'] ) ? $user_avtar['full'] : get_bloginfo('url').'/dev-img/author-profile.png';
+      }
+    }
     echo '<div class="top-header-section">';
     get_template_part('inc/search', 'popup');
     //<li class="posted-on">Published <span class="dt">'.get_the_time('F j, Y').'</span></li>
@@ -45,7 +55,9 @@
                       <h1>'.get_the_title().'</h1>
                       <div class="entery-wrap">
                       <div class="meta-wrap">
-                      <div class="author-img"><img loading="lazy" src="'.get_template_directory_uri().'/assets/images/author.png" width="52" height="52" alt="Pixelcrayons"/></div>
+                      <div class="author-img">
+                        <img loading="lazy" src="'.$authThumbnail.'" width="52" height="52" alt="'.get_the_author().'"/>
+                      </div>
                       <ul class="entry-meta">
     <li class="meta author vcard">
     <span class="author-name fn">Written by '.get_the_author_posts_link().'</span>

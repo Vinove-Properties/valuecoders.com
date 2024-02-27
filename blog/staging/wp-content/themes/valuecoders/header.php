@@ -7,7 +7,13 @@
     
     <?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <?php endif; ?>    
+    <?php endif; ?>
+    <style type="text/css">
+    body.single-post .header-two.header-bg.sc-up .dark-theme-logo-lg,
+    body.single-post .header-two:hover .dark-theme-logo-lg,  
+    body.single-post .dark-theme-logo{display:none;}  
+
+    </style>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
