@@ -12,7 +12,11 @@
     body.single-post .header-two.header-bg.sc-up .dark-theme-logo-lg,
     body.single-post .header-two:hover .dark-theme-logo-lg,  
     body.single-post .dark-theme-logo{display:none;}  
-
+    body.single-post .author-img img,
+    .auth-image img{border-radius:50%; }
+    @media only screen and (max-width: 1139px){
+    body.single-post .header-two .dark-theme-logo-lg{display:none;}
+    }
     </style>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
