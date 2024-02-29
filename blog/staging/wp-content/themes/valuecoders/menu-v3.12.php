@@ -1005,18 +1005,12 @@
               </div>
             </li>
             <?php endif; ?>
+         
             <li class="cta-wrap">
-              <div class="cta-btn">
-                <a href="<?php echo $site_url; ?>contact" id="cta">
-                Contact Us
-                <span class="arrow-wrap">
-                <span class="arrow primera"></span>
-                <span class="arrow segunda next"></span>
-                <span class="arrow last"></span>
-                </span>
-                </a>
+            <div class="btn-sec">
+             <a href="<?php echo $site_url; ?>contact" class="btn rounded"><span class="text-white">Get Started</span></a>
               </div>
-            </li>
+                </li>
           </ul>
         </nav>
       </div>
