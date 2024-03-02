@@ -1,9 +1,9 @@
 <?php
-define( 'WP_CACHE', true ); // Added by WP Rocket
+//define( 'WP_CACHE', true ); // Added by WP Rocket
 
-define( 'DB_NAME', 'valuecoders-com-landing-prod-db' );
-define( 'DB_USER', 'valuecoders-com-landing-prod-db-user' );
-define( 'DB_PASSWORD', '9IhyLdaluehLtJA' );
+define( 'DB_NAME', 'valuecoders-lp' );
+define( 'DB_USER', 'phpmyadmin' );
+define( 'DB_PASSWORD', 'root' );
 define( 'DB_HOST', 'localhost' );
 define( 'DB_CHARSET', 'utf8' );
 define( 'DB_COLLATE', '' );
@@ -23,8 +23,8 @@ define( 'WP_DEBUG', false );
 define( 'WP_DEBUG_LOG', true );
 define( 'FS_METHOD', 'direct' );
 define( 'WP_POST_REVISIONS', false );
-define( 'WP_HOME', 'https://www.valuecoders.com/l/' );
-define( 'WP_SITEURL', 'https://www.valuecoders.com/l/' );
+define( 'WP_HOME', 'http://localhost/valuecoders.com/l/' );
+define( 'WP_SITEURL', 'http://localhost/valuecoders.com/l/' );
 define( 'WP_MEMORY_LIMIT', '256M' );
 
 if ( ! defined( 'ABSPATH' ) ) {

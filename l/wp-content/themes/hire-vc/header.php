@@ -115,8 +115,8 @@ $showOn = (isset($isMeTpl['show-on']) && !empty($isMeTpl['show-on'])) ? $isMeTpl
 ?>
 <div class="dis-flex items-center">
 <div class="head-right">
-<img id="do-load" loading="lazy" src="https://www.valuecoders.com/wp-content/themes/valuecoders/images/logo.svg"
-  alt="ValueCoders" width="342" height="52">
+<img id="do-load" loading="lazy" src="https://www.valuecoders.com/wp-content/themes/valuecoders/dev-img/logo-light.svg"
+  alt="ValueCoders" width="300" height="88">
 </div>
 <div class="head-left <?php echo $showOn; ?>">
 <a class="phonedesk" href="tel:<?php echo $isMeTpl['phone'] ?>">
@@ -128,15 +128,16 @@ $showOn = (isset($isMeTpl['show-on']) && !empty($isMeTpl['show-on'])) ? $isMeTpl
 </div>
 </div>
 <?php }else{ ?>
-<img loading="lazy" src="https://www.valuecoders.com/wp-content/themes/valuecoders/images/logo.svg" alt="ValueCoders" width="342" height="52">
+<img loading="lazy" src="https://www.valuecoders.com/wp-content/themes/valuecoders/dev-img/logo-light.svg" alt="ValueCoders" 
+width="300" height="88">
 <?php } ?>
 </div>
 </header>
 <?php }elseif( is_page_template( 'page-templates/tpl-version4.12.php' ) ){ ?>
 <header>
    <div class="container">
-     <img id="do-load" loading="lazy" src="https://www.valuecoders.com/wp-content/themes/valuecoders/images/logo.svg"
-       alt="ValueCoders" width="342" height="52">
+     <img id="do-load" loading="lazy" src="https://www.valuecoders.com/wp-content/themes/valuecoders/dev-img/logo-light.svg"
+       alt="ValueCoders" width="300" height="88">
    </div>
  </header>
 <?php 
@@ -174,7 +175,8 @@ $showOn = (isset($isMeTpl['show-on']) && !empty($isMeTpl['show-on'])) ? $isMeTpl
         <div class="dis-flex items-center">
           <div class="head-right">
             <img id="do-load" loading="lazy" 
-            src="https://www.valuecoders.com/wp-content/themes/valuecoders/images/logo.svg" alt="ValueCoders" width="342" height="52">
+            src="https://www.valuecoders.com/wp-content/themes/valuecoders/dev-img/logo-light.svg" alt="ValueCoders" 
+            width="300" height="88">
           </div>
           
           <?php 
