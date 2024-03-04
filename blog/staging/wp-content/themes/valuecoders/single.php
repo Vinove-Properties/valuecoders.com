@@ -55,7 +55,6 @@
     echo '<div class="single-post-container">
                   <div class="top-header-banner">
                       <h1>'.get_the_title().'</h1>
-                      <p class="bt-text">Monetizing success on Android remains an elusive dream for most, especially indie devs. Monetizing success on Android remains an elusive dream for most, especially indie devs. </p>
                       '.$btText.'
                       <div class="entery-wrap">
                       <div class="meta-wrap">
