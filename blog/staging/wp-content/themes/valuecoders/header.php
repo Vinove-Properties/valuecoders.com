@@ -17,6 +17,12 @@
     @media only screen and (max-width: 1139px){
     body.single-post .header-two .dark-theme-logo-lg{display:none;}
     }
+    body.single-post .banner-section{padding:120px 0 0 0;}
+    body.single-post .banner-section .top-header-section{ padding-top:20px }
+    body.single-post .vcb-col-right p:first-child img{margin-top:0!important;}
+    body.single-post .detail-page{ padding-top: 0; }
+    body.single-post .second-row{margin-top: 50px;}
+    body.single-post .bt-text{text-align: left; margin-top:-10px;}
     </style>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

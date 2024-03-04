@@ -47,12 +47,16 @@
         $authThumbnail = isset( $user_avtar['full'] ) ? $user_avtar['full'] : get_bloginfo('url').'/dev-img/author-profile.png';
       }
     }
+    $btText = get_field('bt-text');
+    $btText = (!empty($btText)) ? '<p class="bt-text">'.$btText.'</p>' : '';
     echo '<div class="top-header-section">';
     get_template_part('inc/search', 'popup');
     //<li class="posted-on">Published <span class="dt">'.get_the_time('F j, Y').'</span></li>
     echo '<div class="single-post-container">
                   <div class="top-header-banner">
                       <h1>'.get_the_title().'</h1>
+                      <p class="bt-text">Monetizing success on Android remains an elusive dream for most, especially indie devs. Monetizing success on Android remains an elusive dream for most, especially indie devs. </p>
+                      '.$btText.'
                       <div class="entery-wrap">
                       <div class="meta-wrap">
                       <div class="author-img">
@@ -83,6 +87,7 @@
     } 
     ?>
 </section>
+<?php /* ?>
 <div class="detail-image">
   <div class="container">
     <div class="detail-thumb">
@@ -90,6 +95,7 @@
     </div>
   </div>
 </div>
+<?php */ ?>
 <main id="primary" class="site-main  detail-page">
   <?php
     global $post;
