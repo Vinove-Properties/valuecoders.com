@@ -142,7 +142,7 @@ function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $email
         $mail->Port         = 465;
         $mail->SMTPAuth     = true;
         $mail->Username     = 'do-not-reply@valuecoders.com';
-        $mail->Password     = 'ejgscotvrntggvap';
+        $mail->Password     = 'pdtnweysvgovhemg';
         //Recipients
         //= "" $emailFrom = "sales@valuecoders.com", $replyTo = "do-not-reply@mail.valuecoders.com",
         if( $type == "lead" ){

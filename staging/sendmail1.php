@@ -468,7 +468,7 @@ function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $email
         $mail->Port         = 465;
         $mail->SMTPAuth     = true;
         $mail->Username     = 'do-not-reply@valuecoders.com';
-        $mail->Password     = 'ejgscotvrntggvap';
+        $mail->Password     = 'pdtnweysvgovhemg';
 
         if( $type == "lead" ){
             $mail->setFrom( $userEmail, $cname );
