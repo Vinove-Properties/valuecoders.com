@@ -220,7 +220,7 @@ function ppcdupLeadNote( $varAccessToken, $lead_id, $requirement ){
     if( !$err ){
         $response   = json_decode( $response );
         $file       = fopen( IH_LOGFILE, "a" );
-        fwrite( $file, PHP_EOL."Duplicate Lead Notes : ".print_r( $response, 1 ) );
+        fwrite( $file, PHP_EOL."Duplicate Lead Notes Landing Page : ".print_r( $response, 1 ) );
         fclose( $file );
     }else{
         $file       = fopen( IH_LOGFILE, "a" );
