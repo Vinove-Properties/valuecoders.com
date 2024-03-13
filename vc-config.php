@@ -1,4 +1,5 @@
 <?php 
+define('CL_LOGFILE', '/home/valuecoders-com/public_html/log/crm.log');
 function hiddenBoatField( $type = "list" ){
     $botFields = [ 'first_name', 'last_name', 'email_user', 'user_dob', 'user_age', 'user_gender', 'user_phone', 'user_location', 
     'user_address', 'middle_name', 'nationality', 'city', 'state', 'zip', 'landmark', 'department', 'postal_code', 'hobbies', 
@@ -12,6 +13,49 @@ function hiddenBoatField( $type = "list" ){
     <label class="iemail-input" for="'.$botFields[$randKey].'"></label><input type="text" 
     class="ht-input-field iemail-input" autocomplete="off" placeholder="Your '.$botFields[$randKey].' here" 
     name="'.$botFields[$randKey].'" value="" id="'.$botFields[$randKey].'">';
+}
+
+function dupLeadNote( $varAccessToken, $lead_id, $requirement ){
+    date_default_timezone_set('Asia/Kolkata'); // Set the timezone to IST
+    $currentDateTime = new DateTime();
+    $formattedDate = $currentDateTime->format('jS F Y \a\t g:i A');
+    $notesRequest = 'https://www.zohoapis.com/crm/v2/Leads/'.$lead_id.'/Notes';
+    $notes_data = [
+    'Note_Content'  => 'New Inquiry Received from PixelCrayons on '.$formattedDate.'. Content below:'."\n ".$requirement,
+    'se_module'     => 'Leads'
+    ];
+    $nJSON  = json_encode( $notes_data );
+    $nJSON  = str_replace('{','[{',$nJSON);
+    $nJSON  = str_replace('}','}]',$nJSON);
+    $postNotesData = '{"data":' . $nJSON . '}';
+
+    $curl   = curl_init();
+    curl_setopt_array($curl, array(
+    CURLOPT_URL => $notesRequest,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => "",
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION    => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST   => "POST",
+    CURLOPT_POSTFIELDS      => $postNotesData,
+    CURLOPT_HTTPHEADER      => array( "authorization: Zoho-oauthtoken $varAccessToken", "cache-control: no-cache",
+    "content-type: application/json"),
+    ));
+
+    $response   = curl_exec( $curl );
+    $err        = curl_error( $curl );
+    if( !$err ){
+        $response   = json_decode( $response );
+        $file       = fopen( CL_LOGFILE, "a" );
+        fwrite( $file, PHP_EOL."Duplicate Lead Notes : ".print_r( $response, 1 ) );
+        fclose( $file );
+    }else{
+        $file       = fopen( CL_LOGFILE, "a" );
+        fwrite( $file, "Error Notes : ".$err );
+        fclose( $file );
+    }
+    curl_close( $curl );
 }
 
 function get_client_ip_user() {

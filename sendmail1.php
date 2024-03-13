@@ -356,21 +356,15 @@ function zohoCrmUpdate_v2( $argArrData, $leadSource='', $owner_id = 658520861, $
     $varProperty    = $argArrData['Property'];
     $varIPAddress   = $argArrData['IP Address'];
     $varDescription = $argArrData['Description'];
-    
-    /*
-    $user_country       = (isset($_POST['user-country']) && $_POST['user-country'])?$_POST['user-country']:"";
-    $user_country_arr   = @explode("(",$user_country);
-    if(isset($user_country_arr[0]) && $user_country_arr[0])
-    $user_country       =  trim($user_country_arr[0]);
-    */
 
-    $user_country = $argArrData['Country'];
-    $varURL = $argArrData['URL'];
+    $user_country   = $argArrData['Country'];
+    $varURL         = $argArrData['URL'];
     $varUploadedFiles = $argArrData['File Uploaded'];
     $varRequirements = $argArrData['Requirements'];
-    $varRefURL = $argArrData['refurl'];
+    $varRefURL       = $argArrData['refurl'];
     $postData = 'refresh_token='. REFRESH_TOKEN.'&client_id='.CLIENT_ID.'&client_secret='.CLIENT_SECRET.'&grant_type='.'refresh_token';
-    $curl = curl_init();
+    $curl           = curl_init();
+
     curl_setopt_array($curl, array(
         CURLOPT_URL => "https://accounts.zoho.com/oauth/v2/token",//US DC .com, IN DC .in
         CURLOPT_RETURNTRANSFER => true,
@@ -385,33 +379,9 @@ function zohoCrmUpdate_v2( $argArrData, $leadSource='', $owner_id = 658520861, $
     $response = curl_exec($curl);
     $arrRefreshTokResponse =json_decode($response,true);
     $varAccessToken = $arrRefreshTokResponse['access_token'];
-    $err = curl_error($curl);
-    $headers = "MIME-Version: 1.0";
-    $headers .= "Content-type: text/html; charset=ISO-8859-1\r\n";
-    $headers .= "From: vkavasthi@gmail.com <vkavasthi@gmail.com>" . "\r\n";
-    $headers .= "Reply-To: vkavasthi@gmail.com\r\n";
+    $err = curl_error($curl);    
     curl_close( $curl );
-    if ($err) {
-        $body = "";
-        $body .= "Dear Admin,"."<br>".$curl;
-        $body .= "error"."==".curl_errno($curl)."<br/>";
-        $response2 = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-
-
-        $body .= "error response"."==".$response2."<br/>";
-        $body .= "error "."==".$err."<br/>";
-        $body .= "erro1r "."==".print_r($err,1)."<br/>";
-        $body .= " RESPONSE Details are:".print_r($response2,1)."<br>";
-        $body .= " Client Details:".$varEmail.'Last-name'.$varLastName.'First Name'.$varFirstName."<br>";
-        $body .= " Client Details:".print_r($varEmail.$varLastName.$varFirstName,1);
-        
-        /*
-        $file = fopen("/home/valuecoc/leads/zoho-logs.txt","a");
-        $zlead = PHP_EOL.$varEmail.":".$body;
-        fwrite($file, $zlead);
-        fclose($file);
-        */
-    }else{
+    if(!$err){
         $zo_requirement = "";
         
         if( $varURL ){
@@ -472,10 +442,8 @@ function zohoCrmUpdate_v2( $argArrData, $leadSource='', $owner_id = 658520861, $
         $response  = curl_exec($curl);
         $err       = curl_error($curl);
         curl_close($curl);
-        if ($err) {
-            echo "cURL Error #:" . $err;
-        }else{
-            $body1 = '';
+        if( !$err ){
+            $body1          = '';
             $crmException   = $response;
             $response       = json_decode( $response );
             
@@ -524,28 +492,15 @@ function zohoCrmUpdate_v2( $argArrData, $leadSource='', $owner_id = 658520861, $
                     $response  = curl_exec($curl);
                     curl_close( $curl );
                     $response   = json_decode( $response );
+                    if( $is_update !== false ){
+                        dupLeadNote( $varAccessToken, $lead_id, $varRequirements );
+                    }
                     
-                    /*
-                    $file       = fopen("/home/valuecoc/leads/zoho-logs2023.txt","a");
-                    $zlead      = PHP_EOL.$varEmail.":".$body1;
-                    fwrite( $file, $zlead );
-                    fclose( $file );
-                    */
-
                     return $lead_id;
                 }           
             endif;
-            $body1 .= "Details are:".print_r($response,1);
             $lead_id = ( isset( $response->data[0] ) ) ? $response->data[0]->details->id : 0;            
-            //$file = fopen("/home/valuecoc/leads/zoho-logs.txt","a");
-            /*
-            $file = fopen("/home/valuecoc/leads/zoho-logs2023.txt","a");
-            $zlead = PHP_EOL.$varEmail.":".$body1;
-            fwrite( $file, $zlead );
-            fclose($file);
-            */
         }
-
     }
     return $lead_id;
 }
@@ -950,7 +905,6 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
         $varRefererURL = isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : "";
         //$result = checkCaptcha($token);
         //if($result) {
-            //@mail("ankur@valuecoders.com", $subject, $body, $headers);
             $varDesc = "File Uploaded :" . $uploaded_file_path . " Requirements: " . $requirement;
 
             $arrZoho_v2 = array(
