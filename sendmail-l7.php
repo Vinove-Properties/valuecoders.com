@@ -187,6 +187,48 @@ $varIPAdd = get_client_ip_user();
 $varBrowserInfo = $_SERVER['HTTP_USER_AGENT'];
 $varDateAdded = date('Y-m-d H:i:s');
 
+function ppcdupLeadNote( $varAccessToken, $lead_id, $requirement ){
+    date_default_timezone_set('Asia/Kolkata'); // Set the timezone to IST
+    $currentDateTime = new DateTime();
+    $formattedDate = $currentDateTime->format('jS F Y \a\t g:i A');
+    $notesRequest = 'https://www.zohoapis.com/crm/v2/Leads/'.$lead_id.'/Notes';
+    $notes_data = [
+    'Note_Content'  => 'New Inquiry Received from ValueCoders on '.$formattedDate.'. Content below:'."\n ".$requirement,
+    'se_module'     => 'Leads'
+    ];
+    $nJSON  = json_encode( $notes_data );
+    $nJSON  = str_replace('{','[{',$nJSON);
+    $nJSON  = str_replace('}','}]',$nJSON);
+    $postNotesData = '{"data":' . $nJSON . '}';
+
+    $curl   = curl_init();
+    curl_setopt_array($curl, array(
+    CURLOPT_URL => $notesRequest,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => "",
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION    => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST   => "POST",
+    CURLOPT_POSTFIELDS      => $postNotesData,
+    CURLOPT_HTTPHEADER      => array( "authorization: Zoho-oauthtoken $varAccessToken", "cache-control: no-cache",
+    "content-type: application/json"),
+    ));
+
+    $response   = curl_exec( $curl );
+    $err        = curl_error( $curl );
+    if( !$err ){
+        $response   = json_decode( $response );
+        $file       = fopen( IH_LOGFILE, "a" );
+        fwrite( $file, PHP_EOL."Duplicate Lead Notes : ".print_r( $response, 1 ) );
+        fclose( $file );
+    }else{
+        $file       = fopen( IH_LOGFILE, "a" );
+        fwrite( $file, "Error Notes : ".$err );
+        fclose( $file );
+    }
+    curl_close( $curl );
+}
 
 //zohocrm api v2 update --23-Dec-2019
 function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
@@ -332,7 +374,8 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
                 $user_name = $varFirstName.' '.$varLastName;
                 smtpEmailFunction( "web@vinove.com", "Zoho CRM error - ValueCoders LP", $crmException, "lead", 
                 $varEmail, [], [], [], $user_name );
-                }                
+                }
+                ppcdupLeadNote( $varAccessToken, $lead_id, $varDescription );
             }
             endif;
         }else{
