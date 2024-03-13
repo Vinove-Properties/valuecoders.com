@@ -492,10 +492,9 @@ function zohoCrmUpdate_v2( $argArrData, $leadSource='', $owner_id = 658520861, $
                     $response  = curl_exec($curl);
                     curl_close( $curl );
                     $response   = json_decode( $response );
-                    if( $is_update !== false ){
+                    if( $is_update === false ){
                         dupLeadNote( $varAccessToken, $lead_id, $varRequirements );
-                    }
-                    
+                    }                    
                     return $lead_id;
                 }           
             endif;

@@ -21,7 +21,7 @@ function dupLeadNote( $varAccessToken, $lead_id, $requirement ){
     $formattedDate = $currentDateTime->format('jS F Y \a\t g:i A');
     $notesRequest = 'https://www.zohoapis.com/crm/v2/Leads/'.$lead_id.'/Notes';
     $notes_data = [
-    'Note_Content'  => 'New Inquiry Received from PixelCrayons on '.$formattedDate.'. Content below:'."\n ".$requirement,
+    'Note_Content'  => 'New Inquiry Received from ValueCoders on '.$formattedDate.'. Content below:'."\n ".$requirement,
     'se_module'     => 'Leads'
     ];
     $nJSON  = json_encode( $notes_data );
