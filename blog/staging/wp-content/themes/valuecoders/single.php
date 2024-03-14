@@ -49,6 +49,22 @@
     }
     $btText = get_field('bt-text');
     $btText = (!empty($btText)) ? '<p class="bt-text">'.$btText.'</p>' : '';
+    
+    $keyAway = get_field('col-keyaway');
+    $takeText = '';
+    if( isset($keyAway['required']) && ($keyAway['required'] == "yes") ){
+      if( isset( $keyAway['content'] ) && !empty($keyAway['content']) ){
+      $takeText = '<div class="row-key-takeaway">'.$keyAway['content'].'</div>';  
+      }  
+    }
+    /*$takeText = '<div class="row-key-takeaway">
+    <p>Create your ideal web application with this comprehensive step-by-step guide, providing a strategic and successful development process. It includes:</p>
+    <ul>
+      <li>Meaning and Benefits of Web Application</li>
+      <li>Types of Web Application</li>
+      <li>Detailed Plan for Starting the Development</li>
+    </ul>
+    </div>';*/  
     echo '<div class="top-header-section">';
     get_template_part('inc/search', 'popup');
     //<li class="posted-on">Published <span class="dt">'.get_the_time('F j, Y').'</span></li>
@@ -81,7 +97,7 @@
     </div>
     </div>
     </div></div>';
-    echo '</div></div>';
+    echo '</div>'.$takeText.'</div>';
     }else{ 
     } 
     ?>
