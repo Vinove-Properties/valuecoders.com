@@ -26,7 +26,7 @@
 
     body.single-post .row-key-takeaway{background: #FFF9ED; padding:30px; border-radius: 10px; border-left: 5px solid #FFAF00; 
     color: #414141; margin-top: 30px;}
-    body.single-post .row-key-takeaway strong{font-weight:500;}
+    body.single-post .row-key-takeaway strong{font-weight:600;}
     body.single-post .row-key-takeaway ul li{ line-height: 20px; margin: 0 0 10px; list-style-position: inside; padding-left: 25px;
     position: relative; list-style: none;}
     body.single-post .row-key-takeaway ul li:before{content: ''; width: 13px; height: 13px; 
