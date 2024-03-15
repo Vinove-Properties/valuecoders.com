@@ -1422,7 +1422,9 @@ $eTwolt = (isset($vcBtn['link-two']) && !empty($vcBtn['link-two'])) ? $vcBtn['li
 
 $eCtatwo = '<h2>'.$eTwoHeading.'</h2>';
 $eCtatwo .= '<p>'.$eTwoBody.'</p>';
-echo expert_talk_cta( $eCtatwo, $eTwolt );
+if( !is_page( [17422,17425,16003,16004,16062,16066,17235,17236,17239] ) ){
+  echo expert_talk_cta( $eCtatwo, $eTwolt );  
+}
 ?>
 
 <?php 
