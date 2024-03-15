@@ -31,6 +31,17 @@
     position: relative; list-style: none;}
     body.single-post .row-key-takeaway ul li:before{content: ''; width: 13px; height: 13px; 
     background:url(<?php bloginfo('template_url') ?>/dev-img/keyli.png); position: absolute; left: 0; top: 4px;}
+
+    
+    #elm-toc .sw-hd{text-transform: capitalize;}    
+    #elm-toc.active .sw-hd span.hide,
+    #elm-toc .sw-hd span.show{display: inline-block;}
+
+    #elm-toc.active .tocsec{display:block;}
+    #elm-toc .tocsec,
+    #elm-toc .sw-hd span.hide,
+    #elm-toc.active .sw-hd span.show,
+    #elm-toc .tocsec{display:none;}
     </style>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
