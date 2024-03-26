@@ -924,6 +924,7 @@
                               <a href="<?php echo $site_url; ?>react-js-development-services-company">React</a>
                               <a href="<?php echo $site_url; ?>best-react-native-development-services-company-india">React Native</a>
                               <a href="<?php echo $site_url; ?>top-wordpress-development-services-company-india">Wordpress</a>
+                              <a href="<?php echo $site_url; ?>strapi-development-services">Strapi</a>
                             </div>
                           </div>
                         </div>
