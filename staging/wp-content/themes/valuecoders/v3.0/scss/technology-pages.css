@@ -5328,12 +5328,14 @@ body.page-template-template-testimonials .client-video-section iframe,
       line-height: 22px;
       color: #9b9b9b;
       margin-top: 10px; }
-    .second-level-section .form-right-box .head .open-free-trial::after {
-      width: 20px;
-      height: 20px;
-      background: url(../images/union-icon.png) 0 0 no-repeat;
-      border: 0;
-      border-radius: 0; }
+    .second-level-section .form-right-box .head .open-free-trial {
+      margin-left: 10px; }
+      .second-level-section .form-right-box .head .open-free-trial::after {
+        width: 14px;
+        height: 15px;
+        background: url(../images/info-icon.svg) 0 0 no-repeat;
+        border: 0;
+        border-radius: 0; }
   .second-level-section .form-right-box .green-bdr-btn {
     font-weight: 500; }
   .second-level-section .form-right-box .form-text-cont {
@@ -5510,8 +5512,9 @@ body.page-template-template-testimonials .client-video-section iframe,
         margin-right: 10px;
         vertical-align: middle; }
   .second-level-section .form-right-box .checkout-submit {
-    font-family: "noto_sansmedium", sans-serif;
+    font-family: "Noto Sans";
     display: flex;
+    min-width: 202px;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -5589,7 +5592,9 @@ body.page-template-template-testimonials .client-video-section iframe,
   .second-level-section .form-right-box .autocomplete-items.has-data {
     top: 72px;
     left: 0;
-    max-width: 360px; } }
+    max-width: 360px; }
+  .second-level-section .form-right-box .checkout-submit {
+    font-family: sans-serif; } }
 .hero-section {
   padding: 117px 0 80px;
   background-size: cover;
