@@ -319,7 +319,7 @@
             <div class="flex-3 box-3 has-anchor">
               <div class="box">
                 <h3>Hire Web App Developers</h3>
-                <p>Hire software developers from us who excel in building robust, scalable, and secure web apps for your business.</p>
+                <p>Hire software developers from us who proficient in building powerful, scalable, and secure web apps for your business.</p>
                 <a class="box-anchor" href="<?php echo site_url('/hire-developers/hire-web-app-developers'); ?>"></a>
               </div>
             </div>
@@ -375,14 +375,14 @@
             <div class="flex-3 box-3 has-anchor">
               <div class="box">
                 <h3>Hire API Developers</h3>
-                <p>Hire Indian software developers from us and get a skilled team of coders who can build secure and scalable APIs for your web and mobile applications.</p>
+                <p>Hire Indian software developers from ValueCoders. Our experts are skilled in building secure and scalable APIs for your web and mobile applications.</p>
                 <a class="box-anchor" href="<?php echo site_url('/hire-developers/hire-api-developers'); ?>"></a>
               </div>
             </div>
             <div class="flex-3 box-3 has-anchor">
               <div class="box">
                 <h3>Hire eCommerce Developers</h3>
-                <p>Hire software developers and programmers from us who have expertise in eCommerce technologies such as Magento, Opencart, Shopify, etc.</p>
+                <p>Hire eCommerce developers from us who have expertise in eCommerce technologies like Magento, Opencart, Shopify, etc.</p>
                 <a class="box-anchor" href="<?php echo site_url('/hire-developers/hire-ecommerce-developers'); ?>"></a>
               </div>
             </div>
