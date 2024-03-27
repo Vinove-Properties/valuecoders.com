@@ -926,7 +926,6 @@
                               <a href="<?php echo $site_url; ?>java-web-application-development-company">Java</a>
                               <a href="<?php echo $site_url; ?>top-laravel-development-services-company-india">Laravel</a>
                               <a href="<?php echo $site_url; ?>net-maui-app-development">.NET MAUI</a>
-                              <a href="<?php echo $site_url; ?>odoo-development-services">Odoo</a>
                             </div>
                             <div class="width-50 padding-l-40">
                               <a href="<?php echo $site_url; ?>aspdotnet-development-company-india">.NET</a>
@@ -971,6 +970,7 @@
                             <a href="<?php echo $site_url; ?>microsoft-power-platform">Microsoft Power Platforms</a>
                             <a href="<?php echo $site_url; ?>microsoft-powerapp-development">PowerApps</a>
                             <a href="<?php echo $site_url; ?>microsoft-azure-partner-company-india">Azure</a>
+                            <a href="<?php echo $site_url; ?>odoo-development-services">Odoo</a>
                             <a href="<?php echo $site_url; ?>amazon-aws-partner-company-india">Amazon Web Services</a>
                           </div>
                         </div>
