@@ -14,7 +14,7 @@
         <p>From startups to big enterprises, development organizations to digital agencies, and SMEs to Governments, we cater to varied software requirements, delivering tailor-made solutions that drive innovation, efficiency, and growth.</p>      
         <ul>
         <li>India's Top 1% Software Talent</li>
-        <li>Workstatus<sup>TM</sup> powered Proof of Work</li>
+        <li><a href="https://www.workstatus.io/" target="_blank">Workstatus<sup>TM</sup></a> powered Proof of Work</li>
         <li>Trusted by Startups to Fortune 500</li>
         <li>Idea to Deployment, We Handle All</li>
         <li>Time-Zone Friendly: Global Presence</li>
