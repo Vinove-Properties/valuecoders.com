@@ -13,12 +13,12 @@
         <p>Embrace the transformative power of technology with ValueCoders, where our expertise meets your vision. </p>
         <p>From startups to big enterprises, development organizations to digital agencies, and SMEs to Governments, we cater to varied software requirements, delivering tailor-made solutions that drive innovation, efficiency, and growth.</p>      
         <ul>
-        <li>Ongoing internal L&D programs </li>
-        <li>Experienced product development</li>
-        <li>Transparency & accountability</li>
-        <li>Daily/weekly/monthly reporting</li>
-        <li>Ongoing internal L&D programs</li>
-        <li>Experienced product development</li>
+        <li>India's Top 1% Software Talent</li>
+        <li>Workstatus<sup>TM</sup> powered Proof of Work</li>
+        <li>Trusted by Startups to Fortune 500</li>
+        <li>Idea to Deployment, We Handle All</li>
+        <li>Time-Zone Friendly: Global Presence</li>
+        <li>Top-tier Data Security Protocols</li>
         </ul>
         <?php } ?>
       </div>
