@@ -914,6 +914,7 @@
                               <a href="<?php echo $site_url; ?>react-js-development-services-company">React</a>
                               <a href="<?php echo $site_url; ?>best-react-native-development-services-company-india">React Native</a>
                               <a href="<?php echo $site_url; ?>top-wordpress-development-services-company-india">Wordpress</a>
+                              <a href="<?php echo $site_url; ?>strapi-development-services">Strapi</a>
                             </div>
                           </div>
                         </div>
@@ -948,6 +949,7 @@
                             <a href="<?php echo $site_url; ?>microsoft-power-platform">Microsoft Power Platforms</a>
                             <a href="<?php echo $site_url; ?>microsoft-powerapp-development">PowerApps</a>
                             <a href="<?php echo $site_url; ?>microsoft-azure-partner-company-india">Azure</a>
+                            <a href="<?php echo $site_url; ?>odoo-development-services">Odoo</a>
                             <a href="<?php echo $site_url; ?>amazon-aws-partner-company-india">Amazon Web Services</a>
                           </div>
                         </div>
