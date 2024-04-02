@@ -61,6 +61,8 @@ padding-left: 25px!important;}
 body.page-template-template-contact-v8 .contact-us-section.full-width-form .head-txt .logo-box{
   background-image:url('<?php bloginfo('template_url'); ?>/dev-img/logo-small.svg');
 }
+a.ws-dotted{ border-bottom:1px dotted #000000; color:#000000; }
+a.ws-dotted:hover{text-decoration: none !important; color: #656565;}
 </style>
 <?php wp_head(); ?>
 
