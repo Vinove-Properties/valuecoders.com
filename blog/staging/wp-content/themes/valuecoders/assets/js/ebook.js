@@ -25,6 +25,11 @@ if( imgtrigger !== null ){
         imgtrigger[i].addEventListener("click", toggleModal);
     }
 }
+
+function _triggerEbook(){
+    toggleModal();
+}
+
 //trigger.addEventListener("click", toggleModal);
 //imgtrigger.addEventListener("click", toggleModal);
 //imgtrigger1.addEventListener("click", toggleModal);
@@ -70,13 +75,15 @@ function ValidationEvent(){
         data.forEach((value, key) => object[key] = value);
         var json = JSON.stringify(object);
         xhr = new XMLHttpRequest();
-        xhr.open('POST', vcObj.site_url+'/verify/', true);
+        //xhr.open('POST', vcObj.site_url+'/verify/', true);
+        xhr.open('POST', vcObj.site_url+'/wp-admin/admin-ajax.php?action=pxl-ebook-download', true);
         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         xhr.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {                
                 var response = this.responseText;
-                document.getElementById('vc-lead-form').style.display = 'none';
-                document.getElementById("responce").innerHTML = response;
+                console.log( response );
+                //document.getElementById('vc-lead-form').style.display = 'none';
+                //document.getElementById("responce").innerHTML = response;
             }
         };
         

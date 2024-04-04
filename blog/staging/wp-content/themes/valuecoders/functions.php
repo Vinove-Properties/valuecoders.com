@@ -222,16 +222,7 @@ add_filter( 'the_content', function( $content ){
             
             $postContent .= $postBanner;
         }
-
-       // if( $hasPdf ){
-         //   $postPdf = '<div class="post-pdf-row" style="margin:0 -20px; width:100%; text-align:center; padding:20px 0;">';
-           // $postPdf .= '<button class="">Download PDF</button>';
-            //$postPdf .= '</div>';
-            //$postContent .= $postPdf;
-        //}
-
         return $content.$postContent;
-
     }
     return $content;
 });    
@@ -816,17 +807,17 @@ th {
 add_action("admin_menu", "customer_menu");
 
 // Ebook Pdf Function
-function Postpdf() {
+function Postpdf(){
 global $post;
 $haspostPdf     = get_post_meta( $post->ID, 'post_pdf', true );
 $haspostPdflink = get_post_meta( $post->ID, 'vc-post-pdf', true );
-if( $haspostPdf || $haspostPdflink){
-?>
-<div class="post-pdf-row" style="margin:0 -20px; width:100%; text-align:right; padding:20px 0;">
-<button class="trigger">Download PDF</button>
-</div>	
-<?php 
-} 
+    if( $haspostPdf || $haspostPdflink){
+    ?>
+    <div class="post-pdf-row" style="margin:0 -20px; width:100%; text-align:right; padding:20px 0;">
+    <button class="trigger">Download PDF</button>
+    </div>	
+    <?php 
+    } 
 }
 
 /*
@@ -877,24 +868,23 @@ function vc_posts_link_attributes() {
 
 function vc_get_post_thumbnail( $post_id ){
     $thePostImage = get_the_post_thumbnail( $post_id, 'post-thumbnail', array( 'alt' => the_title_attribute(  
-    array( 'echo' => false ) ) ));  
+    array( 'echo' => false ) ) ));
 
     if( function_exists('get_field') ){
-    $listThubnail = get_field( 'pl-thumbnail', $post_id );
-    if( $listThubnail && is_array( $listThubnail ) ){
-        if( 
-        isset( $listThubnail['sizes']['plist-thumbnail'] ) && 
-        !empty( $listThubnail['sizes']['plist-thumbnail'] ) )
-        {
-        $thePostImage = '<img loading="lazy" src="'.$listThubnail['sizes']['plist-thumbnail'].'" 
-        alt="'.$listThubnail['title'].'" width="'.$listThubnail['sizes']['plist-thumbnail-width'].'" 
-        height="'.$listThubnail['sizes']['plist-thumbnail-height'].'">';    
-        }else{
-        $thePostImage = '<img loading="lazy" src="'.$listThubnail['url'].'" alt="'.$listThubnail['title'].'" width="'.$listThubnail['width'].'" height="'.$listThubnail['height'].'">'; 
-        }        
+        $listThubnail = get_field( 'pl-thumbnail', $post_id );
+        if( $listThubnail && is_array( $listThubnail ) ){
+            if( 
+            isset( $listThubnail['sizes']['plist-thumbnail'] ) && 
+            !empty( $listThubnail['sizes']['plist-thumbnail'] ) )
+            {
+            $thePostImage = '<img loading="lazy" src="'.$listThubnail['sizes']['plist-thumbnail'].'" 
+            alt="'.$listThubnail['title'].'" width="'.$listThubnail['sizes']['plist-thumbnail-width'].'" 
+            height="'.$listThubnail['sizes']['plist-thumbnail-height'].'">';    
+            }else{
+            $thePostImage = '<img loading="lazy" src="'.$listThubnail['url'].'" alt="'.$listThubnail['title'].'" width="'.$listThubnail['width'].'" height="'.$listThubnail['height'].'">'; 
+            }        
+        }
     }
-    }
-
     return $thePostImage;
 }
 
@@ -937,3 +927,69 @@ die;
 } 
 });
 */
+
+add_action( 'phpmailer_init', 'ws_smtp_phpemailer' );
+function ws_smtp_phpemailer( $phpmailer ){
+    $phpmailer->isSMTP();  
+    $phpmailer->Host          = 'smtp.gmail.com';
+    $phpmailer->SMTPSecure    = 'ssl';
+    $phpmailer->Port          = 465;
+    $phpmailer->SMTPAuth      = true;
+    $phpmailer->Username      = 'do-not-reply@valuecoders.com';
+    $phpmailer->Password      = 'pdtnweysvgovhemg';
+    $phpmailer->From          = "do-not-reply@valuecoders.com";
+    $phpmailer->FromName      = "ValueCoders";
+}
+
+add_action('wp_ajax_pxl-ebook-download', 'ebook_ajax_cb');
+add_action('wp_ajax_nopriv_pxl-ebook-download', 'ebook_ajax_cb');
+function ebook_ajax_cb(){
+    global $wpdb;
+    if(isset($_POST['fname'], $_POST['email'], $_POST['phoneno'], $_POST['country'], $_POST['postid'])){
+    $fname      = ucwords($_POST['fname']);
+    $email      = $_POST['email'];
+    $phoneno    = $_POST['phoneno'];
+    $country    = $_POST['country'];
+    $postid     = $_POST['postid'];
+    //$pdflink = $_POST['pdflink'];
+    $posttitle  = $_POST['posttitle'];
+    $hash       = md5( rand(0,1000) ); 
+    $date       = date("Y/m/d H:i:s");
+
+    $category_detail = get_the_category($postid);
+    foreach($category_detail as $cd){
+    $slug = $cd->slug;
+    }
+    $table = 'wp_ebookdata';
+    $result = $wpdb->insert($table, [
+        "fname"     => $fname,
+        "email"     => $email,
+        "phone"     => $phoneno,
+        "country"   => $country,
+        "postid"    => $postid,
+        //"pdflink" => $pdflink,
+        "hashcode"  => $hash,
+        "formdate"  => $date
+    ]);
+    $link       =  get_permalink($postid).'?ep-action=show&email='.$email.'&hash='.$hash;   
+    $guidename  = get_post_meta($postid,'guide_name',true);
+    $to      = $email; // Send email to our user
+    $subject = 'Email Verification'; // Give the email a subject 
+    $message = '<html><body>';
+    $message .= '<p>Hi '.$fname.',</p>';
+    $message .= '<p>Thank you for opting for the downloaded version of our e-guide on "'.$guidename.'".</p>';
+    $message .= '<p>Please click the link below to verify your email address & initiate the download</p>';
+    $message .= '<p><a href="'.$link.'">'.$link.'</a></p>';
+    $message .= '<p>You may also wish to connect with us for more queries on outsourcing your software development projects - "<a href="https://www.valuecoders.com/?utm_source=blog&utm_medium=email&utm_campaign=eguide">Contact Us</a>"</p>';
+    $message .= '<p>Regards,<br>
+    Ved Raj<br>
+    Customer Delight Officer<br>
+    Valuecoders.com<br>
+    marketing@valuecoders.com<br>
+    </p>';
+    $message .= '</body></html>';
+    $headers    = array('Content-Type: text/html; charset=UTF-8');
+    $mail       = wp_mail( $to, $subject, $message, $headers );
+    echo $message; die;
+    }
+}
