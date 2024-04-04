@@ -88,7 +88,7 @@ id="pdflink">-->
 id="postid">
 <input type="hidden" value="<?php echo $post->post_name;?>"
 name="posttitle" id="posttitle">
-<input type="button" value="Download Our e-Guide" onclick="ValidationEvent(this.id)">
+<input type="button" id="ebook-btn" value="Download Our e-Guide" onclick="ValidationEvent(this.id)">
 </form>
 </div>
 </div>

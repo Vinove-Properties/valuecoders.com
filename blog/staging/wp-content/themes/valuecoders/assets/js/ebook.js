@@ -78,6 +78,7 @@ function ValidationEvent(){
         //xhr.open('POST', vcObj.site_url+'/verify/', true);
         xhr.open('POST', vcObj.site_url+'/wp-admin/admin-ajax.php?action=pxl-ebook-download', true);
         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        document.getElementById('ebook-btn').value = "Please Wait...";
         xhr.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {                
                 var response = JSON.parse(this.responseText);
