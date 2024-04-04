@@ -946,6 +946,7 @@ add_action('wp_ajax_nopriv_pxl-ebook-download', 'ebook_ajax_cb');
 function ebook_ajax_cb(){
     global $wpdb;
     if(isset($_POST['fname'], $_POST['email'], $_POST['phoneno'], $_POST['country'], $_POST['postid'])){
+
     $fname      = ucwords($_POST['fname']);
     $email      = $_POST['email'];
     $phoneno    = $_POST['phoneno'];
@@ -971,25 +972,30 @@ function ebook_ajax_cb(){
         "hashcode"  => $hash,
         "formdate"  => $date
     ]);
-    $link       =  get_permalink($postid).'?ep-action=show&email='.$email.'&hash='.$hash;   
-    $guidename  = get_post_meta($postid,'guide_name',true);
+    $link       = get_permalink($postid).'?ep-action=show&email='.$email.'&hash='.$hash;   
+    $guidename  = (!empty(get_post_meta($postid,'guide_name',true))) ? get_post_meta($postid,'guide_name',true) :  get_the_title($postid);
+
     $to      = $email; // Send email to our user
     $subject = 'Email Verification'; // Give the email a subject 
     $message = '<html><body>';
     $message .= '<p>Hi '.$fname.',</p>';
-    $message .= '<p>Thank you for opting for the downloaded version of our e-guide on "'.$guidename.'".</p>';
-    $message .= '<p>Please click the link below to verify your email address & initiate the download</p>';
+    $message .= '<p>Thank you for opting to download our e-guide on "'.$guidename.'".</p>';
+    $message .= '<p>Please click the link below to verify your email address & initiate the download.</p>';
     $message .= '<p><a href="'.$link.'">'.$link.'</a></p>';
-    $message .= '<p>You may also wish to connect with us for more queries on outsourcing your software development projects - "<a href="https://www.valuecoders.com/?utm_source=blog&utm_medium=email&utm_campaign=eguide">Contact Us</a>"</p>';
+    $message .= '<p>If you wish to connect with us to outsource your software development project, fill out our <a href="https://www.valuecoders.com/contact?utm_source=blog&utm_medium=email&utm_campaign=eguide">Contact form</a>."</p>';
     $message .= '<p>Regards,<br>
-    Ved Raj<br>
-    Customer Delight Officer<br>
+    Customer Delight Team<br>
     Valuecoders.com<br>
     marketing@valuecoders.com<br>
     </p>';
     $message .= '</body></html>';
     $headers    = array('Content-Type: text/html; charset=UTF-8');
     $mail       = wp_mail( $to, $subject, $message, $headers );
-    echo $message; die;
+    if( $mail ){
+    wp_send_json(['success'=> true, 'message' => 'Thank you! We have sent you the email verification link via email. Please check your mail. <br><br>P.S. - E-mail may take few minutes to arrive.' ]);
+    }else{
+    wp_send_json(['success' => false, 'message' => 'Email server is currently unavailable. Please try again later.']);
+    }
+
     }
 }

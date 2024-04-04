@@ -1,6 +1,8 @@
 <?php 
 global $post;
-$guidename = get_post_meta($post->ID,'guide_name',true); ?>
+//$guidename = get_post_meta($post->ID,'guide_name',true); 
+$guidename  = (!empty(get_post_meta($postid,'guide_name',true))) ? get_post_meta($postid,'guide_name',true) :  get_the_title($postid);
+?>
 <div class="modal <?php if(isset($_GET['ep-action']) && !empty($_GET['ep-action'])){ echo 'show-modal epaction'; } ?>">
 <section class="pop-up-section">
 <span class="close-button">×</span>
@@ -11,8 +13,8 @@ $guidename = get_post_meta($post->ID,'guide_name',true); ?>
 <div class="afterverify">
 <?php 
 if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !empty($_GET['hash'])){
-$emails 	= $_GET['email']; // Set email variable
-$hashval 	= $_GET['hash']; // Set hash variable
+$emails 	= $_GET['email'];
+$hashval 	= $_GET['hash'];
 $result 	= $wpdb->get_results("SELECT * FROM `wp_ebookdata` where hashcode = '".$hashval."' AND email = '".$emails."'");
 if (count($result) > 0){
 foreach($result as $results){
@@ -86,10 +88,7 @@ id="pdflink">-->
 id="postid">
 <input type="hidden" value="<?php echo $post->post_name;?>"
 name="posttitle" id="posttitle">
-<input type="button" value="Download Our e-Guide"
-onclick="ValidationEvent(this.id)">
-
-
+<input type="button" value="Download Our e-Guide" onclick="ValidationEvent(this.id)">
 </form>
 </div>
 </div>

@@ -194,5 +194,5 @@
   </div>
 </main>
 <?php 
-  get_template_part('inc/file', 'pdownload');
-  get_footer();?>
+get_template_part('inc/file', 'pdownload');
+get_footer();?>
