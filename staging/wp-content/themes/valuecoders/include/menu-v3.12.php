@@ -1003,9 +1003,10 @@
               </div>
             </li>
             <?php endif; ?>
+            
             <?php 
               // Hide Company Menu Is Page Catrgoty is : App Development
-              if( $mcat !== "app-development" ) :
+              //if( $mcat !== "app-development" ) :
               ?>
             <li class="menu-item-has-children small-menu for-company">
               <a href="<?php echo $site_url; ?>about">Company</a><span class="arrow-btn"></span>
@@ -1018,7 +1019,8 @@
                 <a href="https://www.valuecoders.com/blog/" target="_blank"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/company_icon6.svg" class="menuicon" alt="menuicon">Blog</a>
               </div>
             </li>
-            <?php endif; ?>
+            <?php //endif; ?>
+
             <li class="cta-wrap">
               <div class="btn-sec">
                 <a href="<?php echo $site_url; ?>contact" class="btn rounded"><span class="text-white">Get Started</span></a>
