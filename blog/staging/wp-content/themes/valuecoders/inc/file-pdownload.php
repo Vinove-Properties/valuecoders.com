@@ -55,13 +55,10 @@ if(!empty($pdf)){
 <form method="post" id="vc-lead-form" class="orderform">
 <p>Fill out the form below to download the e-Guide now.</p>
 <div class="">
-<input type="text" maxlength="50" name="firstName"
-id="first_name" placeholder="Enter your full name"
-class="input-field"
-onkeypress="return ValidateName(event,'lblError_firstname','firstName');"
+<input type="text" maxlength="50" name="firstName" id="first_name" placeholder="Enter your full name"
+class="input-field" onkeypress="return ValidateName(event,'lblError_firstname','firstName');"
 value="">
-<small class="error-msg-section"
-id="lblError_firstname"></small>
+<small class="error-msg-section" id="lblError_firstname"></small>
 </div>
 <div class="">
 <input type="email" placeholder="Enter your Email Address"
