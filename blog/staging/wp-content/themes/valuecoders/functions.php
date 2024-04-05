@@ -982,7 +982,7 @@ function ebook_ajax_cb(){
     $message .= '<p>Thank you for opting to download our e-guide on "'.$guidename.'".</p>';
     $message .= '<p>Please click the link below to verify your email address & initiate the download.</p>';
     $message .= '<p><a href="'.$link.'">'.$link.'</a></p>';
-    $message .= '<p>If you wish to connect with us to outsource your software development project, fill out our <a href="https://www.valuecoders.com/contact?utm_source=blog&utm_medium=email&utm_campaign=eguide">Contact form</a>."</p>';
+    $message .= '<p>If you wish to connect with us for further discussion, then please fill out our <a href="https://www.valuecoders.com/contact?utm_source=blog&utm_medium=email&utm_campaign=eguide">Contact form</a>."</p>';
     $message .= '<p>Regards,<br>
     Customer Delight Team<br>
     Valuecoders.com<br>
