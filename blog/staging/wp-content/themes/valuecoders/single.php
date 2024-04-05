@@ -134,10 +134,10 @@
           $guidename  = (!empty(get_post_meta($post->ID,'guide_name',true))) ? 
           get_post_meta($post->ID,'guide_name',true) :  'A Complete Guide to<br> IT Outsourcing 2023';
           echo '<div class="customcta padd1">
-          <div class="cushed">'.$guidename.'</div>
-          <div class="btn-container">
-          <a class="white-btn" onclick="_triggerEbook();" href="javascript:void(0);">Download Now</a>
-          </div>
+            <div class="cushed">'.$guidename.'</div>
+            <div class="btn-container">
+              <a class="white-btn" onclick="_triggerEbook();" href="javascript:void(0);">Download Now</a>
+            </div>
           </div>';
           }
           ?>

@@ -1,7 +1,7 @@
 <?php 
 global $post;
 //$guidename = get_post_meta($post->ID,'guide_name',true); 
-$guidename  = (!empty(get_post_meta($postid,'guide_name',true))) ? get_post_meta($postid,'guide_name',true) :  get_the_title($postid);
+$guidename  = (!empty(get_post_meta($post->ID,'guide_name',true))) ? get_post_meta($post->ID,'guide_name',true) :  get_the_title($post->ID);
 ?>
 <div class="modal <?php if(isset($_GET['ep-action']) && !empty($_GET['ep-action'])){ echo 'show-modal epaction'; } ?>">
 <section class="pop-up-section">
