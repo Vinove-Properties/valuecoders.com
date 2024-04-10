@@ -37,7 +37,7 @@ if( !is_page_template( 'page-templates/template-contact-v8.php' ) ) :
       <div class="popWrap">
          <div class="popup-content">
             <span class="closeicon" onclick="closeIntPopUp('intentPopup', false);">
-               <img loading="lazy" width="11" height="11" src="<?php bloginfo('template_url'); ?>/dev-img/cross-image.svg">
+            <img loading="lazy" width="11" height="11" src="<?php bloginfo('template_url'); ?>/dev-img/cross-image.svg" alt="Cross Icon">
             </span>
             <h2>Stay With Us</h2>
             <h3>Are you looking for the perfect partner for your next software project?</h3>
