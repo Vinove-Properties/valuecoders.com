@@ -44,7 +44,7 @@
           <li>'.$li.'</li>
           <li>IP Rights & NDA (Non-disclosure Agreement) protection</li>
           <li>Flexible contracts, transparent pricing</li>
-          <ul>';
+          </ul>';
           endwhile;
           ?>
         <div class="button-section margin-t-50">
