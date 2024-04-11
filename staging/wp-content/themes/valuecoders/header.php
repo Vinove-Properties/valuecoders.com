@@ -3,6 +3,13 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <?php 
+  if( isStaggingVersion() === false ){
+  echo '<meta name="google-site-verification" content="x4jenxWHytNYoiEQI40yqtoX1fPPrGYhHxi8ahcm9FY" />'  
+  }
+  ?>
+
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="icon" href="<?php bloginfo('template_url'); ?>/dev-img/favicons.svg" type="image/x-icon">
 	<?php 
