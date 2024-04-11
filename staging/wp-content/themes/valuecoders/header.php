@@ -6,7 +6,7 @@
   
   <?php 
   if( isStaggingVersion() === false ){
-  echo '<meta name="google-site-verification" content="x4jenxWHytNYoiEQI40yqtoX1fPPrGYhHxi8ahcm9FY" />'  
+    echo '<meta name="google-site-verification" content="x4jenxWHytNYoiEQI40yqtoX1fPPrGYhHxi8ahcm9FY" />';
   }
   ?>
 
