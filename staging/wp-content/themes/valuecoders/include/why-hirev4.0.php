@@ -209,7 +209,7 @@
                   <span class="aw-icon">
                     <picture>
                       <!-- <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-05.svg" alt="Valuecoders" width="36" height="36"> -->
-                      <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/azw-logo.svg" alt="Valuecoders" width="69" height="69">
+                      <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/azw-logo.svg" alt="Valuecoders" width="50" height="40">
                     </picture>
                   </span>
                   <p>From startups to big enterprises, development </p>
