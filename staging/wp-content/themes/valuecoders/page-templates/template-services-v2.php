@@ -201,14 +201,11 @@
   // tech Specification in accordian format.
   $specifications = get_field('tech-spec');
   if( isset( $specifications['is_enabled'] ) && ($specifications['is_enabled'] == "yes") ){ 
-  $htContent 	= $specifications['content'];
-  $content 	= $specifications['content'];
+  $htContent 	  = $specifications['content'];
+  $content 	    = $specifications['content'];
   $sectionType 	= (isset($specifications['specifications']) && (count($specifications['specifications']) > 6)) ? 'accordian' : 'tab';
   
-  if( is_page(3521) ){
-  $sectionType = 'accordian';
-  }
-  
+  $spec = ( $specifications['specifications'] ) ? $specifications['specifications'] : false;
   if( $sectionType == "tab" ){
   ?>
 <section class="service-tab padding-t-120 padding-b-120" id="v3-tech-spec">
@@ -218,79 +215,33 @@
     </div>
     <div class="service-tabs-section margin-t-80">
       <div class="tab-row">
-        <nav id="service-tabs" class="tab-nav">
-          <div class="tab-scroll">
-            <div class="tablist active" data-tab="#tab01"><a href="#tab01">
-              Product Ideation & Consulting</a>
-            </div>
-            <div class="tablist" data-tab="#tab02"><a href="#tab02">
-              UI/UX Design</a>
-            </div>
-            <div class="tablist"><a href="#tab03">
-              MVP Development</a>
-            </div>
-            <div class="tablist"><a href="#tab04">
-              SaaS Development</a>
-            </div>
-            <div class="tablist"><a href="#tab05">
-              QA & Testing</a>
-            </div>
-          </div>
-        </nav>
-        <div class="bcontents">
-          <div id="tab01" class="tab-contents active">
+        <?php 
+        if( $spec ){
+        echo '<nav id="service-tabs" class="tab-nav"><div class="tab-scroll">';
+        $tc = 0;
+        foreach( $spec as $row ){ $tc++;
+          $active = ( $tc === 1 ) ? ' active' : '';
+          echo '<div class="tablist '.$active.'" data-tab="#tab0'.$tc.'"><a href="#tab0'.$tc.'">
+              '.$row['title'].'</a>
+            </div>'
+        }
+        echo '</nav></div>';  
+
+        echo '<div class="bcontents">';
+        $tc = 0;
+        foreach( $spec as $row ){ $tc++;
+        $active = ( $tc === 1 ) ? ' active' : '';
+        $picture = ( $row['image'] ) ? vc_pictureElm( $row['image'], $row['title'] ) : '';
+        $link = ( $row['link'] ) ? '<div class="know-more-link"><a href="'.vc_siteurl($row['link']).'">Know More</a></div>' : '';
+        echo '<div id="tab0'.$tc.'" class="tab-contents '.$active.'">
             <div class="dis-flex">
-              <div class="image-box">
-                <picture>
-                  <source type="image/webp" srcset="./images/tab-01.png">
-                  <source type="image/png" srcset="./images/tab-01.png">
-                  <img loading="lazy" src="./images/tab-01.png"
-                    alt="valuecoders" width="400" height="311">
-                </picture>
-              </div>
-              <div class="content-box">
-                <h3>Product Ideation & Consulting</h3>
-                <p>Our team of business consultants and product engineers helps you validate the feasibility of 
-                  your product idea, build a prototype, adjust the technology stack, and outline the vision for future development based on real market data.
-                </p>
-                <ul>
-                  <li>Legacy software modernization</li>
-                  <li>Team augmentation</li>
-                  <li>Team augmentation</li>
-                </ul>
-                <div class="know-more-link">
-                  <a href="#">Know More</a>
-                </div>
-              </div>
+              <div class="image-box">'.$picture.'</div>
+              <div class="content-box">'.$row['content'].$link.'</div>
             </div>
-          </div>
-          <div id="tab02" class="tab-contents">
-            <div class="dis-flex">
-              <div class="image-box">
-                <picture>
-                  <source type="image/webp" srcset="./images/tab-01.png">
-                  <source type="image/png" srcset="./images/tab-01.png">
-                  <img loading="lazy" src="./images/tab-01.png"
-                    alt="valuecoders" width="400" height="311">
-                </picture>
-              </div>
-              <div class="content-box">
-                <h3>UI/UX Design</h3>
-                <p>Our team of business consultants and product engineers helps you validate the feasibility of 
-                  your product idea, build a prototype, adjust the technology stack, and outline the vision for future development based on real market data.
-                </p>
-                <ul>
-                  <li>Legacy software modernization</li>
-                  <li>Team augmentation</li>
-                  <li>Team augmentation</li>
-                </ul>
-                <div class="know-more-link">
-                  <a href="#">Know More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          </div>';
+        echo '</div>';
+        }
+        ?>
       </div>
     </div>
   </div>
