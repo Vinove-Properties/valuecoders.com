@@ -1,6 +1,8 @@
 <?php 
 global $post;
-$guidename = get_post_meta($post->ID,'guide_name',true); ?>
+//$guidename = get_post_meta($post->ID,'guide_name',true); 
+$guidename  = (!empty(get_post_meta($post->ID,'guide_name',true))) ? get_post_meta($post->ID,'guide_name',true) :  get_the_title($post->ID);
+?>
 <div class="modal <?php if(isset($_GET['ep-action']) && !empty($_GET['ep-action'])){ echo 'show-modal epaction'; } ?>">
 <section class="pop-up-section">
 <span class="close-button">×</span>
@@ -11,8 +13,8 @@ $guidename = get_post_meta($post->ID,'guide_name',true); ?>
 <div class="afterverify">
 <?php 
 if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !empty($_GET['hash'])){
-$emails 	= $_GET['email']; // Set email variable
-$hashval 	= $_GET['hash']; // Set hash variable
+$emails 	= $_GET['email'];
+$hashval 	= $_GET['hash'];
 $result 	= $wpdb->get_results("SELECT * FROM `wp_ebookdata` where hashcode = '".$hashval."' AND email = '".$emails."'");
 if (count($result) > 0){
 foreach($result as $results){
@@ -53,13 +55,10 @@ if(!empty($pdf)){
 <form method="post" id="vc-lead-form" class="orderform">
 <p>Fill out the form below to download the e-Guide now.</p>
 <div class="">
-<input type="text" maxlength="50" name="firstName"
-id="first_name" placeholder="Enter your full name"
-class="input-field"
-onkeypress="return ValidateName(event,'lblError_firstname','firstName');"
+<input type="text" maxlength="50" name="firstName" id="first_name" placeholder="Enter your full name"
+class="input-field" onkeypress="return ValidateName(event,'lblError_firstname','firstName');"
 value="">
-<small class="error-msg-section"
-id="lblError_firstname"></small>
+<small class="error-msg-section" id="lblError_firstname"></small>
 </div>
 <div class="">
 <input type="email" placeholder="Enter your Email Address"
@@ -86,10 +85,7 @@ id="pdflink">-->
 id="postid">
 <input type="hidden" value="<?php echo $post->post_name;?>"
 name="posttitle" id="posttitle">
-<input type="button" value="Download Our e-Guide"
-onclick="ValidationEvent(this.id)">
-
-
+<input type="button" id="ebook-btn" value="Download Our e-Guide" onclick="ValidationEvent(this.id)">
 </form>
 </div>
 </div>

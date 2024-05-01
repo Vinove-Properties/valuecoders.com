@@ -127,12 +127,22 @@
     <div class="second-row" id="stickytoc">
       <div class="buyers-guide">
         <div class="vcb-col-left" id="vcb-col-left">          
-          <?php /* ?>
-          <div class="customcta padd1">
-          <div class="cushed">A Complete Guide to<br> IT Outsourcing 2023</div>
-          <div class="btn-container"><a class="white-btn" href="javascript:void(0);">Download Now</a></div>
-          </div>
-          <?php */ ?>
+          <?php 
+          $haspostPdf     = get_post_meta( $post->ID, 'post_pdf', true );
+          $haspostPdflink = get_post_meta( $post->ID, 'vc-post-pdf', true );
+          if( $haspostPdf || $haspostPdflink){
+          $guidename  = (!empty(get_post_meta($post->ID,'guide_name',true))) ? 
+          get_post_meta($post->ID,'guide_name',true) :  'A Complete Guide to<br> IT Outsourcing 2023';
+          echo '<div class="customcta padd1">
+            <div class="cushed">'.$guidename.'</div>
+            <div class="btn-container">
+              <a class="white-btn" onclick="_triggerEbook();" href="javascript:void(0);">Download Now</a>
+            </div>
+          </div>';
+          }
+          ?>
+          
+          
           <?php if( $isTocDisable === false ) : ?>  
           <div class="table-c" id="elm-toc">
             <h3>Table of Contents <a class="sw-hd" href="javascript:void(0);" onclick="document.getElementById('elm-toc').classList.toggle('active');">
@@ -171,7 +181,7 @@
         <div class="vcb-col-right <?php echo ( $isTocDisable === true ) ? ' no-toc-row' : ''; ?>" id="vcb-col-right">
           <article id="post-<?php echo esc_attr( get_the_ID() ); ?>" class="nv-single-post-wrap">
             <?php             
-              Postpdf();
+              //Postpdf();
               if( have_posts() ) :
               while( have_posts() ) : the_post();
                   the_content();
@@ -188,5 +198,5 @@
   </div>
 </main>
 <?php 
-  get_template_part('inc/file', 'pdownload');
-  get_footer();?>
+get_template_part('inc/file', 'pdownload');
+get_footer();?>

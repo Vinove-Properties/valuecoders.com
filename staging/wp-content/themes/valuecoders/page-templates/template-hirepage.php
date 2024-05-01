@@ -44,7 +44,7 @@
           <li>'.$li.'</li>
           <li>IP Rights & NDA (Non-disclosure Agreement) protection</li>
           <li>Flexible contracts, transparent pricing</li>
-          <ul>';
+          </ul>';
           endwhile;
           ?>
         <div class="button-section margin-t-50">
@@ -101,12 +101,12 @@
             <div class="glide__slides">
               <div class="glide__slide">
                 <picture>
-                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/banner-client-logo.svg" width="" height="" alt="valuecoders">
+                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/banner-client-logo.svg" alt="valuecoders">
                 </picture>
               </div>
               <div class="glide__slide">
                 <picture>
-                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/banner-client-logo-2.png" width="" height="" alt="valuecoders">
+                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/banner-client-logo-2.png" alt="valuecoders">
                 </picture>
               </div>
             </div>
@@ -713,6 +713,8 @@
     </div>
   </div>
   <div class="flex-2 right-box"><?php get_template_part('include/clientele', 'v4.0'); ?></div>
+  </div>
+</div>
 </section>
 <?php 
   }
@@ -738,10 +740,10 @@
     </div>
   </div>
   <div class="flex-2 right-box"><?php get_template_part('include/clientele', 'v4.0'); ?></div>
+</div>
+</div>
 </section>
-<?php 
-  }
-  ?>
+<?php } ?>
 <!-- WHy Hire Developer From VC -->
 <?php 
   /*

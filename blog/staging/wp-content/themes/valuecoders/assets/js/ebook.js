@@ -25,6 +25,11 @@ if( imgtrigger !== null ){
         imgtrigger[i].addEventListener("click", toggleModal);
     }
 }
+
+function _triggerEbook(){
+    toggleModal();
+}
+
 //trigger.addEventListener("click", toggleModal);
 //imgtrigger.addEventListener("click", toggleModal);
 //imgtrigger1.addEventListener("click", toggleModal);
@@ -70,13 +75,15 @@ function ValidationEvent(){
         data.forEach((value, key) => object[key] = value);
         var json = JSON.stringify(object);
         xhr = new XMLHttpRequest();
-        xhr.open('POST', vcObj.site_url+'/verify/', true);
+        //xhr.open('POST', vcObj.site_url+'/verify/', true);
+        xhr.open('POST', vcObj.site_url+'/wp-admin/admin-ajax.php?action=pxl-ebook-download', true);
         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        document.getElementById('ebook-btn').value = "Please Wait...";
         xhr.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {                
-                var response = this.responseText;
+                var response = JSON.parse(this.responseText);
                 document.getElementById('vc-lead-form').style.display = 'none';
-                document.getElementById("responce").innerHTML = response;
+                document.getElementById("responce").innerHTML = response.message;                
             }
         };
         
@@ -99,7 +106,7 @@ function eb_vcSpaceChecker(input) {
 function eb_checkRequired(inputArr) {
     //alert(inputArr);
     inputArr.forEach(function(input) {
-        console.log(input.name);
+        //console.log(input.name);
         let e = input.value.trim();
         if (!/^[A-Za-z0-9!@#$%^&*()".,;:{}<>?\[\]\-+=' ]{2,}/.test(e)) {
 
@@ -112,12 +119,9 @@ function eb_checkRequired(inputArr) {
             } else if (input.name == "country") {
                 eb_showError(input, `Please Fill Country Name`);
             }
-        } else {
-
+        }else{
             eb_checkEmail(emails);
-
             eb_checkLength(phones, 8, 20);
-
         }
     });
 }
@@ -224,7 +228,7 @@ function eb_checkLength(input, min, max) {
         if (input.name == "firstName") {
             eb_showError(input, `Please Fill Full  Name`);
         } else if (input.name == "phone") {
-            eb_showError(input, `Please Fill Phone`, "phone-error");
+            eb_showError(input, `Please Fill Phone`, "lblError_phone");
         } else if (input.name == "email") {
             eb_showError(input, `Please Fill Email`);
         } else if (input.name == "country") {

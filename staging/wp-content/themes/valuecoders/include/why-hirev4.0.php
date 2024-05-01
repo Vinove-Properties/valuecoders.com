@@ -13,12 +13,12 @@
         <p>Embrace the transformative power of technology with ValueCoders, where our expertise meets your vision. </p>
         <p>From startups to big enterprises, development organizations to digital agencies, and SMEs to Governments, we cater to varied software requirements, delivering tailor-made solutions that drive innovation, efficiency, and growth.</p>      
         <ul>
-        <li>Ongoing internal L&D programs </li>
-        <li>Experienced product development</li>
-        <li>Transparency & accountability</li>
-        <li>Daily/weekly/monthly reporting</li>
-        <li>Ongoing internal L&D programs</li>
-        <li>Experienced product development</li>
+        <li>India's Top 1% Software Talent</li>
+        <li><a href="https://www.workstatus.io/" class="ws-dotted" target="_blank">Workstatus<sup>TM</sup></a> powered Proof of Work</li>
+        <li>Trusted by Startups to Fortune 500</li>
+        <li>Idea to Deployment, We Handle All</li>
+        <li>Time-Zone Friendly: Global Presence</li>
+        <li>Top-tier Data Security Protocols</li>
         </ul>
         <?php } ?>
       </div>
@@ -170,8 +170,10 @@
             <div class="award-col">
               <span class="aw-icon">
                 <picture>
-                  <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-01.svg" alt="Valuecoders" width="58" height="38">
-                  <img class="hover-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-01.svg" alt="Valuecoders" width="58" height="38">
+                  <!-- 
+                    <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-01.svg" alt="Valuecoders" width="58" height="38"> 
+                  -->
+                  <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-01.svg" alt="Valuecoders" width="58" height="38">
                 </picture>
               </span>
               <p>From startups to big enterprises, development </p>
@@ -179,8 +181,8 @@
             <div class="award-col">
               <span class="aw-icon">
                 <picture>
-                  <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-02.svg" alt="Valuecoders" width="53" height="40">
-                  <img class="hover-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-02.png" alt="Valuecoders" width="53" height="40">
+                  <!-- <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-02.svg" alt="Valuecoders" width="53" height="40"> -->
+                  <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-02.png" alt="Valuecoders" width="53" height="40">
                 </picture>
               </span>
               <p>From startups to big enterprises, development </p>
@@ -188,8 +190,8 @@
             <div class="award-col">
               <span class="aw-icon">
                 <picture>
-                  <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-03.svg" alt="Valuecoders" width="96" height="33">
-                  <img class="hover-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-03.svg" alt="Valuecoders" width="96" height="33">
+                  <!-- <img class="hover-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-03.svg" alt="Valuecoders" width="96" height="33"> -->
+                  <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-03.svg" alt="Valuecoders" width="96" height="33">
                 </picture>
               </span>
               <p>From startups to big enterprises, development </p>
@@ -197,8 +199,8 @@
             <div class="award-col">
               <span class="aw-icon">
                 <picture>
-                  <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-04.svg" alt="Valuecoders" width="96" height="15">
-                  <img class="hover-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-04.svg" alt="Valuecoders" width="96" height="15">
+                  <!-- <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-04.svg" alt="Valuecoders" width="96" height="15"> -->
+                  <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-04.svg" alt="Valuecoders" width="96" height="15">
                 </picture>
               </span>
               <p>From startups to big enterprises, development </p>
@@ -206,8 +208,8 @@
                 <div class="award-col">
                   <span class="aw-icon">
                     <picture>
-                      <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-05.svg" alt="Valuecoders" width="36" height="36">
-                      <img class="hover-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-05.svg" alt="Valuecoders" width="36" height="36">
+                      <!-- <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-05.svg" alt="Valuecoders" width="36" height="36"> -->
+                      <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/azw-logo.svg" alt="Valuecoders" width="50" height="40">
                     </picture>
                   </span>
                   <p>From startups to big enterprises, development </p>
@@ -215,8 +217,8 @@
                 <div class="award-col">
                   <span class="aw-icon">
                     <picture>
-                      <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-06.svg" alt="Valuecoders" width="81" height="34">
-                      <img class="hover-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-06.svg" alt="Valuecoders" width="81" height="34">
+                      <!-- <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-06.svg" alt="Valuecoders" width="81" height="34"> -->
+                      <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-06.svg" alt="Valuecoders" width="81" height="34">
                     </picture>
                   </span>
                   <p>From startups to big enterprises, development </p>
@@ -224,8 +226,8 @@
                 <div class="award-col">
                   <span class="aw-icon">
                     <picture>
-                      <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-07.svg" alt="Valuecoders" width="53" height="45">
-                      <img class="hover-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-07.svg" alt="Valuecoders" width="53" height="45">
+                      <!-- <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-07.svg" alt="Valuecoders" width="53" height="45"> -->
+                      <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-07.svg" alt="Valuecoders" width="53" height="45">
                     </picture>
                   </span>
                   <p>From startups to big enterprises, development </p>
@@ -233,8 +235,8 @@
                 <div class="award-col">
                   <span class="aw-icon">
                     <picture>
-                      <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-08.svg" alt="Valuecoders" width="29" height="50">
-                      <img class="hover-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-08.svg" alt="Valuecoders" width="29" height="50">
+                      <!-- <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-08.svg" alt="Valuecoders" width="29" height="50"> -->
+                      <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-08.svg" alt="Valuecoders" width="29" height="50">
                     </picture>
                   </span>
                   <p>From startups to big enterprises, development </p>
