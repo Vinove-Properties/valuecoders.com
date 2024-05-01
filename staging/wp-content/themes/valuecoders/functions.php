@@ -375,6 +375,12 @@ if( function_exists('acf_add_options_page') ){
 		'menu_title'	=> 'Smart Teams',
 		'parent_slug'	=> 'theme-general-settings',
 	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Services - CMN Section',
+		'menu_title'	=> 'SE - CMN Section',
+		'parent_slug'	=> 'theme-general-settings',
+	));
 }
 
 require get_template_directory() . '/inc/custom-header.php';
@@ -1617,4 +1623,16 @@ function removeUlTags_v4($inputString) {
     $cleanedString = preg_replace('/<ul\b[^>]*>(.*?)<\/ul>/is', '', $inputString);
     $cleanedString = preg_replace('/<ul\b[^>]*>[\s]*<\/ul>/', '', $cleanedString);
     return $cleanedString;
+}
+
+
+function valueGetPtag( array $marray, $title = "", $class = "" ){
+	if( !is_array( $marray ) ) return;
+	$imgClass = ( !empty( $class ) ) ? 'class="'.$class.'"' : '';
+	return '<picture '.$imgClass.'>
+	'.getvcWebpURL($marray['ID']).'
+	<source type="'.$marray['mime_type'].'" srcset="'.$marray['url'].'">
+	<img loading="lazy" src="'.$marray['url'].'" alt="'.$marray['title'].'" width="'.$marray['width'].'" 
+	height="'.$marray['height'].'">
+	</picture>';
 }

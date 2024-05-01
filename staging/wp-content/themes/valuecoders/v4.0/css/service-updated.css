@@ -6852,6 +6852,9 @@ a {
 .development-phase .flex-6 .box {
   background: #ffffff; }
 
+.testimonial-section {
+  background: #ffffff !important; }
+
 .tailored-tech .tailored-out {
   justify-content: space-between;
   position: relative; }
@@ -6953,6 +6956,8 @@ a {
             color: #656565; }
         .tailored-tech .tailored-out .tailored-slider .flex-3 .box-3:hover .overlay-text {
           opacity: 1; }
+.tailored-tech .glider {
+  width: 100% !important; }
 .tailored-tech .glider-prev {
   background: url(../images/tail-prev.svg) no-repeat center;
   width: 36px;

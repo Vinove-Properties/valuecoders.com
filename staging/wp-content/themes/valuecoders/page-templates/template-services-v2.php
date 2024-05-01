@@ -1,5 +1,5 @@
 <?php
-  /* 
+  /* Nandani
   Template Name: Service Page version-2 Template 
   */ 
   global $post;
@@ -216,32 +216,34 @@
     <div class="service-tabs-section margin-t-80">
       <div class="tab-row">
         <?php 
-        if( $spec ){
-        echo '<nav id="service-tabs" class="tab-nav"><div class="tab-scroll">';
-        $tc = 0;
-        foreach( $spec as $row ){ $tc++;
+          if( $spec ){
+          echo '<nav id="service-tabs" class="tab-nav"><div class="tab-scroll">';
+          $tc = 0;
+          foreach( $spec as $row ){ $tc++;
+            $active = ( $tc === 1 ) ? ' active' : '';
+            echo '<div class="tablist '.$active.'" data-tab="#tab0'.$tc.'"><a href="#tab0'.$tc.'">
+                '.$row['title'].'</a>
+              </div>';
+          }
+          echo '</nav></div>';  
+          
+          echo '<div class="bcontents">';
+          $tc = 0;
+          foreach( $spec as $row ){ $tc++;
           $active = ( $tc === 1 ) ? ' active' : '';
-          echo '<div class="tablist '.$active.'" data-tab="#tab0'.$tc.'"><a href="#tab0'.$tc.'">
-              '.$row['title'].'</a>
-            </div>'
-        }
-        echo '</nav></div>';  
-
-        echo '<div class="bcontents">';
-        $tc = 0;
-        foreach( $spec as $row ){ $tc++;
-        $active = ( $tc === 1 ) ? ' active' : '';
-        $picture = ( $row['image'] ) ? vc_pictureElm( $row['image'], $row['title'] ) : '';
-        $link = ( $row['link'] ) ? '<div class="know-more-link"><a href="'.vc_siteurl($row['link']).'">Know More</a></div>' : '';
-        echo '<div id="tab0'.$tc.'" class="tab-contents '.$active.'">
-            <div class="dis-flex">
-              <div class="image-box">'.$picture.'</div>
-              <div class="content-box">'.$row['content'].$link.'</div>
-            </div>
-          </div>';
-        echo '</div>';
-        }
-        ?>
+          $picture = ( $row['image'] ) ? vc_pictureElm( $row['image'], $row['title'] ) : '';
+          $link = ( $row['link'] ) ? '<div class="know-more-link"><a href="'.vc_siteurl($row['link']).'">Know More</a></div>' : '';
+          echo '<div id="tab0'.$tc.'" class="tab-contents '.$active.'">
+              <div class="dis-flex">
+                <div class="image-box">'.$picture.'</div>
+                <div class="content-box">'.$row['content'].$link.'</div>
+              </div>
+            </div>';
+          
+          }
+          echo '</div>';
+          }
+          ?>
       </div>
     </div>
   </div>
@@ -293,24 +295,24 @@
   }
   }
   ?>
-
 <section class="lets-discuss-cta bg-blue-linear padding-t-70 padding-b-70">
   <div class="container">
     <div class="dis-flex justify-sb">
       <div class="left-sec">
         <div class="head-txt">
-					<h2><?php 
-					echo (isset($vcBtn['title-one']) && !empty($vcBtn['title-one'])) ? $vcBtn['title-one'] : 
-					"Transform Your Business Today"; ?>
-					</h2>
-					<p>
-					<?php 
-					echo (isset($vcBtn['text-one']) && !empty($vcBtn['text-one'])) ? $vcBtn['text-one'] : 
-					"Discover bespoke IT solutions for unparalleled business growth."; 
-					?></p>
+          <h2><?php 
+            echo (isset($vcBtn['title-one']) && !empty($vcBtn['title-one'])) ? $vcBtn['title-one'] : 
+            "Transform Your Business Today"; ?>
+          </h2>
+          <p>
+            <?php 
+              echo (isset($vcBtn['text-one']) && !empty($vcBtn['text-one'])) ? $vcBtn['text-one'] : 
+              "Discover bespoke IT solutions for unparalleled business growth."; 
+              ?>
+          </p>
         </div>
         <div class="btn-sec margin-t-50">
-        <a href="<?php echo site_url('/contact'); ?>" class="btn rounded"><span class="text-white">Get Started</span></a>
+          <a href="<?php echo site_url('/contact'); ?>" class="btn rounded"><span class="text-white">Get Started</span></a>
         </div>
       </div>
       <div class="right-sec">
@@ -318,35 +320,31 @@
           <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/cta-image.png">
           <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/cta-image.png">
           <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cta-image.png" alt="valuecoders" width="345" 
-          height="206">
+            height="206">
         </picture>
       </div>
     </div>
   </div>
 </section>
-
-
 <?php get_template_part('include/why', 'hirev4.0'); ?>
-
-
 <section class="counter-column-section bg-blue-linear padding-t-70 padding-b-70">
   <div class="container">
     <div class="dis-flex justify-sb">
       <div class="left-sec">
         <div class="head-txt">
-				<h2>
-				<?php 
-				echo (isset($vcBtn['title-two']) && !empty($vcBtn['title-two'])) ? $vcBtn['title-two'] : 
-				"Got a Project in Mind? Tell Us More"; ?>
-				</h2>
-				<p>
-				<?php 
-				echo (isset($vcBtn['text-two']) && !empty($vcBtn['text-two'])) ? $vcBtn['text-two'] : 
-				"Drop us a line and we'll get back to you immediately to schedule a call and discuss your needs personally."; ?>				
-				</p>
+          <h2>
+            <?php 
+              echo (isset($vcBtn['title-two']) && !empty($vcBtn['title-two'])) ? $vcBtn['title-two'] : 
+              "Got a Project in Mind? Tell Us More"; ?>
+          </h2>
+          <p>
+            <?php 
+              echo (isset($vcBtn['text-two']) && !empty($vcBtn['text-two'])) ? $vcBtn['text-two'] : 
+              "Drop us a line and we'll get back to you immediately to schedule a call and discuss your needs personally."; ?>				
+          </p>
         </div>
         <div class="btn-sec margin-t-50">
-        <a href="<?php echo site_url('/contact'); ?>" class="btn rounded"><span class="text-white">Get Started</span></a>
+          <a href="<?php echo site_url('/contact'); ?>" class="btn rounded"><span class="text-white">Get Started</span></a>
         </div>
       </div>
       <div class="right-sec">
@@ -392,113 +390,211 @@
     </div>
   </div>
 </section>
-
-
 <?php 
-  $tailTech = get_field('tailored_tech');
-  if( isset($tailTech['is_enabled'] ) && ($tailTech['is_enabled'] == "yes") ) :
+  $tailTech = get_field( 'tailored_tech' );
+  if( $tailTech['is_enable'] == 'yes' ) :
   ?>
 <section class="tailored-tech padding-t-120 padding-b-120">
-      <div class="container">
-        <div class="dis-flex tailored-out">
-          <div class="left-section">
-            <div class="flex-1">
-              <div class="heading">
-			  <?php echo $tailTech['top_content']; ?>
-              </div>
-            </div>
-          </div>
-          <div class="dis-flex tailored-slider" id="tailored-slide">
-            <div class="glider" id="glider">
-
-
-              <div class="flex-3">
-                <div class="box-3" style="background-image:url(<?php bloginfo('template_url'); ?>/v4.0/images/tech-image.png);">
-                  <h3>Startups</h3>
-                  <div class="overlay-text">
-                    <div class="over-img">
-                      <picture>
-                        <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/tech-01.png">
-                        <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/tech-01.png">
-                        <img class="icon" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/tech-01.png"
-                          alt="valuecoders" width="40" height="40">
-                      </picture>
-                    </div>
-                    <h3>Startups</h3>
-                    <p>Accelerate your startup’s growth with tailor-made software solutions designed to streamline operations and scale your business effectively.</p>
-                  </div>
-                </div>
-              </div>
-              
-             
-            </div>
-          </div>
-          <div role="tablist" class="dots"></div>
-          <div class="prev-next-btn">
-            <button class="glider-prev tail-prev" aria-disabled="false"></button>
-            <button class="glider-next tail-next" aria-disabled="false"></button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-	<?php endif; ?>
-
-
-
-<?php getCmnIndustriesv4(); ?>
-<?php
-  $guideTopics 	= get_field('guide-topics');
-  $gtEnabled 		= $guideTopics['is_enabled'];
-  if( $gtEnabled == 'yes' ) :
-  ?>
-<section id="has-ug" class="tab-scroll-section padding-t-120 padding-b-120 <?php echo $guideTopics['sc_background']; ?>">
   <div class="container">
-    <div class="head-txt text-center">
-      <?php echo $guideTopics['content']; ?>
-    </div>
-    <?php 
-      $topics = $guideTopics['topics'];
-      if( $topics ) :
-      ?>
-    <div id="scroll-box" class="dis-flex margin-t-100 tab-contents">
-      <div class="left-tabs" id="left-scroll">
-        <div class="sticky-tab">
-          <span class="tab-head clr-white">Guide Topics</span>
-          <div class="tab-nav">
-            <?php 
-              $tn = 0;
-              foreach( $topics as $topicNav ){
-              	$tn++;
-              	$isActive = "";
-              	if( $tn == 1 ){
-              		$isActive = "is-active";
-              	}
-              	echo '<a href="#ug'.$tn.'" class="tab-link">'.$topicNav['title'].'</a>';
-              } 
-              ?>
+    <div class="dis-flex tailored-out">
+      <div class="left-section">
+        <div class="flex-1">
+          <div class="heading">
+            <?php echo $tailTech['top_content']; ?>
           </div>
         </div>
       </div>
-      <div class="right-tabs" id="right-scroll">
-        <?php 
-          $tn = 0;
-          foreach( $topics as $topicText ){
-          	$tn++;
-          	$isActive = "";
-          	if( $tn == 1 ){
-          		$isActive = "is-active";
-          	}
-          	echo '<div class="tab-content" id="ug'.$tn.'">'.$topicText['text'].'</div>';
-          } 
-          ?>
+      <div class="dis-flex tailored-slider" id="tailored-slide">
+        <div class="glider" id="glider">
+          <?php 
+            if( $tailTech['cards'] ){
+            foreach( $tailTech['cards'] as $card ){
+              echo '<div class="flex-3">
+              <div class="box-3" style="background-image:url('.$card['image'].');">
+            <h3>'.$card['title'].'</h3>
+            <div class="overlay-text">
+            <div class="over-img">
+            <img class="icon" src=" '.$card['icon'].'">
+            </div>
+            '.$card['content'].'
+            </div>
+            
+            
+              </div>
+              </div>';
+              }  
+            }
+            ?>
+        </div>
+      </div>
+      <div role="tablist" class="dots"></div>
+      <div class="prev-next-btn">
+        <button class="glider-prev tail-prev" aria-disabled="false"></button>
+        <button class="glider-next tail-next" aria-disabled="false"></button>
       </div>
     </div>
-    <?php endif; ?>
   </div>
 </section>
 <?php endif; ?>
+<?php 
+  $techSol = get_field('tech-solutions');
+  if( isset( $techSol['is_enabled'] ) && ($techSol['is_enabled'] == "yes") ) :
+  ?>
+<section class="tools-developer tech-stack-list padding-t-120 padding-b-120 bg-dark-theme">
+  <div class="container">
+    <div class="heading text-center">
+      <?php echo $techSol['content']; ?>
+    </div>
+    <div class="dis-flex margin-t-80 row">
+      <?php 
+        if( $techSol['options'] ){
+          foreach( $techSol['options'] as $tech){
+          echo '<div class="flex-3 '.vcHasAnchor( $tech['content'] ).'">
+          <div class="card no-bg"><div class="box-3">'.$tech['content'].'</div></div>
+          </div>';
+          }
+        }
+        ?>      
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+<section class="lets-discuss-cta bg-blue-linear padding-t-70 padding-b-70">
+  <div class="container">
+    <div class="dis-flex justify-sb">
+      <div class="left-sec">
+        <div class="head-txt">
+          <h2><?php 
+            echo (isset($vcBtn['title-one']) && !empty($vcBtn['title-one'])) ? $vcBtn['title-one'] : 
+            "Transform Your Business Today"; ?>
+          </h2>
+          <p>
+            <?php 
+              echo (isset($vcBtn['text-one']) && !empty($vcBtn['text-one'])) ? $vcBtn['text-one'] : 
+              "Discover bespoke IT solutions for unparalleled business growth."; 
+              ?>
+          </p>
+        </div>
+        <div class="btn-sec margin-t-50">
+          <a href="<?php echo site_url('/contact'); ?>" class="btn rounded"><span class="text-white">Get Started</span></a>
+        </div>
+      </div>
+      <div class="right-sec">
+        <picture class="icon-box">
+          <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/cta-image.png">
+          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/cta-image.png">
+          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cta-image.png" alt="valuecoders" width="345" 
+            height="206">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+<?php 
+  $sfMethod = get_field('sf-meth');
+  if( $sfMethod !== "no" )  :
+  $sdmethod = get_field('sd-method','option'); 
+  ?>
+<section id="sd-metho" class="develop-section padding-t-120 padding-b-120">
+  <div class="container">
+    <div class="head-txt text-center"><?php echo $sdmethod['content']; ?></div>
+    <div class="dev-cards margin-t-80">
+      <?php 
+        if($sdmethod['cards']){
+        $ic = 0;  
+        foreach( $sdmethod['cards'] as $card){ $ic++;
+        $isActive = ( $ic === 1 ) ? ' active' : '';  
+        $thumbnail = ( $card['thumbnail'] ) ? valueGetPtag( $card['thumbnail'] ) : '';  
+        echo '<div class="card"'.$isActive.'>
+          '.$thumbnail.'
+          <div class="card-info">'.$card['content'].'</div>
+          <span class="card-heading">'.$card['title'].'</span>
+        </div>';
+        }  
+        }
+        ?>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+<?php 
+  $ourProcess = get_field( 'our-process' );
+  if( $ourProcess['is_enable'] == 'yes' ) :
+  ?>
+<section class="development-phase padding-t-120 padding-b-120 bg-dark-theme">
+  <div class="container">
+    <div class="head-txt text-center">
+      <h2>Our Process</h2>
+      <p>We specialize in engineering custom software that's both stable and secure, using a variety of tech tools.
+      </p>
+    </div>
+    <div class="dis-flex col-box-outer margin-t-100">
+      <div class="flex-6">
+        <div class="box">
+          <h4>Software Kick-off
+          </h4>
+          <p>Dive into bi-weekly sprints and rollouts aligned with project timelines.</p>
+        </div>
+      </div>
+      <div class="flex-6">
+        <div class="box">
+          <h4>Software Kick-off
+          </h4>
+          <p>Dive into bi-weekly sprints and rollouts aligned with project timelines.</p>
+        </div>
+      </div>
+      <div class="flex-6">
+        <div class="box">
+          <h4>Software Kick-off
+          </h4>
+          <p>Dive into bi-weekly sprints and rollouts aligned with project timelines.</p>
+        </div>
+      </div>
+      <div class="flex-6">
+        <div class="box">
+          <h4>Software Kick-off
+          </h4>
+          <p>Dive into bi-weekly sprints and rollouts aligned with project timelines.</p>
+        </div>
+      </div>
+      <div class="flex-6">
+        <div class="box">
+          <h4>Software Kick-off
+          </h4>
+          <p>Dive into bi-weekly sprints and rollouts aligned with project timelines.</p>
+        </div>
+      </div>
+      <div class="flex-6">
+        <div class="box">
+          <h4>Software Kick-off
+          </h4>
+          <p>Dive into bi-weekly sprints and rollouts aligned with project timelines.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+<?php 
+  $inTechnologies = get_field('lt-integration');
+  if( isset( $inTechnologies['is_enabled'] ) && ($inTechnologies['is_enabled'] == "yes") ) :
+  ?>
+<section class="tech-stacks padding-t-120 padding-b-120">
+  <div class="container">
+    <div class="heading text-center"><?php echo $inTechnologies['content']; ?></div>
+    <div class="dis-flex col-box-outer margin-t-50">
+      <?php 
+        if( $inTechnologies['cards'] ){
+          foreach( $inTechnologies['cards'] as $row ){
+          echo '<div class="flex-3 col-box"><div class="inner-box">'.$row['content'].'</div></div>';
+          }
+        }
+        ?>    
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+<?php getCmnIndustriesv4(); ?>
 <!-- Hire Model #Starts Here -->
 <?php 
   $hireModel 			  = get_field('hiring_models');
@@ -576,12 +672,63 @@
   }
   */ 
   ?>
+<?php
+  $guideTopics 	= get_field('guide-topics');
+  $gtEnabled 		= $guideTopics['is_enabled'];
+  if( $gtEnabled == 'yes' ) :
+  ?>
+<section id="has-ug" class="tab-scroll-section padding-t-120 padding-b-120  <?php echo $guideTopics['sc_background']; ?>">
+  <div class="container">
+    <div class="head-txt text-center">
+      <?php echo $guideTopics['content']; ?>
+    </div>
+    <?php 
+      $topics = $guideTopics['topics'];
+      if( $topics ) :
+      ?>
+    <div id="scroll-box" class="dis-flex margin-t-100 tab-contents">
+      <div class="left-tabs" id="left-scroll">
+        <div class="sticky-tab">
+          <span class="tab-head clr-white">Guide Topics</span>
+          <div class="tab-nav">
+            <?php 
+              $tn = 0;
+              foreach( $topics as $topicNav ){
+              	$tn++;
+              	$isActive = "";
+              	if( $tn == 1 ){
+              		$isActive = "is-active";
+              	}
+              	echo '<a href="#ug'.$tn.'" class="tab-link">'.$topicNav['title'].'</a>';
+              } 
+              ?>
+          </div>
+        </div>
+      </div>
+      <div class="right-tabs" id="right-scroll">
+        <?php 
+          $tn = 0;
+          foreach( $topics as $topicText ){
+          	$tn++;
+          	$isActive = "";
+          	if( $tn == 1 ){
+          		$isActive = "is-active";
+          	}
+          	echo '<div class="tab-content" id="ug'.$tn.'">'.$topicText['text'].'</div>';
+          } 
+          ?>
+      </div>
+    </div>
+    <?php endif; ?>
+  </div>
+</section>
+<?php endif; ?>
 <?php 
   $faqs 		= get_field('faq-group');
   $faqEnable 	= $faqs['is_enabled'];
   if( $faqEnable == "yes" ) :
   ?>
-<section class="faq-section padding-t-120 padding-b-120" data-nosnippet>
+<section class="faq-section padding-t-120 padding-b-120 bg-dark-theme" data-nosnippet>
   <div class="container">
     <div class="head-txt text-center"><?php echo $faqs['content']; ?></div>
     <?php 
@@ -604,61 +751,5 @@
   </div>
 </section>
 <?php endif; ?>
-<?php if( is_page( 11149 ) ){ ?>
-<section class="table-list-section bg-light padding-t-120 padding-b-120">
-  <div class="container">
-    <div class="head-txt text-center">
-      <h2>Comparative Analysis : In-House, Freelancers Or ValueCoders</h2>
-      <p>There are many options available for hiring your IT talent. Some of these options are hiring an in-house talent, working with freelancers, or get offshore experts with us. Let’s do a comparative analysis of these options:</p>
-    </div>
-    <div class="dis-flex col-box-outer margin-t-100">
-      <div class="flex-4 table-list">
-        <ul>
-          <li class="title clr-white">Factor</li>
-          <li>Time to get right developers</li>
-          <li>Time to start a project</li>
-          <li>Recurring cost of training & benefits</li>
-          <li>Time to scale size of the team</li>
-          <li>Pricing (weekly average)</li>
-          <li>Project failure risk</li>
-        </ul>
-      </div>
-      <div class="flex-4 table-list bg-row-yellow">
-        <ul>
-          <li class="title">ValueCoders</li>
-          <li>1 day - 2 weeks</li>
-          <li>1 day - 2 weeks</li>
-          <li>0</li>
-          <li>1 day - 2 weeks</li>
-          <li>1.5X</li>
-          <li>Extremely low, we have a 98% success rate</li>
-        </ul>
-      </div>
-      <div class="flex-4 table-list">
-        <ul>
-          <li class="title clr-white">In - House</li>
-          <li>4 - 12 weeks</li>
-          <li>2 - 10 weeks</li>
-          <li>$10,000 -$30,000</li>
-          <li>4 - 16 weeks</li>
-          <li>2X</li>
-          <li>Low</li>
-        </ul>
-      </div>
-      <div class="flex-4 table-list">
-        <ul>
-          <li class="title clr-white">Freelance</li>
-          <li>1 - 12 weeks</li>
-          <li>1 - 10 weeks</li>
-          <li>0</li>
-          <li>1 - 12 weeks</li>
-          <li>1X</li>
-          <li>Very High</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-<?php } ?>
-<?php cmnTestimonials_v3( $thisPostID ); ?>
+<?php get_template_part('include/testimonials', 'v4.0'); ?>
 <?php get_footer(); ?>
