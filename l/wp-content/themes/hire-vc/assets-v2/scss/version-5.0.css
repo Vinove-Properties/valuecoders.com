@@ -837,12 +837,12 @@ textarea {
       line-height: 28px;
       margin-top: 8px;
       position: relative;
-      color: #6f6f6f; }
+      color: #bab9b9; }
     .contact-us-section .left-box h2 {
       font-size: 34px;
       color: #ffffff; }
     .contact-us-section .left-box h3 {
-      color: #bdb7b7; }
+      color: #ffffff; }
     .contact-us-section .left-box .profile-outer {
       margin-top: 20px; }
     .contact-us-section .left-box .profile-pic {
@@ -860,6 +860,8 @@ textarea {
           background: url(../images/ac-02.png) no-repeat; }
         .contact-us-section .left-box .profile-pic i.pic3 {
           background: url(../images/ac-03.png) no-repeat; }
+        .contact-us-section .left-box .profile-pic i.pic4 {
+          background: url(../images/ac-04.png) no-repeat; }
   .contact-us-section h2 {
     margin-bottom: 40px; }
   .contact-us-section .list-box {
@@ -2514,6 +2516,8 @@ textarea {
       .process-work .col-left .head-txt {
         text-align: center;
         margin: 0 0 30px; }
+        .process-work .col-left .head-txt h2 br {
+          display: none; }
       .process-work .col-left .image-wrap {
         text-align: center; }
     .process-work .col-right {

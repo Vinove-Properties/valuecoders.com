@@ -1109,3 +1109,28 @@ function closeIntPopUp(elm, subFld = false){
     document.getElementById('myBtn2').click();
   }
 }
+
+
+
+var tabMC       = document.querySelectorAll("#service-tabs .tablist");
+                  var tabPanesMc  = document.getElementsByClassName("tab-contents");
+                  function activateTabFx(e){
+                  e.preventDefault();  
+                  tabMC.forEach(function(label, index){
+                   label.classList.remove("active");
+                  });
+                  
+                  [].forEach.call(tabPanesMc, function(pane, index){
+                   pane.classList.remove("active");
+                  }); 
+                  
+                  if( e.target === this || this.contains(e.target)){
+                   var clickedTab = this.getAttribute("data-tab");
+                   this.classList.add("active");
+                   document.querySelector(clickedTab).classList.add("active");
+                  }    
+                  }
+                  
+                  tabMC.forEach(function(label, index){
+                  label.addEventListener("click", activateTabFx);
+                  }); 

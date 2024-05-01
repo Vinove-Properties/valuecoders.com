@@ -3520,12 +3520,13 @@ textarea {
   transform: translateZ(0);
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: none;
-  overflow: hidden; }
+  -ms-overflow-style: none; }
   .glider::-webkit-scrollbar {
     opacity: 0;
-    height: 0;
-    display: none; }
+    height: 0; }
+  .glider::-moz-scrollbar {
+    opacity: 0;
+    height: 0; }
 
 .glider-contain {
   margin: 0 auto;
@@ -3642,11 +3643,6 @@ textarea {
 
 .glider-dot.active {
   background: #a89cc8; }
-
-.day .glider-next {
-  background-position: -53px 0; }
-.day .glider-prev {
-  background-position: -53px 0; }
 
 @media (max-width: 36em) {
   .glider::-webkit-scrollbar {

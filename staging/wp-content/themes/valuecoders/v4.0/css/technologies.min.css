@@ -695,7 +695,7 @@ textarea {
   text-transform: initial; }
 
 .footer {
-  background: #05164d;
+  background: #040F34;
   padding: 20px 0; }
   .footer span,
   .footer h4,
@@ -2742,7 +2742,7 @@ body.page-template-template-testimonials .client-video-section iframe,
         display: block;
         color: #666666; }
         .tech-stacks .col-box-outer .col-box .inner-box ul li a:after {
-          content: '';
+          content: "";
           position: absolute;
           left: 0;
           top: 0;
@@ -2751,13 +2751,69 @@ body.page-template-template-testimonials .client-video-section iframe,
           height: 100%; }
         .tech-stacks .col-box-outer .col-box .inner-box ul li a:hover {
           color: #212121;
-          border-color: #FFAD00; }
+          border-color: #ffad00; }
           .tech-stacks .col-box-outer .col-box .inner-box ul li a:hover:after {
             background: rgba(255, 173, 0, 0.15); }
     .tech-stacks .col-box-outer .col-box .inner-box ul a:hover li {
       background: black; }
 .tech-stacks .col-box-outer .flex-1 .inner-box {
   min-height: initial; }
+
+.tools-developer .flex-1,
+.tools-developer .flex-1,
+.tools-developer .flex-2,
+.tools-developer .flex-3 {
+  margin-top: 20px; }
+.tools-developer .card {
+  height: 100%;
+  border-radius: 10px;
+  border: 1.5px solid #ececec;
+  margin: 0 10px;
+  background: #ffffff;
+  box-shadow: 0px 4px 40px 0px rgba(237, 246, 255, 0.3); }
+  .tools-developer .card:hover {
+    border: 1.5px solid rgba(255, 173, 0, 0.3); }
+  .tools-developer .card.has-anchor:hover {
+    border: 1.5px solid rgba(255, 173, 0, 0.3); }
+  .tools-developer .card .box-3 {
+    padding: 30px 20px;
+    min-height: 153px;
+    transition: all 0.3s ease-in-out; }
+    .tools-developer .card .box-3 h3 {
+      margin-bottom: 20px;
+      padding: 0 0 15px;
+      border-image-slice: 1;
+      border-image-source: linear-gradient(to right, #ffcf66, #e19b01);
+      border-bottom: 2px solid; }
+      .tools-developer .card .box-3 h3 a {
+        opacity: 1;
+        color: #000; }
+    .tools-developer .card .box-3 ul li {
+      margin-bottom: 10px;
+      padding-left: 30px;
+      position: relative; }
+      .tools-developer .card .box-3 ul li a {
+        text-decoration: underline;
+        color: #414141; }
+        .tools-developer .card .box-3 ul li a:hover {
+          text-decoration: none; }
+      .tools-developer .card .box-3 ul li:before {
+        content: "";
+        background: url(../images/check.png) no-repeat center;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        left: 0;
+        top: 2px; }
+.tools-developer .flex-1 .box-3 {
+  min-height: auto; }
+.tools-developer.technology-stack .card {
+  background-color: transparent; }
+.tools-developer.technology-stack h3 {
+  font-size: 18px; }
+.tools-developer.fullwidth .flex-2:last-child,
+.tools-developer.fullwidth .flex-3:last-child {
+  flex-basis: 100%; }
 
 @media only screen and (max-width: 1320px) {
   .tech-stacks .col-box-outer .col-box {
@@ -2768,7 +2824,7 @@ body.page-template-template-testimonials .client-video-section iframe,
     .tech-stacks .col-box-outer .col-box .inner-box {
       padding-bottom: 35px; }
       .tech-stacks .col-box-outer .col-box .inner-box ul {
-        margin: 10px  0 0; }
+        margin: 10px 0 0; }
         .tech-stacks .col-box-outer .col-box .inner-box ul li {
           margin: 10px 10px 0 0; } }
 @media only screen and (max-width: 991px) {
@@ -2782,7 +2838,14 @@ body.page-template-template-testimonials .client-video-section iframe,
       .tech-stacks .col-box-outer .col-box .inner-box ul {
         margin: 20px 0 0; }
         .tech-stacks .col-box-outer .col-box .inner-box ul li {
-          display: inline-block; } }
+          display: inline-block; }
+
+  .tools-developer .card .box-3 {
+    padding: 20px 20px;
+    min-height: initial; }
+    .tools-developer .card .box-3 h3 {
+      margin-bottom: 10px;
+      padding: 0 0 15px; } }
 @media only screen and (max-width: 767px) {
   .tech-stacks .col-box-outer .col-box {
     padding-right: 0; }
@@ -4681,20 +4744,23 @@ body.page-template-template-testimonials .client-video-section iframe,
     .hiring-models .cto-service .box .inner-text {
       padding: 10px 20px 0; } }
 .contact-us-section {
-  position: relative; }
+  position: relative;
+  background: #05164d; }
   .contact-us-section .left-box {
-    flex-basis: 34%;
+    flex-basis: 38%;
     position: relative;
     z-index: 1; }
     .contact-us-section .left-box p {
       line-height: 26px;
-      margin: 0 0 35px; }
+      margin: 0 0 35px;
+      color: #ffffff; }
     .contact-us-section .left-box h2 {
-      color: #05164d;
+      color: #ffffff;
       margin: 0 0 10px; }
     .contact-us-section .left-box h3 {
       margin-bottom: 10px;
-      font-weight: 500; }
+      font-weight: 500;
+      color: #ffffff; }
     .contact-us-section .left-box .list-box {
       padding-left: 60px;
       position: relative;
@@ -4715,8 +4781,7 @@ body.page-template-template-testimonials .client-video-section iframe,
         align-items: center;
         z-index: 1; }
     .contact-us-section .left-box .side-dash1 p {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      color: #3f3f3f; }
+      color: #ffffff; }
     .contact-us-section .left-box .side-dash1::before {
       content: "1"; }
     .contact-us-section .left-box .side-dash1::after {
@@ -4737,12 +4802,12 @@ body.page-template-template-testimonials .client-video-section iframe,
       justify-content: space-between;
       margin: 40px 0 0; }
       .contact-us-section .left-box .award-logo .logo-box {
-        padding-right: 20px;
-        opacity: 0.4; }
-        .contact-us-section .left-box .award-logo .logo-box:hover {
-          opacity: 1; }
+        padding-right: 10px; }
   .contact-us-section .right-box {
-    width: 55%; }
+    width: 55%;
+    background: #ffffff;
+    padding: 40px 40px 0;
+    border-radius: 15px; }
   .contact-us-section .form-text-cont {
     flex-basis: 50%;
     margin-bottom: 20px;
@@ -5088,7 +5153,10 @@ body.page-template-template-testimonials .client-video-section iframe,
     flex-basis: 100%; }
   .contact-us-section .right-box {
     width: 100%;
-    margin-top: 40px; } }
+    margin-top: 40px;
+    padding: 40px 20px 0; }
+  .contact-us-section .qz-captcha {
+    margin-top: 15px; } }
 @media only screen and (max-width: 767px) {
   .contact-us-section .left-box p {
     line-height: 24px; }

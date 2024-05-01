@@ -49,7 +49,7 @@ h1 {
 
 h2 {
   font-size: 44px;
-  line-height: 60px;
+  line-height: 50px;
   font-weight: 600;
   color: #212121; }
 
@@ -71,7 +71,8 @@ p {
   line-height: 40px; }
 
 a {
-  color: #656565; }
+  color: #212121;
+  text-decoration: none; }
 
 .container,
 .hero-img-section h1 {
@@ -150,6 +151,12 @@ strong {
 .padding-b-150 {
   padding-bottom: 150px; }
 
+.padding-t-100 {
+  padding-top: 100px; }
+
+.padding-b-100 {
+  padding-bottom: 100px; }
+
 .margin-b-150 {
   margin-bottom: 150px; }
 
@@ -179,6 +186,8 @@ strong {
   margin: auto; }
   .head-txt p {
     margin-top: 20px; }
+  .head-txt small {
+    font-size: 16px; }
   .head-txt a {
     text-decoration: none;
     transition: all 0.3s ease-in-out; }
@@ -276,7 +285,7 @@ strong {
     content: "";
     clear: both;
     display: block;
-    background: #ffb81d url(../images/button-icons-sprite.png) 4px -85px no-repeat;
+    background: #ffb81d url(../images/button-icons-sprite.png) 4px 5px no-repeat;
     width: 20px;
     height: 20px;
     position: absolute;
@@ -313,6 +322,8 @@ strong {
 .client-logo-box-section {
   background: #f6f6f6;
   padding: 18px 0; }
+  .client-logo-box-section .dis-flex {
+    justify-content: space-between; }
   .client-logo-box-section .logo-heading {
     width: 220px; }
   .client-logo-box-section h4 {
@@ -324,9 +335,8 @@ strong {
   .client-logo-box-section .dis-flex {
     align-items: center; }
   .client-logo-box-section .logo-box-outer {
-    flex-basis: calc(100% - 220px);
-    justify-content: space-between;
-    padding-left: 120px; }
+    flex-basis: calc(100% - 260px);
+    justify-content: space-between; }
   .client-logo-box-section .logo-box {
     background: url(../images/header-client-logo-sprite-for-light.svg) 0 0 no-repeat; }
     .client-logo-box-section .logo-box.logo1 {
@@ -354,23 +364,20 @@ strong {
       height: 40px;
       background-position: -355px -519px; }
     .client-logo-box-section .logo-box.logo7 {
-      display: none;
       width: 164px;
       height: 50px;
       background-position: -346px -623px; }
     .client-logo-box-section .logo-box.logo8 {
-      display: none;
       width: 172px;
       height: 32px;
       background-position: -340px -728px; }
 
 .input-field {
-  color: #ffffff;
-  opacity: 0.9; }
+  color: #ffffff; }
 
 ::placeholder {
-  color: #ffffff;
-  opacity: 0.9; }
+  color: black;
+  opacity: 0.5; }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -423,8 +430,11 @@ textarea {
 .for-box-effect {
   transition: all 0.3s ease-in-out;
   background: transparent; }
-  .for-box-effect:hover {
-    background: #f6f6f6; }
+
+.two-column-right-box-section.bg-dark-theme .has-vlink:hover {
+  background: #fff; }
+.two-column-right-box-section .has-vlink:hover {
+  background: #f6f6f6; }
 
 .box {
   background-color: #f6f6f6; }
@@ -445,7 +455,7 @@ textarea {
 
 .default-light {
   background-color: #ffffff; }
-  .default-light .box:hover {
+  .default-light .has-vlink .box:hover {
     background: #f6f6f6 !important; }
 
 .box {
@@ -464,15 +474,15 @@ textarea {
   background: rgba(255, 255, 255, 0.2); }
 
 .green-bdr-btn {
-  border-color: #ffb81d;
-  color: #ffb81d; }
+  border-color: #60b741;
+  color: #60b741; }
   .green-bdr-btn .arrow-icon.green::after {
-    background-position: -21px 2px; }
+    background-position: 0 2px; }
   .green-bdr-btn:hover {
-    border-color: #60b741;
-    color: #60b741; }
+    border-color: #ffb81d;
+    color: #ffb81d; }
     .green-bdr-btn:hover .arrow-icon.green::after {
-      background-position: 0 2px; }
+      background-position: -21px 2px; }
 
 .link-box {
   background: transparent;
@@ -559,7 +569,6 @@ textarea {
     .second-level-section .col-estimate-box .inner-content {
       background: #1b1a39;
       border: 1px solid #403f6f;
-      border-radius: 4px;
       padding: 15px 30px 15px 40px;
       height: 100%; }
       .second-level-section .col-estimate-box .inner-content p {
@@ -665,6 +674,8 @@ textarea {
     background-color: #373660; }
   .contact-us-section .bg-voilet {
     background-color: #17152f; }
+  .contact-us-section .bg-midnight {
+    background-color: #1d1c39; }
   .contact-us-section .right-box {
     float: left;
     width: 35%;
@@ -673,7 +684,7 @@ textarea {
     .contact-us-section .right-box p {
       font-size: 18px;
       line-height: 28px;
-      color: #908fa1; }
+      color: #908FA1; }
   .contact-us-section .left-box {
     float: left;
     width: 65%;
@@ -714,6 +725,8 @@ textarea {
         vertical-align: bottom; }
       .contact-us-section .footer-client-box .client-box .client-img {
         flex-basis: 25%; }
+        .contact-us-section .footer-client-box .client-box .client-img img {
+          border-radius: 5px; }
       .contact-us-section .footer-client-box .client-box .client-detail {
         flex-basis: 75%;
         padding-left: 20px; }
@@ -732,17 +745,18 @@ textarea {
     margin-top: 60px; }
   .contact-us-section .form-text-cont {
     flex-basis: 50%;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     position: relative; }
     .contact-us-section .form-text-cont:nth-child(2n -1) {
       padding-right: 35px; }
     .contact-us-section .form-text-cont.verror label {
       color: #dc0019; }
   .contact-us-section .input-field {
-    border: 0.5px solid #ffffff;
-    padding: 18px 35px 18px 15px;
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    padding: 15px 35px 15px 15px;
     background: transparent;
     width: 100%;
+    font-weight: 500;
     font-size: 18px;
     line-height: 25px;
     outline: 0; }
@@ -752,13 +766,13 @@ textarea {
     font-size: 13px;
     margin-top: 5px; }
   .contact-us-section .width-full .user-input {
-    border: 0.5px solid #ffffff;
-    padding: 18px 15px;
+    border: 0.5px solid rgba(255, 255, 255, 0.5);
+    padding: 15px 15px;
     background: transparent;
     width: 100%;
     font-size: 18px;
     line-height: 25px;
-    height: 200px;
+    height: 180px;
     margin-bottom: 30px;
     padding-right: 35px; }
     .contact-us-section .width-full .user-input small {
@@ -771,7 +785,7 @@ textarea {
   .contact-us-section .width-full.verror .user-input {
     border-color: #dc0019 !important; }
   .contact-us-section .comment-input {
-    height: 90px;
+    height: 70px;
     resize: none;
     background: none;
     outline: 0;
@@ -846,7 +860,8 @@ textarea {
       border: 0.5px solid #ffffff;
       font-size: 12px;
       border-radius: 0;
-      line-height: 1.6; }
+      line-height: 1.6;
+      opacity: 0.5; }
       .contact-us-section #drop-area .button:focus {
         background: rgba(76, 76, 76, 0.7); }
   .contact-us-section #gallery {
@@ -1009,7 +1024,7 @@ textarea {
 
 .footer {
   background: #2b294d;
-  padding: 26px 0; }
+  padding: 20px 0; }
   .footer span,
   .footer h4,
   .footer .client-outer,
@@ -1049,7 +1064,7 @@ textarea {
     color: #8e8c8c; }
   .footer .footer-last {
     flex-basis: 18%;
-    text-align: left;
+    text-align: center;
     padding-left: 20px; }
     .footer .footer-last picture {
       margin-bottom: 12px;
@@ -1199,13 +1214,17 @@ textarea {
     vertical-align: bottom;
     background-color: #656565;
     width: 100%;
-    border: 0; }
+    border: 0;
+    height: 260px; }
   .client-video-section .client-videos {
     position: relative;
-    margin: 0 35px; }
+    margin: 0 10px;
+    border: 1px solid #E2E9EF; }
   .client-video-section .client-description {
-    padding: 48px 70px 65px;
-    height: 100%; }
+    padding: 20px 20px 30px;
+    min-height: 142px;
+    box-shadow: 0px 4px 35px rgba(22, 101, 216, 0.1);
+    background: #fff; }
     .client-video-section .client-description span {
       display: block;
       text-align: center; }
@@ -1215,9 +1234,9 @@ textarea {
       color: #000;
       font-weight: 600; }
     .client-video-section .client-description .client-quote {
-      margin-top: 6px;
-      color: #75757599;
-      font-style: italic; }
+      margin-top: 10px;
+      color: #757575;
+      font-weight: 300; }
   .client-video-section .client-testimonial-slider {
     margin-top: 100px; }
   .client-video-section .glider-next,
@@ -1239,19 +1258,10 @@ textarea {
     position: relative; }
     .client-video-section .shadow-box .client-video-box {
       position: relative; }
-    .client-video-section .shadow-box::before {
-      content: "";
-      clear: both;
-      display: block;
-      background: rgba(29, 28, 59, 0.1);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1; }
     .client-video-section .shadow-box:hover::before {
       display: none; }
+  .client-video-section .glider-track {
+    padding-bottom: 16px; }
 
 .experts-talk-first-section {
   position: relative;
@@ -1376,7 +1386,7 @@ textarea {
   padding: 20px 30px 30px;
   border-radius: 0 0 10px 10px; }
 .tech-stack-updated-section.for-tech-icons .logo-list-box {
-  padding: 30px;
+  padding: 0 30px 30px;
   height: 100%; }
   .tech-stack-updated-section.for-tech-icons .logo-list-box .dis-flex {
     display: block; }
@@ -1384,7 +1394,7 @@ textarea {
   overflow: hidden;
   display: block; }
 .tech-stack-updated-section.for-tech-icons .icon-box {
-  border: 1px solid #302f51;
+  border: 1px solid #D3D3DB;
   border-radius: 40px;
   padding: 10px 12px;
   display: inline-block;
@@ -1404,7 +1414,7 @@ textarea {
     margin-left: 6px;
     vertical-align: middle; }
   .tech-stack-updated-section.for-tech-icons .icon-box:hover {
-    background-color: #181732; }
+    border-color: #60b741; }
     .tech-stack-updated-section.for-tech-icons .icon-box:hover .hover {
       display: inline-block; }
 
@@ -1453,7 +1463,7 @@ textarea {
 
   h2 {
     font-size: 38px;
-    line-height: 48px; }
+    line-height: 47px; }
 
   h3 {
     font-size: 20px;
@@ -1462,6 +1472,12 @@ textarea {
   p {
     font-size: 18px;
     line-height: 28px; }
+
+  .padding-t-100 {
+    padding-top: 80px; }
+
+  .padding-b-100 {
+    padding-bottom: 80px; }
 
   .padding-b-150 {
     padding-bottom: 100px; }
@@ -1496,7 +1512,8 @@ textarea {
       left: -4px; }
 
   .tick-icon-list li {
-    margin-top: 15px; }
+    margin-top: 15px;
+    font-size: 16px; }
 
   .second-level-section .has-free-trial::before {
     width: 220px;
@@ -1547,8 +1564,6 @@ textarea {
     width: 280px;
     height: 230px; }
 
-  .client-video-section .client-videos {
-    margin: 0 15px; }
   .client-video-section .glider-dots {
     margin-top: 70px; }
 
@@ -1606,8 +1621,6 @@ textarea {
     .second-level-section .col-estimate-box .flex-3 {
       padding: 0 4px; }
 
-  .client-video-section .client-description {
-    padding: 30px; }
   .client-video-section .client-testimonial-slider {
     margin-top: 70px; }
 
@@ -1778,7 +1791,13 @@ textarea {
 
   .tech-stack-updated-section .col-box {
     margin-top: 22px;
-    padding-right: 15px; } }
+    padding-right: 15px; }
+
+  .padding-t-100 {
+    padding-top: 60px; }
+
+  .padding-b-100 {
+    padding-bottom: 60px; } }
 @media only screen and (max-width: 991px) {
   h1 {
     font-size: 32px;
@@ -1826,6 +1845,8 @@ textarea {
 
   .head-txt p {
     margin-top: 15px; }
+  .head-txt small {
+    text-transform: lowercase; }
 
   .hero-section::after,
   .second-level-section::after {
@@ -1891,6 +1912,12 @@ textarea {
       height: 16px;
       top: 6px; }
 
+  .padding-t-100 {
+    padding-top: 40px; }
+
+  .padding-b-100 {
+    padding-bottom: 40px; }
+
   .padding-b-150 {
     padding-bottom: 40px; }
 
@@ -1947,8 +1974,10 @@ textarea {
   .client-logo-box-section {
     display: none; }
 
-  .for-client-logo-box i {
-    margin: 0 4px; }
+  .for-client-logo-box {
+    text-align: center; }
+    .for-client-logo-box i {
+      margin: 0 4px; }
 
   .form-link-outer {
     font-size: 14px;
@@ -2043,7 +2072,7 @@ textarea {
   .contact-us-section .right-box .profile-pic {
     margin-right: 2px; }
   .contact-us-section .input-field {
-    padding: 12px 35px 12px 15px; }
+    padding: 10px 35px 10px 15px; }
   .contact-us-section .comment-input {
     padding: 0; }
   .contact-us-section .form-text-cont {
@@ -2095,10 +2124,13 @@ textarea {
   .tech-stack-updated-section .icon-box {
     flex-basis: 25%; }
   .tech-stack-updated-section.for-tech-icons .logo-list-box {
-    padding: 15px 15px 25px; }
+    padding: 0 15px 25px; }
   .tech-stack-updated-section.for-tech-icons .icon-box .text {
     vertical-align: middle;
-    font-size: 12px; } }
+    font-size: 12px; }
+
+  .head-txt small {
+    font-size: 14px; } }
 .second-level-section .form-right-box {
   border: 1px solid #373660;
   border-radius: 8px; }
@@ -2136,7 +2168,8 @@ textarea {
     padding: 20px 0;
     text-align: center; }
     .second-level-section .form-right-box .head h3 {
-      color: #ffffff; }
+      color: #ffffff;
+      font-weight: 500; }
     .second-level-section .form-right-box .head p {
       font-weight: 500;
       font-size: 16px;
@@ -2351,6 +2384,8 @@ textarea {
     top: 72px;
     left: 0;
     max-width: 360px; } }
+.icon-with-img-section .head-txt h2 span {
+  color: #FFB81D; }
 .icon-with-img-section .right-box {
   padding-left: 30px; }
 .icon-with-img-section .icon {
@@ -2378,7 +2413,7 @@ textarea {
 .icon-with-img-section .hire-php-icon .icon8 {
   background-position: -495px 4px; }
 .icon-with-img-section .icon-box-outer {
-  margin-top: 30px; }
+  margin-top: 20px; }
   .icon-with-img-section .icon-box-outer picture {
     margin-right: 20px; }
 .icon-with-img-section.with-top-head .icon-box-outer {
@@ -2402,10 +2437,16 @@ textarea {
 
 @media only screen and (max-width: 1600px) {
   .icon-with-img-section .icon-txt {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .icon-with-img-section .icon-box-outer picture {
+    margin-right: 10px; }
+  .icon-with-img-section .icon-box-outer img {
+    width: 80%; } }
 @media only screen and (max-width: 1440px) {
   .icon-with-img-section .icon-box-outer picture {
     margin-right: 15px; }
+  .icon-with-img-section .margin-t-50 {
+    margin-top: 30px; }
 
   .client-img-section .tick-icon-list li {
     padding-left: 30px;
@@ -2601,7 +2642,7 @@ textarea {
   .header-two .small {
     opacity: 0;
     display: grid;
-    background: #fff;
+    background: #ECECEC;
     padding: 10px;
     width: 60px;
     height: 60px;
@@ -3451,9 +3492,9 @@ textarea {
   padding: 20px 30px 30px;
   border-radius: 0 0 10px 10px; }
 .tech-stack-updated-section.for-tech-icons .logo-list-box {
-  padding: 30px;
+  padding: 0 30px 30px 30px;
   height: 100%;
-  background-color: #f6f6f6; }
+  background-color: #fff; }
   .tech-stack-updated-section.for-tech-icons .logo-list-box .dis-flex {
     display: block; }
 .tech-stack-updated-section.for-tech-icons .content-box {
@@ -3462,7 +3503,7 @@ textarea {
   overflow: hidden;
   display: block; }
 .tech-stack-updated-section.for-tech-icons .icon-box {
-  border: 1px solid #302F51;
+  border: 1px solid #D3D3DB;
   border-radius: 40px;
   padding: 10px 12px;
   display: inline-block;
@@ -3484,11 +3525,13 @@ textarea {
     margin-left: 6px;
     vertical-align: middle; }
   .tech-stack-updated-section.for-tech-icons .icon-box:hover {
-    background-color: #181732; }
+    border-color: #60b741; }
     .tech-stack-updated-section.for-tech-icons .icon-box:hover .hover {
       display: inline-block; }
     .tech-stack-updated-section.for-tech-icons .icon-box:hover .lighter-theme-img {
       display: none !important; }
+.tech-stack-updated-section .three-column-icon-section .box {
+  background: #fff; }
 
 .technology-tab-section .head-txt {
   display: none; }
@@ -3551,10 +3594,10 @@ textarea {
   .tech-stack-updated-section .content-box {
     padding: 40px 30px 30px; }
   .tech-stack-updated-section .logo-list-box {
-    padding: 15px 20px 25px; } }
+    padding: 0 20px 25px; } }
 @media only screen and (max-width: 1320px) {
   .tech-stack-updated-section .logo-list-box {
-    padding: 15px 10px 25px; }
+    padding: 0 10px 25px; }
   .tech-stack-updated-section.for-tech-icons .logo-list-box {
     padding: 30px 20px; }
   .tech-stack-updated-section.for-tech-icons .icon-box {
@@ -3577,7 +3620,7 @@ textarea {
   .tech-stack-updated-section .content-box {
     padding: 20px 30px 20px; }
   .tech-stack-updated-section .logo-list-box {
-    padding: 15px 15px 25px; }
+    padding: 0 15px 25px; }
   .tech-stack-updated-section .icon-box {
     flex-basis: 25%; }
   .tech-stack-updated-section.for-tech-icons .icon-box .text {
@@ -3589,8 +3632,16 @@ textarea {
     line-height: 20px; }
   .technology-tab-section .tech-stack-updated-section .content-box {
     min-height: auto; } }
-.three-column-icon-section.bg-dark-theme .box:hover {
-  background: #fff; }
+.three-column-icon-section.bg-dark-theme .has-vlink .box:hover {
+  background: #ffffff; }
+.three-column-icon-section.bg-dark-theme .has-anchor .box:hover {
+  background: #ffffff; }
+.three-column-icon-section.default-light {
+  background: #ffffff; }
+  .three-column-icon-section.default-light .has-vlink .box:hover {
+    background: #f6f6f6; }
+  .three-column-icon-section.default-light .has-anchor .box:hover {
+    background: #f6f6f6; }
 .three-column-icon-section .col-box-outer {
   margin-top: 75px;
   justify-content: center; }
@@ -3598,22 +3649,25 @@ textarea {
   color: #212121; }
 .three-column-icon-section .learn-more {
   margin-top: 20px; }
+.three-column-icon-section .has-anchor .box:hover {
+  background: #ffffff; }
 .three-column-icon-section .has-anchor a {
   display: block;
   height: 100%; }
+.three-column-icon-section .has-vlink .box:hover {
+  background: #f6f6f6; }
 .three-column-icon-section .box {
   padding: 60px 50px;
   height: 100%;
   transition: all 0.3s ease-in-out; }
-  .three-column-icon-section .box:hover {
-    background: #F6F6F6; }
   .three-column-icon-section .box h3 {
     margin: 30px 0 20px; }
   .three-column-icon-section .box p {
     font-size: 18px; }
     .three-column-icon-section .box p a {
-      text-decoration: underline;
-      display: inline-block; }
+      display: inline; }
+      .three-column-icon-section .box p a:hover {
+        text-decoration: underline; }
 .three-column-icon-section .box-3 {
   padding-right: 26px;
   margin-top: 26px; }
@@ -3639,6 +3693,18 @@ textarea {
   margin-top: 40px; }
 .three-column-icon-section a {
   text-decoration: none; }
+.three-column-icon-section .cto-service .box {
+  padding: 0 0 40px; }
+  .three-column-icon-section .cto-service .box .headtext {
+    background: #f6f6f6;
+    padding: 30px 50px; }
+    .three-column-icon-section .cto-service .box .headtext h2 {
+      font-size: 32px;
+      line-height: 44px; }
+  .three-column-icon-section .cto-service .box .inner-text {
+    padding: 20px 50px 0; }
+  .three-column-icon-section .cto-service .box ul {
+    margin-top: 20px; }
 
 @media only screen and (max-width: 1600px) {
   .three-column-icon-section .col-box-outer {
@@ -3651,7 +3717,15 @@ textarea {
       font-size: 16px;
       line-height: 24px; }
   .three-column-icon-section ul li {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .three-column-icon-section .cto-service .box {
+    padding: 0 0 40px; }
+    .three-column-icon-section .cto-service .box .headtext {
+      padding: 30px 30px; }
+      .three-column-icon-section .cto-service .box .headtext h2 {
+        font-size: 24px; }
+    .three-column-icon-section .cto-service .box .inner-text {
+      padding: 10px 30px 0; } }
 @media only screen and (max-width: 1440px) {
   .three-column-icon-section .box-4 {
     padding-right: 12px; } }
@@ -3716,7 +3790,15 @@ textarea {
   .three-column-icon-section .content-head {
     margin-top: 10px; }
   .three-column-icon-section .flex-2 {
-    flex-basis: 100%; } }
+    flex-basis: 100%; }
+  .three-column-icon-section .cto-service .box {
+    padding: 0 0 30px; }
+    .three-column-icon-section .cto-service .box .headtext {
+      padding: 20px 20px; }
+      .three-column-icon-section .cto-service .box .headtext h2 {
+        font-size: 21px; }
+    .three-column-icon-section .cto-service .box .inner-text {
+      padding: 10px 20px 0; } }
 .glider {
   margin: 0 auto;
   position: relative;
@@ -3875,8 +3957,13 @@ textarea {
     font-size: 20px;
     font-weight: 400;
     line-height: 28px; }
-  .second-level-section .left-box h2, .second-level-section .left-box p {
-    margin-bottom: 28px; }
+  .second-level-section .left-box h2,
+  .second-level-section .left-box p {
+    margin-bottom: 20px; }
+  .second-level-section .left-box ul {
+    margin: 30px 0 0; }
+  .second-level-section .left-box p {
+    font-size: 18px; }
   .second-level-section .left-box a {
     color: #ffffff; }
   .second-level-section .count-box-outer {
@@ -3900,7 +3987,7 @@ textarea {
     border-radius: 10px;
     position: relative; }
   .second-level-section .flex-2:last-child {
-    max-width: 664px;
+    max-width: 612px;
     margin: 0 0 0 auto; }
   .second-level-section .hire-services-head {
     font-size: 36px;
@@ -3908,11 +3995,11 @@ textarea {
     margin-top: 40px; }
 
 .latest-article-post-section.bg-light-theme .col-box:hover {
-  background: #F6F6F6; }
+  background: #f6f6f6; }
 .latest-article-post-section .margin-t-100 {
   margin-top: 70px; }
 .latest-article-post-section .col-box {
-  margin: 30px 35px 0;
+  margin: 30px 12px 0;
   flex-basis: calc(33.33% - 70px);
   border-radius: 12px;
   transition: all 0.3s ease-in-out;
@@ -3935,7 +4022,7 @@ textarea {
   .latest-article-post-section .col-box .content-box {
     padding: 20px 30px 40px; }
   .latest-article-post-section .col-box h3 {
-    margin: 30px 0 6px;
+    margin: 30px 0 15px;
     color: #212121; }
     .latest-article-post-section .col-box h3 a {
       text-decoration: none;
@@ -4004,7 +4091,7 @@ textarea {
       font-size: 18px;
       color: rgba(110, 109, 134, 0.5);
       border: 0.5px solid rgba(110, 109, 134, 0.7);
-      background: #f6f6f6;
+      background: #fff;
       border-radius: 5px;
       padding: 8px 20px;
       display: block; }
@@ -4070,7 +4157,7 @@ textarea {
     .with-top-head .count-box-outer .count-box:first-child {
       padding-left: 0;
       max-width: 140px; }
-    .with-top-head .count-box-outer .count-box:nth-child(2) {
+    .with-top-head .count-box-outer .count-box::nth-child(2) {
       padding-left: 0; }
     .with-top-head .count-box-outer .count-box:last-child {
       border-right: 0;
@@ -4095,8 +4182,8 @@ textarea {
   padding: 60px 50px;
   height: 100%; }
 .link-three-column-section .box-3 {
-  padding-right: 78px;
-  margin-top: 60px; }
+  padding-right: 27px;
+  margin-top: 20px; }
   .link-three-column-section .box-3:nth-child(3n) {
     padding-right: 0; }
   .link-three-column-section .box-3 h3 {
@@ -4108,7 +4195,6 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 5px;
   position: relative;
   z-index: 1;
   height: 100%;
@@ -4124,8 +4210,7 @@ textarea {
     position: absolute;
     left: 0;
     top: 0;
-    z-index: -1;
-    border-radius: 5px; }
+    z-index: -1; }
   .link-three-column-section .link-box .circle-arrow-icon {
     width: 36px;
     height: 36px;
@@ -4134,6 +4219,7 @@ textarea {
   .link-three-column-section .link-box .text-middle {
     flex-basis: 50%;
     color: #212121;
+    font-weight: 500;
     transition: all 0.3s ease-in-out; }
 .link-three-column-section a:hover {
   border-color: transparent; }
@@ -4150,8 +4236,6 @@ textarea {
 .link-three-column-section .php-frameworks-icons .link-box:hover .circle-arrow-icon {
   background-position: -94px 0; }
 
-.sample-profile-no-img-section.bg-dark-theme .bg-voilet:hover {
-  background-color: #ffffff; }
 .sample-profile-no-img-section .sample-block-outer {
   margin-top: 70px; }
 .sample-profile-no-img-section .flex-3 {
@@ -4164,14 +4248,13 @@ textarea {
   border: 1px solid #D1D1E1;
   transition: all 0.3s ease-in-out;
   background: transparent; }
-  .sample-profile-no-img-section .sample-block:hover {
-    background: #f6f6f6;
-    border-color: transparent; }
-.sample-profile-no-img-section h4, .sample-profile-no-img-section h5 {
+.sample-profile-no-img-section h4,
+.sample-profile-no-img-section h5 {
   font-weight: 500;
   position: relative;
   color: #212121; }
-.sample-profile-no-img-section h3::after, .sample-profile-no-img-section h4::after {
+.sample-profile-no-img-section h3::after,
+.sample-profile-no-img-section h4::after {
   content: "";
   clear: both;
   display: block;
@@ -4272,13 +4355,17 @@ textarea {
     .free-trail-pop-up .green-btn:hover {
       background-color: #ffb81d; }
 
+.default-light {
+  background-color: #ffffff; }
+
 .related-tags-section {
   background: #373660;
   padding-bottom: 80px; }
   .related-tags-section .container {
     max-width: 1390px; }
-  .related-tags-section h2 {
-    color: #ffffff; }
+  .related-tags-section h3 {
+    color: #ffffff;
+    text-transform: uppercase; }
   .related-tags-section a {
     display: inline-block;
     background: #34335E;
@@ -4297,7 +4384,8 @@ textarea {
 .left-circlist-right-img-section h3 {
   font-size: 36px;
   line-height: 50px;
-  font-weight: 500; }
+  font-weight: 500;
+  color: #333333; }
 .left-circlist-right-img-section .col-box-outer {
   margin-top: 150px; }
 .left-circlist-right-img-section .flex-2 {
@@ -4348,7 +4436,8 @@ textarea {
     display: block;
     margin-bottom: 10px;
     color: #212121;
-    font-weight: 500; }
+    font-weight: 500;
+    color: #333333; }
 
 .page-id-4320 .technologies-right-logo-section .left-box {
   display: none; }
@@ -4427,6 +4516,124 @@ textarea {
 .technologies-right-logo-section .for-max-six-icon .tech-box {
   flex-basis: 16.66%; }
 
+.steps-of-hiring-shadow-specialist-section .flex-2 {
+  padding: 0; }
+.steps-of-hiring-shadow-specialist-section .head-box {
+  text-align: left;
+  position: relative;
+  padding: 54px 100px; }
+  .steps-of-hiring-shadow-specialist-section .head-box p, .steps-of-hiring-shadow-specialist-section .head-box h3 {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 500;
+    color: #656565; }
+  .steps-of-hiring-shadow-specialist-section .head-box::before {
+    content: "";
+    background: url(../images/tick-list-icon.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 57px;
+    left: 72px; }
+.steps-of-hiring-shadow-specialist-section ul li {
+  list-style: none;
+  position: relative; }
+  .steps-of-hiring-shadow-specialist-section ul li::before {
+    content: "";
+    background: url(../images/tick-list-icon.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    border-radius: 50px; }
+.steps-of-hiring-shadow-specialist-section .list-box p {
+  margin-top: 50px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px; }
+.steps-of-hiring-shadow-specialist-section .list-box li {
+  margin-top: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  padding-left: 27px; }
+.steps-of-hiring-shadow-specialist-section .left-box .list-box {
+  padding-left: 69px; }
+.steps-of-hiring-shadow-specialist-section .right-box-outer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 100px; }
+  .steps-of-hiring-shadow-specialist-section .right-box-outer .col-box-outer {
+    flex-basis: 25%;
+    padding: 0 10px;
+    position: relative; }
+    .steps-of-hiring-shadow-specialist-section .right-box-outer .col-box-outer:last-child .number-box {
+      background: #FADE2A; }
+    .steps-of-hiring-shadow-specialist-section .right-box-outer .col-box-outer:nth-child(odd)::after {
+      content: "";
+      clear: both;
+      display: block;
+      background: url("../images/vector-arrow-down.png") top center no-repeat;
+      width: 53px;
+      height: 11px;
+      position: absolute;
+      top: 28px;
+      right: -25px; }
+    .steps-of-hiring-shadow-specialist-section .right-box-outer .col-box-outer:nth-child(2)::after {
+      content: "";
+      clear: both;
+      display: block;
+      background: url("../images/vector-arrow-up.png") top center no-repeat;
+      width: 50px;
+      height: 15px;
+      position: absolute;
+      top: 6px;
+      right: -20px; }
+    .steps-of-hiring-shadow-specialist-section .right-box-outer .col-box-outer:nth-child(4) .number-box {
+      position: relative; }
+      .steps-of-hiring-shadow-specialist-section .right-box-outer .col-box-outer:nth-child(4) .number-box::after {
+        content: "";
+        clear: both;
+        display: block;
+        background: url("../images/vector-bright.png") top center no-repeat;
+        width: 40px;
+        height: 57px;
+        position: absolute;
+        top: -28px;
+        right: -20px; }
+    .steps-of-hiring-shadow-specialist-section .right-box-outer .col-box-outer:nth-child(odd) p {
+      margin-top: 27px; }
+    .steps-of-hiring-shadow-specialist-section .right-box-outer .col-box-outer:nth-child(even) {
+      margin-top: 30px; }
+      .steps-of-hiring-shadow-specialist-section .right-box-outer .col-box-outer:nth-child(even) p {
+        margin-top: 33px; }
+  .steps-of-hiring-shadow-specialist-section .right-box-outer .number-box {
+    background: #F5F5F5;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 50px;
+    color: #000000;
+    margin: 0 auto; }
+  .steps-of-hiring-shadow-specialist-section .right-box-outer .text-box {
+    text-align: center; }
+    .steps-of-hiring-shadow-specialist-section .right-box-outer .text-box p {
+      margin-top: 25px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 23px;
+      color: #212121; }
+
+.technology-tab-section .three-column-icon-section .box-3 .box {
+  background: #ffffff; }
+  .technology-tab-section .three-column-icon-section .box-3 .box:hover {
+    background: #f6f6f6; }
+
 @media only screen and (max-width: 1600px) {
   .left-circlist-right-img-section .col-box-outer {
     margin-top: 100px; }
@@ -4476,10 +4683,9 @@ textarea {
   .latest-article-post-section .margin-t-100 {
     margin-top: 40px; }
   .latest-article-post-section .col-box {
-    margin: 30px 15px 0;
     flex-basis: calc(33.33% - 30px); }
     .latest-article-post-section .col-box h3 {
-      margin: 20px 0 6px; }
+      margin: 20px 0 15px; }
     .latest-article-post-section .col-box p {
       font-size: 16px; }
     .latest-article-post-section .col-box .content-box {
@@ -4501,11 +4707,14 @@ textarea {
   .link-three-column-section .link-box {
     padding: 15px 20px; }
   .link-three-column-section .box-3 {
-    padding-right: 40px;
-    margin-top: 40px; }
+    padding-right: 20px;
+    margin-top: 20px; }
 
-  .second-level-section .left-box h2, .second-level-section .left-box p {
+  .second-level-section .left-box h2 {
     font-size: 18px;
+    margin-bottom: 20px; }
+  .second-level-section .left-box p {
+    font-size: 16px;
     margin-bottom: 20px; }
   .second-level-section .count-box-outer {
     margin-top: 40px; }
@@ -4583,7 +4792,23 @@ textarea {
     max-width: 100px; }
 
   .link-three-column-section h3 {
-    font-size: 16px; } }
+    font-size: 16px; }
+
+  .steps-of-hiring-shadow-specialist-section .right-box-outer .col-box-outer:nth-child(odd) p {
+    margin-top: 16px; }
+  .steps-of-hiring-shadow-specialist-section .right-box-outer .col-box-outer:nth-child(even) p {
+    margin-top: 19px; }
+  .steps-of-hiring-shadow-specialist-section .right-box-outer .text-box p {
+    font-size: 12px;
+    line-height: 18px; }
+  .steps-of-hiring-shadow-specialist-section .head-box p, .steps-of-hiring-shadow-specialist-section .head-box h3 {
+    font-size: 16px;
+    line-height: 25px; }
+  .steps-of-hiring-shadow-specialist-section .list-box p {
+    font-size: 16px;
+    line-height: 27px; }
+  .steps-of-hiring-shadow-specialist-section .list-box li {
+    margin-top: 11px; } }
 @media only screen and (max-width: 1200px) {
   .with-top-head .count-box-outer {
     max-width: 600px;
@@ -4687,8 +4912,25 @@ textarea {
   .second-level-section .flex-2:last-child {
     margin: 60px auto 0;
     max-width: 600px;
-    width: 100%; } }
+    width: 100%; }
+
+  .steps-of-hiring-shadow-specialist-section .head-box {
+    padding: 23px 39px; }
+    .steps-of-hiring-shadow-specialist-section .head-box::before {
+      top: 27px;
+      left: 12px; }
+  .steps-of-hiring-shadow-specialist-section .list-box p {
+    margin-top: 17px; }
+  .steps-of-hiring-shadow-specialist-section .left-box .list-box {
+    padding-left: 10px; }
+  .steps-of-hiring-shadow-specialist-section .last-box {
+    margin-top: 39px; }
+  .steps-of-hiring-shadow-specialist-section .right-box-outer {
+    margin-top: 51px; } }
 @media only screen and (max-width: 767px) {
+  .second-level-section ul {
+    margin: 20px 0 0; }
+
   .technologies-right-logo-section .left-box {
     margin-top: 0; }
   .technologies-right-logo-section .tech-box {
@@ -4841,6 +5083,14 @@ textarea {
     .second-level-section .right-box img {
       max-width: 200px; }
   .second-level-section .flex-2:last-child {
-    margin: 30px auto 0; } }
+    margin: 30px auto 0; }
+
+  .steps-of-hiring-shadow-specialist-section .right-box-outer {
+    margin-top: 0; }
+    .steps-of-hiring-shadow-specialist-section .right-box-outer .col-box-outer {
+      margin-top: 31px;
+      flex-basis: 100%; }
+      .steps-of-hiring-shadow-specialist-section .right-box-outer .col-box-outer:nth-child(odd)::after, .steps-of-hiring-shadow-specialist-section .right-box-outer .col-box-outer:nth-child(even)::after {
+        display: none; } }
 
 /*# sourceMappingURL=hire-pages-2.0.css.map */

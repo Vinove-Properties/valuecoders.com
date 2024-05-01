@@ -656,7 +656,6 @@ textarea {
     z-index: -1; }
   .contact-us-section ::-webkit-scrollbar {
     width: 6px;
-    height: 85px;
     border-radius: 5px;
     overflow: scroll; }
   .contact-us-section ::-webkit-scrollbar-track {
@@ -1166,7 +1165,7 @@ textarea {
   text-align: left;
   z-index: 2;
   font-weight: 500;
-  margin-bottom: 20px; }
+  margin-bottom: -15px; }
   .breadcrumbs a {
     display: inline-block;
     position: relative;
@@ -1441,9 +1440,13 @@ textarea {
 
   .hero-section,
   .second-level-section {
-    padding: 180px 0 100px;
+    padding: 170px 0 100px;
     display: flex; } }
 @media only screen and (max-width: 1600px) {
+  .head-txt p {
+    font-size: 18px;
+    line-height: 28px; }
+
   .hero-section,
   .second-level-section {
     min-height: calc(100vh - 95px); }
@@ -1458,19 +1461,19 @@ textarea {
     font-size: 16px; }
 
   h1 {
-    font-size: 42px;
-    line-height: 54px; }
+    font-size: 40px;
+    line-height: 52px; }
 
   h2 {
-    font-size: 38px;
-    line-height: 47px; }
+    font-size: 35px;
+    line-height: 42px; }
 
   h3 {
     font-size: 20px;
     line-height: 28px; }
 
   p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 28px; }
 
   .padding-t-100 {
@@ -1600,6 +1603,10 @@ textarea {
     font-size: 38px;
     line-height: 46px; }
 
+  h2 {
+    font-size: 32px;
+    line-height: 40px; }
+
   .container,
   .hero-section::after,
   .second-level-section::after,
@@ -1608,7 +1615,7 @@ textarea {
 
   .hero-section,
   .second-level-section {
-    padding: 140px 0 50px; }
+    padding: 120px 0 50px; }
     .hero-section::after,
     .second-level-section::after {
       margin: 60px auto 0; }
@@ -1683,7 +1690,10 @@ textarea {
   .tech-stack-updated-section .content-box {
     padding: 40px 30px 30px; }
   .tech-stack-updated-section .logo-list-box {
-    padding: 15px 20px 25px; } }
+    padding: 15px 20px 25px; }
+
+  .breadcrumbs {
+    margin-bottom: 11px; } }
 @media only screen and (max-width: 1320px) {
   h1 {
     font-size: 34px;
@@ -1692,6 +1702,10 @@ textarea {
   h2 {
     font-size: 32px;
     line-height: 38px; }
+
+  p {
+    font-size: 14px;
+    line-height: 26px; }
 
   .container,
   .hero-section::after,
@@ -3612,7 +3626,6 @@ textarea {
     z-index: -1; }
   .contact-us-section ::-webkit-scrollbar {
     width: 6px;
-    height: 85px;
     border-radius: 5px;
     overflow: scroll; }
   .contact-us-section ::-webkit-scrollbar-track {
@@ -4122,7 +4135,7 @@ textarea {
   text-align: left;
   z-index: 2;
   font-weight: 500;
-  margin-bottom: 20px; }
+  margin-bottom: -15px; }
   .breadcrumbs a {
     display: inline-block;
     position: relative;
@@ -4397,9 +4410,13 @@ textarea {
 
   .hero-section,
   .second-level-section {
-    padding: 180px 0 100px;
+    padding: 170px 0 100px;
     display: flex; } }
 @media only screen and (max-width: 1600px) {
+  .head-txt p {
+    font-size: 18px;
+    line-height: 28px; }
+
   .hero-section,
   .second-level-section {
     min-height: calc(100vh - 95px); }
@@ -4414,19 +4431,19 @@ textarea {
     font-size: 16px; }
 
   h1 {
-    font-size: 42px;
-    line-height: 54px; }
+    font-size: 40px;
+    line-height: 52px; }
 
   h2 {
-    font-size: 38px;
-    line-height: 47px; }
+    font-size: 35px;
+    line-height: 42px; }
 
   h3 {
     font-size: 20px;
     line-height: 28px; }
 
   p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 28px; }
 
   .padding-t-100 {
@@ -4556,6 +4573,10 @@ textarea {
     font-size: 38px;
     line-height: 46px; }
 
+  h2 {
+    font-size: 32px;
+    line-height: 40px; }
+
   .container,
   .hero-section::after,
   .second-level-section::after,
@@ -4564,7 +4585,7 @@ textarea {
 
   .hero-section,
   .second-level-section {
-    padding: 140px 0 50px; }
+    padding: 120px 0 50px; }
     .hero-section::after,
     .second-level-section::after {
       margin: 60px auto 0; }
@@ -4639,7 +4660,10 @@ textarea {
   .tech-stack-updated-section .content-box {
     padding: 40px 30px 30px; }
   .tech-stack-updated-section .logo-list-box {
-    padding: 15px 20px 25px; } }
+    padding: 15px 20px 25px; }
+
+  .breadcrumbs {
+    margin-bottom: 11px; } }
 @media only screen and (max-width: 1320px) {
   h1 {
     font-size: 34px;
@@ -4648,6 +4672,10 @@ textarea {
   h2 {
     font-size: 32px;
     line-height: 38px; }
+
+  p {
+    font-size: 14px;
+    line-height: 26px; }
 
   .container,
   .hero-section::after,
@@ -5127,7 +5155,7 @@ textarea {
   .header-two .small {
     opacity: 0;
     display: grid;
-    background: #fff;
+    background: #ECECEC;
     padding: 10px;
     width: 60px;
     height: 60px;
@@ -5268,12 +5296,13 @@ textarea {
           margin: 0 0 45px;
           padding-left: 50px;
           position: relative; }
-          .header-two .menu ul li .menu-mega .flex-3 a:hover .title,
-          .header-two .menu ul li .menu-mega .detail-list a:hover .title {
-            text-decoration: underline; }
+          .header-two .menu ul li .menu-mega .flex-3 a:hover,
+          .header-two .menu ul li .menu-mega .detail-list a:hover {
+            text-decoration: underline;
+            color: #212121; }
         .header-two .menu ul li .menu-mega .flex-3 .head,
         .header-two .menu ul li .menu-mega .detail-list .head {
-          font-weight: 600;
+          font-weight: 500;
           font-size: 18px;
           line-height: 25px;
           text-transform: uppercase;
@@ -5366,7 +5395,7 @@ textarea {
           display: inline-block; }
       .header-two .menu ul li .menu-mega .middle-list .head,
       .header-two .menu ul li .menu-mega .last-list .head {
-        font-weight: 600;
+        font-weight: 500;
         font-size: 18px;
         line-height: 25px;
         text-transform: uppercase;
@@ -5470,6 +5499,12 @@ textarea {
         right: -20%;
         padding-left: 20px;
         border-radius: 20px; }
+      .header-two .menu ul li .menu-mega .landing-menu .flex-3:nth-of-type(2):not(.without-icon) a:first-of-type,
+      .header-two .menu ul li .menu-mega .landing-menu .detail-list:nth-of-type(2):not(.without-icon) a:first-of-type {
+        margin-top: 60px; }
+      .header-two .menu ul li .menu-mega .landing-menu .flex-3:last-child,
+      .header-two .menu ul li .menu-mega .landing-menu .detail-list:last-child {
+        background: #f8f8fb; }
       .header-two .menu ul li .menu-mega .w-14 {
         max-width: 1400px; }
       .header-two .menu ul li .menu-mega .w-900 {
@@ -5493,9 +5528,7 @@ textarea {
           background: url("../menu-images/arrow-down.png") 0 0 no-repeat;
           width: 17px;
           height: 11px;
-          position: absolute;
-          top: 8px;
-          right: -30px;
+          margin-left: 10px;
           transition: all 0.3s ease-in-out; }
       .header-two .menu ul li.small-menu.for-company .arrow-btn::before {
         display: none; }
@@ -5577,7 +5610,14 @@ textarea {
       position: absolute;
       left: 0;
       top: 0; }
+  .header-two .hiremenu .hr-list-item a {
+    color: #9F9F9F !important;
+    text-transform: uppercase;
+    margin: 0 0 30px; }
 
+@media only screen and (min-width: 1200px) {
+  .header-two > .container {
+    max-width: 1900px; } }
 @media only screen and (max-width: 1780px) {
   .header-two .header-item-left .menu .for-product {
     padding: 0 15px 15px; }
@@ -5614,15 +5654,18 @@ textarea {
     .header-two .header-item-left .menu:before {
       height: 45px;
       top: -5px; } }
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1690px) {
+  .header-two .small {
+    width: 50px;
+    height: 50px; }
   .header-two .menu ul li.menu-item-has-children {
     padding: 0 14px 20px; }
   .header-two .menu ul li a {
-    font-size: 18px; }
+    font-size: 16px; }
   .header-two .menu ul li.small-menu .small-menu-inner {
     padding: 10px 30px 30px; }
     .header-two .menu ul li.small-menu .small-menu-inner a {
-      font-size: 18px;
+      font-size: 16px;
       margin-top: 22px; }
   .header-two .menu ul li .menu-mega .detail-list,
   .header-two .menu ul li .menu-mega .flex-3 {
@@ -5630,22 +5673,25 @@ textarea {
     .header-two .menu ul li .menu-mega .detail-list a,
     .header-two .menu ul li .menu-mega .flex-3 a {
       margin: 0 0 25px;
-      font-size: 14px; }
+      font-size: 13px;
+      line-height: 20px; }
       .header-two .menu ul li .menu-mega .detail-list a .title,
       .header-two .menu ul li .menu-mega .flex-3 a .title {
-        font-size: 18px; }
+        font-size: 16px; }
     .header-two .menu ul li .menu-mega .detail-list .head,
     .header-two .menu ul li .menu-mega .flex-3 .head {
-      margin: 0 0 20px;
-      font-size: 16px; }
+      margin: 0 0 15px;
+      font-size: 15px; }
   .header-two .menu ul li .menu-mega .last-list.for-padding {
     padding: 35px 40px; }
   .header-two .menu ul li .menu-mega .last-list a {
-    font-size: 18px;
-    margin: 0 0 18px; }
+    font-size: 16px;
+    margin: 0 0 10px; }
+    .header-two .menu ul li .menu-mega .last-list a.margin-t-40 {
+      margin-top: 20px; }
   .header-two .menu ul li .menu-mega .last-list .head {
     margin: 0 0 15px;
-    font-size: 16px; }
+    font-size: 15px; }
   .header-two .menu ul li .menu-mega .header-menu.for-padding {
     padding: 35px 40px; }
   .header-two .menu ul li .menu-mega .landing-menu .flex-3:nth-of-type(2):not(.without-icon) a:first-of-type,
@@ -5655,7 +5701,7 @@ textarea {
     max-width: 220px; }
   .header-two .menu ul li.small-menu .active-pcat {
     color: #fff;
-    font-size: 18px; } }
+    font-size: 16px; } }
 @media only screen and (max-width: 1440px) {
   .header-two {
     padding: 20px 0 0; }
@@ -5773,7 +5819,8 @@ textarea {
       display: flex;
       flex-basis: 100%;
       justify-content: space-between;
-      align-items: center; }
+      align-items: center;
+      margin: 0; }
       .header-two .header-item-left .menu {
         display: none; }
     .header-two.sc-down .large {
@@ -5813,6 +5860,8 @@ textarea {
             .header-two .menu ul li.small-menu .small-menu-inner a:hover {
               color: #fff;
               text-decoration: none; }
+        .header-two .menu ul li .menuicon {
+          display: none; }
         .header-two .menu ul li .ecom .flex-3:nth-of-type(2) a:first-of-type {
           margin-top: auto !important; }
         .header-two .menu ul li.small-menu {
@@ -5895,6 +5944,11 @@ textarea {
             box-shadow: none;
             background: #1d1c39;
             border-radius: 0; }
+          .header-two .menu ul li .menu-mega .w-900 {
+            width: 100%;
+            max-width: 100%; }
+            .header-two .menu ul li .menu-mega .w-900 .flex-3 {
+              flex-basis: 100%; }
           .header-two .menu ul li .menu-mega .detail-list,
           .header-two .menu ul li .menu-mega .flex-3 {
             padding: 0; }
@@ -5916,6 +5970,9 @@ textarea {
               .header-two .menu ul li .menu-mega .flex-3 a .title {
                 font-size: 14px;
                 margin-bottom: 0;
+                color: #fff; }
+              .header-two .menu ul li .menu-mega .detail-list a:hover,
+              .header-two .menu ul li .menu-mega .flex-3 a:hover {
                 color: #fff; }
             .header-two .menu ul li .menu-mega .detail-list .title,
             .header-two .menu ul li .menu-mega .flex-3 .title {
@@ -5987,7 +6044,6 @@ textarea {
             .header-two .menu ul li .menu-mega .middle-list a.active, .header-two .menu ul li .menu-mega .middle-list a:hover,
             .header-two .menu ul li .menu-mega .last-list a.active,
             .header-two .menu ul li .menu-mega .last-list a:hover {
-              text-decoration: none;
               color: #fff; }
           .header-two .menu ul li .menu-mega .middle-list br,
           .header-two .menu ul li .menu-mega .last-list br {
@@ -6185,7 +6241,10 @@ textarea {
     display: none; }
 
   .header-two .menu ul li.small-menu .active-pcat {
-    font-size: 15px; } }
+    font-size: 15px; }
+
+  .header-two .menu ul li .menu-mega .hiremenu .last-list a.margin-t-40 {
+    margin-top: 0; } }
 .three-column-icon-section.bg-dark-theme .has-vlink .box:hover {
   background: #ffffff; }
 .three-column-icon-section.bg-dark-theme .has-anchor .box:hover {
@@ -6773,6 +6832,33 @@ textarea {
     .left-right-imagetext-home-section .flex-2:nth-child(2n - 1) .img-box {
       text-align: left; }
 
+.not-found-section {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  padding: 200px 0;
+  background-color: #1D1C39; }
+  .not-found-section h2 {
+    color: #fff; }
+  .not-found-section .suggest {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 44px;
+    color: #bdb7b7;
+    display: block;
+    margin-top: 5px; }
+  .not-found-section ul {
+    margin-top: 43px; }
+    .not-found-section ul li {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 27px;
+      color: #bdb7b7;
+      margin-top: 12px;
+      list-style-type: none; }
+      .not-found-section ul li a {
+        color: #60b741; }
+
 @media only screen and (max-width: 1780px) {
   .hero-section h1 {
     font-size: 42px;
@@ -6794,8 +6880,8 @@ textarea {
     padding-right: 40px; } }
 @media only screen and (max-width: 1600px) {
   .hero-section h1 {
-    font-size: 42px;
-    line-height: 54px; }
+    font-size: 40px;
+    line-height: 52px; }
 
   .counter-column-section .large-txt {
     font-size: 36px; }
@@ -6846,7 +6932,15 @@ textarea {
   .tech-stack-section .icon-box .text {
     font-size: 12px; }
   .tech-stack-section .logo-box .margin-t-70 {
-    margin-top: 50px; } }
+    margin-top: 50px; }
+
+  .not-found-section .suggest {
+    font-size: 28px; }
+  .not-found-section ul {
+    margin-top: 35px; }
+    .not-found-section ul li {
+      font-size: 18px;
+      margin-top: 10px; } }
 @media only screen and (max-width: 1440px) {
   .hero-section h1 {
     font-size: 38px;
@@ -6915,7 +7009,11 @@ textarea {
   .tech-stack-section .icon-box {
     margin: 0 10px 15px 0; }
     .tech-stack-section .icon-box .text {
-      font-size: 11px; } }
+      font-size: 11px; }
+
+  .left-right-imagetext-home-section .box-text p {
+    font-size: 14px;
+    line-height: 26px; } }
 @media only screen and (max-width: 1200px) {
   .hero-section .right-box {
     padding-left: 40px; }
@@ -7031,7 +7129,14 @@ textarea {
     .left-right-imagetext-home-section .flex-2:nth-child(4) {
       order: 3; }
     .left-right-imagetext-home-section .flex-2:nth-child(2) {
-      margin-top: 40px; } }
+      margin-top: 40px; }
+
+  .not-found-section .suggest {
+    font-size: 22px; }
+  .not-found-section .flex-2 {
+    text-align: center; }
+    .not-found-section .flex-2:last-child {
+      margin-top: 30px; } }
 @media only screen and (max-width: 767px) {
   .hero-section .right-box {
     display: none; }
@@ -7134,6 +7239,19 @@ textarea {
   .tech-stack-section .logo-box {
     padding: 30px 25px 10px; }
     .tech-stack-section .logo-box .margin-t-70 {
-      margin-top: 30px; } }
+      margin-top: 30px; }
+
+  .not-found-section {
+    height: auto;
+    padding: 100px 0 40px; }
+    .not-found-section .suggest {
+      font-size: 18px;
+      line-height: 30px; }
+    .not-found-section ul {
+      margin-top: 20px; }
+      .not-found-section ul li {
+        font-size: 14px;
+        margin-top: 10px;
+        line-height: 18px; } }
 
 /*# sourceMappingURL=index-2.0.css.map */

@@ -1,6 +1,6 @@
 /*
 Error: Undefined variable: "$jacarta".
-        on line 4 of C:\xampp\htdocs\valuecoders-v2\scss\header-form.scss
+        on line 4 of C:\xampp\htdocs\valuecoders.com\staging\vc-menu\scss\header-form.scss
 
 1: 
 2: .second-level-section {
@@ -13,7 +13,7 @@ Error: Undefined variable: "$jacarta".
 9:             line-height: 19px;
 
 Backtrace:
-C:\xampp\htdocs\valuecoders-v2\scss\header-form.scss:4
+C:\xampp\htdocs\valuecoders.com\staging\vc-menu\scss\header-form.scss:4
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
@@ -75,4 +75,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$jacarta\".\A         on line 4 of C:\xampp\htdocs\valuecoders-v2\scss\header-form.scss\A \A 1: \A 2: .second-level-section {\A 3:     .form-right-box {\A 4:         border: 1px solid $jacarta;\A 5:         border-radius: 8px;\A 6:         ::placeholder {\A 7:             font-weight: 500;\A 8:             font-size: 14px;\A 9:             line-height: 19px;"; }
+  content: "Error: Undefined variable: \"$jacarta\".\A         on line 4 of C:\xampp\htdocs\valuecoders.com\staging\vc-menu\scss\header-form.scss\A \A 1: \A 2: .second-level-section {\A 3:     .form-right-box {\A 4:         border: 1px solid $jacarta;\A 5:         border-radius: 8px;\A 6:         ::placeholder {\A 7:             font-weight: 500;\A 8:             font-size: 14px;\A 9:             line-height: 19px;"; }

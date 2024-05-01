@@ -1,80 +1,59 @@
-/* line 15, admin-style.scss */
 .wprr-wrapper {
   zoom: 1; }
-  /* line 4, admin-style.scss */
   .wprr-wrapper:before, .wprr-wrapper:after {
     content: " ";
     display: table; }
-  /* line 10, admin-style.scss */
   .wprr-wrapper:after {
     clear: both; }
-  /* line 18, admin-style.scss */
   .wprr-wrapper * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-  /* line 23, admin-style.scss */
   .wprr-wrapper i {
     vertical-align: middle; }
-  /* line 27, admin-style.scss */
   .wprr-wrapper img {
     width: auto;
     height: auto; }
-  /* line 31, admin-style.scss */
   .wprr-wrapper [type="text"].error {
     border-color: #f44336;
     background-color: #ffdddd; }
-  /* line 35, admin-style.scss */
   .wprr-wrapper .wprr-tab {
     display: none; }
-    /* line 37, admin-style.scss */
     .wprr-wrapper .wprr-tab.active {
       display: block; }
 
-/* line 43, admin-style.scss */
 .wprr-row {
   clear: both;
   margin-bottom: 15px;
   zoom: 1; }
-  /* line 4, admin-style.scss */
   .wprr-row:before, .wprr-row:after {
     content: " ";
     display: table; }
-  /* line 10, admin-style.scss */
   .wprr-row:after {
     clear: both; }
-  /* line 47, admin-style.scss */
   .wprr-row .wprr-th,
   .wprr-row .wprr-td {
     min-height: 1px; }
-  /* line 52, admin-style.scss */
   .wprr-row .wprr-th {
     margin-bottom: 10px; }
-  /* line 55, admin-style.scss */
   .wprr-row .wprr-td.widefat {
     width: 100% !important; }
 
-/* line 60, admin-style.scss */
 .wprr-nav {
   zoom: 1;
   margin-bottom: 15px;
   border-bottom: 1px solid #eee; }
-  /* line 4, admin-style.scss */
   .wprr-nav:before, .wprr-nav:after {
     content: " ";
     display: table; }
-  /* line 10, admin-style.scss */
   .wprr-nav:after {
     clear: both; }
-  /* line 64, admin-style.scss */
   .wprr-nav ul {
     margin: 0; }
-  /* line 67, admin-style.scss */
   .wprr-nav li {
     float: left;
     margin: 0 15px 0 0;
     position: relative; }
-    /* line 71, admin-style.scss */
     .wprr-nav li:before {
       content: '';
       position: absolute;
@@ -85,7 +64,6 @@
       left: 0;
       width: 100%;
       display: none; }
-    /* line 82, admin-style.scss */
     .wprr-nav li a {
       text-decoration: none;
       color: #aaa;
@@ -94,79 +72,60 @@
       display: block;
       box-shadow: none !important;
       -webkit-box-shadow: none !important; }
-    /* line 92, admin-style.scss */
     .wprr-nav li.active:before {
       display: block; }
-    /* line 95, admin-style.scss */
     .wprr-nav li.active a {
       color: #333; }
 
-/* line 103, admin-style.scss */
 .wprr-rptbl-list li {
   zoom: 1;
   position: relative;
   padding-right: 48px; }
-  /* line 4, admin-style.scss */
   .wprr-rptbl-list li:before, .wprr-rptbl-list li:after {
     content: " ";
     display: table; }
-  /* line 10, admin-style.scss */
   .wprr-rptbl-list li:after {
     clear: both; }
-/* line 108, admin-style.scss */
 .wprr-rptbl-list .wprr-rptbl-field {
-  width: 33.33333%;
+  width: 33.3333333333%;
   float: left;
   padding-right: 15px; }
-/* line 114, admin-style.scss */
 .wprr-rptbl-list .wprr-feature-name {
   width: 75%; }
-/* line 117, admin-style.scss */
 .wprr-rptbl-list .wprr-feature-point {
   width: 25%; }
-/* line 120, admin-style.scss */
 .wprr-rptbl-list .wprr-rptbl-controls {
   width: 48px;
   position: absolute;
   right: 0; }
-  /* line 124, admin-style.scss */
   .wprr-rptbl-list .wprr-rptbl-controls i {
     font-size: 24px;
     color: #333; }
-  /* line 128, admin-style.scss */
   .wprr-rptbl-list .wprr-rptbl-controls [data-role="move"] {
     cursor: move; }
 
-/* line 134, admin-style.scss */
 .wprr-info {
   margin-bottom: 15px; }
 
-/* line 137, admin-style.scss */
 .wprr-score-info {
   font-weight: bold;
   font-size: 24px;
   color: #333; }
 
-/* line 142, admin-style.scss */
 .wprr-thumb-preview {
   margin-bottom: 10px; }
-  /* line 145, admin-style.scss */
   .wprr-thumb-preview img {
     max-height: 120px; }
 
 @media only screen and (min-width: 961px) {
-  /* line 151, admin-style.scss */
   .wprr-row {
     clear: both; }
-    /* line 153, admin-style.scss */
     .wprr-row .wprr-th {
       width: 20%;
       float: left; }
-    /* line 157, admin-style.scss */
     .wprr-row .wprr-td {
       width: 75%;
       float: right; }
-    /* line 161, admin-style.scss */
     .wprr-row .wprr-td.alt {
       width: 45%;
       float: left;

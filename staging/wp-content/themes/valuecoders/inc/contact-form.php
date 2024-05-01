@@ -4,71 +4,68 @@
 <div class="container">
   <div class="dis-flex justify-sb">
     <div class="left-box">
-    <?php if(is_page_template(['page-templates/template-hirepage.php', 'page-templates/tpl-free-trial.php'])){ ?>  
-    <h2>Start Your 7-day Trial</h2>
-    <div class="info-wrap">Try Before, Commit Later 
-    <?php if( !is_page_template('page-templates/tpl-free-trial.php') ){ ?>
-    <div class="info">
-    <div class="info-content">
-    <h4>What happens after you contact us? </h4>
-    <p>Our solution experts will answer your questions in a 
-    secure online meeting. 
-    </p>
-    <a class="kmore" href="<?php echo site_url('/hire-developers/7-day-trial'); ?>">Know More</a>
-    </div>
-    </div>
-    <?php } ?>
-    </div>
-    <?php }else{ ?>
-    <h2>Book Free Consultation</h2>
-    <p>Guaranteed response within 8 business hours.</p>
-    <?php } ?>
-
-    <div class="side-dash1 list-box">
-
-    <h3>Fill up your details</h3>
-    <?php 
-    if(is_page_template(['page-templates/template-hirepage.php', 'page-templates/tpl-free-trial.php'])){ 
-    echo '<p>Let us know your requirement.</p>';  
-    }else{
-    echo '<p>Get Custom Solutions, Recommendations, Estimates.</p>';  
-    } 
-    ?>
-    
-    </div>
-    <div class="side-dash2 list-box">
-    <h3>What's next?</h3>
-    <?php 
-    if(is_page_template(['page-templates/template-hirepage.php', 'page-templates/tpl-free-trial.php'])){ 
-    echo '<p>Our solution experts will answer your questions in a secure online meeting.</p>';  
-    }else{
-    echo '<p>One of our Account Managers will contact you shortly</p>';  
-    } 
-    ?>
-    
-    <div class="dis-flex  items-center award-logo">
-      <div class="logo-box">
-        <picture>
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v3.0/images/footer-aw-01.svg" alt="Valuecoders" width="75" height="46"> 
-        </picture>
+      <?php if(is_page_template(['page-templates/template-hirepage.php', 'page-templates/tpl-free-trial.php'])){ ?>  
+      <h2>Start Your 7-day Trial</h2>
+      <div class="info-wrap">
+        Try Before, Commit Later 
+        <?php if( !is_page_template('page-templates/tpl-free-trial.php') ){ ?>
+        <div class="info">
+          <div class="info-content">
+            <h4>What happens after you contact us? </h4>
+            <p>Our solution experts will answer your questions in a 
+              secure online meeting. 
+            </p>
+            <a class="kmore" href="<?php echo site_url('/hire-developers/7-day-trial'); ?>">Know More</a>
+          </div>
+        </div>
+        <?php } ?>
       </div>
-      <div class="logo-box">
-        <picture>
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v3.0/images/footer-aw-02.svg" alt="Valuecoders" width="90" height="22"> 
-        </picture>
+      <?php }else{ ?>
+      <h2>Book Free Consultation</h2>
+      <p>Guaranteed response within 8 business hours.</p>
+      <?php } ?>
+      <div class="side-dash1 list-box">
+        <h3>Fill up your details</h3>
+        <?php 
+          if(is_page_template(['page-templates/template-hirepage.php', 'page-templates/tpl-free-trial.php'])){ 
+          echo '<p>Let us know your requirement.</p>';  
+          }else{
+          echo '<p>Get Custom Solutions, Recommendations,<br> Estimates.</p>';  
+          } 
+          ?>
       </div>
-      <div class="logo-box">
-        <picture>
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v3.0/images/footer-aw-03.svg" alt="Valuecoders" width="114" height="35"> 
-        </picture>
+      <div class="side-dash2 list-box">
+        <h3>What's next?</h3>
+        <?php 
+          if(is_page_template(['page-templates/template-hirepage.php', 'page-templates/tpl-free-trial.php'])){ 
+          echo '<p>Our solution experts will answer your questions in a secure online meeting.</p>';  
+          }else{
+          echo '<p>One of our Account Managers will contact you<br> shortly</p>';  
+          } 
+          ?>
+        <div class="dis-flex  items-center award-logo">
+          <div class="logo-box">
+            <picture>
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/footer-aw-01.svg" alt="Valuecoders" width="107" height="60"> 
+            </picture>
+          </div>
+          <div class="logo-box">
+            <picture>
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/footer-aw-02.svg" alt="Valuecoders" width="107" height="60">  
+            </picture>
+          </div>
+          <div class="logo-box">
+            <picture>
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/footer-aw-03.svg" alt="Valuecoders" width="107" height="60">  
+            </picture>
+          </div>
+          <div class="logo-box">
+            <picture>
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/footer-aw-04.svg" alt="Valuecoders" width="107" height="60"> 
+            </picture>
+          </div>
+        </div>
       </div>
-      <div class="logo-box">
-        <picture>
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v3.0/images/footer-aw-04.svg" alt="Valuecoders" width="84" height="34"> 
-        </picture>
-      </div>
-    </div>
-    </div>
     </div>
     <div class="right-box">
       <form id="contact-form-section" action="<?php bloginfo('url'); ?>/sendmail1.php" 
@@ -83,7 +80,7 @@
           <div class="form-text-cont">
             <div class="user-input">
               <input type="text" autocomplete="off" id="cont_email" placeholder="Email Address" class="input-field" 
-              value="" name="user-email" />
+                value="" name="user-email" />
               <small>Error Message</small>
             </div>
           </div>
@@ -133,33 +130,30 @@
               <span class="error" id="captchaerror"></span>
             </div>
           </div>
-
           <div class="btn-sec">
-          <div class="user-input cta-btn checkout">
-            <input type="hidden" name="Uploadedfilename" id="Uploadedfilename" value="">
-            <input type="hidden" id="g-recaptcha-response-footer" name="g-recaptcha-response">
-            <input type="hidden" name="frmqueryString" value="">
-            <input type="hidden" name="page_url" value="<?php the_permalink(); ?>">
-            <input type="hidden" name="vc_csrf" value="<?php echo $csrf_token; ?>">
-            <?php 
-            if(is_page_template(['page-templates/template-hirepage.php', 'page-templates/tpl-free-trial.php'])){
-              echo '<input type="hidden" name="is_free_trial" value="true">';
-            }
-            ?>            
-            <div class="user-input btn rounded checkout">
-            <input type="submit" id="submitButton" class="checkout-submit" 
-            value="<?php echo (is_page_template(['page-templates/template-hirepage.php', 'page-templates/tpl-free-trial.php'])) ? 'Start My Trial' : 'Enquire Now' ?>" />
-            <!--<span class="arrow-wrap">
-            <span class="arrow primera"></span>
-            <span class="arrow segunda next"></span>
-            <span class="arrow last"></span>
-            </span>-->
+            <div class="user-input cta-btn checkout">
+              <input type="hidden" name="Uploadedfilename" id="Uploadedfilename" value="">
+              <input type="hidden" id="g-recaptcha-response-footer" name="g-recaptcha-response">
+              <input type="hidden" name="frmqueryString" value="">
+              <input type="hidden" name="page_url" value="<?php the_permalink(); ?>">
+              <input type="hidden" name="vc_csrf" value="<?php echo $csrf_token; ?>">
+              <?php 
+                if(is_page_template(['page-templates/template-hirepage.php', 'page-templates/tpl-free-trial.php'])){
+                  echo '<input type="hidden" name="is_free_trial" value="true">';
+                }
+                ?>            
+              <div class="user-input btn rounded checkout">
+                <input type="submit" id="submitButton" class="checkout-submit" 
+                  value="<?php echo (is_page_template(['page-templates/template-hirepage.php', 'page-templates/tpl-free-trial.php'])) ? 'Start My Trial' : 'Enquire Now' ?>" />
+                <!--<span class="arrow-wrap">
+                  <span class="arrow primera"></span>
+                  <span class="arrow segunda next"></span>
+                  <span class="arrow last"></span>
+                  </span>-->
+              </div>
+            </div>
           </div>
-          </div>
-          </div>
-
         </div>
-        
       </form>
     </div>
   </div>
@@ -487,10 +481,10 @@
         	return;
         }
         let gloader = ( issb === true ) ? document.getElementById("sbgloader") : document.getElementById("gloader");
-
+  
         gloader.classList.add("show-me");
         gloader.classList.add("active");
-
+  
         const fileSize = file.size / 1024 / 1024;
         if( fileSize > 20 ){
         	setFileError("ERROR Uploaded document exceeds the maximum size limit of 20 MB", errorTag);
@@ -732,8 +726,8 @@
     			}
         }else{
         checkLength(username,3,15);	
-		    checkEmail(email);
-		    checkLength(countriesData,3,255);
+      checkEmail(email);
+      checkLength(countriesData,3,255);
         
         checkLength(phone,10,10);
         //phonenumber(phone); // Optional
@@ -809,18 +803,18 @@
   		if( !sre.test(email.value.trim()) ){
   		  return false;
   		}
-
+  
       /*
       const phoneRjx = /^[A-Za-z0123456789()\s.+-]+$/;
       if( !phoneRjx.test( phone.value.trim() ) ){
         return false;
       }
       */
-
+  
   		if( validateMquiz() === false){
         return false;
       }
-
+  
       let rcToken = new Promise( (resolve, reject) =>{
       grecaptcha.ready(function(){
       grecaptcha.execute('6LfpW60nAAAAAO38ivvX-w6ZqaRR4FcrjuaeBc6w', {action:'validate_captcha'}).then(function(token){
@@ -835,7 +829,7 @@
             rcFld1.value = pxlToken;
           }
       }
-
+  
   		var form 	= document.getElementById("contact-form-section");
   		var formBtn = document.getElementById("submitButton");
   		form.classList.add('in-process');
@@ -887,7 +881,7 @@
   let hasHomeaslderw = document.getElementById("footer-client-slider-bot");
   if( hasHomeaslderw ){
   window.addEventListener("load", function () {
-
+  
   /*
   document.querySelector(".footer-client-slider .glider").addEventListener("glider-slide-visible", function (event){
   var glider = Glider(this);
@@ -901,15 +895,15 @@
   dots: ".contact-us-section .dots",
   dragDistance: false,
   });
-
-
+  
+  
   gliderslideAutoPaly(gliderID, '.footer-client-slider .glider', 5000);
     function gliderslideAutoPaly(glider, selector, delay = 2000, repeat = true) {
     let autoplay = null;
     const slidesCount = glider.track.childElementCount;
     let nextIndex = 1;
     let pause = true;
-
+  
     function slide() {
     autoplay = setInterval(() => {
         if (nextIndex >= slidesCount) {
@@ -922,9 +916,9 @@
         glider.scrollItem(nextIndex++);
     }, delay);
     }
-
+  
     slide();
-
+  
     var element = document.querySelector(selector);
     var videoPlayed = false;
     element.addEventListener('click', (event) => { 
@@ -942,7 +936,7 @@
     }
     }, 300);
     
-
+  
     element.addEventListener('mouseout', (event) => {
     if (!pause && ( videoPlayed === false)) {
         slide();
@@ -950,7 +944,7 @@
     }
     }, 300);
     
-
+  
     }
     });
   }

@@ -695,7 +695,7 @@ textarea {
   text-transform: initial; }
 
 .footer {
-  background: #05164d;
+  background: #040F34;
   padding: 20px 0; }
   .footer span,
   .footer h4,
@@ -4005,20 +4005,23 @@ body.page-template-template-testimonials .client-video-section iframe,
   .header-two .btn-sec {
     justify-content: center; } }
 .contact-us-section {
-  position: relative; }
+  position: relative;
+  background: #05164d; }
   .contact-us-section .left-box {
-    flex-basis: 34%;
+    flex-basis: 38%;
     position: relative;
     z-index: 1; }
     .contact-us-section .left-box p {
       line-height: 26px;
-      margin: 0 0 35px; }
+      margin: 0 0 35px;
+      color: #ffffff; }
     .contact-us-section .left-box h2 {
-      color: #05164d;
+      color: #ffffff;
       margin: 0 0 10px; }
     .contact-us-section .left-box h3 {
       margin-bottom: 10px;
-      font-weight: 500; }
+      font-weight: 500;
+      color: #ffffff; }
     .contact-us-section .left-box .list-box {
       padding-left: 60px;
       position: relative;
@@ -4039,8 +4042,7 @@ body.page-template-template-testimonials .client-video-section iframe,
         align-items: center;
         z-index: 1; }
     .contact-us-section .left-box .side-dash1 p {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      color: #3f3f3f; }
+      color: #ffffff; }
     .contact-us-section .left-box .side-dash1::before {
       content: "1"; }
     .contact-us-section .left-box .side-dash1::after {
@@ -4061,12 +4063,12 @@ body.page-template-template-testimonials .client-video-section iframe,
       justify-content: space-between;
       margin: 40px 0 0; }
       .contact-us-section .left-box .award-logo .logo-box {
-        padding-right: 20px;
-        opacity: 0.4; }
-        .contact-us-section .left-box .award-logo .logo-box:hover {
-          opacity: 1; }
+        padding-right: 10px; }
   .contact-us-section .right-box {
-    width: 55%; }
+    width: 55%;
+    background: #ffffff;
+    padding: 40px 40px 0;
+    border-radius: 15px; }
   .contact-us-section .form-text-cont {
     flex-basis: 50%;
     margin-bottom: 20px;
@@ -4412,7 +4414,10 @@ body.page-template-template-testimonials .client-video-section iframe,
     flex-basis: 100%; }
   .contact-us-section .right-box {
     width: 100%;
-    margin-top: 40px; } }
+    margin-top: 40px;
+    padding: 40px 20px 0; }
+  .contact-us-section .qz-captcha {
+    margin-top: 15px; } }
 @media only screen and (max-width: 767px) {
   .contact-us-section .left-box p {
     line-height: 24px; }

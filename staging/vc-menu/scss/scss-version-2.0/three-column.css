@@ -1,6 +1,6 @@
 /*
 Error: Undefined variable: "$white".
-        on line 6 of C:\xampp\htdocs\valuecoders-v2\scss\scss-version-2.0\three-column.scss
+        on line 6 of C:\xampp\htdocs\valuecoders.com\staging\vc-menu\scss\scss-version-2.0\three-column.scss
 
 1: .three-column-icon-section {
 2:     &.bg-dark-theme {
@@ -15,7 +15,7 @@ Error: Undefined variable: "$white".
 11:         .box {
 
 Backtrace:
-C:\xampp\htdocs\valuecoders-v2\scss\scss-version-2.0\three-column.scss:6
+C:\xampp\htdocs\valuecoders.com\staging\vc-menu\scss\scss-version-2.0\three-column.scss:6
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -106,4 +106,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$white\".\A         on line 6 of C:\xampp\htdocs\valuecoders-v2\scss\scss-version-2.0\three-column.scss\A \A 1: .three-column-icon-section {\A 2:     &.bg-dark-theme {\A 3:       .has-vlink{\A 4:         .box {\A 5:           &:hover {\A 6:             background:$white;\A 7:           }\A 8:         }\A 9:       }\A 10:       .has-anchor{\A 11:         .box {"; }
+  content: "Error: Undefined variable: \"$white\".\A         on line 6 of C:\xampp\htdocs\valuecoders.com\staging\vc-menu\scss\scss-version-2.0\three-column.scss\A \A 1: .three-column-icon-section {\A 2:     &.bg-dark-theme {\A 3:       .has-vlink{\A 4:         .box {\A 5:           &:hover {\A 6:             background:$white;\A 7:           }\A 8:         }\A 9:       }\A 10:       .has-anchor{\A 11:         .box {"; }

@@ -1,6 +1,6 @@
 /*
 Error: Undefined variable: "$contentDay".
-        on line 22 of C:\xampp\htdocs\valuecoders-v2\scss\scss-version-2.0\tech-stack-v2.scss
+        on line 22 of C:\xampp\htdocs\valuecoders.com\wp-content\themes\valuecoders\scss\scss-version-2.0\tech-stack-v2.scss
 
 17:     }
 18:     .content-box {
@@ -15,7 +15,7 @@ Error: Undefined variable: "$contentDay".
 27:         h3 {
 
 Backtrace:
-C:\xampp\htdocs\valuecoders-v2\scss\scss-version-2.0\tech-stack-v2.scss:22
+C:\xampp\htdocs\valuecoders.com\wp-content\themes\valuecoders\scss\scss-version-2.0\tech-stack-v2.scss:22
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -84,4 +84,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$contentDay\".\A         on line 22 of C:\xampp\htdocs\valuecoders-v2\scss\scss-version-2.0\tech-stack-v2.scss\A \A 17:     }\A 18:     .content-box {\A 19:         padding: 50px 40px 40px;\A 20:         p {\A 21:             min-height: 90px;\A 22:             color: $contentDay;\A 23:             strong {\A 24:                 font-weight: 400;\A 25:             }\A 26:         }\A 27:         h3 {"; }
+  content: "Error: Undefined variable: \"$contentDay\".\A         on line 22 of C:\xampp\htdocs\valuecoders.com\wp-content\themes\valuecoders\scss\scss-version-2.0\tech-stack-v2.scss\A \A 17:     }\A 18:     .content-box {\A 19:         padding: 50px 40px 40px;\A 20:         p {\A 21:             min-height: 90px;\A 22:             color: $contentDay;\A 23:             strong {\A 24:                 font-weight: 400;\A 25:             }\A 26:         }\A 27:         h3 {"; }

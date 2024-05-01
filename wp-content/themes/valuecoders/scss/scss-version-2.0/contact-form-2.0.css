@@ -1165,7 +1165,7 @@ textarea {
   text-align: left;
   z-index: 2;
   font-weight: 500;
-  margin-bottom: 20px; }
+  margin-bottom: -15px; }
   .breadcrumbs a {
     display: inline-block;
     position: relative;
@@ -1440,9 +1440,13 @@ textarea {
 
   .hero-section,
   .second-level-section {
-    padding: 180px 0 100px;
+    padding: 170px 0 100px;
     display: flex; } }
 @media only screen and (max-width: 1600px) {
+  .head-txt p {
+    font-size: 18px;
+    line-height: 28px; }
+
   .hero-section,
   .second-level-section {
     min-height: calc(100vh - 95px); }
@@ -1457,19 +1461,19 @@ textarea {
     font-size: 16px; }
 
   h1 {
-    font-size: 42px;
-    line-height: 54px; }
+    font-size: 40px;
+    line-height: 52px; }
 
   h2 {
-    font-size: 38px;
-    line-height: 47px; }
+    font-size: 35px;
+    line-height: 42px; }
 
   h3 {
     font-size: 20px;
     line-height: 28px; }
 
   p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 28px; }
 
   .padding-t-100 {
@@ -1599,6 +1603,10 @@ textarea {
     font-size: 38px;
     line-height: 46px; }
 
+  h2 {
+    font-size: 32px;
+    line-height: 40px; }
+
   .container,
   .hero-section::after,
   .second-level-section::after,
@@ -1607,7 +1615,7 @@ textarea {
 
   .hero-section,
   .second-level-section {
-    padding: 140px 0 50px; }
+    padding: 120px 0 50px; }
     .hero-section::after,
     .second-level-section::after {
       margin: 60px auto 0; }
@@ -1682,7 +1690,10 @@ textarea {
   .tech-stack-updated-section .content-box {
     padding: 40px 30px 30px; }
   .tech-stack-updated-section .logo-list-box {
-    padding: 15px 20px 25px; } }
+    padding: 15px 20px 25px; }
+
+  .breadcrumbs {
+    margin-bottom: 11px; } }
 @media only screen and (max-width: 1320px) {
   h1 {
     font-size: 34px;
@@ -1691,6 +1702,10 @@ textarea {
   h2 {
     font-size: 32px;
     line-height: 38px; }
+
+  p {
+    font-size: 14px;
+    line-height: 26px; }
 
   .container,
   .hero-section::after,
@@ -3439,7 +3454,7 @@ textarea {
   text-align: left;
   z-index: 2;
   font-weight: 500;
-  margin-bottom: 20px; }
+  margin-bottom: -15px; }
   .breadcrumbs a {
     display: inline-block;
     position: relative;
@@ -3714,9 +3729,13 @@ textarea {
 
   .hero-section,
   .second-level-section {
-    padding: 180px 0 100px;
+    padding: 170px 0 100px;
     display: flex; } }
 @media only screen and (max-width: 1600px) {
+  .head-txt p {
+    font-size: 18px;
+    line-height: 28px; }
+
   .hero-section,
   .second-level-section {
     min-height: calc(100vh - 95px); }
@@ -3731,19 +3750,19 @@ textarea {
     font-size: 16px; }
 
   h1 {
-    font-size: 42px;
-    line-height: 54px; }
+    font-size: 40px;
+    line-height: 52px; }
 
   h2 {
-    font-size: 38px;
-    line-height: 47px; }
+    font-size: 35px;
+    line-height: 42px; }
 
   h3 {
     font-size: 20px;
     line-height: 28px; }
 
   p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 28px; }
 
   .padding-t-100 {
@@ -3873,6 +3892,10 @@ textarea {
     font-size: 38px;
     line-height: 46px; }
 
+  h2 {
+    font-size: 32px;
+    line-height: 40px; }
+
   .container,
   .hero-section::after,
   .second-level-section::after,
@@ -3881,7 +3904,7 @@ textarea {
 
   .hero-section,
   .second-level-section {
-    padding: 140px 0 50px; }
+    padding: 120px 0 50px; }
     .hero-section::after,
     .second-level-section::after {
       margin: 60px auto 0; }
@@ -3956,7 +3979,10 @@ textarea {
   .tech-stack-updated-section .content-box {
     padding: 40px 30px 30px; }
   .tech-stack-updated-section .logo-list-box {
-    padding: 15px 20px 25px; } }
+    padding: 15px 20px 25px; }
+
+  .breadcrumbs {
+    margin-bottom: 11px; } }
 @media only screen and (max-width: 1320px) {
   h1 {
     font-size: 34px;
@@ -3965,6 +3991,10 @@ textarea {
   h2 {
     font-size: 32px;
     line-height: 38px; }
+
+  p {
+    font-size: 14px;
+    line-height: 26px; }
 
   .container,
   .hero-section::after,

@@ -1,6 +1,6 @@
 /*
 Error: Undefined variable: "$headDay".
-        on line 15 of C:\xampp\htdocs\valuecoders-v2\scss\scss-version-2.0\three-column - Copy.scss
+        on line 15 of C:\xampp\htdocs\valuecoders.com\wp-content\themes\valuecoders\scss\scss-version-2.0\three-column - Copy.scss
 
 10:       margin-top: 75px;
 11:       justify-content: center;
@@ -15,7 +15,7 @@ Error: Undefined variable: "$headDay".
 20:     }
 
 Backtrace:
-C:\xampp\htdocs\valuecoders-v2\scss\scss-version-2.0\three-column - Copy.scss:15
+C:\xampp\htdocs\valuecoders.com\wp-content\themes\valuecoders\scss\scss-version-2.0\three-column - Copy.scss:15
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -84,4 +84,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$headDay\".\A         on line 15 of C:\xampp\htdocs\valuecoders-v2\scss\scss-version-2.0\three-column - Copy.scss\A \A 10:       margin-top: 75px;\A 11:       justify-content: center;\A 12:     }\A 13:     h3 {\A 14:       a {\A 15:         color: $headDay;\A 16:       }\A 17:     }\A 18:     .learn-more {\A 19:       margin-top: 20px;\A 20:     }"; }
+  content: "Error: Undefined variable: \"$headDay\".\A         on line 15 of C:\xampp\htdocs\valuecoders.com\wp-content\themes\valuecoders\scss\scss-version-2.0\three-column - Copy.scss\A \A 10:       margin-top: 75px;\A 11:       justify-content: center;\A 12:     }\A 13:     h3 {\A 14:       a {\A 15:         color: $headDay;\A 16:       }\A 17:     }\A 18:     .learn-more {\A 19:       margin-top: 20px;\A 20:     }"; }

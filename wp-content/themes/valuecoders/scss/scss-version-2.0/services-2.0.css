@@ -656,7 +656,6 @@ textarea {
     z-index: -1; }
   .contact-us-section ::-webkit-scrollbar {
     width: 6px;
-    height: 85px;
     border-radius: 5px;
     overflow: scroll; }
   .contact-us-section ::-webkit-scrollbar-track {
@@ -1166,7 +1165,7 @@ textarea {
   text-align: left;
   z-index: 2;
   font-weight: 500;
-  margin-bottom: 20px; }
+  margin-bottom: -15px; }
   .breadcrumbs a {
     display: inline-block;
     position: relative;
@@ -1441,9 +1440,13 @@ textarea {
 
   .hero-section,
   .second-level-section {
-    padding: 180px 0 100px;
+    padding: 170px 0 100px;
     display: flex; } }
 @media only screen and (max-width: 1600px) {
+  .head-txt p {
+    font-size: 18px;
+    line-height: 28px; }
+
   .hero-section,
   .second-level-section {
     min-height: calc(100vh - 95px); }
@@ -1458,19 +1461,19 @@ textarea {
     font-size: 16px; }
 
   h1 {
-    font-size: 42px;
-    line-height: 54px; }
+    font-size: 40px;
+    line-height: 52px; }
 
   h2 {
-    font-size: 38px;
-    line-height: 47px; }
+    font-size: 35px;
+    line-height: 42px; }
 
   h3 {
     font-size: 20px;
     line-height: 28px; }
 
   p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 28px; }
 
   .padding-t-100 {
@@ -1600,6 +1603,10 @@ textarea {
     font-size: 38px;
     line-height: 46px; }
 
+  h2 {
+    font-size: 32px;
+    line-height: 40px; }
+
   .container,
   .hero-section::after,
   .second-level-section::after,
@@ -1608,7 +1615,7 @@ textarea {
 
   .hero-section,
   .second-level-section {
-    padding: 140px 0 50px; }
+    padding: 120px 0 50px; }
     .hero-section::after,
     .second-level-section::after {
       margin: 60px auto 0; }
@@ -1683,7 +1690,10 @@ textarea {
   .tech-stack-updated-section .content-box {
     padding: 40px 30px 30px; }
   .tech-stack-updated-section .logo-list-box {
-    padding: 15px 20px 25px; } }
+    padding: 15px 20px 25px; }
+
+  .breadcrumbs {
+    margin-bottom: 11px; } }
 @media only screen and (max-width: 1320px) {
   h1 {
     font-size: 34px;
@@ -1692,6 +1702,10 @@ textarea {
   h2 {
     font-size: 32px;
     line-height: 38px; }
+
+  p {
+    font-size: 14px;
+    line-height: 26px; }
 
   .container,
   .hero-section::after,
@@ -3578,7 +3592,6 @@ textarea {
     z-index: -1; }
   .contact-us-section ::-webkit-scrollbar {
     width: 6px;
-    height: 85px;
     border-radius: 5px;
     overflow: scroll; }
   .contact-us-section ::-webkit-scrollbar-track {
@@ -4088,7 +4101,7 @@ textarea {
   text-align: left;
   z-index: 2;
   font-weight: 500;
-  margin-bottom: 20px; }
+  margin-bottom: -15px; }
   .breadcrumbs a {
     display: inline-block;
     position: relative;
@@ -4363,9 +4376,13 @@ textarea {
 
   .hero-section,
   .second-level-section {
-    padding: 180px 0 100px;
+    padding: 170px 0 100px;
     display: flex; } }
 @media only screen and (max-width: 1600px) {
+  .head-txt p {
+    font-size: 18px;
+    line-height: 28px; }
+
   .hero-section,
   .second-level-section {
     min-height: calc(100vh - 95px); }
@@ -4380,19 +4397,19 @@ textarea {
     font-size: 16px; }
 
   h1 {
-    font-size: 42px;
-    line-height: 54px; }
+    font-size: 40px;
+    line-height: 52px; }
 
   h2 {
-    font-size: 38px;
-    line-height: 47px; }
+    font-size: 35px;
+    line-height: 42px; }
 
   h3 {
     font-size: 20px;
     line-height: 28px; }
 
   p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 28px; }
 
   .padding-t-100 {
@@ -4522,6 +4539,10 @@ textarea {
     font-size: 38px;
     line-height: 46px; }
 
+  h2 {
+    font-size: 32px;
+    line-height: 40px; }
+
   .container,
   .hero-section::after,
   .second-level-section::after,
@@ -4530,7 +4551,7 @@ textarea {
 
   .hero-section,
   .second-level-section {
-    padding: 140px 0 50px; }
+    padding: 120px 0 50px; }
     .hero-section::after,
     .second-level-section::after {
       margin: 60px auto 0; }
@@ -4605,7 +4626,10 @@ textarea {
   .tech-stack-updated-section .content-box {
     padding: 40px 30px 30px; }
   .tech-stack-updated-section .logo-list-box {
-    padding: 15px 20px 25px; } }
+    padding: 15px 20px 25px; }
+
+  .breadcrumbs {
+    margin-bottom: 11px; } }
 @media only screen and (max-width: 1320px) {
   h1 {
     font-size: 34px;
@@ -4614,6 +4638,10 @@ textarea {
   h2 {
     font-size: 32px;
     line-height: 38px; }
+
+  p {
+    font-size: 14px;
+    line-height: 26px; }
 
   .container,
   .hero-section::after,
@@ -5093,7 +5121,7 @@ textarea {
   .header-two .small {
     opacity: 0;
     display: grid;
-    background: #fff;
+    background: #ECECEC;
     padding: 10px;
     width: 60px;
     height: 60px;
@@ -5234,12 +5262,13 @@ textarea {
           margin: 0 0 45px;
           padding-left: 50px;
           position: relative; }
-          .header-two .menu ul li .menu-mega .flex-3 a:hover .title,
-          .header-two .menu ul li .menu-mega .detail-list a:hover .title {
-            text-decoration: underline; }
+          .header-two .menu ul li .menu-mega .flex-3 a:hover,
+          .header-two .menu ul li .menu-mega .detail-list a:hover {
+            text-decoration: underline;
+            color: #212121; }
         .header-two .menu ul li .menu-mega .flex-3 .head,
         .header-two .menu ul li .menu-mega .detail-list .head {
-          font-weight: 600;
+          font-weight: 500;
           font-size: 18px;
           line-height: 25px;
           text-transform: uppercase;
@@ -5332,7 +5361,7 @@ textarea {
           display: inline-block; }
       .header-two .menu ul li .menu-mega .middle-list .head,
       .header-two .menu ul li .menu-mega .last-list .head {
-        font-weight: 600;
+        font-weight: 500;
         font-size: 18px;
         line-height: 25px;
         text-transform: uppercase;
@@ -5436,6 +5465,12 @@ textarea {
         right: -20%;
         padding-left: 20px;
         border-radius: 20px; }
+      .header-two .menu ul li .menu-mega .landing-menu .flex-3:nth-of-type(2):not(.without-icon) a:first-of-type,
+      .header-two .menu ul li .menu-mega .landing-menu .detail-list:nth-of-type(2):not(.without-icon) a:first-of-type {
+        margin-top: 60px; }
+      .header-two .menu ul li .menu-mega .landing-menu .flex-3:last-child,
+      .header-two .menu ul li .menu-mega .landing-menu .detail-list:last-child {
+        background: #f8f8fb; }
       .header-two .menu ul li .menu-mega .w-14 {
         max-width: 1400px; }
       .header-two .menu ul li .menu-mega .w-900 {
@@ -5459,9 +5494,7 @@ textarea {
           background: url("../menu-images/arrow-down.png") 0 0 no-repeat;
           width: 17px;
           height: 11px;
-          position: absolute;
-          top: 8px;
-          right: -30px;
+          margin-left: 10px;
           transition: all 0.3s ease-in-out; }
       .header-two .menu ul li.small-menu.for-company .arrow-btn::before {
         display: none; }
@@ -5543,7 +5576,14 @@ textarea {
       position: absolute;
       left: 0;
       top: 0; }
+  .header-two .hiremenu .hr-list-item a {
+    color: #9F9F9F !important;
+    text-transform: uppercase;
+    margin: 0 0 30px; }
 
+@media only screen and (min-width: 1200px) {
+  .header-two > .container {
+    max-width: 1900px; } }
 @media only screen and (max-width: 1780px) {
   .header-two .header-item-left .menu .for-product {
     padding: 0 15px 15px; }
@@ -5580,15 +5620,18 @@ textarea {
     .header-two .header-item-left .menu:before {
       height: 45px;
       top: -5px; } }
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1690px) {
+  .header-two .small {
+    width: 50px;
+    height: 50px; }
   .header-two .menu ul li.menu-item-has-children {
     padding: 0 14px 20px; }
   .header-two .menu ul li a {
-    font-size: 18px; }
+    font-size: 16px; }
   .header-two .menu ul li.small-menu .small-menu-inner {
     padding: 10px 30px 30px; }
     .header-two .menu ul li.small-menu .small-menu-inner a {
-      font-size: 18px;
+      font-size: 16px;
       margin-top: 22px; }
   .header-two .menu ul li .menu-mega .detail-list,
   .header-two .menu ul li .menu-mega .flex-3 {
@@ -5596,22 +5639,25 @@ textarea {
     .header-two .menu ul li .menu-mega .detail-list a,
     .header-two .menu ul li .menu-mega .flex-3 a {
       margin: 0 0 25px;
-      font-size: 14px; }
+      font-size: 13px;
+      line-height: 20px; }
       .header-two .menu ul li .menu-mega .detail-list a .title,
       .header-two .menu ul li .menu-mega .flex-3 a .title {
-        font-size: 18px; }
+        font-size: 16px; }
     .header-two .menu ul li .menu-mega .detail-list .head,
     .header-two .menu ul li .menu-mega .flex-3 .head {
-      margin: 0 0 20px;
-      font-size: 16px; }
+      margin: 0 0 15px;
+      font-size: 15px; }
   .header-two .menu ul li .menu-mega .last-list.for-padding {
     padding: 35px 40px; }
   .header-two .menu ul li .menu-mega .last-list a {
-    font-size: 18px;
-    margin: 0 0 18px; }
+    font-size: 16px;
+    margin: 0 0 10px; }
+    .header-two .menu ul li .menu-mega .last-list a.margin-t-40 {
+      margin-top: 20px; }
   .header-two .menu ul li .menu-mega .last-list .head {
     margin: 0 0 15px;
-    font-size: 16px; }
+    font-size: 15px; }
   .header-two .menu ul li .menu-mega .header-menu.for-padding {
     padding: 35px 40px; }
   .header-two .menu ul li .menu-mega .landing-menu .flex-3:nth-of-type(2):not(.without-icon) a:first-of-type,
@@ -5621,7 +5667,7 @@ textarea {
     max-width: 220px; }
   .header-two .menu ul li.small-menu .active-pcat {
     color: #fff;
-    font-size: 18px; } }
+    font-size: 16px; } }
 @media only screen and (max-width: 1440px) {
   .header-two {
     padding: 20px 0 0; }
@@ -5739,7 +5785,8 @@ textarea {
       display: flex;
       flex-basis: 100%;
       justify-content: space-between;
-      align-items: center; }
+      align-items: center;
+      margin: 0; }
       .header-two .header-item-left .menu {
         display: none; }
     .header-two.sc-down .large {
@@ -5779,6 +5826,8 @@ textarea {
             .header-two .menu ul li.small-menu .small-menu-inner a:hover {
               color: #fff;
               text-decoration: none; }
+        .header-two .menu ul li .menuicon {
+          display: none; }
         .header-two .menu ul li .ecom .flex-3:nth-of-type(2) a:first-of-type {
           margin-top: auto !important; }
         .header-two .menu ul li.small-menu {
@@ -5861,6 +5910,11 @@ textarea {
             box-shadow: none;
             background: #1d1c39;
             border-radius: 0; }
+          .header-two .menu ul li .menu-mega .w-900 {
+            width: 100%;
+            max-width: 100%; }
+            .header-two .menu ul li .menu-mega .w-900 .flex-3 {
+              flex-basis: 100%; }
           .header-two .menu ul li .menu-mega .detail-list,
           .header-two .menu ul li .menu-mega .flex-3 {
             padding: 0; }
@@ -5882,6 +5936,9 @@ textarea {
               .header-two .menu ul li .menu-mega .flex-3 a .title {
                 font-size: 14px;
                 margin-bottom: 0;
+                color: #fff; }
+              .header-two .menu ul li .menu-mega .detail-list a:hover,
+              .header-two .menu ul li .menu-mega .flex-3 a:hover {
                 color: #fff; }
             .header-two .menu ul li .menu-mega .detail-list .title,
             .header-two .menu ul li .menu-mega .flex-3 .title {
@@ -5953,7 +6010,6 @@ textarea {
             .header-two .menu ul li .menu-mega .middle-list a.active, .header-two .menu ul li .menu-mega .middle-list a:hover,
             .header-two .menu ul li .menu-mega .last-list a.active,
             .header-two .menu ul li .menu-mega .last-list a:hover {
-              text-decoration: none;
               color: #fff; }
           .header-two .menu ul li .menu-mega .middle-list br,
           .header-two .menu ul li .menu-mega .last-list br {
@@ -6151,7 +6207,10 @@ textarea {
     display: none; }
 
   .header-two .menu ul li.small-menu .active-pcat {
-    font-size: 15px; } }
+    font-size: 15px; }
+
+  .header-two .menu ul li .menu-mega .hiremenu .last-list a.margin-t-40 {
+    margin-top: 0; } }
 .page-id-10239 .img-two-column-list-section ul li {
   flex-basis: 33.33%;
   padding-right: 10px;
@@ -6222,8 +6281,12 @@ textarea {
     padding-right: 6%; }
   .second-level-section .flex-2:last-child {
     flex-basis: 40%;
-    max-width: 620px;
+    max-width: 600px;
     margin: 0 0 0 auto; }
+  .second-level-section .flex-2 .glider-dots {
+    margin: 25px 0 0; }
+    .second-level-section .flex-2 .glider-dots .glider-dot.active {
+      background: #60b741; }
   .second-level-section h1 {
     margin-bottom: 20px; }
     .second-level-section h1 span {
@@ -8162,6 +8225,11 @@ textarea {
 @media only screen and (max-width: 1780px) {
   .second-level-section .for-client-logo-box i {
     margin: 0 4px; }
+  .second-level-section .flex-2:first-child {
+    flex-basis: 55%; }
+  .second-level-section .flex-2:last-child {
+    max-width: 580px;
+    flex-basis: 45%; }
 
   .counter-column-section .counter-column-outer {
     padding: 100px 70px; }
@@ -8223,7 +8291,7 @@ textarea {
   .second-level-section .flex-2:first-child {
     flex-basis: 55%; }
   .second-level-section .flex-2:last-child {
-    max-width: 560px;
+    max-width: 540px;
     flex-basis: 45%; }
   .second-level-section iframe {
     height: 310px; }
@@ -8617,7 +8685,8 @@ textarea {
   .second-level-section .flex-2:first-child {
     flex-basis: 55%; }
   .second-level-section .flex-2:last-child {
-    flex-basis: 45%; }
+    flex-basis: 45%;
+    max-width: 480px; }
 
   .valuecoders-img-section.for-revese-value-section .right-box {
     padding-right: 0; }
@@ -8678,7 +8747,8 @@ textarea {
     flex-basis: 50%;
     padding-right: 50px; }
   .second-level-section .flex-2:last-child {
-    flex-basis: 50%; }
+    flex-basis: 50%;
+    max-width: 470px; }
 
   .valuecoders-img-section .right-box {
     padding-left: 0; }
@@ -9133,7 +9203,10 @@ textarea {
     height: 89px;
     background: url(../images/mobile-php-icon.png) 0 0 no-repeat; }
   .second-level-section .flex-2:last-child {
-    margin: 30px auto 0; }
+    margin: 30px auto 0;
+    max-width: 100%; }
+    .second-level-section .flex-2:last-child .right-box {
+      display: none; }
 
   .numbering-box-section .col-box-outer {
     margin-top: 20px; }

@@ -4,7 +4,6 @@
   src: url("../fonts/wprr-icons.eot?uh1sgd#iefix") format("embedded-opentype"), url("../fonts/wprr-icons.ttf?uh1sgd") format("truetype"), url("../fonts/wprr-icons.woff?uh1sgd") format("woff"), url("../fonts/wprr-icons.svg?uh1sgd#wprr-icons") format("svg");
   font-weight: normal;
   font-style: normal; }
-/* line 41, style.scss */
 [class^="wprr-icon-"], [class*=" wprr-icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'wprr-icons' !important;
@@ -18,15 +17,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-/* line 56, style.scss */
 .wprr-icon-star-o:before {
   content: "\e900"; }
 
-/* line 59, style.scss */
 .wprr-icon-star:before {
   content: "\e901"; }
 
-/* line 63, style.scss */
 .wprr-stars-rating {
   display: inline-block;
   margin-left: -2px;
@@ -35,19 +31,16 @@
   white-space: nowrap;
   text-align: left;
   font-size: 0; }
-  /* line 71, style.scss */
   .wprr-stars-rating i {
     font-size: 20px;
     display: inline-block;
     margin-left: 2px;
     margin-right: 2px; }
 
-/* line 79, style.scss */
 .wprr-stars-base {
   color: #000;
   opacity: .1; }
 
-/* line 83, style.scss */
 .wprr-stars-value {
   color: #FFC107;
   width: 40%;
@@ -56,61 +49,47 @@
   left: 0;
   top: 0; }
 
-/* line 92, style.scss */
 .wprr-wrapper {
   *zoom: 1;
   padding: 15px 0; }
-  /* line 4, style.scss */
   .wprr-wrapper:before, .wprr-wrapper:after {
     content: " ";
     display: table; }
-  /* line 10, style.scss */
   .wprr-wrapper:after {
     clear: both; }
-  /* line 97, style.scss */
   .wprr-wrapper ul {
     list-style: none;
     padding: 0; }
-  /* line 102, style.scss */
   .wprr-wrapper * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
 
-/* line 109, style.scss */
 .wprr-sec {
   padding: 15px 0;
   border-bottom: 1px solid #eee;
   *zoom: 1; }
-  /* line 4, style.scss */
   .wprr-sec:before, .wprr-sec:after {
     content: " ";
     display: table; }
-  /* line 10, style.scss */
   .wprr-sec:after {
     clear: both; }
-  /* line 113, style.scss */
   .wprr-sec:last-child {
     border-width: 0; }
 
-/* line 117, style.scss */
 .wprr-heading {
   margin-top: 0; }
 
-/* line 121, style.scss */
 .wprr-sec-title {
   margin-top: 0; }
 
-/* line 124, style.scss */
 .wprr-sec-ct,
 .wprr-info {
   position: relative; }
 
-/* line 129, style.scss */
 .wprr-thumbnail {
   margin-bottom: 30px; }
 
-/* line 133, style.scss */
 .wprr-info-list li {
   display: inline-block;
   vertical-align: top;
@@ -119,20 +98,16 @@
   border-right: 1px solid #eee;
   padding-top: 7.5px;
   padding-bottom: 7.5px; }
-  /* line 141, style.scss */
   .wprr-info-list li:last-child {
     border-width: 0;
     margin-right: 0; }
-  /* line 145, style.scss */
   .wprr-info-list li .info-title {
     display: block;
     text-transform: uppercase;
     font-size: 11px; }
-  /* line 150, style.scss */
   .wprr-info-list li .info-value {
     font-weight: bold; }
 
-/* line 155, style.scss */
 .wprr-review-score {
   float: right;
   background-color: #19bc9c;
@@ -146,36 +121,28 @@
   right: 0;
   top: 0; }
 
-/* line 171, style.scss */
 .wprr-features li {
   padding: 15px 0;
   position: relative;
   *zoom: 1; }
-  /* line 4, style.scss */
   .wprr-features li:before, .wprr-features li:after {
     content: " ";
     display: table; }
-  /* line 10, style.scss */
   .wprr-features li:after {
     clear: both; }
-  /* line 176, style.scss */
   .wprr-features li:last-child {
     border-width: 0; }
 
-/* line 184, style.scss */
 .wprr-feature.overall .wprr-feature-star {
   font-size: 24px;
   font-weight: bold; }
 
-/* line 190, style.scss */
 .wprr-feature-name {
   font-weight: bold; }
 
-/* line 194, style.scss */
 .wprr-feature-star {
   float: right; }
 
-/* line 197, style.scss */
 .wprr-feature-score {
   font-size: 16px;
   font-weight: bold;
@@ -192,44 +159,36 @@
   width: 50px;
   height: 50px; }
 
-/* line 217, style.scss */
 .wprr-feature-bar {
   height: 8px;
   background-color: rgba(0, 0, 0, 0.05);
   margin-right: 64px; }
-  /* line 221, style.scss */
   .wprr-feature-bar * {
     height: inherit;
     background-color: #19bc9c; }
 
-/* line 233, style.scss */
 .wprr-sec-procon ul li {
   padding-left: 15px;
   position: relative; }
-  /* line 237, style.scss */
   .wprr-sec-procon ul li:before {
     position: absolute;
     left: 0;
     font-family: sans-serif; }
 
-/* line 246, style.scss */
 .wprr-pros ul li:before {
   content: '\2713';
   color: #5cb85c; }
 
-/* line 252, style.scss */
 .wprr-cons ul li:before {
   content: '\00d7';
   color: #d9534f; }
 
 @media only screen and (min-width: 480px) {
-  /* line 260, style.scss */
   .wprr-pros,
   .wprr-cons {
     width: 45%;
     float: left; }
 
-  /* line 265, style.scss */
   .wprr-cons {
     margin-left: 5%;
     border-left: 1px solid #eee;

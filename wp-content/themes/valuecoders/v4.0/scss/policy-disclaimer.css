@@ -888,7 +888,7 @@ textarea {
   .for-client-logo-box .logo-box {
     width: 109px;
     height: 57px;
-    background: url(../images/home-partner-logo.svg) 0 0 no-repeat;
+    background: url(../images/home-partner-logo.png) 0 0 no-repeat;
     display: inline-block; }
     .for-client-logo-box .logo-box.logo2 {
       background-position: -111px 0; }
@@ -992,6 +992,10 @@ textarea {
     right: 0;
     width: 304px;
     height: 475px; }
+  .experts-talk-first-section .button-section {
+    justify-content: center; }
+    .experts-talk-first-section .button-section .btn-sec {
+      justify-content: center; }
 
 .experts-talk-second-section {
   position: relative;
@@ -1628,7 +1632,7 @@ body.page-template-template-testimonials .client-video-section iframe,
       border-radius: 50%;
       position: absolute;
       left: 0;
-      top: 8px; }
+      top: 6px; }
 .three-column-icon-section a {
   text-decoration: none; }
   .three-column-icon-section a:hover {
@@ -1893,8 +1897,8 @@ body.page-template-template-testimonials .client-video-section iframe,
       font-weight: 500; }
     .header-two .btn-sec .btn.rounded::before {
       border-radius: 50px;
-      width: 43px;
-      height: 43px;
+      width: 42px;
+      height: 42px;
       background: #ffad00 url(../images/btn-icon.svg) 0 0 no-repeat;
       background-size: 15px;
       background-position: center right 13px; }
@@ -1912,9 +1916,6 @@ body.page-template-template-testimonials .client-video-section iframe,
       .header-two .btn-sec .btn:hover .text-white {
         color: #05164d; }
 
-@media only screen and (max-width: 991px) {
-  .btn-sec {
-    justify-content: center; } }
 @media only screen and (max-width: 991px) {
   .btn-sec .btn {
     font-size: 16px;
@@ -3218,7 +3219,79 @@ body.page-template-template-testimonials .client-video-section iframe,
 
   .header-two .menu ul li.for-product .menu-mega a {
     height: initial;
-    flex-wrap: wrap; } }
+    flex-wrap: wrap; }
+
+  .header-two .btn-sec .btn {
+    margin-left: 0; }
+
+  .header-two .btn-sec {
+    justify-content: center; } }
+.btn-sec {
+  display: flex;
+  align-items: center;
+  position: relative; }
+  .btn-sec .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 19px 80px 19px 30px;
+    border-radius: 7px;
+    font-weight: 500;
+    position: relative;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer; }
+    .btn-sec .btn::before {
+      transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: all 0.3s ease;
+      content: "";
+      width: 50%;
+      height: 100%;
+      background: black;
+      position: absolute;
+      top: 3px;
+      right: 3px; }
+    .btn-sec .btn.rounded .text-white {
+      color: #ffffff;
+      position: relative; }
+    .btn-sec .btn.rounded::before {
+      border-radius: 50px;
+      width: 57px;
+      height: 57px;
+      background: #ffffff url(../images/btn-icon.svg) 0 0 no-repeat;
+      background-size: 18px;
+      background-position: center right 20px; }
+    .btn-sec .btn.rounded:hover::before {
+      background: #ffad00 url(../images/btn-icon.svg) 0 0 no-repeat;
+      background-position: center right 20px;
+      width: 100%;
+      height: 100%;
+      right: 0;
+      top: 0; }
+    .btn-sec .btn:hover {
+      border-color: #ffad00;
+      background: #ffad00; }
+      .btn-sec .btn:hover .text-white {
+        color: #05164d; }
+
+@media only screen and (max-width: 991px) {
+  .btn-sec .btn {
+    font-size: 16px;
+    padding: 13px 70px 12px 25px; }
+    .btn-sec .btn::before {
+      top: 3px;
+      right: 3px; }
+    .btn-sec .btn.rounded::before {
+      width: 43px;
+      height: 43px;
+      background-size: 16px;
+      background-position: center right 15px; }
+    .btn-sec .btn.rounded:hover::before {
+      background-position: center right 15px; } }
 .contact-us-section {
   position: relative; }
   .contact-us-section .left-box {
@@ -3355,50 +3428,49 @@ body.page-template-template-testimonials .client-video-section iframe,
       position: relative;
       font-size: 18px;
       color: #05164d;
-      border: 1px solid #211f47;
-      padding: 13px 60px 13px 20px;
-      border-radius: 7px;
+      border: 0;
+      padding: 0;
+      border-radius: 50px;
       font-weight: 500;
       position: relative;
-      border-radius: 50px;
       transition: all 0.3s ease;
       cursor: pointer; }
+      .contact-us-section .btn-sec .btn .checkout-submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        font-size: 18px;
+        color: #05164d;
+        border: 1px solid #211f47;
+        padding: 13px 60px 13px 20px;
+        border-radius: 7px;
+        font-weight: 500;
+        position: relative;
+        border-radius: 50px;
+        background: transparent;
+        cursor: pointer; }
+        .contact-us-section .btn-sec .btn .checkout-submit:hover {
+          border-color: #ffad00; }
       .contact-us-section .btn-sec .btn::before {
         border-radius: 50px;
         width: 43px;
         height: 43px;
         background: #ffad00 url(../images/btn-icon.svg) 0 0 no-repeat;
         background-size: 15px;
-        background-position: center right 13px; }
-      .contact-us-section .btn-sec .btn.rounded .text-white {
-        color: #ffffff;
-        position: relative;
-        font-family: "Noto Sans", sans-serif;
-        color: #05164d;
-        font-size: 18px;
-        font-weight: 600;
-        background: transparent;
-        border: 0; }
-      .contact-us-section .btn-sec .btn.rounded::before {
-        border-radius: 50px;
-        width: 43px;
-        height: 43px;
-        background: #ffad00 url(../images/btn-icon.svg) 0 0 no-repeat;
-        background-size: 15px;
-        background-position: center right 13px; }
-      .contact-us-section .btn-sec .btn.rounded:hover::before {
+        background-position: center right 13px;
+        top: 5px;
+        right: 4px; }
+      .contact-us-section .btn-sec .btn:hover::before {
         background: #ffad00 url(../images/btn-icon.svg) 0 0 no-repeat;
         background-position: center right 13px;
         width: 100%;
+        background-size: 15px;
         height: 100%;
         right: 0;
-        top: 0;
-        background-size: 15px; }
+        top: 0; }
       .contact-us-section .btn-sec .btn:hover {
-        border-color: #ffad00;
-        background: #ffad00; }
-        .contact-us-section .btn-sec .btn:hover .text-white {
-          color: #05164d; }
+        border-radius: 50px; }
   .contact-us-section .arrow-wrap {
     right: 50px;
     top: 9px; }
@@ -3834,7 +3906,17 @@ body.page-template-template-testimonials .client-video-section iframe,
   .contact-us-section .quizQ {
     font-size: 16px; }
   .contact-us-section .refreshbtn {
-    margin-left: 20px; } }
+    margin-left: 20px; }
+  .contact-us-section .btn-sec .btn {
+    font-size: 16px; }
+    .contact-us-section .btn-sec .btn .checkout-submit {
+      font-size: 16px;
+      padding: 10px 60px 10px 25px; }
+    .contact-us-section .btn-sec .btn::before {
+      width: 41px;
+      height: 41px;
+      top: 3px;
+      right: 4px; } }
 .small-banner-section {
   padding: 305px 0 160px;
   display: flex;
