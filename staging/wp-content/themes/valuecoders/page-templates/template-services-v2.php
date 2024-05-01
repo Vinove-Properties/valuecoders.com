@@ -349,7 +349,69 @@
 
 
 
-
+<section class="counter-column-section bg-blue-linear padding-t-70 padding-b-70">
+  <div class="container">
+    <div class="dis-flex justify-sb">
+      <div class="left-sec">
+        <div class="head-txt">
+				<h2>
+				<?php 
+				echo (isset($vcBtn['title-two']) && !empty($vcBtn['title-two'])) ? $vcBtn['title-two'] : 
+				"Got a Project in Mind? Tell Us More"; ?>
+				</h2>
+				<p>
+				<?php 
+				echo (isset($vcBtn['text-two']) && !empty($vcBtn['text-two'])) ? $vcBtn['text-two'] : 
+				"Drop us a line and we'll get back to you immediately to schedule a call and discuss your needs personally."; ?>				
+				</p>
+        </div>
+        <div class="btn-sec margin-t-50">
+        <a href="<?php echo site_url('/contact'); ?>" class="btn rounded"><span class="text-white">Get Started</span></a>
+        </div>
+      </div>
+      <div class="right-sec">
+        <div class="cir-sec">
+          <div class="cir-box">
+            <div class="text-wrap">
+              <span class="display">675+</span>
+              <span class="paragraph">Full-time Staff</span>
+              <svg viewBox="0 0 100 100" class="animate-spin-slow wheel-sc">
+                <path id=":R8pm9la:" fill="none" d="M0,50a50,50 0 1,1 100,0a50,50 0 1,1 -100,0"></path>
+                <text class="origin-center">
+                  <textPath class="fill-text" textLength="292" href="#:R8pm9la:">projects executed successfully</textPath>
+                </text>
+              </svg>
+            </div>
+          </div>
+          <div class="cir-box">
+            <div class="text-wrap">
+              <span class="display">19+</span>
+              <span class="paragraph">Years Experience</span>
+              <svg viewBox="0 0 100 100" class="animate-spin-slow wheel-sc">
+                <path id=":R8pm9lb:" fill="none" d="M0,50a50,50 0 1,1 100,0a50,50 0 1,1 -100,0"></path>
+                <text class="origin-center">
+                  <textPath class="fill-text" textLength="292" href="#:R8pm9lb:">Years Of Experience in this feild</textPath>
+                </text>
+              </svg>
+            </div>
+          </div>
+          <div class="cir-box">
+            <div class="text-wrap">
+              <span class="display">2500+</span>
+              <span class="paragraph">Satisfied <br>Customers</span>
+              <svg viewBox="0 0 100 100" class="animate-spin-slow wheel-sc">
+                <path id=":R8pm9lc:" fill="none" d="M0,50a50,50 0 1,1 100,0a50,50 0 1,1 -100,0"></path>
+                <text class="origin-center">
+                  <textPath class="fill-text" textLength="292" href="#:R8pm9lc:">Total No. of Satisfied Customers</textPath>
+                </text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
