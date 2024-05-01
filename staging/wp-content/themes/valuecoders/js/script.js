@@ -1,4 +1,63 @@
 
+const vcTailerd = document.getElementById("tailored-slide");
+                  if( vcTailerd ){
+                  window.addEventListener("load", function() {
+                   document.querySelector("#tailored-slide .glider").addEventListener("glider-slide-visible",
+                   function(event) {
+                   var glider = Glider(this);
+                   });
+                   window._ = new Glider(document.querySelector("#tailored-slide .glider"), {
+                       slidesToShow: 3,
+                       slidesToScroll: 3,
+                       draggable: true,
+                       scrollLock: false,
+                       dots: "#tailored-slide .dots",
+                       dragDistance: false,
+                       arrows: { 
+                  prev: '.tail-prev',
+                  next: '.tail-next'
+                  },
+                  
+                       responsive: [{
+                               breakpoint: 320,
+                               settings: {
+                                   slidesToShow: 1,
+                                   duration: 2.25
+                               }
+                           },
+                           {
+                               breakpoint: 767,
+                               settings: {
+                                   slidesToShow: 1,
+                                   itemWidth: 150,
+                                   duration: 1.25
+                               }
+                           },
+                           {
+                               breakpoint: 1024,
+                               settings: {
+                                   slidesToShow: 2,
+                                   itemWidth: 150,
+                                   duration: 1.25
+                               }
+                           },
+                           {
+                               breakpoint: 1400,
+                               settings: {
+                                   slidesToShow: 3,
+                                   itemWidth: 150,
+                                   duration: 3
+                               }
+                           },
+                       ],
+                     
+                  
+                   });
+              
+                  });
+                    
+              }
+
 //document.addEventListener('touchstart', onTouchStart, {passive: true});
 function gliderDoAutoPlay(glider, selector, delay = 2000, repeat = true){
     let autoplay        = null;
@@ -1110,7 +1169,7 @@ function closeIntPopUp(elm, subFld = false){
   }
 }
 
-
+//Service New Version script Start From Here
 
 var tabMC       = document.querySelectorAll("#service-tabs .tablist");
                   var tabPanesMc  = document.getElementsByClassName("tab-contents");
@@ -1134,3 +1193,8 @@ var tabMC       = document.querySelectorAll("#service-tabs .tablist");
                   tabMC.forEach(function(label, index){
                   label.addEventListener("click", activateTabFx);
                   }); 
+
+
+
+
+                  
