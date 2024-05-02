@@ -282,7 +282,7 @@
             echo '<div class="accordionItem'.$isActive.'">
             <h3 class="accordion-toggle '.$hasAnchor.'"><span>'.$row['title'].'</span>'.$title.'</h3>
             <div class="accordion-content">
-            <p>'.$row['text'].'</p>
+            <p>'.$row['content'].'</p>
             </div>
             </div>';    
           }
