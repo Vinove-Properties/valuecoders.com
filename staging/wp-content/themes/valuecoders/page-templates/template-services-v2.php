@@ -295,38 +295,37 @@
   }
   }
   ?>
-<section class="lets-discuss-cta bg-blue-linear padding-t-70 padding-b-70">
-  <div class="container">
-    <div class="dis-flex justify-sb">
-      <div class="left-sec">
-        <div class="head-txt">
-          <h2><?php 
-            echo (isset($vcBtn['title-one']) && !empty($vcBtn['title-one'])) ? $vcBtn['title-one'] : 
-            "Transform Your Business Today"; ?>
-          </h2>
-          <p>
-            <?php 
-              echo (isset($vcBtn['text-one']) && !empty($vcBtn['text-one'])) ? $vcBtn['text-one'] : 
-              "Discover bespoke IT solutions for unparalleled business growth."; 
-              ?>
-          </p>
-        </div>
-        <div class="btn-sec margin-t-50">
-          <a href="<?php echo site_url('/contact'); ?>" class="btn rounded"><span class="text-white">Get Started</span></a>
-        </div>
-      </div>
-      <div class="right-sec">
-        <picture class="icon-box">
-          <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/cta-image.png">
-          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/cta-image.png">
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cta-image.png" alt="valuecoders" width="345" 
-            height="206">
-        </picture>
-      </div>
-    </div>
-  </div>
-</section>
-<?php get_template_part('include/why', 'hirev4.0'); ?>
+<?php 
+  $eOneHeading  = (isset($vcBtn['title-one']) && !empty($vcBtn['title-one'])) ? $vcBtn['title-one'] : "Let's Discuss Your Project";
+  $eOneBody     = (isset($vcBtn['text-one']) && !empty($vcBtn['text-one'])) ? $vcBtn['text-one'] : "Get free consultation and let us know your project idea to turn it into an amazing digital product.";
+  $eOnelt = (isset($vcBtn['link-one']) && !empty($vcBtn['link-one'])) ? $vcBtn['link-one'] : 
+  "Book a Free Consultation"; 
+  $eCtaOne = '<h2>'.$eOneHeading.'</h2>';
+  $eCtaOne .= '<p>'.$eOneBody.'</p>';
+  echo expert_talk_cta( $eCtaOne, $eOnelt );
+  ?>
+<?php //get_template_part('include/why', 'hirev4.0'); ?>
+<?php  
+  $vcProfile = get_field('vc-profile');
+  if( $vcProfile ) :
+  $vcProfileEnable = $vcProfile['is_enable'];
+  if( $vcProfileEnable == "yes" ) { 
+  
+  $whContent        =  $vcProfile['top-content']; 
+  $profileContent   = $vcProfile['content']; 
+  $proText          = vCodeRemoveUlTags( $profileContent );
+  $whContent .=  $proText;
+  $whContent .=  '<ul>
+  <li>India\'s Top 1% Software Talent</li>
+  <li>Trusted by Startups to Fortune 500</li>
+  <li>Idea to Deployment, We Handle All</li>
+  <li>Time-Zone Friendly: Global Presence</li>
+  <li>Top-tier Data Security Protocols</li>
+  <li>On-time Delivery, No Surprises</li>
+  '.$vcProfile['add-pointers'].'
+  </ul>';
+  get_template_part( 'include/why', 'hirev4.0', ['content' => $whContent] );   
+  } endif; ?>
 <section class="counter-column-section bg-blue-linear padding-t-70 padding-b-70">
   <div class="container">
     <div class="dis-flex justify-sb">
@@ -459,37 +458,18 @@
   </div>
 </section>
 <?php endif; ?>
-<section class="lets-discuss-cta bg-blue-linear padding-t-70 padding-b-70">
-  <div class="container">
-    <div class="dis-flex justify-sb">
-      <div class="left-sec">
-        <div class="head-txt">
-          <h2><?php 
-            echo (isset($vcBtn['title-one']) && !empty($vcBtn['title-one'])) ? $vcBtn['title-one'] : 
-            "Transform Your Business Today"; ?>
-          </h2>
-          <p>
-            <?php 
-              echo (isset($vcBtn['text-one']) && !empty($vcBtn['text-one'])) ? $vcBtn['text-one'] : 
-              "Discover bespoke IT solutions for unparalleled business growth."; 
-              ?>
-          </p>
-        </div>
-        <div class="btn-sec margin-t-50">
-          <a href="<?php echo site_url('/contact'); ?>" class="btn rounded"><span class="text-white">Get Started</span></a>
-        </div>
-      </div>
-      <div class="right-sec">
-        <picture class="icon-box">
-          <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/cta-image.png">
-          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/cta-image.png">
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cta-image.png" alt="valuecoders" width="345" 
-            height="206">
-        </picture>
-      </div>
-    </div>
-  </div>
-</section>
+<?php 
+  $eTwoHeading  = (isset($vcBtn['title-two']) && !empty($vcBtn['title-two'])) ? $vcBtn['title-two'] : "Got a Project in Mind? Tell Us More";
+  $eTwoBody     = (isset($vcBtn['text-two']) && !empty($vcBtn['text-two'])) ? $vcBtn['text-two'] : "Drop us a line and we'll get back to you immediately to schedule a call and discuss your needs personally.";
+  $eTwolt = (isset($vcBtn['link-two']) && !empty($vcBtn['link-two'])) ? $vcBtn['link-two'] : 
+  "Talk To Our Experts"; 
+  
+  $eCtatwo = '<h2>'.$eTwoHeading.'</h2>';
+  $eCtatwo .= '<p>'.$eTwoBody.'</p>';
+  if( !is_page( [17422,17425,16003,16004,16062,16066,17235,17236,17239,16065] ) ){
+    echo expert_talk_cta( $eCtatwo, $eTwolt );  
+  }
+  ?>
 <?php 
   $sfMethod = get_field('sf-meth');
   if( $sfMethod !== "no" )  :
