@@ -518,37 +518,38 @@
       </div>
       <div class="flex-6">
         <div class="box">
-          <h4>Software Kick-off
+          <h4>Task Execution &<br> Development
           </h4>
-          <p>Dive into bi-weekly sprints and rollouts aligned with project timelines.</p>
+          <p>Combined team tackles tasks, fulfilling user stories and sprint goals.</p>
         </div>
       </div>
       <div class="flex-6">
         <div class="box">
-          <h4>Software Kick-off
+          <h4>Daily<br> Stand-ups
           </h4>
-          <p>Dive into bi-weekly sprints and rollouts aligned with project timelines.</p>
+          <p>Daily check-ins led by the Scrum Master to discuss progress and tackle challenges.</p>
         </div>
       </div>
       <div class="flex-6">
         <div class="box">
-          <h4>Software Kick-off
+          <h4>Feature Quality<br> Check
           </h4>
-          <p>Dive into bi-weekly sprints and rollouts aligned with project timelines.</p>
+          <p>Quality Engineers rigorously test new features, ensuring seamless integration.</p>
         </div>
       </div>
       <div class="flex-6">
         <div class="box">
-          <h4>Software Kick-off
+          <h4>Backlog <br>
+Updates
           </h4>
-          <p>Dive into bi-weekly sprints and rollouts aligned with project timelines.</p>
+          <p>Our team keeps the sprint backlog updated, staying on track to meet objectives.</p>
         </div>
       </div>
       <div class="flex-6">
         <div class="box">
-          <h4>Software Kick-off
+          <h4>Sprint <br>Reflections
           </h4>
-          <p>Dive into bi-weekly sprints and rollouts aligned with project timelines.</p>
+          <p>Post-sprint reflections to refine strategies and enhance future sprints.</p>
         </div>
       </div>
     </div>
