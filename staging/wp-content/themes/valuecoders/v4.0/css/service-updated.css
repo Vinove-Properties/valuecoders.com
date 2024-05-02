@@ -6987,7 +6987,11 @@ a {
 
 @media only screen and (max-width: 1440px) {
   .hero-section .content-wrap .breadcrumbs {
-    margin: 0 0 50px; } }
+    margin: 0 0 50px; }
+
+  .banner-section .banner-wrap .left-sec .banner-content h1 {
+    font-size: 50px;
+    line-height: 65px; } }
 @media only screen and (max-width: 1366px) {
   .banner-section .banner-wrap .left-sec .breadcrumbs {
     margin: 0 0 20px; }
