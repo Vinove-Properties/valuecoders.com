@@ -72,7 +72,7 @@
         </div>
         <div class="btn-sec margin-t-50 ">
           <a href="https://www.valuecoders.com/v2wp/contact" class="btn rounded">
-          <span class="text-white">Get Free Consulation</span>
+          <span class="text-white">Get Free Consultation</span>
           </a>
         </div>
       </div>
