@@ -7134,7 +7134,8 @@ a {
         padding: 0 20px;
         margin: 15px 0 0; }
     .banner-section .banner-wrap .right-sec .flip-section {
-      gap: 5px; }
+      gap: 0;
+      justify-content: space-between; }
     .banner-section .banner-wrap .right-sec .flip-card {
       width: 160px;
       height: 160px; }
