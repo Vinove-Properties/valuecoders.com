@@ -1207,7 +1207,7 @@ if( $whyhire ) :
 $iswEnabled = $whyhire['is_enable'];
 if( $iswEnabled == "yes" ){	
 ?>
-<section class="global-counter padding-t-120 <?php echo $whyhire['sc_background']; ?>" id="acf-vprofile-icons">
+<section class="global-counter padding-t-120 padding-b-120 <?php echo $whyhire['sc_background']; ?>" id="acf-vprofile-icons">
   <div class="container">
     <div class="dis-flex justify-sb items-center">
       <div class="flex-2 content-box tick-icon-list">
