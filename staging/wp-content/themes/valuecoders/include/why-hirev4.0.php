@@ -166,13 +166,19 @@
        
         <div class="award-sc margin-t-50">
           <h5>Awards & Certifications -</h5>
+          
           <div class="award-row">
+            <div class="award-col">
+            <span class="aw-icon">
+              <picture>
+                <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/google-pr.svg" alt="Valuecoders" width="58" height="38">
+              </picture>
+            </span>
+          </div>
+
             <div class="award-col">
               <span class="aw-icon">
                 <picture>
-                  <!-- 
-                    <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-01.svg" alt="Valuecoders" width="58" height="38"> 
-                  -->
                   <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-01.svg" alt="Valuecoders" width="58" height="38">
                 </picture>
               </span>
@@ -232,6 +238,7 @@
                   </span>
                   <p>From startups to big enterprises, development </p>
                 </div>
+                <?php /* ?>
                 <div class="award-col">
                   <span class="aw-icon">
                     <picture>
@@ -241,6 +248,7 @@
                   </span>
                   <p>From startups to big enterprises, development </p>
                 </div>
+                <?php */ ?>
           </div>
         </div>
       </div>
