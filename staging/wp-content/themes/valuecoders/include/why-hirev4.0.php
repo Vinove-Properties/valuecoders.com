@@ -171,7 +171,7 @@
             <div class="award-col">
             <span class="aw-icon">
               <picture>
-                <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/google-pr.svg" alt="Valuecoders" width="58" height="38">
+                <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/google-pr.svg" alt="Valuecoders" width="83" height="58">
               </picture>
             </span>
           </div>
