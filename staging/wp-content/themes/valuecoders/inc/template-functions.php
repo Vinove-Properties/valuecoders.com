@@ -496,7 +496,7 @@ endif;
 
 
 function expert_talk_cta( $text, $btnText = "Contact Us", $itype = "one", $elmClasses = " padding-t-70 padding-b-70" ){
-return '<section class="lets-discuss-cta bg-blue-linear '.$elmClasses.'">
+return '<section class="lets-discuss-cta bg-blue-linear '.$elmClasses.' ">
 <div class="container">
   <div class="dis-flex justify-sb">
     <div class="left-sec">
@@ -514,3 +514,4 @@ return '<section class="lets-discuss-cta bg-blue-linear '.$elmClasses.'">
 </div>
 </section>';
 }
+

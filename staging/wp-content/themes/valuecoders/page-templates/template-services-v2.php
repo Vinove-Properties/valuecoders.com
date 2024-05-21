@@ -19,7 +19,7 @@
   $hasReview = get_field('review-section');
   if( isset( $hasReview['is_enabled'] ) && ($hasReview['is_enabled'] == "yes") ){
   $rwThumbnail = ( $hasReview['review_thumb'] ) ? $hasReview['review_thumb'] : 
-  get_bloginfo('template_url').'/dir/defualt-thum.png'; 
+  get_bloginfo('template_url').'/v4.0/images/card-thumb.png'; 
   ?>
 <section class="banner-section padding-t-120 padding-b-120" style="background-image:url(<?php echo $bannerImageSrc; ?>);">
   <div class="container">
@@ -331,14 +331,10 @@
       <div class="left-sec">
         <div class="head-txt">
           <h2>
-            <?php 
-              echo (isset($vcBtn['title-two']) && !empty($vcBtn['title-two'])) ? $vcBtn['title-two'] : 
-              "Got a Project in Mind? Tell Us More"; ?>
+          Unlock Your Growth Potential!
           </h2>
           <p>
-            <?php 
-              echo (isset($vcBtn['text-two']) && !empty($vcBtn['text-two'])) ? $vcBtn['text-two'] : 
-              "Drop us a line and we'll get back to you immediately to schedule a call and discuss your needs personally."; ?>				
+          Let's break down complex IT issues into actionable solutions you can understand.
           </p>
         </div>
         <div class="btn-sec margin-t-50">
@@ -467,7 +463,7 @@
   $eCtatwo = '<h2>'.$eTwoHeading.'</h2>';
   $eCtatwo .= '<p>'.$eTwoBody.'</p>';
   if( !is_page( [17422,17425,16003,16004,16062,16066,17235,17236,17239,16065] ) ){
-    echo expert_talk_cta( $eCtatwo, $eTwolt );  
+    echo expert_talk_cta( $eCtaOne, $eOnelt, 'one', 'padding-t-70 padding-b-70 hide-cta' );
   }
   ?>
 <?php 
