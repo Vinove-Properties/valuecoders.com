@@ -81,26 +81,26 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front flip-round">
-                <div class="value">91%</div>
-                <span class="title">Retention Rate</span>
-                <p class="desc">Industry average: 50%</p>
+                <div class="value">650+</div>
+                 <span class="title">n-house Experts</span>
+                   <!--<p class="desc"> In-house Experts</p>-->
               </div>
               <div class="flip-card-back flip-round">
-                <span class="title">WHY IS OUR RETENTION RATE SO HIGH?</span>
-                <p class="desc">Scalable solutions Industry specialists Proven results</p>
+                <span class="title">Helping Businesses with Digital Transformation</span>
+                <!--<p class="desc">Helping Businesses with Digital Transformation</p>-->
               </div>
             </div>
           </div>
           <div class="flip-card flip-card-two">
             <div class="flip-card-inner">
               <div class="flip-card-front flip-round">
-                <div class="value">93%</div>
-                <span class="title">Retention Rate</span>
-                <p class="desc">Industry Average:50%</p>
+                <div class="value">97%</div>
+                <span class="title">Client-retention</span>
+                <!--<p class="desc">Industry Average:50%</p>-->
               </div>
               <div class="flip-card-back flip-round">
-                <span class="title">WHY IS OUR RETENTION RATE SO HIGH?</span>
-                <p class="desc">Scalable solutions Industry specialists Proven results</p>
+                 <span class="title">Building Lasting Partnerships</span>
+                 <!--<p class="desc">Building Lasting Partnerships</p>-->
               </div>
             </div>
           </div>
@@ -108,10 +108,8 @@
         <div class="hero-card">
           <div class="strt-sec">
             <div class="img-div">
-              <picture>
-                <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/card-thumb.png">
-                <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/card-thumb.png">
-                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/card-thumb.png"
+             <picture>
+                <img loading="lazy" src="<?php echo $hasReview['review_thumb'];  ?>"
                   alt="valuecoders" width="88" height="88">
               </picture>
             </div>
@@ -121,7 +119,7 @@
           </div>
           <div class="clb">
             <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/flavia.png" alt="Clutch icon">
-            Flavia A, Review from Clutch.co
+            Review from Clutch.co
           </div>
           <div class="ratings">
             <div class="rating">
@@ -326,6 +324,7 @@
   </ul>';
   get_template_part( 'include/why', 'hirev4.0', ['content' => $whContent] );   
   } endif; ?>
+
 <section class="counter-column-section bg-blue-linear padding-t-70 padding-b-70">
   <div class="container">
     <div class="dis-flex justify-sb">
@@ -389,6 +388,7 @@
     </div>
   </div>
 </section>
+
 <?php 
   $tailTech = get_field( 'tailored_tech' );
   if( $tailTech['is_enable'] == 'yes' ) :
