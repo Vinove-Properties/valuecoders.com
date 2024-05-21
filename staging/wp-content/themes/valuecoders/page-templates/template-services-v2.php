@@ -18,7 +18,8 @@
   }
   $hasReview = get_field('review-section');
   if( isset( $hasReview['is_enabled'] ) && ($hasReview['is_enabled'] == "yes") ){
-  
+  $rwThumbnail = ( $hasReview['review_thumb'] ) ? $hasReview['review_thumb'] : 
+  get_bloginfo('template_url').'/dir/defualt-thum.png'; 
   ?>
 <section class="banner-section padding-t-120 padding-b-120" style="background-image:url(<?php echo $bannerImageSrc; ?>);">
   <div class="container">
@@ -107,11 +108,10 @@
         </div>
         <div class="hero-card">
           <div class="strt-sec">
-            <div class="img-div">
-             <picture>
-                <img loading="lazy" src="<?php echo $hasReview['review_thumb'];  ?>"
-                  alt="valuecoders" width="88" height="88">
-              </picture>
+            <div class="img-div"> 
+            <picture>
+            <img loading="lazy" src="<?php echo $rwThumbnail; ?>" alt="valuecoders" width="88" height="88">
+            </picture>
             </div>
             <div class="cont-div">
               <?php echo $hasReview['review-content'];  ?>
