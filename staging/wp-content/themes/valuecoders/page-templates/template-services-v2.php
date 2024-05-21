@@ -83,7 +83,7 @@
             <div class="flip-card-inner">
               <div class="flip-card-front flip-round">
                 <div class="value">650+</div>
-                 <span class="title">n-house Experts</span>
+                 <span class="title">In-house Experts</span>
                    <!--<p class="desc"> In-house Experts</p>-->
               </div>
               <div class="flip-card-back flip-round">
