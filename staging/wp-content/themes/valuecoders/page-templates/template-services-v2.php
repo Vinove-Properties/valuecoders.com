@@ -196,16 +196,20 @@
   </div>
 </div>
 <?php  	
-  // tech Specification in accordian format.
-  $specifications = get_field('tech-spec');
-  if( isset( $specifications['is_enabled'] ) && ($specifications['is_enabled'] == "yes") ){ 
-  $htContent 	  = $specifications['content'];
-  $content 	    = $specifications['content'];
-  $sectionType 	= (isset($specifications['specifications']) && (count($specifications['specifications']) > 6)) ? 'accordian' : 'tab';
-  
-  $spec = ( $specifications['specifications'] ) ? $specifications['specifications'] : false;
-  if( $sectionType == "tab" ){
-  ?>
+// tech Specification in accordian format.
+$specifications = get_field('tech-spec');
+if( isset( $specifications['is_enabled'] ) && ($specifications['is_enabled'] == "yes") ){ 
+$htContent 	  = $specifications['content'];
+$content 	    = $specifications['content'];
+$sectionType 	= (isset($specifications['specifications']) && (count($specifications['specifications']) > 6)) ? 'accordian' : 'tab';
+
+if( isset( $specifications['sec-type'] ) && ($specifications['sec-type'] !== "null") ){
+  $sectionType = ( $specifications['sec-type'] === "tab" ) ? 'tab' : 'accordian';
+}
+
+$spec = ( $specifications['specifications'] ) ? $specifications['specifications'] : false;
+if( $sectionType == "tab" ){
+?>
 <section class="service-tab padding-t-120 padding-b-120" id="v3-tech-spec">
   <div class="container">
     <div class="heading text-center">
