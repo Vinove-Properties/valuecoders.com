@@ -463,7 +463,7 @@
   $eCtatwo = '<h2>'.$eTwoHeading.'</h2>';
   $eCtatwo .= '<p>'.$eTwoBody.'</p>';
   if( !is_page( [17422,17425,16003,16004,16062,16066,17235,17236,17239,16065] ) ){
-    echo expert_talk_cta( $eCtaOne, $eOnelt, 'one', 'padding-t-70 padding-b-70 hide-cta' );
+    echo expert_talk_cta( $eCtatwo, $eTwolt, 'one', 'padding-t-70 padding-b-70 hide-cta' );
   }
   ?>
 <?php 
