@@ -25,7 +25,7 @@ function get_client_ip_user() {
             <?php
             $copyRight = "&copy;"; 
             if( is_user_logged_in() ){
-            $is_staging = (isset( $_SERVER['PHP_SELF']) && (strpos( $_SERVER['PHP_SELF'],'v2wp') !== false)) ? true : false;
+            $is_staging = (isset( $_SERVER['PHP_SELF']) && (strpos( $_SERVER['PHP_SELF'],'staging') !== false)) ? true : false;
                 if( $is_staging === true ){
                     $copyRight = "<a href='".get_edit_post_link()."'>&copy;</a>";
                 }          
