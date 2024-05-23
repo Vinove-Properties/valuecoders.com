@@ -6991,7 +6991,12 @@ a {
 
   .banner-section .banner-wrap .left-sec .banner-content h1 {
     font-size: 50px;
-    line-height: 65px; } }
+    line-height: 65px; }
+
+  .tailored-tech .glider-next {
+    top: 80%; }
+  .tailored-tech .glider-prev {
+    top: 80%; } }
 @media only screen and (max-width: 1366px) {
   .banner-section .banner-wrap .left-sec .breadcrumbs {
     margin: 0 0 20px; }
