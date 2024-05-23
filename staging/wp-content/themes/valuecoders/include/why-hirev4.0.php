@@ -188,7 +188,8 @@
               <span class="aw-icon">
                 <picture>
                   <!-- <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-02.svg" alt="Valuecoders" width="53" height="40"> -->
-                  <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-02.png" alt="Valuecoders" width="53" height="40">
+                  <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-07.png" alt="Valuecoders" width="53" height="54">
+
                 </picture>
               </span>
               <p>From startups to big enterprises, development </p>
@@ -207,6 +208,8 @@
                 <picture>
                   <!-- <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-04.svg" alt="Valuecoders" width="96" height="15"> -->
                   <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-04.svg" alt="Valuecoders" width="96" height="15">
+              
+                
                 </picture>
               </span>
               <p>From startups to big enterprises, development </p>
@@ -233,7 +236,7 @@
                   <span class="aw-icon">
                     <picture>
                       <!-- <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-07.svg" alt="Valuecoders" width="53" height="45"> -->
-                      <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-07.svg" alt="Valuecoders" width="53" height="45">
+                      <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-02.png" alt="Valuecoders" width="53" height="40">
                     </picture>
                   </span>
                   <p>From startups to big enterprises, development </p>
