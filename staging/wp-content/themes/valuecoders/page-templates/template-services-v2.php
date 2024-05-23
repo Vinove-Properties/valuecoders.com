@@ -12,7 +12,7 @@
   */
   $mainServicePage  = 11941;
   $cmnBanner        = get_field('sbg-thumbnail');
-  $bannerImageSrc   = get_bloginfo('template_url').'/v4.0/images/service-banner.png';
+  $bannerImageSrc   = get_bloginfo('template_url').'/v3.0/images/service-banner.png';
   if( is_array( $cmnBanner ) ){
   $bannerImageSrc = getVcWebpSrcURL( $cmnBanner );
   }
