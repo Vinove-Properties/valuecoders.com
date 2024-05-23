@@ -188,7 +188,7 @@
               <span class="aw-icon">
                 <picture>
                   <!-- <img class="normal-mode" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/aw-02.svg" alt="Valuecoders" width="53" height="40"> -->
-                  <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-07.png" alt="Valuecoders" width="53" height="54">
+                  <img class="normal-mode1" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/awhover-07.svg" alt="Valuecoders" width="60" height="60">
 
                 </picture>
               </span>
