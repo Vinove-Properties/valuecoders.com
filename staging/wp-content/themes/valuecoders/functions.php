@@ -1567,7 +1567,10 @@ if( is_page_template( 'page-templates/template-industry.php' ) ){
 	}
 	echo '<link rel="preload" as="image" href="'.$bannerImageSrc.'" />'.$nr;
 }
+
 });
+
+
 
 
 add_action( 'wp_print_scripts', 'wra_filter_scripts', 100000 );
