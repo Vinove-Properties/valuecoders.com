@@ -3396,7 +3396,9 @@ body.page-template-template-testimonials .client-video-section iframe,
       padding-bottom: 10px;
       border-image-slice: 1;
       border-image-source: linear-gradient(to right, #ffcf66, #e19b01);
-      border-bottom: 4px solid; }
+      border-bottom: 4px solid;
+      margin-bottom: 20px;
+      padding: 0 0 15px; }
     .tech-stacks .col-box-outer .col-box .inner-box ul li {
       border: 1px solid #d1d1e1;
       border-radius: 5px;
