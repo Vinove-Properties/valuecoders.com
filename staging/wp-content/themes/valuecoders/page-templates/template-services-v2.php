@@ -263,7 +263,7 @@ if( $sectionType == "tab" ){
     $learnLink = '';
     if( $hasLink ){
     $title = '<a href="'.$row['link'].'">'.$row['title'].'</a>';
-    $learnLink = '<a class="explore-btn" href="'.$row['link'].'">Know More</a>'
+    $learnLink = '<a class="explore-btn" href="'.$row['link'].'">Know More</a>';
     }
     echo '<div class="flex-3 '.$hasLink.'">
     <div class="card no-bg"><div class="box-3">
@@ -279,7 +279,7 @@ if( $sectionType == "tab" ){
   echo '</div>';
   echo '</section>';
 }
-
+}
 ?>
 <?php 
   $eOneHeading  = (isset($vcBtn['title-one']) && !empty($vcBtn['title-one'])) ? $vcBtn['title-one'] : "Let's Discuss Your Project";
