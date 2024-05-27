@@ -27,7 +27,8 @@
   <div class="container">
     <div class="text-center head-txt">
       <h2>Our Awards & Partnerships</h2>
-      <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim Exercitation veniam consequat sunt nostrud amet.</p>
+      <p>Recognized for our outstanding accomplishments and strong partnerships, reinforcing our position as a trusted leader in the field.
+     </p>
     </div>
     <div class="dis-flex award-img-box margin-t-80">
       <div class="flex-5">
@@ -233,7 +234,14 @@
       		<div class="media-box">';
       		$tlightlg 		= $row['logo-light'];
       		$tlightlgwp 	= $row['logo-light-wp'];
-      		if( $tlightlg && $tlightlgwp ){ 
+
+      		//if( $tlightlg && $tlightlgwp ){ 
+
+          if( $tlightlg ){
+            echo vc_pictureElm( $tlightlg );
+          }
+      		/*
+          if( $tlightlg && $tlightlgwp ){
       		echo '<picture>
       		<source type="image/webp" srcset="'.$tlightlgwp['url'].'">
       		<source type="'.$tlightlg['mime_type'].'" srcset="'.$tlightlg['url'].'">
@@ -241,6 +249,7 @@
       		height="'.$tlightlg['height'].'"> 
       		</picture>';
       		}
+          */
       		echo '<div class="content-box">
       		<p>'.$row['content'].'</p>
       		</div>
