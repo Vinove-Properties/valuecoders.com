@@ -271,7 +271,7 @@ if( $sectionType == "tab" ){
     '.$row['content'].'
     '.$learnLink.'
     </div></div>
-    </div>'
+    </div>';
       
   }
   echo '</div>';  
