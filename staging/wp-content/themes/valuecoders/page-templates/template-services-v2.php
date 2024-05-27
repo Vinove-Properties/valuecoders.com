@@ -251,52 +251,36 @@ if( $sectionType == "tab" ){
   </div>
 </section>
 <?php 
-  }else{ 
-  ?>
-<section class="accordion-section padding-t-120" id="vc-tech-spec">
-  <div class="dis-flex accordian-row">
-    <div class="col-left">
-      <div class="head-txt"><?php echo $specifications['content']; ?></div>
-      <div class="image-wrap">
-        <?php 
-          if( $specifications['image'] ){
-            echo vc_pictureElm( $specifications['image'], 'ValueCoders', 'soft-img' );
-          }else{ 
-          ?>
-        <picture class="soft-img">
-          <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/dev-img/services-main.webp">
-          <source type="image/jpg" srcset="<?php bloginfo('template_url'); ?>/dev-img/services-main.jpg">
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/services-main.jpg" width="1200" 
-            height="1250" alt="valuecoders">
-        </picture>
-        <?php } ?>
-      </div>
-    </div>
-    <div class="col-right padding-b-120">
-      <?php 
-        if( $specifications['specifications'] ){
-          $g = 0;
-          foreach( $specifications['specifications'] as $row ){ 
-            $g++;
-            $isActive = ( $g == 1 ) ? " active" : "";
-            $title    = ($row['link']) ? '<a href="'.vc_siteurl($row['link']).'">'.$row['title'].'</a>' : '';
-            $hasAnchor = (isset($row['link']) && !empty($row['link'])) ? 'has-link' : '';
-            echo '<div class="accordionItem'.$isActive.'">
-            <h3 class="accordion-toggle '.$hasAnchor.'"><span>'.$row['title'].'</span>'.$title.'</h3>
-            <div class="accordion-content">
-            <p>'.$row['content'].'</p>
-            </div>
-            </div>';    
-          }
-        }
-        ?>
-    </div>
-  </div>
-</section>
-<?php 
+}else{ 
+  echo '<section class="tools-developer tech-stack-list padding-t-120 padding-b-120">';
+  echo '<div class="container">';
+  echo '<div class="heading text-center">'.$specifications['content'].'</div>';  
+  if( $specifications['specifications'] ){
+  echo '<div class="dis-flex margin-t-80 row">';
+  foreach( $specifications['specifications'] as $row ){
+    $hasLink = ( isset($row['link']) && !empty($row['link']) ) ? 'has-vlink' : '';
+    $title = $row['title'];
+    $learnLink = '';
+    if( $hasLink ){
+    $title = '<a href="'.$row['link'].'">'.$row['title'].'</a>';
+    $learnLink = '<a class="explore-btn" href="'.$row['link'].'">Know More</a>';
+    }
+    echo '<div class="flex-3 '.$hasLink.'">
+    <div class="card no-bg"><div class="box-3">
+    <h3>'.$title.'</h3>
+    '.$row['content'].'
+    '.$learnLink.'
+    </div></div>
+    </div>';
+      
   }
+  echo '</div>';  
   }
-  ?>
+  echo '</div>';
+  echo '</section>';
+}
+}
+?>
 <?php 
   $eOneHeading  = (isset($vcBtn['title-one']) && !empty($vcBtn['title-one'])) ? $vcBtn['title-one'] : "Let's Discuss Your Project";
   $eOneBody     = (isset($vcBtn['text-one']) && !empty($vcBtn['text-one'])) ? $vcBtn['text-one'] : "Get free consultation and let us know your project idea to turn it into an amazing digital product.";
