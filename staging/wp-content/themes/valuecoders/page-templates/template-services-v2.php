@@ -72,7 +72,7 @@
             ?>
         </div>
         <div class="btn-sec margin-t-50 ">
-          <a href="https://www.valuecoders.com/v2wp/contact" class="btn rounded">
+          <a href="https://www.valuecoders.com/contact" class="btn rounded">
           <span class="text-white">Get Free Consultation</span>
           </a>
         </div>
@@ -82,12 +82,12 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front flip-round">
-                <div class="value">650+</div>
-                 <span class="title">In-house Experts</span>
+                <div class="value">19+</div>
+                 <span class="title">YEARS OF EXPERIENCE</span>
                    <!--<p class="desc"> In-house Experts</p>-->
               </div>
               <div class="flip-card-back flip-round">
-                <span class="title">Helping Businesses with Digital Transformation</span>
+                <span class="title">DELIVERING PROVEN RESULTS & EXPERTISE</span>
                 <!--<p class="desc">Helping Businesses with Digital Transformation</p>-->
               </div>
             </div>
