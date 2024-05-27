@@ -233,7 +233,7 @@
       		<div class="media-box">';
       		$tlightlg 		= $row['logo-light'];
       		$tlightlgwp 	= $row['logo-light-wp'];
-      		if( $tlightlg && $tlightlgwp ){
+      		if( $tlightlg && $tlightlgwp ){ 
       		echo '<picture>
       		<source type="image/webp" srcset="'.$tlightlgwp['url'].'">
       		<source type="'.$tlightlg['mime_type'].'" srcset="'.$tlightlg['url'].'">
