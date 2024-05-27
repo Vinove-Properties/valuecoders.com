@@ -233,7 +233,11 @@
       		<div class="media-box">';
       		$tlightlg 		= $row['logo-light'];
       		$tlightlgwp 	= $row['logo-light-wp'];
-      		if( $tlightlg && $tlightlgwp ){
+          if( $tlightlg ){
+            echo vc_pictureElm( $tlightlg );
+          }
+      		/*
+          if( $tlightlg && $tlightlgwp ){
       		echo '<picture>
       		<source type="image/webp" srcset="'.$tlightlgwp['url'].'">
       		<source type="'.$tlightlg['mime_type'].'" srcset="'.$tlightlg['url'].'">
@@ -241,6 +245,7 @@
       		height="'.$tlightlg['height'].'"> 
       		</picture>';
       		}
+          */
       		echo '<div class="content-box">
       		<p>'.$row['content'].'</p>
       		</div>
