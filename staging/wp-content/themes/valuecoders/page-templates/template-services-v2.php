@@ -278,8 +278,8 @@ if( $sectionType == "tab" ){
   }
   echo '</div>';
   echo '</section>';
-  }
 }
+
 ?>
 <?php 
   $eOneHeading  = (isset($vcBtn['title-one']) && !empty($vcBtn['title-one'])) ? $vcBtn['title-one'] : "Let's Discuss Your Project";
