@@ -406,7 +406,7 @@ function zohoCrmUpdate_v2( $argArrData, $leadSource='', $owner_id = 658520861, $
         'Lead_Status'   => $varLeadStatus,
         'Owner'         => $owner_id,
         'Description'   => $zo_requirement,
-        'Sales_Qualified_Lead' => "No",
+        'Sales_Qualified_Lead' => "Yes",
         'Is_Duplicate'  => "No",
         'UTM_Source'    => $utm_src,
         'Property'      => $varProperty,
@@ -464,7 +464,7 @@ function zohoCrmUpdate_v2( $argArrData, $leadSource='', $owner_id = 658520861, $
                     'id'                    => $lead_id,
                     'Lead_Status'           => "Not Contacted Yet",
                     'Owner'                 => 720093253,
-                    'Sales_Qualified_Lead'  => "No",
+                    'Sales_Qualified_Lead'  => "Yes",
                     'Is_Duplicate'          => "Yes"
                     );
 
