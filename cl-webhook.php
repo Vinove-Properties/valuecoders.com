@@ -391,6 +391,7 @@ if( isset( $json['event'] ) && $json['event'] == "invitee.created" ){
     'Lead_Status'   => "Not Contacted Yet",
     'Owner'         => $owner_id,
     'SQL'           => "Yes",
+    'Sales_Qualified_Lead' => "Yes",
     'IP_Address1'   => get_visitor_ip(),
     'IP_Address'    => get_visitor_ip(),
     'UTM_Source'    => $utm_source,
