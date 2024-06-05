@@ -1442,7 +1442,7 @@ if( $processReq !== "no" ) :
 <?php endif; ?>
 
 <?php 
-if( $hasDMCta === false ) ;
+if( $hasDMCta === false ) :
 ?>
 <section class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70" id="dif--exp">
   <div class="container">
