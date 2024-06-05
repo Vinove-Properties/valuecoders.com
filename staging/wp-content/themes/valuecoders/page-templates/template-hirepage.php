@@ -1256,8 +1256,10 @@
 </section>
 <?php endif; ?>
 
-
-
+<?php 
+$processReq = get_field('pws-needed');
+if( $processReq !== "no" ) :
+?>
 <section class="process-work padding-t-150 padding-b-150">
   <div class="container">
     <div class="dis-flex accordian-row justify-sb">
@@ -1347,6 +1349,8 @@
     </div>
   </div>
 </section>
+<?php endif; ?>
+
 <?php
   $developers = get_field('developers-group');
   $devEnabled = $developers['is_enabled'];
