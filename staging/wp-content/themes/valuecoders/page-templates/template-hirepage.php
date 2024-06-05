@@ -5,7 +5,9 @@
   global $post;
   $thisPostID = $post->ID;
   get_header(); 
-  $vcBtn = get_field('vc-cta', $thisPostID);
+  $vcBtn    = get_field('vc-cta', $thisPostID);
+  $dmCTA    = get_field('dm-hcta');
+  $hasDMCta = (isset($dmCTA['required']) && ($dmCTA['required'] === "yes")) ? true : false;
   ?>
 <section class="second-level-section vlazy" style="background-image:url(<?php bloginfo('template_url'); ?>/v4.0/images/hire-banner.webp);">
   <div class="container">
@@ -225,7 +227,7 @@
       </p>
       <?php */ ?>
       <?php 
-      $dmCTA = get_field('dm-hcta');
+      
       if( isset($dmCTA['required']) && ($dmCTA['required'] == "yes") ){
         echo '<h2>'.$dmCTA['title-one'].'</h2>';
         echo '<p>'.$dmCTA['body-one'].'</p>';
@@ -545,7 +547,7 @@
       </p>
       <?php */ ?>
       <?php 
-      $dmCTA = get_field('dm-hcta');
+      
       if( isset($dmCTA['required']) && ($dmCTA['required'] == "yes") ){
         echo '<h2>'.$dmCTA['title-two'].'</h2>';
         echo '<p>'.$dmCTA['body-two'].'</p>';
@@ -806,7 +808,7 @@
       <div class="left-sec">
         <div class="head-txt">
           <?php 
-          $dmCTA = get_field('dm-hcta');
+          
           if( isset($dmCTA['required']) && ($dmCTA['required'] == "yes") ){
             echo '<h2>'.$dmCTA['title-three'].'</h2>';
             echo '<p>'.$dmCTA['body-three'].'</p>';
@@ -1437,8 +1439,12 @@ if( $processReq !== "no" ) :
       -->
   </div>
 </section>
-<?php endif;  ?>
-<section class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70">
+<?php endif; ?>
+
+<?php 
+if( $hasDMCta === false ) ;
+?>
+<section class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70" id="dif--exp">
   <div class="container">
     <div class="head-txt text-center">
       <?php /* ?>	
@@ -1464,6 +1470,8 @@ if( $processReq !== "no" ) :
       ?>
   </div>
 </section>
+<?php endif; ?>
+
 <?php 
   /*
   $hireProcessSec = get_field('hire_php_developers');
