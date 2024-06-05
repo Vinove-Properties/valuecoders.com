@@ -224,11 +224,20 @@
           "Get free consultation and let us know your project idea to turn it into an amazing digital product."; ?>
       </p>
       <?php */ ?>
-      <h2>Try Before, Commit Later</h2>
-      <p>Start your 7-day trial today and discover the perfect fit for your project needs.</p>
+      <?php 
+      $dmCTA = get_field('dm-hcta');
+      if( isset($dmCTA['required']) && ($dmCTA['required'] == "yes") ){
+        echo '<h2>'.$dmCTA['title-one'].'</h2>';
+        echo '<p>'.$dmCTA['body-one'].'</p>';
+      }else{
+      echo '<h2>Try Before, Commit Later</h2>';
+      echo '<p>Start your 7-day trial today and discover the perfect fit for your project needs.</p>'  
+      }
+      ?>      
     </div>
     <?php
-      $ctaTxt_one = (isset($vcBtn['link-one']) && !empty($vcBtn['link-one'])) ? $vcBtn['link-one'] : "Talk To Our Experts";
+      $ctaTxt_one = (isset($vcBtn['link-one']) && !empty($vcBtn['link-one'])) ? $vcBtn['link-one'] : 
+      "Talk To Our Experts";
       //cmnCTA_v3($ctaTxt_one); 
       echo hireCmn_cta();
       ?>
@@ -535,8 +544,16 @@
           ?>
       </p>
       <?php */ ?>
-      <h2>Need Top-tier Software Development? </h2>
-      <p>Hire our skilled developers and lead the way to innovation.</p>
+      <?php 
+      $dmCTA = get_field('dm-hcta');
+      if( isset($dmCTA['required']) && ($dmCTA['required'] == "yes") ){
+        echo '<h2>'.$dmCTA['title-two'].'</h2>';
+        echo '<p>'.$dmCTA['body-two'].'</p>';
+      }else{
+      echo '<h2>Need Top-tier Software Development? </h2>';
+      echo '<p>Hire our skilled developers and lead the way to innovation.</p>'  
+      }
+      ?>            
     </div>
     <?php
       $ctaTxt_two = (isset($vcBtn['link-two']) && !empty($vcBtn['link-two'])) ? $vcBtn['link-two'] : "Talk To Our Experts";
