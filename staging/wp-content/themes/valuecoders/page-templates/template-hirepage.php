@@ -805,6 +805,13 @@
     <div class="dis-flex justify-sb">
       <div class="left-sec">
         <div class="head-txt">
+          <?php 
+          $dmCTA = get_field('dm-hcta');
+          if( isset($dmCTA['required']) && ($dmCTA['required'] == "yes") ){
+            echo '<h2>'.$dmCTA['title-three'].'</h2>';
+            echo '<p>'.$dmCTA['body-three'].'</p>';
+          }else{
+          ?>
           <h2>
             <?php 
               //echo (isset($vcBtn['title-two']) && !empty($vcBtn['title-two'])) ? $vcBtn['title-two'] : 
@@ -818,6 +825,7 @@
               //"; ?> 
             Ready to elevate your software projects? Hire our expert developers and experience unparalleled innovation and efficiency.
           </p>
+          <?php } ?>
         </div>
         <div class="btn-sec margin-t-50">
           <a href="<?php echo site_url('/contact'); ?>" class="btn rounded"><span class="text-white">Book A Free Consultation</span></a>
