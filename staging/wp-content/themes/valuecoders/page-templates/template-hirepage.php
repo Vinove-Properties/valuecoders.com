@@ -212,22 +212,20 @@
 <section class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70">
   <div class="container">
     <div class="head-txt text-center">
-      
+      <?php /* ?>
       <h2>
         <?php 
           echo (isset($vcBtn['title-one']) && !empty($vcBtn['title-one'])) ? $vcBtn['title-one'] : 
-          "Try Before, Commit Later"; ?>
+          "Let's Discuss Your Project"; ?>
       </h2>
       <p>
         <?php 
           echo (isset($vcBtn['text-one']) && !empty($vcBtn['text-one'])) ? $vcBtn['text-one'] : 
-          "Start your 7-day trial today and discover the perfect fit for your project needs."; ?>
+          "Get free consultation and let us know your project idea to turn it into an amazing digital product."; ?>
       </p>
-      
-      <!-- 
+      <?php */ ?>
       <h2>Try Before, Commit Later</h2>
-      <p>Start your 7-day trial today and discover the perfect fit for your project needs.</p> 
-      -->
+      <p>Start your 7-day trial today and discover the perfect fit for your project needs.</p>
     </div>
     <?php
       $ctaTxt_one = (isset($vcBtn['link-one']) && !empty($vcBtn['link-one'])) ? $vcBtn['link-one'] : "Talk To Our Experts";
