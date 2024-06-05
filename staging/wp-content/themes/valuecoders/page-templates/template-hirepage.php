@@ -753,6 +753,7 @@
       if( isset($whyhire['con-point']) && ($whyhire['con-point'] === "yes") ){
       echo $whyhire['content'];   
       }else{
+      echo $whyhire['content'];
       ?>
       <ul>
         <li><a href="https://www.workstatus.io/" target="_blank" class="a-dotted">Workstatus<sup>TM</sup></a> powered Proof of Work</li>
