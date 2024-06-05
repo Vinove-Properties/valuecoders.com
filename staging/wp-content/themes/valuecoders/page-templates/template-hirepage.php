@@ -231,7 +231,7 @@
         echo '<p>'.$dmCTA['body-one'].'</p>';
       }else{
       echo '<h2>Try Before, Commit Later</h2>';
-      echo '<p>Start your 7-day trial today and discover the perfect fit for your project needs.</p>'  
+      echo '<p>Start your 7-day trial today and discover the perfect fit for your project needs.</p>';
       }
       ?>      
     </div>
@@ -551,7 +551,7 @@
         echo '<p>'.$dmCTA['body-two'].'</p>';
       }else{
       echo '<h2>Need Top-tier Software Development? </h2>';
-      echo '<p>Hire our skilled developers and lead the way to innovation.</p>'  
+      echo '<p>Hire our skilled developers and lead the way to innovation.</p>';  
       }
       ?>            
     </div>
