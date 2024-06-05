@@ -724,12 +724,7 @@
   <div class="dis-flex justify-sb items-center">
   <div class="flex-2 left-box">
     <div class="head-txt">
-      <?php       
-      if( isset($whyhire['con-point']) && ($whyhire['con-point'] === "yes") ){
-        echo $whyhire['content'];   
-      }else{
-        echo $whyhire['content']; 
-      ?>
+      <?php echo $whyhire['content']; ?>
       <ul>
         <li><a href="https://www.workstatus.io/" target="_blank" class="a-dotted">Workstatus<sup>TM</sup></a> powered Proof of Work</li>
         <li>Top 1% developers, rigorously vetted</li>
@@ -740,7 +735,6 @@
         <li>Adherence to data security practices</li>
         <li>Language/time-zone compatible staff</li>
       </ul>
-      <?php } ?>
     </div>
   </div>
   <div class="flex-2 right-box"><?php get_template_part('include/clientele', 'v4.0'); ?></div>
@@ -756,7 +750,9 @@
   <div class="flex-2 left-box">
     <div class="head-txt">
       <?php 
-      echo $whyhire['content'];
+      if( isset($whyhire['con-point']) && ($whyhire['con-point'] === "yes") ){
+      echo $whyhire['content'];   
+      }else{
       ?>
       <ul>
         <li><a href="https://www.workstatus.io/" target="_blank" class="a-dotted">Workstatus<sup>TM</sup></a> powered Proof of Work</li>
@@ -768,6 +764,7 @@
         <li>Adherence to data security practices</li>
         <li>Language/time-zone compatible staff</li>
       </ul>
+      <?php } ?>
     </div>
   </div>
   <div class="flex-2 right-box"><?php get_template_part('include/clientele', 'v4.0'); ?></div>
