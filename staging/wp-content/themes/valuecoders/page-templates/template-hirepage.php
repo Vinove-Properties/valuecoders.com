@@ -36,6 +36,10 @@
         <h2><?php echo $headingTxt['second-heading']; ?></h2>
         <?php 
           while( have_posts() ) : the_post();
+          $pointerOpt = get_field('thecon-pointers');
+          if( $pointerOpt === "yes" ){
+            the_content();
+          }else{
           $li = 'Proof of Work based timesheets (Powered by <a href="https://www.workstatus.io/" class="a-dotted" 
           target="_blank">Workstatus<sup>TM</sup></a>)';
           $getContent = get_the_content();
@@ -44,7 +48,9 @@
           <li>'.$li.'</li>
           <li>IP Rights & NDA (Non-disclosure Agreement) protection</li>
           <li>Flexible contracts, transparent pricing</li>
-          </ul>';
+          </ul>';  
+          }  
+          
           endwhile;
           ?>
         <div class="button-section margin-t-50">
