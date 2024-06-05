@@ -40,7 +40,7 @@ get_header();
 		<div class="dis-flex">
 		  <div class="flex-2 left-box">
 		    <h2>Our mission</h2>
-		    <p>We believe that the future is digital. We also believe that without embracing new technology, businesses postpone their growth.</p>
+		    <p>We drive business success through innovative digital solutions, enhancing efficiency, fostering growth, and providing a competitive edge for businesses of all sizes, everywhere.</p>
 		  </div>
 		  <div class="flex-2 right-box">
 		    <div class="our-mission-text">
