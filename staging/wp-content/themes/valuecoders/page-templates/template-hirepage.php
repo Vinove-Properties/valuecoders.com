@@ -1697,7 +1697,13 @@ if( $hasDMCta === false ) :
   </div>
 </section>
 <?php endif; ?>
-<?php get_template_part('include/testimonials', 'v4.0'); ?>
+
+<?php 
+$hpTestimonails = get_field('hp-ctestimonials');
+if( $hpTestimonails !== "no" ){
+  get_template_part('include/testimonials', 'v4.0');   
+}
+?>
 <!-- Testimonail Section Ends Here -->
 <div class="free-trail-pop-up">
   <div class="pop-up-inner">
