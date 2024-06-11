@@ -865,7 +865,7 @@
           </div>
           <div class="cir-box">
             <div class="text-wrap">
-              <span class="display">25,000+</span>
+              <span class="display">2500+</span>
               <span class="paragraph">Satisfied <br>Customers</span>
               <svg viewBox="0 0 100 100" class="animate-spin-slow wheel-sc">
                 <path id=":R8pm9lc:" fill="none" d="M0,50a50,50 0 1,1 100,0a50,50 0 1,1 -100,0"></path>
