@@ -6499,6 +6499,20 @@ body.page-template-template-testimonials .client-video-section iframe,
     flex-basis: 45%; }
     .second-level-section .left-box .for-client-logo-box {
       margin-bottom: 20px; }
+    .second-level-section .left-box .three-logo {
+      margin-bottom: 20px; }
+      .second-level-section .left-box .three-logo .logo-box {
+        width: 151px;
+        height: 86px;
+        background-size: 151px !important;
+        margin-right: 15px;
+        display: inline-block; }
+        .second-level-section .left-box .three-logo .logo-box.logo1 {
+          background: url(../images/hire-logo1.svg) 0 0 no-repeat; }
+        .second-level-section .left-box .three-logo .logo-box.logo2 {
+          background: url(../images/hire-logo2.svg) 0 0 no-repeat; }
+        .second-level-section .left-box .three-logo .logo-box.logo3 {
+          background: url(../images/hire-logo3.svg) 0 0 no-repeat; }
     .second-level-section .left-box h2 {
       font-size: 16px;
       line-height: 28px; }
@@ -6552,7 +6566,7 @@ body.page-template-template-testimonials .client-video-section iframe,
   align-items: center;
   justify-content: center;
   flex-wrap: wrap; }
-  .table-list-section .table-list li:nth-child(n+7) {
+  .table-list-section .table-list li:nth-child(n + 7) {
     display: none; }
   .table-list-section .table-list li:last-child {
     border-bottom: 0; }
@@ -7155,6 +7169,10 @@ body.page-template-template-testimonials .client-video-section iframe,
 @media only screen and (max-width: 1320px) {
   .second-level-section .left-box {
     flex-basis: 47%; }
+    .second-level-section .left-box .three-logo .logo-box {
+      width: 121px;
+      height: 69px;
+      background-size: 120px !important; }
 
   .open-free-trial::after {
     width: 25px;
@@ -7284,6 +7302,12 @@ body.page-template-template-testimonials .client-video-section iframe,
 @media only screen and (max-width: 767px) {
   .second-level-section .left-box .free-con {
     width: 100%; }
+  .second-level-section .left-box .three-logo .logo-box {
+    width: 100px;
+    height: 55px;
+    background-size: 100px !important;
+    height: 60px;
+    margin-right: 10px; }
   .second-level-section .right-box {
     display: none; }
 
