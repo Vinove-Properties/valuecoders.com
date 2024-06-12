@@ -726,6 +726,14 @@
                             <a href="<?php echo $site_url; ?>hire-developers/hire-magento-developers" title="Magento">Magento</a>
                             <a href="<?php echo $site_url; ?>hire-developers/hire-shopify-developers" title="Shopify">Shopify</a>
                           </div>
+                          <div class="hr-list-item">
+                            <a href="<?php echo $site_url; ?>hire-developers/hire-devops-developers" class="margin-t-40 title">DevOps</a>
+                            <span class="hr-arrow-btn"></span>
+                          </div>
+                          <div class="hr-menu-mega">
+                            <a href="<?php echo $site_url; ?>hire-developers/hire-azure-developers" title="Azure">Azure</a>
+                            <a href="<?php echo $site_url; ?>hire-developers/hire-aws-developers" title="AWS">AWS</a>
+                          </div>
                         </div>
                         <div class="width-20 last-list">
                           <div class="hr-list-item">
@@ -749,12 +757,14 @@
                             <!-- <a href="<?php echo $site_url; ?>hire-developers/hire-nft-marketplace-developers" title="NFT">NFT</a> -->
                           </div>
                           <div class="hr-list-item">
-                            <a href="<?php echo $site_url; ?>hire-developers/hire-devops-developers" class="margin-t-40 title">DevOps</a>
+                            <a href="<?php echo $site_url; ?>hire/digital-marketing-experts" class="margin-t-40 title">Digital Marketing</a>
                             <span class="hr-arrow-btn"></span>
                           </div>
                           <div class="hr-menu-mega">
-                            <a href="<?php echo $site_url; ?>hire-developers/hire-azure-developers" title="Azure">Azure</a>
-                            <a href="<?php echo $site_url; ?>hire-developers/hire-aws-developers" title="AWS">AWS</a>
+                            <a href="<?php echo $site_url; ?>hire/seo-experts" title="SEO">SEO</a>
+                            <a href="<?php echo $site_url; ?>hire/ppc-experts" title="PPC">PPC</a>
+                            <a href="<?php echo $site_url; ?>hire/smo-experts" title="SMO">SMO</a>
+                            <a href="<?php echo $site_url; ?>hire/content-writers" title="Content Writer">Content Writer</a>
                           </div>
                         </div>
                         <div class="width-20 last-list">
