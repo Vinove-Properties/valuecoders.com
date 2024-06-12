@@ -18,7 +18,11 @@
         if( is_page('hire-developers') ){
         echo '<a href="'.get_bloginfo('url').'">Home</a> Hire Software Developers';
         }else{
-        echo '<a href="'.get_bloginfo('url').'">Home</a> <a href="'.site_url('/hire-developers').'">Hire Software Developers</a> '.$thispTitle; 
+        $seoBC = get_field('seo-breadcrumb');
+        if( $seoBC !== "no" ){
+        echo '<a href="'.get_bloginfo('url').'">Home</a> <a href="'.site_url('/hire-developers').'">Hire Software Developers</a> ';  
+        }  
+        echo $thispTitle; 
         }
         ?>
     </div>
@@ -28,19 +32,23 @@
       ?>
     <div class="dis-flex justify-sb">
       <div class="left-box flex-2">
-        <div class="for-client-logo-box dis-flex">
-          <div class="logo-box logo1"></div>
-          <div class="logo-box logo2"></div>
-          <div class="logo-box logo3"></div>
-          <div class="logo-box logo4"></div>
-        </div>
-
-       <!-- <div class="three-logo dis-flex">
-              <div class="logo-box logo1"></div>
-              <div class="logo-box logo2"></div>
-              <div class="logo-box logo3"></div>
-            </div>-->
-
+        <?php 
+        $bdgLogoType = get_field('bdglogo');
+        if( $bdgLogoType != "no" ){
+        echo '<div class="for-client-logo-box dis-flex">
+        <div class="logo-box logo1"></div>
+        <div class="logo-box logo2"></div>
+        <div class="logo-box logo3"></div>
+        <div class="logo-box logo4"></div>
+        </div>';  
+        }else{
+        echo '<div class="three-logo dis-flex">
+        <div class="logo-box logo1"></div>
+        <div class="logo-box logo2"></div>
+        <div class="logo-box logo3"></div>
+        </div>';          
+        }
+        ?>
         <h1><?php echo $headingTxt['top-heading']; ?></h1>
         <h2><?php echo $headingTxt['second-heading']; ?></h2>
         <?php 
