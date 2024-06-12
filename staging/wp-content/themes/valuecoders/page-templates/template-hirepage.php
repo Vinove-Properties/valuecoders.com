@@ -156,6 +156,10 @@
   
   $sectionType = (isset($specifications['specifications']) && (count($specifications['specifications']) > 6)) ? 'accordian' : 'grid';
   
+  if( isset( $specifications['sec-layout'] ) && ($specifications['sec-layout'] == "grid") ){
+  $sectionType = 'grid';
+  }
+
   if( $sectionType === 'grid' ){ 
   ?>
 <section id="acf-tech-spec-grid" class="three-column-icon-section padding-t-120 padding-b-120 <?php echo $specifications['sc_background']; ?>">
