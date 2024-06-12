@@ -19,8 +19,9 @@
         echo '<a href="'.get_bloginfo('url').'">Home</a> Hire Software Developers';
         }else{
         $seoBC = get_field('seo-breadcrumb');
+        echo '<a href="'.get_bloginfo('url').'">Home</a> ';
         if( $seoBC != "yes" ){
-        echo '<a href="'.get_bloginfo('url').'">Home</a> <a href="'.site_url('/hire-developers').'">Hire Software Developers</a> ';  
+        echo '<a href="'.site_url('/hire-developers').'">Hire Software Developers</a> ';  
         }  
         echo $thispTitle; 
         }
