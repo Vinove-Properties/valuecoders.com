@@ -142,10 +142,11 @@
 </div>
 <?php //vcTrustedStartups(); ?>
 <?php 
-  if(is_page('hire-developers')){
-  	get_template_part('include/why','hire3.0');
-  } 
-  ?>
+if(is_page('hire-developers')){
+	get_template_part('include/why','hire3.0');
+} 
+?>
+
 <?php  
   $specifications = get_field('tech-spec');
   if( $specifications ) :
@@ -585,6 +586,36 @@
   </div>
 </section>
 
+<?php 
+$gViewSection = get_field('gview-section');
+if( isset( $gViewSection['is_enabled'] ) && ($gViewSection['is_enabled'] == "yes") ) :
+$htContent  = $gViewSection['content'];
+$headText   = fnextractHeadins('h2', $htContent );  
+?>
+<section id="acf-gview-section" class="three-column-icon-section padding-t-120 padding-b-120">
+  <div class="container">
+    <div class="dis-flex top-content">
+      <div class="flex-2"><?php echo $headText; ?></div>
+      <div class="flex-2"><?php echo preg_replace("/<h([1-2]{1})>.*?<\/h\\1>/si", '', $htContent); ?></div>
+    </div>
+    <div class="dis-flex col-box-outer margin-t-50">
+      <?php 
+        if( $gViewSection['specifications'] ){
+          foreach( $gViewSection['specifications'] as $row ){
+            $vcHasAnchor = vcHasAnchor($row['title'], $row['text']);
+            echo '<div class="flex-3 box-3'.vcHasAnchor($row['title'], $row['text']).'">
+            <div class="box bg-blue-opacity-light">
+            <h3>'.$row['title'].'</h3>
+            <p>'.$row['text'].'</p>';
+            echo ( $vcHasAnchor !== false ) ? '<span class="box-link">'.$row['title'].'</span>' : '';
+            echo '</div></div>';
+          }
+        } 
+        ?>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
 
 <?php 
   $codeSec = get_field('cq-accord'); 
@@ -693,7 +724,8 @@
   </div>
 </section>
 <?php }
-  endif; ?>
+endif; ?>
+
 <?php  
   $whyChoos = get_field('why-choose');
   if( isset( $whyChoos['is_enable'] ) && ($whyChoos['is_enable'] == "yes") ){
