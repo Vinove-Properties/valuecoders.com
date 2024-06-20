@@ -675,6 +675,7 @@
                             <a href="<?php echo $site_url; ?>hire-developers/hire-python-developers" title="Python">Python</a>
                             <a href="<?php echo $site_url; ?>hire-developers/hire-ror-developers" title="Ruby on Rails">Ruby on Rails</a>
                             <a href="<?php echo $site_url; ?>hire-developers/hire-symfony-developers" title="Symfony">Symfony</a>
+                            <a href="<?php echo $site_url; ?>hire-developers/hire-assembly-developers" title="Symfony">Assembly</a>
                           </div>
                         </div>
                         <div class="width-20 last-list">
