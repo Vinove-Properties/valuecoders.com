@@ -775,7 +775,7 @@
                           </div>
                           <div class="hr-menu-mega">
                             <a href="<?php echo $site_url; ?>hire-developers/hire-chatbot-developers" title="Chatbot">Chatbot</a>
-                            <a href="<?php echo $site_url; ?>hire-developers/dialog-flow-development-services-company" title="Dialogflow"> Dialogflow</a>
+                            <a href="<?php echo $site_url; ?>hire-developers/dialogflow-developers" title="Dialogflow"> Dialogflow</a>
                             <a href="<?php echo $site_url; ?>hire-developers/hire-rpa-developers" title="RPA">RPA</a>
                             <a href="<?php echo $site_url; ?>hire-developers/hire-tensorflow-developers" title="Tensorflow">TensorFlow</a>
                           </div>
