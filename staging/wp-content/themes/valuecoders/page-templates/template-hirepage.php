@@ -653,7 +653,7 @@ $headText   = fnextractHeadins('h2', $htContent );
           $isActive = ( $idx === 1 ) ? " active" : "";
           echo '<div class="accordionItem'.$isActive.'">
             <h3 class="accordion-toggle '.$hasAnchor.'"><span>'.$blnkTitle.'</span>'.$aTitle.'</h3>
-            <div class="accordion-content"><p>'.$row['text'].'</p></div>
+            <div class="accordion-content">'.$row['text'].'</div>
           </div>';
           }
         } 
