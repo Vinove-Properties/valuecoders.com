@@ -5200,6 +5200,18 @@ body.page-template-template-testimonials .client-video-section iframe,
 @media only screen and (max-width: 1366px) {
   .contact-us-section .qz-captcha {
     margin-top: 30px; } }
+@media only screen and (max-width: 1280px) {
+  .contact-us-section .quizQ {
+    padding: 0 15px; }
+
+  .contact-us-section .equal {
+    margin: 0 10px; }
+
+  .contact-us-section .right-box {
+    width: 60%; }
+
+  .contact-us-section .left-box {
+    width: 35%; } }
 @media only screen and (max-width: 991px) {
   .contact-us-section .left-box {
     flex-basis: 100%; }
