@@ -2511,6 +2511,24 @@ body.page-template-template-testimonials .client-video-section iframe,
     position: absolute;
     left: 0;
     top: 10px; }
+.tab-scroll-section table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0 0; }
+.tab-scroll-section td,
+.tab-scroll-section th {
+  border: 1px solid #ddd;
+  padding: 8px; }
+.tab-scroll-section tr:nth-child(even) {
+  background-color: #f2f2f2; }
+.tab-scroll-section tr:hover {
+  background-color: #ddd; }
+.tab-scroll-section th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white; }
 .tab-scroll-section ol {
   padding-left: 20px; }
   .tab-scroll-section ol li {
@@ -2772,6 +2790,7 @@ body.page-template-template-testimonials .client-video-section iframe,
   border: 1.5px solid #ececec;
   margin: 0 10px;
   background: #ffffff;
+  position: relative;
   box-shadow: 0px 4px 40px 0px rgba(237, 246, 255, 0.3); }
   .tools-developer .card:hover {
     border: 1.5px solid rgba(255, 173, 0, 0.3); }
@@ -2816,6 +2835,25 @@ body.page-template-template-testimonials .client-video-section iframe,
 .tools-developer.fullwidth .flex-2:last-child,
 .tools-developer.fullwidth .flex-3:last-child {
   flex-basis: 100%; }
+.tools-developer .explore-btn {
+  position: relative;
+  color: #05164d;
+  font-weight: 500;
+  text-decoration: underline;
+  position: absolute;
+  bottom: 20px;
+  left: 20px; }
+  .tools-developer .explore-btn:after {
+    content: "";
+    background: url(../images/explore-btn.svg) no-repeat center;
+    width: 11px;
+    position: absolute;
+    height: 11px;
+    margin-left: 8px;
+    top: 6px;
+    transition: all 0.3s ease-in-out; }
+  .tools-developer .explore-btn:hover:after {
+    margin-left: 15px; }
 
 @media only screen and (max-width: 1320px) {
   .tech-stacks .col-box-outer .col-box {
@@ -3933,7 +3971,19 @@ body.page-template-template-testimonials .client-video-section iframe,
     padding: 10px 20px 30px; }
 
   .header-two .menu ul li.for-product .small-menu-inner a {
-    padding-left: 38px; } }
+    padding-left: 38px; }
+
+  .header-two .menu ul li .menu-mega .header-menu.for-padding {
+    padding: 15px 20px; }
+
+  .header-two .menu ul li .menu-mega .last-list a {
+    margin: 0 0 8px; }
+
+  .header-two .menu ul li .menu-mega .last-list a.margin-t-40 {
+    margin-top: 10px; }
+
+  .header-two .menu ul li .menu-mega .middle-list a, .header-two .menu ul li .menu-mega .last-list a {
+    line-height: 22px; } }
 @media only screen and (max-width: 1140px) {
   .header-two .menu ul li.for-product {
     min-width: auto; } }
