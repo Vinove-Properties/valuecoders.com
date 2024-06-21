@@ -3844,8 +3844,9 @@ body.page-template-template-testimonials .client-video-section iframe,
   .header-two .menu ul li.small-menu .active-pcat {
     color: #fff; }
 
-  .header-two .menu ul li .menu-mega .flex-3 a, .header-two .menu ul li .menu-mega .detail-list a {
-    margin: 0 0 25px; } }
+  .header-two .menu ul li .menu-mega .last-list a {
+    margin: 15px 0 0;
+    line-height: 22px; } }
 @media only screen and (max-width: 1470px) {
   .header-two {
     padding: 20px 0; }
@@ -3895,7 +3896,8 @@ body.page-template-template-testimonials .client-video-section iframe,
       padding: 25px 30px; }
     .header-two .menu ul li .menu-mega .last-list a {
       font-size: 12px;
-      margin: 0 0 8px; }
+      margin: 0 0 8px;
+      line-height: 22px; }
     .header-two .menu ul li .menu-mega .last-list .head {
       margin: 0 0 15px;
       font-size: 12px; }
@@ -3904,7 +3906,11 @@ body.page-template-template-testimonials .client-video-section iframe,
     .header-two .menu ul li .menu-mega .header-menu.for-padding {
       padding: 25px 30px; }
     .header-two .large img {
-      max-width: 190px; } }
+      max-width: 190px; }
+
+  .header-two .menu ul li .menu-mega .last-list a {
+    margin: 15px 0 0;
+    line-height: 22px; } }
 @media only screen and (max-width: 1439px) {
   .header-two .menu ul li a {
     font-size: 14px; }
@@ -5196,10 +5202,7 @@ body.page-template-template-testimonials .client-video-section iframe,
   .contact-us-section .left-box p {
     margin: 0 0 15px; }
   .contact-us-section .left-box .side-dash1:after {
-    top: 35px; }
-
-  .header-two .menu ul li .menu-mega .middle-list a, .header-two .menu ul li .menu-mega .last-list a {
-    margin-top: 18px; } }
+    top: 35px; } }
 @media only screen and (max-width: 1366px) {
   .contact-us-section .qz-captcha {
     margin-top: 30px; } }
