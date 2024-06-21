@@ -4929,7 +4929,19 @@ body.page-template-template-testimonials .client-video-section iframe,
     padding: 10px 20px 30px; }
 
   .header-two .menu ul li.for-product .small-menu-inner a {
-    padding-left: 38px; } }
+    padding-left: 38px; }
+
+  .header-two .menu ul li .menu-mega .header-menu.for-padding {
+    padding: 15px 20px; }
+
+  .header-two .menu ul li .menu-mega .last-list a {
+    margin: 0 0 8px; }
+
+  .header-two .menu ul li .menu-mega .last-list a.margin-t-40 {
+    margin-top: 10px; }
+
+  .header-two .menu ul li .menu-mega .middle-list a, .header-two .menu ul li .menu-mega .last-list a {
+    line-height: 22px; } }
 @media only screen and (max-width: 1140px) {
   .header-two .menu ul li.for-product {
     min-width: auto; } }
@@ -6445,7 +6457,8 @@ body.page-template-template-testimonials .client-video-section iframe,
   .contact-us-section .equal {
     margin: 15px 20px 0; }
   .contact-us-section .quizQ {
-    font-size: 16px; }
+    font-size: 16px;
+    padding: 0 15px; }
   .contact-us-section .refreshbtn {
     margin-left: 20px; }
   .contact-us-section .btn-sec .btn {

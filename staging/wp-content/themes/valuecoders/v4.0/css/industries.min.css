@@ -5776,7 +5776,8 @@ body.page-template-template-testimonials .client-video-section iframe,
   .contact-us-section .equal {
     margin: 15px 20px 0; }
   .contact-us-section .quizQ {
-    font-size: 16px; }
+    font-size: 16px;
+    padding: 0 15px; }
   .contact-us-section .refreshbtn {
     margin-left: 20px; }
   .contact-us-section .btn-sec .btn {
