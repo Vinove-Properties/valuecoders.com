@@ -2535,10 +2535,7 @@ body.page-template-template-testimonials .client-video-section iframe,
   .header-two .large img {
     max-width: 220px; }
   .header-two .menu ul li.small-menu .active-pcat {
-    color: #fff; }
-
-  .header-two .menu ul li .menu-mega .flex-3 a, .header-two .menu ul li .menu-mega .detail-list a {
-    margin: 0 0 25px; } }
+    color: #fff; } }
 @media only screen and (max-width: 1470px) {
   .header-two {
     padding: 20px 0; }
@@ -2585,19 +2582,23 @@ body.page-template-template-testimonials .client-video-section iframe,
         margin: 0 0 15px;
         font-size: 12px; }
     .header-two .menu ul li .menu-mega .last-list.for-padding {
-      padding: 25px 30px; }
+      padding: 20px 25px; }
     .header-two .menu ul li .menu-mega .last-list a {
       font-size: 12px;
-      margin: 0 0 8px; }
+      margin: 0 0 8px;
+      line-height: 20px; }
     .header-two .menu ul li .menu-mega .last-list .head {
       margin: 0 0 15px;
       font-size: 12px; }
     .header-two .menu ul li .menu-mega .middle-list a {
       font-size: 14px; }
     .header-two .menu ul li .menu-mega .header-menu.for-padding {
-      padding: 25px 30px; }
+      padding: 20px 25px; }
     .header-two .large img {
-      max-width: 190px; } }
+      max-width: 190px; }
+
+  .header-two .menu ul li .menu-mega .middle-list a:first-child, .header-two .menu ul li .menu-mega .last-list a:first-child {
+    margin-bottom: 10px; } }
 @media only screen and (max-width: 1439px) {
   .header-two .menu ul li a {
     font-size: 14px; }

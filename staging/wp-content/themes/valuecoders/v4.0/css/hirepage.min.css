@@ -4800,14 +4800,7 @@ body.page-template-template-testimonials .client-video-section iframe,
   .header-two .large img {
     max-width: 220px; }
   .header-two .menu ul li.small-menu .active-pcat {
-    color: #fff; }
-
-  .header-two .menu ul li .menu-mega .last-list a {
-    margin: 15px 0 0;
-    line-height: 22px; } }
-@media only screen and (max-width: 1680px) {
-  .header-two .menu ul li .menu-mega .middle-list a, .header-two .menu ul li .menu-mega .last-list a {
-    margin-top: 0 !important; } }
+    color: #fff; } }
 @media only screen and (max-width: 1470px) {
   .header-two {
     padding: 20px 0; }
@@ -4858,7 +4851,7 @@ body.page-template-template-testimonials .client-video-section iframe,
     .header-two .menu ul li .menu-mega .last-list a {
       font-size: 12px;
       margin: 0 0 8px;
-      line-height: 22px; }
+      line-height: 20px; }
     .header-two .menu ul li .menu-mega .last-list .head {
       margin: 0 0 15px;
       font-size: 12px; }
@@ -4869,9 +4862,8 @@ body.page-template-template-testimonials .client-video-section iframe,
     .header-two .large img {
       max-width: 190px; }
 
-  .header-two .menu ul li .menu-mega .last-list a {
-    margin: 15px 0 0;
-    line-height: 22px; } }
+  .header-two .menu ul li .menu-mega .middle-list a:first-child, .header-two .menu ul li .menu-mega .last-list a:first-child {
+    margin-bottom: 10px; } }
 @media only screen and (max-width: 1439px) {
   .header-two .menu ul li a {
     font-size: 14px; }
