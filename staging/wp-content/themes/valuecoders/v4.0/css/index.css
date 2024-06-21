@@ -5592,7 +5592,10 @@ a {
   .contact-us-section .left-box p {
     margin: 0 0 15px; }
   .contact-us-section .left-box .side-dash1:after {
-    top: 35px; } }
+    top: 35px; }
+
+  .header-two .menu ul li .menu-mega .middle-list a, .header-two .menu ul li .menu-mega .last-list a {
+    margin-top: 18px; } }
 @media only screen and (max-width: 1366px) {
   .contact-us-section .qz-captcha {
     margin-top: 30px; } }
