@@ -234,7 +234,7 @@ if( $isMEPage === true ) { ?>
   </div>
   <div class="count-box-outer dis-flex margin-t-80">
     <div class="count-box flex-4">
-      <span class="count-box-big"><span class="scroll-counter" data-counter-time="1000">18</span>+</span>
+      <span class="count-box-big"><span class="scroll-counter" data-counter-time="1000">19</span>+</span>
       <span class="count-box-small">Years in Business</span>
     </div>
     <div class="count-box flex-4">
@@ -657,7 +657,7 @@ if( isset( $vcValues['is_enable'] ) && ($vcValues['is_enable'] == "yes") ){
       <div class="count-box-section">
       <div class="count-box-outer dis-flex">
         <div class="count-box flex-4">
-          <span class="count-box-big"><span class="scroll-counter" data-counter-time="1000">18</span>+</span>
+          <span class="count-box-big"><span class="scroll-counter" data-counter-time="1000">19</span>+</span>
           <span class="count-box-small">Years in Business</span>
         </div>
         <div class="count-box flex-4">
