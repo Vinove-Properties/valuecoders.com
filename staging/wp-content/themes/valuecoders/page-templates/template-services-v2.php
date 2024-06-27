@@ -444,45 +444,52 @@ $grwBody  = (isset($vcBtn['text-3']) && !empty($vcBtn['text-3'])) ? $vcBtn['text
 </section>
 <?php endif; ?>
 <?php 
-  $eTwoHeading  = (isset($vcBtn['title-two']) && !empty($vcBtn['title-two'])) ? $vcBtn['title-two'] : "Got a Project in Mind? Tell Us More";
-  $eTwoBody     = (isset($vcBtn['text-two']) && !empty($vcBtn['text-two'])) ? $vcBtn['text-two'] : "Drop us a line and we'll get back to you immediately to schedule a call and discuss your needs personally.";
-  $eTwolt = (isset($vcBtn['link-two']) && !empty($vcBtn['link-two'])) ? $vcBtn['link-two'] : 
-  "Talk To Our Experts"; 
-  
-  $eCtatwo = '<h2>'.$eTwoHeading.'</h2>';
-  $eCtatwo .= '<p>'.$eTwoBody.'</p>';
-  if( !is_page( [17422,17425,16003,16004,16062,16066,17235,17236,17239,16065] ) ){
-    echo expert_talk_cta( $eCtatwo, $eTwolt, 'one', 'padding-t-70 padding-b-70 hide-cta' );
-  }
-  ?>
-<?php 
-  $sfMethod = get_field('sf-meth');
-  if( $sfMethod !== "no" )  :
-  $sdmethod = get_field('sd-method','option'); 
-  ?>
+$eTwoHeading  = (isset($vcBtn['title-two']) && !empty($vcBtn['title-two'])) ? $vcBtn['title-two'] : "Got a Project in Mind? Tell Us More";
+$eTwoBody     = (isset($vcBtn['text-two']) && !empty($vcBtn['text-two'])) ? $vcBtn['text-two'] : "Drop us a line and we'll get back to you immediately to schedule a call and discuss your needs personally.";
+$eTwolt = (isset($vcBtn['link-two']) && !empty($vcBtn['link-two'])) ? $vcBtn['link-two'] : 
+"Talk To Our Experts"; 
+
+$eCtatwo = '<h2>'.$eTwoHeading.'</h2>';
+$eCtatwo .= '<p>'.$eTwoBody.'</p>';
+if( !is_page( [17422,17425,16003,16004,16062,16066,17235,17236,17239,16065] ) ){
+echo expert_talk_cta( $eCtatwo, $eTwolt, 'one', 'padding-t-70 padding-b-70 hide-cta' );
+}
+
+$sfMethod = get_field('sf-meth');
+if( $sfMethod !== "no" )  :
+$psMethod = get_field('ps-methodology');
+$sdmethod = [];
+if( isset($psMethod['sec-type']) && ($psMethod['sec-type'] == "ps") ){
+$sdmethod['content']  = $psMethod['content'];
+$sdmethod['cards']    = $psMethod['cards'];
+}else{
+$sdmethod = get_field('sd-method','option');   
+}
+?>
 <section id="sd-metho" class="develop-section padding-t-120 padding-b-120">
   <div class="container">
     <div class="head-txt text-center"><?php echo $sdmethod['content']; ?></div>
     <div class="dev-cards margin-t-80">
-      <?php 
-        if($sdmethod['cards']){
-        $ic = 0;  
-        foreach( $sdmethod['cards'] as $card){ $ic++;
-        $isActive = ( $ic === 1 ) ? ' active' : '';  
-        $thumbnail = ( $card['thumbnail'] ) ? valueGetPtag( $card['thumbnail'] ) : '';  
-        echo '<div class="card"'.$isActive.'>
-          '.$thumbnail.'
-          <div class="card-info">'.$card['content'].'</div>
-          <span class="card-heading">'.$card['title'].'</span>
-        </div>';
-        }  
-        }
-        ?>
+    <?php 
+    if($sdmethod['cards']){
+    $ic = 0;  
+    foreach( $sdmethod['cards'] as $card){ $ic++;
+    $isActive = ( $ic === 1 ) ? ' active' : '';  
+    $thumbnail = ( $card['thumbnail'] ) ? valueGetPtag( $card['thumbnail'] ) : '';  
+    echo '<div class="card"'.$isActive.'>
+      '.$thumbnail.'
+      <div class="card-info">'.$card['content'].'</div>
+      <span class="card-heading">'.$card['title'].'</span>
+    </div>';
+    }  
+    }
+    ?>
     </div>
   </div>
 </section>
-<?php endif; ?>
 <?php 
+endif;
+
   $ourProcess = get_field( 'our-process' );
   if( $ourProcess['is_enable'] == 'yes' ) :
   ?>
