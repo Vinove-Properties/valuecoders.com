@@ -492,7 +492,6 @@ endif;
 
 $ourProcess = get_field( 'our-process' );
 if( $ourProcess['is_enable'] == 'yes' ) :
-  print_r($ourProcess);
 $psProcess = ( isset($ourProcess['sec-type']) && ($ourProcess['sec-type'] == "ps") ) ? true : false;  
 ?>
 <section class="development-phase padding-t-120 padding-b-120 bg-dark-theme">
