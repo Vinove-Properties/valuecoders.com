@@ -310,20 +310,21 @@ if( $sectionType == "tab" ){
   <li>On-time Delivery, No Surprises</li>
   '.$vcProfile['add-pointers'].'
   </ul>';
-  get_template_part( 'include/why', 'hirev4.0', ['content' => $whContent] );   
-  } endif; ?>
+    get_template_part( 'include/why', 'hirev4.0', ['content' => $whContent] );   
+  } 
+endif; 
 
-<section class="counter-column-section bg-blue-linear padding-t-70 padding-b-70">
+$grwTitle = (isset($vcBtn['title-3']) && !empty($vcBtn['title-3'])) ? $vcBtn['title-3'] : "Unlock Your Growth Potential!";
+$grwBody  = (isset($vcBtn['text-3']) && !empty($vcBtn['text-3'])) ? $vcBtn['text-3'] : "Let's break down complex IT issues into actionable solutions you can understand.";
+?>
+
+<section class="counter-column-section bg-blue-linear padding-t-70 padding-b-70" id="unlock-growth-cta">
   <div class="container">
     <div class="dis-flex justify-sb">
       <div class="left-sec">
         <div class="head-txt">
-          <h2>
-          Unlock Your Growth Potential!
-          </h2>
-          <p>
-          Let's break down complex IT issues into actionable solutions you can understand.
-          </p>
+          <h2><?php echo $grwTitle; ?></h2>
+          <p><?php echo $grwBody; ?></p>
         </div>
         <div class="btn-sec margin-t-50">
           <a href="<?php echo site_url('/contact'); ?>" class="btn rounded"><span class="text-white">Get Started</span></a>
