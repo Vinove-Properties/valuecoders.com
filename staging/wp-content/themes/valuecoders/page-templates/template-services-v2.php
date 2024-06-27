@@ -490,60 +490,68 @@ $sdmethod = get_field('sd-method','option');
 <?php 
 endif;
 
-  $ourProcess = get_field( 'our-process' );
-  if( $ourProcess['is_enable'] == 'yes' ) :
-  ?>
+$ourProcess = get_field( 'our-process' );
+if( $ourProcess['is_enable'] == 'yes' ) :
+$psProcess = ( isset($ourProcess['sec-type']) && ($ourProcess['sec-type'] == "ps") ) ? true : false;  
+?>
 <section class="development-phase padding-t-120 padding-b-120 bg-dark-theme">
   <div class="container">
     <div class="head-txt text-center">
-      <h2>Our Process</h2>
-      <p>We specialize in engineering custom software that's both stable and secure, using a variety of tech tools.
-      </p>
+      <?php 
+      if( $psProcess ){
+      echo $ourProcess['content'];
+      }else{
+      echo '<h2>Our Process</h2>
+      <p>We specialize in engineering custom software that\'s both stable and secure, using a variety of tech tools.</p>';
+      }
+      ?>      
     </div>
     <div class="dis-flex col-box-outer margin-t-100">
+      <?php 
+      if( ($psProcess === true) && $ourProcess['process'] ){
+        foreach( $ourProcess['process'] as $pro ){
+        echo '<div class="flex-6"><div class="box">';
+        echo $pro['content'];
+        echo '</div></div>';
+        }
+      }else{ ?>
       <div class="flex-6">
         <div class="box">
-          <h4>Software Kick-off
-          </h4>
+          <h4>Software Kick-off</h4>
           <p>Dive into bi-weekly sprints and rollouts aligned with project timelines.</p>
         </div>
       </div>
       <div class="flex-6">
         <div class="box">
-          <h4>Task Execution &<br> Development
-          </h4>
+          <h4>Task Execution &<br> Development</h4>
           <p>Combined team tackles tasks, fulfilling user stories and sprint goals.</p>
         </div>
       </div>
       <div class="flex-6">
         <div class="box">
-          <h4>Daily<br> Stand-ups
-          </h4>
+          <h4>Daily<br> Stand-ups</h4>
           <p>Daily check-ins led by the Scrum Master to discuss progress and tackle challenges.</p>
         </div>
       </div>
       <div class="flex-6">
         <div class="box">
-          <h4>Feature Quality<br> Check
-          </h4>
+          <h4>Feature Quality<br> Check</h4>
           <p>Quality Engineers rigorously test new features, ensuring seamless integration.</p>
         </div>
       </div>
       <div class="flex-6">
         <div class="box">
-          <h4>Backlog <br>
-Updates
-          </h4>
+          <h4>Backlog <br>Updates</h4>
           <p>Our team keeps the sprint backlog updated, staying on track to meet objectives.</p>
         </div>
       </div>
       <div class="flex-6">
         <div class="box">
-          <h4>Sprint <br>Reflections
-          </h4>
+          <h4>Sprint <br>Reflections</h4>
           <p>Post-sprint reflections to refine strategies and enhance future sprints.</p>
         </div>
       </div>
+      <?php } ?>
     </div>
   </div>
 </section>
