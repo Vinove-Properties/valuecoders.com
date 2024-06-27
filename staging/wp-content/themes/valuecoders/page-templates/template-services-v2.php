@@ -350,7 +350,7 @@ if( $sectionType == "tab" ){
               <svg viewBox="0 0 100 100" class="animate-spin-slow wheel-sc">
                 <path id=":R8pm9lb:" fill="none" d="M0,50a50,50 0 1,1 100,0a50,50 0 1,1 -100,0"></path>
                 <text class="origin-center">
-                  <textPath class="fill-text" textLength="292" href="#:R8pm9lb:">Years Of Experience in this feild</textPath>
+                  <textPath class="fill-text" textLength="292" href="#:R8pm9lb:">Years Of Experience in this field</textPath>
                 </text>
               </svg>
             </div>
