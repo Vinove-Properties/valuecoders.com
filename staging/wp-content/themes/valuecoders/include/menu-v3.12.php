@@ -962,9 +962,9 @@
                             <a href="<?php echo $site_url; ?>ai">AI & Machine Learning</a>
                             <a href="<?php echo $site_url; ?>blockchain-development-company">Blockchain</a>
                             <a href="<?php echo $site_url; ?>ar-vr-development-company">AR/ VR</a>
-                            <a href="<?php echo $site_url; ?>computer-vision-software-development">Computer Vision</a>
+                            <a href="<?php echo $site_url; ?>machine-learning/computer-vision-software-development">Computer Vision</a>
                             <a href="<?php echo $site_url; ?>ott-development">OTT</a>
-                            <a href="<?php echo $site_url; ?>rpa-development-services-company">RPA</a>
+                            <a href="<?php echo $site_url; ?>machine-learning/rpa-development-services-company">RPA</a>
                             <a href="<?php echo $site_url; ?>serverless-development">Serverless</a> 
                             <a href="<?php echo $site_url; ?>chatbot-development-company">Chatbot</a>                             
                           </div>
@@ -980,9 +980,9 @@
                             <a href="<?php echo $site_url; ?>microsoft-dynamics">Microsoft Dynamics</a>
                             <a href="<?php echo $site_url; ?>microsoft-power-platform">Microsoft Power Platforms</a>
                             <a href="<?php echo $site_url; ?>microsoft-powerapp-development">PowerApps</a>
-                            <a href="<?php echo $site_url; ?>microsoft-azure-partner-company-india">Azure</a>
+                            <a href="<?php echo $site_url; ?>cloud-services/azure-cloud">Azure</a>
                             <a href="<?php echo $site_url; ?>odoo-development-services">Odoo</a>
-                            <a href="<?php echo $site_url; ?>amazon-aws-partner-company-india">Amazon Web Services</a>
+                            <a href="<?php echo $site_url; ?>cloud-services/amazon-cloud">Amazon Web Services</a>
                           </div>
                         </div>
                       </div>
