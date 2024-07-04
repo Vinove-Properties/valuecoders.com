@@ -262,9 +262,13 @@ if( $sectionType == "tab" ){
     $title = $row['title'];
     $learnLink = '';
     if( $hasLink ){
-    $title = '<a href="'.$row['link'].'">'.$row['title'].'</a>';
-    $learnLink = '<div class="exbtn margin-t-50"><a class="explore-btn" href="'.$row['link'].'">Know More</a></div>';
+    $title = '<a href="'.$row['link'].'">'.$row['title'].'</a>';    
     }
+    
+    if( isset( $row['link'] ) && !empty( $row['link'] ) ){
+    $learnLink = '<div class="exbtn margin-t-50"><a class="explore-btn" href="'.$row['link'].'">Know More</a></div>';  
+    }
+
     echo '<div class="flex-3 '.$hasLink.'">
     <div class="card no-bg"><div class="box-3">
     <h3>'.$title.'</h3>
