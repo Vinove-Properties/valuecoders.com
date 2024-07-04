@@ -2978,7 +2978,7 @@ body.page-template-template-testimonials .client-video-section iframe,
         line-height: 26px;
         color: #212121;
         display: block;
-        margin-top: 20px; }
+        margin-top: 15px; }
         .header-two .menu ul li .menu-mega .middle-list a.active, .header-two .menu ul li .menu-mega .middle-list a:hover,
         .header-two .menu ul li .menu-mega .last-list a.active,
         .header-two .menu ul li .menu-mega .last-list a:hover {
@@ -3295,9 +3295,6 @@ body.page-template-template-testimonials .client-video-section iframe,
   display: flex;
   align-items: center; }
 
-.header-two .menu ul li .menu-mega .last-list a.margin-t-40 {
-  margin-top: 20px; }
-
 @media only screen and (min-width: 1200px) {
   .header-two > .container {
     max-width: 1900px; } }
@@ -3366,7 +3363,10 @@ body.page-template-template-testimonials .client-video-section iframe,
   .header-two .large img {
     max-width: 220px; }
   .header-two .menu ul li.small-menu .active-pcat {
-    color: #fff; } }
+    color: #fff; }
+
+  .header-two .menu ul li .menu-mega .last-list a.margin-t-40 {
+    margin-top: 20px; } }
 @media only screen and (max-width: 1470px) {
   .header-two {
     padding: 20px 0; }
@@ -3426,10 +3426,7 @@ body.page-template-template-testimonials .client-video-section iframe,
     .header-two .menu ul li .menu-mega .header-menu.for-padding {
       padding: 20px 25px; }
     .header-two .large img {
-      max-width: 190px; }
-
-  .header-two .menu ul li .menu-mega .middle-list a:first-child, .header-two .menu ul li .menu-mega .last-list a:first-child {
-    margin-bottom: 10px; } }
+      max-width: 190px; } }
 @media only screen and (max-width: 1439px) {
   .header-two .menu ul li a {
     font-size: 14px; }
