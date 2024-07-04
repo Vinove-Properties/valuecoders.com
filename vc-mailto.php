@@ -131,7 +131,7 @@ $array_europe = [
     "Holy See",
     "Hungary",
     "Iceland",
-    "Ireland",
+    //"Ireland", #Moved to $array_uk Assinged to Akhil
     "Isle of Man",
     "Italy",
     "Jersey",
@@ -171,7 +171,7 @@ $array_europe = [
     "Western Sahara"
 ];
 
-$array_uk   = ['United Kingdom', 'uk', 'UK'];
+$array_uk   = ['United Kingdom', 'uk', 'UK', 'Ireland', 'ireland'];
 
 // USA Segrated in 2 new Regin #North America #Latin America
 $array_usa  = [
