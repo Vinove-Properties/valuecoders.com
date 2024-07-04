@@ -650,7 +650,7 @@
             <!-- Section Added By Nitin Baluni -->
             <li class="menu-item-has-children">
               <a href="<?php echo $site_url; ?>hire-developers">Hire</a> <span class="arrow-btn"></span>
-              <div class="menu-mega container" style="display:block;">
+              <div class="menu-mega container">
                 <div class="container">
                   <div class="dis-flex">
                     <div class="width-100 for-padding hiremenu header-menu active" id="b0">
