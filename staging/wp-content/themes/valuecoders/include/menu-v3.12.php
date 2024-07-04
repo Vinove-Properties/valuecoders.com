@@ -819,7 +819,7 @@
                     </div>
                     <div class="flex-3">
                       <a href="<?php echo $site_url; ?>software-performance-testing"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/qasol4.svg" class="menuicon" alt="menuicon"><span class="title">Performance Testing</span>
-                      PLoad, stress, and stability testing</a>
+                      Load, stress, and stability testing</a>
                       <a href="<?php echo $site_url; ?>software-testing-automation"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/qasol5.svg" class="menuicon" alt="menuicon"><span class="title">Automated Testing</span>
                       Planning, tools selection, and environment setup</a>
                       <a href="<?php echo $site_url; ?>integration-testing"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/qasol6.svg" class="menuicon" alt="menuicon"><span class="title">Integration Testing</span>
