@@ -770,17 +770,32 @@
                         </div>
                         <div class="width-20 last-list">
                           <div class="hr-list-item">
-                            <a href="<?php echo $site_url; ?>hire-developers/hire-machine-learning-experts" class="title">ML</a>
+                          <div style="display:flex; align-items:center;"><a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers" class="title">AI/</a><a href="<?php echo $site_url; ?>hire-developers/hire-machine-learning-experts" class="title" style="margin-top:0;">ML</a></div>
                             <span class="hr-arrow-btn"></span>
                           </div>
                           <div class="hr-menu-mega">
-                            <a href="<?php echo $site_url; ?>hire-developers/hire-chatbot-developers" title="Chatbot">Chatbot</a>
+                            <a href="<?php echo $site_url; ?>hire-developers/hire-chatbot-developers" title="Chatbot">AI Engineers
+                            </a>
                             <a href="<?php echo $site_url; ?>hire-developers/dialogflow-developers" title="Dialogflow"> Dialogflow</a>
-                            <a href="<?php echo $site_url; ?>hire-developers/hire-rpa-developers" title="RPA">RPA</a>
-                            <a href="<?php echo $site_url; ?>hire-developers/hire-tensorflow-developers" title="Tensorflow">TensorFlow</a>
+                            <a href="<?php echo $site_url; ?>hire-developers/hire-rpa-developers" title="RPA">LLM Engineers
+                            </a>
+                            <a href="<?php echo $site_url; ?>hire-developers/hire-gpt-expert" title="GPT Experts">GPT Experts
+                            </a>
+                            <a href="<?php echo $site_url; ?>hire-developers/hire-data-scientists" title="Data Scientists">Data Scientists
+                            </a>
+                            <a href="<?php echo $site_url; ?>hire-developers/hire-ml-engineers" title="ML Engineers">ML Engineers
+                            </a>
+                            <a href="<?php echo $site_url; ?>hire-developers/hire-chatbot-developers" title="Chatbot">Chatbot
+                            </a>
+                            <a href="<?php echo $site_url; ?>hire-developers/dialogflow-developers" title="Dialogflow">Dialogflow
+                            </a>
+                            <a href="<?php echo $site_url; ?>hire-developers/hire-tensorflow-developers" title="Tensorflow">TensorFlow
+                            </a>
+                            <a href="<?php echo $site_url; ?>hire-developers/hire-rpa-developers" title="RPA">RPA
+                            </a>
                           </div>
                           <div class="hr-list-item">
-                            <a href="<?php echo $site_url; ?>services/low-code-no-code" class="margin-t-40 title">Low-Code</a>
+                            <a href="<?php echo $site_url; ?>services/low-code-no-code" class="margin-t-40 title">  </a>
                             <span class="hr-arrow-btn"></span>
                           </div>
                           <div class="hr-menu-mega">
