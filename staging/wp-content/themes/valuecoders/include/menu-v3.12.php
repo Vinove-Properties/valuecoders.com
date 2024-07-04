@@ -774,10 +774,9 @@
                             <span class="hr-arrow-btn"></span>
                           </div>
                           <div class="hr-menu-mega">
-                            <a href="<?php echo $site_url; ?>hire-developers/hire-chatbot-developers" title="Chatbot">AI Engineers
+                            <a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers" title="Chatbot">AI Engineers
                             </a>
-                            <a href="<?php echo $site_url; ?>hire-developers/dialogflow-developers" title="Dialogflow"> Dialogflow</a>
-                            <a href="<?php echo $site_url; ?>hire-developers/hire-rpa-developers" title="RPA">LLM Engineers
+                            <a href="<?php echo $site_url; ?>hire-developers/hire-llm-engineers" title="LLM">LLM Engineers
                             </a>
                             <a href="<?php echo $site_url; ?>hire-developers/hire-gpt-expert" title="GPT Experts">GPT Experts
                             </a>
