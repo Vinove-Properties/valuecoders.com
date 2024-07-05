@@ -486,8 +486,8 @@
         gloader.classList.add("active");
   
         const fileSize = file.size / 1024 / 1024;
-        if( fileSize > 10 ){
-        	setFileError("ERROR Uploaded document exceeds the maximum size limit of 10 MB", errorTag);
+        if( fileSize > 20 ){
+        	setFileError("ERROR Uploaded document exceeds the maximum size limit of 20 MB", errorTag);
         	gloader.classList.remove("active");
         	return;
         }
