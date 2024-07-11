@@ -324,7 +324,7 @@ get_header();
   <div class="last-block">
     <ul class="faddress-col">
       <li><strong>Gurugram : </strong>10th Floor, Tower-B, Unitech Cyber Park, Sector - 39, Gurugram, Haryana-122001</li>
-      <li><strong>Noida :</strong> 3rd Floor, Fusion Square, 5A & 5B, Sector 126, Noida 201303</li>
+      <li><strong>Noida :</strong> 11th Floor, Max Square, Noida-Greater Noida Expy, Sector 129, Noida, Uttar Pradesh 201304</li>
       <li><strong>US :</strong> 5900 Balcones Drive, STE 100, Austin , TX 78731, USA</li>
       <li><strong>UK :</strong> 167-169 Great Portland Street, 5th Floor, London W1W 5PF, United Kingdom</li>
       <li><strong>UAE :</strong> 541, 8W, Level 5, Dubai Airport Free Zone, Dubai, United Arab Emirates</li>
