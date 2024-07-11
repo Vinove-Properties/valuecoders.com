@@ -38,7 +38,7 @@ $isUKAddr   = (isset($usAddr) && ($usAddr == 'yes')) ? true : false;
       </div>
       <div class="flex-4">
       <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/india-flag.svg" alt="Valuecoders" width="33" height="24"><strong>INDIA</strong></p>  
-      <p>3rd Floor, Fusion Square, 5A & 5B, Sector 126, Noida 201303, UP, India</p>
+      <p>11th Floor, Max Square, Noida-Greater Noida Expy, Sector 129, Noida, Uttar Pradesh 201304</p>
       </div>
       </div>
     </div>
@@ -60,7 +60,7 @@ $isUKAddr   = (isset($usAddr) && ($usAddr == 'yes')) ? true : false;
       </div>
       <div class="flex-4">
         <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/india-flag.svg" alt="Valuecoders" width="33" height="24"><strong>INDIA</strong></p>
-        <p>3rd Floor, Fusion Square, 5A & 5B, Sector 126, Noida 201303, UP, India</p>
+        <p>11th Floor, Max Square, Noida-Greater Noida Expy, Sector 129, Noida, Uttar Pradesh 201304</p>
       </div>
     </div>
   </div>
