@@ -613,7 +613,7 @@ function uploadFile(file, i) {
 			  reader.onloadend = function() {
 			  	let indiv 		= document.createElement('div');
 			  	indiv.classList.add("ad-file");
-		        indiv.innerHTML = '<span class="up-file">'+file.name+'</span><button type="button" onclick="return removeMe(this,this.value);" value="'+response.file+'">X</button>';
+		        indiv.innerHTML = '<span class="up-file">'+file.name+'</span><button type="button" onclick="return removeMe(this,this.value);" value="'+response.file+'"></button>';
 				document.getElementById('gallery').appendChild(indiv);
 				}
         	}else{
