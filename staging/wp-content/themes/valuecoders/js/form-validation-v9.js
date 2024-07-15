@@ -90,7 +90,7 @@ weHelp.addEventListener("change", function(e){
 		fldPapa.classList.remove("verror");
 		fldPapa.classList.add("is-selected");
 	}
-	loadReCapJS();
+	//loadReCapJS();
 });
 
 var getKeyCode = function (str) {
@@ -137,6 +137,7 @@ function checkURequirement(event){
 	if( !document.body.classList.contains('career-opt') ){
 		checkLength(uRequirement,3,1500);
 	}
+	loadReCapJS();
 }
 
 function checkRequired(inputArr){
