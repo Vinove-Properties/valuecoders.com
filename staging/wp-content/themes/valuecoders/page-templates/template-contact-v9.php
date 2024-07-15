@@ -78,7 +78,7 @@
                     </div>
                     <div class="form-text-cont step-one-select">
                       <div class="user-input">
-                        <label for="select-wehelp">How can we help? *</label>
+                        <label for="select-wehelp">Select your service*</label>
                         <select class="wide selectize" name="we-help" id="select-wehelp" style="display:none;">
                           <option value="">Select</option>
                           <option value="Software Development" title="For custom software development and fixed cost projects.">Software Development</option>
@@ -93,7 +93,18 @@
                     </div>
                     <div class="form-text-cont width-full">
                       <div class="lbl-row-new">
-                        <label id="lbl-requirement">Requirement*</label>
+                        <label id="lbl-requirement"><div class="info-wrap">
+                                  How can we help?*
+                                  <div class="info-tip">
+                                    <div class="info-content">
+                                      <h4>What happens after you contact us? </h4>
+                                      <p>Our solution experts will answer your questions in a
+                                        secure online meeting.
+                                      </p>
+                                      <a class="kmore" href="https://www.valuecoders.com/hire-developers/7-day-trial">Know More</a>
+                                    </div>
+                                  </div>
+                                </div></label>
                       </div>
                       <div class="user-input">
                         <textarea class="input-field comment-input" id="user-req" name="user-req"></textarea>
