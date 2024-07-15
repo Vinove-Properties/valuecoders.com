@@ -3543,15 +3543,16 @@ body.page-template-template-testimonials .client-video-section iframe,
           display: block;
           pointer-events: none;
           position: absolute;
-          right: 15px;
-          top: 50%;
+          right: 10px;
+          top: 8px;
           transition: 0.15s ease-in-out;
           background: url(../images/cross-con.svg);
           width: 11px;
           height: 11px;
           background-repeat: no-repeat;
           cursor: pointer;
-          border: 0; }
+          border: 0;
+          font-size: 0; }
           .contact-us-section.full-width-form #gallery div button:focus,
           .contact-us-section.full-width-form #gallery div a:focus {
             background: #f30909; }
