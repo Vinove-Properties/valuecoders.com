@@ -3541,21 +3541,24 @@ body.page-template-template-testimonials .client-video-section iframe,
         .contact-us-section.full-width-form #gallery div a {
           content: "";
           display: block;
-          pointer-events: none;
           position: absolute;
-          right: 10px;
-          top: 8px;
+          right: 4px;
+          top: 4px;
           transition: 0.15s ease-in-out;
           background: url(../images/cross-con.svg);
-          width: 11px;
-          height: 11px;
+          background-size: 11px;
+          width: 17px;
+          height: 17px;
+          background-position: center;
           background-repeat: no-repeat;
           cursor: pointer;
           border: 0;
-          font-size: 0; }
+          font-size: 0;
+          background-color: transparent;
+          border-radius: 100%; }
           .contact-us-section.full-width-form #gallery div button:focus,
           .contact-us-section.full-width-form #gallery div a:focus {
-            background: #f30909; }
+            background-color: #f30909; }
     .contact-us-section.full-width-form .ad-file {
       font-size: 12px;
       border: 1px solid #e0e0e0;
