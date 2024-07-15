@@ -209,7 +209,9 @@
                 <div class="row-div">
                   <a href="https://wa.me/918882108080">
                     <div class="flag-d">
-                      <div class="img"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/wtsapp.svg" alt="valuecoders" width="30" height="19"></div>
+                      <div class="img">
+                     <img class="wtsapp entered lazyloaded" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/wtsapp.svg" alt="valuecoders" width="30" height="19">
+                   </div>
                       <div class="cont"><span class="num">+91 888 210 8080</span></div>
                     </div>
                   </a>
@@ -218,7 +220,7 @@
                   <a href="tel:+918882108080">
                     <div class="flag-d">
                       <div class="img">
-                        <img class="wtsapp entered lazyloaded" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/phone.svg" alt="valuecoders" width="30" height="19">
+                        <img class="entered lazyloaded" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/phone.svg" alt="valuecoders" width="30" height="19">
                       </div>
                       <div class="cont"><span class="num">+91 888 210 8080</span></div>
                     </div>
