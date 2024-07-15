@@ -149,7 +149,7 @@ style="display:none;visibility:hidden"></iframe></noscript>
 <?php endif; ?>
 
 <?php 
-if(!is_page_template( 'page-templates/template-contact-v8.php' )){
+if(!is_page_template(['page-templates/template-contact-v8.php','page-templates/template-contact-v9.php'])){
 global $post;	
 $pageCategory = get_post_meta( $post->ID, 'vc-mcategory', true);
 //echo '<pre>'.$pageCategory.'</pre>';
