@@ -4578,7 +4578,10 @@ body.page-template-template-testimonials .client-video-section iframe,
     .globe-around .dis-flex .flex-5 .cont-full .box .flag-d .img {
       margin-top: 3px; }
     .globe-around .dis-flex .flex-5:last-child {
-      flex-basis: 100%; } }
+      flex-basis: 100%; }
+
+  .contact-us-section.full-width-form #gallery div button, .contact-us-section.full-width-form #gallery div a {
+    top: 12px; } }
 @media only screen and (max-width: 479px) {
   .globe-around .dis-flex .flex-5 {
     flex-basis: 100%; } }
