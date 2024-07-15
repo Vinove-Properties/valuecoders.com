@@ -242,9 +242,8 @@ function valuecoders_scripts() {
 		wp_enqueue_script( 'select-bx', get_stylesheet_directory_uri(). '/js/select-bx.js', array(), 
 		_S_VERSION, true );
 		wp_enqueue_script( 'vc-cfscript', get_stylesheet_directory_uri(). '/js/form-validation-v9.js', [], [], true );
-		wp_enqueue_style( 'vc-contact', get_stylesheet_directory_uri().'/v4.0/css/contact-min.css' );
-		wp_enqueue_style( 'vc-nselect', get_stylesheet_directory_uri().'/v4.0/css/nice-select2.css' );
-		
+		wp_enqueue_style( 'vc-contact', get_stylesheet_directory_uri().'/v4.0/css/contact-usv9.css' );
+		wp_enqueue_style( 'vc-nselect', get_stylesheet_directory_uri().'/v4.0/css/nice-select2.css' );		
 	}
 	elseif(
 		is_page_template([
