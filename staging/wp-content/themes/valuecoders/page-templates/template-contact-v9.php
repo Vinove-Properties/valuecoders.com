@@ -30,7 +30,7 @@ get_header();
 				<a href="#"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-03.svg" alt="valuecoders" width="20" height="20"></i>Email us</a>
 				</div>
 
-			<form action="<?php bloginfo('url'); ?>/sendmail1.php" enctype="multipart/form-data" method="POST" id="contact-form-section" onsubmit="vcCmnFormValidation(); return false;"  style="margin-top:40px;">
+			<form action="<?php bloginfo('url'); ?>/sendmail1.php" enctype="multipart/form-data" method="POST" id="contact-form-section" onsubmit="vcCmnFormValidation(); return false;">
 					<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
 					<div id="vc-fstep1" class="step-one version-8">
 					<!-- <div class="step-head active">
