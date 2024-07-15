@@ -21,18 +21,19 @@ get_header();
 			<form action="<?php bloginfo('url'); ?>/sendmail1.php" enctype="multipart/form-data" method="POST" id="contact-form-section" onsubmit="vcCmnFormValidation(); return false;"  style="margin-top:40px;">
 					<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
 					<div id="vc-fstep1" class="step-one version-8">
-					<div class="step-head active">
+					<!-- <div class="step-head active">
 						<div><h2 id="uinfo">Your Information</h2>
 						<span>(Step 1 of 2)</span></div>
 						<span class="req-block">Required Fields*</span>
-					</div>	
+					</div>	 -->
+
 					<div class="form-inner dis-flex">
 						<div class="form-text-cont">
 							<div class="lbl-row">
 								<label for="cont_name">Full Name *</label>								
 							</div>
 							<div class="user-input">
-								<input type="text" id="cont_name" class="input-field" value="" maxlength="50" name="user-name" />
+								<input type="text" id="cont_name" placeholder="Enter your full name" class="input-field" value="" maxlength="50" name="user-name" />
 								<small>Error Message</small>
 							</div>
 						</div>
@@ -42,7 +43,7 @@ get_header();
 								
 							</div>							
 							<div class="user-input">
-								<input type="text" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}$" class="input-field" value="" maxlength="50" name="user-email" id="cont_email" />
+								<input type="text" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}$" class="input-field" value="" maxlength="50" name="user-email" id="cont_email" placeholder="Enter your email address" />
 								<small>Error Message</small>
 							</div>
 						</div>
@@ -51,7 +52,8 @@ get_header();
 								<label for="cont_country">Country *</label>
 							</div>
 							<div class="user-input">
-								<input type="text" class="input-field" id="cont_country" value="" name="user-country" maxlength="50" autocomplete="off">
+								<input type="text" class="input-field" id="cont_country" value="" name="user-country" maxlength="50" autocomplete="off" 
+								placeholder="Select your country">
 								<small>Error Message</small>
 							</div>
 						</div>
@@ -60,7 +62,8 @@ get_header();
 								<label for="cont_phpne">Phone Number (Optional)</label>
 							</div>
 							<div class="user-input">
-								<input id="cont_phpne" type="tel" maxlength="30" name="user-phone" class="input-field flg-input">
+								<input id="cont_phpne" type="tel" maxlength="30" name="user-phone" class="input-field flg-input" 
+								placeholder="Enter your phone number">
 								<small>Error Message</small>
 							</div>
 						</div>	
