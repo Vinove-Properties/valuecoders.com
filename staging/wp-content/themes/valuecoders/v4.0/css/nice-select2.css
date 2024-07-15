@@ -37,7 +37,7 @@
 .form-text-cont.is-selected .nice-select span.current,
 .nice-select:focus span.current {
     opacity: 1;
-    color: #fff;
+    color: #656565;
 }
 .day .nice-select {
     width: 100%;
