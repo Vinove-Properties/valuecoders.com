@@ -3473,7 +3473,7 @@ body.page-template-template-testimonials .client-video-section iframe,
         padding-right: 15px;
         border: 0.9px solid #d9d9d9 !important; }
     .contact-us-section.full-width-form .width-full .user-input {
-      border: 0.9px solid #d9d9d9;
+      border: 0.5px solid rgba(255, 255, 255, 0.5);
       padding: 15px 15px;
       background: transparent;
       width: 100%;
@@ -3517,16 +3517,15 @@ body.page-template-template-testimonials .client-video-section iframe,
       padding: 0; }
       .contact-us-section.full-width-form #drop-area .button {
         background: none;
-        color: #414040 !important;
+        color: #ffffff !important;
         font-weight: 500;
         text-decoration: none;
         padding: 5px 10px;
-        border: 0.5px solid #d1d1e1;
+        border: 0.5px solid #ffffff;
         font-size: 12px;
-        border-radius: 5px;
+        border-radius: 0;
         line-height: 1.6;
-        opacity: 0.5;
-        background: rgba(217, 217, 217, 0.2); }
+        opacity: 0.5; }
         .contact-us-section.full-width-form #drop-area .button:focus {
           background: rgba(76, 76, 76, 0.7); }
     .contact-us-section.full-width-form #gallery {
