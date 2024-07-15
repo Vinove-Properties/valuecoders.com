@@ -10,14 +10,26 @@ get_header();
 		<div class="dis-flex form-outer">
 		<div class="form-left">
 		<div class="bg-voilet">
-			<div class="form-box-outer right-box" style="padding-top:100px;">
-				<div class="head-txt">
-					<div class="logo-box"><a href="<?php bloginfo('url'); ?>"></a></div>
-					<div class="head-box">
-					<h1>Get In Touch</h1>
-					<p>Our consultants will respond back within 8 business hours or less.</p>
-					</div>
+			<div class="form-box-outer right-box">
+				<div class="lf-top">
+          <div class="head-txt">
+            <div class="logo-box"><a href="https://www.valuecoders.com"></a></div>
+            <div class="head-box">
+              <h1>Get In Touch</h1>
+              <p>Our consultants will respond back within 8 business hours or less.</p>
+            </div>
+          </div>
+          <div class="lf-right">
+          	<img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/lf-01.svg" alt="pixel" width="94" height="84">
+          	<img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/lf-02.svg" alt="pixel" width="95" height="84">
+          </div>
+        </div>
+				<div class="soc-box dis-flex items-center">
+				<a href="https://www.valuecoders.com/contact"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-01.svg" alt="valuecoders" width="20" height="20"></i>Book A Call</a>
+				<a href="https://wa.me/918882108080"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-02.svg" alt="valuecoders" width="20" height="20"> </i>WhatsApp</a>
+				<a href="#"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-03.svg" alt="valuecoders" width="20" height="20"></i>Email us</a>
 				</div>
+
 			<form action="<?php bloginfo('url'); ?>/sendmail1.php" enctype="multipart/form-data" method="POST" id="contact-form-section" onsubmit="vcCmnFormValidation(); return false;"  style="margin-top:40px;">
 					<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
 					<div id="vc-fstep1" class="step-one version-8">
@@ -119,81 +131,251 @@ get_header();
 						</div>
 						<br>
 						<br>
-						</div><!--//Setp 1 Ends Here -->
-
-						<?php /* ?>
-						<div id="vc-fstep2" class="step-two" style="display:none;">					
-						<div class="nda-button">
-						<input type="checkbox" id="ndaButton" name="nda" value="Send me NDA">
-						<label for="ndaButton">Send me NDA
-						<span class="info-box">
-						<em>i</em>
-						<span class="info">A Non Disclosure Agreement is a legally binding contract that establishes a confidential relationship. The party or parties signing the agreement agree that sensitive information they may obtain will not be made available to any others. An NDA may also be referred to as a confidentiality agreement. (credit: Investopedia)</span>
-						</span>
-						</label>
 						</div>
-
-						<p class="note">Note : We Respect Your Privacy! Your details will never be shared with anyone for marketing purposes.</p>
-						</div><!-- //Step - 2 #Ends -->
-						<?php */ ?>
 				</form>
 			</div>
 		</div>
 		</div><!-- .form-left -->
-		<div class="slider-right od-row">
-		<span class="client-head">TRUSTED BY STARTUPS AND FORTUNE 500 COMPANIES</span>
-		<?php 
-		if( isset( $_GET['theme'] ) &&  ($_GET['theme'] == "light") ){ ?>	
-		<picture>
-        <img src="<?php bloginfo('template_url'); ?>/images/contact-client-logo-image-light.svg" class="Client Logo" width="364" height="274" alt="ValueCoders">
-		</picture>
-		<?php }else{ ?>
-		<picture>
-		<img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/contact-client-logo-image.svg" class="Client Logo" width="364" height="274" loading="lazy" alt="ValueCoders">
-		</picture>	
-		<?php }
-		?>		
-		</div>	
-	</div><!-- dis-flex form-outer -->	
+		<div class="right-contactbox">
+<p>Trusted by startups and Fortune 500 companies</p>
+<div class="row-box">
+  <div class="col-box dis-flex">
+    <div class="icon"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-01.svg" alt="pixel" width="40" height="40"></div>
+    <div class="desp">
+      <h4>19+ years of experience</h4>
+      <p>We can handle projects of all complexities.</p>
+    </div>
+  </div>
+  <div class="col-box dis-flex">
+    <div class="icon"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-02.svg" alt="pixel" width="40" height="40"></div>
+    <div class="desp">
+      <h4>2500+ satisfied customers</h4>
+      <p>Startups to Fortune 500, we have worked with all.</p>
+    </div>
+  </div>
+  <div class="col-box dis-flex">
+    <div class="icon"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-03.svg" alt="pixel" width="40" height="40"></div>
+    <div class="desp">
+      <h4>675+ in-house team</h4>
+      <p>Top 1% industry talent to ensure your digital success.</p>
+    </div>
+  </div>
+</div>
+<div class="slide-logo  dis-flex items-center justify-sb" id="pxl-logoslider">
+  <div class="container">
+    <div class="dis-flex">
+      <div class="logo-section">
+        <div class="logoslide">
+          <div class="glide__track" data-glide-el="track">
+            <div class="glide__slides">
+              <div class="glide__slide">
+                <picture>
+                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-client-logo.svg" width="" height="" alt="pixelcrayons">
+                </picture>
+              </div>
+              <div class="glide__slide">
+                <picture>
+                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-client-logo.svg" width="" height="" alt="pixelcrayons">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>	
+</div><!-- dis-flex form-outer -->	
 </div>	
 </section>	
-
-<section class="form-footer-section">
-<div class="container">
-<div class="form-footer dis-flex">
-  <div class="mid-block dis-flex">
-    <div class="flex-3">
-      <a href="tel:+918882108080"><span class="title">INDIA</span> +91 888 210 8080 (Sales)</a>
-      <a href="tel:+917042020782" style="margin-top: 5px; ">+91 704 202 0782 (HR)</a>
-    </div>
-    <div class="flex-3">
-      <a href="tel:+442032392299"><span class="title">UK</span> +44 20 3239 2299</a>       
-    </div>
-	<div class="flex-3">
-      <!--<a href="tel:+97145232446"><span class="title">UAE</span> +971 4-523- 2446</a>-->
-      <a href="https://wa.me/918882108080"><span class="title">WhatsApp</span> +91 888 210 8080</a>
-    </div>
-    <div class="flex-3">
-      <a href="tel:+14152300123"><span class="title">USA</span> +1 415 230 0123</a>            
-    </div>
-    <div class="flex-3">
-      <a href="tel:+61280058080"><span class="title">AUS</span> +61 2 8005 8080</a>            
-    </div>
-	<div class="flex-3">
-      <!--<a href="https://wa.me/918882108080"><span class="title">WhatsApp</span> +91 888 210 8080</a>-->            
-    </div>
-  </div>
-  <div class="last-block">
-    <ul class="faddress-col">
-      <li><strong>Gurugram : </strong>10th Floor, Tower-B, Unitech Cyber Park, Sector - 39, Gurugram, Haryana-122001</li>
-      <li><strong>Noida :</strong> 11th Floor, Max Square, Noida-Greater Noida Expy, Sector 129, Noida, Uttar Pradesh 201304</li>
-      <li><strong>US :</strong> 5900 Balcones Drive, STE 100, Austin , TX 78731, USA</li>
-      <li><strong>UK :</strong> 167-169 Great Portland Street, 5th Floor, London W1W 5PF, United Kingdom</li>
-      <li><strong>UAE :</strong> 541, 8W, Level 5, Dubai Airport Free Zone, Dubai, United Arab Emirates</li>
-    </ul>
-  </div>
-</div>
-</div>
+<?php get_template_part('include/testimonials', 'v4.0'); ?>
+<section class="globe-around bg-light padding-t-120 padding-b-120">
+   <div class="container">
+      <div class="heading text-center">
+         <h2>Serving Clients in 38+ Countries</h2>
+         <p>We are making an impact worldwide with our global presence and exceptional software solutions.</p>
+      </div>
+      <div class="dis-flex  margin-t-80 row">
+         <div class="flex-5">
+            <div class="cont-full">
+               <div class="box hover-ef">
+                  <a href="tel:+918882108080">
+                     <div class="flag-d">
+                        <div class="img"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/flag-01.svg" alt="valuecoders" width="30" height="19"></div>
+                        <div class="cont"><span>India</span></div>
+                     </div>
+                  </a>
+               </div>
+               <div class="detail-full">
+                  <div class="box">
+                     <div class="row-div">
+                        <a href="https://wa.me/918882108080">
+                           <div class="flag-d">
+                              <div class="img"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/flag-01.svg" alt="valuecoders" width="30" height="19"></div>
+                              <div class="cont"><span class="num">+91 888 210 8080</span></div>
+                           </div>
+                        </a>
+                     </div>
+                     <div class="row-div">
+                        <a href="tel:+918882108080">
+                           <div class="flag-d">
+                              <div class="img">
+                                 <img class="wtsapp entered lazyloaded" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/phone.svg" alt="valuecoders" width="30" height="19">
+                              </div>
+                              <div class="cont"><span class="num">+91 888 210 8080</span></div>
+                           </div>
+                        </a>
+                     </div>
+                     <div class="row-div">
+                        <div class="flag-d">
+                           <div class="img">
+                              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/map-pin.svg" alt="valuecoders" width="14" height="19">
+                           </div>
+                           <div class="cont addrs"><span class="num">Gurugram : 10th Floor,
+                              Tower-B, Unitech
+                              Cyber Park, Sector - 39,
+                              Gurugram, Haryana-
+                              122001</span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row-div">
+                        <div class="flag-d">
+                           <div class="img">
+                              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/map-pin.svg" alt="valuecoders" width="14" height="19">
+                           </div>
+                           <div class="cont addrs"><span class="num">Noida : 11th Floor, Max Square, Noida-Greater Noida Expy, Sector 129, Noida, Uttar Pradesh 201304</span></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="flex-5">
+            <div class="cont-full">
+               <div class="box hover-ef">
+                  <a href="tel:+14152300123">
+                     <div class="flag-d">
+                        <div class="img"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/flag-02.svg" alt="valuecoders" width="30" height="19"></div>
+                        <div class="cont addrs"><span>United States</span></div>
+                     </div>
+                  </a>
+               </div>
+               <div class="detail-full">
+                  <div class="box">
+                     <div class="row-div">
+                        <a href="tel:+14152300123">
+                           <div class="flag-d">
+                              <div class="img">
+                                 <img class="wtsapp entered lazyloaded" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/phone.svg" alt="valuecoders" width="30" height="19">
+                              </div>
+                              <div class="cont"><span class="num">+1 415 230 0123</span></div>
+                           </div>
+                        </a>
+                     </div>
+                     <div class="row-div">
+                        <div class="flag-d">
+                           <div class="img">
+                              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/map-pin.svg" alt="valuecoders" width="14" height="19">
+                           </div>
+                           <div class="cont addrs"><span class="num">5900 Balcones Drive, STE 100, Austin , TX 78731, USA</span></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="flex-5">
+            <div class="cont-full">
+               <div class="box hover-ef">
+                  <a href="tel:+442032392299">
+                     <div class="flag-d">
+                        <div class="img">
+                           <div class="img"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/flag-03.svg" alt="valuecoders" width="30" height="19"></div>
+                        </div>
+                        <div class="cont addrs"><span>United Kingdom</span></div>
+                     </div>
+                  </a>
+               </div>
+               <div class="detail-full">
+                  <div class="box">
+                     <div class="row-div">
+                        <a href="tel:+442032392299">
+                           <div class="flag-d">
+                              <div class="img">
+                                 <img class="wtsapp entered lazyloaded" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/phone.svg" alt="valuecoders" width="30" height="19">
+                              </div>
+                              <div class="cont"><span class="num">+44 20 3239 2299</span></div>
+                           </div>
+                        </a>
+                     </div>
+                     <div class="row-div">
+                        <div class="flag-d">
+                           <div class="img">
+                              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/map-pin.svg" alt="valuecoders" width="14" height="19">
+                           </div>
+                           <div class="cont addrs"><span class="num">167-169 Great Portland Street, 5th Floor, London W1W 5PF, United Kingdom</span></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="flex-5">
+            <div class="cont-full">
+               <div class="box hover-ef">
+                  <a href="#">
+                     <div class="flag-d">
+                        <div class="img">
+                           <div class="img"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/flag-04.svg" alt="valuecoders" width="30" height="19"></div>
+                        </div>
+                        <div class="cont addrs"><span>UAE</span> <span class="num"></span></div>
+                     </div>
+                  </a>
+               </div>
+               <div class="detail-full">
+                  <div class="box">
+                     <div class="row-div">
+                        <div class="flag-d">
+                           <div class="img">
+                              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/map-pin.svg" alt="valuecoders" width="14" height="19">
+                           </div>
+                           <div class="cont addrs"><span class="num">541, 8W, Level 5, Dubai Airport Free Zone, Dubai, United Arab Emirates</span></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="flex-5">
+            <div class="cont-full">
+               <div class="box hover-ef aus">
+                  <a href="tel:+61280058080">
+                     <div class="flag-d">
+                        <div class="img"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/flag-05.svg" alt="valuecoders" width="30" height="19"></div>
+                        <div class="cont addrs"><span>Australia</span></div>
+                     </div>
+                  </a>
+               </div>
+               <div class="detail-full">
+                  <div class="box">
+                     <div class="row-div">
+                        <a href="tel:+61280058080">
+                           <div class="flag-d">
+                              <div class="img">
+                                 <img class="wtsapp entered lazyloaded" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/phone.svg" alt="valuecoders" width="30" height="19">
+                              </div>
+                              <div class="cont"><span class="num">+61 2 8005 8080</span></div>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 </section>
 </div>
 <?php get_footer(); ?>
