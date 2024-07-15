@@ -4292,6 +4292,10 @@ body.page-template-template-testimonials .client-video-section iframe,
 .globe-around .dis-flex .flex-5 .cont-full:hover .box:before {
   transform: rotate(180deg); }
 
+.globe-around .dis-flex .flex-5 .cont-full .detail-full .box .flag-d .wtsapp {
+  vertical-align: top;
+  margin-top: -5px; }
+
 @media only screen and (min-width: 1800px) {
   .contact-us-section.full-width-form .container {
     max-width: 1680px; } }

@@ -209,7 +209,7 @@
                 <div class="row-div">
                   <a href="https://wa.me/918882108080">
                     <div class="flag-d">
-                      <div class="img"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/flag-01.svg" alt="valuecoders" width="30" height="19"></div>
+                      <div class="img"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/wtsapp.svg" alt="valuecoders" width="30" height="19"></div>
                       <div class="cont"><span class="num">+91 888 210 8080</span></div>
                     </div>
                   </a>
