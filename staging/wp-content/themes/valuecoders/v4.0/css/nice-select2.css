@@ -178,8 +178,7 @@
     box-shadow: 0 6px 9px rgb(1 0 12 / 43%);
 }
 .nice-select + small {
-    position: relative;
-    top: -10px;
+   
     display: none;
 }
 .nice-select .list:hover .option:not(:hover) {

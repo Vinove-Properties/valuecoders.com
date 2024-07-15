@@ -3566,7 +3566,8 @@ body.page-template-template-testimonials .client-video-section iframe,
       background: #f8f8f8;
       font-weight: 500;
       position: relative;
-      margin-right: 10px; }
+      margin-right: 10px;
+      margin-bottom: 8px; }
     .contact-us-section.full-width-form #file-type-error {
       font-size: 13px;
       color: #dc0019;
@@ -4000,7 +4001,7 @@ body.page-template-template-testimonials .client-video-section iframe,
       line-height: 22px;
       background: #70c217;
       color: #1d1d1d;
-      padding: 15px 50px;
+      padding: 15px 38px;
       border: 0;
       outline: 0;
       text-transform: capitalize;
