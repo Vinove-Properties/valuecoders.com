@@ -125,7 +125,7 @@ get_header();
 							<input type="hidden" name="page_url" value="<?php the_permalink(); ?>">
 							<input type="hidden" name="vform-type" value="contact">
 							<input type="hidden" id="e-ticket-id" name="e-ticket-id" value="">
-							<input type="submit" id="submitButton" class="checkout-submit" value="Send your request" />
+							<input type="submit" id="submitButton" class="checkout-submit  nxt-btn" value="Send your request" />
 						</div>
 
 						</div>

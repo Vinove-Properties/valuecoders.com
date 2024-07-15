@@ -3473,7 +3473,7 @@ body.page-template-template-testimonials .client-video-section iframe,
         padding-right: 15px;
         border: 0.9px solid #d9d9d9 !important; }
     .contact-us-section.full-width-form .width-full .user-input {
-      border: 0.5px solid rgba(255, 255, 255, 0.5);
+      border: 0.9px solid #d9d9d9;
       padding: 15px 15px;
       background: transparent;
       width: 100%;
@@ -3517,15 +3517,16 @@ body.page-template-template-testimonials .client-video-section iframe,
       padding: 0; }
       .contact-us-section.full-width-form #drop-area .button {
         background: none;
-        color: #ffffff !important;
+        color: #414040 !important;
         font-weight: 500;
         text-decoration: none;
         padding: 5px 10px;
-        border: 0.5px solid #ffffff;
+        border: 0.5px solid #d1d1e1;
         font-size: 12px;
-        border-radius: 0;
+        border-radius: 5px;
         line-height: 1.6;
-        opacity: 0.5; }
+        opacity: 0.5;
+        background: rgba(217, 217, 217, 0.2); }
         .contact-us-section.full-width-form #drop-area .button:focus {
           background: rgba(76, 76, 76, 0.7); }
     .contact-us-section.full-width-form #gallery {
@@ -3586,7 +3587,10 @@ body.page-template-template-testimonials .client-video-section iframe,
       border-radius: 8px;
       padding: 15px; }
     .contact-us-section.full-width-form .user-input.checkout {
-      text-align: left; }
+      text-align: left;
+      width: 100%;
+      display: flex;
+      justify-content: right; }
     .contact-us-section.full-width-form .user-input .pcode-prefix {
       position: absolute;
       top: 17px;
@@ -4065,7 +4069,7 @@ body.page-template-template-testimonials .client-video-section iframe,
       flex-basis: 72%;
       max-width: 100%; }
     .contact-us-section .form-box-outer .lf-top .lf-right {
-      flex-basis: 25%;
+      flex-basis: 27%;
       text-align: right; }
   .contact-us-section .form-box-outer .soc-box {
     margin: 20px 0 0;
@@ -4099,7 +4103,8 @@ body.page-template-template-testimonials .client-video-section iframe,
         background: rgba(65, 65, 65, 0.3); }
   .contact-us-section .right-contactbox {
     width: 32%;
-    margin-left: 5%; }
+    margin-left: 5%;
+    padding: 60px 0 0; }
     .contact-us-section .right-contactbox p {
       margin: 30px 0 0;
       color: rgba(5, 22, 77, 0.56);
@@ -4183,9 +4188,6 @@ body.page-template-template-testimonials .client-video-section iframe,
     padding: 15px 20px; }
     .contact-us-section.full-width-form .right-box .step-one.version-8 .autocomplete-items.has-item div.autocomplete-active, .contact-us-section.full-width-form .right-box .step-one.version-8 .autocomplete-items.has-item div:hover {
       background-color: #2e2d4f; }
-
-.nice-select span.current {
-  color: #fff; }
 
 .testimonial-section {
   background: #ffffff; }

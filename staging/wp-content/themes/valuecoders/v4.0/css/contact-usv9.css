@@ -4066,7 +4066,7 @@ body.page-template-template-testimonials .client-video-section iframe,
       flex-basis: 72%;
       max-width: 100%; }
     .contact-us-section .form-box-outer .lf-top .lf-right {
-      flex-basis: 25%;
+      flex-basis: 27%;
       text-align: right; }
   .contact-us-section .form-box-outer .soc-box {
     margin: 20px 0 0;
@@ -4100,7 +4100,8 @@ body.page-template-template-testimonials .client-video-section iframe,
         background: rgba(65, 65, 65, 0.3); }
   .contact-us-section .right-contactbox {
     width: 32%;
-    margin-left: 5%; }
+    margin-left: 5%;
+    padding: 60px 0 0; }
     .contact-us-section .right-contactbox p {
       margin: 30px 0 0;
       color: rgba(5, 22, 77, 0.56);

@@ -27,12 +27,12 @@
     margin-bottom: 30px;
 }
 .nice-select:focus {
-    border-color: #fff;
+    border-color:  #d9d9d9;
     outline: 1px;
 }
 .day .nice-select,
 .day .nice-select:focus {
-    border-color: rgba(99, 110, 127, 0.7);
+    border-color:  #d9d9d9;
 }
 .form-text-cont.is-selected .nice-select span.current,
 .nice-select:focus span.current {
