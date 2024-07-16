@@ -4417,7 +4417,10 @@ body.page-template-template-testimonials .client-video-section iframe,
     width: 40%; }
 
   .contact-us-section .right-contactbox p {
-    font-size: 16px; } }
+    font-size: 16px; }
+
+  .globe-around .dis-flex .flex-5 .cont-full .box .flag-d .cont span.num {
+    font-size: 13px; } }
 @media only screen and (max-width: 1280px) {
   .contact-us-section .right-contactbox .slide-logo .logo-section {
     width: 300px; } }
