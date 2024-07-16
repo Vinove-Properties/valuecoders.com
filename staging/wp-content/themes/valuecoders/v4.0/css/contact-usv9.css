@@ -3526,7 +3526,9 @@ body.page-template-template-testimonials .client-video-section iframe,
         opacity: 0.5;
         background: rgba(217, 217, 217, 0.2); }
         .contact-us-section.full-width-form #drop-area .button:focus {
-          background: rgba(76, 76, 76, 0.7); }
+          background: rgba(76, 76, 76, 0.7);
+          opacity: 0.8;
+          color: #fff !important; }
     .contact-us-section.full-width-form #gallery {
       margin-bottom: 15px; }
       .contact-us-section.full-width-form #gallery div {
@@ -3572,19 +3574,23 @@ body.page-template-template-testimonials .client-video-section iframe,
       font-size: 13px;
       color: #dc0019;
       margin-bottom: 10px; }
+    .contact-us-section.full-width-form .gal-loader {
+      position: relative; }
+      .contact-us-section.full-width-form .gal-loader.active .loader {
+        display: block; }
     .contact-us-section.full-width-form .loader {
       border: 5px solid #9f9f9f;
       border-radius: 50%;
       border-top: 5px solid #3498db;
-      width: 50px;
-      height: 50px;
+      width: 35px;
+      height: 35px;
       -webkit-animation: spin 2s linear infinite;
       animation: spin 2s linear infinite;
       margin-bottom: 10px;
       margin-right: 10px;
       display: inline-block;
       position: absolute;
-      top: 22px;
+      top: 0px;
       left: 50%;
       display: none; }
     .contact-us-section.full-width-form .drop-input {
@@ -4152,7 +4158,7 @@ body.page-template-template-testimonials .client-video-section iframe,
         .contact-us-section .right-contactbox .row-box .col-box .desp p {
           font-size: 14px;
           margin: 5px 0 0;
-          line-height: 1.2;
+          line-height: 24px;
           color: #05164d;
           opacity: 0.8;
           font-weight: 400; }
@@ -4323,7 +4329,8 @@ body.page-template-template-testimonials .client-video-section iframe,
       .info-wrap .info-tip .info-content p {
         font-size: 14px;
         line-height: 24px;
-        margin: 0 0 10px; }
+        margin: 0 0 10px;
+        font-weight: 500; }
       .info-wrap .info-tip .info-content:before {
         content: "";
         clear: both;
@@ -4511,7 +4518,7 @@ body.page-template-template-testimonials .client-video-section iframe,
     flex-basis: 100%;
     margin-top: 15px; }
   .contact-us-section.full-width-form .checkout-submit {
-    padding: 15px 20px;
+    padding: 13px 30px;
     font-size: 15px; }
   .contact-us-section.full-width-form .note {
     font-size: 12px; }
@@ -4589,8 +4596,6 @@ body.page-template-template-testimonials .client-video-section iframe,
       width: 20px;
       height: 20px;
       font-size: 12px; }
-  .contact-us-section.full-width-form label {
-    font-size: 12px; }
   .contact-us-section.full-width-form .nxt-btn-box {
     margin-top: 30px; }
 
@@ -4620,7 +4625,7 @@ body.page-template-template-testimonials .client-video-section iframe,
     margin-right: 5px; }
 
   .contact-us-section .form-box-outer .soc-box a {
-    font-size: 14px;
+    font-size: 13px;
     padding-left: 12px; }
 
   .contact-us-section .form-box-outer .soc-box a::before {
@@ -4645,7 +4650,7 @@ body.page-template-template-testimonials .client-video-section iframe,
     top: 12px; }
 
   .info-wrap .info-tip .info-content {
-    width: 272px;
+    width: 245px;
     top: 25px;
     left: -78px; }
 
@@ -4658,6 +4663,9 @@ body.page-template-template-testimonials .client-video-section iframe,
     line-height: 20px; } }
 @media only screen and (max-width: 479px) {
   .globe-around .dis-flex .flex-5 {
-    flex-basis: 100%; } }
+    flex-basis: 100%; }
+
+  .contact-us-section.full-width-form .form-left {
+    padding: 15px; } }
 
 /*# sourceMappingURL=contact-usv9.css.map */

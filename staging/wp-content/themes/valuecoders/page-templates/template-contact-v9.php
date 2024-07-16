@@ -25,7 +25,7 @@
                 </div>
               </div>
               <div class="soc-box dis-flex items-center">
-                <a href="https://www.valuecoders.com/contact"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-01.svg" alt="valuecoders" width="20" height="20"></i>Book A Call</a>
+                <a href="tel:+918882108080"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-01.svg" alt="valuecoders" width="20" height="20"></i>Book A Call</a>
                 <a href="https://wa.me/918882108080"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-02.svg" alt="valuecoders" width="20" height="20"> </i>WhatsApp</a>
                 <a href="mailto:sales@valuecoders.com"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-03.svg" alt="valuecoders" width="20" height="20"></i>Email us</a>
               </div>
@@ -93,18 +93,19 @@
                     </div>
                     <div class="form-text-cont width-full">
                       <div class="lbl-row-new">
-                        <label id="lbl-requirement"><div class="info-wrap">
-                                  How can we help?*
-                                  <div class="info-tip">
-                                    <div class="info-content">
-                                      <h4>What happens after you contact us? </h4>
-                                      <p>Our solution experts will answer your questions in a
-                                        secure online meeting.
-                                      </p>
-                                      <a class="kmore" href="https://www.valuecoders.com/hire-developers/7-day-trial">Know More</a>
-                                    </div>
-                                  </div>
-                                </div></label>
+                        <label id="lbl-requirement">
+                          <div class="info-wrap">
+                            How can we help?*
+                            <div class="info-tip">
+                              <div class="info-content">
+                                <p>How Can We Help with software Development?
+                                </p>
+                                <p>How to help with team Extension?</p>
+                                <p>Help wit hiring Dedicated Software Team?</p>
+                              </div>
+                            </div>
+                          </div>
+                        </label>
                       </div>
                       <div class="user-input">
                         <textarea class="input-field comment-input" id="user-req" name="user-req"></textarea>
@@ -221,8 +222,8 @@
                   <a href="https://wa.me/918882108080">
                     <div class="flag-d">
                       <div class="img">
-                     <img class="wtsapp entered lazyloaded" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/wtsapp.svg" alt="valuecoders" width="30" height="19">
-                   </div>
+                        <img class="wtsapp entered lazyloaded" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/wtsapp.svg" alt="valuecoders" width="30" height="19">
+                      </div>
                       <div class="cont"><span class="num">+91 888 210 8080</span></div>
                     </div>
                   </a>
