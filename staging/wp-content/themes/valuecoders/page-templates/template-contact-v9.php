@@ -16,7 +16,8 @@
                   <div class="logo-box"><a href="https://www.valuecoders.com"></a></div>
                   <div class="head-box">
                     <h1>Get In Touch</h1>
-                    <p>Our consultants will respond back within 8 business hours or less.</p>
+                    <p>Our team will get back to you within 8 business hours or less.</p>
+
                   </div>
                 </div>
                 <div class="lf-right">
@@ -134,7 +135,7 @@
                       <input type="hidden" name="page_url" value="<?php the_permalink(); ?>">
                       <input type="hidden" name="vform-type" value="contact">
                       <input type="hidden" id="e-ticket-id" name="e-ticket-id" value="">
-                      <input type="submit" id="submitButton" class="checkout-submit  nxt-btn" value="Send Now" />
+                      <input type="submit" id="submitButton" class="checkout-submit  nxt-btn" value="Send Your Query" />
                     </div>
                   </div>
                 
