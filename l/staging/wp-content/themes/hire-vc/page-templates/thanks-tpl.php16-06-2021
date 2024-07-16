@@ -1,0 +1,35 @@
+<?php 
+/*
+Template Name: Thank you Page Template
+*/
+get_header();
+global $post;
+//$page_id = $post->ID;
+$msg = "";
+?>
+<section class="thanku_page">
+    <div class="banner_sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+          <?php
+          if( isset($_REQUEST['type']) ) :
+               if($_REQUEST['type'] == 'contact') {
+               $msg = '<img src="' .get_bloginfo('template_url'). '/common/images/smile.png" alt="Hire Dedicated Team - Icon"/>
+               <h2 class="thanku_head">Thank You!</h2>
+               <p>Thanks for your query. Our representative will get in touch with you soon.</p>';
+               } else if ($_REQUEST['type'] == 'one-minute' || $_REQUEST['type'] == 'feedback') {
+               $msg = '<img src="' . get_bloginfo('template_url') . '/common/images/smile.png" alt="Hire Dedicated Team - Icon"/>
+               <h2 class="thanku_head">Thank You!</h2>
+               <p>We shall take it as an opportunity to improve our services further. We strive to provide our clients with excellent and prompt services. As always, we appreciate your faith in us.</p>';
+               } else if ($_REQUEST['type'] == 'error') {
+               $msg = '<h2>Sorry! Something went wrong. Please try again.</h2>';
+               }
+         endif;
+          ?>
+          <?php echo $msg; ?> </div>
+        </div>
+      </div>
+    </div>
+</section>   
+<?php get_footer(); ?>

@@ -36,6 +36,13 @@ l/wp-admin/*
 l/wp-includes/*
 !l/wp-content/themes/
 
+#Staging LP theme setup only.
+l/staging/*
+!l/staging/wp-content/
+l/staging/wp-content/*
+!l/staging/wp-content/themes/
+l/staging/wp-content/themes/*
+!l/staging/wp-content/themes/hire-vc/
 
 staging/uploads/*
 staging/wp-content/*

@@ -1,0 +1,676 @@
+//
+// Variables
+//
+
+$darkYellow: #ffb81d;
+$neonCarrot: #ff9c29;
+$green: #60b741;
+$themeMidNight: #1d1c39;
+$themeDarkNight: #181732;
+$dodgerBlue: #2684ff;
+$monaLisa: #fe8686;
+$jacarta: #373660;
+$gray: #bdb7b7;
+$darkGray: #9f9f9f;
+$suvaGray: #8e8c8c;
+$white: #ffffff;
+$black: #000;
+$bg-blue: #006eff;
+$bg-pink: #ff6b6b;
+$bg-orange: #ff8900;
+$darkred: #8b0000;
+$bgVoilet: #2b294d;
+$bgDarkBlue: #17152f;
+
+$whiteLight: #cecece;
+$headDay: #212121;
+$contentDay: #656565;
+$bgWhiteGray: #f7f7f9;
+$darkWhiteGray: #e5e5e5;
+$fontnoto: "noto_sansmedium";
+$cream: #faf9f5;
+
+@media only screen and (min-width: 768px) {
+  // fonts
+  @font-face {
+    font-family: "noto_sansmedium";
+    src: url("../fonts/notosans-medium-webfont.woff2") format("woff2"),
+      url("../fonts/notosans-medium-webfont.woff") format("woff"),
+      url("../fonts/notosans-medium-webfont.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Black.woff2") format("woff2"),
+      url("../fonts/Roboto-Black.woff") format("woff"),
+      url("../fonts/Roboto-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
+      url("../fonts/Roboto-Bold.woff") format("woff"),
+      url("../fonts/Roboto-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Light.woff2") format("woff2"),
+      url("../fonts/Roboto-Light.woff") format("woff"),
+      url("../fonts/Roboto-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
+      url("../fonts/Roboto-Regular.woff") format("woff"),
+      url("../fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Medium.woff2") format("woff2"),
+      url("../fonts/Roboto-Medium.woff") format("woff"),
+      url("../fonts/Roboto-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+// default classes
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #283043;
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 29px;
+  font-weight: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-cream {
+  background-color: $cream;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 57px;
+  color: $black;
+  font-weight: bold;
+}
+h2 {
+  font-size: 36px;
+  line-height: 50px;
+  font-weight: bold;
+  color: $black;
+}
+h3 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  color: $black;
+}
+h4 {
+  font-size: 20px;
+  line-height: 23px;
+
+  color: $black;
+}
+h6 {
+  font-size: 18px;
+}
+p {
+  font-size: 16px;
+  line-height: 29px;
+  color: #283043;
+}
+.font-30 {
+  font-size: 30px;
+  line-height: 40px;
+}
+a {
+  color: $gray;
+}
+.container,
+.hero-img-section h1 {
+  width: 100%;
+  max-width: 1660px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+section {
+  position: relative;
+}
+
+.strong,
+strong {
+  font-weight: 600;
+}
+.clr-yellow {
+  color: $darkYellow;
+}
+.head-small {
+  font-size: 24px;
+  line-height: 32px;
+  display: block;
+  text-transform: uppercase;
+}
+.sub-head {
+  font-size: 34px;
+  line-height: 46px;
+}
+.subhead-small {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  color: $white;
+  text-transform: uppercase;
+}
+.clr-white {
+  color: $white;
+}
+.dis-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.item-end {
+  align-items: flex-end;
+}
+.justify-sb {
+  justify-content: space-between;
+}
+.block {
+  display: block;
+}
+
+.flex-2 {
+  flex-basis: 50%;
+  &:first-child {
+    padding-right: 20px;
+  }
+}
+.flex-3 {
+  flex-basis: 33.33%;
+}
+.flex-4 {
+  flex-basis: 25%;
+}
+.flex-5 {
+  flex-basis: 20%;
+}
+.padding-t-150 {
+  padding-top: 150px;
+}
+
+.margin-t-150 {
+  margin-top: 150px;
+}
+.padding-t-70 {
+  padding-top: 70px;
+}
+.padding-b-150 {
+  padding-bottom: 150px;
+}
+.padding-b-70 {
+  padding-bottom: 70px;
+}
+.padding-b-60 {
+  padding-bottom: 60px;
+}
+.margin-t-100 {
+  margin-top: 100px;
+}
+.margin-t-80 {
+  margin-top: 80px;
+}
+.margin-t-70 {
+  margin-top: 70px;
+}
+.margin-t-60 {
+  margin-top: 60px;
+}
+.margin-t-50 {
+  margin-top: 40px;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.head-txt {
+  max-width: 1345px;
+  margin: auto;
+  p {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+  a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.yellow-btn {
+  background: $darkYellow;
+  padding: 20px 64px;
+  color: $themeMidNight;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: $green;
+  }
+}
+
+// Chrome, Safari, Edge, Opera
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+// Firefox
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+// for form country
+
+::placeholder {
+  font-family: "Roboto";
+  text-transform: capitalize;
+  color: #212121;
+}
+input,
+textarea {
+  font-family: "Roboto";
+}
+
+// fAQ CSS Start From Here //
+
+.faq-section {
+  .faq-outer {
+    width: 78%;
+    margin: 60px auto 0;
+  }
+  .faq-accordion-item-outer {
+    position: relative;
+
+    padding: 20px 0;
+    border-top: 1px solid #e1e1e1;
+    &.active {
+      .faq-accordion-content {
+        display: block;
+      }
+      .open-icon {
+        display: none;
+      }
+      .faq-accordion-toggle::after {
+        transform: rotate(0deg);
+      }
+    }
+
+    .faq-accordion-toggle {
+      display: block;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      padding: 0 70px 0 0;
+      position: relative;
+      font-size: 18px;
+      font-family: $fontnoto;
+      font-weight: 600;
+
+      &:after {
+        content: "";
+        background: url(../images/ppc/arrow-down.svg) no-repeat;
+        background-size: 100%;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        display: block;
+        right: 25px;
+        top: 7px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .faq-accordion-content {
+    display: none;
+    padding-top: 5px;
+    padding: 5px 70px 0 0;
+    p {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    ul,
+    ol {
+      padding-left: 20px;
+      li {
+        margin: 6px 0;
+      }
+    }
+  }
+  .no-list-type {
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+  }
+}
+
+//Media Queries Start From Here //
+
+@media only screen and (max-width: 1780px) {
+  .container {
+    max-width: 1520px;
+  }
+  h1 {
+    font-size: 38px;
+    line-height: 45px;
+  }
+  h2 {
+    font-size: 34px;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .container {
+    max-width: 1380px;
+  }
+  body {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .padding-b-150 {
+    padding-bottom: 100px;
+  }
+  .padding-t-150 {
+    padding-top: 100px;
+  }
+  .margin-t-150 {
+    margin-top: 100px;
+  }
+  .margin-t-100 {
+    margin-top: 70px;
+  }
+  .margin-t-80 {
+    margin-top: 60px;
+  }
+
+  .yellow-btn {
+    padding: 16px 40px;
+    font-size: 18px;
+  }
+
+  .faq-section {
+    .faq-accordion-content {
+      p {
+        font-size: 16px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .container {
+    max-width: 1260px;
+  }
+  .margin-t-50 {
+    margin-top: 40px;
+  }
+  .margin-t-60 {
+    margin-top: 50px;
+  }
+  .padding-b-60 {
+    padding-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 1320px) {
+  h1 {
+    font-size: 35px;
+    line-height: 50px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .container {
+    max-width: 1160px;
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  body {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .head-txt p {
+    font-size: 16px;
+    line-height: 28px;
+    br {
+      display: none;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .faq-section {
+    .faq-accordion-item-outer {
+      .faq-accordion-toggle {
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+    .faq-accordion-content {
+      p {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  h1 {
+    font-size: 38px;
+    line-height: 45px;
+  }
+  h2 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+
+  .flex-2 {
+    flex-basis: 100%;
+    &:first-child {
+      padding-right: 0;
+    }
+  }
+  .flex-3 {
+    flex-basis: 50%;
+  }
+  .flex-5 {
+    flex-basis: 33.33%;
+  }
+  .padding-t-150 {
+    padding-top: 60px;
+  }
+  .margin-t-150 {
+    margin-top: 60px;
+  }
+  .padding-b-150 {
+    padding-bottom: 60px;
+  }
+  .padding-t-70 {
+    padding-top: 50px;
+  }
+
+  .padding-b-70 {
+    padding-bottom: 50px;
+  }
+  .margin-t-100,
+  .margin-t-80,
+  .margin-t-70,
+  .margin-t-60 {
+    margin-top: 40px;
+  }
+  .head-txt p {
+    margin-top: 10px;
+  }
+
+  .faq-section {
+    .faq-outer {
+      width: 100%;
+      margin: 40px auto 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    font-family: sans-serif;
+  }
+
+  ::placeholder,
+  input,
+  textarea {
+    font-family: sans-serif;
+  }
+
+  .padding-b-150 {
+    padding-bottom: 40px;
+  }
+  .padding-t-150 {
+    padding-top: 40px;
+  }
+
+  .margin-t-150 {
+    margin-top: 40px;
+  }
+
+  .padding-t-70 {
+    padding-top: 40px;
+  }
+  .padding-t-70 {
+    padding-bottom: 40px;
+  }
+  h1 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  h2 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .flex-3 {
+    flex-basis: 100%;
+  }
+  .flex-4 {
+    flex-basis: 100%;
+  }
+  .flex-5 {
+    flex-basis: 100%;
+  }
+  .font-30 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .yellow-btn {
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+  .head-txt {
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .faq-section {
+    .faq-accordion-item-outer {
+      padding: 12px 0;
+      .faq-accordion-toggle {
+        font-family: sans-serif;
+        padding: 0 30px 0 0;
+        &::before {
+          height: 2px;
+          width: 12px;
+        }
+        &::after {
+          width: 15px;
+          height: 15px;
+          right: 0;
+        }
+      }
+    }
+    .faq-accordion-content {
+      padding: 5px 10px 0 0;
+    }
+  }
+}
