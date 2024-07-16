@@ -219,22 +219,20 @@
             <div class="detail-full">
               <div class="box">
                 <div class="row-div">
-                  <a href="https://wa.me/918882108080">
-                    <div class="flag-d">
-                      <div class="img">
-                        <img class="wtsapp entered lazyloaded" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/wtsapp.svg" alt="valuecoders" width="30" height="19">
-                      </div>
-                      <div class="cont"><span class="num">+91 888 210 8080</span></div>
-                    </div>
-                  </a>
-                </div>
-                <div class="row-div">
                   <a href="tel:+918882108080">
                     <div class="flag-d">
                       <div class="img">
                         <img class="entered lazyloaded" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/phone.svg" alt="valuecoders" width="30" height="19">
                       </div>
-                      <div class="cont"><span class="num">+91 888 210 8080</span></div>
+                      <div class="cont"><span class="num">+91 888 210 8080 (Sales)</span></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="row-div" style="margin:0!important;">
+                  <a href="tel:+917042020782">
+                    <div class="flag-d">
+                      <div class="img"></div>
+                      <div class="cont"><span class="num">+91 704 202 0782 (HR)</span></div>
                     </div>
                   </a>
                 </div>
@@ -243,11 +241,8 @@
                     <div class="img">
                       <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/map-pin.svg" alt="valuecoders" width="14" height="19">
                     </div>
-                    <div class="cont addrs"><span class="num">Gurugram : 10th Floor,
-                      Tower-B, Unitech
-                      Cyber Park, Sector - 39,
-                      Gurugram, Haryana-
-                      122001</span>
+                    <div class="cont addrs">
+                      <span class="num">Gurugram : 10th Floor, Tower-B, Unitech Cyber Park, Sector - 39, Gurugram, Haryana- 122001</span>
                     </div>
                   </div>
                 </div>
