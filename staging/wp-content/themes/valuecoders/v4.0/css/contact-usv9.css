@@ -4672,7 +4672,10 @@ body.page-template-template-testimonials .client-video-section iframe,
 
   .info-wrap .info-tip .info-content p {
     font-size: 13px;
-    line-height: 20px; } }
+    line-height: 20px; }
+
+  .contact-us-section .right-contactbox p {
+    line-height: 26px; } }
 @media only screen and (max-width: 479px) {
   .globe-around .dis-flex .flex-5 {
     flex-basis: 100%; }
