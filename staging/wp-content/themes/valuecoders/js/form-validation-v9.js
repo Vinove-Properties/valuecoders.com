@@ -614,8 +614,8 @@ function uploadFile(file, i) {
             const extension = fileName.substring(dotIndex);
             
             let trimmedBaseName = baseName;
-            if (baseName.length > 80) {
-                trimmedBaseName = baseName.substring(0, 80);
+            if (baseName.length > 60) {
+                trimmedBaseName = baseName.substring(0, 60);
             }
             const trimmedFileName = trimmedBaseName + extension;
 
