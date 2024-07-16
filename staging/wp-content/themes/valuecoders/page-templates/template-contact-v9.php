@@ -96,19 +96,20 @@
                         <label id="lbl-requirement">
                           <div class="info-wrap">
                             How can we help?*
-                            <div class="info-tip">
+                            <!-- <div class="info-tip">
                               <div class="info-content">
                                 <p>How Can We Help with software Development?
                                 </p>
                                 <p>How to help with team Extension?</p>
                                 <p>Help wit hiring Dedicated Software Team?</p>
                               </div>
-                            </div>
+                            </div> -->
                           </div>
                         </label>
                       </div>
-                      <div class="user-input">
-                        <textarea class="input-field comment-input" id="user-req" name="user-req"></textarea>
+                      <div id="cf-requirement" class="user-input">
+                        <textarea class="input-field comment-input" id="user-req" placeholder="" 
+                        name="user-req"></textarea>
                         <small>Error Message</small>
                         <div class="drop-input attachment_brw" id="uploadcontact">
                           <div id="dropcontact"></div>

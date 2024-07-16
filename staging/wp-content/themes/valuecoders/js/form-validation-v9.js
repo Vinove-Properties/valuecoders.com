@@ -17,6 +17,7 @@ const expDate 		= document.getElementById('inp-expdate'); //
 const inpResources 	= document.getElementById('inp-resources');
 const inpHlong 		= document.getElementById('inp-howlong');
 
+
 NiceSelect.bind(document.getElementById("select-wehelp"),{placeholder:'Please Select from the dropdown'});
 
 // document.addEventListener('DOMContentLoaded', function(){
@@ -90,6 +91,17 @@ countriesData.addEventListener("keydown", ws_validateStr);
 countriesData.addEventListener("focusout", checkCont);
 
 weHelp.addEventListener("change", function(e){
+	let val = e.target.value;
+	if(val == "Team Extension"){
+	uRequirement.placeholder = "What Is The Expected Start Date? \nHow Many Engineers Would You Like To Add?\nFor How Long Will You Need These Engineers?";	
+	}else{
+	uRequirement.placeholder = "";	
+	}
+	// if( val = "Dedicated Software Team" ){
+	// }else if(val = "Software Development"){
+	// }else if(val = "Other Technology Needs"){
+	// }else if(val = "career"){
+	// }else{}
 	const fldPapa = weHelp.closest('.form-text-cont');
 	if( weHelp.value !== "" ){
 		fldPapa.classList.remove("verror");
