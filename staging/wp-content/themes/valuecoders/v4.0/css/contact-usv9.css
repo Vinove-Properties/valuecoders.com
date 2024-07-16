@@ -4160,9 +4160,9 @@ body.page-template-template-testimonials .client-video-section iframe,
       margin: 40px 0 0;
       align-items: self-start; }
       .contact-us-section .right-contactbox .row-box .col-box .icon {
-        flex-basis: 8%; }
+        flex-basis: 11%; }
       .contact-us-section .right-contactbox .row-box .col-box .desp {
-        flex-basis: 92%;
+        flex-basis: 89%;
         padding-left: 10px; }
         .contact-us-section .right-contactbox .row-box .col-box .desp h4 {
           color: rgba(5, 22, 77, 0.6);
