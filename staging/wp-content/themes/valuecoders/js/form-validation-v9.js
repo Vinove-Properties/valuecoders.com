@@ -19,9 +19,9 @@ const inpHlong 		= document.getElementById('inp-howlong');
 
 NiceSelect.bind(document.getElementById("select-wehelp"),{placeholder:'Please Select from the dropdown'});
 
-document.addEventListener('DOMContentLoaded', function(){
-username.focus();
-}, false);
+// document.addEventListener('DOMContentLoaded', function(){
+// username.focus();
+// }, false);
 
 function showError(input, message , spDiv = false){
     const formControl   = input.parentElement;
