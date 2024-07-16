@@ -26,9 +26,9 @@
                 </div>
               </div>
               <div class="soc-box dis-flex items-center">
-                <a href="tel:+918882108080"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-01.svg" alt="valuecoders" width="20" height="20"></i>Book A Call</a>
-                <a href="https://wa.me/918882108080"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-02.svg" alt="valuecoders" width="20" height="20"> </i>WhatsApp</a>
-                <a href="mailto:sales@valuecoders.com"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-03.svg" alt="valuecoders" width="20" height="20"></i>Email us</a>
+                <a href="tel:+918882108080"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-01.svg" alt="valuecoders" width="20" height="20"></i><span>Book A Call</span></a>
+                <a href="https://wa.me/918882108080"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-02.svg" alt="valuecoders" width="20" height="20"> </i><span>WhatsApp</span></a>
+                <a href="mailto:sales@valuecoders.com"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-03.svg" alt="valuecoders" width="20" height="20"></i><span>Email us</span></a>
               </div>
               <form action="<?php bloginfo('url'); ?>/sendmail1.php" enctype="multipart/form-data" method="POST" id="contact-form-section" onsubmit="vcCmnFormValidation(); return false;">
                 <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
@@ -200,189 +200,88 @@
     </div>
   </section>
   <?php //get_template_part('include/testimonials', 'v4.0'); ?>
-  <section class="globe-around bg-light padding-t-120 padding-b-120">
-    <div class="container">
-      <div class="heading text-center">
-        <h2>Serving Clients in 38+ Countries</h2>
-        <p>We are making an impact worldwide with our global presence and exceptional software solutions.</p>
-      </div>
-      <div class="dis-flex  margin-t-80 row">
-        <div class="flex-5">
-          <div class="cont-full">
-            <div class="box hover-ef">
-              <a href="tel:+918882108080">
-                <div class="flag-d">
-                  <div class="img"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/flag-01.svg" alt="valuecoders" width="30" height="19"></div>
-                  <div class="cont"><span>India</span></div>
+
+
+  <section class="address-details bg-light padding-t-120 padding-b-120">
+      <div class="container">
+        <div class="head-txt text-center">
+          <h2>Serving Clients in 38+ Countries</h2>
+          <p>We are making an impact worldwide with our global presence and exceptional software solutions.
+          </p>
+        </div>
+        <div class="dis-flex add-flex">
+          <div class="left-column">
+            <div class="flex-wrap">
+              <div class="dis-flex phone-box">
+                <div class="country"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/vflag-01.svg" alt="valuecoders" width="25" height="25">India</div>
+                <div class="phone"><a href="tel:+918882108080">+91 888 210 8080 <span>(Sales)</span></a>
+                  <a href="tel:+917042020782">+91 704 202 0782 <span>(HR)</span></a>
                 </div>
-              </a>
+              </div>
             </div>
-            <div class="detail-full">
-              <div class="box">
-                <div class="row-div">
-                  <a href="tel:+918882108080">
-                    <div class="flag-d">
-                      <div class="img">
-                        <img class="entered lazyloaded" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/phone.svg" alt="valuecoders" width="30" height="19">
-                      </div>
-                      <div class="cont"><span class="num">+91 888 210 8080 (Sales)</span></div>
-                    </div>
-                  </a>
+            <div class="flex-wrap">
+              <div class="dis-flex phone-box">
+                <div class="country"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/vflag-02.svg" alt="valuecoders" width="25" height="25">USA</div>
+                <div class="phone"><a href="tel:+1 415 230 0123">+1 415 230 0123</a>
                 </div>
-                <div class="row-div" style="margin:0!important;">
-                  <a href="tel:+917042020782">
-                    <div class="flag-d">
-                      <div class="img"></div>
-                      <div class="cont"><span class="num">+91 704 202 0782 (HR)</span></div>
-                    </div>
-                  </a>
+              </div>
+            </div>
+            <div class="flex-wrap">
+              <div class="dis-flex phone-box">
+                <div class="country"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/vflag-03.svg" alt="valuecoders" width="25" height="25">UK</div>
+                <div class="phone"><a href="tel:+44 20 3239 2299">+44 20 3239 2299</a>
                 </div>
-                <div class="row-div">
-                  <div class="flag-d">
-                    <div class="img">
-                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/map-pin.svg" alt="valuecoders" width="14" height="19">
-                    </div>
-                    <div class="cont addrs">
-                      <span class="num">Gurugram : 10th Floor, Tower-B, Unitech Cyber Park, Sector - 39, Gurugram, Haryana- 122001</span>
-                    </div>
-                  </div>
+              </div>
+            </div>
+            <div class="flex-wrap">
+              <div class="dis-flex phone-box">
+                <div class="country"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/vflag-03.svg" alt="valuecoders" width="25" height="25">UAE</div>
+                <div class="phone"><a href="tel:+44 20 3239 2299">+44 20 3239 2299</a>
                 </div>
-                <div class="row-div">
-                  <div class="flag-d">
-                    <div class="img">
-                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/map-pin.svg" alt="valuecoders" width="14" height="19">
-                    </div>
-                    <div class="cont addrs"><span class="num">Noida : 11th Floor, Max Square, Noida-Greater Noida Expy, Sector 129, Noida, Uttar Pradesh 201304</span></div>
-                  </div>
+              </div>
+            </div>
+            <div class="flex-wrap">
+              <div class="dis-flex phone-box">
+                <div class="country"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/vflag-03.svg" alt="valuecoders" width="25" height="25">AUS</div>
+                <div class="phone"><a href="tel:+61 2 8005 8080">+61 2 8005 8080</a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="flex-5">
-          <div class="cont-full">
-            <div class="box hover-ef">
-              <a href="tel:+14152300123">
-                <div class="flag-d">
-                  <div class="img"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/flag-02.svg" alt="valuecoders" width="30" height="19"></div>
-                  <div class="cont addrs"><span>United States</span></div>
-                </div>
-              </a>
-            </div>
-            <div class="detail-full">
-              <div class="box">
-                <div class="row-div">
-                  <a href="tel:+14152300123">
-                    <div class="flag-d">
-                      <div class="img">
-                        <img class="wtsapp entered lazyloaded" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/phone.svg" alt="valuecoders" width="30" height="19">
-                      </div>
-                      <div class="cont"><span class="num">+1 415 230 0123</span></div>
-                    </div>
-                  </a>
-                </div>
-                <div class="row-div">
-                  <div class="flag-d">
-                    <div class="img">
-                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/map-pin.svg" alt="valuecoders" width="14" height="19">
-                    </div>
-                    <div class="cont addrs"><span class="num">5900 Balcones Drive, STE 100, Austin , TX 78731, USA</span></div>
-                  </div>
-                </div>
+          <div class="right-column">
+            <div class="address-row dis-flex">
+              <div class="address-col two-line">
+                <span class="bold">Gurugram: </span>
+                <p>10th Floor, Tower-B, Unitech Cyber Park, Sector - 39, Gurugram, Haryana- 122001</p>
+              </div>
+              <div class="address-col two-line">
+                <span class="bold">Noida: </span>
+                <p>11th Floor, Max Square, Noida-Greater Noida Expy, Sector 129, Noida, Uttar Pradesh 201304</p>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="flex-5">
-          <div class="cont-full">
-            <div class="box hover-ef">
-              <a href="tel:+442032392299">
-                <div class="flag-d">
-                  <div class="img">
-                    <div class="img"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/flag-03.svg" alt="valuecoders" width="30" height="19"></div>
-                  </div>
-                  <div class="cont addrs"><span>United Kingdom</span></div>
-                </div>
-              </a>
-            </div>
-            <div class="detail-full">
-              <div class="box">
-                <div class="row-div">
-                  <a href="tel:+442032392299">
-                    <div class="flag-d">
-                      <div class="img">
-                        <img class="wtsapp entered lazyloaded" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/phone.svg" alt="valuecoders" width="30" height="19">
-                      </div>
-                      <div class="cont"><span class="num">+44 20 3239 2299</span></div>
-                    </div>
-                  </a>
-                </div>
-                <div class="row-div">
-                  <div class="flag-d">
-                    <div class="img">
-                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/map-pin.svg" alt="valuecoders" width="14" height="19">
-                    </div>
-                    <div class="cont addrs"><span class="num">167-169 Great Portland Street, 5th Floor, London W1W 5PF, United Kingdom</span></div>
-                  </div>
-                </div>
+            <div class="address-row">
+              <div class="address-col">
+                <span class="bold">USA:  </span>
+                <p>5900 Balcones Drive, STE 100, Austin , TX 78731, USA</p>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="flex-5">
-          <div class="cont-full">
-            <div class="box hover-ef">
-              <a href="#">
-                <div class="flag-d">
-                  <div class="img">
-                    <div class="img"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/flag-04.svg" alt="valuecoders" width="30" height="19"></div>
-                  </div>
-                  <div class="cont addrs"><span>UAE</span> <span class="num"></span></div>
-                </div>
-              </a>
-            </div>
-            <div class="detail-full">
-              <div class="box">
-                <div class="row-div">
-                  <div class="flag-d">
-                    <div class="img">
-                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/map-pin.svg" alt="valuecoders" width="14" height="19">
-                    </div>
-                    <div class="cont addrs"><span class="num">541, 8W, Level 5, Dubai Airport Free Zone, Dubai, United Arab Emirates</span></div>
-                  </div>
-                </div>
+            <div class="address-row">
+              <div class="address-col">
+                <span class="bold">UK: </span>
+                <p>167-169 Great Portland Street, 5th Floor, London W1W 5PF, United Kingdom</p>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="flex-5">
-          <div class="cont-full">
-            <div class="box hover-ef">
-              <a href="tel:+61280058080">
-                <div class="flag-d">
-                  <div class="img"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/flag-05.svg" alt="valuecoders" width="30" height="19"></div>
-                  <div class="cont addrs"><span>Australia</span></div>
-                </div>
-              </a>
-            </div>
-            <div class="detail-full">
-              <div class="box">
-                <div class="row-div">
-                  <a href="tel:+61280058080">
-                    <div class="flag-d">
-                      <div class="img">
-                        <img class="wtsapp entered lazyloaded" loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/phone.svg" alt="valuecoders" width="30" height="19">
-                      </div>
-                      <div class="cont"><span class="num">+61 2 8005 8080</span></div>
-                    </div>
-                  </a>
-                </div>
+            <div class="address-row">
+              <div class="address-col">
+                <span class="bold">UAE: </span>
+                <p>541, 8W, Level 5, Dubai Airport Free Zone, Dubai, United Arab Emirates</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+
 </div>
 <?php get_footer(); ?>
