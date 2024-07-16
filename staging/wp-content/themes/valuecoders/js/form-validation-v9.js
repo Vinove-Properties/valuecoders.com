@@ -607,7 +607,18 @@ function uploadFile(file, i) {
     xhttp.onload = function(event){
         if (xhttp.status == 200) {
         	let response =  JSON.parse(xhttp.responseText);	        	
-        	//console.log( file.name );
+        	console.log( file.name );
+        	const fileName = file.name;
+            const dotIndex = fileName.lastIndexOf('.');
+            const baseName = fileName.substring(0, dotIndex);
+            const extension = fileName.substring(dotIndex);
+            
+            let trimmedBaseName = baseName;
+            if (baseName.length > 80) {
+                trimmedBaseName = baseName.substring(0, 80);
+            }
+            const trimmedFileName = trimmedBaseName + extension;
+
         	//console.log( response );
         	if( response.status == true ){
         		let counterValue = parseInt(uldCounter.value);
@@ -625,7 +636,7 @@ function uploadFile(file, i) {
 			  reader.onloadend = function() {
 			  	let indiv 		= document.createElement('div');
 			  	indiv.classList.add("ad-file");
-		        indiv.innerHTML = '<span class="up-file">'+file.name+'</span><button type="button" onclick="return removeMe(this,this.value);" value="'+response.file+'"></button>';
+		        indiv.innerHTML = '<span class="up-file">'+trimmedFileName+'</span><button type="button" onclick="return removeMe(this,this.value);" value="'+response.file+'"></button>';
 				document.getElementById('gallery').appendChild(indiv);
 				}
         	}else{
