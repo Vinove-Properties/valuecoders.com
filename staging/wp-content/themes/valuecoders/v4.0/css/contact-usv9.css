@@ -4683,6 +4683,9 @@ body.page-template-template-testimonials .client-video-section iframe,
   .globe-around .dis-flex .flex-5 {
     flex-basis: 100%; }
 
+  .globe-around .dis-flex .flex-5 .cont-full .box .flag-d {
+    align-items: center; }
+
   .contact-us-section.full-width-form .form-left {
     padding: 15px; }
 
