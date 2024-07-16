@@ -198,7 +198,7 @@
       <!-- dis-flex form-outer -->	
     </div>
   </section>
-  <?php get_template_part('include/testimonials', 'v4.0'); ?>
+  <?php //get_template_part('include/testimonials', 'v4.0'); ?>
   <section class="globe-around bg-light padding-t-120 padding-b-120">
     <div class="container">
       <div class="heading text-center">
