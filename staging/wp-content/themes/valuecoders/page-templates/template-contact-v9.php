@@ -137,8 +137,7 @@
                       <input type="submit" id="submitButton" class="checkout-submit  nxt-btn" value="Send Now" />
                     </div>
                   </div>
-                  <br>
-                  <br>
+                
                 </div>
               </form>
             </div>
