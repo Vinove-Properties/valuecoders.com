@@ -3908,7 +3908,8 @@ body.page-template-template-testimonials .client-video-section iframe,
             justify-content: center;
             margin: 10px 0 0; }
             .contact-us-section .right-contactbox .client-section .client-row .client-stack ul li img {
-              vertical-align: middle; }
+              vertical-align: middle;
+              padding: 0 5px; }
             .contact-us-section .right-contactbox .client-section .client-row .client-stack ul li:hover {
               color: #ffad00; }
         .contact-us-section .right-contactbox .client-section .client-row .hover:hover {
