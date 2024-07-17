@@ -3892,23 +3892,21 @@ body.page-template-template-testimonials .client-video-section iframe,
       gap: 10px;
       margin: 50px 0 0; }
       .contact-us-section .right-contactbox .client-section .client-row {
-        position: relative;
-        overflow: hidden;
-        height: 58px; }
+        position: relative; }
         .contact-us-section .right-contactbox .client-section .client-row .client-stack ul {
           display: flex;
-          min-width: 150%;
-          justify-content: space-around;
-          column-gap: 10px;
-          position: absolute; }
+          flex-wrap: wrap;
+          justify-content: center;
+          column-gap: 10px; }
           .contact-us-section .right-contactbox .client-section .client-row .client-stack ul li {
             border-radius: 8px;
             background: rgba(18, 33, 90, 0.45);
             height: 58px;
-            min-width: 100px;
+            min-width: calc(25% - 10px);
             display: flex;
             align-items: center;
-            justify-content: center; }
+            justify-content: center;
+            margin: 10px 0 0; }
             .contact-us-section .right-contactbox .client-section .client-row .client-stack ul li img {
               vertical-align: middle; }
             .contact-us-section .right-contactbox .client-section .client-row .client-stack ul li:hover {
@@ -4244,7 +4242,10 @@ body.page-template-template-testimonials .client-video-section iframe,
           font-size: 13px; }
         .address-details .add-flex .right-column .address-row .address-col p {
           font-size: 13px;
-          line-height: 20px; } }
+          line-height: 20px; }
+
+  .contact-us-section .right-contactbox .client-section .client-row .client-stack ul li {
+    min-width: calc(33% - 10px); } }
 @media only screen and (max-width: 991px) {
   .contact-us-section.full-width-form {
     margin-top: 0;

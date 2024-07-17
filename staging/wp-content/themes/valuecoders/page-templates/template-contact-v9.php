@@ -171,7 +171,7 @@
          
           <div class="client-section">
             <div class="client-row">
-              <div class="client-stack award-animate-slide-to-left hover:pause">
+              <div class="client-stack">
                 <ul>
                   <li>
                     <picture>
@@ -208,15 +208,53 @@
                       <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-cl07.svg" alt="Valuecoders" width="76" height="17">
                     </picture>
                   </li>
+                  
                   <li>
                     <picture>
-                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-cl01.svg" alt="Valuecoders" width="55" height="22">
+                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-cl08.svg" alt="Valuecoders" width="77" height="19">
                     </picture>
                   </li>
+                  <li>
+                    <picture>
+                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-cl09.svg" alt="Valuecoders" width="86" height="14">
+                    </picture>
+                  </li>
+                  <li>
+                    <picture>
+                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-cl10.svg" alt="Valuecoders" width="72" height="36">
+                    </picture>
+                  </li>
+                  <li>
+                    <picture>
+                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-cl11.svg" alt="Valuecoders" width="81" height="21">
+                    </picture>
+                  </li>
+                  <li>
+                    <picture>
+                    <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-cl12.svg" alt="Valuecoders" width="67" height="25">
+                    </picture>
+                  </li>
+                  <li>
+                    <picture>
+                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-cl13.svg" alt="Valuecoders" width="82" height="20">
+                    </picture>
+                  </li>
+                  <li>
+                    <picture>
+                    <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-cl144.svg" alt="Valuecoders" width="82" height="20">
+                    </picture>
+                  </li>
+                  <li>
+                    <picture>
+                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-cl15.svg" alt="Valuecoders" width="85" height="22">
+                    </picture>
+                  </li>
+              
                 </ul>
+
               </div>
             </div>
-            <div class="client-row">
+            <!--<div class="client-row">
               <div class="client-stack award-animate-slide-to-right hover:pause">
               <ul>
                   <li>
@@ -261,7 +299,7 @@
                   </li>
                 </ul>
               </div>
-            </div>
+            </div>-->
             
           </div>
           
