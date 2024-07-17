@@ -130,7 +130,7 @@ var data = "total_points=" + total_points + "&user_ip=" + user_ip + "&rating_pag
     4.9 out of 5.0 by
     </span>
     <span class="client-outer">
-    <a href="javascript:void(0)" onclick="ratenow()" id="ratebtn" class="rate-us">Rate us</a> 1218 clients on over 10800+ projects
+    <a href="javascript:void(0)" onclick="ratenow()" id="ratebtn" class="rate-us">Rate us</a> 2437 clients on over 10800+ projects
     </span>
     </div>
     <div class="footer-last">
