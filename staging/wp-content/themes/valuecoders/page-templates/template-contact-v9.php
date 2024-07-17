@@ -20,8 +20,8 @@
                   </div>
                 </div>
                 <div class="lf-right">
-                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/lf-01.svg" alt="pixel" width="94" height="84">
-                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/lf-02.svg" alt="pixel" width="95" height="84">
+                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cnbnr-02.svg" alt="pixel" width="104" height="92">
+                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/lf-02.svg" alt="pixel" width="97" height="95">
                 </div>
               </div>
               <div class="soc-box dis-flex items-center">
