@@ -359,10 +359,11 @@
     .list em:hover ~ .info {
         left: 0;
         overflow-x: auto;
-        max-width: 305px;
+        max-width: 330px;
         display: block;
     }
     .nice-select.open:after {
         top: 42%;
     }
+    
 }

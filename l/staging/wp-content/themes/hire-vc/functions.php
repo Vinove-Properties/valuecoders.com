@@ -101,7 +101,6 @@ function vc_l7_scripts(){
 	if ( is_singular() && comments_open() && get_option('thread_comments') ){
 	//wp_enqueue_script( 'comment-reply' );
 	}
-
 	wp_dequeue_style( 'wp-block-library' );
     wp_dequeue_style( 'wp-block-library-theme' );
     if( is_page_template( 'page-templates/tpl-version2.0.php' ) ) {
@@ -110,7 +109,8 @@ function vc_l7_scripts(){
     	wp_enqueue_script( 'v2-script', get_stylesheet_directory_uri() . '/assets-v2/js/script.js', array(), _S_VERSION, true );
     	wp_enqueue_script( 'v2-validation', get_stylesheet_directory_uri() . '/assets-v2/js/v2-validation.js', array(), _S_VERSION, true );
     	wp_enqueue_script( 'v2-validation-pop', get_stylesheet_directory_uri() . '/assets-v2/js/v2-validation-pop.js', array(), _S_VERSION, true );
-    }elseif( is_page_template( 'page-templates/tpl-version4.0.php' ) ){
+    }
+    elseif( is_page_template( 'page-templates/tpl-version4.0.php' ) ){
     	$tplVar = get_post_meta( $post->ID, 'layout-v7', true );		
 		if( $tplVar && ($tplVar == "yes") ){
 		wp_enqueue_style('vc-style-v7', get_stylesheet_directory_uri().'/assets-v2/css/version.min-6.0.css', array(), _S_VERSION);	
@@ -124,24 +124,33 @@ function vc_l7_scripts(){
     	wp_enqueue_script( 'v2-validation', get_stylesheet_directory_uri() . '/assets-v2/js/v2-validation.js', array(), _S_VERSION, 
     	true );
     	wp_enqueue_script( 'v2-validation-pop', get_stylesheet_directory_uri() . '/assets-v2/js/v2-validation-pop.js', array(), _S_VERSION, true );    	
-    }elseif( is_page_template( 'page-templates/tpl-version4.12.php' ) ){
+    }
+    elseif( is_page_template( 'page-templates/tpl-version4.12.php' ) ){
     	wp_enqueue_style( 'vc-style-v4.12', get_stylesheet_directory_uri().'/assets-v2/css/version.min-3.0.css', array(), _S_VERSION );
     	wp_enqueue_script( 'glider-script', get_stylesheet_directory_uri() . '/assets-v2/js/glider.min.js', array(), _S_VERSION, true );
     	
     	wp_enqueue_script( 'v412-script', get_stylesheet_directory_uri() . '/assets-v2/js/script-v4.js', array(), _S_VERSION, true );
     	wp_enqueue_script( 'v2-validation-pop', get_stylesheet_directory_uri() . '/assets-v2/js/v2-validation-pop.js', array(), _S_VERSION, true );
-    }elseif( is_page_template( 'page-templates/tpl-ppcmanagement.php' ) ){
+    }
+    elseif( is_page_template( 'page-templates/tpl-ppcmanagement.php' ) ){
     	wp_enqueue_style( 'ppc-mgt', get_stylesheet_directory_uri().'/assets-v2/css/version.min-4.0.css', array(), _S_VERSION );
     	wp_enqueue_script( 'glider-script', get_stylesheet_directory_uri().'/assets-v2/js/glider.min.js', array(), _S_VERSION, true );
     	wp_enqueue_script( 'ppc-mgt', get_stylesheet_directory_uri().'/js/ppc-mgt.js', array(), _S_VERSION, true );
     	wp_enqueue_script( 'ppc-validation', get_stylesheet_directory_uri().'/js/ppc-validation.js', array(), _S_VERSION, true );
     	wp_enqueue_script( 'v2-validation-pop', get_stylesheet_directory_uri() . '/assets-v2/js/v2-validation-pop.js', array(), _S_VERSION, true );
-    }elseif( is_page_template( 'page-templates/tpl-version6.0.php' ) ){
+    }
+    elseif( is_page_template( 'page-templates/tpl-version6.0.php' ) ){
     	wp_enqueue_style( 'v6-style', get_stylesheet_directory_uri().'/assets-v2/css/version.min-5.0.css', array(),_S_VERSION );
     	wp_enqueue_script( 'glider-script', get_stylesheet_directory_uri().'/assets-v2/js/glider.min.js', array(), _S_VERSION, true );
     	wp_enqueue_script( 'v6-script', get_stylesheet_directory_uri().'/assets-v2/js/script-v4.js', array(), _S_VERSION, true );
     	wp_enqueue_script( 'v6-validation', get_stylesheet_directory_uri() . '/assets-v2/js/v2-validation.js', array(), _S_VERSION, true );
     	wp_enqueue_script( 'v6-validation-pop', get_stylesheet_directory_uri() . '/assets-v2/js/v2-validation-pop.js', array(), _S_VERSION, true );
+    }
+    elseif( is_page_template( 'page-templates/tpl-version8.0.php' ) ){
+    	wp_enqueue_style( 'v8-style', get_bloginfo('template_url').'/assets-v2/css/version.min-8.0.css', array(),_S_VERSION );    	
+    	wp_enqueue_script( 'glider-script', get_stylesheet_directory_uri().'/assets-v2/js/glider.min.js', array(), _S_VERSION, true );
+    	wp_enqueue_script( 'v8-script', get_stylesheet_directory_uri().'/js/script-v8.js', array(), _S_VERSION, true );
+    	wp_enqueue_script( 'v8-validation', get_stylesheet_directory_uri().'/js/validation-v8.js', array(), _S_VERSION, true );
     }
     else{	
 	if( !wp_is_mobile() ){

@@ -81,6 +81,7 @@ navToggler.click();
 }
 
 </style>
+<?php /* ?>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -88,14 +89,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5VBGP37');</script>
 <!-- End Google Tag Manager -->
+<?php */ ?>
 </head>
 <body <?php body_class(); ?>>
+<?php /* ?>  
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VBGP37"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<?php */ ?>
 <?php wp_body_open(); ?>
-
 <?php 
 if( is_page_template( 'page-templates/tpl-version2.0.php' ) ) { ?>
 <header>
@@ -198,8 +201,26 @@ width="250" height="88">
         </div>
       </div>
     </header>
-<?php 
-}else{ ?>
+<?php }elseif('page-templates/tpl-version8.0.php'){ ?>
+<header>
+  <div class="container">
+    <div class="dis-flex items-center">
+      <div class="head-right">
+        <img id="do-load" loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/logo-light.svg" alt="ValueCoders" width="250" height="28">
+      </div>
+      <div class="head-left">
+        <div class="blnksc">
+          <div class="blink-btn"><span class="blink"></span></div>
+          We are Online
+        </div>
+        <div class="btn-sec">
+          <a href="#" class="btn rounded"><span class="text-white">Get Free Consultation</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<?php }else{ ?>
 <header class="headerRow ">
    <div class="custom-container">
       <div class="row">

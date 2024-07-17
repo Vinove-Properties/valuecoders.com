@@ -2756,8 +2756,6 @@ textarea {
       padding: 40px 20px;
       margin: 30px 0 0;
       background: #fdfaf2; }
-      .process-work .col-right .image-wrap {
-        text-align: center; }
     .process-work .process-step {
       position: relative; }
       .process-work .process-step .step-sec {
@@ -3020,19 +3018,30 @@ header {
   width: 100%;
   flex-basis: 100%;
   margin-top: -40px;
-  overflow: hidden;
-  position: relative; }
+  overflow: hidden; }
   .overflow-hidden .client-logo-box-section {
     background: #fdfaf2;
     width: 100%;
     z-index: 9;
-    padding: 60px 0 90px;
+    padding: 60px 0 100px;
     position: relative;
     overflow: hidden;
     width: 160%;
     clip-path: ellipse(50% 45% at 50% 50%);
     margin-left: -30%;
     -webkit-clip-path: ellipse(50% 45% at 50% 50%); }
+    .overflow-hidden .client-logo-box-section:after {
+      content: "";
+      clear: both;
+      display: block;
+      background: url(../images/elipse-shape.png) 0 0 no-repeat;
+      background-size: 100%;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 3px;
+      left: 0;
+      border-radius: 50px; }
     .overflow-hidden .client-logo-box-section .logo-heading {
       width: 30%; }
       .overflow-hidden .client-logo-box-section .logo-heading h4 {
@@ -3055,14 +3064,6 @@ header {
       flex-basis: 25%;
       display: flex;
       align-items: center; }
-  .overflow-hidden:after {
-    content: '';
-    width: 100%;
-    height: 100px;
-    background: #fdfaf2;
-    position: absolute;
-    left: 0;
-    bottom: 0; }
 
 .count-box-section .count-box-outer {
   max-width: 1400px;
@@ -4092,9 +4093,6 @@ header {
 .day .not-found-section ul li {
   color: #212121; }
 
-.process-work {
-  background: linear-gradient(to left, #ffffff 50%, #211f47 50%); }
-
 .footer-section {
   background-color: #373660;
   text-align: center;
@@ -4952,8 +4950,6 @@ header {
       .overflow-hidden .client-logo-box-section .logo-box {
         justify-content: center;
         padding: 0 10px; }
-    .overflow-hidden:after {
-      display: none; }
 
   .footer-sec .footer-top .dis-flex .flex-4 {
     padding: 0 20px; }
@@ -5046,9 +5042,6 @@ header {
 
   .count-box-section .count-box:after {
     right: 30px; }
-
-  .process-work {
-    background: #ffffff; }
 
   .footer-sec .footer-top .dis-flex .flex-4 {
     text-align: center;

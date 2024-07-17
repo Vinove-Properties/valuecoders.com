@@ -1,7 +1,7 @@
 /*
 Error: File to import not found or unreadable: menu.
-       Load path: C:/xampp/htdocs/valuecoders.com/l/wp-content/themes/hire-vc/assets-v2/scss
-        on line 2 of C:\xampp\htdocs\valuecoders.com\l\wp-content\themes\hire-vc\assets-v2\scss\thankyou.scss
+       Load path: C:/xampp/htdocs/valuecoders-lp/assets-v2/scss
+        on line 2 of C:\xampp\htdocs\valuecoders-lp\assets-v2\scss\thankyou.scss
 
 1: @import "_default";
 2: @import "menu";
@@ -12,7 +12,7 @@ Error: File to import not found or unreadable: menu.
 7:     padding: 140px 0 50px;
 
 Backtrace:
-C:\xampp\htdocs\valuecoders.com\l\wp-content\themes\hire-vc\assets-v2\scss\thankyou.scss:2
+C:\xampp\htdocs\valuecoders-lp\assets-v2\scss\thankyou.scss:2
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:67:in `rescue in import'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:45:in `import'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -50,4 +50,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: menu.\A        Load path: C:/xampp/htdocs/valuecoders.com/l/wp-content/themes/hire-vc/assets-v2/scss\A         on line 2 of C:\xampp\htdocs\valuecoders.com\l\wp-content\themes\hire-vc\assets-v2\scss\thankyou.scss\A \A 1: @import \"_default\";\A 2: @import \"menu\";\A 3: @import \"glider\";\A 4: \A 5: \A 6: .thank-you-box-icon {\A 7:     padding: 140px 0 50px;"; }
+  content: "Error: File to import not found or unreadable: menu.\A        Load path: C:/xampp/htdocs/valuecoders-lp/assets-v2/scss\A         on line 2 of C:\xampp\htdocs\valuecoders-lp\assets-v2\scss\thankyou.scss\A \A 1: @import \"_default\";\A 2: @import \"menu\";\A 3: @import \"glider\";\A 4: \A 5: \A 6: .thank-you-box-icon {\A 7:     padding: 140px 0 50px;"; }

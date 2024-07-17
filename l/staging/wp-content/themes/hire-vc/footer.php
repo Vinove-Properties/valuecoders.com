@@ -120,7 +120,13 @@ if (hasHomeaslder) {
 get_template_part( 'template-parts/ppcmgt', 'leadform' );
 get_template_part( 'template-parts/ppc', 'orderform' );
 get_template_part( 'template-parts/ppc', 'report' );
-}else{ ?>
+}elseif( is_page_template( 'page-templates/tpl-version8.0.php' ) ){ ?>
+<div class="footer-section">
+   <div class="container">
+     <span class="copy">Copyright &copy; 2004 - 2024. All Rights Reserved. ValueCoders.com | Privacy Policy</span>
+   </div>
+</div>
+<?php }else{ ?>
 <footer class="home-footer">
          <div class="countries-no">
             <div class="row">

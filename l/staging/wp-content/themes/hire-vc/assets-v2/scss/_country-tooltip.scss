@@ -1,9 +1,10 @@
 .country-list {
-  font-weight: 700;
+  font-weight: 500;
   cursor: pointer;
   display: inline-block;
   border-bottom: 1px dashed rgba(189, 183, 183, 1);
   position: relative;
+  color:$white;
   .info {
     display: flex;
     opacity: 0;

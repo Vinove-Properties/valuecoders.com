@@ -2275,11 +2275,12 @@ textarea {
   .day .contact-us-section .quizQ {
     background-position: -38px 6px; } }
 .country-list {
-  font-weight: 700;
+  font-weight: 500;
   cursor: pointer;
   display: inline-block;
   border-bottom: 1px dashed #bdb7b7;
-  position: relative; }
+  position: relative;
+  color: #ffffff; }
   .country-list .info {
     display: flex;
     opacity: 0;
