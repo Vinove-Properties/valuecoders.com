@@ -25,9 +25,9 @@
                 </div>
               </div>
               <div class="soc-box dis-flex items-center">
-                <a href="https://calendly.com/valuecoders/dedicated-teams"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-01.svg" alt="valuecoders" width="20" height="20"></i><span>Book A Call</span></a>
-                <a href="https://wa.me/918882108080"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-02.svg" alt="valuecoders" width="20" height="20"> </i><span>WhatsApp</span></a>
-                <a href="mailto:sales@valuecoders.com"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-03.svg" alt="valuecoders" width="20" height="20"></i><span>Email us</span></a>
+                <a href="https://calendly.com/valuecoders/dedicated-teams" target="_blank"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-01.svg" alt="valuecoders" width="20" height="20"></i><span>Book A Call</span></a>
+                <a href="https://wa.me/918882108080" target="_blank"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-02.svg" alt="valuecoders" width="20" height="20"> </i><span>WhatsApp</span></a>
+                <a href="mailto:sales@valuecoders.com" target="_blank"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-03.svg" alt="valuecoders" width="20" height="20"></i><span>Email us</span></a>
               </div>
               <form action="<?php bloginfo('url'); ?>/sendmail1.php" enctype="multipart/form-data" method="POST" id="contact-form-section" onsubmit="vcCmnFormValidation(); return false;">
                 <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
@@ -304,8 +304,10 @@
           </div>
           <div class="flex-wrap">
             <div class="dis-flex phone-box">
-              <div class="country"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/vflag-04.svg" alt="valuecoders" width="25" height="25">UAE</div>
-              <div class="phone"><a href="https://wa.me/971544954255">+971 544954255</a>
+              <div class="country"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/vflag-04.svg" 
+                alt="valuecoders" width="25" height="25">UAE</div>
+              <div class="phone"><a href="https://wa.me/971544954255">+971 544954255 <span style="font-size: 12px;">(WhatsApp)</span></a>
+
               </div>
             </div>
           </div>
