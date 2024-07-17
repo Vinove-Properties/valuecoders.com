@@ -235,14 +235,14 @@
             </div>
             <div class="flex-wrap">
               <div class="dis-flex phone-box">
-                <div class="country"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/vflag-03.svg" alt="valuecoders" width="25" height="25">UAE</div>
+                <div class="country"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/vflag-04.svg" alt="valuecoders" width="25" height="25">UAE</div>
                 <div class="phone"><a href="tel:+44 20 3239 2299">+44 20 3239 2299</a>
                 </div>
               </div>
             </div>
             <div class="flex-wrap">
               <div class="dis-flex phone-box">
-                <div class="country"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/vflag-03.svg" alt="valuecoders" width="25" height="25">AUS</div>
+                <div class="country"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/vflag-05.svg" alt="valuecoders" width="25" height="25">AUS</div>
                 <div class="phone"><a href="tel:+61 2 8005 8080">+61 2 8005 8080</a>
                 </div>
               </div>
