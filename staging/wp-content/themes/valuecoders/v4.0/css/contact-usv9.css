@@ -3895,7 +3895,7 @@ body.page-template-template-testimonials .client-video-section iframe,
       .contact-us-section .right-contactbox .client-section .client-row {
         position: relative;
         overflow: hidden;
-        height: 60px; }
+        height: 58px; }
         .contact-us-section .right-contactbox .client-section .client-row .client-stack ul {
           display: flex;
           min-width: 150%;
@@ -3905,7 +3905,7 @@ body.page-template-template-testimonials .client-video-section iframe,
           .contact-us-section .right-contactbox .client-section .client-row .client-stack ul li {
             border-radius: 8px;
             background: rgba(18, 33, 90, 0.45);
-            height: 60px;
+            height: 58px;
             min-width: 100px;
             display: flex;
             align-items: center;
