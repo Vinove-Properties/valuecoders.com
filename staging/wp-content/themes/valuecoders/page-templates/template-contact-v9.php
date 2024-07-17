@@ -305,7 +305,7 @@
           <div class="flex-wrap">
             <div class="dis-flex phone-box">
               <div class="country"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/vflag-04.svg" alt="valuecoders" width="25" height="25">UAE</div>
-              <div class="phone"><a href="tel:+971 544954255">+971 544954255</a>
+              <div class="phone"><a href="https://wa.me/971544954255">+971 544954255</a>
               </div>
             </div>
           </div>
