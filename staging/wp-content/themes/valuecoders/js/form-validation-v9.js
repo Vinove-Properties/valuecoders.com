@@ -4,7 +4,8 @@ if( document.getElementById("pxl-logoslider") ){
 }
 
 document.addEventListener('DOMContentLoaded', function() {	
-	window.scrollTo(0, 60);
+	//window.scrollTo(0, 60);
+	window.scrollTo({ top: 60, behavior: 'smooth' });
 });
 
 const form 			= document.getElementById('contact-form-section');
