@@ -3,6 +3,10 @@ if( document.getElementById("pxl-logoslider") ){
 	new Glide('.logoslide', { type: 'carousel', autoplay: 1, animationDuration: 10000, animationTimingFunc: 'linear', gap: 0, startAt: 0, perView: 1 }).mount();
 }
 
+document.addEventListener('DOMContentLoaded', function() {	
+	window.scrollTo(0, 60);
+});
+
 const form 			= document.getElementById('contact-form-section');
 const username 		= document.getElementById('cont_name');
 const email 		= document.getElementById('cont_email');
