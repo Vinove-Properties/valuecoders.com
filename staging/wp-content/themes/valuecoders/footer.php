@@ -30,7 +30,7 @@ if( !is_page_template( 'page-templates/template-thankyou.php' ) ){
    require_once 'include/footer.php';
 }
 
-if( !is_page_template( 'page-templates/template-contact-v8.php' ) ) :
+if( !is_page_template( 'page-templates/template-contact-v9.php' ) ) :
 ?>
 <div class="popup-section">
    <div id="intentPopup" class="popup-wrapper exit-intent-popup">
