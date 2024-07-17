@@ -23,7 +23,7 @@ const inpResources 	= document.getElementById('inp-resources');
 const inpHlong 		= document.getElementById('inp-howlong');
 
 
-NiceSelect.bind(document.getElementById("select-wehelp"),{placeholder:'Please Select from the dropdown'});
+NiceSelect.bind(document.getElementById("select-wehelp"),{placeholder:'Please select from the dropdown'});
 
 // document.addEventListener('DOMContentLoaded', function(){
 // username.focus();

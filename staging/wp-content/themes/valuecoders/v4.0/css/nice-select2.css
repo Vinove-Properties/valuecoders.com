@@ -300,9 +300,12 @@
     }
     .list em:hover ~ .info {
         left: 0;
-        overflow-x: auto;
-        max-width: 305px;
-        display: block;
+    overflow-x: auto;
+    max-width: 330px;
+    display: block;
+    font-size: 9px;
+    padding: 6px 6px;
+    top: -20px;
     }
     .nice-select.open:after {
         top: 42%;

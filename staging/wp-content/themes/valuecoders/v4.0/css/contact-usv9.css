@@ -3465,8 +3465,7 @@ body.page-template-template-testimonials .client-video-section iframe,
             opacity: 1;
             visibility: visible; }
     .contact-us-section.full-width-form .info-box {
-      display: inline-block;
-      position: relative; }
+      display: inline-block; }
     .contact-us-section.full-width-form .info {
       position: absolute;
       top: -30px;
@@ -4207,6 +4206,12 @@ body.page-template-template-testimonials .client-video-section iframe,
   .contact-us-section.full-width-form .cont_country_section .row-right {
     flex-basis: 25%; }
   .contact-us-section.full-width-form .slider-right .client-head {
+    font-size: 12px; } }
+@media only screen and (max-width: 1400px) {
+  .contact-us-section.full-width-form .head-txt p {
+    font-size: 12px; }
+
+  .contact-us-section .right-contactbox .row-box .col-box .desp p {
     font-size: 12px; } }
 @media only screen and (max-width: 1024px) {
   .address-details .add-flex {

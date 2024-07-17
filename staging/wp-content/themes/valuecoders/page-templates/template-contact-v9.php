@@ -85,8 +85,8 @@
                           <option value="Team Extension" title="Augment your team with expert software engineers.">Team Extension (Staff Augmentation)</option>
                           <option value="Dedicated Software Team" title="Dedicated autonomous software product engineering teams comprising of multiple skills.">Dedicated Software Team</option>
                           <option value="Other Technology Needs" title="Any other world-class technology solution that you may need.">Other Technology Needs</option>
-                          <option value="career" title="Join the team of Experts & work in ValueCoders.">Looking for a Job/Careers</option>
-                          <option value="None of the above" title="Connect with our business consultant to discuss your requirements.">None of the above</option>
+                          <option value="career" title="Join the team of experts & work in ValueCoders.">Looking for a Job/Careers</option>
+                          <option value="None of the above" title="Connect with our business consultant to discuss your requirements.">None of the Above</option>
                         </select>
                         <small>Error Message</small>
                       </div>
