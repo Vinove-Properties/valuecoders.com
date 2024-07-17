@@ -3465,7 +3465,8 @@ body.page-template-template-testimonials .client-video-section iframe,
             opacity: 1;
             visibility: visible; }
     .contact-us-section.full-width-form .info-box {
-      display: inline-block; }
+      display: inline-block;
+      position: relative; }
     .contact-us-section.full-width-form .info {
       position: absolute;
       top: -30px;
