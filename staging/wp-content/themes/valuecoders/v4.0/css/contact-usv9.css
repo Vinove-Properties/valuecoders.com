@@ -3096,7 +3096,7 @@ body.page-template-template-testimonials .client-video-section iframe,
       border-radius: 20px;
       background: #ffffff;
       width: 63%;
-      padding: 40px; }
+      padding: 30px 40px 40px; }
     .contact-us-section.full-width-form .bg-voilet {
       border-radius: 10px; }
     .contact-us-section.full-width-form form {
@@ -3925,19 +3925,21 @@ body.page-template-template-testimonials .client-video-section iframe,
 
 @keyframes slide_to_left {
   0% {
+    left: 0;
     transform: translateX(0); }
-  to {
-    transform: translateX(-50%); } }
+  100% {
+    left: 100%;
+    transform: translateX(-100%); } }
 @keyframes slide_to_right {
   0% {
-    transform: translateX(-50%); }
-  to {
+    transform: translateX(-100%); }
+  100% {
     transform: translateX(0); } }
 .award-animate-slide-to-left {
-  animation: slide_to_left 20s linear infinite; }
+  animation: slide_to_left 15s linear infinite; }
 
 .award-animate-slide-to-right {
-  animation: slide_to_right 20s linear infinite; }
+  animation: slide_to_right 15s linear infinite; }
 
 .hover\:pause:hover {
   animation-play-state: paused; }
@@ -4047,7 +4049,7 @@ body.page-template-template-testimonials .client-video-section iframe,
   margin-top: 70px;
   justify-content: space-between; }
   .address-details .add-flex .left-column {
-    flex-basis: 28%;
+    flex-basis: 30%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background: #ffffff;
     border-radius: 20px;
@@ -4100,7 +4102,7 @@ body.page-template-template-testimonials .client-video-section iframe,
         border: 0;
         padding: 0; }
   .address-details .add-flex .right-column {
-    flex-basis: 70%;
+    flex-basis: 68%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background: #ffffff;
     border-radius: 20px;
