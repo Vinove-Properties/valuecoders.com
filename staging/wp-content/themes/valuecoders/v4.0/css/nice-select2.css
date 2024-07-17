@@ -303,8 +303,8 @@
         overflow-x: auto;
         max-width: 330px;
         display: block;
-        font-size: 9px;
-        padding: 6px 6px;
+        font-size: 10px;
+        padding: 5px 6px;
         top: -20px;
     }
     .nice-select.open:after {
