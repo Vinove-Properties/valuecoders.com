@@ -3046,6 +3046,11 @@ body.page-template-template-testimonials .client-video-section iframe,
       .develop-section .dev-cards .card .card-info h3 {
         color: #ffffff;
         margin: 0 0 10px; }
+        .develop-section .dev-cards .card .card-info h3 a {
+          color: #ffffff; }
+          .develop-section .dev-cards .card .card-info h3 a:hover {
+            text-decoration: underline;
+            opacity: 0.9; }
       .develop-section .dev-cards .card .card-info p {
         color: #ffffff; }
         .develop-section .dev-cards .card .card-info p:nth-of-type(1) {
@@ -3055,7 +3060,7 @@ body.page-template-template-testimonials .client-video-section iframe,
       left: 0;
       bottom: -60px;
       color: rgba(65, 65, 65, 0.6);
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 500;
       line-height: 1.3; }
 .develop-section .dev-cards .card[active] {
@@ -3064,6 +3069,13 @@ body.page-template-template-testimonials .client-video-section iframe,
   .develop-section .dev-cards .card[active] .card-info {
     opacity: 1; }
   .develop-section .dev-cards .card[active] .card-heading {
+    color: #414141; }
+.develop-section .dev-cards .card.active {
+  flex-basis: 560px;
+  height: 350px; }
+  .develop-section .dev-cards .card.active .card-info {
+    opacity: 1; }
+  .develop-section .dev-cards .card.active .card-heading {
     color: #414141; }
 
 @media screen and (max-width: 767px) {
