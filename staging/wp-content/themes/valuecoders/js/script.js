@@ -1197,26 +1197,32 @@ var tabMC       = document.querySelectorAll("#service-tabs .tablist");
 
 
 
-                  const sdMethod = document.getElementById("sd-metho");
+const sdMethod = document.getElementById("sd-metho");
 if( sdMethod ){
-    const cards = document.querySelectorAll('.card');  
-    cards.forEach((card) => {
-        card.addEventListener('mouseover', () => {
-        if (!card.hasAttribute('active')) {
-            updateActiveCard(card);
+const cards = document.querySelectorAll('.card');  
+cards.forEach((card) => {
+    card.addEventListener('mouseover', () => {
+        if( !card.classList.contains('active') ){
+            updateActiveCard(card);    
         }
-        });
-    });
+    /*
+    if (!card.hasAttribute('active')) {
+    updateActiveCard(card);
+    }
+    */
 
-    function updateActiveCard(activeCard) {
-        cards.forEach((card) => {
-        if (card === activeCard) {
-        card.setAttribute('active', '');
-        } else {
-        card.removeAttribute('active');
+    });
+});
+
+function updateActiveCard(activeCard) {
+    cards.forEach((card) => {
+        if(card === activeCard) {
+            card.classList.add("active");
+        }else{
+            card.classList.remove("active");
         }
-        })
-    }    
+    })
+}    
 }
 const cardsDM = document.querySelectorAll('.card');
 if( cardsDM ){
