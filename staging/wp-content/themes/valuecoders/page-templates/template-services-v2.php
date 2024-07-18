@@ -179,7 +179,9 @@
     </div>
   </div>
 </section>
-<?php } ?>	
+<?php } 
+get_template_part('inc/cmn', 'startups');
+?>	
 <div class="slide-logo  dis-flex items-center justify-sb">
   <div class="container">
     <div class="dis-flex">
