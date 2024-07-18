@@ -389,7 +389,7 @@ $grwBody  = (isset($vcBtn['text-3']) && !empty($vcBtn['text-3'])) ? $vcBtn['text
             <h3>'.$card['title'].'</h3>
             <div class="overlay-text">
             <div class="over-img">
-            <img class="icon" src=" '.$card['icon'].'">
+            <img class="icon" alt="'.$card['title'].'" src="'.$card['icon'].'">
             </div>
             '.$card['content'].'
             </div>
