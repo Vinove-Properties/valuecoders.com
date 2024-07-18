@@ -467,7 +467,7 @@ $sdmethod = get_field('sd-method','option');
     foreach( $sdmethod['cards'] as $card){ $ic++;
     $isActive = ( $ic === 1 ) ? ' active' : '';  
     $thumbnail = ( $card['thumbnail'] ) ? valueGetPtag( $card['thumbnail'] ) : '';  
-    echo '<div class="card"'.$isActive.'>
+    echo '<div class="card '.$isActive.'">
       '.$thumbnail.'
       <div class="card-info">'.$card['content'].'</div>
       <span class="card-heading">'.$card['title'].'</span>

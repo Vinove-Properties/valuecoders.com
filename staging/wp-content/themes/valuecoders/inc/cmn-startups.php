@@ -10,12 +10,14 @@
                   <div class="glide__slides">
                      <div class="glide__slide">
                         <picture>
-                           <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/banner-client-logo.svg" width="" height="" alt="valuecoders">
+                           <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/banner-client-logo.svg" 
+                           alt="valuecoders">
                         </picture>
                      </div>
                      <div class="glide__slide">
                         <picture>
-                           <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/banner-client-logo-2.png" width="" height="" alt="valuecoders">
+                           <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/banner-client-logo-2.png"
+                           alt="valuecoders">
                         </picture>
                      </div>
                   </div>
