@@ -47,7 +47,9 @@ if( is_array( $cmnBanner ) ){
     </div>
   </div>
 </section>
-<?php vcTrustedStartups( $thisPostID ); ?>
+<?php 
+get_template_part('inc/cmn', 'startups');
+//vcTrustedStartups( $thisPostID ); ?>
 
 <?php  
 $specifications = get_field('tech-spec');
