@@ -181,22 +181,7 @@
 </section>
 <?php } 
 get_template_part('inc/cmn', 'startups');
-?>	
-<div class="slide-logo  dis-flex items-center justify-sb">
-  <div class="container">
-    <div class="dis-flex">
-      <div class="logo-heading">
-        <h4><span>Trusted by startups and Fortune <strong>500</strong> companies</span></h4>
-      </div>
-      <div class="logo-section">
-        <picture>
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/startup-image.svg" alt="valuecoders"
-            width="1232" height="189">
-        </picture>
-      </div>
-    </div>
-  </div>
-</div>
+?>
 <?php  	
 // tech Specification in accordian format.
 $specifications = get_field('tech-spec');
