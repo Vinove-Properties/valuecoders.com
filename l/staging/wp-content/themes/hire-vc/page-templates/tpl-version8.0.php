@@ -7,11 +7,11 @@ get_header(); ?>
 <picture class="main--featured--image__wrapper">
 <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/v8-banner.webp">
 <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/v8-banner.png">
-<img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/v8-banner.png" alt="Valuecoders" width="1920"
-  height="920">
+<img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/v8-banner.png" alt="Valuecoders" 
+width="1920" height="920">
 </picture>
-<img class="bannerboy" loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/banner-boy.png" alt="Valuecoders" 
-width="449" height="637">
+<img class="bannerboy" loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/banner-boy.png" 
+alt="Valuecoders" width="449" height="637">
 <div class="container">
 <div class="two-box">
   <div class="flex-2 content-box">
@@ -19,26 +19,22 @@ width="449" height="637">
     <div class="clintlogo">
       <div class="logobox">
         <picture>
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/blogo-01.svg" alt="Valuecoders" width="100"
-            height="57">
+          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/blogo-01.svg" alt="Valuecoders" width="100" height="57">
         </picture>
       </div>
       <div class="logobox">
         <picture>
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/blogo-02.svg" alt="Valuecoders" width="100"
-            height="57">
+          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/blogo-02.svg" alt="Valuecoders" width="100" height="57">
         </picture>
       </div>
       <div class="logobox">
         <picture>
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/blogo-03.svg" alt="Valuecoders" width="100"
-            height="57">
+          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/blogo-03.svg" alt="Valuecoders" width="100" height="57">
         </picture>
       </div>
       <div class="logobox">
         <picture>
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/blogo-04.svg" alt="Valuecoders" width="100"
-            height="57">
+          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/blogo-04.svg" alt="Valuecoders" width="100" height="57">
         </picture>
       </div>
     </div>
@@ -114,12 +110,13 @@ width="449" height="637">
 <div class="container">
   <div class="dis-flex">
     <picture>
-      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/clinet-image.svg" alt="Valuecoders" width="1021"
-        height="68">
+      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/clinet-image.svg" alt="Valuecoders" 
+      width="1021" height="68">
     </picture>
   </div>
 </div>
 </div>
+
 <section class="customer-testimonial-section padding-t-120 padding-b-120">
 <div class="container">
   <div class="head-txt text-center">
@@ -193,38 +190,40 @@ width="449" height="637">
   </div>
 </div>
 </section>
+
+<?php 
+$searchEnds = get_field('card-one');
+if( isset($searchEnds['is_enable']) && ($searchEnds['is_enable'] == "yes") ) :
+?>
 <section class="result-driven padding-t-120 padding-b-120">
-<div class="container">
-  <div class="head-txt text-center">
-    <h2>Your Search Ends Here: The Ultimate IT Outsourcing Partner</h2>
-    <p>With us, you’ve found the perfect match. Let our expertise handle the rest while you focus on reaping the rewards.</p>
+  <div class="container">
+    <div class="head-txt text-center"><?php echo $searchEnds['content']; ?></div>
+    <?php 
+    if( $searchEnds['cards'] ){
+      echo '<div class="dis-flex result-row">';
+      foreach( $searchEnds['cards'] as $card ){
+      echo '<div class="flex-3">
+        <div class="box">'.pxlGetPtag($card['icon']).$card['text'].'</div>
+      </div>';
+      }
+      echo '<div class="btn-div text-center">
+      <a onclick="showPopForm();" href="javascript:void(0);" class="yellow-btn">'.$searchEnds['cta-text'].'</a>
+      </div>';
+      echo '</div>';
+    }
+    ?>
   </div>
-  <div class="dis-flex result-row">
-    <div class="flex-3">
-      <div class="box">
-        <picture>
-          <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/out-icon01.png">
-          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/out-icon01.png">
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/out-icon01.png" alt="Valuecoders" width="64"
-            height="60">
-        </picture>
-        <h3>Worried about Delays and Missed Deadlines?</h3>
-        <p>We use Agile methods, clear communication, and progress tracking for on-time delivery.</p>
-      </div>
-    </div>
-    <div class="btn-div text-center">
-      <a onclick="showPopForm();" href="javascript:void(0);" class="yellow-btn">Request A Proposal</a>
-    </div>
-  </div>
-</div>
 </section>
+<?php endif; ?>
+
+<?php 
+$whyVC = get_field('wc-value');
+if( isset($whyVC['is_enable']) && ($whyVC['is_enable'] == "yes") ) :
+?>
 <section class="icon-with-img-section bg-cream padding-t-120 padding-b-120">
   <div class="container">
     <div class="head-txt text-center">
-      <h2>Why Hire <strong>PHP Developers</strong> From ValueCoders?</h2>
-      <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-        duis enim velit mollit. 
-      </p>
+      <?php echo $whyVC['section-content']; ?>
     </div>
     <div class="dis-flex col-box-outer margin-t-60 items-center">
       <div class="flex-2">
@@ -338,34 +337,34 @@ width="449" height="637">
     </div>
   </div>
 </section>
+<?php endif; ?>
+
+<?php 
+$hireCard = get_field('card-two');
+if( isset($hireCard['is_enable']) && ($hireCard['is_enable'] == "yes") ) :
+?>
 <section class="three-column-icon-section  padding-t-120 padding-b-120">
   <div class="container">
-    <div class="head-txt text-center">
-      <h2>Hire Indian App Developers As Per Your Needs</h2>
-      <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. </p>
-    </div>
-    <div class="dis-flex col-box-outer margin-t-60">
-      <div class="flex-3 box-3">
-        <div class="box bg-blue-opacity-light">
-          <picture class="dark-light-img">
-            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/app-icon01.webp">
-            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/app-icon01.png">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/app-icon01.png" alt="Valuecoders" width="80"
-              height="77">
-          </picture>
-          <h3>Hire Mobile App Developers</h3>
-          <p>Hire Indian programmers from us and build tailored native and hybrid mobile applications for
-            your niche.
-          </p>
-        </div>
-      </div>
-    </div>
+    <div class="head-txt text-center"><?php echo $hireCard['content']; ?></div>
+    <?php 
+    if( $hireCard['cards'] ){
+      echo '<div class="dis-flex col-box-outer margin-t-60">';
+        foreach( $hireCard['cards'] as $card ){
+          echo '<div class="flex-3 box-3">
+          <div class="box bg-blue-opacity-light">'.pxlGetPtag($card['icon']).$card['text'].'</div>
+          </div>';
+        }
+      echo '</div>';
+    }  
+    ?>
     <div class="margin-t-70 text-center">
       <span class="txtadd">Talk to our Consultants</span>
-      <a class="yellow-btn" href="https://www.valuecoders.com/contact">Contact Us Now</a>
+      <a class="yellow-btn" href="#"><?php echo $hireCard['cta-text']; ?></a>
     </div>
   </div>
 </section>
+<?php endif; ?>
+
 <section class="vc-chartbook bg-cream padding-t-120 padding-b-120">
   <div class="container">
     <div class="head-txt text-center">
@@ -386,7 +385,7 @@ width="449" height="637">
         </ul>
       </div>
       <div class="chart-col">
-        <h3>Local Hiring  </h3>
+        <h3>Local Hiring</h3>
         <ul>
           <li>Rigid</li>
           <li>Yes</li>
@@ -399,7 +398,7 @@ width="449" height="637">
       </div>
       <div class="chart-col">
         <h3>Remote hiring <span>With <strong> VC </strong></span> 
-          <img src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/rocket.gif" width="50" height="50" alt=""> 
+        <img src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/rocket.gif" width="50" height="50" alt=""> 
         </h3>
         <ul>
           <li>Flexible</li>

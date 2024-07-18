@@ -608,7 +608,7 @@
             </li>
             <?php endif; ?>
             <?php if( $mcat === 'ai-ml' ) : ?>
-            <li class="menu-item-has-children small-menu for-company" id="ai-ml-technologies">
+            <li class="menu-item-has-children small-menu for-company" id="ai-ml-technologies-hire">
               <a href="javascript:void(0)">Hire</a> <span class="arrow-btn"></span>
               <div class="small-menu-inner menu-mega ai-techmenu">
                 <div class="dis-flex">

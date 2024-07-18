@@ -3046,6 +3046,57 @@ header {
   .bannerboy {
     display: none; }
 
+  .vc-chartbook .chart-flex .chart-col {
+    width: 33.33%; }
+    .vc-chartbook .chart-flex .chart-col h3 {
+      font-size: 18px;
+      padding: 13px 20px; }
+    .vc-chartbook .chart-flex .chart-col ul {
+      padding: 20px 20px; }
+    .vc-chartbook .chart-flex .chart-col:nth-child(3) {
+      width: 33.33%;
+      margin-left: -25px; }
+      .vc-chartbook .chart-flex .chart-col:nth-child(3) h3 {
+        padding: 20px 20px; }
+        .vc-chartbook .chart-flex .chart-col:nth-child(3) h3 span {
+          font-size: 25px; }
+    .vc-chartbook .chart-flex .chart-col .yellow-btn {
+      padding: 15px 20px; }
+
+  .vetting-process .process-tabs .process-tb ul li:hover:before {
+    width: 90px;
+    height: 50px;
+    left: -72px;
+    background-size: 100%; }
+  .vetting-process .process-tabs .process-tb ul li.active:before {
+    width: 90px;
+    height: 50px;
+    left: -72px;
+    background-size: 100%; }
+  .vetting-process .process-tabs .tab-data {
+    flex-basis: 50%; }
+  .vetting-process .downbtn {
+    width: 100%;
+    text-align: center;
+    margin: 30px auto 0; }
+    .vetting-process .downbtn .downlaodbtn {
+      background: #000000;
+      color: #ffffff;
+      border-radius: 8px;
+      padding: 8px 30px;
+      text-decoration: none;
+      display: inline-block; }
+      .vetting-process .downbtn .downlaodbtn img {
+        vertical-align: middle;
+        margin-right: 8px; }
+      .vetting-process .downbtn .downlaodbtn:hover {
+        background: #60b741; }
+
+  .team-engage .col-right .process-step:before {
+    height: 106%; }
+  .team-engage .col-right .yellow-btn {
+    margin-top: 10px; }
+
   .footer-sec .footer-top .dis-flex .flex-4 {
     padding: 0 20px; }
     .footer-sec .footer-top .dis-flex .flex-4 p {
@@ -3079,8 +3130,8 @@ header {
     max-width: 95%; }
 
   .step-icon-img-section .flex-4::before {
-    top: -96px;
-    left: 109px; } }
+    top: -74px;
+    left: 66px; } }
 @media only screen and (max-width: 991px) {
   .result-driven .result-row {
     width: 90%;
@@ -3456,6 +3507,82 @@ header {
         margin-left: 0;
         padding-bottom: 0; }
         .vc-chartbook .chart-flex .chart-col:nth-child(3) h3 {
-          padding: 20px 25px; } }
+          padding: 20px 25px; }
+
+  .vetting-process .process-tabs {
+    align-items: baseline;
+    justify-content: space-between; }
+    .vetting-process .process-tabs .process-tb {
+      flex-basis: 35%; }
+      .vetting-process .process-tabs .process-tb ul li {
+        padding-left: 10px;
+        margin: 0 0 10px; }
+        .vetting-process .process-tabs .process-tb ul li:last-child img {
+          display: none; }
+        .vetting-process .process-tabs .process-tb ul li span {
+          left: -14px;
+          top: -2px;
+          font-size: 14px;
+          line-height: 25px; }
+        .vetting-process .process-tabs .process-tb ul li:hover a span {
+          color: #ffffff;
+          z-index: 9; }
+        .vetting-process .process-tabs .process-tb ul li:hover:before {
+          width: 40px;
+          height: 20px;
+          left: -22px;
+          background-size: 100%; }
+      .vetting-process .process-tabs .process-tb ul li.active:before {
+        width: 40px;
+        height: 20px;
+        left: -22px;
+        background-size: 100%; }
+    .vetting-process .process-tabs .tab-data {
+      flex-basis: 50%; }
+      .vetting-process .process-tabs .tab-data .tab-contents .dis-flex .flex-2 {
+        padding: 0;
+        flex-basis: 100%; }
+        .vetting-process .process-tabs .tab-data .tab-contents .dis-flex .flex-2 h3 {
+          font-size: 16px;
+          margin: 0 0 10px;
+          line-height: 25px; }
+  .vetting-process .downbtn {
+    width: 100%;
+    text-align: center;
+    margin: 30px auto 0; }
+    .vetting-process .downbtn .downlaodbtn {
+      background: #000000;
+      color: #ffffff;
+      border-radius: 8px;
+      padding: 8px 30px;
+      text-decoration: none;
+      display: inline-block; }
+      .vetting-process .downbtn .downlaodbtn img {
+        vertical-align: middle;
+        margin-right: 8px; }
+      .vetting-process .downbtn .downlaodbtn:hover {
+        background: #60b741; }
+
+  .vetting-process .process-tabs .process-tb ul li:last-child:after {
+    width: 135px;
+    height: 65px;
+    right: -60px;
+    background-size: 100%; }
+
+  .team-engage .process-row {
+    margin: 20px 0 0; }
+  .team-engage .col-left {
+    flex-basis: 100%;
+    margin: 20px 0 0; }
+  .team-engage .col-right {
+    flex-basis: 100%; }
+    .team-engage .col-right .process-step {
+      margin: 20px 0 0; }
+      .team-engage .col-right .process-step .step-sec {
+        margin: 0 0 15px; }
+      .team-engage .col-right .process-step:before {
+        height: 105%; }
+    .team-engage .col-right .yellow-btn {
+      margin-top: 10px; } }
 
 /*# sourceMappingURL=version.min-8.0.css.map */
