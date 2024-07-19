@@ -365,13 +365,31 @@ if( isset($hireCard['is_enable']) && ($hireCard['is_enable'] == "yes") ) :
 </section>
 <?php endif; ?>
 
+<?php 
+$calCall = get_field('calc-call');
+if( isset($calCall['is_enable']) && ($calCall['is_enable'] == "yes") ) :
+?>
 <section class="vc-chartbook bg-cream padding-t-120 padding-b-120">
   <div class="container">
     <div class="head-txt text-center">
-      <h2>Weigh Your Options Well</h2>
-      <p>Take A Calculated Call On Outsourcing</p>
+      <?php echo $calCall['content']; ?>
     </div>
-    <div class="chart-flex padding-t-120">
+    <?php 
+    if( $calCall['cards'] ){
+    $i = 0;  
+    echo '<div class="chart-flex padding-t-120">';
+    foreach( $calCall['cards'] as $row ){
+    echo '<div class="chart-col">';
+    echo $row['text'];
+    if(++$i === count( $calCall['cards'] )){
+    echo '<a class="yellow-btn" href="javascript:void(0);">Outsource to India</a>';
+    }
+    echo '</div>';
+    }
+    echo '</div>';
+    }
+    ?>
+    <!-- <div class="chart-flex padding-t-120">
       <div class="chart-col">
         <h3>Factors that matter </h3>
         <ul>
@@ -411,572 +429,423 @@ if( isset($hireCard['is_enable']) && ($hireCard['is_enable'] == "yes") ) :
           <a class="yellow-btn" href="#">Outsource to India</a>
         </ul>
       </div>
-    </div>
+    </div> 
+    -->
   </div>
 </section>
+<?php endif; ?>
+
+<?php 
+$vetPro = get_field('vet-process');
+if( isset($vetPro['is_enable']) && ($vetPro['is_enable'] == "yes") ) :
+?>
 <section class="vetting-process padding-t-120 padding-b-120">
 <div class="container">
   <div class="head-txt text-center">
-    <h2>Your success starts with our vetting process.</h2>
-    <p>Our rigorous screening process guarantees top-tier developers for exceptional results.
-    </p>
+    <?php echo $vetPro['content']; ?>    
   </div>
   <div class="process-tabs margin-t-80">
-    <nav id="tabs" class="process-tb">
-      <ul>
-        <li class="active"><a href="#tab1"><span>1</span><img src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/process-01.svg" width="303" height="50" alt=""></a></li>
-        <li><a href="#tab2"><span>2</span><img src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/process-02.svg" width="262" height="50" alt=""></a></li>
-        <li><a href="#tab3"><span>3</span><img src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/process-03.svg" width="221" height="50" alt=""></a></li>
-        <li><a href="#tab4"><span>4</span><img src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/process-04.svg" width="181" height="50" alt=""></a></li>
-        <li><a href="#tab5"><span>5</span><img src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/process-05.svg" width="143" height="50" alt=""></a></li>
-        <li><img src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/process-06.svg" width="103" height="50" alt=""></li>
-      </ul>
-    </nav>
-    <div id="tab-contents" class="tab-data">
-      <div id="tab1" class="tab-contents active">
+    <?php 
+    if( $vetPro['process'] ){
+    echo '<nav id="tabs" class="process-tb"><ul>';
+    $i = 0;
+    $stars = [0,303,262,221,181,143];
+    foreach( $vetPro['process'] as $pro ){ $i++;
+    $active = ( $i === 1 )  ? 'active' : '';
+    echo '<li class="'.$active.'"><a href="#tab'.$i.'">
+    <span>'.$i.'</span><img src="'.get_bloginfo('template_url').'/assets-v2/images/v8/process-0'.$i.'.svg" width="'.$stars[$i].'" 
+    height="50" alt=""></a></li>';
+    }
+    echo '<li><img src="'.get_bloginfo('template_url').'/assets-v2/images/v8/process-06.svg" width="103" height="50" alt=""></li>';
+    echo '</ul></nav>';  
+    echo '<div id="tab-contents" class="tab-data">';
+    $i = 0;
+    foreach( $vetPro['process'] as $pro ){ $i++;
+    $active = ( $i === 1 )  ? 'active' : '';
+    echo '<div id="tab'.$i.'" class="tab-contents '.$active.'">
         <div class="dis-flex">
-          <div class="flex-2">
-            <h3>Written test</h3>
-            <p>If all goes well, we examine creativity and problem-solving with some written tests.</p>
-          </div>
-          <div class="flex-2">
-            <h3>Job Application</h3>
-            <p>We receive more than 1 million applications from talented developers each year.</p>
-          </div>
+          <div class="flex-2">'.$pro['con-left'].'</div>
+          <div class="flex-2">'.$pro['con-right'].'</div>
         </div>
-      </div>
-      <div id="tab2" class="tab-contents">
-        <div class="dis-flex">
-          <div class="flex-2">
-            <h3>Test 2</h3>
-            <p>If all goes well, we examine creativity and problem-solving with some written tests.</p>
-          </div>
-          <div class="flex-2">
-            <h3>Job Application</h3>
-            <p>We receive more than 1 million applications from talented developers each year.</p>
-          </div>
-        </div>
-      </div>
-      <div id="tab3" class="tab-contents">
-        <div class="dis-flex">
-          <div class="flex-2">
-            <h3>Test 3</h3>
-            <p>If all goes well, we examine creativity and problem-solving with some written tests.</p>
-          </div>
-          <div class="flex-2">
-            <h3>Job Application</h3>
-            <p>We receive more than 1 million applications from talented developers each year.</p>
-          </div>
-        </div>
-      </div>
-      <div id="tab4" class="tab-contents">
-        <div class="dis-flex">
-          <div class="flex-2">
-            <h3>Test 4</h3>
-            <p>If all goes well, we examine creativity and problem-solving with some written tests.</p>
-          </div>
-          <div class="flex-2">
-            <h3>Job Application</h3>
-            <p>We receive more than 1 million applications from talented developers each year.</p>
-          </div>
-        </div>
-      </div>
-      <div id="tab5" class="tab-contents">
-        <div class="dis-flex">
-          <div class="flex-2">
-            <h3>Test 5</h3>
-            <p>If all goes well, we examine creativity and problem-solving with some written tests.</p>
-          </div>
-          <div class="flex-2">
-            <h3>Job Application</h3>
-            <p>We receive more than 1 million applications from talented developers each year.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+      </div>';  
+    }  
+    echo '</div>';
+    }
+    ?>
   </div>
 </div>
 </section>
+<?php endif; ?>
+
+<?php 
+$devStacks = get_field('dev-stacks');
+if( isset($devStacks['is_enable']) && ($devStacks['is_enable'] == "yes") ) :
+?>
 <section class="three-column-icon-section tools-developer bg-cream  padding-t-120 padding-b-120">
   <div class="container">
     <div class="head-txt text-center">
-      <h2>Technology & Development Stacks</h2>
-      <p>We Are An Expert App Development Company And Use The Best Technologies And Platforms To Deliver
-        High-Quality Products.
-      </p>
+      <?php echo $devStacks['section_heading']; ?>
     </div>
-    <div class="dis-flex col-box-outer margin-t-60 ">
-      <div class="flex-4 box-4">
-        <div class="box">
-          <picture class="dark-light-img">
-            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/tech-icon-01.webp">
-            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/tech-icon-01.png">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/tech-icon-01.png" alt="Valuecoders" width="29"
-              height="46">
-          </picture>
-          <h3>Mobile Technologies</h3>
-          <ul>
-            <li>PHP</li>
-            <li>ASP.Net</li>
-            <li>Angular</li>
-            <li>React</li>
-            <li>Java</li>
-            <li>Vue</li>
-          </ul>
-        </div>
-      </div>
-      <div class="flex-4 box-4">
-        <div class="box">
-          <picture class="dark-light-img">
-            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/tech-icon-02.webp">
-            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/tech-icon-02.png">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/tech-icon-02.png" alt="Valuecoders" width="35"
-              height="45">
-          </picture>
-          <h3>Front-end Technologies</h3>
-          <ul>
-            <li>PHP</li>
-            <li>ASP.Net</li>
-            <li>Angular</li>
-            <li>React</li>
-            <li>Java</li>
-            <li>Vue</li>
-          </ul>
-        </div>
-      </div>
-      <div class="flex-4 box-4">
-        <div class="box">
-          <picture class="dark-light-img">
-            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/tech-icon-03.webp">
-            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/tech-icon-03.png">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/tech-icon-03.png" alt="Valuecoders" width="35"
-              height="35">
-          </picture>
-          <h3>Back-end Technologies</h3>
-          <ul>
-            <li>PHP</li>
-            <li>ASP.Net</li>
-            <li>Angular</li>
-            <li>React</li>
-            <li>Java</li>
-            <li>Vue</li>
-          </ul>
-        </div>
-      </div>
-      <div class="flex-4 box-4">
-        <div class="box">
-          <picture class="dark-light-img">
-            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/tech-icon-04.webp">
-            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/tech-icon-04.png">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/tech-icon-04.png" alt="Valuecoders" width="46"
-              height="46">
-          </picture>
-          <h3>Other Technologies</h3>
-          <ul>
-            <li>PHP</li>
-            <li>ASP.Net</li>
-            <li>Angular</li>
-            <li>React</li>
-            <li>Java</li>
-            <li>Vue</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <?php 
+    if( $devStacks['cards'] ){
+    echo '<div class="dis-flex col-box-outer margin-t-60">';
+    foreach( $devStacks['cards'] as $card){
+    echo '<div class="flex-4 box-4"><div class="box">'.pxlGetPtag($card['icon']).$card['text'].'</div></div>';
+    }
+    echo '</div>';  
+    }
+    ?>
   </div>
 </section>
-<section class="industry-casestudy-sec padding-t-120 padding-b-120" id="industry">
-<div class="container">
-  <div class="head-txt text-center">
-    <h2>Our App Development Work Samples</h2>
-  </div>
-  <div class="case-study-sec margin-t-50">
-    <div class="glider-contain">
-      <div class="glider industry-case-sec">
-        <div class="slide-item">
-          <div class="dis-flex content">
-            <div class="caseimg">
-              <picture>
-                <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/work-sample/bio-plant.webp">
-                <source type="image/jpeg" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/work-sample/bio-plant.png">
-                <img src="<?php bloginfo('template_url'); ?>/assets-v2/images/work-sample/bio-plant.png" loading="lazy" alt="Case Study"
-                  width="1344" height="574">
-              </picture>
-            </div>
-            <div class="casetext">
-              <h3>Bioplant Traceability System</h3>
-              <p>It’s a traceability system to maintain the status of a plant. We can create rooms for new plants and then shift for inventory etc. It is a comprehensive product suite that can increase transparency and accountability by monitoring key data points during cultivation, harvest, extraction, packaging, transport, and dispensing.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="slide-item">
-          <div class="dis-flex content">
-            <div class="caseimg">
-              <picture>
-                <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/work-sample/bio-plant.webp">
-                <source type="image/jpeg" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/work-sample/bio-plant.png">
-                <img src="<?php bloginfo('template_url'); ?>/assets-v2/images/work-sample/bio-plant.png" loading="lazy" alt="Case Study"
-                  width="1344" height="574">
-              </picture>
-            </div>
-            <div class="casetext">
-              <h3>Bioplant Traceability System</h3>
-              <p>It’s a traceability system to maintain the status of a plant. We can create rooms for new plants and then shift for inventory etc. It is a comprehensive product suite that can increase transparency and accountability by monitoring key data points during cultivation, harvest, extraction, packaging, transport, and dispensing.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="prev-next-btn">
-        <button class="glider-prev"></button>
-        <button class="glider-next"></button>
-      </div>
+<?php endif; ?>
+
+<?php 
+$csSlider = get_field('work-sample');
+if( isset($csSlider['is_enable']) && $csSlider['is_enable'] == "yes" ) :
+?>
+<section class="industry-casestudy-sec padding-t-150 padding-b-150" id="industry">
+  <div class="container">
+    <div class="head-txt text-center">
+      <?php echo $csSlider['title']; ?>
     </div>
+    <?php 
+      if( $csSlider['slides'] ){
+        echo '<div class="case-study-sec margin-t-50">
+        <div class="glider-contain">
+          <div class="glider industry-case-sec">';
+          foreach( $csSlider['slides'] as $row ){
+          echo '<div class="slide-item">
+              <div class="dis-flex content">
+                <div class="caseimg">'.pxlGetPtag($row['thumbnail']).'</div>
+                <div class="casetext">'.$row['title'].'</div>
+              </div>
+            </div>';  
+          }
+          echo '</div>
+          <div class="prev-next-btn">
+            <button class="glider-prev"></button>
+            <button class="glider-next"></button>
+          </div>
+        </div>
+      </div>';
+      }
+      ?>
   </div>
-</div>
 </section>
+<?php endif; ?>
+
+<?php 
+$inDev = get_field('inhouse-developers');
+if( isset($inDev['is_enable']) && $inDev['is_enable'] == "yes" ) :
+?>
 <section class="team-engage bg-cream padding-b-120 padding-t-120">
-<div class="container">
-  <div class="head-txt text-center">
-    <h2>A team of <strong>1050+</strong> For any kind of Engagement</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  <div class="container">
+    <div class="head-txt text-center"><?php echo $inDev['section_heading']; ?></div>
+    <div class="dis-flex justify-sb items-center process-row margin-t-80">
+      <div class="col-right content-col">
+        <div class="process-step">
+          <?php 
+          if($inDev['rows']){
+          foreach( $inDev['rows'] as $row ){
+          echo '<div class="step-sec dis-flex">
+            <div class="step-icon">'.pxlGetPtag($row['icon']).'</div>
+            <div class="step-desc">'.$row['text'].'</div>
+          </div>';
+          }  
+          } 
+          ?>
+        </div>
+        <a class="yellow-btn" href="#">Contact Us Now</a>
+      </div>
+      <div class="col-left"><?php echo pxlGetPtag( $inDev['image'] ); ?></div>
+    </div>
   </div>
-  <div class="dis-flex justify-sb items-center process-row margin-t-80">
-    <div class="col-right content-col">
-      <div class="process-step">
-        <div class="step-sec dis-flex">
-          <div class="step-icon">
+</section>
+<?php endif; ?>
+
+<?php 
+$hireStep = get_field('col-hirestep');
+if( isset($hireStep['is_enable']) && $hireStep['is_enable'] == "yes" ) :
+?>
+<section class="step-icon-img-section  padding-t-120 padding-b-120">
+  <div class="container">
+    <div class="head-txt text-center">
+    <?php echo $hireStep['content']; ?>        
+    </div>
+    <div class="our-process margin-t-100">
+      <picture  class="desktop">
+        <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hiring-image.png">
+        <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hiring-image.png">
+        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hiring-image.png" alt="Valuecoders">
+      </picture>
+      <div class="dis-flex col-box-outer margin-t-80">
+        <div class="flex-4">
+          <div class="box">
             <picture>
-              <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/team-01.png">
-              <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/team-01.png">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/team-01.png" alt="Valuecoders" width="50"
-                height="50">
+              <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-01.png">
+              <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-01.png">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-01.png" alt="Valuecoders" width="39"
+                height="39">
             </picture>
-          </div>
-          <div class="step-desc">
-            <h3>Staff Augementation</h3>
-            <p>Instantly expand your team with our skilled software developers, working directly under your management.</p>
+            <span class="step">STEP-1</span>
+            <h3>Inquiry</h3>
+            <p>We get on a call to understand your requirements and evaluate mutual fitment.</p>
           </div>
         </div>
-        <div class="step-sec dis-flex">
-          <div class="step-icon">
+        <div class="flex-4">
+          <div class="box">
             <picture>
-              <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/team-01.png">
-              <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/team-01.png">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/team-01.png" alt="Valuecoders" width="50"
-                height="50">
+              <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-02.png">
+              <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-02.png">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-02.png" alt="Valuecoders" width="39"
+                height="39">
             </picture>
-          </div>
-          <div class="step-desc">
-            <h3>Software Development Teams</h3>
-            <p>Access dedicated, pre-built teams with the exact expertise your project needs, integrating seamlessly with your organization.</p>
+            <span class="step">STEP-2</span>
+            <h3>Select Developers</h3>
+            <p>We give you access to our 650+ skilled developers to personally interview and select the best candidate for your team.</p>
           </div>
         </div>
-        <div class="step-sec dis-flex">
-          <div class="step-icon">
+        <div class="flex-4">
+          <div class="box">
             <picture>
-              <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/team-01.png">
-              <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/team-01.png">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/team-01.png" alt="Valuecoders" width="50"
-                height="50">
+              <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-03.png">
+              <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-03.png">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-03.png" alt="Valuecoders" width="39"
+                height="39">
             </picture>
+            <span class="step">STEP-3</span>
+            <h3>Team Integration</h3>
+            <p>Our developers are now a part of your team. Assign tasks and receive daily updates for seamless collaboration and accountability.</p>
           </div>
-          <div class="step-desc">
-            <h3>Software Outsourcing</h3>
-            <p>Entrust your entire software project to us—from concept to launch and beyond. We build and deliver within timeline.</p>
+        </div>
+        <div class="flex-4">
+          <div class="box">
+            <picture>
+              <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-04.png">
+              <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-04.png">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-04.png" alt="Valuecoders" width="39"
+                height="39">
+            </picture>
+            <span class="step">STEP-4</span>
+            <h3>Team Scaling</h3>
+            <p>We provide you with the flexibility to scale your team, whether it be expanding or reducing team size.</p>
           </div>
         </div>
       </div>
-      <a class="yellow-btn" href="#">Contact Us Now</a>
     </div>
-    <div class="col-left">
-      <picture>
-        <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/team-main.png">
-        <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/team-main.png">
-        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/team-main.png" alt="Valuecoders" width="607"
-          height="540">
-      </picture>
+  </div>
+</section>
+<?php endif; ?>
+
+<?php 
+$hireModel = get_field('hire-model');
+if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
+?>    
+<section class="three-column-icon-section bg-cream padding-t-120 padding-b-120">
+<div class="container">
+  <div class="head-txt text-center"><?php echo $hireModel['content']; ?></div>
+  <div class="dis-flex col-box-outer margin-t-60">
+    <div class="flex-3 box-3">
+      <div class="box">
+        <picture>
+          <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/light-dot-net-modal-icon-1.webp">
+          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/light-dot-net-modal-icon-1.png">
+          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/light-dot-net-modal-icon-1.png" alt="Valuecoders"
+            width="64" height="61">
+        </picture>
+        <h3>Dedicated Team</h3>
+        <div class="content-box">
+          <p>It is an expert autonomous team comprising of different roles (e.g. project manager,
+            software engineers, QA engineers, and other roles) capable of delivering technology
+            solutions rapidly and efficiently. The roles are defined for each specific project and
+            management is conducted jointly by a Scrum Master and the client's product owner.
+          </p>
+          <ul>
+            <li>Agile processes</li>
+            <li>Transparent pricing</li>
+            <li>Monthly billing</li>
+            <li>Maximum flexibility</li>
+            <li>Suitable for startups, MVPs and software </li>
+            <li>product companies</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="flex-3 box-3">
+      <div class="box">
+        <picture>
+          <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/light-dot-net-modal-icon-2.webp">
+          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/light-dot-net-modal-icon-2.png">
+          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/light-dot-net-modal-icon-2.png" alt="Valuecoders"
+            width="64" height="61">
+        </picture>
+        <h3>Team Augmentation</h3>
+        <div class="content-box">
+          <p>Suitable for every scale of business and project, team augmentation helps add required
+            talent to you team to fill the talent gap. The augmented team members work as part of
+            your local or distributed team, attending your regular daily meetings and reporting
+            directly to your managers. This helps businesses scale immediately and on-demand.
+          </p>
+          <ul>
+            <li>Scale on-demand</li>
+            <li>Quick & cost-effective</li>
+            <li>Monthly billing</li>
+            <li>Avoid hiring hassles</li>
+            <li>Transparent pricing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="flex-3 box-3">
+      <div class="box">
+        <picture>
+          <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/light-dot-net-modal-icon-3.webp">
+          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/light-dot-net-modal-icon-3.png">
+          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/light-dot-net-modal-icon-3.png" alt="Valuecoders"
+            width="64" height="61">
+        </picture>
+        <h3>Project Based</h3>
+        <div class="content-box">
+          <span class="content-head">Fixed Price Model:</span>
+          <p>When project specifications, scope, deliverables and acceptance criteria are clearly
+            defined, we can evaluate and offer a fixed quote for the project. This is mostly
+            suitable for small-mid scale projects with well documented specifications.
+          </p>
+          <span class="content-head">Time & Material Model:</span>
+          <p>Suitable for projects that have undefined or dynamic scope requirements or complicated
+            business requirements due to which the cost estimation is not possible. Therefore,
+            developers can be hired per their time.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 </section>
-<section class="step-icon-img-section  padding-t-120 padding-b-120">
-      <div class="container">
-        <div class="head-txt text-center">
-          <h2>Hire Software Developers In 4 Easy Steps</h2>
-          <p>Below are the simple steps we follow when you decide to hire our dedicated software developers who are adept at delivering dynamic, custom, and scalable solution</p>
+<?php endif; ?>
+<section class="contact-us-section padding-t-120 padding-b-60">
+  <div class="container">
+    <div class="dis-flex justify-sb">
+      <div class="left-box">
+        <h2>Talk To Our Consultants</h2>
+        <p>Get Custom Solutions & Recommendations, Estimates.</p>
+        <div class="side-dash1 list-box">
+          <h3>Fill up your details</h3>
+          <p>Your data is 100% confidential
         </div>
-        <div class="our-process margin-t-100">
-          <picture  class="desktop">
-            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hiring-image.png">
-            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hiring-image.png">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hiring-image.png" alt="Valuecoders">
-          </picture>
-          <div class="dis-flex col-box-outer margin-t-80">
-            <div class="flex-4">
-              <div class="box">
-                <picture>
-                  <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-01.png">
-                  <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-01.png">
-                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-01.png" alt="Valuecoders" width="39"
-                    height="39">
-                </picture>
-                <span class="step">STEP-1</span>
-                <h3>Inquiry</h3>
-                <p>We get on a call to understand your requirements and evaluate mutual fitment.</p>
-              </div>
-            </div>
-            <div class="flex-4">
-              <div class="box">
-                <picture>
-                  <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-02.png">
-                  <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-02.png">
-                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-02.png" alt="Valuecoders" width="39"
-                    height="39">
-                </picture>
-                <span class="step">STEP-2</span>
-                <h3>Select Developers</h3>
-                <p>We give you access to our 650+ skilled developers to personally interview and select the best candidate for your team.</p>
-              </div>
-            </div>
-            <div class="flex-4">
-              <div class="box">
-                <picture>
-                  <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-03.png">
-                  <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-03.png">
-                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-03.png" alt="Valuecoders" width="39"
-                    height="39">
-                </picture>
-                <span class="step">STEP-3</span>
-                <h3>Team Integration</h3>
-                <p>Our developers are now a part of your team. Assign tasks and receive daily updates for seamless collaboration and accountability.</p>
-              </div>
-            </div>
-            <div class="flex-4">
-              <div class="box">
-                <picture>
-                  <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-04.png">
-                  <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-04.png">
-                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/hd-04.png" alt="Valuecoders" width="39"
-                    height="39">
-                </picture>
-                <span class="step">STEP-4</span>
-                <h3>Team Scaling</h3>
-                <p>We provide you with the flexibility to scale your team, whether it be expanding or reducing team size.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="three-column-icon-section bg-cream padding-t-120 padding-b-120">
-      <div class="container">
-        <div class="head-txt text-center">
-          <h2>Choose From Our Hiring Models</h2>
-          <p>With us, you can choose from multiple hiring models that best suit your needs.</p>
-        </div>
-        <div class="dis-flex col-box-outer margin-t-60">
-          <div class="flex-3 box-3">
-            <div class="box">
+        <div class="side-dash2 list-box">
+          <h3>What’s next?</h3>
+          <p>One of our Account Managers will contact you<br> shortly</p>
+          <div class="dis-flex  items-center award-logo">
+            <div class="logo-box">
               <picture>
-                <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/light-dot-net-modal-icon-1.webp">
-                <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/light-dot-net-modal-icon-1.png">
-                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/light-dot-net-modal-icon-1.png" alt="Valuecoders"
-                  width="64" height="61">
+                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/fimage-01.svg" alt="Valuecoders" width="41" height="40"> 
               </picture>
-              <h3>Dedicated Team</h3>
-              <div class="content-box">
-                <p>It is an expert autonomous team comprising of different roles (e.g. project manager,
-                  software engineers, QA engineers, and other roles) capable of delivering technology
-                  solutions rapidly and efficiently. The roles are defined for each specific project and
-                  management is conducted jointly by a Scrum Master and the client's product owner.
-                </p>
-                <ul>
-                  <li>Agile processes</li>
-                  <li>Transparent pricing</li>
-                  <li>Monthly billing</li>
-                  <li>Maximum flexibility</li>
-                  <li>Suitable for startups, MVPs and software </li>
-                  <li>product companies</li>
-                </ul>
-              </div>
             </div>
-          </div>
-          <div class="flex-3 box-3">
-            <div class="box">
+            <div class="logo-box">
               <picture>
-                <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/light-dot-net-modal-icon-2.webp">
-                <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/light-dot-net-modal-icon-2.png">
-                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/light-dot-net-modal-icon-2.png" alt="Valuecoders"
-                  width="64" height="61">
+                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/fimage-02.svg" alt="Valuecoders" width="41" height="40"> 
               </picture>
-              <h3>Team Augmentation</h3>
-              <div class="content-box">
-                <p>Suitable for every scale of business and project, team augmentation helps add required
-                  talent to you team to fill the talent gap. The augmented team members work as part of
-                  your local or distributed team, attending your regular daily meetings and reporting
-                  directly to your managers. This helps businesses scale immediately and on-demand.
-                </p>
-                <ul>
-                  <li>Scale on-demand</li>
-                  <li>Quick & cost-effective</li>
-                  <li>Monthly billing</li>
-                  <li>Avoid hiring hassles</li>
-                  <li>Transparent pricing</li>
-                </ul>
-              </div>
             </div>
-          </div>
-          <div class="flex-3 box-3">
-            <div class="box">
+            <div class="logo-box">
               <picture>
-                <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/light-dot-net-modal-icon-3.webp">
-                <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/light-dot-net-modal-icon-3.png">
-                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/light-dot-net-modal-icon-3.png" alt="Valuecoders"
-                  width="64" height="61">
+                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/fimage-03.svg" alt="Valuecoders" width="41" height="40"> 
               </picture>
-              <h3>Project Based</h3>
-              <div class="content-box">
-                <span class="content-head">Fixed Price Model:</span>
-                <p>When project specifications, scope, deliverables and acceptance criteria are clearly
-                  defined, we can evaluate and offer a fixed quote for the project. This is mostly
-                  suitable for small-mid scale projects with well documented specifications.
-                </p>
-                <span class="content-head">Time & Material Model:</span>
-                <p>Suitable for projects that have undefined or dynamic scope requirements or complicated
-                  business requirements due to which the cost estimation is not possible. Therefore,
-                  developers can be hired per their time.
-                </p>
-              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <section class="contact-us-section padding-t-120 padding-b-60">
+      <div class="right-box">
+        <form id="contact-form-section" action="https://www.valuecoders.com/staging/sendmail1.php" class="contact-form-section" enctype="multipart/form-data" method="POST" onsubmit="vcCmnFormValidation(false); return false;">
+          <div class="form-inner dis-flex">
+            <div class="form-text-cont">
+              <div class="user-input">
+                <label>Full Name</label>
+                <input type="text" autocomplete="off" id="cont_name" placeholder="Full Name" class="input-field" value="" name="user-name">
+                <small>Error Message</small>
+              </div>
+            </div>
+            <div class="form-text-cont">
+              <div class="user-input">
+                <label>Email Address</label>
+                <input type="text" autocomplete="off" id="cont_email" placeholder="Email Address" class="input-field" value="" name="user-email">
+                <small>Error Message</small>
+              </div>
+            </div>
+            <div class="form-text-cont">
+              <div class="user-input">
+                <label>Phone Number</label>
+                <input type="text" autocomplete="off" class="input-field" id="cont_phpne" placeholder="Phone Number (Optional)" value="" name="user-phone">
+                <small>Error Message</small>
+              </div>
+            </div>
+            <div class="form-text-cont cont_country_section">
+              <div class="user-input">
+                <label>Country</label>
+                <input class="input-field input-skype" autocomplete="off" id="cont_country" type="text" placeholder="Country" value="" name="user-country">
+                <small>Error Message</small>
+              </div>
+            </div>
+            <div class="form-text-cont width-full">
+              <label>Description</label>
+              <div class="user-input">
+                <textarea class="input-field comment-input" autocomplete="off" id="user-req" placeholder="Project Brief" name="user-req"></textarea>
+                <small>Error Message</small>
+                <div class="drop-input attachment_brw" id="uploadcontact">
+                  <div id="dropcontact"></div>
+                </div>
+                <div id="drop-area">
+                  <input type="file" name="files[]" id="fileElem" multiple="" accept="image/*,application/pdf,.psd,.zip,.docx,.xlsx,.xls,.txt" onchange="handleFiles(this.files)">
+                  <button class="button" id="browse-btn" type="button" onclick="document.getElementById('fileElem').click()">Browse | Drop Files Here</button>
+                  <input type="hidden" name="up-counter" id="uplcounter" value="0">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="gloader" class="gal-loader">
+            <div class="loader"></div>
+            <div id="gallery"></div>
+          </div>
+          <p id="file-type-error"></p>
+          <div class="form-group justify-right">
+            <div class="btn-sec">
+              <div class="user-input cta-btn checkout">
+                <div class="user-input btn rounded checkout">
+                  <input type="submit" id="submitButton" class="checkout-submit" value="Enquire Now">
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="footer-sec margin-t-60">
+    <div class="footer-top address-sec">
       <div class="container">
-        <div class="dis-flex justify-sb">
-          <div class="left-box">
-            <h2>Talk To Our Consultants</h2>
-            <p>Get Custom Solutions & Recommendations, Estimates.</p>
-            <div class="side-dash1 list-box">
-              <h3>Fill up your details</h3>
-              <p>Your data is 100% confidential
-            </div>
-            <div class="side-dash2 list-box">
-              <h3>What’s next?</h3>
-              <p>One of our Account Managers will contact you<br> shortly</p>
-              <div class="dis-flex  items-center award-logo">
-                <div class="logo-box">
-                  <picture>
-                    <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/fimage-01.svg" alt="Valuecoders" width="41" height="40"> 
-                  </picture>
-                </div>
-                <div class="logo-box">
-                  <picture>
-                    <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/fimage-02.svg" alt="Valuecoders" width="41" height="40"> 
-                  </picture>
-                </div>
-                <div class="logo-box">
-                  <picture>
-                    <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/fimage-03.svg" alt="Valuecoders" width="41" height="40"> 
-                  </picture>
-                </div>
-              </div>
-            </div>
+        <div class="dis-flex">
+          <div class="flex-4">
+            <p><strong>Our Offices:</strong></p>
           </div>
-          <div class="right-box">
-            <form id="contact-form-section" action="https://www.valuecoders.com/staging/sendmail1.php" class="contact-form-section" enctype="multipart/form-data" method="POST" onsubmit="vcCmnFormValidation(false); return false;">
-              <div class="form-inner dis-flex">
-                <div class="form-text-cont">
-                  <div class="user-input">
-                    <label>Full Name</label>
-                    <input type="text" autocomplete="off" id="cont_name" placeholder="Full Name" class="input-field" value="" name="user-name">
-                    <small>Error Message</small>
-                  </div>
-                </div>
-                <div class="form-text-cont">
-                  <div class="user-input">
-                    <label>Email Address</label>
-                    <input type="text" autocomplete="off" id="cont_email" placeholder="Email Address" class="input-field" value="" name="user-email">
-                    <small>Error Message</small>
-                  </div>
-                </div>
-                <div class="form-text-cont">
-                  <div class="user-input">
-                    <label>Phone Number</label>
-                    <input type="text" autocomplete="off" class="input-field" id="cont_phpne" placeholder="Phone Number (Optional)" value="" name="user-phone">
-                    <small>Error Message</small>
-                  </div>
-                </div>
-                <div class="form-text-cont cont_country_section">
-                  <div class="user-input">
-                    <label>Country</label>
-                    <input class="input-field input-skype" autocomplete="off" id="cont_country" type="text" placeholder="Country" value="" name="user-country">
-                    <small>Error Message</small>
-                  </div>
-                </div>
-                <div class="form-text-cont width-full">
-                  <label>Description</label>
-                  <div class="user-input">
-                    <textarea class="input-field comment-input" autocomplete="off" id="user-req" placeholder="Project Brief" name="user-req"></textarea>
-                    <small>Error Message</small>
-                    <div class="drop-input attachment_brw" id="uploadcontact">
-                      <div id="dropcontact"></div>
-                    </div>
-                    <div id="drop-area">
-                      <input type="file" name="files[]" id="fileElem" multiple="" accept="image/*,application/pdf,.psd,.zip,.docx,.xlsx,.xls,.txt" onchange="handleFiles(this.files)">
-                      <button class="button" id="browse-btn" type="button" onclick="document.getElementById('fileElem').click()">Browse | Drop Files Here</button>
-                      <input type="hidden" name="up-counter" id="uplcounter" value="0">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="gloader" class="gal-loader">
-                <div class="loader"></div>
-                <div id="gallery"></div>
-              </div>
-              <p id="file-type-error"></p>
-              <div class="form-group justify-right">
-                <div class="btn-sec">
-                  <div class="user-input cta-btn checkout">
-                    <div class="user-input btn rounded checkout">
-                      <input type="submit" id="submitButton" class="checkout-submit" value="Enquire Now">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
+          <div class="flex-4">
+            <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/us-flag.svg" alt="Valuecoders" width="33" height="24"><strong>US</strong></p>
+            <p>5900 Balcones Drive, STE 100, Austin, TX 78731, USA</p>
+          </div>
+          <div class="flex-4">
+            <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/uk-flag.svg" alt="Valuecoders" width="33" height="24"><strong>UK</strong></p>
+            <p>167-169 Great Portland Street, 5th Floor, London W1W 5PF, UK</p>
+          </div>
+          <div class="flex-4">
+            <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/india-flag.svg" alt="Valuecoders" width="33" height="24"><strong>INDIA</strong></p>
+            <p>2nd Floor, 55P, Sector 44, Gurugram 122003, Haryana, India</p>
+          </div>
+          <div class="flex-4">
+            <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/india-flag.svg" alt="Valuecoders" width="33" height="24"><strong>INDIA</strong></p>
+            <p>11th Floor, Max Square, Noida-Greater Noida Expy, Sector 129, Noida, Uttar Pradesh 201304</p>
           </div>
         </div>
       </div>
-      <div class="footer-sec margin-t-60">
-        <div class="footer-top address-sec">
-          <div class="container">
-            <div class="dis-flex">
-              <div class="flex-4">
-                <p><strong>Our Offices:</strong></p>
-              </div>
-              <div class="flex-4">
-                <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/us-flag.svg" alt="Valuecoders" width="33" height="24"><strong>US</strong></p>
-                <p>5900 Balcones Drive, STE 100, Austin, TX 78731, USA</p>
-              </div>
-              <div class="flex-4">
-                <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/uk-flag.svg" alt="Valuecoders" width="33" height="24"><strong>UK</strong></p>
-                <p>167-169 Great Portland Street, 5th Floor, London W1W 5PF, UK</p>
-              </div>
-              <div class="flex-4">
-                <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/india-flag.svg" alt="Valuecoders" width="33" height="24"><strong>INDIA</strong></p>
-                <p>2nd Floor, 55P, Sector 44, Gurugram 122003, Haryana, India</p>
-              </div>
-              <div class="flex-4">
-                <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/india-flag.svg" alt="Valuecoders" width="33" height="24"><strong>INDIA</strong></p>
-                <p>11th Floor, Max Square, Noida-Greater Noida Expy, Sector 129, Noida, Uttar Pradesh 201304</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
+  </div>
 </section>
 <?php get_footer(); ?>
