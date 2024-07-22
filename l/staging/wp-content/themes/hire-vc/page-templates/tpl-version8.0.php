@@ -123,71 +123,43 @@ alt="Valuecoders" width="449" height="637">
     <h2>What People Say After Using Our Services</h2>
     <p>We always on delivering best-in-class app development services that will be loved by our clients.</p>
   </div>
-  <div class="glider-contain customer-testimonial-slider">
-    <div class="glider" id="glider">
-      <div class="slide-item">
-        <div class="content-box-outer">
-          <div class="content-box">
-            <p>We have been working with ValueCoders for the last year now and have deployed multiple developers at different points in time. We are really happy with the support we get from ValueCoders and the resources they provide.</p>
-          </div>
-          <div class="cust-img-box dis-flex">
-            <div class="profile">
-              <picture>
-                <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/profile-small-1.webp">
-                <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/profile-small-1.png">
-                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/profile-small-1.png" alt="Valuecoders" width="48" height="48">
-              </picture>
+  <?php 
+    // if( $isDmPage === true ){
+    //   $clReviews = get_field('dm-client-reviews');
+    // }else{
+    //   $clReviews = get_field('client-review-v4', 'option');  
+    // }
+    
+    $clReviews = get_field('client-review-v4', 'option');
+    if( $clReviews ){ 
+    ?>
+    <div class="glider-contain customer-testimonial-slider">
+      <div class="glider" id="why-glider">
+        <?php 
+        foreach( $clReviews as $row){ 
+        $rating = ( isset($row['rating']) && !empty($row['rating']) ) ? $row['rating'] : 5;
+        ?>
+        <div class="slide-item">
+          <div class="content-box-outer">
+            <div class="content-box<?php echo " str-".$rating; ?>">
+              <p><?php echo $row['content']; ?></p>
             </div>
-            <div class="profile-text">
-              <h5>Darrell Steward</h5>
-              <h6>President & CEO MasterCard</h6>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="slide-item">
-        <div class="content-box-outer">
-          <div class="content-box">
-            <p>We have been working with ValueCoders for the last year now and have deployed multiple developers at different points in time. We are really happy with the support we get from ValueCoders and the resources they provide.</p>
-          </div>
-          <div class="cust-img-box dis-flex">
-            <div class="profile">
-              <picture>
-                <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/profile-small-1.webp">
-                <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/profile-small-1.png">
-                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/profile-small-1.png" alt="Valuecoders" width="48" height="48">
-              </picture>
-            </div>
-            <div class="profile-text">
-              <h5>Darrell Steward</h5>
-              <h6>President & CEO MasterCard</h6>
+            <div class="cust-img-box dis-flex">
+              <div class="profile">
+              <?php echo pxlGetPtag($row['thumbnail']); ?>
+              </div>
+              <div class="profile-text">
+                <h5><?php echo $row['client_name']; ?></h5>
+                <h6><?php echo $row['designation']; ?></h6>
+              </div>
             </div>
           </div>
         </div>
+        <?php } ?>
       </div>
-      <div class="slide-item">
-        <div class="content-box-outer">
-          <div class="content-box">
-            <p>We have been working with ValueCoders for the last year now and have deployed multiple developers at different points in time. We are really happy with the support we get from ValueCoders and the resources they provide.</p>
-          </div>
-          <div class="cust-img-box dis-flex">
-            <div class="profile">
-              <picture>
-                <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/profile-small-1.webp">
-                <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/profile-small-1.png">
-                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/profile-small-1.png" alt="Valuecoders" width="48" height="48">
-              </picture>
-            </div>
-            <div class="profile-text">
-              <h5>Darrell Steward</h5>
-              <h6>President & CEO MasterCard</h6>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div role="tablist" class="dots"></div>
     </div>
-    <div role="tablist" class="dots"></div>
-  </div>
+    <?php } ?>
 </div>
 </section>
 
