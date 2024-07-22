@@ -1658,7 +1658,7 @@ header {
               font-size: 14px;
               height: 125px; }
               .banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input .comment-input {
-                height: 50px;
+                height: 58px;
                 resize: none;
                 background: 0 0;
                 outline: 0;
@@ -2741,6 +2741,52 @@ header {
       list-style-type: none; }
       .not-found-section ul li a {
         color: #60b741; }
+
+#gallery {
+  margin-bottom: 15px; }
+
+#gallery div {
+  display: inline-flex;
+  margin-right: 10px;
+  vertical-align: baseline;
+  align-items: flex-start;
+  position: relative;
+  transition: all 0.3s ease-in-out; }
+
+#gallery div button,
+#gallery div a {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: 0.15s ease-in-out;
+  background: url(../v8/images/cross-con.svg);
+  background-size: 11px;
+  width: 17px;
+  height: 17px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: 0;
+  font-size: 0;
+  background-color: transparent;
+  border-radius: 100%; }
+
+#gallery div button:focus,
+#gallery div a:focus {
+  background-color: #f30909; }
+
+.ad-file {
+  font-size: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 50px;
+  padding: 4px 30px 4px 10px;
+  background: #f8f8f8;
+  font-weight: 500;
+  position: relative;
+  margin-right: 10px;
+  margin-bottom: 8px; }
 
 @media only screen and (max-width: 1780px) {
   .customer-testimonial-section .glider-slide {
