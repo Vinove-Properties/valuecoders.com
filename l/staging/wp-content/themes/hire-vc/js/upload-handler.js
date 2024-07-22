@@ -176,7 +176,7 @@ function uploadFile(file, i) {
     xhttp.onload = function(event){
         if (xhttp.status == 200) {
             let response =  JSON.parse(xhttp.responseText);             
-            console.log( file.name );
+            // console.log( file.name );
             const fileName = file.name;
             const dotIndex = fileName.lastIndexOf('.');
             const baseName = fileName.substring(0, dotIndex);
