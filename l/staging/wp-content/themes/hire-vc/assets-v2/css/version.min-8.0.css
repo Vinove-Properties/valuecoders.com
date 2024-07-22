@@ -886,10 +886,10 @@ header {
   margin-top: 20px;
   text-align: center; }
 
-.popup-box .form-pop-up-box .form-center .form-box-outer .form-wrap .form-section .form-text-cont user-input.verror small {
+.popup-box .form-pop-up-box .form-center .form-box-outer .form-wrap .form-section .form-text-cont .user-input.verror small {
   display: block; }
 
-.popup-box .form-pop-up-box .form-center .form-box-outer .form-wrap .form-section .form-text-cont user-input.verror .input-field {
+.popup-box .form-pop-up-box .form-center .form-box-outer .form-wrap .form-section .form-text-cont .user-input.verror .input-field {
   border-color: #dc0019 !important; }
 
 @media only screen and (max-width: 1600px) {
