@@ -1,6 +1,7 @@
 <?php
 if ( ! defined( '_S_VERSION' ) ) {
-	define( '_S_VERSION', '78.78.78' );
+	//define( '_S_VERSION', '78.78.78' );
+	define( '_S_VERSION', time() );
 }
 
 define('STRIPE_API_KEY', 'sk_test_51Mt4aUSB8zDjzgImRCeo3CTCBR1qbEuZJm2INaffVWiakEtpuKE9eYfYjCY6eNRkN20mij37ZurQ7QBaDzYEJRgF00hVPE3WLF'); 
