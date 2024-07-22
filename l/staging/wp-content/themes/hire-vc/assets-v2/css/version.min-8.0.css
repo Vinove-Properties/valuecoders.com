@@ -2808,8 +2808,13 @@ header {
   left: 50%;
   display: none; }
 
-.gal-loader.active {
+.gal-loader.active .loader {
   display: block; }
+
+#drop-area .button:focus {
+  background: rgba(76, 76, 76, 0.7);
+  opacity: 0.8;
+  color: #fff !important; }
 
 @media only screen and (max-width: 1780px) {
   .customer-testimonial-section .glider-slide {
