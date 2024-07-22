@@ -1194,14 +1194,14 @@ header {
     padding-right: 0; }
   .contact-us-section .gal-loader {
     margin-bottom: 15px; }
-  .contact-us-section .gal-loader div {
+  .contact-us-section #gallery-fo div {
     display: inline-flex;
     margin-right: 10px;
     vertical-align: baseline;
     align-items: flex-start;
     position: relative;
     transition: all 0.3s ease-in-out; }
-  .contact-us-section #gallery div button,
+  .contact-us-section #gallery-fo div button,
   .contact-us-section #gallery-fo div a {
     content: "";
     display: block;
@@ -2728,7 +2728,7 @@ header {
 .gal-loader {
   margin-bottom: 15px; }
 
-.gal-loader div {
+#gallery div {
   display: inline-flex;
   margin-right: 10px;
   vertical-align: baseline;
