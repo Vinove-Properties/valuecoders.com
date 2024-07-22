@@ -148,10 +148,12 @@ function vc_l7_scripts(){
     	wp_enqueue_script( 'v6-validation-pop', get_stylesheet_directory_uri() . '/assets-v2/js/v2-validation-pop.js', array(), _S_VERSION, true );
     }
     elseif( is_page_template( 'page-templates/tpl-version8.0.php' ) ){
-    	wp_enqueue_style( 'v8-style', get_bloginfo('template_url').'/assets-v2/css/version.min-8.0.css', array(),_S_VERSION );    	
-    	wp_enqueue_script( 'glider-script', get_stylesheet_directory_uri().'/assets-v2/js/glider.min.js', array(), _S_VERSION, true );
+    	wp_enqueue_style( 'v8-style', get_bloginfo('template_url').'/assets-v2/css/version.min-8.0.css', array(),_S_VERSION );	
+    	wp_enqueue_script( 'glider-script', get_stylesheet_directory_uri().'/assets-v2/js/glider.min.js', array(), _S_VERSION, 
+    	true );
     	wp_enqueue_script( 'v8-script', get_stylesheet_directory_uri().'/js/script-v8.js', array(), _S_VERSION, true );
     	wp_enqueue_script( 'v8-validation', get_stylesheet_directory_uri().'/js/validation-v8.js', array(), _S_VERSION, true );
+    	wp_enqueue_script( 'v8-uploads', get_stylesheet_directory_uri().'/js/upload-handler.js', array(), _S_VERSION, true );
     }
     else{	
 	if( !wp_is_mobile() ){
