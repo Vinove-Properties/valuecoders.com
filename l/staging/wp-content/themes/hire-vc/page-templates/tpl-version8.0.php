@@ -382,7 +382,7 @@ if( isset($calCall['is_enable']) && ($calCall['is_enable'] == "yes") ) :
     echo '<div class="chart-col">';
     echo $row['text'];
     if(++$i === count( $calCall['cards'] )){
-    echo '<div class="col-btn"><a class="yellow-btn" href="javascript:void(0);">Outsource to India</a></div>';
+    echo '<a class="yellow-btn" href="javascript:void(0);">Outsource to India</a>';
     }
     echo '</div>';
     }
@@ -851,7 +851,7 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
   </div>
 </section>
 <div class="popup-box">
-<div id="vc-fxdform" class="flex-2 banner-form form-pop-up-box open-pop">
+<div id="vc-fxdform" class="flex-2 banner-form form-pop-up-box">
   <div class="form-center">
     <div id="vc-frm-outer" class="form-box-outer">
       <span class="pop-close" onclick="return close_vpop();"></span>
@@ -882,37 +882,42 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
           </picture>
         </div>
         <div id="vc-fxdform" class="form-section">
-          <form action="https://www.valuecoders.com/sendmail-l7.php" onsubmit="return vcPopFormValidation();" enctype="multipart/form-data" id="cmn-pop-form" method="POST">
+          <form action="https://www.valuecoders.com/sendmail-l7.php" onsubmit="return _popFormValidator();" enctype="multipart/form-data" id="cmn-pop-form" method="POST">
             <div class="form-inner dis-flex" id="pop-form">
               <div class="form-text-cont">
                 <div class="user-input">
-                  <input type="text" id="pop-name" placeholder="Full Name" class="input-field" value="" name="user-name">
+                  <input type="text" id="po-name" placeholder="Full Name" class="input-field" value="" name="user-name">
+                  <small></small>
                 </div>
-                <small></small>
+                
               </div>
               <div class="form-text-cont">
                 <div class="user-input">
-                  <input type="text" id="pop-email" placeholder="Email Address" class="input-field" value="" name="user-email">
+                  <input type="text" id="po-email" placeholder="Email Address" class="input-field" value="" name="user-email">
+                  <small></small>
                 </div>
-                <small></small>
+                
               </div>
               <div class="form-text-cont">
                 <div class="user-input">
-                  <input type="tel" maxlength="15" id="pop-phone" class="input-field" placeholder="Phone Number (optional)" value="" name="user-phone">
+                  <input type="tel" maxlength="15" id="po-phone" class="input-field" placeholder="Phone Number (optional)" 
+                  value="" name="user-phone">
+                  <small></small>
                 </div>
-                <small></small>
+                
               </div>
               <div class="form-text-cont">
                 <div class="user-input">
-                  <input class="input-field input-skype" id="pop-country" type="text" placeholder="Country" value="" name="user-country">
-                </div>
+                <input class="input-field input-skype" id="po-country" type="text" placeholder="Country" value="" 
+                name="user-country">
                 <small></small>
+                </div>                
               </div>
               <div class="form-text-cont width-full">
                 <div class="user-input">
-                  <textarea class="input-field comment-input" id="pop-requirement" placeholder="Your Requirements" name="user-req"></textarea>
-                </div>
+                <textarea class="input-field comment-input" id="po-req" placeholder="Your Requirements" name="user-req"></textarea>
                 <small></small>
+                </div>                
               </div>
             </div>
             <div class="user-input checkout">

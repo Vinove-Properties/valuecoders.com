@@ -1,3 +1,7 @@
+function showPopForm(){
+	document.getElementById("vc-fxdform").classList.add("open-pop");
+}
+
 function showError(input, message) {
     const formControl = input.closest('div.user-input');
     formControl.classList.add("verror") ;    
@@ -248,8 +252,6 @@ function validateBannerForm(){
 	return false;
 }
 
-
-
 const ftName 	= document.getElementById('ft-name'),
 ftEmail 		= document.getElementById('ft-email'),
 ftPhone 		= document.getElementById('ft-phone'),
@@ -304,5 +306,42 @@ function _footerFormValidator(){
 	btn.disabled 	= true;
 	hForm.submit();	
 	}
+	return false;
+}
+
+const poName 	= document.getElementById('po-name'),
+poEmail 		= document.getElementById('po-email'),
+poPhone 		= document.getElementById('po-phone'),
+poCountry 		= document.getElementById('po-country'),
+poReq 			= document.getElementById('po-req');
+
+poName.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Name"));
+poName.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Name"));
+poName.addEventListener("keydown", strInputValidation.bind(null, "Please Fill Name"));
+poName.addEventListener("focusout", strInputValidation.bind(null, "Please Fill Name"));
+
+poEmail.addEventListener("keyup", checkEmailEvent.bind(poEmail));
+poEmail.addEventListener("keypress", checkEmailEvent.bind(poEmail));
+poEmail.addEventListener("keydown", checkEmailEvent.bind(poEmail));
+poEmail.addEventListener("focusout", checkEmailEvent.bind(poEmail));
+
+// poPhone.addEventListener("keyup", checkPhone.bind(poPhone));
+// poPhone.addEventListener("keypress", checkPhone.bind(poPhone));
+// poPhone.addEventListener("keydown", ws_checkphonenumber);
+// poPhone.addEventListener("focusout", checkfoucsoutPhone.bind(poPhone));
+
+poCountry.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Country"));
+poCountry.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Country"));
+poCountry.addEventListener("keydown", strInputValidation.bind(null, "Please Fill Country"));
+poCountry.addEventListener("focusout", strInputValidation.bind(null, "Please Fill Country"));
+
+
+poReq.addEventListener("keyup", checkURequirement.bind(poReq));
+poReq.addEventListener("keypress", checkURequirement.bind(poReq));
+poReq.addEventListener("keydown", checkURequirement.bind(poReq));
+poReq.addEventListener("focusout", checkURequirement.bind(poReq));
+
+function _popFormValidator(){
+	checkRequired([poName, poEmail, poCountry, poReq]);	
 	return false;
 }
