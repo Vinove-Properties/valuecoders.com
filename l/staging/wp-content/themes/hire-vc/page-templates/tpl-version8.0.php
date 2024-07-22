@@ -333,7 +333,7 @@ if( isset($whyVC['is_enable']) && ($whyVC['is_enable'] == "yes") ) :
     </div>
     <div class="margin-t-70 text-center">
       <span class="txtadd">Talk to our consultants</span>
-      <a class="yellow-btn" href="javascript:void(0);" onclick="showPopFormOp();">Contact Us Now</a>
+      <a class="yellow-btn" href="javascript:void(0);" onclick="showPopForm();">Contact Us Now</a>
     </div>
   </div>
 </section>
@@ -359,7 +359,7 @@ if( isset($hireCard['is_enable']) && ($hireCard['is_enable'] == "yes") ) :
     ?>
     <div class="margin-t-70 text-center">
       <span class="txtadd">Talk to our Consultants</span>
-      <a class="yellow-btn" href="#"><?php echo $hireCard['cta-text']; ?></a>
+      <a class="yellow-btn" onclick="showPopForm();" href="javascript:void(0);"><?php echo $hireCard['cta-text']; ?></a>
     </div>
   </div>
 </section>
@@ -382,7 +382,7 @@ if( isset($calCall['is_enable']) && ($calCall['is_enable'] == "yes") ) :
     echo '<div class="chart-col">';
     echo $row['text'];
     if(++$i === count( $calCall['cards'] )){
-    echo '<a class="yellow-btn" href="javascript:void(0);">Outsource to India</a>';
+    echo '<a class="yellow-btn" onclick="showPopForm();" href="javascript:void(0);">Outsource to India</a>';
     }
     echo '</div>';
     }
@@ -555,7 +555,7 @@ if( isset($inDev['is_enable']) && $inDev['is_enable'] == "yes" ) :
           } 
           ?>
         </div>
-        <a class="yellow-btn" href="#">Contact Us Now</a>
+        <a class="yellow-btn" onclick="showPopForm();" href="javascript:void(0);">Contact Us Now</a>
       </div>
       <div class="col-left"><?php echo pxlGetPtag( $inDev['image'] ); ?></div>
     </div>

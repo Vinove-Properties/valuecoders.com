@@ -2,6 +2,10 @@ function showPopForm(){
 	document.getElementById("vc-fxdform").classList.add("open-pop");
 }
 
+function close_vpop(){
+	document.getElementById("vc-fxdform").classList.remove("open-pop");
+}
+
 function showError(input, message) {
     const formControl = input.closest('div.user-input');
     formControl.classList.add("verror") ;    
