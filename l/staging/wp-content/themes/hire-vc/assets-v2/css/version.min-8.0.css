@@ -1098,7 +1098,7 @@ header {
     overflow-y: auto;
     padding: 0; }
     .contact-us-section .comment-input:focus {
-      border: 1px solid transparent; }
+      border: 1px solid transparent !important; }
   .contact-us-section .drop-input {
     position: relative;
     bottom: 0;
@@ -1192,83 +1192,75 @@ header {
   .contact-us-section .form-text-cont.width-full {
     flex-basis: 100%;
     padding-right: 0; }
-  .contact-us-section #drop-area {
-    border: none;
-    margin-top: 2px;
-    display: inline-block;
+  .contact-us-section .dropzone {
+    margin-bottom: 15px; }
+  .contact-us-section .dropzone div {
+    display: inline-flex;
+    margin-right: 10px;
+    vertical-align: baseline;
+    align-items: flex-start;
     position: relative;
-    bottom: 0;
-    padding: 0; }
-    .contact-us-section #drop-area .button {
-      background: rgba(217, 217, 217, 0.32);
-      color: #414040;
-      font-weight: 500;
-      text-decoration: none;
-      padding: 5px 10px;
-      border: 1.8px solid #d1d1e1;
-      font-size: 14px;
-      border-radius: 5px;
-      line-height: 1.4;
-      appearance: none;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-      letter-spacing: 0.5px;
-      opacity: 0.8; }
-      .contact-us-section #drop-area .button:hover {
-        background: rgba(217, 217, 217, 0.8);
-        opacity: 1; }
-      .contact-us-section #drop-area .button:focus {
-        background: rgba(76, 76, 76, 0.7);
-        color: #ffffff; }
-  .contact-us-section #gallery {
+    transition: all 0.3s ease-in-out; }
+  .contact-us-section .dropzone div button,
+  .contact-us-section .dropzone div a {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    transition: 0.15s ease-in-out;
+    background: url(../images/v8/cross-con.svg);
+    background-size: 11px;
+    width: 17px;
+    height: 17px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: 0;
+    font-size: 0;
+    background-color: transparent;
+    border-radius: 100%; }
+  .contact-us-section .dropzone div button:focus,
+  .contact-us-section .dropzone div a:focus {
+    background-color: #f30909; }
+  .contact-us-section .ad-file {
+    font-size: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    padding: 4px 30px 4px 10px;
+    background: #f8f8f8;
+    font-weight: 500;
+    position: relative;
+    margin-right: 10px;
     margin-bottom: 8px; }
-    .contact-us-section #gallery div {
-      display: inline-flex;
-      margin-right: 10px;
-      vertical-align: baseline;
-      align-items: flex-start;
-      position: relative;
-      transition: all 0.3s ease-in-out; }
-      .contact-us-section #gallery div button,
-      .contact-us-section #gallery div a {
-        text-decoration: none;
-        background: #ffb81d;
-        padding: 4px;
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
-        vertical-align: middle;
-        color: #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 12px;
-        position: absolute;
-        right: 0;
-        cursor: pointer;
-        border: 0; }
-        .contact-us-section #gallery div button:focus,
-        .contact-us-section #gallery div a:focus {
-          background: #f30909; }
-  .contact-us-section #file-type-error {
-    font-size: 13px;
-    color: #dc0019;
-    margin-bottom: 10px; }
+  .contact-us-section .gal-loader {
+    position: relative;
+    margin: 10px 0 0; }
   .contact-us-section .loader {
     border: 5px solid #9f9f9f;
     border-radius: 50%;
     border-top: 5px solid #3498db;
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
     margin-bottom: 10px;
     margin-right: 10px;
     display: inline-block;
     position: absolute;
-    top: 22px;
+    top: 0px;
     left: 50%;
     display: none; }
+  .contact-us-section .gal-loader.active .loader {
+    display: block; }
+  .contact-us-section .user-input .button:focus {
+    background: rgba(76, 76, 76, 0.7) !important;
+    opacity: 0.8 !important;
+    color: #fff !important; }
+  .contact-us-section #file-type-error {
+    font-size: 13px;
+    color: #dc0019;
+    margin-bottom: 10px; }
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg); }
@@ -1279,18 +1271,6 @@ header {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
-  .contact-us-section .gal-loader {
-    position: relative;
-    padding: 20px;
-    margin-bottom: 15px;
-    display: none; }
-    .contact-us-section .gal-loader.active {
-      background: rgba(0, 0, 0, 0.1); }
-      .contact-us-section .gal-loader.active .loader {
-        display: block; }
-    .contact-us-section .gal-loader.show-me {
-      display: block;
-      min-height: 100px; }
   .contact-us-section .autocomplete-items {
     display: none; }
     .contact-us-section .autocomplete-items.has-data {
@@ -2742,10 +2722,13 @@ header {
       .not-found-section ul li a {
         color: #60b741; }
 
-#gallery {
+.banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input.verror .comment-input {
+  border-color: red; }
+
+.dropzone {
   margin-bottom: 15px; }
 
-#gallery div {
+.dropzone div {
   display: inline-flex;
   margin-right: 10px;
   vertical-align: baseline;
@@ -2753,8 +2736,8 @@ header {
   position: relative;
   transition: all 0.3s ease-in-out; }
 
-#gallery div button,
-#gallery div a {
+.dropzone div button,
+.dropzone div a {
   content: "";
   display: block;
   position: absolute;
@@ -2773,8 +2756,8 @@ header {
   background-color: transparent;
   border-radius: 100%; }
 
-#gallery div button:focus,
-#gallery div a:focus {
+.dropzone div button:focus,
+.dropzone div a:focus {
   background-color: #f30909; }
 
 .ad-file {
@@ -2811,7 +2794,7 @@ header {
 .gal-loader.active .loader {
   display: block; }
 
-#drop-area .button:focus {
+.user-input .button:focus {
   background: rgba(76, 76, 76, 0.7) !important;
   opacity: 0.8 !important;
   color: #fff !important; }
