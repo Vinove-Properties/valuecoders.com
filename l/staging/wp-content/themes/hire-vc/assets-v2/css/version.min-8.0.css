@@ -1192,17 +1192,17 @@ header {
   .contact-us-section .form-text-cont.width-full {
     flex-basis: 100%;
     padding-right: 0; }
-  .contact-us-section .dropzone {
+  .contact-us-section .gal-loader {
     margin-bottom: 15px; }
-  .contact-us-section .dropzone div {
+  .contact-us-section .gal-loader div {
     display: inline-flex;
     margin-right: 10px;
     vertical-align: baseline;
     align-items: flex-start;
     position: relative;
     transition: all 0.3s ease-in-out; }
-  .contact-us-section .dropzone div button,
-  .contact-us-section .dropzone div a {
+  .contact-us-section .gal-loader div button,
+  .contact-us-section #gallery-fo div a {
     content: "";
     display: block;
     position: absolute;
@@ -1220,8 +1220,8 @@ header {
     font-size: 0;
     background-color: transparent;
     border-radius: 100%; }
-  .contact-us-section .dropzone div button:focus,
-  .contact-us-section .dropzone div a:focus {
+  .contact-us-section #gallery-fo div button:focus,
+  .contact-us-section #gallery-fo div a:focus {
     background-color: #f30909; }
   .contact-us-section .ad-file {
     font-size: 12px;
@@ -1253,7 +1253,7 @@ header {
     display: none; }
   .contact-us-section .gal-loader.active .loader {
     display: block; }
-  .contact-us-section .user-input .button:focus {
+  .contact-us-section #dropzone .button:focus {
     background: rgba(76, 76, 76, 0.7) !important;
     opacity: 0.8 !important;
     color: #fff !important; }
@@ -2725,10 +2725,10 @@ header {
 .banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input.verror .comment-input {
   border-color: red; }
 
-.dropzone {
+.gal-loader {
   margin-bottom: 15px; }
 
-.dropzone div {
+.gal-loader div {
   display: inline-flex;
   margin-right: 10px;
   vertical-align: baseline;
@@ -2736,8 +2736,8 @@ header {
   position: relative;
   transition: all 0.3s ease-in-out; }
 
-.dropzone div button,
-.dropzone div a {
+.gal-loader div button,
+#gallery div a {
   content: "";
   display: block;
   position: absolute;
@@ -2756,8 +2756,8 @@ header {
   background-color: transparent;
   border-radius: 100%; }
 
-.dropzone div button:focus,
-.dropzone div a:focus {
+#gallery div button:focus,
+#gallery div a:focus {
   background-color: #f30909; }
 
 .ad-file {
@@ -2794,7 +2794,7 @@ header {
 .gal-loader.active .loader {
   display: block; }
 
-.user-input .button:focus {
+#dropzone .button:focus {
   background: rgba(76, 76, 76, 0.7) !important;
   opacity: 0.8 !important;
   color: #fff !important; }
