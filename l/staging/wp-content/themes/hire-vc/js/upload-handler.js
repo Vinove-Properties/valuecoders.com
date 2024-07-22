@@ -1,44 +1,5 @@
-/*Handle File uploader*/
-function upload_file(e){
-    e.preventDefault();
-    ajax_file_upload(e.dataTransfer.files);
-}
-  
-function file_explorer() {
-    document.getElementById('selectfile').click();
-    document.getElementById('selectfile').onchange = function() {
-        files = document.getElementById('selectfile').files;
-        ajax_file_upload(files);
-    };
-}
-  
-function ajax_file_upload(files_obj) {
-    let gloader = document.getElementById('gloader');
-    gloader.classList.add("active");
-    if(files_obj != undefined) {
-        var form_data = new FormData();
-        for(i=0; i<files_obj.length; i++) {
-            form_data.append('file[]', files_obj[i]);
-        }
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("POST", "ajax.php", true);
-        xhttp.onload = function(event) {
-            if (xhttp.status == 200) {
-                alert(this.responseText);
-            } else {
-                alert("Error " + xhttp.status + " occurred when trying to upload your file.");
-            }
-            gloader.classList.add("active");
-        }
- 
-        xhttp.send(form_data);
-    }
-}
-
 // ************************ Drag and drop ***************** //
-let dropArea = document.getElementById("drop-area")
-
-// Prevent default drag behaviors
+let dropArea = document.getElementById("drop-area");
 ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
   dropArea.addEventListener(eventName, preventDefaults, false)   
   document.body.addEventListener(eventName, preventDefaults, false)
@@ -73,24 +34,15 @@ function unhighlight(e) {
 function handleDrop(e) {
   var dt = e.dataTransfer
   var files = dt.files
-
   handleFiles(files)
 }
 
-let uploadProgress = []
-let progressBar = document.getElementById('progress-bar')
 function setFileError( msg ){
     let fcontainer = document.getElementById('file-type-error');
     fcontainer.innerHTML = msg;
     setTimeout(function(){
         fcontainer.innerHTML = "";
     }, 3000);
-}
-
-function updateProgress(fileNumber, percent) {
-  uploadProgress[fileNumber] = percent
-  let total = uploadProgress.reduce((tot, curr) => tot + curr, 0) / uploadProgress.length
-  progressBar.value = total
 }
 
 function handleFiles(files){
@@ -210,6 +162,172 @@ function uploadFile(file, i) {
                 }
             }else{
                 setFileError( response.message );
+            }
+        }else{
+            console.log("error");
+        }
+        gloader.classList.remove("active");
+    }
+    xhttp.send(form_data);
+}
+
+
+// ************************ Drag and drop Footer Section ***************** //
+let dropAreaFo = document.getElementById("drop-area-fo");
+;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+  dropAreaFo.addEventListener(eventName, preventDefaults, false)   
+  document.body.addEventListener(eventName, preventDefaults, false)
+})
+
+// Highlight drop area when item is dragged over it
+;['dragenter', 'dragover'].forEach(eventName => {
+  dropAreaFo.addEventListener(eventName, highlightFo, false)
+})
+
+;['dragleave', 'drop'].forEach(eventName => {
+    //console.log(eventName);
+    dropAreaFo.addEventListener(eventName, unhighlightFo, false)
+})
+
+// Handle dropped files
+dropAreaFo.addEventListener('drop', handleDropFo, false)
+function highlightFo(e) {
+  dropAreaFo.classList.add('highlight')
+}
+
+function unhighlightFo(e) {
+  dropAreaFo.classList.remove('active')
+}
+
+function handleDropFo(e) {
+  var dt = e.dataTransfer
+  var files = dt.files
+  handleFilesFo(files)
+}
+
+function setFileErrorFo( msg ){
+    let fcontainer = document.getElementById('file-type-error-fo');
+    fcontainer.innerHTML = msg;
+    setTimeout(function(){
+        fcontainer.innerHTML = "";
+    }, 3000);
+}
+
+function handleFilesFo(files){
+    setFileErrorFo("");
+    let uldCounter  = document.getElementById("uplcounter-fo");
+    if( parseInt(uldCounter.value) >= 10 ){
+        setFileErrorFo( "You can not upload more then 10 media files." );
+        return;
+    }
+    let allFcount = (files.length + parseInt(uldCounter.value))
+    if( parseInt(allFcount) > 10 ){
+        setFileErrorFo( "You can not upload more then 10 media files." );
+        return;
+    }
+
+    let preuploaded = document.getElementById('Uploadedfilename').value;
+    if( preuploaded ){
+        let prefiles = preuploaded.split(",");
+        if( prefiles.length > 10 ){
+            setFileErrorFo( "You can not upload more then 10 media files." );
+            return; 
+        }
+    }   
+    if( files.length > 10 ){
+        setFileErrorFo( "You can not upload more then 10 media files." );
+        return;
+    }
+    files = [...files]
+    files.forEach(uploadFileFo);
+}
+//Remove Fle
+function removeMeFo(e,imageName){
+    let uldCounter  = document.getElementById("uplcounter-fo");
+    let gloader     = document.getElementById('gloader-fo');
+    let gallery     = document.getElementById('gallery-fo');
+    setFileErrorFo("");
+    const xhttp = new XMLHttpRequest(); 
+    xhttp.open("GET", vcObj.web_url+"/delete_file.php?delete=1&imageName="+imageName, true);
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        let counterValue = parseInt(uldCounter.value);
+        counterValue--;
+        uldCounter.value = counterValue;
+
+        var fileName=document.getElementById('Uploadedfilename-fo').value;
+        newStr = fileName.replace(imageName, '');
+        document.getElementById('Uploadedfilename-fo').value=newStr;
+        console.log(this.responseText);
+        e.parentNode.remove();
+        if(!gallery.hasChildNodes()){gloader.classList.remove("show-me");}
+      }
+    }
+    xhttp.send();
+ 
+}
+//End Remove Fle
+
+function uploadFileFo(file, i){
+    setFileErrorFo("");
+    let uldCounter  = document.getElementById("uplcounter-fo");
+    if( parseInt(uldCounter.value) >= 10 ){
+        setFileErrorFo( "You can not upload more then 10 media files." );
+        return;
+    }
+
+    let gloader     = document.getElementById('gloader-fo');
+    gloader.classList.add("show-me");
+    gloader.classList.add("active");
+    
+    const fileSize = file.size / 1024 / 1024;
+    if( fileSize > 20 ){
+        setFileErrorFo("ERROR Uploaded document exceeds the maximum size limit of 20 MB");
+        gloader.classList.remove("active");
+        return;
+    }
+
+    var form_data = new FormData();
+    form_data.append('file', file)
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", vcObj.web_url+"/file-uploader.php", true);
+    xhttp.onload = function(event){
+        if (xhttp.status == 200) {
+            let response =  JSON.parse(xhttp.responseText);             
+            // console.log( file.name );
+            const fileName = file.name;
+            const dotIndex = fileName.lastIndexOf('.');
+            const baseName = fileName.substring(0, dotIndex);
+            const extension = fileName.substring(dotIndex);
+            
+            let trimmedBaseName = baseName;
+            if (baseName.length > 60) {
+                trimmedBaseName = baseName.substring(0, 60);
+            }
+            const trimmedFileName = trimmedBaseName + extension;
+
+            //console.log( response );
+            if( response.status == true ){
+                let counterValue = parseInt(uldCounter.value);
+                counterValue++;
+                uldCounter.value = counterValue;
+                let existingVal = document.getElementById('Uploadedfilename-fo').value;
+                if( existingVal == '' ){
+                    document.getElementById('Uploadedfilename-fo').value = response.file;                      
+                }else{
+                    document.getElementById('Uploadedfilename-fo').value = existingVal + response.file;
+                }
+
+            let reader = new FileReader()
+              reader.readAsDataURL(file)
+              reader.onloadend = function() {
+                let indiv       = document.createElement('div');
+                indiv.classList.add("ad-file");
+                indiv.innerHTML = '<span class="up-file">'+trimmedFileName+'</span><button type="button" onclick="return removeMeFo(this,this.value);" value="'+response.file+'">x</button>';
+                document.getElementById('gallery-fo').appendChild(indiv);
+                }
+            }else{
+                setFileErrorFo( response.message );
             }
         }else{
             console.log("error");

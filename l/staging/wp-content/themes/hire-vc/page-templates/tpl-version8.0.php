@@ -81,14 +81,17 @@ alt="Valuecoders" width="449" height="637">
               <label>Your Requirements</label>
               <textarea class="form-input comment-input" autocomplete="off" id="bn-req" placeholder="" name="user-req"></textarea>
               <small>Please Fill Requirement</small>
+              <!-- 
               <div class="drop-input attachment_brw" id="uploadcontact">
                 <div id="dropcontact"></div>
-              </div>
+              </div> 
+              -->
               <div id="drop-area">
                 <input type="file" name="files[]" id="fileElem" multiple=""
                   accept="image/*,application/pdf,.psd,.zip,.docx,.xlsx,.xls,.txt"
                   onchange="handleFiles(this.files)" style="display:none;">
-                <button class="button" id="browse-btn" type="button" onclick="document.getElementById('fileElem').click()">Browse |  Drop Files Here</button>
+                <button class="button" id="browse-btn" type="button" 
+                onclick="document.getElementById('fileElem').click()">Browse |  Drop Files Here</button>
                 <input type="hidden" name="up-counter" id="uplcounter" value="0">
               </div>
               </div>
@@ -96,6 +99,7 @@ alt="Valuecoders" width="449" height="637">
                 <div class="loader"></div>
                 <div id="gallery"></div>
               </div>
+              <p id="file-type-error"></p>
             </div>
             <div class="form-group  width-full">
               <input type="hidden" name="Uploadedfilename" id="Uploadedfilename" value="">
@@ -658,6 +662,7 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
 </div>
 </section>
 <?php endif; ?>
+
 <section class="contact-us-section padding-t-120 padding-b-60">
   <div class="container">
     <div class="dis-flex justify-sb">
@@ -666,7 +671,7 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
         <p>Get Custom Solutions & Recommendations, Estimates.</p>
         <div class="side-dash1 list-box">
           <h3>Fill up your details</h3>
-          <p>Your data is 100% confidential
+          <p>Your data is 100% confidential</p>
         </div>
         <div class="side-dash2 list-box">
           <h3>What’s next?</h3>
@@ -715,10 +720,12 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
                 <small>Error Message</small>
               </div>
             </div>
+
             <div class="form-text-cont cont_country_section">
               <div class="user-input">
                 <label>Country</label>
-                <input class="input-field input-skype" autocomplete="off" id="ft-country" type="text" placeholder="Country" value="" name="user-country">
+                <input class="input-field input-skype" autocomplete="off" id="ft-country" type="text" placeholder="Country" 
+                value="" name="user-country">
                 <small>Error Message</small>
               </div>
             </div>
@@ -726,27 +733,29 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
               <label>Description</label>
               <div class="user-input">
                 <textarea class="input-field comment-input" autocomplete="off" id="ft-req" placeholder="Project Brief" name="user-req"></textarea>
-                <small>Error Message</small>
-                <div class="drop-input attachment_brw" id="uploadcontact">
-                  <div id="dropcontact"></div>
+                <small>Error Message</small>                
+                <div id="drop-area-fo">
+                  <input type="file" name="files[]" id="fileElem-fo" multiple=""
+                  accept="image/*,application/pdf,.psd,.zip,.docx,.xlsx,.xls,.txt"
+                  onchange="handleFilesFo(this.files)" style="display:none;">
+                  <button class="button" id="browse-btn" type="button" 
+                  onclick="document.getElementById('fileElem-fo').click()">Browse |  Drop Files Here</button>
+                  <input type="hidden" name="up-counter" id="uplcounter-fo" value="0">
                 </div>
-                <div id="drop-area">
-                  <input type="file" name="files[]" id="fileElem" multiple="" accept="image/*,application/pdf,.psd,.zip,.docx,.xlsx,.xls,.txt" onchange="handleFiles(this.files)">
-                  <button class="button" id="browse-btn" type="button" onclick="document.getElementById('fileElem').click()">Browse | Drop Files Here</button>
-                  <input type="hidden" name="up-counter" id="uplcounter" value="0">
                 </div>
-              </div>
-            </div>
-          </div>
-          <div id="gloader" class="gal-loader">
-            <div class="loader"></div>
-            <div id="gallery"></div>
-          </div>
-          <p id="file-type-error"></p>
+                <div id="gloader-fo" class="gal-loader">
+                  <div class="loader"></div>
+                  <div id="gallery-fo"></div>
+                </div>
+                <p id="file-type-error-fo"></p>
+             </div>            
+         </div> 
           <div class="form-group justify-right">
             <div class="btn-sec">
               <div class="user-input cta-btn checkout">
                 <div class="user-input btn rounded checkout">
+                  <input type="hidden" name="Uploadedfilename" id="Uploadedfilename-fo" value="">
+                  <input type="hidden" name="page_url" value="<?php bloginfo('url'); ?>">
                   <input type="submit" id="footer-submitButton" class="checkout-submit" value="Enquire Now">
                 </div>
               </div>
@@ -755,7 +764,8 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
         </form>
       </div>
     </div>
-  </div>
+</div>
+
   <div class="footer-sec margin-t-60">
     <div class="footer-top address-sec">
       <div class="container">
@@ -783,7 +793,8 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
       </div>
     </div>
   </div>
-</section>
+</section> <!-- //contact-us-section -->
+
 <div class="popup-box">
 <div id="vc-fxdform" class="flex-2 banner-form form-pop-up-box">
   <div class="form-center">
