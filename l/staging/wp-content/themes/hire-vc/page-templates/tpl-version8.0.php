@@ -371,67 +371,23 @@ if( isset($calCall['is_enable']) && ($calCall['is_enable'] == "yes") ) :
 ?>
 <section class="vc-chartbook bg-cream padding-t-120 padding-b-120">
   <div class="container">
-    <div class="head-txt text-center">
-      <?php echo $calCall['content']; ?>
-    </div>
+    <div class="head-txt text-center"><?php echo $calCall['content']; ?></div>
     <?php 
     if( $calCall['cards'] ){
-    $i = 0;  
-    echo '<div class="chart-flex padding-t-120">';
-    foreach( $calCall['cards'] as $row ){
-    echo '<div class="chart-col">';
-    echo $row['text'];
-    if(++$i === count( $calCall['cards'] )){
-    echo '<div class="col-btn">
-    <a class="yellow-btn" onclick="showPopForm();" href="javascript:void(0);">Outsource to India</a></div>';
+      $i = 0;  
+      echo '<div class="chart-flex padding-t-120">';
+      foreach( $calCall['cards'] as $row ){
+        echo '<div class="chart-col">';
+        echo $row['text'];
+        if(++$i === count( $calCall['cards'] )){
+          echo '<div class="col-btn">
+          <a class="yellow-btn" onclick="showPopForm();" href="javascript:void(0);">Outsource to India</a></div>';
+        }
+        echo '</div>';
+      }
+      echo '</div>';
     }
-    echo '</div>';
-    }
-    echo '</div>';
-    }
-    ?>
-    <!-- <div class="chart-flex padding-t-120">
-      <div class="chart-col">
-        <h3>Factors that matter </h3>
-        <ul>
-          <li>Government policies</li>
-          <li>Long notice period</li>
-          <li>Taxation</li>
-          <li>Compensation package </li>
-          <li>Probability of being sued</li>
-          <li>H1-B benefits </li>
-          <li>Loss incurred </li>
-        </ul>
-      </div>
-      <div class="chart-col">
-        <h3>Local Hiring</h3>
-        <ul>
-          <li>Rigid</li>
-          <li>Yes</li>
-          <li>Tedious</li>
-          <li>High</li>
-          <li>High</li>
-          <li>Rigid</li>
-          <li>50,000$ approx.</li>
-        </ul>
-      </div>
-      <div class="chart-col">
-        <h3>Remote hiring <span>With <strong> VC </strong></span> 
-        <img src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/rocket.gif" width="50" height="50" alt=""> 
-        </h3>
-        <ul>
-          <li>Flexible</li>
-          <li>Just 5 days</li>
-          <li>VE’s responsibility</li>
-          <li>Nil</li>
-          <li>Nil</li>
-          <li>H1-B benefits without H1-B hurdles  </li>
-          <li>0$</li>
-          <a class="yellow-btn" href="#">Outsource to India</a>
-        </ul>
-      </div>
-    </div> 
-    -->
+    ?>    
   </div>
 </section>
 <?php endif; ?>
@@ -878,8 +834,8 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
             <li>Trusted by Startups &amp; Fortune 500 Companies</li>
           </ul>
           <picture>
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/assets-v2/images/form-companylogo.svg" alt="Valuecoders" width="528" height="56" data-lazy-src="<?php bloginfo('template_url'); ?>/assets-v2/assets-v2/images/form-companylogo.svg" data-ll-status="loaded" class="entered lazyloaded">
-            <noscript><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/assets-v2/images/form-companylogo.svg" alt="Valuecoders" width="528" height="56"></noscript>
+            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/form-companylogo.svg" alt="Valuecoders" width="528" height="56" data-lazy-src="<?php bloginfo('template_url'); ?>/assets-v2/images/form-companylogo.svg" data-ll-status="loaded" class="entered lazyloaded">
+            <noscript><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/form-companylogo.svg" alt="Valuecoders" width="528" height="56"></noscript>
           </picture>
         </div>
         <div id="vc-fxdform" class="form-section">
