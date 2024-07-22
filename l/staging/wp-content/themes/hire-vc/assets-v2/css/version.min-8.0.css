@@ -2788,6 +2788,28 @@ header {
   margin-right: 10px;
   margin-bottom: 8px; }
 
+.gal-loader {
+  position: relative; }
+
+.loader {
+  border: 5px solid #9f9f9f;
+  border-radius: 50%;
+  border-top: 5px solid #3498db;
+  width: 35px;
+  height: 35px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  display: none; }
+
+.loader.active {
+  display: block; }
+
 @media only screen and (max-width: 1780px) {
   .customer-testimonial-section .glider-slide {
     margin: 30px 10px; }
