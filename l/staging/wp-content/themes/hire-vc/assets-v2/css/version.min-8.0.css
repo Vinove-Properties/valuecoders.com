@@ -2761,7 +2761,7 @@ header {
   right: 4px;
   top: 4px;
   transition: 0.15s ease-in-out;
-  background: url(../v8/images/cross-con.svg);
+  background: url(../images/v8/cross-con.svg);
   background-size: 11px;
   width: 17px;
   height: 17px;
@@ -2789,7 +2789,8 @@ header {
   margin-bottom: 8px; }
 
 .gal-loader {
-  position: relative; }
+  position: relative;
+  margin: 10px 0 0; }
 
 .loader {
   border: 5px solid #9f9f9f;
@@ -2807,7 +2808,7 @@ header {
   left: 50%;
   display: none; }
 
-.loader.active {
+.gal-loader.active {
   display: block; }
 
 @media only screen and (max-width: 1780px) {
