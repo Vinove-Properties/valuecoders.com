@@ -432,7 +432,7 @@ if( isset($devStacks['is_enable']) && ($devStacks['is_enable'] == "yes") ) :
 $csSlider = get_field('work-sample');
 if( isset($csSlider['is_enable']) && $csSlider['is_enable'] == "yes" ) :
 ?>
-<section class="industry-casestudy-sec padding-t-150 padding-b-150" id="industry">
+<section class="industry-casestudy-sec padding-t-120 padding-b-120" id="industry">
   <div class="container">
     <div class="head-txt text-center">
       <?php echo $csSlider['title']; ?>
