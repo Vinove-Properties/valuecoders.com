@@ -86,7 +86,7 @@ alt="Valuecoders" width="449" height="637">
                 <div id="dropcontact"></div>
               </div> 
               -->
-              <div id="drop-area">
+              <div id="drop-area" class="dropzone">
                 <input type="file" name="files[]" id="fileElem" multiple=""
                   accept="image/*,application/pdf,.psd,.zip,.docx,.xlsx,.xls,.txt"
                   onchange="handleFiles(this.files)" style="display:none;">
@@ -734,7 +734,7 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
               <div class="user-input">
                 <textarea class="input-field comment-input" autocomplete="off" id="ft-req" placeholder="Project Brief" name="user-req"></textarea>
                 <small>Error Message</small>                
-                <div id="drop-area-fo">
+                <div id="drop-area-fo" class="dropzone">
                   <input type="file" name="files[]" id="fileElem-fo" multiple=""
                   accept="image/*,application/pdf,.psd,.zip,.docx,.xlsx,.xls,.txt"
                   onchange="handleFilesFo(this.files)" style="display:none;">
