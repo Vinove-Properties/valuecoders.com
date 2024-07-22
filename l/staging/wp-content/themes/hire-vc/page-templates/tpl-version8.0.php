@@ -46,26 +46,26 @@ alt="Valuecoders" width="449" height="637">
           <h3>Request A Proposal</h3>
           <p>Assure Response in 1 business days</p>
         </div>
-        <form>
+        <form id="banner-form" onsubmit="return validateBannerForm();">
           <div class="form-wrap">
             <div class="form-group width-full">
               <div class="user-input">
                 <label>Full Name</label>
-                <input class="form-input" type="text" id="ft-name" placeholder="Enter Your Name" name="user-name" maxlength="30">
+                <input class="form-input" type="text" id="bn-name" placeholder="Enter Your Name" name="user-name" maxlength="30">
                 <small>Please Fill Name.</small>
               </div>
             </div>
             <div class="form-group width-full">
               <div class="user-input">
                 <label>Email</label>
-                <input type="text" class="form-input" id="ft-email" placeholder="Enter Your Email" name="user-email" maxlength="50">
+                <input type="text" class="form-input" id="bn-email" placeholder="Enter Your Email" name="user-email" maxlength="50">
                 <small></small>
               </div>
             </div>
             <div class="form-group  width-full">
               <div class="user-input">
                 <label>Phone No.</label>
-                <input id="ft-phone" type="tel" placeholder="(Optional)" name="user-phone" maxlength="12" class="form-input input-field">
+                <input id="bn-phone" type="tel" placeholder="(Optional)" name="user-phone" maxlength="12" class="form-input input-field">
                 <small id="phone-error-vs"></small>
               </div>
             </div>
@@ -79,7 +79,7 @@ alt="Valuecoders" width="449" height="637">
             <div class="form-group  width-full form-textarea">
               <div class="user-input">
                 <label>Your Requirements</label>
-                <textarea class="form-input comment-input" autocomplete="off" id="user-req" placeholder="" name="user-req"></textarea>
+                <textarea class="form-input comment-input" autocomplete="off" id="bn-req" placeholder="" name="user-req"></textarea>
                 <small>Please Fill Requirement</small>
                 <div class="drop-input attachment_brw" id="uploadcontact">
                   <div id="dropcontact"></div>
@@ -95,7 +95,7 @@ alt="Valuecoders" width="449" height="637">
               </div>
             </div>
             <div class="form-group  width-full">
-              <button type="submit" class="btn btn-big btn-primary btn-padding-x test-1" name="ws-form-sub" id="pxl-submit-top" value="ws-landing">Hire Software Developers</button>
+              <button type="submit" class="btn btn-big btn-primary btn-padding-x test-1" name="ws-form-sub" id="bnr-submit" value="ws-landing">Hire Software Developers</button>
               <span class="privc"><i></i>100% Privacy Guaranteed</span>
             </div>
           </div>
@@ -643,7 +643,8 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
 ?>    
 <section class="three-column-icon-section bg-cream padding-t-120 padding-b-120">
 <div class="container">
-  <div class="head-txt text-center"><?php echo $hireModel['content']; ?></div>
+  <div class="head-txt text-center"><?php echo $hireModel['content']; ?>
+  </div>
   <div class="dis-flex col-box-outer margin-t-60">
     <div class="flex-3 box-3">
       <div class="box">
@@ -756,40 +757,41 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
         </div>
       </div>
       <div class="right-box">
-        <form id="contact-form-section" action="https://www.valuecoders.com/staging/sendmail1.php" class="contact-form-section" enctype="multipart/form-data" method="POST" onsubmit="vcCmnFormValidation(false); return false;">
+        <form id="footer-contact-form" action="" class="contact-form-section" enctype="multipart/form-data" method="POST" 
+        onsubmit="return _footerFormValidator();">
           <div class="form-inner dis-flex">
             <div class="form-text-cont">
               <div class="user-input">
                 <label>Full Name</label>
-                <input type="text" autocomplete="off" id="cont_name" placeholder="Full Name" class="input-field" value="" name="user-name">
+                <input type="text" autocomplete="off" id="ft-name" placeholder="Full Name" class="input-field" value="" name="user-name">
                 <small>Error Message</small>
               </div>
             </div>
             <div class="form-text-cont">
               <div class="user-input">
                 <label>Email Address</label>
-                <input type="text" autocomplete="off" id="cont_email" placeholder="Email Address" class="input-field" value="" name="user-email">
+                <input type="text" autocomplete="off" id="ft-email" placeholder="Email Address" class="input-field" value="" name="user-email">
                 <small>Error Message</small>
               </div>
             </div>
             <div class="form-text-cont">
               <div class="user-input">
                 <label>Phone Number</label>
-                <input type="text" autocomplete="off" class="input-field" id="cont_phpne" placeholder="Phone Number (Optional)" value="" name="user-phone">
+                <input type="text" autocomplete="off" class="input-field" id="ft-phpne" placeholder="Phone Number (Optional)" value="" name="user-phone">
                 <small>Error Message</small>
               </div>
             </div>
             <div class="form-text-cont cont_country_section">
               <div class="user-input">
                 <label>Country</label>
-                <input class="input-field input-skype" autocomplete="off" id="cont_country" type="text" placeholder="Country" value="" name="user-country">
+                <input class="input-field input-skype" autocomplete="off" id="ft-country" type="text" placeholder="Country" value="" name="user-country">
                 <small>Error Message</small>
               </div>
             </div>
             <div class="form-text-cont width-full">
               <label>Description</label>
               <div class="user-input">
-                <textarea class="input-field comment-input" autocomplete="off" id="user-req" placeholder="Project Brief" name="user-req"></textarea>
+                <textarea class="input-field comment-input" autocomplete="off" id="ft-req" placeholder="Project Brief" name="user-req"></textarea>
                 <small>Error Message</small>
                 <div class="drop-input attachment_brw" id="uploadcontact">
                   <div id="dropcontact"></div>
@@ -811,7 +813,7 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
             <div class="btn-sec">
               <div class="user-input cta-btn checkout">
                 <div class="user-input btn rounded checkout">
-                  <input type="submit" id="submitButton" class="checkout-submit" value="Enquire Now">
+                  <input type="submit" id="footer-submitButton" class="checkout-submit" value="Enquire Now">
                 </div>
               </div>
             </div>
@@ -848,4 +850,84 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
     </div>
   </div>
 </section>
+<div class="popup-box">
+<div id="vc-fxdform" class="flex-2 banner-form form-pop-up-box open-pop">
+  <div class="form-center">
+    <div id="vc-frm-outer" class="form-box-outer">
+      <span class="pop-close" onclick="return close_vpop();"></span>
+      <div class="head-txt text-center">
+        <div id="fh-cmn" style="display: block;">
+          <h2>Share Your Requirements</h2>
+          <p>We'll get back to you shortly!</p>
+        </div>
+        <div class="top-text text-center" id="fh-bookdemo" style="display:none;">
+          <h2>Connect with Us</h2>
+          <p>Get No Obligation Free Quote!</p>
+        </div>
+      </div>
+      <div class="form-wrap">
+        <div class="form-content">
+          <h3>We Excel in Future-Ready <strong>Software <br>Development &amp; Staff Augmentation Services</strong></h3>
+          <div class="text-field"><span class="clrtext">Quality-Focused</span><span class="clrtext">Innovative</span><span class="clrtext">Secure</span></div>
+          <ul>
+            <li>Access High-quality, Pre-vetted Talent</li>
+            <li>Flexible Engagement Options</li>
+            <li>Well Defined SLAs, No Hidden Costs </li>
+            <li>Global Quality Standards</li>
+            <li>Trusted by Startups &amp; Fortune 500 Companies</li>
+          </ul>
+          <picture>
+            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/assets-v2/images/form-companylogo.svg" alt="Valuecoders" width="528" height="56" data-lazy-src="<?php bloginfo('template_url'); ?>/assets-v2/assets-v2/images/form-companylogo.svg" data-ll-status="loaded" class="entered lazyloaded">
+            <noscript><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/assets-v2/images/form-companylogo.svg" alt="Valuecoders" width="528" height="56"></noscript>
+          </picture>
+        </div>
+        <div id="vc-fxdform" class="form-section">
+          <form action="https://www.valuecoders.com/sendmail-l7.php" onsubmit="return vcPopFormValidation();" enctype="multipart/form-data" id="cmn-pop-form" method="POST">
+            <div class="form-inner dis-flex" id="pop-form">
+              <div class="form-text-cont">
+                <div class="user-input">
+                  <input type="text" id="pop-name" placeholder="Full Name" class="input-field" value="" name="user-name">
+                </div>
+                <small></small>
+              </div>
+              <div class="form-text-cont">
+                <div class="user-input">
+                  <input type="text" id="pop-email" placeholder="Email Address" class="input-field" value="" name="user-email">
+                </div>
+                <small></small>
+              </div>
+              <div class="form-text-cont">
+                <div class="user-input">
+                  <input type="tel" maxlength="15" id="pop-phone" class="input-field" placeholder="Phone Number (optional)" value="" name="user-phone">
+                </div>
+                <small></small>
+              </div>
+              <div class="form-text-cont">
+                <div class="user-input">
+                  <input class="input-field input-skype" id="pop-country" type="text" placeholder="Country" value="" name="user-country">
+                </div>
+                <small></small>
+              </div>
+              <div class="form-text-cont width-full">
+                <div class="user-input">
+                  <textarea class="input-field comment-input" id="pop-requirement" placeholder="Your Requirements" name="user-req"></textarea>
+                </div>
+                <small></small>
+              </div>
+            </div>
+            <div class="user-input checkout">
+              <input type="hidden" name="frmqueryString" id="frmqueryString-pop" value="q=hire-software-developers-india-v4-opt-phone/&amp;PageName=l&amp;xForwordFor=&amp;deviceID=computer">
+              <input type="hidden" name="frmSidebar" value="sidebar">
+              <input type="hidden" name="is-dmtpl" value="false">
+              <input type="hidden" id="bookcall-frm" name="is-bookcall" value="">
+              <input type="submit" id="submitButton-pop" class="checkout-submit ch111" value="CONTACT US NOW">
+            </div>
+            <span class="privc"><i></i>100% Privacy Guaranteed</span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 <?php get_footer(); ?>

@@ -35,22 +35,6 @@ function checkEmail(input) {
     }
 }
 
-function urlCheck(input){
-    const regex 	= /^(https?:\/\/)?([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/[a-zA-Z0-9-._~:?#@!$&'()*+,;=]*)*\/?$/;   
-    //const regex 	= /^(((http|https):\/\/|)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,6}(:[0-9]{1,5})?(\/.*)?)$/;
-
-    if( regex.test(input.value.trim()) ){
-        showSucces(input);
-    }else {
-    	if( input.value == '' ){
-    		showError(input,'Please Fill website url');
-    	}else{
-    		showError(input,'Please fill valid website url');	
-    	}
-    }
-    return regex.test(input);
-}
-
 function ws_validateStr( e ) {
 	let backSpace = e.keyCode || e.charCode;
 	const passKeys = [8, 46, 37, 39];
@@ -146,24 +130,16 @@ function checkRequired( inputArr ){
 function checkLength(input, min ,max) {
 	let e = input.value.trim();
     if( (input.value.length < min) ) {
-    	if( input.name == "fullname"  ){
+    	if( input.name == "user-name"  ){
 			showError(input, `Please Fill Name`);	
-		}else if( input.name == "requirement"  ){
+		}else if( input.name == "user-req"  ){
 			showError(input, `Please Fill Requirement`);	
-		}else if( input.name == "phone"  ){
-			//showError(input, `Please Fill Phone`);	
+		}else if( input.name == "user-phone"  ){
+			showError(input, `Please Fill Phone`);	
 		}else if( input.name == "user-country"  ){
 			showError(input, `Please Fill Country`);
-		}else if( input.name == "email"  ){
+		}else if( input.name == "user-email"  ){
 			showError(input, `Please Fill Email`);	
-		}else if( input.name == "company"  ){
-			showError(input, `Please Fill Company`);	
-		}else if( input.name == "fname"  ){
-			showError(input, `Please Fill First Name`);	
-		}else if( input.name == "lname"  ){
-			showError(input, `Please Fill Last Name`);	
-		}else if( input.name == "website"  ){
-			showError(input, `Please Fill Website URL`);	
 		}else{
 			showError(input, `Value must be at least ${min} characters`);
 		}    
@@ -193,13 +169,9 @@ function checkUseName(input, msg = "Please Fill Name"){
 
 function strInputValidation(msg = "Please Fill This Field", input){
  	checkLength(input.target,2,49);
-	// if( checkLettersSpacesDots(input.target.value.trim() ) === false ){
-    //    showError(input.target, msg);
-    // }
 }
 
 function checkURequirement(input){
-	loadReCapJS();
   	checkLength(input.target,3,1500);
 }
 
@@ -208,9 +180,6 @@ function checkEmailEvent(input){
 	checkEmail(input.target);
 }
 
-function urlkEvent(input){
-	urlCheck(input.target);
-}
 
 function checkPhone(input){
   checkLength(input.target,6,20);
@@ -221,105 +190,56 @@ function checkfoucsoutPhone(input){
     phonenumber(input.target);
 }
 
-// const bnWebsite 	= document.getElementById('bn-website');
-// const bnEmail 		= document.getElementById('bn-email');
-// const bnPhone 		= document.getElementById('bn-phone');
 
-// bnWebsite.addEventListener("keyup", urlkEvent.bind(bnEmail));
-// bnWebsite.addEventListener("keypress", urlkEvent.bind(bnEmail));
-// bnWebsite.addEventListener("keydown", urlkEvent.bind(bnEmail));
-// bnWebsite.addEventListener("focusout", urlkEvent.bind(bnEmail));
+const bnName 	= document.getElementById('bn-name'),
+bnEmail 		= document.getElementById('bn-email'),
+bnPhone 		= document.getElementById('bn-phone'),
+bnCountry 		= document.getElementById('bn-country'),
+bnReq 			= document.getElementById('bn-req');
 
-// bnEmail.addEventListener("keyup", checkEmailEvent.bind(bnEmail));
-// bnEmail.addEventListener("keypress", checkEmailEvent.bind(bnEmail));
-// bnEmail.addEventListener("keydown", checkEmailEvent.bind(bnEmail));
-// bnEmail.addEventListener("focusout", checkEmailEvent.bind(bnEmail));
+bnName.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Name"));
+bnName.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Name"));
+bnName.addEventListener("keydown", strInputValidation.bind(null, "Please Fill Name"));
+bnName.addEventListener("focusout", strInputValidation.bind(null, "Please Fill Name"));
 
-// bnPhone.addEventListener("keyup", checkPhone.bind(bnPhone));
-// bnPhone.addEventListener("keypress", checkPhone.bind(bnPhone));
-// bnPhone.addEventListener("keydown", ws_checkphonenumber);
-// bnPhone.addEventListener("focusout", checkfoucsoutPhone.bind(bnPhone));
+bnEmail.addEventListener("keyup", checkEmailEvent.bind(bnEmail));
+bnEmail.addEventListener("keypress", checkEmailEvent.bind(bnEmail));
+bnEmail.addEventListener("keydown", checkEmailEvent.bind(bnEmail));
+bnEmail.addEventListener("focusout", checkEmailEvent.bind(bnEmail));
 
-// function getAuditReport(){
-// 	checkRequired([bnWebsite, bnEmail, bnPhone]);	
-// 	if(		
-// 		( vcSpaceChecker(bnWebsite.value.trim()) === true ) && 
-// 		( vcSpaceChecker(bnEmail.value.trim()) === true ) && 
-// 		( vcSpaceChecker(bnPhone.value.trim()) === true ) 
-// 	){
-// 	return true;
-// 	}
-// 	return false;
-// }
+bnPhone.addEventListener("keyup", checkPhone.bind(bnPhone));
+bnPhone.addEventListener("keypress", checkPhone.bind(bnPhone));
+bnPhone.addEventListener("keydown", ws_checkphonenumber);
+bnPhone.addEventListener("focusout", checkfoucsoutPhone.bind(bnPhone));
+
+bnCountry.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Country"));
+bnCountry.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Country"));
+bnCountry.addEventListener("keydown", strInputValidation.bind(null, "Please Fill Country"));
+bnCountry.addEventListener("focusout", strInputValidation.bind(null, "Please Fill Country"));
 
 
-const ldName 	= document.getElementById('ld-name');
-const ldEmail 	= document.getElementById('ld-email');
-const ldPhone 	= document.getElementById('ld-phone');
-const ldWebsite = document.getElementById('ld-website');
-const ldReq 	= document.getElementById('ld-req');
+bnReq.addEventListener("keyup", checkURequirement.bind(bnReq));
+bnReq.addEventListener("keypress", checkURequirement.bind(bnReq));
+bnReq.addEventListener("keydown", checkURequirement.bind(bnReq));
+bnReq.addEventListener("focusout", checkURequirement.bind(bnReq));
 
-ldName.addEventListener("keyup", checkUseName.bind(ldName));
-ldName.addEventListener("keypress", checkUseName.bind(ldName));
-ldName.addEventListener("keydown", ws_validateStr);
-ldName.addEventListener("focusout", checkUseName.bind(ldName));
-
-ldEmail.addEventListener("keyup", checkEmailEvent.bind(ldEmail));
-ldEmail.addEventListener("keypress", checkEmailEvent.bind(ldEmail));
-ldEmail.addEventListener("keydown", checkEmailEvent.bind(ldEmail));
-ldEmail.addEventListener("focusout", checkEmailEvent.bind(ldEmail));
-
-ldPhone.addEventListener("keyup", checkPhone.bind(ldPhone));
-ldPhone.addEventListener("keypress", checkPhone.bind(ldPhone));
-ldPhone.addEventListener("keydown", ws_checkphonenumber);
-ldPhone.addEventListener("focusout", checkfoucsoutPhone.bind(ldPhone));
-
-// ldWebsite.addEventListener("keyup", urlkEvent.bind(ldWebsite));
-// ldWebsite.addEventListener("keypress", urlkEvent.bind(ldWebsite));
-// ldWebsite.addEventListener("keydown", urlkEvent.bind(ldWebsite));
-// ldWebsite.addEventListener("focusout", urlkEvent.bind(ldWebsite));
-
-ldWebsite.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Website URL"));
-ldWebsite.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Website URL"));
-ldWebsite.addEventListener("keydown", strInputValidation.bind(null, "Please Fill Website URL"));
-ldWebsite.addEventListener("focusout", strInputValidation.bind(null, "Please Fill Website URL"));
-
-ldReq.addEventListener("keyup", checkURequirement.bind(ldReq));
-ldReq.addEventListener("keypress", checkURequirement.bind(ldReq));
-ldReq.addEventListener("keydown", checkURequirement.bind(ldReq));
-ldReq.addEventListener("focusout", checkURequirement.bind(ldReq));
-
-async function validateLeadForm(){
-	checkRequired([ldName, ldEmail, ldPhone, ldWebsite, ldReq]);
+function validateBannerForm(){
+	checkRequired([bnName, bnEmail, bnPhone, bnCountry, bnReq]);
 	if(		
-		(vcSpaceChecker(ldName.value.trim()) === true) && 
-		(vcSpaceChecker(ldEmail.value.trim()) === true) && 
-		(vcSpaceChecker(ldPhone.value.trim()) === true) &&
-		(vcSpaceChecker(ldWebsite.value.trim()) === true) &&
-		(vcSpaceChecker(ldReq.value.trim()) === true)
+		(vcSpaceChecker(bnName.value.trim()) === true) && 
+		(vcSpaceChecker(bnEmail.value.trim()) === true) && 
+		(vcSpaceChecker(bnPhone.value.trim()) === true) &&
+		(vcSpaceChecker(bnCountry.value.trim()) === true) &&
+		(vcSpaceChecker(bnReq.value.trim()) === true)
 	){
 	const sre = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	if( !sre.test(ldEmail.value.trim()) ){
-	    showError(ldEmail, 'Please Fill Email');
+	if( !sre.test(bnEmail.value.trim()) ){
+	    showError(bnEmail, 'Please Fill Email');
 		return false;
 	}
-			
-	let rcToken = new Promise( (resolve, reject) => {
-		grecaptcha.ready(function(){
-			grecaptcha.execute('6LdOHZcjAAAAAPTetYrbEoZhdueRkAVucKDbOj7S', {action:'validate_captcha'}).then(function(token){
-				resolve( token );
-			});
-		});
-	});
-	let pxlToken = await rcToken;
-	if( pxlToken ){
-		let rcFld1 = document.getElementById('g-recaptcha-response');
-        if( rcFld1 ){
-        	rcFld1.value = pxlToken;
-        }
-	}
-	let hForm 		= document.getElementById("pc-leadform");
-	let btn 		= document.getElementById("pc-leadform-submit");
+
+	let hForm 		= document.getElementById("banner-form");
+	let btn 		= document.getElementById("bnr-submit");
 	hForm.classList.add('in-process');
 	btn.innerText 	= "Please wait...";
 	btn.disabled 	= true;
@@ -328,92 +248,61 @@ async function validateLeadForm(){
 	return false;
 }
 
-const prFname 	= document.getElementById('pr-fname');
-const prLname 	= document.getElementById('pr-lname');
-const prEmail 	= document.getElementById('pr-email');
-const prPhone 	= document.getElementById('pr-phone');
-const prCompany = document.getElementById('pr-company');
-const prWebsite = document.getElementById('pr-website');
-const prReq 	= document.getElementById('pr-requirement');
 
-prFname.addEventListener("keyup", strInputValidation.bind(null, "Please Fill First Name"));
-prFname.addEventListener("keypress", strInputValidation.bind(null, "Please Fill First Name"));
-prFname.addEventListener("keydown", ws_validateStr);
-prFname.addEventListener("focusout", strInputValidation.bind(null, "Please Fill First Name"));
 
-prLname.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Last Name"));
-prLname.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Last Name"));
-prLname.addEventListener("keydown", ws_validateStr);
-prLname.addEventListener("focusout", strInputValidation.bind(null, "Please Fill Last Name"));
+const ftName 	= document.getElementById('ft-name'),
+ftEmail 		= document.getElementById('ft-email'),
+ftPhone 		= document.getElementById('ft-phone'),
+ftCountry 		= document.getElementById('ft-country'),
+ftReq 			= document.getElementById('ft-req');
 
-prEmail.addEventListener("keyup", checkEmailEvent.bind(prEmail));
-prEmail.addEventListener("keypress", checkEmailEvent.bind(prEmail));
-prEmail.addEventListener("keydown", checkEmailEvent.bind(prEmail));
-prEmail.addEventListener("focusout", checkEmailEvent.bind(prEmail));
+ftName.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Name"));
+ftName.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Name"));
+ftName.addEventListener("keydown", strInputValidation.bind(null, "Please Fill Name"));
+ftName.addEventListener("focusout", strInputValidation.bind(null, "Please Fill Name"));
 
-prPhone.addEventListener("keyup", checkPhone.bind(prPhone));
-prPhone.addEventListener("keypress", checkPhone.bind(prPhone));
-prPhone.addEventListener("keydown", ws_checkphonenumber);
-prPhone.addEventListener("focusout", checkfoucsoutPhone.bind(prPhone));
+ftEmail.addEventListener("keyup", checkEmailEvent.bind(ftEmail));
+ftEmail.addEventListener("keypress", checkEmailEvent.bind(ftEmail));
+ftEmail.addEventListener("keydown", checkEmailEvent.bind(ftEmail));
+ftEmail.addEventListener("focusout", checkEmailEvent.bind(ftEmail));
 
-prCompany.addEventListener("keyup", strInputValidation.bind(null, "Please Company Name"));
-prCompany.addEventListener("keypress", strInputValidation.bind(null, "Please Company Name"));
-prCompany.addEventListener("keydown", ws_validateStr);
-prCompany.addEventListener("focusout", strInputValidation.bind(null, "Please Company Name"));
+// ftPhone.addEventListener("keyup", checkPhone.bind(ftPhone));
+// ftPhone.addEventListener("keypress", checkPhone.bind(ftPhone));
+// ftPhone.addEventListener("keydown", ws_checkphonenumber);
+// ftPhone.addEventListener("focusout", checkfoucsoutPhone.bind(ftPhone));
 
-// prWebsite.addEventListener("keyup", urlkEvent.bind(prWebsite));
-// prWebsite.addEventListener("keypress", urlkEvent.bind(prWebsite));
-// prWebsite.addEventListener("keydown", urlkEvent.bind(prWebsite));
-// prWebsite.addEventListener("focusout", urlkEvent.bind(prWebsite));
+ftCountry.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Country"));
+ftCountry.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Country"));
+ftCountry.addEventListener("keydown", strInputValidation.bind(null, "Please Fill Country"));
+ftCountry.addEventListener("focusout", strInputValidation.bind(null, "Please Fill Country"));
 
-prWebsite.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Website URL"));
-prWebsite.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Website URL"));
-prWebsite.addEventListener("keydown", strInputValidation.bind(null, "Please Fill Website URL"));
-prWebsite.addEventListener("focusout", strInputValidation.bind(null, "Please Fill Website URL"));
 
-prReq.addEventListener("keyup", checkURequirement.bind(prReq));
-prReq.addEventListener("keypress", checkURequirement.bind(prReq));
-prReq.addEventListener("keydown", checkURequirement.bind(prReq));
-prReq.addEventListener("focusout", checkURequirement.bind(prReq));
+ftReq.addEventListener("keyup", checkURequirement.bind(ftReq));
+ftReq.addEventListener("keypress", checkURequirement.bind(ftReq));
+ftReq.addEventListener("keydown", checkURequirement.bind(ftReq));
+ftReq.addEventListener("focusout", checkURequirement.bind(ftReq));
 
-async function _getProposal(){
-	checkRequired([prFname, prLname, prEmail, prPhone, prCompany, prWebsite, prReq]);
-	if(		
-		(vcSpaceChecker(prFname.value.trim()) === true) && 
-		(vcSpaceChecker(prLname.value.trim()) === true) && 
-		(vcSpaceChecker(prEmail.value.trim()) === true) &&
-		(vcSpaceChecker(prPhone.value.trim()) === true) &&
-		(vcSpaceChecker(prCompany.value.trim()) === true) &&
-		(vcSpaceChecker(prWebsite.value.trim()) === true) &&
-		(vcSpaceChecker(prReq.value.trim()) === true)
+function _footerFormValidator(){
+	checkRequired([ftName, ftEmail, ftCountry, ftReq]);	
+	if(
+	(vcSpaceChecker(ftName.value.trim()) === true) && 
+	(vcSpaceChecker(ftEmail.value.trim()) === true) && 
+	//(vcSpaceChecker(bnPhone.value.trim()) === true) &&
+	(vcSpaceChecker(ftCountry.value.trim()) === true) &&
+	(vcSpaceChecker(ftReq.value.trim()) === true)
 	){
-		const sre = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		if( !sre.test(prEmail.value.trim()) ){
-		    showError(prEmail, 'Please Fill Email');
-			return false;
-		}
-				
-		let rcToken = new Promise( (resolve, reject) => {
-			grecaptcha.ready(function(){
-				grecaptcha.execute('6LdOHZcjAAAAAPTetYrbEoZhdueRkAVucKDbOj7S', {action:'validate_captcha'}).then(function(token){
-					resolve( token );
-				});
-			});
-		});
-		let pxlToken = await rcToken;
-		if( pxlToken ){
-			let rcFld1 = document.getElementById('g-recaptcha-response-pr');
-	        if( rcFld1 ){
-	        	rcFld1.value = pxlToken;
-	        }
-		}
-		let hForm 		= document.getElementById("pc-prform");
-		let btn 		= document.getElementById("pc-prform-submit");
-		hForm.classList.add('in-process');
-		btn.value 		= "Please wait...";
-		btn.disabled 	= true;
-		hForm.submit();			
-		return false;		
+	const sre = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	if( !sre.test(ftEmail.value.trim()) ){
+	    showError(ftEmail, 'Please Fill Email');
+		return false;
+	}
+
+	let hForm 		= document.getElementById("footer-contact-form");
+	let btn 		= document.getElementById("footer-submitButton");
+	hForm.classList.add('in-process');
+	btn.value 		= "Please wait...";
+	btn.disabled 	= true;
+	hForm.submit();	
 	}
 	return false;
 }
