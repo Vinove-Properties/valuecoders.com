@@ -1201,7 +1201,7 @@ header {
     align-items: flex-start;
     position: relative;
     transition: all 0.3s ease-in-out; }
-  .contact-us-section .gal-loader div button,
+  .contact-us-section #gallery div button,
   .contact-us-section #gallery-fo div a {
     content: "";
     display: block;
@@ -2736,7 +2736,7 @@ header {
   position: relative;
   transition: all 0.3s ease-in-out; }
 
-.gal-loader div button,
+#gallery div button,
 #gallery div a {
   content: "";
   display: block;
