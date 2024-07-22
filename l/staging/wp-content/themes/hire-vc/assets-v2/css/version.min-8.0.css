@@ -259,7 +259,7 @@ header {
           width: 100%;
           height: 100%;
           background: #34c759;
-          animation: blink 1s steps(1, end) infinite;
+          animation: blink 1.5s infinite;
           display: inline-block;
           border-radius: 100px; }
 @keyframes blink {
@@ -1468,7 +1468,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  padding: 110px 0 40px;
+  padding: 130px 0 40px;
   position: relative;
   display: flex;
   align-items: center; }
@@ -2217,7 +2217,7 @@ header {
       margin: 0;
       color: #000; }
     .vc-chartbook .chart-flex .chart-col ul {
-      padding: 20px 30px; }
+      padding: 20px 30px 0; }
       .vc-chartbook .chart-flex .chart-col ul li {
         position: relative;
         list-style: none;
@@ -2289,9 +2289,12 @@ header {
           height: 22px;
           left: -2px;
           top: 0px; }
+    .vc-chartbook .chart-flex .chart-col .col-btn {
+      wdth: 100%;
+      padding: 0 30px; }
     .vc-chartbook .chart-flex .chart-col .yellow-btn {
       width: 100%;
-      margin: 20px 0 0; }
+      margin: 20px auto 0; }
 
 .vetting-process .process-tabs {
   display: flex;
@@ -2918,6 +2921,9 @@ header {
     width: 40px;
     height: 40px; }
 
+  .step-icon-img-section .flex-4 .box p {
+    min-height: 160px; }
+
   .footer-sec .footer-top .dis-flex .flex-4 {
     padding: 0 30px; }
     .footer-sec .footer-top .dis-flex .flex-4 p {
@@ -3140,6 +3146,23 @@ header {
     .result-driven .result-row .flex-3 {
       margin: 0 0 40px;
       padding: 0 30px; }
+
+  .step-icon-img-section .flex-4 {
+    padding-right: 0;
+    flex-basis: 100%;
+    margin-bottom: 40px; }
+    .step-icon-img-section .flex-4 .box p {
+      min-height: initial; }
+    .step-icon-img-section .flex-4:before {
+      top: -15px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 35px;
+      height: 35px;
+      font-size: 18px; }
+  .step-icon-img-section .desktop {
+    display: none; }
 
   .icon-with-img-section .icon-box-outer .flex-2 {
     flex-basis: 33.33%; }
@@ -3471,23 +3494,6 @@ header {
       right: 7px; }
     .tools-developer .box ul li a {
       font-size: 14px; }
-
-  .step-icon-img-section .flex-4 {
-    padding-right: 0;
-    flex-basis: 100%;
-    margin-bottom: 40px; }
-    .step-icon-img-section .flex-4 .box p {
-      min-height: initial; }
-    .step-icon-img-section .flex-4:before {
-      top: -15px;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      width: 35px;
-      height: 35px;
-      font-size: 18px; }
-  .step-icon-img-section .desktop {
-    display: none; }
 
   .vc-chartbook .chart-flex {
     flex-wrap: wrap; }
