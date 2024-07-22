@@ -1,264 +1,220 @@
-let fdropArea = document.getElementById("drop-area");
-function fpreventDefaults(e){
-    e.preventDefault(), e.stopPropagation();
+/*Handle File uploader*/
+function upload_file(e){
+    e.preventDefault();
+    ajax_file_upload(e.dataTransfer.files);
 }
-function fhighlight(e){
-    fdropArea.classList.add("highlight");
+  
+function file_explorer() {
+    document.getElementById('selectfile').click();
+    document.getElementById('selectfile').onchange = function() {
+        files = document.getElementById('selectfile').files;
+        ajax_file_upload(files);
+    };
 }
-function funhighlight(e){
-    fdropArea.classList.remove("active");
-}
-function fhandleDrop(e){
-    fhandleFiles(e.dataTransfer.files);
-}
-["dragenter", "dragover", "dragleave", "drop"].forEach((e) => {
-    fdropArea.addEventListener(e, fpreventDefaults, !1), document.body.addEventListener(e, fpreventDefaults, !1);
-}),
-["dragenter", "dragover"].forEach((e) => {
-    fdropArea.addEventListener(e, fhighlight, !1);
-}),
-["dragleave", "drop"].forEach((e) => {
-    fdropArea.addEventListener(e, funhighlight, !1);
-}),
-fdropArea.addEventListener("drop", fhandleDrop, !1);
-
-function fsetFileError(e){
-    let t = document.getElementById("ffile-type-error");
-    (t.innerHTML = e),
-    setTimeout(function(){
-        t.innerHTML = "";
-    }, 3e3);
-}
-
-function fhandleFiles(e, t){
-    console.log(e);
-    fsetFileError("");
-    let a = document.getElementById("fuplcounter");
-    if (parseInt(a.value) >= 10) return void fsetFileError("You can not upload more then 10 media files.");
-    let n = e.length + parseInt(a.value);
-    if (parseInt(n) > 10) return void fsetFileError("You can not upload more then 10 media files.");
-    let o = document.getElementById("fUploadedfilename").value;
-    if(o){
-        if (o.split(",").length > 10) return void fsetFileError("You can not upload more then 10 media files.");
-    }
-    if( e.length > 10 ){
-        fsetFileError("You can not upload more then 10 media files.")
-    }else{
-        e = [...e];
-        e.forEach(fuploadFile);
-    }    
-}
-
-function fremoveMe(e, t) {
-    let a = document.getElementById("fuplcounter");
-    fsetFileError("");
-    const n = new XMLHttpRequest();
-    n.open("GET", pxlObj.web_url+"/delete_file.php?delete=1&imageName=" + t, !0),
-        (n.onreadystatechange = function () {
-            if (4 == this.readyState && 200 == this.status) {
-                let o = parseInt(a.value);
-                o--, (a.value = o);
-                var n = document.getElementById("fUploadedfilename").value;
-                (newStr = n.replace(t, "")),
-                    (document.getElementById("fUploadedfilename").value = newStr),
-                    console.log(this.responseText),
-                    e.parentNode.remove(),
-                    0 == a.value && document.getElementById("fgloader").classList.remove("show-me");
+  
+function ajax_file_upload(files_obj) {
+    let gloader = document.getElementById('gloader');
+    gloader.classList.add("active");
+    if(files_obj != undefined) {
+        var form_data = new FormData();
+        for(i=0; i<files_obj.length; i++) {
+            form_data.append('file[]', files_obj[i]);
+        }
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "ajax.php", true);
+        xhttp.onload = function(event) {
+            if (xhttp.status == 200) {
+                alert(this.responseText);
+            } else {
+                alert("Error " + xhttp.status + " occurred when trying to upload your file.");
             }
-        }),
-        n.send();
-}
-
-function fuploadFile(e, t) {
-    fsetFileError("");
-    let a = document.getElementById("fuplcounter");
-    if (parseInt(a.value) >= 10) return void fsetFileError("You can not upload more then 10 media files.");
-    let n = document.getElementById("fgloader");
-    n.classList.add("show-me"), n.classList.add("active");
-    if (e.size / 1024 / 1024 > 20) return fsetFileError("ERROR Uploaded document exceeds the maximum size limit of 20 MB"), void n.classList.remove("active");
-    var o = new FormData();
-    o.append("file", e);
-    var r = new XMLHttpRequest();
-    r.open("POST", pxlObj.web_url+"/file-uploader.php", !0),
-    (r.onload = function (t) {
-        if (200 == r.status) {
-            let t = JSON.parse(r.responseText);
-            if ((console.log(t), 1 == t.status)) {
-                let n = parseInt(a.value);
-                n++, (a.value = n);
-                let o = document.getElementById("fUploadedfilename").value;
-                document.getElementById("fUploadedfilename").value = "" == o ? t.file : o + t.file;
-                let r = new FileReader();
-                r.readAsDataURL(e),
-                (r.onloadend = function () {
-                    let a = document.createElement("div"),
-                        n = "";
-                    switch ((console.log(e.type), e.type)) {
-                        case "application/pdf":
-                            n = pxlObj.tpl_url+"/dev-img/pdf_gy.png";
-                            break;
-                        case "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
-                        case "text/plain":
-                            n = pxlObj.tpl_url+"/dev-img/doc_gy.png";
-                            break;
-                        case "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
-                        case "application/vnd.ms-excel":
-                            n = pxlObj.tpl_url+"/dev-img/xls_gy.png";
-                            break;
-                        case "image/vnd.adobe.photoshop":
-                            n = pxlObj.tpl_url+"/dev-img/psd_gy.png";
-                            break;
-                        case "application/x-zip-compressed":
-                        case "application/zip":
-                            n = pxlObj.tpl_url+"/dev-img/zip_gy.png";
-                            break;
-                        default:
-                            n = pxlObj.tpl_url+"/dev-img/def-thumb.png";
-                    }
-                    e.size > 1e7 && "image/jpeg" == e.type
-                    ? (n = pxlObj.tpl_url+"/dev-img/jpg_gy.png")
-                    : e.size > 1e7 && "image/png" == e.type && (n = pxlObj.tpl_url+"/dev-img/png_gy.png"),
-                    (a.innerHTML = '<img src="' + n + '" height="55" width="55"><button type="button" onclick="return fremoveMe(this,this.value);" value="' + t.file + '">X</button></span>'),
-                    document.getElementById("fgallery").appendChild(a);
-                });
-            } else fsetFileError(t.message);
-        } else console.log("error");
-        n.classList.remove("active");
-    }),
-    r.send(o);
-}
-
-
-
-/*Footer Form Validation*/
-/*
-let fudropArea = document.getElementById("fu-drop");
-function fupreventDefaults(e){
-    e.preventDefault(), e.stopPropagation();
-}
-function fuhighlight(e){
-    fudropArea.classList.add("highlight");
-}
-function fuunhighlight(e){
-    fudropArea.classList.remove("active");
-}
-function fhandleDrop(e){
-    fuhandleFiles(e.dataTransfer.files);
-}
-["dragenter", "dragover", "dragleave", "drop"].forEach((e) => {
-    fudropArea.addEventListener(e, fupreventDefaults, !1), document.body.addEventListener(e, fupreventDefaults, !1);
-}),
-["dragenter", "dragover"].forEach((e) => {
-    fudropArea.addEventListener(e, fuhighlight, !1);
-}),
-["dragleave", "drop"].forEach((e) => {
-    fudropArea.addEventListener(e, fuunhighlight, !1);
-}),
-fudropArea.addEventListener("drop", fhandleDrop, !1);
-
-function fusetFileError(e){
-    let t = document.getElementById("fufile-type-error");
-    (t.innerHTML = e),
-    setTimeout(function(){
-        t.innerHTML = "";
-    }, 3e3);
-}
-
-function fuhandleFiles(e, t){
-    console.log(e);
-    fusetFileError("");
-    let a = document.getElementById("fuuplcounter");
-    if (parseInt(a.value) >= 10) return void fsetFileError("You can not upload more then 10 media files.");
-    let n = e.length + parseInt(a.value);
-    if (parseInt(n) > 10) return void fsetFileError("You can not upload more then 10 media files.");
-    let o = document.getElementById("fuUploadedfilename").value;
-    if(o){
-        if (o.split(",").length > 10) return void fusetFileError("You can not upload more then 10 media files.");
+            gloader.classList.add("active");
+        }
+ 
+        xhttp.send(form_data);
     }
-    if( e.length > 10 ){
-        fusetFileError("You can not upload more then 10 media files.")
-    }else{
-        e = [...e];
-        e.forEach(fuuploadFile);
-    }    
 }
 
-function furemoveMe(e, t) {
-    let a = document.getElementById("fuuplcounter");
-    fsetFileError("");
-    const n = new XMLHttpRequest();
-    n.open("GET", pxlObj.web_url+"/delete_file.php?delete=1&imageName=" + t, !0),
-        (n.onreadystatechange = function () {
-            if (4 == this.readyState && 200 == this.status) {
-                let o = parseInt(a.value);
-                o--, (a.value = o);
-                var n = document.getElementById("fuUploadedfilename").value;
-                (newStr = n.replace(t, "")),
-                    (document.getElementById("fuUploadedfilename").value = newStr),
-                    console.log(this.responseText),
-                    e.parentNode.remove(),
-                    0 == a.value && document.getElementById("fugloader").classList.remove("show-me");
+// ************************ Drag and drop ***************** //
+let dropArea = document.getElementById("drop-area")
+
+// Prevent default drag behaviors
+;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+  dropArea.addEventListener(eventName, preventDefaults, false)   
+  document.body.addEventListener(eventName, preventDefaults, false)
+})
+
+// Highlight drop area when item is dragged over it
+;['dragenter', 'dragover'].forEach(eventName => {
+  dropArea.addEventListener(eventName, highlight, false)
+})
+
+;['dragleave', 'drop'].forEach(eventName => {
+    //console.log(eventName);
+    dropArea.addEventListener(eventName, unhighlight, false)
+})
+
+// Handle dropped files
+dropArea.addEventListener('drop', handleDrop, false)
+
+function preventDefaults (e) {
+  e.preventDefault()
+  e.stopPropagation()
+}
+
+function highlight(e) {
+  dropArea.classList.add('highlight')
+}
+
+function unhighlight(e) {
+  dropArea.classList.remove('active')
+}
+
+function handleDrop(e) {
+  var dt = e.dataTransfer
+  var files = dt.files
+
+  handleFiles(files)
+}
+
+let uploadProgress = []
+let progressBar = document.getElementById('progress-bar')
+function setFileError( msg ){
+    let fcontainer = document.getElementById('file-type-error');
+    fcontainer.innerHTML = msg;
+    setTimeout(function(){
+        fcontainer.innerHTML = "";
+    }, 3000);
+}
+
+function updateProgress(fileNumber, percent) {
+  uploadProgress[fileNumber] = percent
+  let total = uploadProgress.reduce((tot, curr) => tot + curr, 0) / uploadProgress.length
+  progressBar.value = total
+}
+
+function handleFiles(files){
+    //alert( files.length );
+    setFileError("");
+    let uldCounter  = document.getElementById("uplcounter");
+    if( parseInt(uldCounter.value) >= 10 ){
+        setFileError( "You can not upload more then 10 media files." );
+        return;
+    }
+    let allFcount = (files.length + parseInt(uldCounter.value))
+    if( parseInt(allFcount) > 10 ){
+        setFileError( "You can not upload more then 10 media files." );
+        return;
+    }
+
+    let preuploaded = document.getElementById('Uploadedfilename').value;
+    if( preuploaded ){
+        let prefiles = preuploaded.split(",");
+        if( prefiles.length > 10 ){
+            setFileError( "You can not upload more then 10 media files." );
+            return; 
+        }
+    }   
+    if( files.length > 10 ){
+        setFileError( "You can not upload more then 10 media files." );
+        return;
+    }
+    files = [...files]
+    files.forEach(uploadFile);
+}
+//Remove Fle
+function removeMe(e,imageName){
+    let uldCounter = document.getElementById("uplcounter");
+    let gloader     = document.getElementById('gloader');
+    let gallery     = document.getElementById('gallery');   
+    //gloader.classList.add("show-me");
+    setFileError("");
+    const xhttp = new XMLHttpRequest(); 
+    xhttp.open("GET", vcObj.web_url+"/delete_file.php?delete=1&imageName="+imageName, true);
+    xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                let counterValue = parseInt(uldCounter.value);
+                counterValue--;
+                uldCounter.value = counterValue;
+
+                var fileName=document.getElementById('Uploadedfilename').value;
+                newStr = fileName.replace(imageName, '');
+                document.getElementById('Uploadedfilename').value=newStr;
+                console.log(this.responseText);
+                e.parentNode.remove();
+                if(!gallery.hasChildNodes()){gloader.classList.remove("show-me");}
             }
-        }),
-        n.send();
+        }
+    xhttp.send();
+ 
 }
+//End Remove Fle
 
-function fuuploadFile(e, t){
-    fusetFileError("");
-    let a = document.getElementById("fuuplcounter");
-    if (parseInt(a.value) >= 10) return void fusetFileError("You can not upload more then 10 media files.");
-    let n = document.getElementById("fugloader");
-    n.classList.add("show-me"), n.classList.add("active");
-    if (e.size / 1024 / 1024 > 20) return fusetFileError("ERROR Uploaded document exceeds the maximum size limit of 20 MB"), void n.classList.remove("active");
-    var o = new FormData();
-    o.append("file", e);
-    var r = new XMLHttpRequest();
-    r.open("POST", pxlObj.web_url+"/file-uploader.php", !0),
-    (r.onload = function (t) {
-        if (200 == r.status) {
-            let t = JSON.parse(r.responseText);
-            if ((console.log(t), 1 == t.status)) {
-                let n = parseInt(a.value);
-                n++, (a.value = n);
-                let o = document.getElementById("fuUploadedfilename").value;
-                document.getElementById("fuUploadedfilename").value = "" == o ? t.file : o + t.file;
-                let r = new FileReader();
-                r.readAsDataURL(e),
-                (r.onloadend = function () {
-                    let a = document.createElement("div"),
-                        n = "";
-                    switch ((console.log(e.type), e.type)) {
-                        case "application/pdf":
-                            n = pxlObj.tpl_url+"/dev-img/pdf_gy.png";
-                            break;
-                        case "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
-                        case "text/plain":
-                            n = pxlObj.tpl_url+"/dev-img/doc_gy.png";
-                            break;
-                        case "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet":
-                        case "application/vnd.ms-excel":
-                            n = pxlObj.tpl_url+"/dev-img/xls_gy.png";
-                            break;
-                        case "image/vnd.adobe.photoshop":
-                            n = pxlObj.tpl_url+"/dev-img/psd_gy.png";
-                            break;
-                        case "application/x-zip-compressed":
-                        case "application/zip":
-                            n = pxlObj.tpl_url+"/dev-img/zip_gy.png";
-                            break;
-                        default:
-                            n = pxlObj.tpl_url+"/dev-img/def-thumb.png";
-                    }
-                    e.size > 1e7 && "image/jpeg" == e.type
-                    ? (n = pxlObj.tpl_url+"/dev-img/jpg_gy.png")
-                    : e.size > 1e7 && "image/png" == e.type && (n = pxlObj.tpl_url+"/dev-img/png_gy.png"),
-                    (a.innerHTML = '<img src="' + n + '" height="55" width="55"><button type="button" onclick="return furemoveMe(this,this.value);" value="' + t.file + '">X</button></span>'),
-                    document.getElementById("fugallery").appendChild(a);
-                });
-            } else fusetFileError(t.message);
-        } else console.log("error");
-        n.classList.remove("active");
-    }),
-    r.send(o);
+function uploadFile(file, i) {
+    setFileError("");
+    let uldCounter  = document.getElementById("uplcounter");
+    if( parseInt(uldCounter.value) >= 10 ){
+        setFileError( "You can not upload more then 10 media files." );
+        return;
+    }
+
+    let gloader     = document.getElementById('gloader');
+    gloader.classList.add("show-me");
+    gloader.classList.add("active");
+    
+    const fileSize = file.size / 1024 / 1024;
+    if( fileSize > 20 ){
+        setFileError("ERROR Uploaded document exceeds the maximum size limit of 20 MB");
+        gloader.classList.remove("active");
+        return;
+    }
+
+    var form_data = new FormData();
+    form_data.append('file', file)
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", vcObj.web_url+"/file-uploader.php", true);
+    xhttp.onload = function(event){
+        if (xhttp.status == 200) {
+            let response =  JSON.parse(xhttp.responseText);             
+            console.log( file.name );
+            const fileName = file.name;
+            const dotIndex = fileName.lastIndexOf('.');
+            const baseName = fileName.substring(0, dotIndex);
+            const extension = fileName.substring(dotIndex);
+            
+            let trimmedBaseName = baseName;
+            if (baseName.length > 60) {
+                trimmedBaseName = baseName.substring(0, 60);
+            }
+            const trimmedFileName = trimmedBaseName + extension;
+
+            //console.log( response );
+            if( response.status == true ){
+                let counterValue = parseInt(uldCounter.value);
+                counterValue++;
+                uldCounter.value = counterValue;
+                let existingVal = document.getElementById('Uploadedfilename').value;
+                if( existingVal == '' ){
+                    document.getElementById('Uploadedfilename').value = response.file;                      
+                }else{
+                    document.getElementById('Uploadedfilename').value = existingVal + response.file;
+                }
+
+            let reader = new FileReader()
+              reader.readAsDataURL(file)
+              reader.onloadend = function() {
+                let indiv       = document.createElement('div');
+                indiv.classList.add("ad-file");
+                indiv.innerHTML = '<span class="up-file">'+trimmedFileName+'</span><button type="button" onclick="return removeMe(this,this.value);" value="'+response.file+'"></button>';
+                document.getElementById('gallery').appendChild(indiv);
+                }
+            }else{
+                setFileError( response.message );
+            }
+        }else{
+            console.log("error");
+        }
+        gloader.classList.remove("active");
+    }
+    xhttp.send(form_data);
 }
-*/

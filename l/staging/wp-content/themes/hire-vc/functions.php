@@ -154,6 +154,9 @@ function vc_l7_scripts(){
     	wp_enqueue_script( 'v8-script', get_stylesheet_directory_uri().'/js/script-v8.js', array(), _S_VERSION, true );
     	wp_enqueue_script( 'v8-validation', get_stylesheet_directory_uri().'/js/validation-v8.js', array(), _S_VERSION, true );
     	wp_enqueue_script( 'v8-uploads', get_stylesheet_directory_uri().'/js/upload-handler.js', array(), _S_VERSION, true );
+    	wp_localize_script( 'v8-uploads', 'vcObj', 
+		array( 'tpl_url' => get_bloginfo('template_url'), 'web_url' => 'http://localhost/valuecoders.com/staging/' ) 
+		);
     }
     else{	
 	if( !wp_is_mobile() ){

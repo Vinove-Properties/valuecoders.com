@@ -78,23 +78,28 @@ alt="Valuecoders" width="449" height="637">
             </div>
             <div class="form-group  width-full form-textarea">
               <div class="user-input">
-                <label>Your Requirements</label>
-                <textarea class="form-input comment-input" autocomplete="off" id="bn-req" placeholder="" name="user-req"></textarea>
-                <small>Please Fill Requirement</small>
-                <div class="drop-input attachment_brw" id="uploadcontact">
-                  <div id="dropcontact"></div>
-                </div>
-                <div id="drop-area">
-                  <input type="file" name="files[]" id="fileElem" multiple=""
-                    accept="image/*,application/pdf,.psd,.zip,.docx,.xlsx,.xls,.txt"
-                    onchange="handleFiles(this.files)" style="display:none;">
-                  <button class="button" id="browse-btn" type="button"
-                    onclick="document.getElementById('fileElem').click()">Browse |  Drop Files Here</button>
-                  <input type="hidden" name="up-counter" id="uplcounter" value="0">
-                </div>
+              <label>Your Requirements</label>
+              <textarea class="form-input comment-input" autocomplete="off" id="bn-req" placeholder="" name="user-req"></textarea>
+              <small>Please Fill Requirement</small>
+              <div class="drop-input attachment_brw" id="uploadcontact">
+                <div id="dropcontact"></div>
+              </div>
+              <div id="drop-area">
+                <input type="file" name="files[]" id="fileElem" multiple=""
+                  accept="image/*,application/pdf,.psd,.zip,.docx,.xlsx,.xls,.txt"
+                  onchange="handleFiles(this.files)" style="display:none;">
+                <button class="button" id="browse-btn" type="button" onclick="document.getElementById('fileElem').click()">Browse |  Drop Files Here</button>
+                <input type="hidden" name="up-counter" id="uplcounter" value="0">
+              </div>
+              </div>
+              <div id="gloader" class="gal-loader">
+                <div class="loader"></div>
+                <div id="gallery"></div>
               </div>
             </div>
             <div class="form-group  width-full">
+              <input type="hidden" name="Uploadedfilename" id="Uploadedfilename" value="">
+              <input type="hidden" name="page_url" value="<?php bloginfo('url'); ?>">
               <button type="submit" class="btn btn-big btn-primary btn-padding-x test-1" name="ws-form-sub" id="bnr-submit" value="ws-landing">Hire Software Developers</button>
               <span class="privc"><i></i>100% Privacy Guaranteed</span>
             </div>
