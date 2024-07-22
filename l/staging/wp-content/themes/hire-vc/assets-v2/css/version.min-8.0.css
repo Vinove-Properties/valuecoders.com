@@ -2272,7 +2272,8 @@ header {
         position: relative;
         font-weight: 400;
         background: #ffedc6;
-        border-radius: 20px 20px 0 0; }
+        border-radius: 20px 20px 0 0;
+        position: relative; }
         .vc-chartbook .chart-flex .chart-col:nth-child(3) h3 span {
           font-size: 28px;
           color: rgba(0, 0, 0, 0.7);
@@ -2281,7 +2282,14 @@ header {
           .vc-chartbook .chart-flex .chart-col:nth-child(3) h3 span strong {
             color: #ffb81d;
             font-weight: 700; }
-        .vc-chartbook .chart-flex .chart-col:nth-child(3) h3 img {
+        .vc-chartbook .chart-flex .chart-col:nth-child(3) h3:after {
+          content: "";
+          background: url(../images/v8/rocket.gif) 0 0 no-repeat;
+          display: inline-block;
+          vertical-align: top;
+          width: 50px;
+          height: 50px;
+          background-size: 100%;
           position: absolute;
           right: -10px;
           top: -21px; }
