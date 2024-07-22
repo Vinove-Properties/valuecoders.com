@@ -323,7 +323,7 @@ function uploadFileFo(file, i){
               reader.onloadend = function() {
                 let indiv       = document.createElement('div');
                 indiv.classList.add("ad-file");
-                indiv.innerHTML = '<span class="up-file">'+trimmedFileName+'</span><button type="button" onclick="return removeMeFo(this,this.value);" value="'+response.file+'">x</button>';
+                indiv.innerHTML = '<span class="up-file">'+trimmedFileName+'</span><button type="button" onclick="return removeMeFo(this,this.value);" value="'+response.file+'"></button>';
                 document.getElementById('gallery-fo').appendChild(indiv);
                 }
             }else{
