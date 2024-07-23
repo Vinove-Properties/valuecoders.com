@@ -3701,6 +3701,9 @@ header {
       .team-engage .col-right .process-step:before {
         height: 105%; }
     .team-engage .col-right .yellow-btn {
-      margin-top: 10px; } }
+      margin-top: 10px; }
+
+  .vc-chartbook {
+    display: none; } }
 
 /*# sourceMappingURL=version.min-8.0.css.map */
