@@ -1,4 +1,4 @@
-window.addEventListener("load", function() {
+window.addEventListener("load", function(){
 document.querySelector(".customer-testimonial-slider .glider").addEventListener("glider-slide-visible",
 function(event) {
 var glider = Glider(this);
@@ -101,11 +101,7 @@ function activateTab(e) {
     var clickedTab = e.currentTarget.getAttribute("href");
     e.currentTarget.parentNode.classList.add("active");
     document.querySelector(clickedTab).classList.add("active");
-
-    // Update the currentIndex based on the clicked tab
     currentIndex = Array.from(tabLabels).indexOf(e.currentTarget);
-    
-    // Reset the interval to start auto tabbing again
     resetAutoTab();
 }
 
@@ -114,7 +110,7 @@ tabLabels.forEach(function(label) {
 });
 
 function autoTab() {
-    currentIndex = (currentIndex + 1) % tabCount; // Move to the next tab, and loop back to the start
+    currentIndex = (currentIndex + 1) % tabCount;
     var nextTab = tabLabels[currentIndex];
     var event = new Event('click');
     nextTab.dispatchEvent(event);
@@ -132,25 +128,25 @@ autoTabInterval = setInterval(autoTab, 5000);
 // glider industry-case-sec
 var industry =  document.getElementById("industry");
 if( industry ){
-window.addEventListener("load", function () {
-    document.querySelector(".industry-case-sec.glider").addEventListener("glider-slide-visible", function (event) {
-    var glider2 = Glider(this);
+    window.addEventListener("load", function () {
+        document.querySelector(".industry-case-sec.glider").addEventListener("glider-slide-visible", function (event) {
+        var glider2 = Glider(this);
+        });
+        document.querySelector(".industry-case-sec.glider").addEventListener("glider-slide-hidden", function (event) {});
+        document.querySelector(".industry-case-sec.glider").addEventListener("glider-refresh", function (event) {});
+        document.querySelector(".industry-case-sec.glider").addEventListener("glider-loaded", function (event) {});
+        window._ = new Glider(document.querySelector(".industry-case-sec.glider"), {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        draggable: false,
+        scrollLock: false,
+        rewind: false,
+        dots: "false",
+        dragDistance: false,
+        arrows: {
+          prev: '#industry .glider-prev',
+          next: '#industry .glider-next'
+        },
+        });
     });
-    document.querySelector(".industry-case-sec.glider").addEventListener("glider-slide-hidden", function (event) {});
-    document.querySelector(".industry-case-sec.glider").addEventListener("glider-refresh", function (event) {});
-    document.querySelector(".industry-case-sec.glider").addEventListener("glider-loaded", function (event) {});
-    window._ = new Glider(document.querySelector(".industry-case-sec.glider"), {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    draggable: false,
-    scrollLock: false,
-    rewind: false,
-    dots: "false",
-    dragDistance: false,
-    arrows: {
-      prev: '#industry .glider-prev',
-      next: '#industry .glider-next'
-    },
-    });
-});
-};
+}

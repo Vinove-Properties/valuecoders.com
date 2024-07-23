@@ -46,7 +46,8 @@ alt="Valuecoders" width="449" height="637">
           <h3>Request A Proposal</h3>
           <p>Assure Response in 1 business days</p>
         </div>
-        <form method="POST" action="https://www.valuecoders.com/sendmail-l7.php" id="banner-form" onsubmit="return validateBannerForm();">
+        <form method="POST" action="https://www.valuecoders.com/sendmail-l7.php" id="banner-form" 
+        onsubmit="return validateBannerForm();">
           <div class="form-wrap">
             <div class="form-group width-full">
               <div class="user-input">
@@ -58,7 +59,8 @@ alt="Valuecoders" width="449" height="637">
             <div class="form-group width-full">
               <div class="user-input">
                 <label>Email</label>
-                <input type="text" class="form-input" id="bn-email" placeholder="Enter Your Email" name="user-email" maxlength="50">
+                <input type="text" class="form-input" id="bn-email" placeholder="Enter Your Email" name="user-email" 
+                maxlength="50">
                 <small></small>
               </div>
             </div>

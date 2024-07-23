@@ -214,7 +214,9 @@ width="250" height="88">
           We are Online
         </div>
         <div class="btn-sec">
-          <a href="#" class="btn rounded"><span class="text-white">Get Free Consultation</span></a>
+          <a href="javascript:void(0);" onclick="showPopForm();" class="btn rounded">
+            <span class="text-white">Get Free Consultation</span>
+          </a>
         </div>
       </div>
     </div>
