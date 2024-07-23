@@ -2370,10 +2370,7 @@ header {
           .vetting-process .process-tabs .process-tb ul li a .icon {
             margin-right: 8px;
             margin-top: -1px; }
-        .vetting-process .process-tabs .process-tb ul li:hover a span {
-          color: #ffffff;
-          z-index: 9; }
-        .vetting-process .process-tabs .process-tb ul li:hover:before {
+        .vetting-process .process-tabs .process-tb ul li:before {
           content: "";
           background: url(../images/v8/pro-shape.png) 0 0 no-repeat;
           display: inline-block;
@@ -2381,23 +2378,30 @@ header {
           width: 100px;
           position: absolute;
           height: 50px;
-          left: -80px;
+          left: 0;
           top: 0px;
+          z-index: 9;
+          opacity: 0;
+          transition: all 0.3s ease-in-out; }
+        .vetting-process .process-tabs .process-tb ul li:hover a span {
+          color: #ffffff;
           z-index: 9; }
+        .vetting-process .process-tabs .process-tb ul li:hover:before {
+          left: -80px;
+          opacity: 1;
+          transition: all 0.3s ease-in-out; }
       .vetting-process .process-tabs .process-tb ul li.active a span {
         color: #ffffff;
         z-index: 9; }
       .vetting-process .process-tabs .process-tb ul li.active:before {
-        content: "";
-        background: url(../images/v8/pro-shape.png) 0 0 no-repeat;
-        display: inline-block;
-        vertical-align: top;
-        width: 100px;
-        position: absolute;
-        height: 50px;
         left: -80px;
-        top: 0px;
-        z-index: 9; }
+        opacity: 1;
+        transition: all 0.3s ease-in-out; }
+      .vetting-process .process-tabs .process-tb ul li.active:last-child.active:before {
+        display: none; }
+      .vetting-process .process-tabs .process-tb ul li.active:last-child.active:after {
+        transition: all 0.3s ease-in-out;
+        right: -73px; }
   .vetting-process .process-tabs .tab-data {
     flex-basis: 60%; }
     .vetting-process .process-tabs .tab-data .tab-contents {
