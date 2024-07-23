@@ -720,7 +720,7 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
             <div class="form-text-cont">
               <div class="user-input">
                 <label>Phone Number</label>
-                <input type="text" autocomplete="off" class="input-field" id="ft-phpne" placeholder="Phone Number (Optional)" value="" name="user-phone">
+                <input type="text" autocomplete="off" class="input-field" id="ft-phone" placeholder="Phone Number (Optional)" value="" name="user-phone">
                 <small>Error Message</small>
               </div>
             </div>

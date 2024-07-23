@@ -1,3 +1,90 @@
+function autocomplete(inp, arr) {
+  var currentFocus;
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      //cont_countryautocomplete-list
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      this.parentNode.appendChild(a);
+      var sCounter = 0;
+      for (i = 0; i < arr.length; i++){
+        var re = new RegExp(val, 'i');
+        if (arr[i].match(re)){
+ 		 sCounter++;	
+          b = document.createElement("DIV");
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          b.addEventListener("click", function(e) {
+              inp.value = this.getElementsByTagName("input")[0].value;
+              closeAllLists();
+          });
+          a.appendChild(b);
+          //a.setAttribute("class", "autocomplete-items has-item");
+        }else{
+          //a.setAttribute("class", "autocomplete-items has-noitm");
+        }
+      }
+      if( sCounter > 0 ){
+      	a.setAttribute("class", "autocomplete-items has-item");
+      }else{
+      	a.setAttribute("class", "autocomplete-items");
+      }
+  });
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        currentFocus++;
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        currentFocus--;
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        e.preventDefault();
+        if (currentFocus > -1) {
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  
+  phone.addEventListener('focusin',function(e){
+  	closeAllLists(e.target);
+  });
+  email.addEventListener('focusin',function(e){
+  	closeAllLists(e.target);
+  });
+
+  function addActive(x) {
+    if (!x) return false;
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+const LISTCOUNTRY = ["Afghanistan (AFG)","Albania (ALB)","Algeria (DZA)","Andorra (AND)","Angola (AGO)","Anguilla (AIA)","Antigua & Barbuda (ATG)","Argentina (ARG)","Armenia (ARM)","Aruba (ABW)","Australia (AUS)","Austria (AUT)","Azerbaijan (AZE)","Bahamas (BHS)","Bahrain (BHR)","Bangladesh (BGD)","Barbados (BRB)","Belarus (BLR)","Belgium (BEL)","Belize (BLZ)","Benin (BEN)","Bermuda (BMU)","Bhutan (BTN)","Bolivia (BOL)","Bosnia & Herzegovina (BIH)","Botswana (BWA)","Brazil (BRA)","British Virgin Islands (VGB)","Brunei (BRN)","Bulgaria (BGR)","Burkina Faso (BFA)","Burundi (BDI)","Cambodia (KHM)","Cameroon (CMR)","Canada (CAN)","Cape Verde (CPV)","Cayman Islands (CYM)","Central Arfrican Republic (CAF)","Chad (TCD)","Chile (CHL)","China (CHN)","Colombia (COL)","Congo (COG)","Cook Islands (COK)","Costa Rica (CRI)","Cote D Ivoire (CIV)","Croatia (HRV)","Cuba (CUB)","Curacao (CUW)","Cyprus (CYP)","Czech Republic (CZE)","Denmark (DNK)","Djibouti (DJI)","Dominica (DMA)","Dominican Republic (DOM)","Ecuador (ECU)","Egypt (EGY)","El Salvador (SLV)","Equatorial Guinea (GNQ)","Eritrea (ERI)","Estonia (EST)","Ethiopia (ETH)","Falkland Islands (FLK)","Faroe Islands (FRO)","Fiji (FJI)","Finland (FIN)","France (FRA)","French Polynesia (PYF)","French West Indies","Gabon (GAB)","Gambia (GMB)","Georgia (GEO)","Germany (DEU)","Ghana (GHA)","Gibraltar (GIB)","Greece (GRC)","Greenland (GRL)","Grenada (GRD)","Guam (GUM)","Guatemala (GTM)","Guernsey (GGY)","Guinea (GIN)","Guinea Bissau (GNB)","Guyana (GUY)","Haiti (HTI)","Honduras (HND)","Hong Kong (HKG)","Hungary (HUN)","Iceland (ISL)","India (IND)","Indonesia (IDN)","Iran (IRN)","Iraq (IRQ)","Ireland (IRL)","Isle of Man (IMN)","Israel (ITA)","Italy (ITA)","Jamaica (JAM)","Japan (JPN)","Jersey (JEY)","Jordan (JOR)","Kazakhstan (KAZ)","Kenya (KEN)","Kiribati (KIR)","Kosovo (KOS)","Kuwait (KWT)","Kyrgyzstan (KGZ)","Laos (LAO)","Latvia (LVA)","Lebanon (LBN)","Lesotho (LSO)","Liberia (LBR)","Libya (LBY)","Liechtenstein (LIE)","Lithuania (LTU)","Luxembourg (LUX)","Macau (MAC)","Macedonia (MKD)","Madagascar (MDG)","Malawi (MWI)","Malaysia (MYS)","Maldives (MDV)","Mali (MLI)","Malta (MLT)","Marshall Islands (MHL)","Mauritania (MRT)","Mauritius (MUS)","Mexico (MEX)","Micronesia (FSM)","Moldova (MDA)","Monaco (MCO)","Mongolia (MNG)","Montenegro (MNE)","Montserrat (MSR)","Morocco (MAR)","Mozambique (MOZ)","Myanmar (MMR)","Namibia (NAM)","Nauru (NRU)","Nepal (NPL)","Netherlands (NLD)","Netherlands Antilles (ANT)","New Caledonia (NCL)","New Zealand (NZL)","Nicaragua (NIC)","Niger (NER)","Nigeria (NGA)","North Korea (PRK)","Norway (NOR)","Oman (OMN)","Pakistan (PAK)","Palau (PLW)","Palestine (PSE)","Panama (PAN)","Papua New Guinea (PNG)","Paraguay (PRY)","Peru (PER)","Philippines (PHL)","Poland (POL)","Portugal (PRT)","Puerto Rico (PRI)","Qatar (QAT)","Reunion (REU)","Romania (ROU)","Russia (RUS)","Rwanda (RWA)","Saint Pierre & Miquelon (SPM)","Samoa (WSM)","San Marino (SMR)","Sao Tome and Principe (STP)","Saudi Arabia (SAU)","Senegal (SEN)","Serbia (SRB)","Seychelles (SYC)","Sierra Leone (SLE)","Singapore (SGP)","Slovakia (SVK)","Slovenia (SVN)","Solomon Islands (SLB)","Somalia (SOM)","South Africa (ZAF)","South Korea (KOR)","South Sudan (SSD)","Spain (ESP)","Sri Lanka (LKA)","St Kitts & Nevis (KNA)","St Lucia (LCA)","St Vincent (VCT)","Sudan (SDN)","Suriname (SUR)","Swaziland (SWZ)","Sweden (SWE)","Switzerland (CHE)","Syria (SYR)","Taiwan (TWN)","Tajikistan (TJK)","Tanzania (TZA)","Thailand (THA)","Timor L'Este (TLS)","Togo (TGO)","Tonga (TON)","Trinidad & Tobago (TTO)","Tunisia (TUN)","Turkey (TUR)","Turkmenistan (TKM)","Turks & Caicos (TCA)","Tuvalu (TUV)","Uganda (UGA)","Ukraine (UKR)","United Arab Emirates (UAE)","United Kingdom (UK)","United States of America (USA)","Uruguay (URY)","Uzbekistan (UZB)","Vanuatu (VUT)","Vatican City (VAT)","Venezuela (VEN)","Vietnam (VNM)","Virgin Islands (VIR)","Yemen (YEM)","Zambia (ZMB)","Zimbabwe (ZWE)"];
+
 function showPopForm(){
 	document.getElementById("vc-fxdform").classList.add("open-pop");
 }
@@ -205,6 +292,10 @@ bnPhone 		= document.getElementById('bn-phone'),
 bnCountry 		= document.getElementById('bn-country'),
 bnReq 			= document.getElementById('bn-req');
 
+if( bnCountry ){
+	autocomplete(bnCountry, LISTCOUNTRY);	
+}
+
 bnName.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Name"));
 bnName.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Name"));
 bnName.addEventListener("keydown", strInputValidation.bind(null, "Please Fill Name"));
@@ -262,6 +353,10 @@ ftPhone 		= document.getElementById('ft-phone'),
 ftCountry 		= document.getElementById('ft-country'),
 ftReq 			= document.getElementById('ft-req');
 
+if( ftCountry ){
+	autocomplete(ftCountry, LISTCOUNTRY);	
+}
+
 ftName.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Name"));
 ftName.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Name"));
 ftName.addEventListener("keydown", strInputValidation.bind(null, "Please Fill Name"));
@@ -318,6 +413,10 @@ poEmail 		= document.getElementById('po-email'),
 poPhone 		= document.getElementById('po-phone'),
 poCountry 		= document.getElementById('po-country'),
 poReq 			= document.getElementById('po-req');
+
+if( poCountry ){
+	autocomplete(poCountry, LISTCOUNTRY);	
+}
 
 poName.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Name"));
 poName.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Name"));
