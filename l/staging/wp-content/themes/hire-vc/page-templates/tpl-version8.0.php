@@ -2,7 +2,9 @@
 /*
 Template Name: Version - 8 Template
 */
-get_header(); ?>
+get_header(); 
+$formOpt = get_field('form-opts');
+?>
 <section class="banner-img-section">
 <picture class="main--featured--image__wrapper">
 <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/v8-banner.webp">
@@ -43,8 +45,10 @@ alt="Valuecoders" width="449" height="637">
     <div class="form-box">
       <div class="form-outer">
         <div class="form-head">
-          <h3>Request A Proposal</h3>
-          <p>Assure Response in 1 business days</p>
+          <?php 
+          echo (isset($formOpt['bf-heading']) && !empty($formOpt['bf-heading'])) ? $formOpt['bf-heading'] : 
+          '<h3>Request A Proposal</h3><p>Assure Response in 1 business days</p>'; 
+          ?>
         </div>
         <form method="POST" action="https://www.valuecoders.com/sendmail-l7.php" id="banner-form" 
         onsubmit="return validateBannerForm();">
@@ -107,7 +111,12 @@ alt="Valuecoders" width="449" height="637">
               <input type="hidden" name="Uploadedfilename" id="Uploadedfilename" value="">
               <input type="hidden" name="form-action" value="lp">
               <input type="hidden" name="page_url" value="<?php bloginfo('url'); ?>">
-              <button type="submit" class="btn btn-big btn-primary btn-padding-x test-1" name="ws-form-sub" id="bnr-submit" value="ws-landing">Hire Software Developers</button>
+              <button type="submit" class="btn btn-big btn-primary btn-padding-x test-1" name="ws-form-sub" id="bnr-submit" 
+              value="ws-landing">
+              <?php 
+              echo (isset($formOpt['bf-cta']) && !empty($formOpt['bf-cta'])) ? $formOpt['bf-cta'] : 
+              'Hire Software Developers'; 
+              ?></button>
               <span class="privc"><i></i>100% Privacy Guaranteed</span>
             </div>
           </div>
@@ -218,8 +227,8 @@ if( isset($whyVC['is_enable']) && ($whyVC['is_enable'] == "yes") ) :
           <div class="flex-2 margin-t-50">
             <div class="dis-flex items-center">
               <span class="icon">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon1.png" alt="Valuecoders" width="48"
-                height="54">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon1.png" alt="Valuecoders" 
+              width="48" height="54">
               </span>
               <span class="icon-txt">Experienced<br> software developers</span>
             </div>
@@ -227,8 +236,8 @@ if( isset($whyVC['is_enable']) && ($whyVC['is_enable'] == "yes") ) :
           <div class="flex-2 margin-t-50">
             <div class="dis-flex items-center">
               <span class="icon">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon2.png" alt="Valuecoders" width="55"
-                height="55">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon2.png" alt="Valuecoders" 
+              width="55" height="55">
               </span>
               <span class="icon-txt">Flexible engagement<br> options</span>
             </div>
@@ -236,8 +245,8 @@ if( isset($whyVC['is_enable']) && ($whyVC['is_enable'] == "yes") ) :
           <div class="flex-2 margin-t-50">
             <div class="dis-flex items-center">
               <span class="icon">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon3.png" alt="Valuecoders" width="54"
-                height="54">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon3.png" alt="Valuecoders" 
+              width="54" height="54">
               </span>
               <span class="icon-txt">Cost-effective<br> solutions</span>
             </div>
@@ -245,8 +254,8 @@ if( isset($whyVC['is_enable']) && ($whyVC['is_enable'] == "yes") ) :
           <div class="flex-2 margin-t-50">
             <div class="dis-flex items-center">
               <span class="icon">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon4.png" alt="Valuecoders" width="55"
-                height="54">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon4.png" alt="Valuecoders" 
+              width="55" height="54">
               </span>
               <span class="icon-txt">Daily/weekly/monthly<br> reporting</span>
             </div>
@@ -254,8 +263,8 @@ if( isset($whyVC['is_enable']) && ($whyVC['is_enable'] == "yes") ) :
           <div class="flex-2 margin-t-50">
             <div class="dis-flex items-center">
               <span class="icon">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon5.png" alt="Valuecoders" width="59"
-                height="54">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon5.png" alt="Valuecoders" 
+              width="59" height="54">
               </span>
               <span class="icon-txt">160 man hours<br> guaranteed</span>
             </div>
@@ -263,8 +272,8 @@ if( isset($whyVC['is_enable']) && ($whyVC['is_enable'] == "yes") ) :
           <div class="flex-2 margin-t-50">
             <div class="dis-flex items-center">
               <span class="icon">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon6.png" alt="Valuecoders" width="50"
-                height="50">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon6.png" alt="Valuecoders" 
+              width="50" height="50">
               </span>
               <span class="icon-txt">Smooth <br> communication</span>
             </div>
@@ -272,8 +281,8 @@ if( isset($whyVC['is_enable']) && ($whyVC['is_enable'] == "yes") ) :
           <div class="flex-2 margin-t-50">
             <div class="dis-flex items-center">
               <span class="icon">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon7.png" alt="Valuecoders" width="44"
-                height="54">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon7.png" alt="Valuecoders" 
+              width="44" height="54">
               </span>
               <span class="icon-txt">Complementary <br> development manager</span>
             </div>
@@ -281,8 +290,8 @@ if( isset($whyVC['is_enable']) && ($whyVC['is_enable'] == "yes") ) :
           <div class="flex-2 margin-t-50">
             <div class="dis-flex items-center">
               <span class="icon">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon8.png" alt="Valuecoders" width="50"
-                height="50">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon8.png" alt="Valuecoders" 
+              width="50" height="50">
               </span>
               <span class="icon-txt">Ongoing internal L&D<br> programs</span>
             </div>
@@ -298,6 +307,7 @@ if( isset($whyVC['is_enable']) && ($whyVC['is_enable'] == "yes") ) :
         </picture>        
       </div>
     </div>
+    
     <div class="count-box-section  margin-t-70">
       <div class="count-box-outer dis-flex">
         <div class="count-box flex-4">
@@ -717,21 +727,24 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
             <div class="form-text-cont">
               <div class="user-input">
                 <label>Full Name</label>
-                <input type="text" autocomplete="off" id="ft-name" placeholder="Full Name" class="input-field" value="" name="user-name">
+                <input type="text" autocomplete="off" id="ft-name" placeholder="Full Name" class="input-field" value="" 
+                name="user-name">
                 <small>Error Message</small>
               </div>
             </div>
             <div class="form-text-cont">
               <div class="user-input">
                 <label>Email Address</label>
-                <input type="text" autocomplete="off" id="ft-email" placeholder="Email Address" class="input-field" value="" name="user-email">
+                <input type="text" autocomplete="off" id="ft-email" placeholder="Email Address" class="input-field" value="" 
+                name="user-email">
                 <small>Error Message</small>
               </div>
             </div>
             <div class="form-text-cont">
               <div class="user-input">
                 <label>Phone Number</label>
-                <input type="text" autocomplete="off" class="input-field" id="ft-phone" placeholder="Phone Number (Optional)" value="" name="user-phone">
+                <input type="text" autocomplete="off" class="input-field" id="ft-phone" placeholder="Phone Number (Optional)" 
+                value="" name="user-phone">
                 <small>Error Message</small>
               </div>
             </div>
@@ -772,7 +785,9 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
                   <input type="hidden" name="Uploadedfilename" id="Uploadedfilename-fo" value="">
                   <input type="hidden" name="form-action" value="lp">
                   <input type="hidden" name="page_url" value="<?php bloginfo('url'); ?>">
-                  <input type="submit" id="footer-submitButton" class="checkout-submit" value="Enquire Now">
+                  <input type="submit" id="footer-submitButton" class="checkout-submit" 
+                  value="<?php echo (isset($formOpt['fo-cta']) && !empty($formOpt['fo-cta'])) ? $formOpt['fo-cta'] :  
+                  'Enquire Now'; ?>">
                 </div>
               </div>
             </div>
@@ -828,15 +843,7 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
       </div>
       <div class="form-wrap">
         <div class="form-content">
-          <h3>We Excel in Future-Ready <strong>Software <br>Development &amp; Staff Augmentation Services</strong></h3>
-          <div class="text-field"><span class="clrtext">Quality-Focused</span><span class="clrtext">Innovative</span><span class="clrtext">Secure</span></div>
-          <ul>
-            <li>Access High-quality, Pre-vetted Talent</li>
-            <li>Flexible Engagement Options</li>
-            <li>Well Defined SLAs, No Hidden Costs </li>
-            <li>Global Quality Standards</li>
-            <li>Trusted by Startups &amp; Fortune 500 Companies</li>
-          </ul>
+          <?php echo (isset($formOpt['pp-text']) && !empty($formOpt['pp-text'])) ? $formOpt['pp-text'] : '';  ?>
           <picture>
             <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/form-companylogo.svg" alt="Valuecoders" width="528" height="56" data-lazy-src="<?php bloginfo('template_url'); ?>/assets-v2/images/form-companylogo.svg" data-ll-status="loaded" class="entered lazyloaded">
             <noscript><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/form-companylogo.svg" alt="Valuecoders" width="528" height="56"></noscript>
@@ -884,7 +891,9 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
             <div class="user-input checkout">
               <input type="hidden" name="form-action" value="lp">
               <input type="hidden" name="page_url" value="<?php bloginfo('url'); ?>">
-              <input type="submit" id="pop-submitButton" class="checkout-submit ch111" value="CONTACT US NOW">
+              <input type="submit" id="pop-submitButton" class="checkout-submit ch111" 
+              value="<?php echo (isset($formOpt['pp-cta']) && !empty($formOpt['pp-cta'])) ? $formOpt['pp-cta'] : 
+              'CONTACT US NOW'; ?>">
             </div>
             <span class="privc"><i></i>100% Privacy Guaranteed</span>
           </form>
