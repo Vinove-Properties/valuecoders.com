@@ -46,7 +46,7 @@ alt="Valuecoders" width="449" height="637">
           <h3>Request A Proposal</h3>
           <p>Assure Response in 1 business days</p>
         </div>
-        <form action="https://www.valuecoders.com/sendmail-l7.php" id="banner-form" onsubmit="return validateBannerForm();">
+        <form method="POST" action="https://www.valuecoders.com/sendmail-l7.php" id="banner-form" onsubmit="return validateBannerForm();">
           <div class="form-wrap">
             <div class="form-group width-full">
               <div class="user-input">
@@ -697,8 +697,7 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
       </div>
       <div class="right-box">
         <form id="footer-contact-form" action="https://www.valuecoders.com/sendmail-l7.php" class="contact-form-section" 
-        enctype="multipart/form-data" method="POST" 
-        onsubmit="return _footerFormValidator();">
+        enctype="multipart/form-data" method="POST" onsubmit="return _footerFormValidator();">
           <div class="form-inner dis-flex">
             <div class="form-text-cont">
               <div class="user-input">
@@ -828,7 +827,7 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
           </picture>
         </div>
         <div id="vc-fxdform" class="form-section">
-          <form action="https://www.valuecoders.com/sendmail-l7.php" onsubmit="return _popFormValidator();" enctype="multipart/form-data" id="cmn-pop-form" method="POST">
+          <form method="POST" action="https://www.valuecoders.com/sendmail-l7.php" onsubmit="return _popFormValidator();" enctype="multipart/form-data" id="cmn-pop-form" method="POST">
             <div class="form-inner dis-flex" id="pop-form">
               <div class="form-text-cont">
                 <div class="user-input">
