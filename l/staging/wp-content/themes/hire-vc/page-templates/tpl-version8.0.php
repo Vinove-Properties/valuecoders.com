@@ -142,6 +142,9 @@ alt="Valuecoders" width="449" height="637">
     
     $clReviews = get_field('client-review-v4', 'option');
     if( $clReviews ){ 
+    // echo '<pre>';
+    // print_r($clReviews);
+    // echo '</pre>';  
     ?>
     <div class="glider-contain customer-testimonial-slider">
       <div class="glider" id="why-glider">
@@ -151,7 +154,7 @@ alt="Valuecoders" width="449" height="637">
         ?>
         <div class="slide-item">
           <div class="content-box-outer">
-            <div class="content-box<?php echo " str-".$rating; ?>">
+            <div class="content-box <?php echo " str-".$rating; ?>">
               <p><?php echo $row['content']; ?></p>
             </div>
             <div class="cust-img-box dis-flex">
