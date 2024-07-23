@@ -399,7 +399,7 @@ if( isset($vetPro['is_enable']) && ($vetPro['is_enable'] == "yes") ) :
     <span>'.$i.'</span><img src="'.get_bloginfo('template_url').'/assets-v2/images/v8/process-0'.$i.'.svg" 
     width="'.$stars[$i].'" height="50" alt=""></a></li>';
     }
-    echo '<li><a href="#tab6"><img src="'.get_bloginfo('template_url').'/assets-v2/images/v8/process-06.svg" width="103" height="50" alt=""></a></li>';
+    echo '<li><a href="#tab6"><img class="inactive" src="'.get_bloginfo('template_url').'/assets-v2/images/v8/process-06.svg" width="103" height="50" alt=""><img class="active-img" src="'.get_bloginfo('template_url').'/assets-v2/images/v8/yel-shape.png" width="103" height="50" alt=""></a></li>';
     echo '</ul></nav>';  
     echo '<div id="tab-contents" class="tab-data">';
     $i = 0;

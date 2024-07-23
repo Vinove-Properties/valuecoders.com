@@ -1909,12 +1909,26 @@ header {
         .banner-img-section .autocomplete-items.has-item div.autocomplete-active, .banner-img-section .autocomplete-items.has-item div:hover {
           background-color: rgba(0, 0, 0, 0.05); }
 
-.banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input small {
+.banner-img-section
+.two-box
+.banner-form
+.form-box
+.form-wrap
+.form-group.form-textarea
+.user-input
+small {
   opacity: 0;
   margin: 0 0 5px;
   display: block; }
 
-.banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input.verror small {
+.banner-img-section
+.two-box
+.banner-form
+.form-box
+.form-wrap
+.form-group.form-textarea
+.user-input.verror
+small {
   opacity: 1; }
 
 .for-load-hide-images {
@@ -2390,6 +2404,10 @@ header {
           left: -80px;
           opacity: 1;
           transition: all 0.3s ease-in-out; }
+      .vetting-process .process-tabs .process-tb ul:last-child .inactive {
+        display: block; }
+      .vetting-process .process-tabs .process-tb ul:last-child img.active-img {
+        display: none; }
       .vetting-process .process-tabs .process-tb ul li.active a span {
         color: #ffffff;
         z-index: 9; }
@@ -2397,11 +2415,19 @@ header {
         left: -80px;
         opacity: 1;
         transition: all 0.3s ease-in-out; }
-      .vetting-process .process-tabs .process-tb ul li.active:last-child.active:before {
+      .vetting-process .process-tabs .process-tb ul li.active:last-child.active .inactive {
         display: none; }
+      .vetting-process .process-tabs .process-tb ul li.active:last-child.active .active-img {
+        display: block; }
+      .vetting-process .process-tabs .process-tb ul li.active:last-child.active:before {
+        background: url(../images/v8/yel-shape.png) 0 0 no-repeat;
+        left: 0; }
       .vetting-process .process-tabs .process-tb ul li.active:last-child.active:after {
         transition: all 0.3s ease-in-out;
-        right: -73px; }
+        right: -105px; }
+      .vetting-process .process-tabs .process-tb ul li.active:last-child:before {
+        background: url(../images/v8/yel-shape.png) 0 0 no-repeat;
+        left: 0; }
   .vetting-process .process-tabs .tab-data {
     flex-basis: 60%; }
     .vetting-process .process-tabs .tab-data .tab-contents {
@@ -2761,7 +2787,13 @@ header {
       .not-found-section ul li a {
         color: #60b741; }
 
-.banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input.verror {
+.banner-img-section
+.two-box
+.banner-form
+.form-box
+.form-wrap
+.form-group.form-textarea
+.user-input.verror {
   border-color: red; }
 
 .gal-loader {
