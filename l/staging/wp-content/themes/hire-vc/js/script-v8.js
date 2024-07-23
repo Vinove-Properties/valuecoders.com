@@ -53,8 +53,10 @@ window._ = new Glider(document.querySelector(".customer-testimonial-slider .glid
 
 });
 
-var tabLabels = document.querySelectorAll("#tabs li a");
-var tabPanes = document.getElementsByClassName("tab-contents");
+/*var tabLabels       = document.querySelectorAll("#tabs li a");
+var tabPanes        = document.getElementsByClassName("tab-contents");
+var currentIndex    = 0;
+var tabCount        = tabLabels.length;
 function activateTab(e) {
     e.preventDefault();
     tabLabels.forEach(function(label) {
@@ -71,6 +73,61 @@ function activateTab(e) {
 tabLabels.forEach(function(label) {
     label.addEventListener("click", activateTab);
 });
+
+function autoTab(){
+    currentIndex = (currentIndex + 1) % tabCount; // Move to the next tab, and loop back to the start
+    var nextTab = tabLabels[currentIndex];
+    var event = new Event('click');
+    nextTab.dispatchEvent(event);
+}
+
+// Start auto tabbing every 5 seconds
+setInterval(autoTab, 5000);*/
+
+var tabLabels = document.querySelectorAll("#tabs li a");
+var tabPanes = document.getElementsByClassName("tab-contents");
+var currentIndex = 0;
+var tabCount = tabLabels.length;
+var autoTabInterval;
+
+function activateTab(e) {
+    e.preventDefault();
+    tabLabels.forEach(function(label) {
+        label.parentNode.classList.remove("active");
+    });
+    Array.from(tabPanes).forEach(function(pane) {
+        pane.classList.remove("active");
+    });
+    var clickedTab = e.currentTarget.getAttribute("href");
+    e.currentTarget.parentNode.classList.add("active");
+    document.querySelector(clickedTab).classList.add("active");
+
+    // Update the currentIndex based on the clicked tab
+    currentIndex = Array.from(tabLabels).indexOf(e.currentTarget);
+    
+    // Reset the interval to start auto tabbing again
+    resetAutoTab();
+}
+
+tabLabels.forEach(function(label) {
+    label.addEventListener("click", activateTab);
+});
+
+function autoTab() {
+    currentIndex = (currentIndex + 1) % tabCount; // Move to the next tab, and loop back to the start
+    var nextTab = tabLabels[currentIndex];
+    var event = new Event('click');
+    nextTab.dispatchEvent(event);
+}
+
+function resetAutoTab() {
+    clearInterval(autoTabInterval);
+    autoTabInterval = setInterval(autoTab, 5000);
+}
+
+// Start auto tabbing every 5 seconds
+autoTabInterval = setInterval(autoTab, 5000);
+
 
 // glider industry-case-sec
 var industry =  document.getElementById("industry");
