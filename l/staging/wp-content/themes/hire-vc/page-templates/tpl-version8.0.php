@@ -46,7 +46,7 @@ alt="Valuecoders" width="449" height="637">
           <h3>Request A Proposal</h3>
           <p>Assure Response in 1 business days</p>
         </div>
-        <form id="banner-form" onsubmit="return validateBannerForm();">
+        <form action="https://www.valuecoders.com/sendmail-l7.php" id="banner-form" onsubmit="return validateBannerForm();">
           <div class="form-wrap">
             <div class="form-group width-full">
               <div class="user-input">
@@ -696,7 +696,8 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
         </div>
       </div>
       <div class="right-box">
-        <form id="footer-contact-form" action="" class="contact-form-section" enctype="multipart/form-data" method="POST" 
+        <form id="footer-contact-form" action="https://www.valuecoders.com/sendmail-l7.php" class="contact-form-section" 
+        enctype="multipart/form-data" method="POST" 
         onsubmit="return _footerFormValidator();">
           <div class="form-inner dis-flex">
             <div class="form-text-cont">
