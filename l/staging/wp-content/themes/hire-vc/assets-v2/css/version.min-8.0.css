@@ -1288,28 +1288,28 @@ header {
     transform: rotate(360deg); } }
   .contact-us-section .autocomplete-items {
     display: none; }
-    .contact-us-section .autocomplete-items.has-data {
+    .contact-us-section .autocomplete-items.has-item {
+      background: #fff;
       display: block;
-      height: 170px;
+      height: 140px;
       overflow-y: auto;
       position: absolute;
-      top: 68px;
+      top: 60px;
       left: 0;
       width: 100%;
-      z-index: 1;
-      box-shadow: 0px 6px 9px rgba(1, 0, 12, 0.43);
-      background: #1d1c39;
+      max-width: 280px;
+      box-shadow: 0px 6px 9px rgba(1, 0, 12, 0.4);
       border-radius: 5px;
-      z-index: 2; }
-      .contact-us-section .autocomplete-items.has-data div {
-        color: #fff;
-        border-bottom: 1px solid #05142b;
-        background-color: #1d1c39;
+      z-index: 999; }
+      .contact-us-section .autocomplete-items.has-item div {
+        color: #444444;
+        background: #fff;
+        border-bottom: 1px solid #444444;
         padding: 10px;
         font-size: 14px;
         cursor: pointer;
         padding: 15px 20px; }
-        .contact-us-section .autocomplete-items.has-data div.autocomplete-active, .contact-us-section .autocomplete-items.has-data div:hover {
+        .contact-us-section .autocomplete-items.has-item div.autocomplete-active, .contact-us-section .autocomplete-items.has-item div:hover {
           background-color: rgba(0, 0, 0, 0.05); }
   .contact-us-section .form-group {
     display: flex;
@@ -1880,36 +1880,36 @@ header {
         background-position: -7px -732px; }
         .banner-img-section .client-logo-box-section .logo-box.logo8:hover {
           background-position: -293px -732px; }
-
-.autocomplete-items {
-  display: none; }
-  .autocomplete-items.has-item {
-    background: #fff;
-    display: block;
-    height: 140px;
-    overflow-y: auto;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    max-width: 280px;
-    box-shadow: 0px 6px 9px rgba(1, 0, 12, 0.4);
-    border-radius: 5px;
-    z-index: 999; }
-    .autocomplete-items.has-item div {
-      color: #444444;
+  .banner-img-section .autocomplete-items {
+    display: none; }
+    .banner-img-section .autocomplete-items.has-item {
       background: #fff;
-      border-bottom: 1px solid #444444;
-      padding: 10px;
-      font-size: 14px;
-      cursor: pointer;
-      padding: 15px 20px; }
-      .autocomplete-items.has-item div.autocomplete-active, .autocomplete-items.has-item div:hover {
-        background-color: rgba(0, 0, 0, 0.05); }
+      display: block;
+      height: 140px;
+      overflow-y: auto;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      max-width: 280px;
+      box-shadow: 0px 6px 9px rgba(1, 0, 12, 0.4);
+      border-radius: 5px;
+      z-index: 999; }
+      .banner-img-section .autocomplete-items.has-item div {
+        color: #444444;
+        background: #fff;
+        border-bottom: 1px solid #444444;
+        padding: 10px;
+        font-size: 14px;
+        cursor: pointer;
+        padding: 15px 20px; }
+        .banner-img-section .autocomplete-items.has-item div.autocomplete-active, .banner-img-section .autocomplete-items.has-item div:hover {
+          background-color: rgba(0, 0, 0, 0.05); }
 
 .banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input small {
   opacity: 0;
-  margin: 0 0 5px; }
+  margin: 0 0 5px;
+  display: block; }
 
 .banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input.verror small {
   opacity: 1; }
