@@ -48,18 +48,18 @@ foreach( $_POST as $key => $fields ){
 */
 function get_client_ip_user() {
     if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
-              $_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
-              $_SERVER['HTTP_CLIENT_IP'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
-    }
-    $client  = @$_SERVER['HTTP_CLIENT_IP'];
-    $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
-    $remote  = $_SERVER['REMOTE_ADDR'];
+			  $_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
+			  $_SERVER['HTTP_CLIENT_IP'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
+	}
+	$client  = @$_SERVER['HTTP_CLIENT_IP'];
+	$forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
+	$remote  = $_SERVER['REMOTE_ADDR'];
 
-    if(filter_var($client, FILTER_VALIDATE_IP)) { $ip = $client; }
-    elseif(filter_var($forward, FILTER_VALIDATE_IP)) { $ip = $forward; }
-    else { $ip = $remote; }
+	if(filter_var($client, FILTER_VALIDATE_IP)) { $ip = $client; }
+	elseif(filter_var($forward, FILTER_VALIDATE_IP)) { $ip = $forward; }
+	else { $ip = $remote; }
 
-    return $ip;
+	return $ip;
 }
 
 function generateTicketID() {
@@ -424,8 +424,7 @@ if(trim($_POST['type']) == "footer-form") {
 
 }
 /*sidebar form*/
-if($_POST['frmSidebar']=='sidebar')
-{
+if($_POST['frmSidebar']=='sidebar'){
 //    print_r($_POST);die();
     $token = trim($_POST['g-recaptcha']);
     $uploaded_files_names = $_POST['frmSidebarFileUploadedfilename'];
@@ -435,6 +434,12 @@ if($_POST['frmSidebar']=='sidebar')
 if( isset( $_POST['type'] ) && ($_POST['type'] == "ppc-lead" ) ){
 //echo '<pre>';print_r($_POST);
 sendmail_function($_POST, '','');
+}
+
+if( isset($_POST['form-action']) && ($_POST['form-action'] == "lp") ){
+    $token      = "";
+    $uploads    = isset($_POST['Uploadedfilename']) && !empty($_POST['Uploadedfilename']) ? $_POST['Uploadedfilename'] :'';
+    sendmail_function( $_POST, $uploads, $token );
 }
 
 
@@ -477,7 +482,7 @@ sendmail_function($_POST, '','');
             }
         }
     }
-function sendmail_function($arrPostParams, $uploaded_files_names_param,$token){
+function sendmail_function($arrPostParams, $uploaded_files_names_param, $token){
     //$time_start = microtime(true);
     global $arrEmail;
     $ticketID   = generateTicketID();
@@ -574,6 +579,20 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param,$token){
     }
 
 
+    // if (count($arrFileNameArr) > 0) {
+    //     $uploaded_file_path = "";
+    //     foreach ($arrFileNameArr as $fileKey => $fileValue) {
+    //         if(strstr($fileValue,".com")) {
+    //             $body.='Custom URL:' . $fileValue. $varDeliminator;
+    //             $Mailbody.='Custom URL:' . $fileValue. $bodyBr;
+    //         } else {
+    //             $body .= 'Uploaded File : ' . SITE_ROOT_URL . 'common/uploaded_files/contact_request/' . $fileValue . $varDeliminator;
+    //             $Mailbody .= 'Uploaded File : ' . SITE_ROOT_URL . 'common/uploaded_files/contact_request/' . $fileValue . $bodyBr;
+    //             $uploaded_file_path .= SITE_ROOT_URL . 'common/uploaded_files/contact_request/' . $fileValue . '   ';
+    //         }
+    //     } //end foreach loop
+    // }
+
     if (count($arrFileNameArr) > 0) {
         $uploaded_file_path = "";
         foreach ($arrFileNameArr as $fileKey => $fileValue) {
@@ -581,9 +600,10 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param,$token){
                 $body.='Custom URL:' . $fileValue. $varDeliminator;
                 $Mailbody.='Custom URL:' . $fileValue. $bodyBr;
             } else {
-                $body .= 'Uploaded File : ' . SITE_ROOT_URL . 'common/uploaded_files/contact_request/' . $fileValue . $varDeliminator;
-                $Mailbody .= 'Uploaded File : ' . SITE_ROOT_URL . 'common/uploaded_files/contact_request/' . $fileValue . $bodyBr;
-                $uploaded_file_path .= SITE_ROOT_URL . 'common/uploaded_files/contact_request/' . $fileValue . '   ';
+                // $body .= 'Uploaded File : ' . SITE_ROOT_URL . 'common/uploaded_files/contact_request/' . $fileValue . $varDeliminator;
+
+                $Mailbody .= 'Uploaded File : https://www.pixelcrayons.com/uploads/'.$fileValue . $bodyBr;
+                $uploaded_file_path .= 'https://www.pixelcrayons.com/uploads/' . $fileValue . '   ';
             }
         } //end foreach loop
     }

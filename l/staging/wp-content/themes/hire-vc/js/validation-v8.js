@@ -215,10 +215,10 @@ bnEmail.addEventListener("keypress", checkEmailEvent.bind(bnEmail));
 bnEmail.addEventListener("keydown", checkEmailEvent.bind(bnEmail));
 bnEmail.addEventListener("focusout", checkEmailEvent.bind(bnEmail));
 
-bnPhone.addEventListener("keyup", checkPhone.bind(bnPhone));
-bnPhone.addEventListener("keypress", checkPhone.bind(bnPhone));
+//bnPhone.addEventListener("keyup", checkPhone.bind(bnPhone));
+//bnPhone.addEventListener("keypress", checkPhone.bind(bnPhone));
 bnPhone.addEventListener("keydown", ws_checkphonenumber);
-bnPhone.addEventListener("focusout", checkfoucsoutPhone.bind(bnPhone));
+//bnPhone.addEventListener("focusout", checkfoucsoutPhone.bind(bnPhone));
 
 bnCountry.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Country"));
 bnCountry.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Country"));
@@ -232,11 +232,11 @@ bnReq.addEventListener("keydown", checkURequirement.bind(bnReq));
 bnReq.addEventListener("focusout", checkURequirement.bind(bnReq));
 
 function validateBannerForm(){
-	checkRequired([bnName, bnEmail, bnPhone, bnCountry, bnReq]);
+	checkRequired([bnName, bnEmail, bnCountry, bnReq]);
 	if(		
 		(vcSpaceChecker(bnName.value.trim()) === true) && 
 		(vcSpaceChecker(bnEmail.value.trim()) === true) && 
-		(vcSpaceChecker(bnPhone.value.trim()) === true) &&
+		//(vcSpaceChecker(bnPhone.value.trim()) === true) &&
 		(vcSpaceChecker(bnCountry.value.trim()) === true) &&
 		(vcSpaceChecker(bnReq.value.trim()) === true)
 	){
@@ -274,7 +274,7 @@ ftEmail.addEventListener("focusout", checkEmailEvent.bind(ftEmail));
 
 // ftPhone.addEventListener("keyup", checkPhone.bind(ftPhone));
 // ftPhone.addEventListener("keypress", checkPhone.bind(ftPhone));
-// ftPhone.addEventListener("keydown", ws_checkphonenumber);
+ftPhone.addEventListener("keydown", ws_checkphonenumber);
 // ftPhone.addEventListener("focusout", checkfoucsoutPhone.bind(ftPhone));
 
 ftCountry.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Country"));
@@ -347,6 +347,26 @@ poReq.addEventListener("focusout", checkURequirement.bind(poReq));
 
 function _popFormValidator(){
 	checkRequired([poName, poEmail, poCountry, poReq]);	
+	if(
+	(vcSpaceChecker(poName.value.trim()) === true) && 
+	(vcSpaceChecker(poEmail.value.trim()) === true) && 
+	//(vcSpaceChecker(bnPhone.value.trim()) === true) &&
+	(vcSpaceChecker(poCountry.value.trim()) === true) &&
+	(vcSpaceChecker(poReq.value.trim()) === true)
+	){
+	const sre = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	if( !sre.test(poEmail.value.trim()) ){
+	    showError(ftEmail, 'Please Fill Email');
+		return false;
+	}
+
+	let hForm 		= document.getElementById("pop-contact-form");
+	let btn 		= document.getElementById("pop-submitButton");
+	hForm.classList.add('in-process');
+	btn.value 		= "Please wait...";
+	btn.disabled 	= true;
+	hForm.submit();	
+	}
 	return false;
 }
 

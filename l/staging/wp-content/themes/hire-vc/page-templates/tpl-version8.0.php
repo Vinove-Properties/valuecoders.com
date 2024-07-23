@@ -103,6 +103,7 @@ alt="Valuecoders" width="449" height="637">
             </div>
             <div class="form-group  width-full">
               <input type="hidden" name="Uploadedfilename" id="Uploadedfilename" value="">
+              <input type="hidden" name="form-action" value="lp">
               <input type="hidden" name="page_url" value="<?php bloginfo('url'); ?>">
               <button type="submit" class="btn btn-big btn-primary btn-padding-x test-1" name="ws-form-sub" id="bnr-submit" value="ws-landing">Hire Software Developers</button>
               <span class="privc"><i></i>100% Privacy Guaranteed</span>
@@ -755,6 +756,7 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
               <div class="user-input cta-btn checkout">
                 <div class="user-input btn rounded checkout">
                   <input type="hidden" name="Uploadedfilename" id="Uploadedfilename-fo" value="">
+                  <input type="hidden" name="form-action" value="lp">
                   <input type="hidden" name="page_url" value="<?php bloginfo('url'); ?>">
                   <input type="submit" id="footer-submitButton" class="checkout-submit" value="Enquire Now">
                 </div>
@@ -766,33 +768,33 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
     </div>
 </div>
 
-  <div class="footer-sec margin-t-60">
-    <div class="footer-top address-sec">
-      <div class="container">
-        <div class="dis-flex">
-          <div class="flex-4">
-            <p><strong>Our Offices:</strong></p>
-          </div>
-          <div class="flex-4">
-            <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/us-flag.svg" alt="Valuecoders" width="33" height="24"><strong>US</strong></p>
-            <p>5900 Balcones Drive, STE 100, Austin, TX 78731, USA</p>
-          </div>
-          <div class="flex-4">
-            <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/uk-flag.svg" alt="Valuecoders" width="33" height="24"><strong>UK</strong></p>
-            <p>167-169 Great Portland Street, 5th Floor, London W1W 5PF, UK</p>
-          </div>
-          <div class="flex-4">
-            <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/india-flag.svg" alt="Valuecoders" width="33" height="24"><strong>INDIA</strong></p>
-            <p>2nd Floor, 55P, Sector 44, Gurugram 122003, Haryana, India</p>
-          </div>
-          <div class="flex-4">
-            <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/india-flag.svg" alt="Valuecoders" width="33" height="24"><strong>INDIA</strong></p>
-            <p>11th Floor, Max Square, Noida-Greater Noida Expy, Sector 129, Noida, Uttar Pradesh 201304</p>
-          </div>
+<div class="footer-sec margin-t-60">
+  <div class="footer-top address-sec">
+    <div class="container">
+      <div class="dis-flex">
+        <div class="flex-4">
+          <p><strong>Our Offices:</strong></p>
+        </div>
+        <div class="flex-4">
+          <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/us-flag.svg" alt="Valuecoders" width="33" height="24"><strong>US</strong></p>
+          <p>5900 Balcones Drive, STE 100, Austin, TX 78731, USA</p>
+        </div>
+        <div class="flex-4">
+          <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/uk-flag.svg" alt="Valuecoders" width="33" height="24"><strong>UK</strong></p>
+          <p>167-169 Great Portland Street, 5th Floor, London W1W 5PF, UK</p>
+        </div>
+        <div class="flex-4">
+          <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/india-flag.svg" alt="Valuecoders" width="33" height="24"><strong>INDIA</strong></p>
+          <p>2nd Floor, 55P, Sector 44, Gurugram 122003, Haryana, India</p>
+        </div>
+        <div class="flex-4">
+          <p><img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/india-flag.svg" alt="Valuecoders" width="33" height="24"><strong>INDIA</strong></p>
+          <p>11th Floor, Max Square, Noida-Greater Noida Expy, Sector 129, Noida, Uttar Pradesh 201304</p>
         </div>
       </div>
     </div>
   </div>
+</div>
 </section> <!-- //contact-us-section -->
 
 <div class="popup-box">
@@ -827,7 +829,7 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
           </picture>
         </div>
         <div id="vc-fxdform" class="form-section">
-          <form method="POST" action="https://www.valuecoders.com/sendmail-l7.php" onsubmit="return _popFormValidator();" enctype="multipart/form-data" id="cmn-pop-form" method="POST">
+          <form method="POST" action="https://www.valuecoders.com/sendmail-l7.php" onsubmit="return _popFormValidator();" enctype="multipart/form-data" id="pop-contact-form" method="POST">
             <div class="form-inner dis-flex" id="pop-form">
               <div class="form-text-cont">
                 <div class="user-input">
@@ -866,11 +868,9 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
               </div>
             </div>
             <div class="user-input checkout">
-              <input type="hidden" name="frmqueryString" id="frmqueryString-pop" value="q=hire-software-developers-india-v4-opt-phone/&amp;PageName=l&amp;xForwordFor=&amp;deviceID=computer">
-              <input type="hidden" name="frmSidebar" value="sidebar">
-              <input type="hidden" name="is-dmtpl" value="false">
-              <input type="hidden" id="bookcall-frm" name="is-bookcall" value="">
-              <input type="submit" id="submitButton-pop" class="checkout-submit ch111" value="CONTACT US NOW">
+              <input type="hidden" name="form-action" value="lp">
+              <input type="hidden" name="page_url" value="<?php bloginfo('url'); ?>">
+              <input type="submit" id="pop-submitButton" class="checkout-submit ch111" value="CONTACT US NOW">
             </div>
             <span class="privc"><i></i>100% Privacy Guaranteed</span>
           </form>
