@@ -51,13 +51,6 @@ function autocomplete(inp, arr) {
         }
       }
   });
-  
-  phone.addEventListener('focusin',function(e){
-  	closeAllLists(e.target);
-  });
-  email.addEventListener('focusin',function(e){
-  	closeAllLists(e.target);
-  });
 
   function addActive(x) {
     if (!x) return false;
