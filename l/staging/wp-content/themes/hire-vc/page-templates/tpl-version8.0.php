@@ -392,13 +392,14 @@ if( isset($vetPro['is_enable']) && ($vetPro['is_enable'] == "yes") ) :
     echo '<nav id="tabs" class="process-tb"><ul>';
     $i = 0;
     $stars = [0,303,262,221,181,143];
-    foreach( $vetPro['process'] as $pro ){ $i++;
+    foreach( $vetPro['process'] as $pro ){ 
+    $i++;
     $active = ( $i === 1 )  ? 'active' : '';
     echo '<li class="'.$active.'"><a href="#tab'.$i.'">
-    <span>'.$i.'</span><img src="'.get_bloginfo('template_url').'/assets-v2/images/v8/process-0'.$i.'.svg" width="'.$stars[$i].'" 
-    height="50" alt=""></a></li>';
+    <span>'.$i.'</span><img src="'.get_bloginfo('template_url').'/assets-v2/images/v8/process-0'.$i.'.svg" 
+    width="'.$stars[$i].'" height="50" alt=""></a></li>';
     }
-    echo '<li><img src="'.get_bloginfo('template_url').'/assets-v2/images/v8/process-06.svg" width="103" height="50" alt=""></li>';
+    echo '<li><a href="#tab6"><img src="'.get_bloginfo('template_url').'/assets-v2/images/v8/process-06.svg" width="103" height="50" alt=""></a></li>';
     echo '</ul></nav>';  
     echo '<div id="tab-contents" class="tab-data">';
     $i = 0;
@@ -410,7 +411,15 @@ if( isset($vetPro['is_enable']) && ($vetPro['is_enable'] == "yes") ) :
           <div class="flex-2">'.$pro['con-right'].'</div>
         </div>
       </div>';  
-    }  
+    }
+    echo '<div id="tab6" class="tab-contents">
+        <div class="dis-flex">
+          <div class="flex-2">
+          <h3>Done!</h3>
+          <p>The top 1% of tech talent are hired and can start client delivery.</p>
+          </div>
+        </div>
+      </div>';  
     echo '</div>';
     }
     ?>
