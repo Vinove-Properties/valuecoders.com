@@ -886,6 +886,9 @@ header {
   margin-top: 20px;
   text-align: center; }
 
+.popup-box .form-pop-up-box .form-center .form-box-outer .form-wrap .form-section .form-text-cont .user-input {
+  position: relative; }
+
 .popup-box .form-pop-up-box .form-center .form-box-outer .form-wrap .form-section .form-text-cont .user-input.verror small {
   display: block; }
 
