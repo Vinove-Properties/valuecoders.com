@@ -1090,7 +1090,7 @@ header {
   .contact-us-section #fileElem {
     display: none; }
   .contact-us-section .comment-input {
-    height: 60px;
+    height: 80px;
     resize: none;
     background: none;
     outline: 0;
@@ -1380,6 +1380,15 @@ header {
       display: flex;
       align-items: center; }
 
+.contact-us-section .form-text-cont.width-full .user-input small {
+  display: block;
+  opacity: 0;
+  margin: 0 0 5px; }
+
+.contact-us-section .form-text-cont.width-full .user-input.verror small {
+  display: block;
+  opacity: 1; }
+
 @media screen and (min-width: 2500px) {
   .contact-us-section .left-box .award-logo .logo-box img {
     width: 150px; } }
@@ -1651,9 +1660,9 @@ header {
               background: #fff;
               color: #323232;
               font-size: 14px;
-              height: 125px; }
+              height: 130px; }
               .banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input .comment-input {
-                height: 58px;
+                height: 60px;
                 resize: none;
                 background: 0 0;
                 outline: 0;
@@ -1746,31 +1755,6 @@ header {
         outline: 1px solid #ffb81d; }
       .banner-img-section .two-box .banner-form .form-input:focus-visible {
         outline: 1px solid #ffb81d; }
-      .banner-img-section .two-box .banner-form .autocomplete-items {
-        display: none; }
-        .banner-img-section .two-box .banner-form .autocomplete-items.has-data {
-          background: #fff;
-          display: block;
-          height: 140px;
-          overflow-y: auto;
-          position: absolute;
-          top: 60px;
-          left: 0;
-          width: 100%;
-          max-width: 280px;
-          box-shadow: 0px 6px 9px rgba(1, 0, 12, 0.4);
-          border-radius: 5px;
-          z-index: 999; }
-          .banner-img-section .two-box .banner-form .autocomplete-items.has-data div {
-            color: #444444;
-            background: #fff;
-            border-bottom: 1px solid #444444;
-            padding: 10px;
-            font-size: 14px;
-            cursor: pointer;
-            padding: 15px 20px; }
-            .banner-img-section .two-box .banner-form .autocomplete-items.has-data div.autocomplete-active, .banner-img-section .two-box .banner-form .autocomplete-items.has-data div:hover {
-              background-color: rgba(0, 0, 0, 0.05); }
   .banner-img-section .clintlogo {
     display: flex;
     flex-wrap: wrap;
@@ -1896,6 +1880,39 @@ header {
         background-position: -7px -732px; }
         .banner-img-section .client-logo-box-section .logo-box.logo8:hover {
           background-position: -293px -732px; }
+
+.autocomplete-items {
+  display: none; }
+  .autocomplete-items.has-data {
+    background: #fff;
+    display: block;
+    height: 140px;
+    overflow-y: auto;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    max-width: 280px;
+    box-shadow: 0px 6px 9px rgba(1, 0, 12, 0.4);
+    border-radius: 5px;
+    z-index: 999; }
+    .autocomplete-items.has-data div {
+      color: #444444;
+      background: #fff;
+      border-bottom: 1px solid #444444;
+      padding: 10px;
+      font-size: 14px;
+      cursor: pointer;
+      padding: 15px 20px; }
+      .autocomplete-items.has-data div.autocomplete-active, .autocomplete-items.has-data div:hover {
+        background-color: rgba(0, 0, 0, 0.05); }
+
+.banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input small {
+  opacity: 0;
+  margin: 0 0 5px; }
+
+.banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input.verror small {
+  opacity: 1; }
 
 .for-load-hide-images {
   opacity: 0;
