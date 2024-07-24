@@ -3011,8 +3011,7 @@ body.page-template-template-testimonials .client-video-section iframe,
 .table-list-section .table-list a {
   color: #ffad00; }
   .table-list-section .table-list a:hover {
-    color: #414141;
-    text-decoration: underline; }
+    color: #414141; }
 .table-list-section .view-more {
   position: absolute;
   bottom: 252px;
