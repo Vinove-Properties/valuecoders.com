@@ -4,7 +4,8 @@ $pageID = ( isset( $args['page_id'] ) && !empty( $args['page_id'] ) ) ? $args['p
 $ppcTbl = get_field('ppc-ptable');
 if( isset( $ppcTbl['enable'] ) && ($ppcTbl['enable'] == "yes") ) :
 
-$gsLink = 'https://calendly.com/pixelcrayons/project-discovery';
+//$gsLink = 'https://calendly.com/pixelcrayons/project-discovery';
+$gsLink = site_url('/contact');
 
 $clmFor     = $ppcTbl['tc-4'];  
 $hasAllClm  = ( $clmFor ) ? true : false;
