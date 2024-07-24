@@ -10,8 +10,8 @@ $clmFor     = $ppcTbl['tc-4'];
 $hasAllClm  = ( $clmFor ) ? true : false;
 $flexClm    = ( $hasAllClm === true ) ? 'flex-5' : 'flex-4';
 ?>
-<section id="pxl-ppc-table" class="table-list-section show-all bg-light padding-t-120 padding-b-120">
-<div class="container">
+<section id="pxl-ppc-table" class="serv-pricing-tbl show-all bg-light padding-t-120 padding-b-120">
+<div class="container tmpppp">
 <div class="heading text-center"><?php echo $ppcTbl['sec-content']; ?></div>
 <div class="table-wrap">
   <div class="dis-flex col-box-outer margin-t-100">
