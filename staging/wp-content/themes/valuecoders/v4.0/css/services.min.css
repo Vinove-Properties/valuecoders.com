@@ -3030,6 +3030,9 @@ body.page-template-template-testimonials .client-video-section iframe,
 .table-list-section.show-all .table-list li:nth-child(n) {
   display: flex; }
 
+#pxl-ppc-table.active li.m-hdn {
+  display: flex !important; }
+
 @media only screen and (max-width: 1600px) {
   .table-list-section .table-list ul li {
     padding: 20px 18px; }
