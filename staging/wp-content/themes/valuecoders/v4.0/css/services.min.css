@@ -3041,7 +3041,7 @@ body.page-template-template-testimonials .client-video-section iframe,
     padding: 20px 18px;
     min-height: 145px; }
   .table-list-section .view-more {
-    bottom: 248px; } }
+    bottom: 280px; } }
 @media only screen and (max-width: 1380px) {
   .table-list-section .table-list ul li {
     padding: 20px 18px;
@@ -3049,7 +3049,12 @@ body.page-template-template-testimonials .client-video-section iframe,
   .table-list-section .table-list:first-child ul li {
     padding-left: 11px; }
   .table-list-section .table-list .btn-sec .btn {
-    padding: 13px 57px 13px 20px; } }
+    padding: 13px 57px 13px 20px; }
+  .table-list-section .view-more {
+    bottom: 280px; } }
+@media only screen and (max-width: 1280px) {
+  .table-list-section .view-more {
+    bottom: 245px; } }
 @media only screen and (max-width: 1024px) {
   .table-list-section .table-list .title {
     font-size: 16px;
