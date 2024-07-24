@@ -796,6 +796,8 @@ id="vc-ibox-cards">
 }
 ?>
 
+<?php get_template_part( 'inc/pricing', 'table', ['page_id' => $thisPostID] ); ?>
+
 <?php 
 if( !is_page([15820,15827]) ){
   getServicesPageTechnologies( $thisPostID );   
