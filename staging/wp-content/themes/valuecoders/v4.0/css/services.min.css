@@ -3034,16 +3034,12 @@ body.page-template-template-testimonials .client-video-section iframe,
 @media only screen and (max-width: 1600px) {
   .table-list-section .table-list ul li {
     padding: 20px 18px; }
-  .table-list-section .table-list .more-spc {
-    padding: 40px 18px; }
   .table-list-section .view-more {
     bottom: 280px; } }
 @media only screen and (max-width: 1400px) {
   .table-list-section .table-list ul li {
     padding: 20px 18px;
     min-height: 145px; }
-  .table-list-section .table-list .more-spc {
-    padding: 40px 18px; }
   .table-list-section .view-more {
     bottom: 248px; } }
 @media only screen and (max-width: 1380px) {
