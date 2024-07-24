@@ -1673,3 +1673,7 @@ function __pxl_pricing($string) {
         return $string;
     }    
 }
+
+function __pxl_int_block( $str ){
+	return false;
+}
