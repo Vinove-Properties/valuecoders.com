@@ -3030,6 +3030,9 @@ body.page-template-template-testimonials .client-video-section iframe,
 .serv-pricing-tbl.show-all .table-list li:nth-child(n) {
   display: flex; }
 
+#pxl-ppc-table li.m-hdn {
+  display: none !important; }
+
 #pxl-ppc-table.active li.m-hdn {
   display: flex !important; }
 
