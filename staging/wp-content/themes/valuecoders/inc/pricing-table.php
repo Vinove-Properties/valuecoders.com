@@ -163,7 +163,6 @@ $flexClm    = ( $hasAllClm === true ) ? 'flex-5' : 'flex-4';
             }else{
               echo '<li class="'.$lClass.'">'.__pxl_pricing($row['data']).'</li>';  
             }
-            //echo '<li class="'.$lClass.'">'.__pxl_pricing($row['data']).'</li>';
           }
         }
         ?>

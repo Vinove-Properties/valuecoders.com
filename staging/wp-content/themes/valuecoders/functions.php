@@ -1652,3 +1652,24 @@ function valueGetPtag( array $marray, $title = "", $class = "" ){
 	height="'.$marray['height'].'">
 	</picture>';
 }
+
+function __pxl_pricing($string) {
+    $pattern = '/{{local="([^"]*)" int="([^"]*)"}}/';
+    preg_match($pattern, $string, $matches);
+    if(count($matches) == 3){
+	    $data = array(
+	        'local' => $matches[1],
+	        'int' => $matches[2]
+	    );
+	    $prsData = '';
+	    if( isset( $data['local'] ) && !empty( $data['local'] ) ){
+	    	$prsData .= '<span class="sp-local">'.$data['local'].'</span>';
+	    }
+	    if( isset( $data['int'] ) && !empty( $data['int'] ) ){
+	    	$prsData .= '<span class="sp-int">'.$data['int'].'</span>';
+	    }
+	    return $prsData;
+    }else{
+        return $string;
+    }    
+}
