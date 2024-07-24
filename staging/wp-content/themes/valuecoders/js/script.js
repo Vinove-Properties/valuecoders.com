@@ -1232,3 +1232,9 @@ if( cardsDM ){
     });
     });    
 }
+
+
+function _morePPCTable(){
+  var elm = document.getElementById("pxl-ppc-table");
+  elm.classList.toggle("active");
+}
