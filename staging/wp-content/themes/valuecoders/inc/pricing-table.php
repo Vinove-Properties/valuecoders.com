@@ -190,10 +190,10 @@ $flexClm    = ( $hasAllClm === true ) ? 'flex-5' : 'flex-4';
 </div>
 <div class="view-more margin-t-50 text-center">
   <a href="javascript:void(0);" onclick="_morePPCTable();" class="active">
-    <img loading="lazy" class="gt-dwn" src="<?php bloginfo('template_url'); ?>/dev-img/scroll-img.png" alt="Pixelcrayons" width="34" 
-    height="34">
-    <img loading="lazy" class="gt-up" src="<?php bloginfo('template_url'); ?>/dev-img/scroll-img-up.png" alt="Pixelcrayons" width="34" 
-    height="34">
+    <img loading="lazy" class="gt-dwn" src="<?php bloginfo('template_url'); ?>/v4.0/images/scroll-img.png" alt="ValueCoders" 
+    width="34"  height="34">
+    <img loading="lazy" class="gt-up" src="<?php bloginfo('template_url'); ?>/v4.0/images/scroll-img-up.png" alt="ValueCoders" 
+    width="34" height="34">
   </a>
 </div>
 </div>
