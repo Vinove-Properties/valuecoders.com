@@ -41,7 +41,7 @@ $flexClm    = ( $hasAllClm === true ) ? 'flex-5' : 'flex-4';
         } 
         ?>
         <li class="more-spc">Need more information?<br>
-          <a href="<?php echo site_url('/contact-us'); ?>" class="ts">Talk to Sales</a>
+          <a href="<?php echo site_url('/contact'); ?>" class="ts">Talk to Sales</a>
         </li>
       </ul>
     </div>
