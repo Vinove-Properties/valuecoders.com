@@ -131,13 +131,15 @@ function valuecoders_scripts() {
     wp_dequeue_style( 'wp-block-library-theme' );
     wp_dequeue_style( 'classic-theme-styles' );
     wp_deregister_script( 'wp-embed' );
+
+    if( !is_page_template(['page-templates/tpl-feedback.php']) ){
 	wp_enqueue_script('pe-fixer', get_stylesheet_directory_uri().'/js/pe-fixer.js', array(), _S_VERSION, true);	
 	if( !is_page_template(['page-templates/template-contact-v9.php']) ){
 	wp_enqueue_script('vc-glider', get_stylesheet_directory_uri().'/js/glider.min-v2.js', array(), _S_VERSION, true);	
 	}
-    wp_enqueue_script('vc-glide', 'https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.1/glide.js', 
-    array(), _S_VERSION, true);
-    wp_enqueue_style( 'vc-glide.core', 'https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.1/css/glide.core.css', [], _S_VERSION );    
+    wp_enqueue_script('vc-glide', 'https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.1/glide.js', [], _S_VERSION, true);
+    wp_enqueue_style( 'vc-glide.core', 'https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.1/css/glide.core.css', [], 
+    _S_VERSION );    
     
 	wp_enqueue_script('vc-script', get_stylesheet_directory_uri() . '/js/script.js', array(), _S_VERSION, true);
 	wp_localize_script( 'vc-script', 'vcObj', 
@@ -149,7 +151,7 @@ function valuecoders_scripts() {
 			'is_mobile' 	=> ( wp_is_mobile() ) ? "true" : "false"
 		) 
 	);
-
+	}
 	
 	if( is_front_page() || is_home() || is_404() ){
 	//wp_enqueue_style( 'vc-index', get_stylesheet_directory_uri().'/v3.0/css/index.css', [], _S_VERSION );
@@ -244,6 +246,10 @@ function valuecoders_scripts() {
 		wp_enqueue_script( 'vc-cfscript', get_stylesheet_directory_uri(). '/js/form-validation-v9.js', [], [], true );
 		wp_enqueue_style( 'vc-contact', get_stylesheet_directory_uri().'/v4.0/css/contact-usv9.css' );
 		wp_enqueue_style( 'vc-nselect', get_stylesheet_directory_uri().'/v4.0/css/nice-select2.css' );		
+	}
+	elseif( is_page_template('page-templates/tpl-feedback.php') ){
+		wp_enqueue_style( 'vc-consult', get_stylesheet_directory_uri().'/v4.0/css/consult-page.css' );
+		wp_enqueue_script( 'vc-feedback', get_stylesheet_directory_uri(). '/js/form-feedback.js', [], [], true );
 	}
 	elseif(
 		is_page_template([
