@@ -214,9 +214,9 @@ get_header('nonav');
     <div class="rate-section">
       <div class="rating-section">
         <h3>Feedback on Initial Discussions</h3>
-        <p>How satisfied were you with the initial connection and communication with our team? Rating Scale (1-5, where 1 is very dissatisfied and 5 is very satisfied)</p>
+        <!-- <p>How satisfied were you with the initial connection and communication with our team? Rating Scale (1-5, where 1 is very dissatisfied and 5 is very satisfied)</p> -->
         <div id="rate-str" class="rate-star">
-          <p>How would you rate our team's persistence and follow-up?</p>
+          <p>How would you rate your overall experience with our team during the requirement discussion stage?</p>
           <div class="star-rating">
             <input type="radio" id="5-stars" name="rating" value="5" />
             <label for="5-stars" class="star"></label>
