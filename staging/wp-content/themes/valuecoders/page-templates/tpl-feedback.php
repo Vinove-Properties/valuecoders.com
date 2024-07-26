@@ -30,11 +30,12 @@ get_header('nonav');
       <div class="consult-col">
 		    <div class="con-wrap">
 		      <div class="con-text">
-		        <h3>Please take a moment to provide your details for the paperwork.</h3>
+		        <h3>Ready to start?</h3>
+            <p>Please take a moment to provide your details for the paperwork.</p>
 		      </div>
 		      <div class="btn-sec">
 		        <a href="javascript:void(0);" onclick="showPopForm('intentPopup-pw')" class="btn rounded">
-		        <span class="text-white">Let's get started</span>
+		        <span class="text-white">Enter Details</span>
 		        </a>
 		      </div>
 		    </div>
