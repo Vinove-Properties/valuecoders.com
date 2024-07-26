@@ -252,11 +252,14 @@ get_header('nonav');
             <input class="styled-checkbox" id="styled-checkbox-4" type="checkbox" value="value4">
             <label for="styled-checkbox-4">Waiting for internal approvals</label>
           </li>
+          <li>
+            <input class="styled-checkbox" id="styled-checkbox-5" type="checkbox" value="other">
+            <label for="styled-checkbox-4">Other</label>
+          </li>
         </ul>
       </div>
       <div class="form-group width-full">
-      <button type="submit" class="btn btn-big btn-primary btn-padding-x test-1" 
-      name="ws-form-sub" id="fd-submit" value="ws-landing">Submit Now</button>      
+      <button type="submit" class="btn btn-big btn-primary btn-padding-x test-1" name="ws-form-sub" id="fd-submit" value="ws-landing">Submit Now</button>      
       </div>
     </div>
     </form>
