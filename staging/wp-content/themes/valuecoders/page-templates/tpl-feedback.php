@@ -213,7 +213,7 @@ get_header('nonav');
     </div>
     <div class="rate-section">
       <div class="rating-section">
-        <h3>Feedback on Initial Discussions</h3>
+        <h3>Rating on Initial Discussions</h3>
         <!-- <p>How satisfied were you with the initial connection and communication with our team? Rating Scale (1-5, where 1 is very dissatisfied and 5 is very satisfied)</p> -->
         <div id="rate-str" class="rate-star">
           <p>How would you rate your overall experience with our team during the requirement discussion stage?</p>
@@ -234,7 +234,7 @@ get_header('nonav');
       </div>
       <div class="rating-section">
         <h3>Reasons for Not Proceeding</h3>
-        <p>What are the main reasons for not proceeding with the project at this time? Checkboxes (multiple selections allowed)</p>
+        <p>What are the main reasons for not proceeding with the project at this time?</p>
         <ul class="unstyled centered">
           <li>
             <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
