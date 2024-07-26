@@ -15,8 +15,8 @@ get_header('nonav');
 		  <div class="consult-col">
 		    <div class="con-wrap">
 		      <div class="con-text">
-		        <h3>Happy with the Discussion let’s get started</h3>
-		        <p>Let’s complete the paperwork to start.</p>
+		        <h3>Let’s get started</h3>
+		        <!-- <p>Let’s complete the paperwork to start.</p> -->
 		      </div>
 		      <div class="btn-sec">
 		        <a href="javascript:void(0);" onclick="showPopForm('intentPopup-pw')" class="btn rounded">
