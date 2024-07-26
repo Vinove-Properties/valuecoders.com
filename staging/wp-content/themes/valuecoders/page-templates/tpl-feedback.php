@@ -254,7 +254,7 @@ get_header('nonav');
           </li>
           <li>
             <input class="styled-checkbox" id="styled-checkbox-5" type="checkbox" value="other">
-            <label for="styled-checkbox-4">Other</label>
+            <label for="styled-checkbox-5">Other</label>
           </li>
         </ul>
       </div>
