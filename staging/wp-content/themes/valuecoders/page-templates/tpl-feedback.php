@@ -187,8 +187,8 @@ get_header('nonav');
 	<span class="closeicon" onclick="close_vpop('intentPopup-fb')">
     <img loading="lazy" src="<?php bloginfo('template_url') ?>/dev-img/consult-cross.svg" alt="Valuecoders" width="11" height="11"></span>
     <div class="top-head">
-      <h2>Details for Paperwork</h2>
-      <p>Assure Response in 1 business days</p>
+      <h2>Feedback</h2>
+      <p>Your feedback is essential for our growth and improvement.</p>
     </div>
     <form onsubmit="return _handleRating();">
     <div class="form-box">      
