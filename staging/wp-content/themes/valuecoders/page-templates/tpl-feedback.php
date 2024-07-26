@@ -92,7 +92,7 @@ get_header('nonav');
     <img loading="lazy" src="<?php bloginfo('template_url') ?>/dev-img/consult-cross.svg" alt="Valuecoders" width="11" height="11"></span>
     <div class="top-head">
       <h2>Details for Paperwork</h2>
-      <p>Assure Response in 1 business days</p>
+      <p>Rest assured, the below-mentioned details will remain confidential.</p>
     </div>
     <div class="form-box">
       <form onsubmit="return _handleRespFeedback();">
