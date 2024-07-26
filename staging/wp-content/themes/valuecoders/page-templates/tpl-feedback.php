@@ -12,7 +12,23 @@ get_header('nonav');
  <section class="consult-sec">
 	<div class="container">
 		<div class="consult-flex dis-flex">
-		  <div class="consult-col">
+		  <?php if( is_page(18346) ){ ?>
+      <div class="consult-col">
+            <div class="con-wrap">
+              <div class="con-text">
+                <h3>Happy with the Discussion let’s get started</h3>
+                <p>Let’s complete the paperwork to start.</p>
+              </div>
+              <div class="btn-sec">
+                <a href="javascript:void(0);" onclick="showPopForm('intentPopup-pw')" class="btn rounded">
+                <span class="text-white">Fill a Form Now</span>
+              </a>
+              </div>
+            </div>
+          </div>  
+      <?php }else{ ?>
+      ?>
+      <div class="consult-col">
 		    <div class="con-wrap">
 		      <div class="con-text">
 		        <h3>Please take a moment to provide your details for the paperwork.</h3>
@@ -25,6 +41,8 @@ get_header('nonav');
 		      </div>
 		    </div>
 		  </div>
+      <?php } ?>
+
 		  <div class="consult-col">
 		    <div class="con-wrap">
 		      <div class="con-text">
