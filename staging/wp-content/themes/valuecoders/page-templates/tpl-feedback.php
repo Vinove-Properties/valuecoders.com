@@ -27,7 +27,6 @@ get_header('nonav');
             </div>
           </div>  
       <?php }else{ ?>
-      ?>
       <div class="consult-col">
 		    <div class="con-wrap">
 		      <div class="con-text">
