@@ -98,7 +98,7 @@ get_header('nonav');
             </div>
           </div>
           <div class="form-group">
-            <div class="user-input">
+            <div class="user-input sel-input">
               <label>Expected Turnaround Time *</label>
               <select class="wide selectize" name="expected-time" id="exp-time">
                 <option value="">Expected Turnaround Time</option>
