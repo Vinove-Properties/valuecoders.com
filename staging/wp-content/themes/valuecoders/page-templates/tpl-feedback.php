@@ -46,9 +46,7 @@ get_header('nonav');
       <div class="consult-col">
         <div class="con-wrap">
           <div class="con-text">
-            <h3>Need to bring your Partners/
-              Decision Makers on final Call
-            </h3>
+            <h3>Need to bring your Partners/Decision Makers on final Call</h3>
             <p>Let’s Set up a Date & Time for the Call.</p>
           </div>
           <div class="btn-sec">
@@ -84,6 +82,9 @@ get_header('nonav');
 		    </div>
 		  </div>
 		</div>
+    <div class="primnenbt">
+    <p>Contact Us: For any immediate questions, please reach out to us at <a href="mailto:sales@valuecoders.com">sales@valuecoders.com</a> or call <a href="tel:+918882108080">+91 888 210 8080</a>.</p>
+  </div>
 	</div>
 </section>
 <div class="popup-section consult-popup">

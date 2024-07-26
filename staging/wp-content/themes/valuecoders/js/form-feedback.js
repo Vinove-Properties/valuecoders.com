@@ -1,3 +1,22 @@
+if(document.querySelector(".header-two")) {
+var lastScrollTop = 0;    
+window.addEventListener("scroll", function () {
+    window.pageYOffset > 10 ? 
+    document.querySelector(".header-two").classList.add("header-bg") : 
+    document.querySelector(".header-two").classList.remove("header-bg");
+    let scrollST = window.pageYOffset || document.documentElement.scrollTop;
+
+    if( scrollST > lastScrollTop ){
+        document.querySelector(".header-two").classList.remove("sc-up");
+        document.querySelector(".header-two").classList.add("sc-down");        
+    }else{
+        document.querySelector(".header-two").classList.remove("sc-down");
+        document.querySelector(".header-two").classList.add("sc-up");
+    }
+    lastScrollTop = scrollST <= 0 ? 0 : scrollST; // For Mobile or negative scrolling
+});
+}
+
 function showPopForm(elm){
 	document.getElementById(elm).style.display = "block";
 }
