@@ -92,28 +92,36 @@ get_header('nonav');
           <div class="form-group">
             <div class="user-input">
               <label>Company Address *</label>
-              <input type="text" class="form-input" id="ft-email" placeholder="Enter Company Address" name="user-email" maxlength="50">
+              <input type="text" class="form-input" id="pw-address" placeholder="Enter Company Address" name="address" 
+              maxlength="50" data-err="Please Fill Company Address">
               <small></small>
             </div>
           </div>
           <div class="form-group">
             <div class="user-input">
               <label>Expected Turnaround Time *</label>
-              <input type="text" class="form-input" id="ft-email" placeholder="Select Expected Turnaround Time" name="user-email" maxlength="50">
+              <select class="wide selectize" name="expected-time" id="exp-time">
+                <option value="">Expected Turnaround Time</option>
+                <option value="Immediately">Immediately</option>
+                <option value="Within a Week">Within a Week</option>
+                <option value="Others">Others please specify</option>
+              </select>
               <small></small>
             </div>
           </div>
           <div class="form-group">
             <div class="user-input">
               <label>Name of Signing Authority *</label>
-              <input type="text" class="form-input" id="ft-email" placeholder="Enter Company Name" name="user-email" maxlength="50">
+              <input type="text" class="form-input" id="pw-authority" placeholder="Enter Company Name" 
+              name="authority" maxlength="50" data-err="Please Fill Name of Signing Authority">
               <small></small>
             </div>
           </div>
           <div class="form-group">
             <div class="user-input">
               <label>Title/Position *</label>
-              <input type="text" class="form-input" id="ft-email" placeholder="Enter Title/Position" name="user-email" maxlength="50">
+              <input type="text" class="form-input" id="pw-position" placeholder="Enter Title/Position" name="position" 
+              maxlength="50" data-err="Please Fill Title/Position">
               <small></small>
             </div>
           </div>

@@ -170,8 +170,12 @@ function checkfoucsoutPhone(input){
 }
 
 const pwName 	= document.getElementById('pw-name'),
-pwEmail 		= document.getElementById('pw-email')
-pwCompany 		= document.getElementById('pw-company');
+pwEmail 		= document.getElementById('pw-email'),
+pwCompany 		= document.getElementById('pw-company'),
+pwAddress 		= document.getElementById('pw-address'),
+pwExpTime 		= document.getElementById('exp-time'),
+pwAuthority 	= document.getElementById('pw-authority'),
+pwPosition 		= document.getElementById('pw-position');
 
 pwName.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Name"));
 pwName.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Name"));
@@ -188,11 +192,35 @@ pwCompany.addEventListener("keypress", strInputValidation.bind(null, "Please Fil
 pwCompany.addEventListener("keydown", strInputValidation.bind(null, "Please Fill Company Name"));
 pwCompany.addEventListener("focusout", strInputValidation.bind(null, "Please Fill Company Name"));
 
-// bnPhone 		= document.getElementById('bn-phone'),
-// bnCountry 		= document.getElementById('bn-country'),
-// bnReq 			= document.getElementById('bn-req');
+pwAddress.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Company Address"));
+pwAddress.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Company Address"));
+pwAddress.addEventListener("keydown", strInputValidation.bind(null, "Please Fill Company Address"));
+pwAddress.addEventListener("focusout", strInputValidation.bind(null, "Please Fill Company Address"));
+
+
+pwAuthority.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Name of Signing Authority"));
+pwAuthority.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Name of Signing Authority"));
+pwAuthority.addEventListener("keydown", strInputValidation.bind(null, "Please Fill Name of Signing Authority"));
+pwAuthority.addEventListener("focusout", strInputValidation.bind(null, "Please Fill Name of Signing Authority"));
+
+pwPosition.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Title/Position"));
+pwPosition.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Title/Position"));
+pwPosition.addEventListener("keydown", strInputValidation.bind(null, "Please Fill Title/Position"));
+pwPosition.addEventListener("focusout", strInputValidation.bind(null, "Please Fill Title/Position"));
+
+
+if( pwExpTime ){
+	NiceSelect.bind(pwExpTime,{placeholder:'Please select from the dropdown'});	
+	pwExpTime.addEventListener("change", function(e){
+		const fldPapa = pwExpTime.closest('.user-input');
+		if( pwExpTime.value !== "" ){
+			fldPapa.classList.remove("verror");
+			//fldPapa.classList.add("is-selected");
+		}
+	});
+}
 
 function _handleRespFeedback(){
-	checkRequired([pwName, pwEmail, pwCompany]);
+	checkRequired([pwName, pwEmail, pwCompany, pwAddress, pwExpTime, pwAuthority, pwPosition]);
 	return false;
 }
