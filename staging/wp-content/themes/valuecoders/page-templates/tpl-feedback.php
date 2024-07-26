@@ -60,8 +60,8 @@ get_header('nonav');
       <div class="consult-col">
         <div class="con-wrap">
           <div class="con-text">
-            <h3>Need another call?</h3>
-            <p>Feel free to invite additional team members or decision makers.</p>
+            <h3>Need more information?</h3>
+            <p>We understand that making a decision takes time. Schedule another call to discuss further details or invite additional team members or decision makers.</p>
           </div>
           <div class="btn-sec">
             <a href="#" class="btn rounded"><span class="text-white">Schedule A Call</span></a>
@@ -73,11 +73,13 @@ get_header('nonav');
 		  <div class="consult-col">
 		    <div class="con-wrap">
 		      <div class="con-text">
-		        <h3>Not Ready to Start yet?</h3>
-		        <p>Leave you feedback here!</p>
+		        <h3>Not ready to start yet?</h3>
+		        <p>Your feedback is important to us. Please share your thoughts to help us improve our services.</p>
 		      </div>
 		      <div class="btn-sec">
-		        <a href="javascript:void(0);" onclick="showPopForm('intentPopup-fb')" class="btn rounded"><span class="text-white">Fill a Form Now</span></a>
+		        <a href="javascript:void(0);" onclick="showPopForm('intentPopup-fb')" class="btn rounded">
+              <span class="text-white">Fill a Feedback Form</span>
+            </a>
 		      </div>
 		    </div>
 		  </div>
