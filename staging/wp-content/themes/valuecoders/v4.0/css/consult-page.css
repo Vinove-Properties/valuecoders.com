@@ -3100,7 +3100,7 @@ body.page-template-template-testimonials .client-video-section iframe,
       padding: 30px;
       border-radius: 12px;
       position: relative;
-      border-bottom: 6px solid #FFF0D0; }
+      border-bottom: 6px solid #fff0d0; }
       .consult-sec .consult-flex .consult-col .con-wrap .con-text {
         min-height: 100px; }
       .consult-sec .consult-flex .consult-col .con-wrap h3 {
@@ -3133,7 +3133,7 @@ body.page-template-template-testimonials .client-video-section iframe,
             top: 0; }
       .consult-sec .consult-flex .consult-col .con-wrap:hover {
         background: #fff9ed;
-        border-color: #FFAD00; }
+        border-color: #ffad00; }
 
 .consult-popup .popup-wrapper .popWrap .popup-content {
   width: 1100px;
@@ -3381,5 +3381,94 @@ body.page-template-template-testimonials .client-video-section iframe,
           position: absolute;
           top: 6px;
           left: 5px; }
+
+@media only screen and (max-width: 1600px) {
+  .consult-popup .popup-wrapper .popWrap .popup-content .rate-section .rating-section {
+    padding: 15px 10px 0;
+    margin: 15px 0 0; }
+    .consult-popup .popup-wrapper .popWrap .popup-content .rate-section .rating-section p {
+      margin: 0 0 15px; }
+    .consult-popup .popup-wrapper .popWrap .popup-content .rate-section .rating-section .unstyled li {
+      margin: 0 0 10px;
+      font-size: 15px; }
+  .consult-popup .popup-wrapper .popWrap .popup-content .closeicon {
+    top: 18px; } }
+@media only screen and (max-width: 1280px) {
+  .consult-sec .consult-flex .consult-col .con-wrap {
+    padding: 25px; }
+    .consult-sec .consult-flex .consult-col .con-wrap h3 {
+      line-height: 28px;
+      font-size: 18px; }
+
+  .consult-popup .popup-wrapper .popWrap .popup-content {
+    width: 90%;
+    height: 90vh;
+    overflow-y: scroll; }
+
+  .consult-popup .popup-wrapper .popWrap .popup-content {
+    width: 95%; } }
+@media only screen and (max-width: 991px) {
+  .banner-section h1 {
+    font-size: 25px;
+    line-height: 36px; }
+  .banner-section h2 {
+    font-size: 17px;
+    line-height: 27px; }
+
+  .consult-popup .popup-wrapper .popWrap .popup-content .rate-section .rating-section h3 {
+    font-size: 19px; }
+  .consult-popup .popup-wrapper .popWrap .popup-content .rate-section .rating-section p {
+    margin: 0 0 15px; }
+  .consult-popup .popup-wrapper .popWrap .popup-content .rate-section .rating-section .unstyled li {
+    font-size: 14px; }
+  .consult-popup .popup-wrapper .popWrap .popup-content .rate-section .rating-section .rate-star p {
+    font-size: 16px;
+    line-height: 25px; }
+  .consult-popup .popup-wrapper .popWrap .popup-content .closeicon {
+    top: 18px; }
+
+  .consult-sec {
+    margin-top: -210px;
+    padding: 100px 0 50px; }
+    .consult-sec .consult-flex .consult-col {
+      flex-basis: 100%;
+      padding: 0;
+      margin: 0 0 20px;
+      text-align: center; }
+      .consult-sec .consult-flex .consult-col .con-wrap .con-text {
+        min-height: initial; }
+      .consult-sec .consult-flex .consult-col .con-wrap .btn-sec {
+        justify-content: center; }
+        .consult-sec .consult-flex .consult-col .con-wrap .btn-sec .btn.rounded:before {
+          top: 2px;
+          right: 2px; } }
+@media only screen and (max-width: 767px) {
+  .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group {
+    width: 100%;
+    padding: 0; }
+    .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .form-input {
+      font-size: 14px; }
+    .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .nice-select {
+      font-family: sans-serif; }
+    .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .styled-checkbox + label::before {
+      margin-right: 7px;
+      width: 17px;
+      height: 17px; }
+    .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .styled-checkbox:checked + label::after {
+      background-size: 100%;
+      width: 11px;
+      height: 9px; }
+    .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .btn {
+      min-width: 190px;
+      height: 50px;
+      font-size: 16px; }
+  .consult-popup .popup-wrapper .popWrap .popup-content .rate-section .rating-section .unstyled .styled-checkbox + label::before {
+    margin-right: 7px;
+    width: 17px;
+    height: 17px; }
+  .consult-popup .popup-wrapper .popWrap .popup-content .rate-section .rating-section .unstyled .styled-checkbox:checked + label::after {
+    background-size: 100%;
+    width: 11px;
+    height: 9px; } }
 
 /*# sourceMappingURL=consult-page.css.map */
