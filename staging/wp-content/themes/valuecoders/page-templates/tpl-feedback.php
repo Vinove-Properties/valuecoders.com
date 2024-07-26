@@ -137,7 +137,8 @@ get_header('nonav');
             <label for="intent">"I confirm my intent to work with ValueCoders and request to receive the agreement for signature.</label>
           </div>
           <div class="form-group  width-full">
-            <button type="submit" class="btn btn-big btn-primary btn-padding-x test-1" name="ws-form-sub" id="pxl-submit-top" value="ws-landing">Submit Now</button>
+            <button type="submit" class="btn btn-big btn-primary btn-padding-x test-1" name="ws-form-sub" id="pxl-submit-top" 
+            value="ws-landing">Submit Now</button>
           </div>
         </div>
       </form>
@@ -157,31 +158,32 @@ get_header('nonav');
       <h2>Details for Paperwork</h2>
       <p>Assure Response in 1 business days</p>
     </div>
-    <div class="form-box">
-      <form>
+    <form onsubmit="return _handleRating();">
+    <div class="form-box">      
         <div class="form-wrap">
           <div class="form-group">
             <div class="user-input">
               <label>Full Name *</label>
-              <input class="form-input" type="text" id="ft-name" placeholder="Enter Your Name" name="user-name" maxlength="30">
-              <small>Please Fill Name.</small>
+              <input class="form-input" type="text" id="rt-name" placeholder="Enter Your Name" name="user-name" 
+              maxlength="30" data-err="Please Fill Name">
+              <small></small>
             </div>
           </div>
           <div class="form-group">
             <div class="user-input">
               <label>Email *</label>
-              <input type="text" class="form-input" id="ft-email" placeholder="Enter Your Email" name="user-email" maxlength="50">
+              <input type="text" class="form-input" id="rt-email" placeholder="Enter Your Email" name="user-email" 
+              maxlength="50" data-err="Please Fill Email">
               <small></small>
             </div>
           </div>
-        </div>
-      </form>
+        </div>      
     </div>
     <div class="rate-section">
       <div class="rating-section">
         <h3>Feedback on Initial Discussions</h3>
         <p>How satisfied were you with the initial connection and communication with our team? Rating Scale (1-5, where 1 is very dissatisfied and 5 is very satisfied)</p>
-        <div class="rate-star">
+        <div id="rate-str" class="rate-star">
           <p>How would you rate our team's persistence and follow-up?</p>
           <div class="star-rating">
             <input type="radio" id="5-stars" name="rating" value="5" />
@@ -195,6 +197,7 @@ get_header('nonav');
             <input type="radio" id="1-star" name="rating" value="1" />
             <label for="1-star" class="star"></label>
           </div>
+          <small class="rt-err" id="no-rating-err"></small>
         </div>
       </div>
       <div class="rating-section">
@@ -219,7 +222,12 @@ get_header('nonav');
           </li>
         </ul>
       </div>
+      <div class="form-group width-full">
+      <button type="submit" class="btn btn-big btn-primary btn-padding-x test-1" 
+      name="ws-form-sub" id="fd-submit" value="ws-landing">Submit Now</button>      
+      </div>
     </div>
+    </form>
   </div>
 </div>
 </div>

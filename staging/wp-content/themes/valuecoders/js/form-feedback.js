@@ -155,7 +155,6 @@ function checkURequirement(input){
 }
 
 function checkEmailEvent(input){
-	//console.log(input);
 	checkEmail(input.target);
 }
 
@@ -222,5 +221,48 @@ if( pwExpTime ){
 
 function _handleRespFeedback(){
 	checkRequired([pwName, pwEmail, pwCompany, pwAddress, pwExpTime, pwAuthority, pwPosition]);
+	return false;
+}
+
+function RatingRadioClicked( e ){
+	let rtErr 	= document.getElementById('no-rating-err');
+	let strElm 	= document.getElementById('rate-str');
+	strElm.classList.remove("verror");
+	rtErr.innerText = "";
+}
+
+const rtName 	= document.getElementById('rt-name'),
+rtEmail 		= document.getElementById('rt-email'),
+radios 		= document.getElementsByName('rating');
+for (var i = 0; i < radios.length; i++) {
+    radios[i].addEventListener('click', RatingRadioClicked);
+}
+
+rtName.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Name"));
+rtName.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Name"));
+rtName.addEventListener("keydown", strInputValidation.bind(null, "Please Fill Name"));
+rtName.addEventListener("focusout", strInputValidation.bind(null, "Please Fill Name"));
+
+rtEmail.addEventListener("keyup", checkEmailEvent.bind(rtEmail));
+rtEmail.addEventListener("keypress", checkEmailEvent.bind(rtEmail));
+rtEmail.addEventListener("keydown", checkEmailEvent.bind(rtEmail));
+rtEmail.addEventListener("focusout", checkEmailEvent.bind(rtEmail));
+
+function _handleRating(){
+	checkRequired([rtName, rtEmail]);	
+	let rating = false;
+	let radios = document.getElementsByName('rating');
+	for (var i = 0; i < radios.length; i++) {
+		if (radios[i].checked) {
+			rating  = true;
+		}
+	}
+	if( rating === false ){
+		let rtErr 	= document.getElementById('no-rating-err');
+		let strElm 	= document.getElementById('rate-str');
+		strElm.classList.add("verror");
+		rtErr.innerText = "Please select rating";
+	}
+
 	return false;
 }
