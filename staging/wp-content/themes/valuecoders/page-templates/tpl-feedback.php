@@ -31,7 +31,6 @@ get_header('nonav');
 		    <div class="con-wrap">
 		      <div class="con-text">
 		        <h3>Please take a moment to provide your details for the paperwork.</h3>
-		        <!-- <p></p> -->
 		      </div>
 		      <div class="btn-sec">
 		        <a href="javascript:void(0);" onclick="showPopForm('intentPopup-pw')" class="btn rounded">
@@ -42,19 +41,34 @@ get_header('nonav');
 		  </div>
       <?php } ?>
 
-		  <div class="consult-col">
-		    <div class="con-wrap">
-		      <div class="con-text">
-		        <h3>Need to bring your Partners/
-		          Decision Makers on final Call
-		        </h3>
-		        <p>Let’s Set up a Date & Time for the Call.</p>
-		      </div>
-		      <div class="btn-sec">
-		        <a href="#" class="btn rounded"><span class="text-white">Schedule A Call</span></a>
-		      </div>
-		    </div>
-		  </div>
+      <?php if( is_page(18346) ){ ?>
+      <div class="consult-col">
+        <div class="con-wrap">
+          <div class="con-text">
+            <h3>Need to bring your Partners/
+              Decision Makers on final Call
+            </h3>
+            <p>Let’s Set up a Date & Time for the Call.</p>
+          </div>
+          <div class="btn-sec">
+            <a href="#" class="btn rounded"><span class="text-white">Schedule A Call</span></a>
+          </div>
+        </div>
+      </div>  
+      <?php }else{ ?>
+      <div class="consult-col">
+        <div class="con-wrap">
+          <div class="con-text">
+            <h3>Need another call?</h3>
+            <p>Feel free to invite additional team members or decision makers.</p>
+          </div>
+          <div class="btn-sec">
+            <a href="#" class="btn rounded"><span class="text-white">Schedule A Call</span></a>
+          </div>
+        </div>
+      </div>  
+      <?php } ?>  
+		  
 		  <div class="consult-col">
 		    <div class="con-wrap">
 		      <div class="con-text">
