@@ -3410,6 +3410,11 @@ body.page-template-template-testimonials .client-video-section iframe,
 body.page-id-18344 .banner-section h2:after {
   display: none; }
 
+@media only screen and (max-width: 1920px) {
+  #intentPopup-fb .popWrap .popup-content {
+    width: 90%;
+    height: 90vh;
+    overflow-y: scroll; } }
 @media only screen and (max-width: 1800px) {
   .nice-select {
     margin-bottom: 15px !important; } }
@@ -3434,11 +3439,6 @@ body.page-id-18344 .banner-section h2:after {
   .consult-sec .consult-flex .consult-col .con-wrap .con-text {
     min-height: 170px; } }
 @media only screen and (max-width: 1440px) {
-  #intentPopup-fb .popWrap .popup-content {
-    width: 90%;
-    height: 90vh;
-    overflow-y: scroll; }
-
   #intentPopup-fb .popWrap .popup-content .closeicon {
     top: 20px; } }
 @media only screen and (max-width: 1280px) {
