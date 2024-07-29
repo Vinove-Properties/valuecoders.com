@@ -274,7 +274,7 @@ function _handleRespFeedback(){
 	var form 	= document.getElementById("elm-paperwork-form");
 	var formBtn = document.getElementById("pxl-submit-top");
 	form.classList.add('in-process');
-	formBtn.value = "Please wait...";
+	formBtn.textContent = "Please wait...";
 	formBtn.disabled = true;
 	form.submit();
 	}
@@ -362,7 +362,7 @@ function _handleRating(){
 	var form 	= document.getElementById("elm-rating-form");
 	var formBtn = document.getElementById("fd-submit");
 	form.classList.add('in-process');
-	formBtn.value = "Please wait...";
+	formBtn.textContent = "Please wait...";
 	formBtn.disabled = true;
 	form.submit();
 	}
