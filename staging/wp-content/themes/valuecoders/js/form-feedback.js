@@ -192,6 +192,7 @@ pwEmail 		= document.getElementById('pw-email'),
 pwCompany 		= document.getElementById('pw-company'),
 pwAddress 		= document.getElementById('pw-address'),
 pwExpTime 		= document.getElementById('exp-time'),
+pwExpReq 		= document.getElementById('pw-requirement'),
 pwAuthority 	= document.getElementById('pw-authority'),
 pwPosition 		= document.getElementById('pw-position');
 
@@ -221,6 +222,12 @@ pwAuthority.addEventListener("keypress", strInputValidation.bind(null, "Please F
 pwAuthority.addEventListener("keydown", strInputValidation.bind(null, "Please Fill Name of Signing Authority"));
 pwAuthority.addEventListener("focusout", strInputValidation.bind(null, "Please Fill Name of Signing Authority"));
 
+pwExpReq.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Your Requirements"));
+pwExpReq.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Your Requirements"));
+pwExpReq.addEventListener("keydown", strInputValidation.bind(null, "Please Fill Your Requirements"));
+pwExpReq.addEventListener("focusout", strInputValidation.bind(null, "Please Fill Your Requirements"));
+
+
 pwPosition.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Title/Position"));
 pwPosition.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Title/Position"));
 pwPosition.addEventListener("keydown", strInputValidation.bind(null, "Please Fill Title/Position"));
@@ -230,6 +237,13 @@ pwPosition.addEventListener("focusout", strInputValidation.bind(null, "Please Fi
 if( pwExpTime ){
 	NiceSelect.bind(pwExpTime,{placeholder:'Please select from the dropdown'});	
 	pwExpTime.addEventListener("change", function(e){
+		let val 	= e.target.value;
+		let conReq 	= document.getElementById("cond-requirement");
+		if( val == "Others" ){
+			conReq.style.display = "block";
+		}else{
+			conReq.style.display = "none";
+		}
 		const fldPapa = pwExpTime.closest('.user-input');
 		if( pwExpTime.value !== "" ){
 			fldPapa.classList.remove("verror");
@@ -239,7 +253,11 @@ if( pwExpTime ){
 }
 
 function _handleRespFeedback(){
-	checkRequired([pwName, pwEmail, pwCompany, pwAddress, pwExpTime, pwAuthority, pwPosition]);
+	let reqFieldArray = [pwName, pwEmail, pwCompany, pwAddress, pwExpTime, pwAuthority, pwPosition];
+	if( pwExpTime.value == "Others" ){
+	reqFieldArray.push( pwExpReq );	
+	}
+	checkRequired(reqFieldArray);
 	return false;
 }
 
@@ -252,6 +270,7 @@ function RatingRadioClicked( e ){
 
 const rtName 	= document.getElementById('rt-name'),
 rtEmail 		= document.getElementById('rt-email'),
+rtReason 		= document.getElementById('rt-rtext'),
 radios 		= document.getElementsByName('rating');
 for (var i = 0; i < radios.length; i++) {
     radios[i].addEventListener('click', RatingRadioClicked);
@@ -267,8 +286,13 @@ rtEmail.addEventListener("keypress", checkEmailEvent.bind(rtEmail));
 rtEmail.addEventListener("keydown", checkEmailEvent.bind(rtEmail));
 rtEmail.addEventListener("focusout", checkEmailEvent.bind(rtEmail));
 
+rtReason.addEventListener("keyup", strInputValidation.bind(null, "Please Fill This Field"));
+rtReason.addEventListener("keypress", strInputValidation.bind(null, "Please Fill This Field"));
+rtReason.addEventListener("keydown", strInputValidation.bind(null, "Please Fill This Field"));
+rtReason.addEventListener("focusout", strInputValidation.bind(null, "Please Fill This Field"));
+
 function _handleRating(){
-	checkRequired([rtName, rtEmail]);	
+	checkRequired([rtName, rtEmail, rtReason]);	
 	let rating = false;
 	let radios = document.getElementsByName('rating');
 	for (var i = 0; i < radios.length; i++) {

@@ -132,18 +132,7 @@ get_header('nonav');
               <small></small>
             </div>
           </div>
-          <div class="form-group">
-            <div class="user-input sel-input">
-              <label>Expected Turnaround Time *</label>
-              <select class="wide selectize" name="expected-time" id="exp-time">
-                <option value="">Expected Turnaround Time</option>
-                <option value="Immediately">Immediately</option>
-                <option value="Within a Week">Within a Week</option>
-                <option value="Others">Others please specify</option>
-              </select>
-              <small></small>
-            </div>
-          </div>
+
           <div class="form-group">
             <div class="user-input">
               <label>Name of Signing Authority *</label>
@@ -155,11 +144,25 @@ get_header('nonav');
           <div class="form-group">
             <div class="user-input">
               <label>Title/Position *</label>
-              <input type="text" class="form-input" id="pw-position" placeholder="Enter Title/Position" name="position" 
-              maxlength="50" data-err="Please Fill Title/Position">
+              <input type="text" class="form-input" id="pw-position" placeholder="Enter Title/Position" 
+              name="position" maxlength="50" data-err="Please Fill Title/Position">
               <small></small>
             </div>
           </div>
+
+          <div class="form-group">
+            <div class="user-input sel-input">
+              <label>Expected Turnaround Time *</label>
+              <select class="wide selectize" name="expected-time" id="exp-time">
+                <option value="">Expected Turnaround Time</option>
+                <option value="Immediately">Immediately</option>
+                <option value="Within a Week">Within a Week</option>
+                <option value="Others">Others please specify</option>
+              </select>
+              <small></small>
+            </div>            
+          </div>
+
           <div class="form-group">
             <div class="user-input">
               <label>Phone No.</label>
@@ -167,7 +170,17 @@ get_header('nonav');
               <small id="phone-error-vs"></small>
             </div>
           </div>
-          <div class="form-group  width-full">
+
+          <div id="cond-requirement" class="form-group width-full" style="display:none;">
+            <div class="user-input">
+              <label>Please Specify Your Requirements *</label>
+              <input type="text" class="form-input" id="pw-requirement" placeholder="Enter Your Requirements" name="position" 
+              data-err="Please Fill Your Requirements">
+              <small></small>
+            </div>
+          </div>
+
+          <div class="form-group width-full">
             <input class="styled-checkbox" id="intent" type="checkbox" value="value1">
             <label for="intent">"I confirm my intent to work with ValueCoders and request to receive the agreement for signature.</label>
           </div>
@@ -184,7 +197,7 @@ get_header('nonav');
 </div>
 
 <div class="popup-section consult-popup">
-<div id="intentPopup-fb" class="popup-wrapper" style="display:none;">	
+<div id="intentPopup-fb" class="popup-wrapper" style="display:block;">	
 <div class="popWrap">
   <div class="popup-content">
 	<span class="closeicon" onclick="close_vpop('intentPopup-fb')">
@@ -240,26 +253,38 @@ get_header('nonav');
         <p>What are the main reasons for not proceeding with the project at this time?</p>
         <ul class="unstyled centered">
           <li>
-            <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
+            <input name="rt-reson" class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
             <label for="styled-checkbox-1">Budget constraints</label>
           </li>
           <li>
-            <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2">
+            <input name="rt-reson" class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2">
             <label for="styled-checkbox-2">Timeline issues</label>
           </li>
           <li>
-            <input class="styled-checkbox" id="styled-checkbox-3" type="checkbox" value="value3">
+            <input name="rt-reson" class="styled-checkbox" id="styled-checkbox-3" type="checkbox" value="value3">
             <label for="styled-checkbox-3">Not a priority at the moment</label>
           </li>
           <li>
-            <input class="styled-checkbox" id="styled-checkbox-4" type="checkbox" value="value4">
+            <input name="rt-reson" class="styled-checkbox" id="styled-checkbox-4" type="checkbox" value="value4">
             <label for="styled-checkbox-4">Waiting for internal approvals</label>
           </li>
           <li>
-            <input class="styled-checkbox" id="styled-checkbox-5" type="checkbox" value="other">
+            <input name="rt-reson" class="styled-checkbox" id="styled-checkbox-5" type="checkbox" value="other">
             <label for="styled-checkbox-5">Other</label>
           </li>
         </ul>
+      </div>
+      <div class="form-box" style="padding:20px 0 30px 0; display: none;">
+      <div class="form-wrap">
+        <div class="form-group width-full">
+          <div class="user-input">
+          <label>Other Reason</label>
+          <textarea class="form-input" id="rt-rtext" placeholder="Enter Your Other Reason" name="reason-text" 
+          data-err="Please Fill This Field"></textarea>          
+          <small></small>
+          </div>
+        </div>
+      </div>
       </div>
       <div class="form-group width-full">
       <button type="submit" class="btn btn-big btn-primary btn-padding-x test-1" name="ws-form-sub" id="fd-submit" value="ws-landing">Submit Now</button>      
