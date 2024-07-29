@@ -258,6 +258,26 @@ function _handleRespFeedback(){
 	reqFieldArray.push( pwExpReq );	
 	}
 	checkRequired(reqFieldArray);
+
+	if(	
+	( vcSpaceChecker(pwName.value.trim()) === true ) && 
+	( vcSpaceChecker(pwEmail.value.trim()) === true ) &&
+	( vcSpaceChecker(pwCompany.value.trim()) === true ) &&
+	( vcSpaceChecker(pwAddress.value.trim()) === true ) &&
+	( vcSpaceChecker(pwExpTime.value.trim()) === true )
+	){		
+	const sre = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	if( !sre.test(pwEmail.value.trim()) ){
+	return false;
+	}
+
+	var form 	= document.getElementById("elm-paperwork-form");
+	var formBtn = document.getElementById("pxl-submit-top");
+	form.classList.add('in-process');
+	formBtn.value = "Please wait...";
+	formBtn.disabled = true;
+	form.submit();
+	}
 	return false;
 }
 
@@ -276,6 +296,23 @@ for (var i = 0; i < radios.length; i++) {
     radios[i].addEventListener('click', RatingRadioClicked);
 }
 
+const elmCheckBox = document.querySelectorAll('.styled-checkbox');
+const elmReasonot = document.getElementById('elm-otr-reason');
+
+elmCheckBox.forEach(function(checkbox) {
+	checkbox.addEventListener('change', function(event){
+		let elmValue = event.target.value;
+	    if(event.target.checked && (elmValue == "other") ){
+	    	elmReasonot.style.display = "block";
+	    }
+
+	    if( !event.target.checked && (elmValue == "other") ){
+	    	elmReasonot.style.display = "none";
+	    }
+	});
+});
+
+
 rtName.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Name"));
 rtName.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Name"));
 rtName.addEventListener("keydown", strInputValidation.bind(null, "Please Fill Name"));
@@ -292,7 +329,13 @@ rtReason.addEventListener("keydown", strInputValidation.bind(null, "Please Fill 
 rtReason.addEventListener("focusout", strInputValidation.bind(null, "Please Fill This Field"));
 
 function _handleRating(){
-	checkRequired([rtName, rtEmail, rtReason]);	
+	let otherCheck = document.getElementById("styled-checkbox-5");
+	if( otherCheck.checked ){
+		checkRequired([rtName, rtEmail, rtReason]);
+	}else{
+		checkRequired([rtName, rtEmail]);
+	}
+	
 	let rating = false;
 	let radios = document.getElementsByName('rating');
 	for (var i = 0; i < radios.length; i++) {
@@ -307,5 +350,21 @@ function _handleRating(){
 		rtErr.innerText = "Please select rating";
 	}
 
+	if(	
+	( vcSpaceChecker(rtName.value.trim()) === true ) && 
+	( vcSpaceChecker(rtEmail.value.trim()) === true )
+	){		
+	const sre = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	if( !sre.test(rtEmail.value.trim()) ){
+		return false;
+	}
+
+	var form 	= document.getElementById("elm-rating-form");
+	var formBtn = document.getElementById("fd-submit");
+	form.classList.add('in-process');
+	formBtn.value = "Please wait...";
+	formBtn.disabled = true;
+	form.submit();
+	}
 	return false;
 }

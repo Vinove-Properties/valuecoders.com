@@ -98,7 +98,8 @@ get_header('nonav');
       <p>Rest assured, the below-mentioned details will remain confidential.</p>
     </div>
     <div class="form-box">
-      <form onsubmit="return _handleRespFeedback();">
+      <form method="POST" id="elm-paperwork-form" action="<?php echo site_url('/script-feedback.php'); ?>" 
+        onsubmit="return _handleRespFeedback();">
         <div class="form-wrap">
           <div class="form-group">
             <div class="user-input">
@@ -120,7 +121,7 @@ get_header('nonav');
             <div class="user-input">
               <label>Company Name *</label>
               <input type="text" class="form-input" id="pw-company" placeholder="Enter Company Name" name="user-company" 
-              maxlength="50" data-err="Please Fill Company">
+              maxlength="100" data-err="Please Fill Company">
               <small></small>
             </div>
           </div>
@@ -128,7 +129,7 @@ get_header('nonav');
             <div class="user-input">
               <label>Company Address *</label>
               <input type="text" class="form-input" id="pw-address" placeholder="Enter Company Address" name="address" 
-              maxlength="50" data-err="Please Fill Company Address">
+              maxlength="200" data-err="Please Fill Company Address">
               <small></small>
             </div>
           </div>
@@ -174,7 +175,7 @@ get_header('nonav');
           <div id="cond-requirement" class="form-group width-full" style="display:none;">
             <div class="user-input">
               <label>Please Specify Your Requirements *</label>
-              <input type="text" class="form-input" id="pw-requirement" placeholder="Enter Your Requirements" name="position" 
+              <input type="text" class="form-input" id="pw-requirement" placeholder="Enter Your Requirements" name="requirement" 
               data-err="Please Fill Your Requirements">
               <small></small>
             </div>
@@ -185,8 +186,9 @@ get_header('nonav');
             <label for="intent">"I confirm my intent to work with ValueCoders and request to receive the agreement for signature.</label>
           </div>
           <div class="form-group  width-full">
-            <button type="submit" class="btn btn-big btn-primary btn-padding-x test-1" name="ws-form-sub" id="pxl-submit-top" 
-            value="ws-landing">Submit Now</button>
+            <input type="hidden" name="frm-type" value="paperwork">
+            <button type="submit" class="btn btn-big btn-primary btn-padding-x test-1" name="ws-form-sub" 
+            id="pxl-submit-top" value="ws-landing">Submit Now</button>
           </div>
         </div>
       </form>
@@ -197,7 +199,7 @@ get_header('nonav');
 </div>
 
 <div class="popup-section consult-popup">
-<div id="intentPopup-fb" class="popup-wrapper" style="display:block;">	
+<div id="intentPopup-fb" class="popup-wrapper" style="display:none;">	
 <div class="popWrap">
   <div class="popup-content">
 	<span class="closeicon" onclick="close_vpop('intentPopup-fb')">
@@ -206,7 +208,7 @@ get_header('nonav');
       <h2>Feedback</h2>
       <p>Your feedback is essential for our growth and improvement.</p>
     </div>
-    <form onsubmit="return _handleRating();">
+    <form method="POST" id="elm-rating-form" action="<?php echo site_url('/script-feedback.php'); ?>" onsubmit="return _handleRating();">
     <div class="form-box">      
         <div class="form-wrap">
           <div class="form-group">
@@ -253,28 +255,28 @@ get_header('nonav');
         <p>What are the main reasons for not proceeding with the project at this time?</p>
         <ul class="unstyled centered">
           <li>
-            <input name="rt-reson" class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
+            <input name="rt-reson[]" class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="Budget constraints">
             <label for="styled-checkbox-1">Budget constraints</label>
           </li>
           <li>
-            <input name="rt-reson" class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2">
+            <input name="rt-reson[]" class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="Timeline issues">
             <label for="styled-checkbox-2">Timeline issues</label>
           </li>
           <li>
-            <input name="rt-reson" class="styled-checkbox" id="styled-checkbox-3" type="checkbox" value="value3">
+            <input name="rt-reson[]" class="styled-checkbox" id="styled-checkbox-3" type="checkbox" value="Not a priority at the moment">
             <label for="styled-checkbox-3">Not a priority at the moment</label>
           </li>
           <li>
-            <input name="rt-reson" class="styled-checkbox" id="styled-checkbox-4" type="checkbox" value="value4">
+            <input name="rt-reson[]" class="styled-checkbox" id="styled-checkbox-4" type="checkbox" value="Waiting for internal approvals">
             <label for="styled-checkbox-4">Waiting for internal approvals</label>
           </li>
           <li>
-            <input name="rt-reson" class="styled-checkbox" id="styled-checkbox-5" type="checkbox" value="other">
+            <input name="rt-reson[]" class="styled-checkbox" id="styled-checkbox-5" type="checkbox" value="other">
             <label for="styled-checkbox-5">Other</label>
           </li>
         </ul>
       </div>
-      <div class="form-box" style="padding:20px 0 30px 0; display: block;">
+      <div class="form-box" id="elm-otr-reason" style="padding:20px 0 20px 0; display: none;">
       <div class="form-wrap">
         <div class="form-group width-full">
           <div class="user-input">
@@ -287,7 +289,8 @@ get_header('nonav');
       </div>
       </div>
       <div class="form-group width-full">
-      <button type="submit" class="btn btn-big btn-primary btn-padding-x test-1" name="ws-form-sub" id="fd-submit" value="ws-landing">Submit Now</button>      
+      <input type="hidden" name="frm-type" value="feedback">
+      <button type="submit" class="btn btn-big btn-primary btn-padding-x test-1" name="ws-form-sub" id="fd-submit" value="ws-landing">Submit Now</button>
       </div>
     </div>
     </form>
