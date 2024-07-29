@@ -274,7 +274,7 @@ get_header('nonav');
           </li>
         </ul>
       </div>
-      <div class="form-box" style="padding:20px 0 30px 0; display: none;">
+      <div class="form-box" style="padding:20px 0 30px 0; display: block;">
       <div class="form-wrap">
         <div class="form-group width-full">
           <div class="user-input">
