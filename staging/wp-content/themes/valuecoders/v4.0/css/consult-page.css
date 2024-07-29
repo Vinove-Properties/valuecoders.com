@@ -3219,6 +3219,10 @@ body.page-template-template-testimonials .client-video-section iframe,
             border: 1px solid #05164d; }
           .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .form-input .user-input:focus {
             border: 1px solid #05164d; }
+        .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group textarea.form-input {
+          padding: 15px;
+          height: 80px;
+          resize: none; }
         .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .nice-select {
           padding: 15px 15px 15px;
           font-weight: 500;
