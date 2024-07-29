@@ -3190,6 +3190,8 @@ body.page-template-template-testimonials .client-video-section iframe,
           position: relative; }
           .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .user-input.sel-input label {
             z-index: 999; }
+          .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .user-input.sel-input.verror .nice-select {
+            border-color: red !important; }
           .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .user-input small {
             display: none; }
           .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .user-input.verror .form-input {
