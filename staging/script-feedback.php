@@ -139,7 +139,7 @@ $Mailbody .= "Phone: ".$phone.$bodyBr;
 $Mailbody .= "Company Name: ".$company.$bodyBr;
 $Mailbody .= "Company Address: ".$address.$bodyBr;
 $Mailbody .= "Name of Signing Authority: ".$authority.$bodyBr;
-$Mailbody .= "Title/Position: ".$authority.$bodyBr;
+$Mailbody .= "Title/Position: ".$position.$bodyBr;
 $Mailbody .= "Expected Turnaround Time: ".$expTime.$bodyBr;
 if( $uReq ){
 $Mailbody .= "Expected Turnaround - Comment: ".$uReq.$bodyBr;
