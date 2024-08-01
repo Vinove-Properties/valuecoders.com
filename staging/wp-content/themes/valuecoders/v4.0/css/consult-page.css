@@ -3499,8 +3499,13 @@ body.page-id-18344 .banner-section h2:after {
   .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group {
     width: 100%;
     padding: 0; }
+    .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group label {
+      font-size: 13px; }
     .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .form-input {
       font-size: 14px; }
+    .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group textarea.form-input {
+      padding: 30px 15px;
+      height: 100px; }
     .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .nice-select {
       font-family: sans-serif; }
     .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .styled-checkbox + label::before {
