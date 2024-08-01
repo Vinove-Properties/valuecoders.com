@@ -280,7 +280,7 @@ get_header('nonav');
       <div class="form-wrap">
         <div class="form-group width-full">
           <div class="user-input">
-          <label>Other Reason</label>
+          <label>What aspects of our proposal or approach did not meet your expectations?</label>
           <textarea class="form-input" id="rt-rtext" placeholder="Enter Your Other Reason" name="reason-text" 
           data-err="Please Fill This Field"></textarea>          
           <small></small>
