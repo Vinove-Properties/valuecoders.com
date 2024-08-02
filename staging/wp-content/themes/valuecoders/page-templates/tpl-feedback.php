@@ -137,7 +137,7 @@ get_header('nonav');
           <div class="form-group">
             <div class="user-input">
               <label>Name of Signing Authority *</label>
-              <input type="text" class="form-input" id="pw-authority" placeholder="Enter Company Name" 
+              <input type="text" class="form-input" id="pw-authority" placeholder="Enter Name of Signing Authority" 
               name="authority" maxlength="50" data-err="Please Fill Name of Signing Authority">
               <small></small>
             </div>
@@ -181,9 +181,10 @@ get_header('nonav');
             </div>
           </div>
 
-          <div class="form-group width-full">
-            <input class="styled-checkbox" id="intent" type="checkbox" value="value1">
+          <div class="form-group width-full">            
+            <input class="styled-checkbox" id="intent" type="checkbox" value="1" checked>
             <label for="intent">"I confirm my intent to work with ValueCoders and request to receive the agreement for signature.</label>
+            <small id="intent-err" style="display:none; color:red; padding-left: 10px;">Please confirm your intent to proceed by checking the box.</small>
           </div>
           <div class="form-group  width-full">
             <input type="hidden" name="frm-type" value="paperwork">

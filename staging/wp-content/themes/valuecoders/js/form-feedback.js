@@ -194,7 +194,16 @@ pwAddress 		= document.getElementById('pw-address'),
 pwExpTime 		= document.getElementById('exp-time'),
 pwExpReq 		= document.getElementById('pw-requirement'),
 pwAuthority 	= document.getElementById('pw-authority'),
-pwPosition 		= document.getElementById('pw-position');
+pwPosition 		= document.getElementById('pw-position'),
+pwIntent 		= document.getElementById('intent');
+
+pwIntent.addEventListener('change', function(e){
+	if(e.target.checked){	
+		document.getElementById("intent-err").style.display = "none";
+	}else{
+		document.getElementById("intent-err").style.display = "block";		
+	}
+});
 
 pwName.addEventListener("keyup", strInputValidation.bind(null, "Please Fill Name"));
 pwName.addEventListener("keypress", strInputValidation.bind(null, "Please Fill Name"));
@@ -252,12 +261,12 @@ if( pwExpTime ){
 	});
 }
 
-function _handleRespFeedback(){
+function _handleRespFeedback(){	
 	let reqFieldArray = [pwName, pwEmail, pwCompany, pwAddress, pwExpTime, pwAuthority, pwPosition];
 	if( pwExpTime.value == "Others" ){
 	reqFieldArray.push( pwExpReq );	
 	}
-	checkRequired(reqFieldArray);
+	checkRequired( reqFieldArray );
 
 	if(	
 	( vcSpaceChecker(pwName.value.trim()) === true ) && 
@@ -270,6 +279,10 @@ function _handleRespFeedback(){
 	if( !sre.test(pwEmail.value.trim()) ){
 	return false;
 	}
+
+	if( !pwIntent.checked ) return false;
+
+	if( (pwExpTime.value.trim() == "Others") && (pwExpReq.value.trim() == "") ) return false;
 
 	var form 	= document.getElementById("elm-paperwork-form");
 	var formBtn = document.getElementById("pxl-submit-top");

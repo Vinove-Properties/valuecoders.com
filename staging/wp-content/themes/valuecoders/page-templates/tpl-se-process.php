@@ -21,7 +21,7 @@ get_header();
           endwhile;
           ?>
           <div class="btn-sec margin-t-50 ">
-          <a href="https://www.valuecoders.com/v2wp/contact" class="btn rounded">
+          <a href="<?php site_url('/contact'); ?>" class="btn rounded">
           <span class="text-white">Contact Us</span>
           </a>
           </div>
