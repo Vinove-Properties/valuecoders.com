@@ -3249,8 +3249,6 @@ body.page-template-template-testimonials .client-video-section iframe,
             background: white;
             border: 1px solid #aeaeae;
             border-radius: 4px; }
-          .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .styled-checkbox:hover + label:before {
-            background: #ffad00; }
           .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .styled-checkbox:checked + label:before {
             background: #ffad00; }
           .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .styled-checkbox:disabled + label {
@@ -3380,8 +3378,6 @@ body.page-template-template-testimonials .client-video-section iframe,
           background: white;
           border: 1px solid #aeaeae;
           border-radius: 4px; }
-        .consult-popup .popup-wrapper .popWrap .popup-content .rate-section .rating-section .unstyled .styled-checkbox:hover + label:before {
-          background: #ffad00; }
         .consult-popup .popup-wrapper .popWrap .popup-content .rate-section .rating-section .unstyled .styled-checkbox:checked + label:before {
           background: #ffad00; }
         .consult-popup .popup-wrapper .popWrap .popup-content .rate-section .rating-section .unstyled .styled-checkbox:disabled + label {
