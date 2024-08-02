@@ -3237,7 +3237,8 @@ body.page-template-template-testimonials .client-video-section iframe,
           .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .styled-checkbox + label {
             position: relative;
             cursor: pointer;
-            padding: 0; }
+            padding: 0;
+            background: #fff; }
           .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .styled-checkbox + label:before {
             content: "";
             margin-right: 10px;
@@ -3501,7 +3502,8 @@ body.page-id-18344 .banner-section h2:after {
       font-size: 14px; }
     .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group textarea.form-input {
       padding: 30px 15px;
-      height: 100px; }
+      height: 100px;
+      font-family: sans-serif; }
     .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .nice-select {
       font-family: sans-serif; }
     .consult-popup .popup-wrapper .popWrap .popup-content .form-box .form-wrap .form-group .styled-checkbox + label::before {
