@@ -1048,7 +1048,7 @@
 
             <li class="cta-wrap">
               <div class="btn-sec">
-                <a href="<?php echo $site_url; ?>contact" class="btn rounded"><span class="text-white">Get Started</span></a>
+                <a href="<?php echo $site_url; ?>contact" class="btn rounded"><span class="text-white">Contact Us</span></a>
               </div>
             </li>
           </ul>
