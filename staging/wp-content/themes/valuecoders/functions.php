@@ -303,7 +303,7 @@ function valuecoders_scripts() {
 		wp_enqueue_style( 'se-process', get_stylesheet_directory_uri().'/v4.0/css/software-services.css', [], _S_VERSION );
 	}
 	elseif( is_single() ){
-		wp_enqueue_style( 'vc-resource-detail', get_stylesheet_directory_uri().'/v3.0/css/resource-detail.min.css', [], _S_VERSION );
+		wp_enqueue_style( 'vc-resource-detail', get_stylesheet_directory_uri().'/v4.0/css/resource-detail.min.css', [], _S_VERSION );
 	}
 	
 	else{
