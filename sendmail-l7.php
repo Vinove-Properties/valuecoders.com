@@ -381,10 +381,7 @@ function zohoCrmUpdate_v2($argArrData, $leadSource='', $owner_id = 658520861){
                 $file       = fopen(IH_LOGFILE,"a");
                 $zlead      = PHP_EOL.$varEmail."#one:".print_r($response,1);
                 fwrite( $file, $zlead );
-                fclose( $file );    
-                $user_name = $varFirstName.' '.$varLastName;
-                smtpEmailFunction( "web@vinove.com", "Zoho CRM error - ValueCoders LP", $response, "lead", 
-                $varEmail, [], [], [], $user_name );
+                fclose( $file );                
             }
         }else{
             $user_name = $varFirstName.' '.$varLastName;
