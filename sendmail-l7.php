@@ -377,16 +377,21 @@ function zohoCrmUpdate_v2($argArrData, $leadSource='', $owner_id = 658520861){
                 }
                 ppcdupLeadNote( $varAccessToken, $lead_id, $varDescription );
             }
-            }else{
-                $file       = fopen(IH_LOGFILE,"a");
-                $zlead      = PHP_EOL.$varEmail.":".print_r($response,1);
-                fwrite( $file, $zlead );
-                fclose( $file );    
-                $user_name = $varFirstName.' '.$varLastName;
-                smtpEmailFunction( "web@vinove.com", "Zoho CRM error - ValueCoders LP", $response, "lead", 
-                $varEmail, [], [], [], $user_name );
             }
+            // else{
+            //     $file       = fopen(IH_LOGFILE,"a");
+            //     $zlead      = PHP_EOL.$varEmail.":".print_r($response,1);
+            //     fwrite( $file, $zlead );
+            //     fclose( $file );    
+            //     $user_name = $varFirstName.' '.$varLastName;
+            //     smtpEmailFunction( "web@vinove.com", "Zoho CRM error - ValueCoders LP", $response, "lead", 
+            //     $varEmail, [], [], [], $user_name );
+            // }
         }else{
+            $user_name = $varFirstName.' '.$varLastName;
+            smtpEmailFunction( "web@vinove.com", "Zoho CRM error - ValueCoders LP", $response, "lead", 
+            $varEmail, [], [], [], $user_name );
+
             $file       = fopen(IH_LOGFILE,"a");
             $zlead      = PHP_EOL.$varEmail.":".print_r($err,1);
             fwrite( $file, $zlead );
@@ -731,7 +736,7 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param, $token){
             $arrZoho_v2 = array('Email' => $user_email,
                 'First Name' => $firstn,
                 'Last Name' => $lastn,
-                'Phone' => !empty( $user_phone ) ? $user_phone : "9900000000",
+                'Phone' => !empty( $user_phone ) ? $user_phone : 9900000000,
                 // 'Country' => '',
                 'Lead Status' => 'Not Contacted Yet',
                 'Lead Source' => $lead_source,
