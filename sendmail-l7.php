@@ -48,18 +48,18 @@ foreach( $_POST as $key => $fields ){
 */
 function get_client_ip_user() {
     if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
-			  $_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
-			  $_SERVER['HTTP_CLIENT_IP'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
-	}
-	$client  = @$_SERVER['HTTP_CLIENT_IP'];
-	$forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
-	$remote  = $_SERVER['REMOTE_ADDR'];
+              $_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
+              $_SERVER['HTTP_CLIENT_IP'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
+    }
+    $client  = @$_SERVER['HTTP_CLIENT_IP'];
+    $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
+    $remote  = $_SERVER['REMOTE_ADDR'];
 
-	if(filter_var($client, FILTER_VALIDATE_IP)) { $ip = $client; }
-	elseif(filter_var($forward, FILTER_VALIDATE_IP)) { $ip = $forward; }
-	else { $ip = $remote; }
+    if(filter_var($client, FILTER_VALIDATE_IP)) { $ip = $client; }
+    elseif(filter_var($forward, FILTER_VALIDATE_IP)) { $ip = $forward; }
+    else { $ip = $remote; }
 
-	return $ip;
+    return $ip;
 }
 
 function generateTicketID() {
@@ -231,7 +231,7 @@ function ppcdupLeadNote( $varAccessToken, $lead_id, $requirement ){
 }
 
 //zohocrm api v2 update --23-Dec-2019
-function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
+function zohoCrmUpdate_v2($argArrData, $leadSource='', $owner_id = 658520861){
     $varEmail       = $argArrData['Email'];
     $varLastName    = $argArrData['Last Name'];
     $varFirstName   = $argArrData['First Name'];
@@ -322,9 +322,9 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
         curl_close($curl);
 
         if(!$err){
-            $body1 = '';
-            $response = json_decode($response);
-            if( isset( $response->data[0] ) &&  ($response->data[0]->code == "DUPLICATE_DATA") ) :
+            $body1      = '';
+            $response   = json_decode($response);
+            if( isset( $response->data[0] ) &&  ($response->data[0]->code == "DUPLICATE_DATA") ){
             $lead_id = ( isset( $response->data[0] ) ) ? $response->data[0]->details->id : 0;
             if( $lead_id !== 0 ){
                 $zoho_data = array(
@@ -377,7 +377,15 @@ function zohoCrmUpdate_v2($argArrData,$leadSource='',$owner_id = 658520861){
                 }
                 ppcdupLeadNote( $varAccessToken, $lead_id, $varDescription );
             }
-            endif;
+            }else{
+                $file       = fopen(IH_LOGFILE,"a");
+                $zlead      = PHP_EOL.$varEmail.":".print_r($response,1);
+                fwrite( $file, $zlead );
+                fclose( $file );    
+                $user_name = $varFirstName.' '.$varLastName;
+                smtpEmailFunction( "web@vinove.com", "Zoho CRM error - ValueCoders LP", $crmException, "lead", 
+                $varEmail, [], [], [], $user_name );
+            }
         }else{
             $file       = fopen(IH_LOGFILE,"a");
             $zlead      = PHP_EOL.$varEmail.":".print_r($err,1);

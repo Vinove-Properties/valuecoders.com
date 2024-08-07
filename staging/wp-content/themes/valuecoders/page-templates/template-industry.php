@@ -277,11 +277,10 @@ endif;
 
 $techStacks = get_field( 'inv-tstacks' );
 if( isset( $techStacks['is_enable'] ) && ($techStacks['is_enable'] == "yes") ) :
-$dtype 	= ( isset($techStacks['dtype']) && ($techStacks['dtype'] == "grid") ) ? 'grid' : 'accordian';
+$dtype 	= (isset($techStacks['dtype']) && ($techStacks['dtype'] == "grid")) ? 'grid' : 'accordian';
 if($dtype == "grid"){ 
 ?>
-<section data-layout="<?php echo $dtype; ?>" 
-	class="tech-stacks padding-t-120 padding-b-120 <?php echo $techStacks['sc_background']; ?>" id="serv-technology-grid">
+<section data-layout="<?php echo $dtype; ?>" class="tech-stacks padding-t-120 padding-b-120 <?php echo $techStacks['sc_background']; ?>" id="serv-technology-grid">
   <div class="container">
     <div class="head-txt text-center"><?php echo $techStacks['content']; ?></div>
     <div class="dis-flex col-box-outer margin-t-50">
