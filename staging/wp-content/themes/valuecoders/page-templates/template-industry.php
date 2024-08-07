@@ -25,7 +25,7 @@ if( $bcCategory === "custom" ){
 	//bc-custitle //bc-cuslink
 	$cuTitle 	= get_field('bc-custitle');
 	$cuLink 	= get_field('bc-cuslink');
-	$bCat 		= '<a href="'.vc_siteurl($cuLink).'">'.$cuTitle.'</a>';
+	$bCat 		= '<a class="no-after" href="'.vc_siteurl($cuLink).'">'.$cuTitle.'</a>';
 }
 
 $vcBtn = get_field('vc-cta', $thisPostID);
