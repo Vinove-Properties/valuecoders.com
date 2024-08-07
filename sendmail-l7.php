@@ -377,29 +377,28 @@ function zohoCrmUpdate_v2($argArrData, $leadSource='', $owner_id = 658520861){
                 }
                 ppcdupLeadNote( $varAccessToken, $lead_id, $varDescription );
             }
+            }else{
+                $file       = fopen(IH_LOGFILE,"a");
+                $zlead      = PHP_EOL.$varEmail."#one:".print_r($response,1);
+                fwrite( $file, $zlead );
+                fclose( $file );    
+                $user_name = $varFirstName.' '.$varLastName;
+                smtpEmailFunction( "web@vinove.com", "Zoho CRM error - ValueCoders LP", $response, "lead", 
+                $varEmail, [], [], [], $user_name );
             }
-            // else{
-            //     $file       = fopen(IH_LOGFILE,"a");
-            //     $zlead      = PHP_EOL.$varEmail.":".print_r($response,1);
-            //     fwrite( $file, $zlead );
-            //     fclose( $file );    
-            //     $user_name = $varFirstName.' '.$varLastName;
-            //     smtpEmailFunction( "web@vinove.com", "Zoho CRM error - ValueCoders LP", $response, "lead", 
-            //     $varEmail, [], [], [], $user_name );
-            // }
         }else{
             $user_name = $varFirstName.' '.$varLastName;
             smtpEmailFunction( "web@vinove.com", "Zoho CRM error - ValueCoders LP", $response, "lead", 
             $varEmail, [], [], [], $user_name );
 
             $file       = fopen(IH_LOGFILE,"a");
-            $zlead      = PHP_EOL.$varEmail.":".print_r($err,1);
+            $zlead      = PHP_EOL.$varEmail."#Two:".print_r($err,1);
             fwrite( $file, $zlead );
             fclose( $file );
         }
     }else{
         $file       = fopen(IH_LOGFILE,"a");
-        $zlead      = PHP_EOL.$varEmail.":".print_r($err,1);
+        $zlead      = PHP_EOL.$varEmail."#Three:".print_r($err,1);
         fwrite( $file, $zlead );
         fclose( $file );
     }
