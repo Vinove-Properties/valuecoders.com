@@ -16,10 +16,16 @@ $bcTitle 			= get_field('bc-title');
 $bcCategory 	= get_field('bc-vcategory');
 $bCat 				= ( $bcCategory === "services" ) ? "Services" : "Industries";
 if( $bcTitle ){
-$bct = $bcTitle;
-}		
-else{
-$bct = get_the_title();	
+	$bct = $bcTitle;
+}else{
+	$bct = get_the_title();	
+}
+
+if( $bcCategory === "custom" ){
+	//bc-custitle //bc-cuslink
+	$cuTitle 	= get_field('bc-custitle');
+	$cuLink 	= get_field('bc-cuslink');
+	$bCat 		= '<a href="'.vc_siteurl($cuLink).'">'.$cuTitle.'</a>';
 }
 
 $vcBtn = get_field('vc-cta', $thisPostID);
