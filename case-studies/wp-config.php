@@ -1,13 +1,35 @@
 <?php
-define( 'WP_CACHE', false );
+//define( 'WP_CACHE', false );
 
-define( 'DB_NAME', 'valuecoders-com-case-prod-db' );
-define( 'DB_USER', 'valuecoders-com-case-prod-db-user' );
-define( 'DB_PASSWORD', 'GQYNRZ2b2k8FsHX' );
-define( 'DB_HOST', 'localhost' );
-define( 'DB_CHARSET', 'utf8' );
+define( 'V_ENV', 'localhost' );
+if( V_ENV == "localhost" ){
+	define( 'DB_NAME', 'cs.valuecoders.com');
+	define( 'DB_USER', 'phpmyadmin' );
+	define( 'DB_PASSWORD', 'root' );
+	define( 'DB_HOST', 'localhost' );	
+	define( 'WP_HOME', 'http://localhost/valuecoders.com/case-studies/' );
+	define( 'WP_SITEURL', 'http://localhost/valuecoders.com/case-studies/' );
+}else{
+	define( 'WP_CACHE', false );
+	define( 'DB_NAME', 'valuecoders-com-case-prod-db' );
+	define( 'DB_USER', 'valuecoders-com-case-prod-db-user' );
+	define( 'DB_PASSWORD', 'GQYNRZ2b2k8FsHX' );
+	define( 'WP_HOME', 'https://www.valuecoders.com/case-studies/' );
+	define( 'WP_SITEURL', 'https://www.valuecoders.com/case-studies/' );
+	define( 'WP_MEMORY_LIMIT', '256M' );
+}
+
+define( 'DB_CHARSET', 'utf8mb4' );
 define( 'DB_COLLATE', '' );
+define( 'WP_POST_REVISIONS', false );
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_LOG', true );
+define( 'FS_METHOD', 'direct' );
 
+define('CLIENT_ID','1000.BMJ414JAF95SXHD4YKRK0FJ3JC57VH');
+define('CLIENT_SECRET','e9a796ffde50de7a3198d63f134196d125bae343d0');
+define('ACESS_TOKEN','1000.cae698c21d5f8adc4f5f8e1ae60a3c39.6008000ac10c5df23ebf773f63194b81');
+define('REFRESH_TOKEN','1000.b4d2d568df487f80bc73675a27101c45.d7cc4b483d0157d16f672e86dc354d62');
 
 define('AUTH_KEY',         '7g2)$)=AE,3D/VD;P1}~(*`,1A4q&qq1$;O|rP 0kiv_oIwl[[<EAIgRA^$l`8]M');
 define('SECURE_AUTH_KEY',  'd%!m1o3Zi7zXKL*a>~F7~{`#vnmz3JPM?JmQ13(P:qk(Jbq6wk>O&F`&K[`(`$~!');
@@ -20,24 +42,8 @@ define('NONCE_SALT',       'vP|M2*W,7$efSf2(S2u40]H&hNcvU*KukEw/3q=E9aSU>pZ9_3.~
 
 $table_prefix = 'wp_';
 
-define( 'WP_DEBUG', false );
-define( 'WP_DEBUG_LOG', true );
-define( 'FS_METHOD', 'direct' );
-define( 'WP_POST_REVISIONS', false );
-define( 'WP_HOME', 'https://www.valuecoders.com/case-studies/' );
-define( 'WP_SITEURL', 'https://www.valuecoders.com/case-studies/' );
-define( 'WP_MEMORY_LIMIT', '256M' );
+if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', __DIR__ . '/' );
+}
 
-define('CLIENT_ID','1000.BMJ414JAF95SXHD4YKRK0FJ3JC57VH');
-define('CLIENT_SECRET','e9a796ffde50de7a3198d63f134196d125bae343d0');
-define('ACESS_TOKEN','1000.cae698c21d5f8adc4f5f8e1ae60a3c39.6008000ac10c5df23ebf773f63194b81');
-define('REFRESH_TOKEN','1000.b4d2d568df487f80bc73675a27101c45.d7cc4b483d0157d16f672e86dc354d62');
-
-/* That's all, stop editing! Happy blogging. */
-
-/** Absolute path to the WordPress directory. */
-if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
-
-/** Sets up WordPress vars and included files. */
-require_once(ABSPATH . 'wp-settings.php');
+require_once ABSPATH . 'wp-settings.php';
