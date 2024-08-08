@@ -1,8 +1,8 @@
 <?php
 //print_r($_POST); die;
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -107,19 +107,8 @@ function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $email
         $fbody = $body;
         $fbody = "\n\n".date("F j, Y, g:i a")."\n".$fbody;
         $fbody = str_replace("<br>","\n",$fbody);
-        /*$file = fopen("/home/vc-leads/landing","a");
-        fwrite($file,$fbody);
-        fclose($file);*/
     }
-    
-    /*
-    //Temp Remove #2
-    $httpRef = ( isset( $_SERVER['HTTP_REFERER'] ) && !empty( $_SERVER['HTTP_REFERER'] ) ) ? $_SERVER['HTTP_REFERER'] : '';
-    if( $httpRef && ( strpos( $httpRef, "valuecoders.com" ) === false ) ){
-    header( 'location:thanks.php?spam=123' );
-    die;
-    }
-    */
+
     $mail = new PHPMailer(true);
     $smtp = new SMTP;
     try{
@@ -232,6 +221,7 @@ function ppcdupLeadNote( $varAccessToken, $lead_id, $requirement ){
 
 //zohocrm api v2 update --23-Dec-2019
 function zohoCrmUpdate_v2($argArrData, $leadSource='', $owner_id = 658520861){
+    $logTime        = date('d-m-Y h:i A');    
     $varEmail       = $argArrData['Email'];
     $varLastName    = $argArrData['Last Name'];
     $varFirstName   = $argArrData['First Name'];
@@ -267,11 +257,7 @@ function zohoCrmUpdate_v2($argArrData, $leadSource='', $owner_id = 658520861){
     $response = curl_exec($curl);
     $arrRefreshTokResponse =json_decode($response,true);
     $varAccessToken = $arrRefreshTokResponse['access_token'];
-    $err = curl_error($curl);
-    $headers = "MIME-Version: 1.0";
-    $headers .= "Content-type: text/html; charset=ISO-8859-1\r\n";
-    $headers .= "From: vkavasthi@gmail.com <vkavasthi@gmail.com>" . "\r\n";
-    $headers .= "Reply-To: vkavasthi@gmail.com\r\n";
+    $err            = curl_error($curl);    
     curl_close( $curl );
 
     if( !$err ){
@@ -316,86 +302,66 @@ function zohoCrmUpdate_v2($argArrData, $leadSource='', $owner_id = 658520861){
             ),
         ));
 
-        $response = curl_exec($curl);
-        $err = curl_error($curl);
-
+        $response   = curl_exec($curl);
+        $err        = curl_error($curl);
         curl_close($curl);
+        $crmException = $response;
+        
+        $file       = fopen(IH_LOGFILE,"a");
+        $zlead      = PHP_EOL.$varEmail."(".$logTime.")".print_r(json_decode($response), 1);
+        fwrite( $file, $zlead );
+        fclose( $file );
 
-        if(!$err){
-            $body1      = '';
+        if( !$err ){
             $response   = json_decode($response);
-            if( isset( $response->data[0] ) &&  ($response->data[0]->code == "DUPLICATE_DATA") ){
-            $lead_id = ( isset( $response->data[0] ) ) ? $response->data[0]->details->id : 0;
-            if( $lead_id !== 0 ){
-                $zoho_data = array(
-                'id'                    => $lead_id,
-                'Lead_Status'           => "Not Contacted Yet",
-                'Owner'                 => 720093253,
-                'Sales_Qualified_Lead'  => "Yes",
-                'Is_Duplicate'          => "Yes"
-                );
+            if( isset( $response->data[0] ) && ($response->data[0]->code == "DUPLICATE_DATA") ){
+                $lead_id = ( isset( $response->data[0] ) ) ? $response->data[0]->details->id : 0;
+                if( $lead_id !== 0 ){
+                    $zoho_data = array(
+                    'id'                    => $lead_id,
+                    'Lead_Status'           => "Not Contacted Yet",
+                    'Owner'                 => 720093253,
+                    'Sales_Qualified_Lead'  => "Yes",
+                    'Is_Duplicate'          => "Yes"
+                    );
+                    $curl   = curl_init();        
+                    $sJSON  = json_encode( $zoho_data );
+                    $sJSON  = str_replace('{','[{',$sJSON);
+                    $sJSON  = str_replace('}','}]',$sJSON);
+                    $postLeadData = '{"data":' . $sJSON . '}';
+                    curl_setopt_array($curl, array(
+                    CURLOPT_URL => "https://www.zohoapis.com/crm/v2/Leads",
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING => "",
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 30,
+                    CURLOPT_HTTP_VERSION    => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST   => "PUT",
+                    CURLOPT_POSTFIELDS      => $postLeadData,
+                    CURLOPT_HTTPHEADER      => array(
+                    "authorization: Zoho-oauthtoken $varAccessToken",
+                    "cache-control: no-cache",
+                    "content-type: application/json"
+                    ),
+                    ));
 
-                $curl   = curl_init();        
-                $sJSON  = json_encode( $zoho_data );
-                $sJSON  = str_replace('{','[{',$sJSON);
-                $sJSON  = str_replace('}','}]',$sJSON);
-                $postLeadData = '{"data":' . $sJSON . '}';
-                curl_setopt_array($curl, array(
-                CURLOPT_URL => "https://www.zohoapis.com/crm/v2/Leads",
-                CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_ENCODING => "",
-                CURLOPT_MAXREDIRS => 10,
-                CURLOPT_TIMEOUT => 30,
-                CURLOPT_HTTP_VERSION    => CURL_HTTP_VERSION_1_1,
-                CURLOPT_CUSTOMREQUEST   => "PUT",
-                CURLOPT_POSTFIELDS      => $postLeadData,
-                CURLOPT_HTTPHEADER      => array(
-                "authorization: Zoho-oauthtoken $varAccessToken",
-                "cache-control: no-cache",
-                "content-type: application/json"
-                ),
-                ));
-
-                $response  = curl_exec($curl);                
-                curl_close( $curl );
-
-                $crmException   = $response;
-                $response       = json_decode( $response );
-                
-                $file       = fopen(IH_LOGFILE,"a");
-                $zlead      = PHP_EOL.print_r( $response, 1 );
-                fwrite( $file, $zlead );
-                fclose( $file );
-
+                    $response  = curl_exec($curl);                
+                    curl_close( $curl );                                
+                    ppcdupLeadNote( $varAccessToken, $lead_id, $varDescription );
+                }
+            }else{
                 $rspCode    = ['DUPLICATE_DATA', 'SUCCESS'];
                 $statusCode = (isset($response->data[0]) && !empty($response->data[0]->code)) ? $response->data[0]->code : '';
-            
-                if( !empty( $statusCode ) && !in_array($statusCode, $rspCode) ){
-                $user_name = $varFirstName.' '.$varLastName;
-                smtpEmailFunction( "web@vinove.com", "Zoho CRM error - ValueCoders LP", $crmException, "lead", 
-                $varEmail, [], [], [], $user_name );
+                if( !empty($statusCode) && !in_array($statusCode, $rspCode) ){
+                    $user_name = $varFirstName.' '.$varLastName;
+                    smtpEmailFunction( "web@vinove.com", "Zoho CRM error - ValueCoders LP", $crmException, "lead", 
+                    $varEmail, [], [], [], $user_name );
                 }
-                ppcdupLeadNote( $varAccessToken, $lead_id, $varDescription );
             }
-            }else{
-                $file       = fopen(IH_LOGFILE,"a");
-                $zlead      = PHP_EOL.$varEmail."#one:".print_r($response,1);
-                fwrite( $file, $zlead );
-                fclose( $file );                
-            }
-        }else{
-            $user_name = $varFirstName.' '.$varLastName;
-            smtpEmailFunction( "web@vinove.com", "Zoho CRM error - ValueCoders LP", $response, "lead", 
-            $varEmail, [], [], [], $user_name );
-
-            $file       = fopen(IH_LOGFILE,"a");
-            $zlead      = PHP_EOL.$varEmail."#Two:".print_r($err,1);
-            fwrite( $file, $zlead );
-            fclose( $file );
         }
     }else{
         $file       = fopen(IH_LOGFILE,"a");
-        $zlead      = PHP_EOL.$varEmail."#Three:".print_r($err,1);
+        $zlead      = PHP_EOL.$varEmail."(".$logTime.")".print_r($err,1);
         fwrite( $file, $zlead );
         fclose( $file );
     }
@@ -451,46 +417,6 @@ if( isset($_POST['form-action']) && ($_POST['form-action'] == "lp") ){
     sendmail_function( $_POST, $uploads, $token );
 }
 
-
-    function checkCaptcha($token)
-    {
-
-        $secretKey = "6LeY5-AZAAAAAG4BWNOrlE0u2xXcwrZuVggG3Lc8";
-
-        $curl = curl_init();
-
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://www.google.com/recaptcha/api/siteverify",
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => "",
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 30,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => "POST",
-            CURLOPT_POSTFIELDS => "------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"secret\"\r\n\r\n$secretKey\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"response\"\r\n\r\n$token\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--",
-            CURLOPT_HTTPHEADER => array(
-                "cache-control: no-cache",
-                "content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW"
-            ),
-        ));
-
-        $response = curl_exec($curl);
-        $err = curl_error($curl);
-
-
-        curl_close($curl);
-        if ($err) {
-            echo "cURL Error #:" . $err;
-        } else {
-            $responseKeys = json_decode($response, true);
-
-            if ($responseKeys["success"]) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-    }
 function sendmail_function($arrPostParams, $uploaded_files_names_param, $token){
     //$time_start = microtime(true);
     global $arrEmail;
@@ -587,32 +513,15 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param, $token){
         $arrFileNameArr = array();
     }
 
-
-    // if (count($arrFileNameArr) > 0) {
-    //     $uploaded_file_path = "";
-    //     foreach ($arrFileNameArr as $fileKey => $fileValue) {
-    //         if(strstr($fileValue,".com")) {
-    //             $body.='Custom URL:' . $fileValue. $varDeliminator;
-    //             $Mailbody.='Custom URL:' . $fileValue. $bodyBr;
-    //         } else {
-    //             $body .= 'Uploaded File : ' . SITE_ROOT_URL . 'common/uploaded_files/contact_request/' . $fileValue . $varDeliminator;
-    //             $Mailbody .= 'Uploaded File : ' . SITE_ROOT_URL . 'common/uploaded_files/contact_request/' . $fileValue . $bodyBr;
-    //             $uploaded_file_path .= SITE_ROOT_URL . 'common/uploaded_files/contact_request/' . $fileValue . '   ';
-    //         }
-    //     } //end foreach loop
-    // }
-
     if (count($arrFileNameArr) > 0) {
         $uploaded_file_path = "";
         foreach ($arrFileNameArr as $fileKey => $fileValue) {
             if(strstr($fileValue,".com")) {
                 $body.='Custom URL:' . $fileValue. $varDeliminator;
                 $Mailbody.='Custom URL:' . $fileValue. $bodyBr;
-            } else {
-                // $body .= 'Uploaded File : ' . SITE_ROOT_URL . 'common/uploaded_files/contact_request/' . $fileValue . $varDeliminator;
-
-                $Mailbody .= 'Uploaded File : https://www.pixelcrayons.com/uploads/'.$fileValue . $bodyBr;
-                $uploaded_file_path .= 'https://www.pixelcrayons.com/uploads/' . $fileValue . '   ';
+            }else{
+                $Mailbody .= 'Uploaded File : https://www.valuecoders.com/uploads/'.$fileValue . $bodyBr;
+                $uploaded_file_path .= 'https://www.valuecoders.com/uploads/' . $fileValue . '   ';
             }
         } //end foreach loop
     }
@@ -688,88 +597,37 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param, $token){
     //$lastn = $firstn;
     $requirement = str_replace("+", " ", $requirement);
     $requirement = str_replace("&", " and ", $requirement);
-    $requirement= preg_replace('/[^a-zA-Z0-9_ \[\]\.\(\)-]/s', " ", $requirement);
-    $requirement = strip_tags(nl2br($requirement));
+    $requirement = preg_replace('/[^a-zA-Z0-9_ \[\]\.\(\)-]/s', " ", $requirement);
+    $requirement = strip_tags( nl2br($requirement) );
 
-    $arrUnwantedContent = array("Find Women","Looking For Sex","Dating Sites","sex","Sexy girls","Casual Dating", "Invest 5000","passive income","Tinder for Adults","How to invest in bitcoins","Sexy women","SEX","FAST Fast Money","Porn Games","Earn Bitcoins","Invest in cryptocurrency","invest in Bitcoin","Earn Free Bitcoin","chogoon.com","Busy Budgeter","Earnings on the Bitcoin","Invest 5000", "Mass Money Maker","Paid Surveys","make more money","Make Extra Money" ,"PROFIT in under 60","Invest in cryptocurrency","invest in Bitcoin","Earn Free Bitcoin","chogoon.com","Busy Budgeter","Earnings on the Bitcoin","Invest 5000", "Mass Money Maker","Paid Surveys","make more money","Make Extra Money" ,"PROFIT in under 60","Best Dating Apps","Asian ladies for men","Top 5 sites","lifelove24.com","10 meilleurs sites", "mewkid.net", "Sexy women","Best CA Dating","tonpremsacen.tk", "erkeisnowob.tk","bitcoin millionaire","sex,Hookup Sites","meilleurs sites","Buy Essays Online","Buying Essays","Buy an Essay","Sex", "Adult Dating", "Casual Dating", "Hookup Sites", "Free Dating","Bitcoin","blogspot","Cryptocurrency","lookweb");
-
-    //$requirement = html_entity_decode($requirement);
-    //$isSpam = checkSpamEmail($user_email);  //Temp Remove #3
     $isSpam = false;
-
-    /*
-    //Temp Remove #4
-    foreach ($arrUnwantedContent as $unwanted_content) {
-        if (stripos($requirement, $unwanted_content) !== FALSE) { 
-            //die("spam");
-            $add_headers = "MIME-Version: 1.0";
-            $add_headers .= "Content-type: text/html; charset=ISO-8859-1\r\n";
-            $add_headers .= "From: vkavasthi@gmail.com <vkavasthi@gmail.com>" . "\r\n";
-            $add_headers .= "Reply-To: vkavasthi@gmail.com\r\n";
-            $subject = $subject."UNWANTED Content";
-            //@mail("marketing@vinove.com", $subject, $body, $add_headers);
-            //smtpEmailFunction( "marketing@vinove.com", $subject, $body, "lead", $user_email,[],[],[],$user_name );
-            smtpEmailFunction( 'marketing@vinove.com', $subject." UN", $body, "lead", $user_email,[],[],[],$user_name, true );
-            header('location:https://www.valuecoders.com/l/thanks/');
-            die();
-        }
-    }
-    */
-
     //array_shift( $arrEmail );
     $bccEmails = ['parvesh@vinove.com', 'nitin.baluni@mail.vinove.com'];
     //$bccEmails = ['parvesh@vinove.com'];
-    
+        
     if(!$isSpam){
         $varRefererURL = isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : "";
-        //$result = checkCaptcha($token);
-        //if($result) {
-            //@mail("ankur@valuecoders.com", $subject, $body, $headers);
             $varDesc = "Url:" . $customUrlLink . "    
             File Uploaded :" . $uploaded_file_path . "        
             Requirements: " . $requirement;
 
             $arrZoho_v2 = array('Email' => $user_email,
-                'First Name' => $firstn,
-                'Last Name' => $lastn,
-                'Phone' => !empty( $user_phone ) ? $user_phone : "9900000000",
-                // 'Country' => '',
-                'Lead Status' => 'Not Contacted Yet',
-                'Lead Source' => $lead_source,
-                'UTM Source' => $utm_source,
-                'Property' => 'ValueCoders',
-                'IP Address' => $ip_addr,
-                'Description' => $varDesc,
-                'URL' => $customUrlLink,
+                'First Name'    => $firstn,
+                'Last Name'     => $lastn,
+                'Phone'         => !empty( $user_phone ) ? $user_phone : "9900000000",
+                'Country'       => (!empty($user_country)) ? $user_country : '',
+                'Lead Status'   => 'Not Contacted Yet',
+                'Lead Source'   => $lead_source,
+                'UTM Source'    => $utm_source,
+                'Property'      => 'ValueCoders',
+                'IP Address'    => $ip_addr,
+                'Description'   => $varDesc,
+                'URL'           => $customUrlLink,
                 'File Uploaded' => $uploaded_file_path,
-                'Requirements' => $requirement,
-                'refurl' => $varRefererURL);
-                
-            //@mail('nitin.valuecoders@gmail.com','Post data',print_r($arrZoho_v2,1));
+                'Requirements'  => $requirement,
+                'refurl'        => $varRefererURL
+            );                
             smtpEmailFunction( $user_email, "ValueCoders - We've received your request", $autoEmailBody, "auto", $user_email );
-
-            /*
-            //Working
-            $eSender = splEmailData( $user_country );
-            if( isset( $eSender['mail_to'] ) ){
-            smtpEmailFunction( 
-                $eSender['mail_to'], 
-                "Inquiry with ValueCoders", 
-                $Mailbody, 
-                "lead", 
-                $user_email, 
-                $eSender['mail_cc'], 
-                $bccEmails, 
-                [], 
-                $user_name, 
-                false 
-            );    
-            zohoCrmUpdate_v2( $arrZoho_v2, $utm_source, $eSender['lead_to'] );
-            header('location:l/thanks/');
-            die;
-            }
-            */
-
             if( $isDmTpl === true ){
                 $EmailSubject = "Inquiry with ValueCoders - Digital Marketing [".$ticketID."]";
                 smtpEmailFunction(
@@ -808,17 +666,15 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param, $token){
                 $user_name      = $arrPostParams['user-name'];
                 $user_email     = $arrPostParams['user-email'];
                 $requirement    = $arrPostParams['user-req'];
-                //echo 'location:https://www.valuecoders.com/call-thanks?uname='.$user_name.'&email='.$user_email.'&req='.$requirement;
                 header('location:https://www.valuecoders.com/call-thanks?uname='.$user_name.'&email='.$user_email.'&req='.$requirement.'&phone='.$user_phone);
                 die;
             }            
             header('location:l/thanks/');
             die;
     }else{        
-        smtpEmailFunction( "marketing@vinove.com", "Inquiry with ValueCoders", $Mailbody, "lead", $user_email, $arrEmail, $bccEmails,[],$user_name, true );
+        smtpEmailFunction( "marketing@vinove.com", "Inquiry with ValueCoders", $Mailbody, "lead", $user_email, $arrEmail, 
+        $bccEmails,[],$user_name, true );
     }
-    
-
     header('location:l/thanks');
     die;
 }
