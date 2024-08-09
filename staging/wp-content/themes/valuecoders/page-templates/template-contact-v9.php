@@ -1,9 +1,10 @@
 <?php
-  /*
-  Template Name: Contact Page - V9 Template
-  */ 
-  get_header();
-  ?>
+/*
+Template Name: Contact Page - V9 Template
+*/ 
+$queryLink = (isset($_SERVER['QUERY_STRING']) && !empty($_SERVER['QUERY_STRING'])) ? site_url('/contact?'.$_SERVER['QUERY_STRING']) : site_url('/contact');
+get_header();
+?>
 <div class="contact-wrap">
   <section class="contact-us-section full-width-form padding-b-150">
     <div class="container">
@@ -131,7 +132,7 @@
                     <div class="user-input checkout">
                       <input type="hidden" name="Uploadedfilename" id="Uploadedfilename" value="">
                       <input type="hidden" name="frmqueryString" value="<?php the_permalink(); ?>">
-                      <input type="hidden" name="page_url" value="<?php the_permalink(); ?>">
+                      <input type="hidden" name="page_url" value="<?php echo $queryLink; ?>">
                       <input type="hidden" name="vform-type" value="contact">
                       <input type="hidden" id="e-ticket-id" name="e-ticket-id" value="">
                       <input type="submit" id="submitButton" class="checkout-submit  nxt-btn" value="Send Your Query" />
