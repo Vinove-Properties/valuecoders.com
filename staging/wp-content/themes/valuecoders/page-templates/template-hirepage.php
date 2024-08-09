@@ -74,7 +74,7 @@
         <div class="button-section margin-t-50">
           <div class="btn-div">
             <div class="btn-sec">
-              <a class="btn rounded" href="<?php echo site_url('/contact'); ?>"><span class="text-white">Start 7 Days Free Trial</span></a>
+              <a class="btn rounded" href="<?php echo site_url('/contact/?cta=free-trial'); ?>"><span class="text-white">Start 7 Days Free Trial</span></a>
             </div>
             <div class="info-wrap">
               Learn How Trial Works
