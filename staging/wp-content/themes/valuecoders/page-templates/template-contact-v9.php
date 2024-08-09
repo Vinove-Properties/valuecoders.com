@@ -2,7 +2,7 @@
 /*
 Template Name: Contact Page - V9 Template
 */ 
-$queryLink = (isset($_SERVER['QUERY_STRING']) && !empty($_SERVER['QUERY_STRING'])) ? site_url('/contact?'.$_SERVER['QUERY_STRING']) : site_url('/contact');
+$queryLink = vcGetThisPageUrl();
 get_header();
 ?>
 <div class="contact-wrap">

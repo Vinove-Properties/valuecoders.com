@@ -1687,3 +1687,11 @@ function __pxl_pricing($string) {
 function __pxl_int_block( $str ){
 	return false;
 }
+
+function vcGetThisPageUrl(){
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";    
+    $host = $_SERVER['HTTP_HOST'];
+    $request_uri = $_SERVER['REQUEST_URI'];
+    $current_url = $protocol . $host . $request_uri;    
+    return $current_url;
+}
