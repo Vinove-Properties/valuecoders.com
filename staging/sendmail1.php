@@ -1,7 +1,7 @@
 <?php
-//ini_set('display_errors', 1);
-//ini_set('display_startup_errors', 1);
-//error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 if( ($_SERVER['REQUEST_METHOD'] == 'GET') && realpath(__FILE__) == realpath( $_SERVER['SCRIPT_FILENAME'] ) ){
     header( 'HTTP/1.0 403 Forbidden', TRUE, 403 );
     die("HEY BOAT.. Go Away");
@@ -16,9 +16,17 @@ require 'countries-array.php';
 require 'vc-config.php';
 require 'vc-mailto.php';
 
-$is_staging = ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'v2wp' ) !== false) )  ?  true : false;
+
+$is_staging = ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'staging' ) !== false) )  ?  true : false;
 $ajxData    = json_decode(file_get_contents("php://input"), true);
 $isAjay     = ( isset( $ajxData['_doing_ajax'] ) && ($ajxData['_doing_ajax'] === true) ) ? true : false;
+
+$thisUrl = "https://www.valuecoders.com/";
+if( $is_staging ){
+$thisUrl   = 'https://www.valuecoders.com/staging/';
+}
+define( 'SITE_ROOT_URL', $thisUrl );
+
 
 $spamIpAddr = ['141.95.234.1', '89.22.225.45','94.156.64.107'];
 $thisIPAddr = get_client_ip_user();
