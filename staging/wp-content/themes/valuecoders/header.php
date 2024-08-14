@@ -127,6 +127,37 @@ function loadReCapJS(){
   pxBody.dataset.gcaploaded = 1;
 }    
 </script>
+
+<script data-cfasync="false">
+function _getUTMParameters(){
+  const urlParams = new URLSearchParams(window.location.search);
+  const utmParams = {};
+  const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];    
+  utmKeys.forEach(key => {
+      const value = urlParams.get(key);
+      if (value) {
+          utmParams[key] = value;
+      }
+  });
+  return utmParams;
+}
+
+function _setUTMCookies(utmParams){
+    const cookieExpiryDays = 30;
+    const expiryDate = new Date();
+    expiryDate.setTime(expiryDate.getTime() + (cookieExpiryDays * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + expiryDate.toUTCString();
+
+    for (const key in utmParams) {
+        document.cookie = key + "=" + encodeURIComponent(utmParams[key]) + ";" + expires + ";path=/";
+    }
+}
+const utmParams = _getUTMParameters();
+console.log( utmParams );
+if( Object.keys(utmParams).length > 0 ){
+  _setUTMCookies( utmParams );
+}
+</script>
 <?php if( is_home() || is_front_page() ) : ?>
 <link rel="preload" as="video" href="<?php bloginfo('template_url'); ?>/video/home-video.mp4">
 <?php endif; ?>

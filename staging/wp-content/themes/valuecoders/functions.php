@@ -891,16 +891,16 @@ function hasGetElm( $array, $parm ){
 	return ( isset($array[$parm]) && !empty($array[$parm]) ) ? $array[$parm] : false;
 }
 
-add_action('init', function(){
-	if (!is_admin()) {
-	    $utm_parameters = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];        
-	    foreach ($utm_parameters as $param) {
-	        if(isset($_GET[$param])) {
-	        setcookie($param, sanitize_text_field($_GET[$param]), time() + (86400 * 30), "/", "", true, true);
-	        }
-	    }
-	}    
-});
+// add_action('init', function(){
+// 	if (!is_admin()) {
+// 	    $utm_parameters = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];        
+// 	    foreach ($utm_parameters as $param) {
+// 	        if(isset($_GET[$param])) {
+// 	        setcookie($param, sanitize_text_field($_GET[$param]), time() + (86400 * 30), "/", "", true, true);
+// 	        }
+// 	    }
+// 	}    
+// });
 
 add_action( 'wp_head', function(){
 	global $post;
