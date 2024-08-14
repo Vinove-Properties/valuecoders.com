@@ -887,12 +887,23 @@ add_filter( 'body_class', function( $classes ){
 });
 
 
+function hasGetElm( $array, $parm ){
+	return ( isset($array[$parm]) && !empty($array[$parm]) ) ? $array[$parm] : false;
+}
 
-/*
 add_action('init', function(){
-//debug_dd($_COOKIE); die;
+$source 		= hasGetElm( $_GET, 'utm_source' );
+$medium 		= hasGetElm( $_GET, 'utm_medium' );
+$expire_time 	= time()+(3 * 24 * 60 * 60);
+if( $source ){	
+    setcookie('_vcutm', $source, $expire_time, "/");
+}
+if( $medium ){	
+    setcookie('_vcmedium', $medium, $expire_time, "/");
+}
+debug_dd($_COOKIE); die;
 });
-*/
+
 
 add_action( 'wp_head', function(){
 	global $post;
