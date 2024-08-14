@@ -20,32 +20,12 @@ $is_staging = ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 
 $ajxData    = json_decode(file_get_contents("php://input"), true);
 $isAjay     = ( isset( $ajxData['_doing_ajax'] ) && ($ajxData['_doing_ajax'] === true) ) ? true : false;
 
-$thisUrl = "https://www.valuecoders.com/";
-if( isset( $_SERVER['HTTP_HOST'] ) && ($_SERVER['HTTP_HOST'] == "localhost") ){
-    $thisUrl = "http://localhost/valuecoders-v2/wp/"; 
-}elseif( isset( $_SERVER['HTTP_HOST'] ) && ($_SERVER['HTTP_HOST'] == "https://beta.vinove.com/valuecoders-wp") ){
-    $thisUrl = "https://beta.vinove.com/valuecoders-wp/";
-}elseif( isset( $_SERVER['HTTP_HOST'] ) && ($_SERVER['HTTP_HOST'] == "beta.vinove.com") ){
-    $thisUrl = "https://beta.vinove.com/valuecoders-wp/";
-}elseif( isset( $_SERVER['HTTP_HOST'] ) && ($_SERVER['HTTP_HOST'] == "www.valuecoders.com") ){
-    $thisUrl = "https://www.valuecoders.com/";
-}
-
-
-if( $is_staging ){
-$thisUrl   = 'https://www.valuecoders.com/v2wp/';
-}
-define( 'SITE_ROOT_URL', $thisUrl );
-
-
-
-$spamIpAddr = ['141.95.234.1'];
+$spamIpAddr = ['141.95.234.1', '89.22.225.45','94.156.64.107'];
 $thisIPAddr = get_client_ip_user();
 if( in_array($thisIPAddr, $spamIpAddr) ){
     header('location:thanks');
     die;
 }
-
 
 function logSpamException( $arrPostParams, $note = '' ){ 
     $user_name      = nbHasData($arrPostParams, 'user-name');
@@ -352,7 +332,10 @@ function zohoCrmUpdate_v2( $argArrData, $leadSource='', $owner_id = 658520861, $
     $varPhoneNo     = $argArrData['Phone'];
     $varLeadStatus  = $argArrData['Lead Status'];
     $varLeadSource  = $argArrData['Lead Source'];
+
     $varUTMSource   = $argArrData['UTM Source'];
+    $varUTMMedium   = $argArrData['UTM Medium'];
+
     $varProperty    = $argArrData['Property'];
     $varIPAddress   = $argArrData['IP Address'];
     $varDescription = $argArrData['Description'];
@@ -408,7 +391,8 @@ function zohoCrmUpdate_v2( $argArrData, $leadSource='', $owner_id = 658520861, $
         'Description'   => $zo_requirement,
         'Sales_Qualified_Lead' => "Yes",
         'Is_Duplicate'  => "No",
-        'UTM_Source'    => $utm_src,
+        'UTM_Source'    => $varUTMSource,
+        'UTM_Medium'    => $varUTMMedium,
         'Property'      => $varProperty,
         'IP_Address1'   => $varIPAddress,
         'Ref_Url'       => $varRefURL
@@ -860,6 +844,34 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
         $lead_source = "Website";
     }
 
+    $getUTM_source = (isset($_COOKIE['utm_source']) && !empty($_COOKIE['utm_source'])) ? $_COOKIE['utm_source'] : '';
+    $getUTM_medium = (isset($_COOKIE['utm_medium']) && !empty($_COOKIE['utm_medium'])) ? $_COOKIE['utm_medium'] : '';
+
+    /*
+    gglads =  Advertisement: Google
+    bingads =  Advertisement: Bing
+    facebookpaid = Advertisement: FaceBook
+    quorapaid = Advertisement: Quora
+    linkedinads  = Advertisement: LinkedIN
+    adroll  = Advertisement: Adroll
+    */
+    $inSource = "";
+    if( $getUTM_source == "gglads" ){
+        $inSource = "Advertisement: Google";
+    }elseif( $getUTM_source == "bingads" ){
+        $inSource = "Advertisement: Bing";
+    }elseif( $getUTM_source == "facebookpaid" ){
+        $inSource = "Advertisement: FaceBook";
+    }elseif( $getUTM_source == "quorapaid" ){
+        $inSource = "Advertisement: Quora";
+    }elseif( $getUTM_source == "linkedinads" ){
+        $inSource = "Advertisement: LinkedIN";
+    }elseif( $getUTM_source == "adroll" ){
+        $inSource = "Advertisement: Adroll";
+    }else{
+        $inSource = "Website";
+    }
+
     $partName   = vcGetName( $user_name );
     $firstn     = $partName[0];
     $lastn      = ( !empty($partName[1]) ) ? $partName[1] : 'N/A';
@@ -915,7 +927,8 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
             'Country'       => $user_country,
             'Lead Status'   => 'Not Contacted Yet',
             'Lead Source'   => $lead_source,
-            'UTM Source'    => $utm_source,
+            'UTM Source'    => $inSource,
+            'UTM Medium'    => $getUTM_medium,
             'Property'      => 'ValueCoders',
             'IP Address'    => $ip_addr,
             'Description'   => $varDesc,

@@ -892,18 +892,15 @@ function hasGetElm( $array, $parm ){
 }
 
 add_action('init', function(){
-$source 		= hasGetElm( $_GET, 'utm_source' );
-$medium 		= hasGetElm( $_GET, 'utm_medium' );
-$expire_time 	= time()+(3 * 24 * 60 * 60);
-if( $source ){	
-    setcookie('_vcutm', $source, $expire_time, "/");
-}
-if( $medium ){	
-    setcookie('_vcmedium', $medium, $expire_time, "/");
-}
-debug_dd($_COOKIE); die;
+	if (!is_admin()) {
+	    $utm_parameters = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];        
+	    foreach ($utm_parameters as $param) {
+	        if(isset($_GET[$param])) {
+	        	setcookie($param, sanitize_text_field($_GET[$param]), time() + (86400 * 30), "/"); // Cookie for 30 days
+	        }
+	    }
+	}    
 });
-
 
 add_action( 'wp_head', function(){
 	global $post;
