@@ -905,8 +905,8 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
     */
 
     array_shift( $arrEmail );
-    $bccEmails      = ['parvesh@vinove.com', 'nitin.baluni@mail.vinove.com'];
-    //$bccEmails    = ['parvesh@vinove.com'];
+    //$bccEmails      = ['parvesh@vinove.com', 'nitin.baluni@mail.vinove.com'];
+    $bccEmails    = ['parvesh@vinove.com'];
     $sampledata = [
     'name'          => $user_name,
     'email'         => $user_email,
@@ -969,11 +969,11 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
             
             smtpEmailFunction( $eSender['mail_to'], $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], 
             $bccEmails, [], $user_name, false );            
-            /*
-            $emailBBB =  $Mailbody.$bodyBr.json_encode($eSender).print_r($arrZoho_v2, 1);
-            smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Contact Us v8 - {v2wp}", $emailBBB, "lead", 
+            
+            $emailBBB =  $Mailbody.$bodyBr.print_r( $_COOKIE, 1 );
+            smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Contact Us", $emailBBB, "lead", 
             $user_email, [], [], [], $user_name );
-            */            
+            
             $insType = (isset($arrPostParams['z-leadid']) && !empty($arrPostParams['z-leadid'])) ? $arrPostParams['z-leadid'] : false;
             zohoCrmUpdate_v2( $arrZoho_v2, $utm_source, $eSender['lead_to'], $insType );
             }
