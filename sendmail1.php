@@ -3,8 +3,8 @@
 //ini_set('display_startup_errors', 1);
 //error_reporting(E_ALL);
 if( ($_SERVER['REQUEST_METHOD'] == 'GET') && realpath(__FILE__) == realpath( $_SERVER['SCRIPT_FILENAME'] ) ){
-    // header( 'HTTP/1.0 403 Forbidden', TRUE, 403 );
-    // die("HEY BOAT.. Go Away");
+    header( 'HTTP/1.0 403 Forbidden', TRUE, 403 );
+    die("HEY BOAT.. Go Away");
 }
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
