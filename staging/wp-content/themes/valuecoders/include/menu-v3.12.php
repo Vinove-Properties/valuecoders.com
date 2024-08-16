@@ -56,7 +56,7 @@
   $psubcatArray = [
     'startups'      => ['name' => 'For Startups', 'slug' => 'startup-product-development', 'icon' => 'startup-icon.svg' ],
     'enterprises'   => ['name' => 'For Enterprises', 'slug' => 'enterprise-software-development-services', 'icon' => 'enterprise-icon.svg'],
-    'agencies'      => ['name' => 'For Agencies', 'slug' => 'industries/agencies-software-development-services', 'icon' => 'agencies-icon.svg']
+    'agencies'      => ['name' => 'For Agencies', 'slug' => 'agencies-software-development-services', 'icon' => 'agencies-icon.svg']
   ];
   $mainServiceLink = '<a href="'.$site_url.'software-development-services-company">Services</a>';
   if( $mcat !== "master" ){
@@ -199,7 +199,7 @@
                       Custom software for business goals</a>
                       <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/service_icon8.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                       End-to-end automation solutions</a>
-                      <a href="<?php echo $site_url; ?>industries/agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/service_icon9.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                      <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/service_icon9.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                       Expand with white-label services</a>
                     </div>
                   </div>
