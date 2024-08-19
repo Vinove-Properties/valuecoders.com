@@ -618,10 +618,12 @@ $headText   = fnextractHeadins('h2', $htContent );
 <?php endif; ?>
 
 <?php 
-  $codeSec = get_field('cq-accord'); 
-  if( $codeSec['is_enable'] != "no" ):
-  if( isset( $codeSec['tpl-content'] ) && ($codeSec['tpl-content'] == "no") ){  
-  ?>
+$codeSec = get_field('cq-accord'); 
+if( isset( $codeSec['is_enable'] ) && ($codeSec['is_enable'] !== "hide") ){
+
+if( $codeSec['is_enable'] != "no" ):
+if( isset( $codeSec['tpl-content'] ) && ($codeSec['tpl-content'] == "no") ){  
+?>
 <section class="accordion-section list-full padding-t-120" id="acf-code-quality-accordian-dynamic">
   <div class="dis-flex accordian-row">
     <div class="col-left">
@@ -724,7 +726,9 @@ $headText   = fnextractHeadins('h2', $htContent );
   </div>
 </section>
 <?php }
-endif; ?>
+endif; 
+}
+?>
 
 <?php  
   $whyChoos = get_field('why-choose');
