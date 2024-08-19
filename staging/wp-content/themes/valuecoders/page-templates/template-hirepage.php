@@ -227,31 +227,22 @@ if(is_page('hire-developers')){
   </div>
 </section>
 <?php 
-  }
-  }
-  endif;
-  ?>
+}
+}
+endif;
+?>
 
+<?php 
+$disOne = (isset($dmCTA['dis-1']) && ($dmCTA['dis-1'] == "yes")) ? true : false;
+if( $disOne === false ) :
+?>
 <section class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70">
   <div class="container">
     <div class="head-txt text-center">
-      <?php /* ?>
-      <h2>
-        <?php 
-          echo (isset($vcBtn['title-one']) && !empty($vcBtn['title-one'])) ? $vcBtn['title-one'] : 
-          "Let's Discuss Your Project"; ?>
-      </h2>
-      <p>
-        <?php 
-          echo (isset($vcBtn['text-one']) && !empty($vcBtn['text-one'])) ? $vcBtn['text-one'] : 
-          "Get free consultation and let us know your project idea to turn it into an amazing digital product."; ?>
-      </p>
-      <?php */ ?>
       <?php 
-      
       if( isset($dmCTA['required']) && ($dmCTA['required'] == "yes") ){
-        echo '<h2>'.$dmCTA['title-one'].'</h2>';
-        echo '<p>'.$dmCTA['body-one'].'</p>';
+      echo '<h2>'.$dmCTA['title-one'].'</h2>';
+      echo '<p>'.$dmCTA['body-one'].'</p>';
       }else{
       echo '<h2>Try Before, Commit Later</h2>';
       echo '<p>Start your 7-day trial today and discover the perfect fit for your project needs.</p>';
@@ -266,6 +257,8 @@ if(is_page('hire-developers')){
       ?>
   </div>
 </section>
+<?php endif; ?>
+
 <?php 
   if( !is_page('hire-developers') ){
   $whyChoos = get_field('why-choose');
@@ -551,24 +544,15 @@ if(is_page('hire-developers')){
   endif; 
   ?>
 <!--Technology / Framework Section Ends Here-->
+
+<?php 
+$disTwo = (isset($dmCTA['dis-2']) && ($dmCTA['dis-2'] == "yes")) ? true : false;
+if( $disTwo === false ) :
+?>
 <section class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70">
   <div class="container">
     <div class="head-txt text-center">
-      <?php /* ?>	
-      <h2>
-        <?php 
-          echo (isset($vcBtn['title-two']) && !empty($vcBtn['title-two'])) ? $vcBtn['title-two'] : 
-          "Have any questions?"; ?>				
-      </h2>
-      <p>
-        <?php 
-          echo (isset($vcBtn['text-two']) && !empty($vcBtn['text-two'])) ? $vcBtn['text-two'] : 
-          "Our managers will consult you about choosing a web-based solution for your needs."; 
-          ?>
-      </p>
-      <?php */ ?>
-      <?php 
-      
+      <?php       
       if( isset($dmCTA['required']) && ($dmCTA['required'] == "yes") ){
         echo '<h2>'.$dmCTA['title-two'].'</h2>';
         echo '<p>'.$dmCTA['body-two'].'</p>';
@@ -585,6 +569,7 @@ if(is_page('hire-developers')){
       ?>
   </div>
 </section>
+<?php endif; ?>
 
 <?php 
 $gViewSection = get_field('gview-section');
@@ -862,6 +847,10 @@ endif;
   */
   ?>
 <!-- ValueCoder clientele #Ends Here -->
+<?php 
+$disThree = (isset($dmCTA['dis-3']) && ($dmCTA['dis-3'] == "yes")) ? true : false;
+if( $disThree === false ) :
+?>
 <section class="counter-column-section bg-blue-linear bg-dark padding-t-70 padding-b-70">
   <div class="container">
     <div class="dis-flex justify-sb">
@@ -936,6 +925,7 @@ endif;
     </div>
   </div>
 </section>
+<?php endif; ?>
 <!--
   <section class="accordion-section how-process  padding-t-120">
     <div class="dis-flex accordian-row">
