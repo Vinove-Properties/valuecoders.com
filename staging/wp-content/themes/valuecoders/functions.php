@@ -1,11 +1,14 @@
 <?php
-if ( ! defined( '_S_VERSION' ) ) {
-	//define( '_S_VERSION', '24.678.678' );
-	define( '_S_VERSION', time() );
-}
-
 function isStaggingVersion(){
 	return ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'staging' ) !== false) )  ?  true : false;
+}
+
+if( ! defined( '_S_VERSION' ) ) {
+	if( isStaggingVersion() ){
+		define( '_S_VERSION', time() );	
+	}else{
+		define( '_S_VERSION', '4.01.23' );	
+	}
 }
 
 function valuecoders_setup(){
@@ -749,16 +752,8 @@ if( $post_cs_cards ) : ?>
 endif;
 }
 
-/*
-add_action( 'admin_head', function(){
-echo '<style>.acf-field acf-field-group.acf-field-6221ea2973503{display:none!important;}</style>';
-});
-https://www.valuecoders.com/v2wp/wp-content/themes/valuecoders/v3.0/images/btnarw.png
-*/
-
 //remove_filter('the_content', 'wpautop');
 //add_filter('the_content', 'wpautop', 12);
-
 add_shortcode( 'vc_column', 'cvColumn_shortcode' );
 function cvColumn_shortcode( $atts, $content = null ) {
 	$toFix = array(
@@ -1212,9 +1207,6 @@ function hireModelCmn( $theme = '' ){
 
 function tempIconDir( $url ){
 	return $url;
-	/*
-	return str_replace( "https://www.valuecoders.com/v2wp/wp-content/uploads/2022/", "https://www.valuecoders.com/v2wp/wp-content/uploads/2022/icon/", $url );	
-	*/
 }
 
 add_action( 'wp_head', function(){
@@ -1224,13 +1216,13 @@ add_action( 'wp_head', function(){
 	}
 });
 
-add_filter('wpseo_robots', function( $string ){
+add_filter( 'wpseo_robots', function( $string ){
 	$string = "";
     if( isset($_SERVER['SCRIPT_FILENAME']) &&  ( strpos($_SERVER['SCRIPT_FILENAME'], "404.php") !== false ) ){
 		$string = "noindex, nofollow";	
     }
     return $string;
-}, 999);
+}, 999 );
 
 function vcTrustedStartups( $pageID = false ){
 	$bgOpt = '';
@@ -1239,12 +1231,12 @@ function vcTrustedStartups( $pageID = false ){
 	$bgOpt = (!empty($bgfld) && ($bgfld == "dark")) ? " bg-dark-theme" : "";
 	}
 	echo '<div id="has-tpa" class="client-logo-box-section dis-flex items-center justify-sb'.$bgOpt.'">
-		<div class="container">
-			<div class="dis-flex">
-				<div class="logo-heading"><h4>Trusted by startups<br> and Fortune 500 companies</h4></div>
-				<div class="logo-box-outer dis-flex vlazy"></div>
-			</div>
+	<div class="container">
+		<div class="dis-flex">
+			<div class="logo-heading"><h4>Trusted by startups<br> and Fortune 500 companies</h4></div>
+			<div class="logo-box-outer dis-flex vlazy"></div>
 		</div>
+	</div>
 	</div>';
 }
 
@@ -1272,8 +1264,6 @@ add_action('init', function(){
 	    debug_dd( $_SESSION['vc-csrf'] );    
 	}
 });
-*/
-/*
 add_action( 'wp_head', function(){
 	if(is_front_page()){
 		echo '<link rel="preload" as="image" href="'.get_bloginfo('template_url').'/images/logo-right.png">';
