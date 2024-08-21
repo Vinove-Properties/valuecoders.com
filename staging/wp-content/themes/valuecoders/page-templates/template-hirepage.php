@@ -8,24 +8,44 @@
   $vcBtn    = get_field('vc-cta', $thisPostID);
   $dmCTA    = get_field('dm-hcta');
   $hasDMCta = (isset($dmCTA['required']) && ($dmCTA['required'] === "yes")) ? true : false;
+
+  if( $bcCategory === "custom" ){
+  //bc-custitle //bc-cuslink
+  $cuTitle  = get_field('bc-custitle');
+  $cuLink   = get_field('bc-cuslink');
+  $bCat     = '<a class="no-after" href="'.vc_siteurl($cuLink).'">'.$cuTitle.'</a>';
+}
+
   ?>
 <section class="second-level-section vlazy" style="background-image:url(<?php bloginfo('template_url'); ?>/v4.0/images/hire-banner.webp);">
   <div class="container">
     <div class="breadcrumbs">
       <?php 
-        $hasTechnology 	= get_field('vc-technology',$thisPostID);
-        $thispTitle 	= ($hasTechnology && !empty($hasTechnology)) ? $hasTechnology :  get_the_title();
-        if( is_page('hire-developers') ){
-        echo '<a href="'.get_bloginfo('url').'">Home</a> Hire Software Developers';
+      $hasTechnology  = get_field('vc-technology',$thisPostID);
+      $thispTitle 	  = ($hasTechnology && !empty($hasTechnology)) ? $hasTechnology :  get_the_title();
+      if( is_page('hire-developers') ){
+      echo '<a href="'.get_bloginfo('url').'">Home</a> Hire Software Developers';
+      }else{
+        $bcCategory   = get_field('bc-vcategory');
+        if( !empty( $bcCategory ) && ($bcCategory === "custom") ){
+          $cuTitle  = get_field('bc-custitle');
+          $cuLink   = get_field('bc-cuslink');
+          $bCat     = '<a class="no-after" href="'.vc_siteurl($cuLink).'">'.$cuTitle.'</a> ';
+          if( $cuTitle && $cuLink ){
+            echo '<a href="'.get_bloginfo('url').'">Home</a> '.$bCat.$thispTitle;  
+          }else{
+            echo '<a href="'.get_bloginfo('url').'">Home</a> '.$thispTitle; 
+          }
         }else{
-        $seoBC = get_field('seo-breadcrumb');
-        echo '<a href="'.get_bloginfo('url').'">Home</a> ';
-        if( $seoBC != "yes" ){
-        echo '<a href="'.site_url('/hire-developers').'">Hire Software Developers</a> ';  
-        }  
-        echo $thispTitle; 
-        }
-        ?>
+          $seoBC        = get_field('seo-breadcrumb');
+          echo '<a href="'.get_bloginfo('url').'">Home</a> ';
+          if( $seoBC != "yes" ){
+          echo '<a href="'.site_url('/hire-developers').'">Hire Software Developers</a> ';  
+          }  
+          echo $thispTitle; 
+        } 
+      }
+      ?>
     </div>
     <?php 
       $headingTxt = get_field( 'htop-area' ); 
