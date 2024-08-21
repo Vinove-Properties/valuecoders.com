@@ -252,7 +252,7 @@
                       <a href="<?php echo $site_url; ?>cross-platform-app-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/application-dev-icon6.svg" class="menuicon" alt="menuicon"><span class="title">Cross-Platform App Development</span>Unified multi-platform solutions</a>
                       <a href="<?php echo $site_url; ?>api-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/application-dev-icon7.svg" class="menuicon" alt="menuicon"><span class="title">API Development</span>
                       Efficient API management</a>
-                      <a href="<?php echo $site_url; ?>hire-developers/hire-full-stack-developers"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/application-dev-icon8.svg" class="menuicon" alt="menuicon"><span class="title">Full Stack Development</span>
+                      <a href="<?php echo $site_url; ?>full-stack-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/application-dev-icon8.svg" class="menuicon" alt="menuicon"><span class="title">Full Stack Development</span>
                       Secure scalable applications</a>
                     </div>
                     <div class="flex-3">
