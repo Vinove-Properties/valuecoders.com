@@ -244,7 +244,7 @@
                       Robust server/client expertise</a>
                       <a href="<?php echo $site_url; ?>top-website-development-company"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/application-dev-icon3.svg" class="menuicon" alt="menuicon"><span class="title">Website & Portal Development</span>
                       Secure, user-centric solutions</a>
-                      <a href="<?php echo $site_url; ?>frontend-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/application-dev-icon4.svg"class="menuicon" alt="menuicon"><span class="title">Frontend Development</span>Flawless UI/UX creation</a>
+                      <a href="<?php echo $site_url; ?>frontend-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/application-dev-icon4.svg" class="menuicon" alt="menuicon"><span class="title">Frontend Development</span>Flawless UI/UX creation</a>
                     </div>
                     <div class="flex-3">
                       <a href="<?php echo $site_url; ?>mobile-application-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/application-dev-icon5.svg" class="menuicon" alt="menuicon"><span class="title">Mobile App Development</span>
