@@ -604,6 +604,7 @@ $headText   = fnextractHeadins('h2', $htContent );
 
 <?php 
 $codeSec = get_field('cq-accord'); 
+echo '<pre>'; print_r($codeSec); die;
 if( isset( $codeSec['is_enable'] ) && ($codeSec['is_enable'] !== "hide") ){
 
 if( $codeSec['is_enable'] != "no" ):
