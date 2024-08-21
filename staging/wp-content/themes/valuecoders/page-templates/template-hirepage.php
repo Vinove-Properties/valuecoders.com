@@ -23,6 +23,11 @@
       <?php 
       $hasTechnology  = get_field('vc-technology',$thisPostID);
       $thispTitle 	  = ($hasTechnology && !empty($hasTechnology)) ? $hasTechnology :  get_the_title();
+      $bcTitle        = get_field( 'bc-title', $thisPostID );
+      if( $bcTitle ){
+      $thispTitle = $bcTitle;
+      }
+
       if( is_page('hire-developers') ){
       echo '<a href="'.get_bloginfo('url').'">Home</a> Hire Software Developers';
       }else{
