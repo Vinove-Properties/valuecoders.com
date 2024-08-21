@@ -604,8 +604,9 @@ $headText   = fnextractHeadins('h2', $htContent );
 
 <?php 
 $codeSec = get_field('cq-accord'); 
+echo '<pre>'; print_r($codeSec);
 if( isset( $codeSec['is_enable'] ) && ($codeSec['is_enable'] != "hide") ){
-echo '<pre>'; print_r($codeSec); die;
+echo '<pre>'; print_r($codeSec);
 
 if( $codeSec['is_enable'] != "no" ):
 if( isset( $codeSec['tpl-content'] ) && ($codeSec['tpl-content'] == "no") ){  
