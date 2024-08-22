@@ -66,8 +66,7 @@ get_header('nonav');
           </div>
         </div>
       </div>  
-      <?php } ?>  
-		  
+      <?php } ?>  		  
 		  <div class="consult-col">
 		    <div class="con-wrap">
 		      <div class="con-text">

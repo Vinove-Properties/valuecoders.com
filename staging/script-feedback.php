@@ -110,6 +110,14 @@ if( $resText ){
 $Mailbody .= "Other Reason : ".$resText.$bodyBr;    
 }
 $Mailbody .= "IP Address : ".get_client_ip_user();
+
+$autoEmailBody = 'Dear '.$name.', <br><br>
+Thank you for sharing your feedback with us. We value your input and appreciate you taking the time to help us improve our services.<br><br>
+If you have any additional thoughts or concerns, please don\'t hesitate to reach out. We\'re here to ensure your experience with ValueCoders is the best it can be.
+<br><br>
+Best regards<br>
+Team ValueCoders';
+smtpEmailFunction($email, "Thank You for Your Feedback!", $autoEmailBody, "auto", $email,[],[],[]);
 smtpEmailFunction( "nitin.baluni@mail.vinove.com", "New Feedback Form Submission Received - ValueCoders", $Mailbody, "lead", 
 $email, [], [], [], $name);
 header('location: https://www.valuecoders.com/staging/thanks');
@@ -130,7 +138,6 @@ $uReq       = __issetEmpty( $_POST, 'requirement' );
 
 $Mailbody = "";
 $bodyBr = "<br>";
-//$Mailbody .= "=========================".$bodyBr;
 $Mailbody .= "Name: ".$name.$bodyBr;
 $Mailbody .= "Email: ".$email.$bodyBr;
 if( $phone ){
@@ -145,6 +152,14 @@ if( $uReq ){
 $Mailbody .= "Expected Turnaround - Comment: ".$uReq.$bodyBr;
 }
 $Mailbody .= "IP Address : ".get_client_ip_user();
+$autoEmailBody = 'Dear '.$name.', <br><br>
+Thank you for filling out your details to start your project with ValueCoders. We\'re excited to work with you!<br><br>
+We\'ll send the formal paperwork and agreement shortly. If you have any questions in the meantime, 
+feel free to reach out.<br><br>
+Looking forward to a great collaboration!<br><br>    
+Best regards<br>
+Team ValueCoders';
+smtpEmailFunction($email, "Thank You for Trusting ValueCoders - Next Steps Await", $autoEmailBody, "auto", $email,[],[],[]);
 smtpEmailFunction( "nitin.baluni@mail.vinove.com", "Paperwork Details Form Data Received - ValueCoders", $Mailbody, "lead", 
 $email, [], [], [], $name );
 header('location: https://www.valuecoders.com/staging/thanks');
