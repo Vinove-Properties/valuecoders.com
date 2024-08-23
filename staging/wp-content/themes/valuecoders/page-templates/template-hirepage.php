@@ -98,7 +98,7 @@
           <a class="kmore" href="https://www.valuecoders.com/hire-developers/7-day-trial">Know More</a>
           </div></div></div> <span class="free-trial" style="margin-left: 25px;">Zero Overheads, Quick Setup</span>
           
-          </div>
+         
           </li>
           </ul>';  
           }  
