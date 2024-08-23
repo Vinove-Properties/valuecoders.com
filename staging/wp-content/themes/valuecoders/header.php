@@ -129,40 +129,69 @@ function loadReCapJS(){
 </script>
 
 <script data-cfasync="false">
-function _getUTMParameters(){
-  const urlParams = new URLSearchParams(window.location.search);
-  const utmParams = {};
-  const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];    
-  utmKeys.forEach(key => {
-      const value = urlParams.get(key);
-      if (value) {
-          utmParams[key] = value;
-      }
-  });
-  return utmParams;
+function _utm_getQueryParams() {
+    const params = {};
+    const queryString = window.location.search.substring(1);
+    const queryArray = queryString.split("&");
+    queryArray.forEach(function(item) {
+        const [key, value] = item.split("=");
+        params[key] = decodeURIComponent(value);
+    });
+    return params;
 }
 
-function _setUTMCookies(utmParams){
-    const cookieExpiryDays = 30;
-    const expiryDate = new Date();
-    expiryDate.setTime(expiryDate.getTime() + (cookieExpiryDays * 24 * 60 * 60 * 1000));
-    const expires = "expires=" + expiryDate.toUTCString();
+function _utm_setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
 
-    for (const key in utmParams) {
-        document.cookie = key + "=" + encodeURIComponent(utmParams[key]) + ";" + expires + ";path=/";
+const _params    = _utm_getQueryParams();
+const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+const utmValues = {};
+
+utmParams.forEach(param => {
+if (_params[param]) {
+    _utm_setCookie(param, _params[param], 1);
+}
+});
+
+function utm_getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+utmParams.forEach(param => {
+    const value = utm_getCookie(param);
+    if (value) {
+        utmValues[param] = value;
     }
+});
+utmValues['utm_term'] = "<?php the_permalink(); ?>";
+function _generateUtmLink(baseUrl, utmParams) {
+    const url = new URL(baseUrl);
+    Object.keys(utmParams).forEach(param => {
+        if( utmValues[utmParams[param]] ){
+            url.searchParams.append(utmParams[param], utmValues[utmParams[param]]);    
+        }        
+    });
+    return url.toString();
 }
-const utmParams = _getUTMParameters();
-console.log( utmParams );
-if( Object.keys(utmParams).length > 0 ){
-  _setUTMCookies( utmParams );
+
+function consultCTA_cb(){
+    //window.location.href = generateUtmLink( 'https://calendly.com/valuecoders/consult', utmParams );
+    window.open( _generateUtmLink( 'https://calendly.com/valuecoders/consult', utmParams ), '_blank' );
+
 }
 </script>
 <?php if( is_home() || is_front_page() ) : ?>
 <link rel="preload" as="video" href="<?php bloginfo('template_url'); ?>/video/home-video.mp4">
 <?php endif; ?>
 </head>
-<body id="themeAdd" <?php body_class(); ?> data-mpid="<?php global $post; echo $post->ID; ?>" data-ptemplate="<?php echo basename( get_page_template() ); ?>" data-gcaploaded="0">
+<body id="themeAdd" <?php body_class(); ?> data-mpid="<?php global $post; echo $post->ID; ?>" 
+data-ptemplate="<?php echo basename( get_page_template() ); ?>" data-gcaploaded="0" data-url="<?php the_permalink(); ?>">
 <?php 
 if( isStaggingVersion() === false ) :
 
