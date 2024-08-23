@@ -97,8 +97,6 @@
           <p>Our solution experts will answer your questions in a secure online meeting.</p>
           <a class="kmore" href="https://www.valuecoders.com/hire-developers/7-day-trial">Know More</a>
           </div></div></div> <span class="free-trial" style="margin-left: 25px;">Zero Overheads, Quick Setup</span>
-          
-         
           </li>
           </ul>';  
           }  
@@ -126,7 +124,7 @@
           
           <span class="devide">OR</span>
           <div class="free-con">
-            <a href="https://calendly.com/valuecoders/dedicated-teams?utm_term=<?php echo get_permalink(); ?>" target="_self">Book A Call</a>
+            <a href="https://calendly.com/valuecoders/consult?utm_term=<?php echo get_permalink(); ?>" target="_self">Book A Call</a>
           </div> 
 
         </div>
