@@ -91,13 +91,7 @@
           <li>'.$li.'</li>
           <li>IP Rights & NDA (Non-disclosure Agreement) protection</li>
           <li>Flexible contracts, transparent pricing</li>
-          <li class="fttrial"><span class="ftt">Free Trial,</span><div class="info-wrap"><div class="info">
-          <div class="info-content">
-          <h4>What happens after you contact us? </h4>
-          <p>Our solution experts will answer your questions in a secure online meeting.</p>
-          <a class="kmore" href="https://www.valuecoders.com/hire-developers/7-day-trial">Know More</a>
-          </div></div></div> <span class="free-trial">Zero Overheads, Quick Setup</span>
-          </li>
+          <li>Free Trial, Zero Overheads, Quick Setup</li>
           </ul>';  
           }  
           
@@ -124,7 +118,7 @@
           
           <span class="devide">OR</span>
           <div class="free-con">
-            <a href="https://calendly.com/valuecoders/consult?utm_term=<?php echo get_permalink(); ?>" target="_self">Book A Call</a>
+            <a href="javascript:void(0)"; onclick="consultCTA_cb();">Book A Call</a>
           </div> 
 
         </div>

@@ -26,7 +26,7 @@ get_header();
                 </div>
               </div>
               <div class="soc-box dis-flex items-center">                
-                <a href="https://calendly.com/valuecoders/consult" target="_blank"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-01.svg" alt="valuecoders" width="20" height="20"></i><span>Book A Call</span></a>
+                <a href="javascript:void(0)"; onclick="consultCTA_cb();"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-01.svg" alt="valuecoders" width="20" height="20"></i><span>Book A Call</span></a>
                 <a href="https://wa.me/918882108080" target="_blank"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-02.svg" alt="valuecoders" width="20" height="20"> </i><span>WhatsApp</span></a>
                 <a href="mailto:sales@valuecoders.com" target="_blank"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-03.svg" alt="valuecoders" width="20" height="20"></i><span>Email us</span></a>
               </div>

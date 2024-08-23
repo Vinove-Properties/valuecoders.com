@@ -300,7 +300,7 @@ function valuecoders_scripts() {
 		wp_enqueue_style( 'vc-resources', get_stylesheet_directory_uri().'/v4.0/css/resource.min.css', [], _S_VERSION );
 	}
 	elseif( is_page_template( 'page-templates/tpl-free-trial.php' ) ){
-		wp_enqueue_style( 'vc-trial', get_stylesheet_directory_uri().'/v3.0/css/trial-days.css', [], _S_VERSION );
+		wp_enqueue_style( 'vc-trial', get_stylesheet_directory_uri().'/v4.0/css/trial-days.css', [], _S_VERSION );
 	}
 	elseif( is_page_template( 'page-templates/tpl-se-process.php' ) ){
 		wp_enqueue_style( 'se-process', get_stylesheet_directory_uri().'/v4.0/css/software-services.css', [], _S_VERSION );
@@ -1493,7 +1493,7 @@ function hireCmn_cta(){
 	</div>	
 	<span class="devide">OR</span>
 	<div class="free-con">
-	<a href="https://calendly.com/valuecoders/consult?utm_term='.get_permalink().'" target="_self">Book A Call</a>
+	<a href="javascript:void(0)"; onclick="consultCTA_cb();" target="_self">Book A Call</a>
 	</div>	
 	</div>';
 }
