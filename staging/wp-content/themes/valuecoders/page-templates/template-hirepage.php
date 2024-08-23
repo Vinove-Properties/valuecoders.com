@@ -99,8 +99,11 @@
         <div class="button-section margin-t-50">
           <div class="btn-div">
             <div class="btn-sec">
-              <a class="btn rounded" href="<?php echo site_url('/contact/?cta=free-trial'); ?>"><span class="text-white">Start 7 Days Free Trial</span></a>
+              <a class="btn rounded" href="<?php echo site_url('/contact'); ?>"><span class="text-white">Get Started Now</span></a>
             </div>
+            
+            <!-- 
+              /?cta=free-trial
             <div class="info-wrap">
               Learn How Trial Works
               <div class="info">
@@ -110,12 +113,12 @@
                   <a class="kmore" href="https://www.valuecoders.com/hire-developers/7-day-trial">Know More</a>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
-          <span class="devide">OR</span>
+          <!-- <span class="devide">OR</span>
           <div class="free-con">
             <a href="https://calendly.com/valuecoders/dedicated-teams?utm_term=<?php echo get_permalink(); ?>" target="_self">Book A Call</a>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="flex-2 right-box">

@@ -140,9 +140,9 @@ function valuecoders_scripts() {
 	if( !is_page_template(['page-templates/template-contact-v9.php']) ){
 	wp_enqueue_script('vc-glider', get_stylesheet_directory_uri().'/js/glider.min-v2.js', array(), _S_VERSION, true);	
 	}
-    wp_enqueue_script('vc-glide', 'https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.1/glide.js', [], _S_VERSION, true);
-    wp_enqueue_style( 'vc-glide.core', 'https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.1/css/glide.core.css', [], 
-    _S_VERSION );    
+    wp_enqueue_script('vc-glide', 'https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.1/glide.min.js', [], _S_VERSION, true);
+    wp_enqueue_style('vc-glide.core', 'https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.1/css/glide.core.css', [],
+    _S_VERSION);
     
 	wp_enqueue_script('vc-script', get_stylesheet_directory_uri() . '/js/script.js', array(), _S_VERSION, true);
 	wp_localize_script( 'vc-script', 'vcObj', 
@@ -1475,9 +1475,10 @@ function hireCmn_cta(){
 	<div class="btn-div">
 	<div class="btn-sec">
 	  <a href="'.site_url('/contact/?cta=free-trial').'" class="btn rounded">
-	  <span class="text-white"> Start 7-day Free Trial</span>
+	  <span class="text-white">Get Started Now</span>
 	  </a>
 	</div>
+	<!--
 	<div class="info-wrap">
 	  Learn How Trial Works
 	  <div class="info">
@@ -1488,11 +1489,14 @@ function hireCmn_cta(){
 	    </div>
 	  </div>
 	</div>
+	-->
 	</div>
+	<!--
 	<span class="devide">OR</span>
 	<div class="free-con">
 	<a href="https://calendly.com/valuecoders/dedicated-teams?utm_term='.get_permalink().'" target="_self">Book A Call</a>
 	</div>
+	-->
 	</div>';
 }
 

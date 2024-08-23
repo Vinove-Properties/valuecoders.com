@@ -4,7 +4,9 @@
 <div class="container">
   <div class="dis-flex justify-sb">
     <div class="left-box">
-      <?php if(is_page_template(['page-templates/template-hirepage.php', 'page-templates/tpl-free-trial.php'])){ ?>  
+      <?php 
+      /*
+      if(is_page_template(['page-templates/template-hirepage.php', 'page-templates/tpl-free-trial.php'])){ ?>  
       <h2>Start Your 7-day Trial</h2>
       <div class="info-wrap">
         Try Before, Commit Later 
@@ -20,10 +22,12 @@
         </div>
         <?php } ?>
       </div>
-      <?php }else{ ?>
+      <?php }else{ 
+      */
+      ?>
       <h2>Book Free Consultation</h2>
       <p>Guaranteed response within 8 business hours.</p>
-      <?php } ?>
+      <?php //} ?>
       <div class="side-dash1 list-box">
         <h3>Fill up your details</h3>
         <?php 
