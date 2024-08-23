@@ -91,12 +91,12 @@
           <li>'.$li.'</li>
           <li>IP Rights & NDA (Non-disclosure Agreement) protection</li>
           <li>Flexible contracts, transparent pricing</li>
-          <li style="display:flex;">Free Trial<div class="info-wrap"><div class="info">
+          <li class="fttrial">Free Trial,<div class="info-wrap"><div class="info">
           <div class="info-content">
           <h4>What happens after you contact us? </h4>
           <p>Our solution experts will answer your questions in a secure online meeting.</p>
           <a class="kmore" href="https://www.valuecoders.com/hire-developers/7-day-trial">Know More</a>
-          </div></div></div> <span class="free-trial" style="margin-left: 25px;">Zero Overheads, Quick Setup</span>
+          </div></div></div> <span class="free-trial">Zero Overheads, Quick Setup</span>
           </li>
           </ul>';  
           }  
