@@ -148,7 +148,7 @@
                 ?>            
               <div class="user-input btn rounded checkout">
                 <input type="submit" id="submitButton" class="checkout-submit" 
-                  value="<?php echo (is_page_template(['page-templates/template-hirepage.php', 'page-templates/tpl-free-trial.php'])) ? 'Start My Trial' : 'Enquire Now' ?>" />
+                  value="<?php echo (is_page_template(['page-templates/template-hirepage.php', 'page-templates/tpl-free-trial.php'])) ? 'Enquire Now' : 'Enquire Now' ?>" />
                 <!--<span class="arrow-wrap">
                   <span class="arrow primera"></span>
                   <span class="arrow segunda next"></span>
