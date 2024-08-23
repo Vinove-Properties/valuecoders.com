@@ -14,7 +14,7 @@ get_header();
             <div class="form-box-outer right-box">
               <div class="lf-top">
                 <div class="head-txt">
-                  <div class="logo-box"><a href="https://www.valuecoders.com"></a></div>
+                  <div class="logo-box"><a href="<?php bloginfo('url'); ?>"></a></div>
                   <div class="head-box">
                     <h1>Get In Touch</h1>
                     <p>Our team will get back to you within 8 business hours or less.</p>
