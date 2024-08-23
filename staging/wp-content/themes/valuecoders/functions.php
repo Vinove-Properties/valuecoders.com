@@ -1490,13 +1490,11 @@ function hireCmn_cta(){
 	  </div>
 	</div>
 	-->
-	</div>
-	<!--
+	</div>	
 	<span class="devide">OR</span>
 	<div class="free-con">
-	<a href="https://calendly.com/valuecoders/dedicated-teams?utm_term='.get_permalink().'" target="_self">Book A Call</a>
-	</div>
-	-->
+	<a href="https://calendly.com/valuecoders/consult?utm_term='.get_permalink().'" target="_self">Book A Call</a>
+	</div>	
 	</div>';
 }
 
