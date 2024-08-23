@@ -416,7 +416,8 @@ strong {
   color: #ffffff; }
 
 ::placeholder {
-  color: #9b9b9b; }
+  color: #9b9b9b;
+  font-family: "Noto Sans", sans-serif; }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
