@@ -1365,7 +1365,7 @@ if( $processReq !== "no" ) :
       </div>
       <div class="flex-2 col-right">
         <div class="head-txt text-center">
-          <h2>Hire Developers from ValueCoders?</h2>
+          <h2>How You Hire Developers from ValueCoders?</h2>
           <p>Take a look at the simple and straightforward process to hire software developers from ValueCoders.</p>
         </div>
         <div class="process-step">
