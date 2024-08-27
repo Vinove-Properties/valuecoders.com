@@ -223,7 +223,7 @@ if( isset($searchEnds['is_enable']) && ($searchEnds['is_enable'] == "yes") ) :
     </div>
     <div class="chcta dis-flex justify-sb">
       <p><?php echo $searchEnds['cta-section']; ?></p>
-      <a class="yellow-btn" href="javascript:void(0);" onclick="showPopFormOp();"><?php echo $searchEnds['cta-text']; ?></a>
+      <a class="yellow-btn" href="javascript:void(0);" onclick="showPopForm();"><?php echo $searchEnds['cta-text']; ?></a>
     </div>
   </div>
 </div>
