@@ -349,9 +349,10 @@ if( $disOne === false ) :
           <?php 
             $techStacks = get_field('tech_stacks_cards', 265);
             if( $techStacks ){
+              $elmClass = ( $techStacks && (count($techStacks) === 2) ) ? "flex-2" : "flex-3";              
             	echo '<div class="dis-flex col-box-outer margin-t-50">';
             	foreach( $techStacks as $row ){
-            		echo '<div class="flex-3 col-box"><div class="inner-box">
+            		echo '<div class="'.$elmClass.' col-box"><div class="inner-box">
                           <h3><a href="'.vc_siteurl($row['card_link']).'">'.$row['card_title'].'</a></h3>';
                           if( $row['tech_icon'] ){
                           echo '<ul>';
