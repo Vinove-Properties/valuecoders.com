@@ -2034,7 +2034,7 @@ small {
     padding: 70px 60px;
     border-radius: 20px; }
     .our-challenges .chal-section .chall-row .chall-content {
-      flex-basis: 40%; }
+      flex-basis: 45%; }
       .our-challenges .chal-section .chall-row .chall-content ul {
         padding-right: 80px;
         margin: 0; }
@@ -3197,7 +3197,14 @@ small {
       height: 70px; }
 
   .team-engage .col-right .process-step:before {
-    height: 109%; } }
+    height: 109%; }
+
+  .vc-chartbook .chart-flex .chart-col {
+    width: 25%; }
+    .vc-chartbook .chart-flex .chart-col:nth-child(2) {
+      width: 25%; }
+    .vc-chartbook .chart-flex .chart-col:nth-child(3) {
+      width: 35%; } }
 @media only screen and (max-width: 1200px) {
   .tools-developer .box p a {
     font-size: 14px;
