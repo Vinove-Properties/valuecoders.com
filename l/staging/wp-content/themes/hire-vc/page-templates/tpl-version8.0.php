@@ -21,22 +21,26 @@ alt="Valuecoders" width="449" height="637">
     <div class="clintlogo">
       <div class="logobox">
         <picture>
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/blogo-01.svg" alt="Valuecoders" width="100" height="57">
+          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/blogo-01.svg" alt="Valuecoders" 
+          width="100" height="57">
         </picture>
       </div>
       <div class="logobox">
         <picture>
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/blogo-02.svg" alt="Valuecoders" width="100" height="57">
+          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/blogo-02.svg" alt="Valuecoders" 
+          width="100" height="57">
         </picture>
       </div>
       <div class="logobox">
         <picture>
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/blogo-03.svg" alt="Valuecoders" width="100" height="57">
+          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/blogo-03.svg" alt="Valuecoders" 
+          width="100" height="57">
         </picture>
       </div>
       <div class="logobox">
         <picture>
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/blogo-04.svg" alt="Valuecoders" width="100" height="57">
+          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v8/blogo-04.svg" alt="Valuecoders" 
+          width="100" height="57">
         </picture>
       </div>
     </div>
@@ -189,26 +193,40 @@ alt="Valuecoders" width="449" height="637">
 
 <?php 
 $searchEnds = get_field('card-one');
+//echo '<pre>'; print_r($searchEnds); die;
 if( isset($searchEnds['is_enable']) && ($searchEnds['is_enable'] == "yes") ) :
-?>
-<section class="result-driven padding-t-120 padding-b-120">
-  <div class="container">
-    <div class="head-txt text-center"><?php echo $searchEnds['content']; ?></div>
-    <?php 
-    if( $searchEnds['cards'] ){
-      echo '<div class="dis-flex result-row">';
-      foreach( $searchEnds['cards'] as $card ){
-      echo '<div class="flex-3">
-        <div class="box">'.pxlGetPtag($card['icon']).$card['text'].'</div>
-      </div>';
-      }
-      echo '<div class="btn-div text-center">
-      <a onclick="showPopForm();" href="javascript:void(0);" class="yellow-btn">'.$searchEnds['cta-text'].'</a>
-      </div>';
-      echo '</div>';
-    }
-    ?>
+?>  
+<section class="our-challenges padding-t-120 padding-b-120">
+<div class="container">
+  <div class="head-txt text-center"><?php echo $searchEnds['content']; ?></div>
+  <div class="chal-section">
+    <div class="dis-flex justify-sb chall-row">
+      <div class="flex-2">
+        <?php 
+        if( $searchEnds['image'] ){
+          echo pxlGetPtag( $searchEnds['image'] );
+        }
+        ?>        
+      </div>
+      <div class="flex-2 chall-content">
+        <?php 
+        if( $searchEnds['cards'] ){
+        echo '<ul>';
+        foreach( $searchEnds['cards'] as $point ){
+        $icon = ($point['icon']) ? '<i>'.pxlGetPtag($point['icon']).'</i>' : '';
+        echo '<li>'.$icon.$point['text'].'</li>';
+        }
+        echo '</ul>';
+        }
+        ?>        
+      </div>
+    </div>
+    <div class="chcta dis-flex justify-sb">
+      <p><?php echo $searchEnds['cta-section']; ?></p>
+      <a class="yellow-btn" href="javascript:void(0);" onclick="showPopFormOp();"><?php echo $searchEnds['cta-text']; ?></a>
+    </div>
   </div>
+</div>
 </section>
 <?php endif; ?>
 
@@ -372,7 +390,7 @@ if( isset($calCall['is_enable']) && ($calCall['is_enable'] == "yes") ) :
     <?php 
     if( $calCall['cards'] ){
       $i = 0;  
-      echo '<div class="chart-flex padding-t-120">';
+      echo '<div class="chart-flex padding-t-60">';
       foreach( $calCall['cards'] as $row ){
         echo '<div class="chart-col">';
         echo $row['text'];
@@ -419,8 +437,7 @@ if( isset($vetPro['is_enable']) && ($vetPro['is_enable'] == "yes") ) :
     $active = ( $i === 1 )  ? 'active' : '';
     echo '<div id="tab'.$i.'" class="tab-contents '.$active.'">
         <div class="dis-flex">
-          <div class="flex-2">'.$pro['con-left'].'</div>
-          <div class="flex-2">'.$pro['con-right'].'</div>
+          <div class="flex-2">'.$pro['text'].'</div>
         </div>
       </div>';  
     }

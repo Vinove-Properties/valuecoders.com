@@ -261,6 +261,12 @@
   }
 }
 
+
+.popup-box .form-pop-up-box .form-center .form-box-outer .form-wrap .form-section .form-text-cont .user-input{position: relative;}
+
+.popup-box .form-pop-up-box .form-center .form-box-outer .form-wrap .form-section .form-text-cont .user-input.verror small{display:block;}
+.popup-box .form-pop-up-box .form-center .form-box-outer .form-wrap .form-section .form-text-cont .user-input.verror .input-field{border-color: #dc0019 !important;}
+
 @media only screen and (max-width: 1600px) {
   .popup-box {
     .checkout-submit {
