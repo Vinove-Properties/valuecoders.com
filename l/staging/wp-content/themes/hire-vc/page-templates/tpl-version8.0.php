@@ -273,24 +273,7 @@ if( isset($whyVC['is_enable']) && ($whyVC['is_enable'] == "yes") ) :
     </div>
     
     <div class="count-box-section  margin-t-70">
-      <div class="count-box-outer dis-flex">
-        <div class="count-box flex-4">
-          <span class="count-box-big">18+</span>
-          <span class="count-box-small">Years in Business</span>
-        </div>
-        <div class="count-box flex-4">
-          <span class="count-box-big">650+</span>
-          <span class="count-box-small">Software Developers</span>
-        </div>
-        <div class="count-box flex-4">
-          <span class="count-box-big">2000+</span>
-          <span class="count-box-small">Man Years Experience</span>
-        </div>
-        <div class="count-box flex-4">
-          <span class="count-box-big">2500+</span>
-          <span class="count-box-small">Satisfied Customers</span>
-        </div>
-      </div>
+      <div class="count-box-outer dis-flex"><?php echo $whyVC['counter'] ?></div>
     </div>
     <div class="margin-t-70 text-center">
       <span class="txtadd">Talk to our consultants</span>
