@@ -114,7 +114,7 @@ alt="Valuecoders" width="449" height="637">
             <div class="form-group  width-full">
               <input type="hidden" name="Uploadedfilename" id="Uploadedfilename" value="">
               <input type="hidden" name="form-action" value="lp">
-              <input type="hidden" name="page_url" value="<?php bloginfo('url'); ?>">
+              <input type="hidden" name="page_url" value="<?php the_permalink(); ?>">
               <button type="submit" class="btn btn-big btn-primary btn-padding-x test-1" name="ws-form-sub" id="bnr-submit" 
               value="ws-landing">
               <?php 
@@ -730,7 +730,7 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
                 <div class="user-input btn rounded checkout">
                   <input type="hidden" name="Uploadedfilename" id="Uploadedfilename-fo" value="">
                   <input type="hidden" name="form-action" value="lp">
-                  <input type="hidden" name="page_url" value="<?php bloginfo('url'); ?>">
+                  <input type="hidden" name="page_url" value="<?php the_permalink(); ?>">
                   <input type="submit" id="footer-submitButton" class="checkout-submit" 
                   value="<?php echo (isset($formOpt['fo-cta']) && !empty($formOpt['fo-cta'])) ? $formOpt['fo-cta'] :  
                   'Enquire Now'; ?>">
@@ -836,7 +836,7 @@ if( isset($hireModel['is_enable']) && ($hireModel['is_enable'] == "yes") ) :
             </div>
             <div class="user-input checkout">
               <input type="hidden" name="form-action" value="lp">
-              <input type="hidden" name="page_url" value="<?php bloginfo('url'); ?>">
+              <input type="hidden" name="page_url" value="<?php the_permalink(); ?>">
               <input type="submit" id="pop-submitButton" class="checkout-submit ch111" 
               value="<?php echo (isset($formOpt['pp-cta']) && !empty($formOpt['pp-cta'])) ? $formOpt['pp-cta'] : 
               'CONTACT US NOW'; ?>">
