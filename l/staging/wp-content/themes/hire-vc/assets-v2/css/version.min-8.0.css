@@ -1654,45 +1654,47 @@ header {
                 border: 1px solid #ffb81d; }
               .banner-img-section .two-box .banner-form .form-box .form-wrap .form-group .form-input .user-input:focus {
                 border: 1px solid #ffb81d; }
-            .banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input {
-              width: 100%;
-              font-family: "Noto Sans";
-              padding: 0 15px;
-              border-radius: 10px;
-              border: 1px solid #d4e0ed;
-              background: #fff;
-              color: #323232;
-              font-size: 14px;
-              height: 130px; }
-              .banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input .comment-input {
-                height: 60px;
-                resize: none;
-                background: 0 0;
-                outline: 0;
-                border: none;
-                overflow-y: auto;
-                padding: 10px 0; }
-              .banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input .drop-input {
-                position: relative;
-                bottom: 0;
-                left: 0; }
-              .banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input #drop-area #fileElem {
-                display: none; }
-              .banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input #drop-area .button {
-                background: rgba(217, 217, 217, 0.32);
-                color: #414040;
-                font-weight: 500;
-                text-decoration: none;
-                padding: 5px 10px;
-                border: 1px solid #d1d1e1;
+            .banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea {
+              margin: 0 0 20px; }
+              .banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input {
+                width: 100%;
+                font-family: "Noto Sans";
+                padding: 0 15px;
+                border-radius: 10px;
+                border: 1px solid #d4e0ed;
+                background: #fff;
+                color: #323232;
                 font-size: 14px;
-                border-radius: 5px;
-                line-height: 1.4;
-                appearance: none;
-                cursor: pointer;
-                transition: all 0.3s ease-in-out;
-                letter-spacing: 0.5px;
-                opacity: 0.8; }
+                height: 210px; }
+                .banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input .comment-input {
+                  height: 40px;
+                  resize: none;
+                  background: 0 0;
+                  outline: 0;
+                  border: none;
+                  overflow-y: auto;
+                  padding: 10px 0; }
+                .banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input .drop-input {
+                  position: relative;
+                  bottom: 0;
+                  left: 0; }
+                .banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input #drop-area #fileElem {
+                  display: none; }
+                .banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input #drop-area .button {
+                  background: rgba(217, 217, 217, 0.32);
+                  color: #414040;
+                  font-weight: 500;
+                  text-decoration: none;
+                  padding: 5px 10px;
+                  border: 1px solid #d1d1e1;
+                  font-size: 14px;
+                  border-radius: 5px;
+                  line-height: 1.4;
+                  appearance: none;
+                  cursor: pointer;
+                  transition: all 0.3s ease-in-out;
+                  letter-spacing: 0.5px;
+                  opacity: 0.8; }
             .banner-img-section .two-box .banner-form .form-box .form-wrap .form-group .comment-input {
               padding: 15px;
               height: 60px;
@@ -2067,7 +2069,9 @@ small {
       align-items: center;
       margin: 20px 0 0; }
       .our-challenges .chal-section .chcta p {
-        margin: 0; }
+        margin: 0;
+        font-size: 24px;
+        line-height: 40px; }
       .our-challenges .chal-section .chcta:after {
         content: "";
         background: url(../images/v8/shape-cta.png) 0 0 no-repeat;
@@ -2476,6 +2480,8 @@ small {
         justify-content: space-between; }
         .vetting-process .process-tabs .tab-data .tab-contents .dis-flex .flex-2 {
           padding: 0 25px; }
+          .vetting-process .process-tabs .tab-data .tab-contents .dis-flex .flex-2 h2 {
+            font-size: 25px; }
         .vetting-process .process-tabs .tab-data .tab-contents .dis-flex:hover {
           background: none; }
     .vetting-process .process-tabs .tab-data .tab-contents.active {
@@ -3365,7 +3371,13 @@ small {
       .our-challenges .chal-section .chall-row .chall-content ul {
         padding-right: 0; }
         .our-challenges .chal-section .chall-row .chall-content ul li {
-          padding: 10px 0; }
+          padding: 10px 0;
+          position: relative;
+          padding-left: 40px; }
+          .our-challenges .chal-section .chall-row .chall-content ul li i {
+            position: absolute;
+            left: 0;
+            top: 10px; }
           .our-challenges .chal-section .chall-row .chall-content ul li img {
             vertical-align: middle;
             display: inline-block;
@@ -3374,7 +3386,7 @@ small {
             background: #dddddd;
             content: "";
             position: absolute;
-            left: 35px;
+            left: 0;
             bottom: 0;
             width: 100%;
             height: 0.5px; }
@@ -3384,9 +3396,19 @@ small {
       justify-content: center; }
       .our-challenges .chal-section .chcta p {
         margin: 0;
-        padding: 0 20px; }
+        padding: 0 20px;
+        font-size: 20px;
+        line-height: 30px; }
       .our-challenges .chal-section .chcta .yellow-btn {
-        margin: 15px 0 0; }
+        margin: 15px 0 0;
+        padding: 15px 20px;
+        font-size: 16px; }
+      .our-challenges .chal-section .chcta:before {
+        top: auto;
+        bottom: 0; }
+      .our-challenges .chal-section .chcta:after {
+        right: 176px;
+        top: 34px; }
   .our-challenges:after {
     content: "";
     z-index: -1;
@@ -3759,12 +3781,14 @@ small {
     align-items: baseline;
     justify-content: space-between; }
     .vetting-process .process-tabs .process-tb {
-      flex-basis: 35%; }
+      flex-basis: 45%; }
       .vetting-process .process-tabs .process-tb ul li {
         padding-left: 10px;
         margin: 0 0 10px; }
         .vetting-process .process-tabs .process-tb ul li:last-child img {
           display: none; }
+        .vetting-process .process-tabs .process-tb ul li:last-child:after {
+          top: 6px; }
         .vetting-process .process-tabs .process-tb ul li span {
           left: -14px;
           top: -2px;
@@ -3789,7 +3813,7 @@ small {
         padding: 0;
         flex-basis: 100%; }
         .vetting-process .process-tabs .tab-data .tab-contents .dis-flex .flex-2 h3 {
-          font-size: 16px;
+          font-size: 18px;
           margin: 0 0 10px;
           line-height: 25px; }
   .vetting-process .downbtn {
@@ -3832,6 +3856,9 @@ small {
       margin-top: 10px; }
 
   .vc-chartbook {
-    display: none; } }
+    display: none; }
+
+  .banner-img-section .two-box .banner-form .form-box .form-wrap .form-group.form-textarea .user-input {
+    height: 110px; } }
 
 /*# sourceMappingURL=version.min-8.0.css.map */
