@@ -212,6 +212,6 @@ if(!is_page_template(['page-templates/template-contact-v8.php','page-templates/t
 global $post;	
 $pageCategory = get_post_meta( $post->ID, 'vc-mcategory', true);
 //echo '<pre>'.$pageCategory.'</pre>';
-get_template_part( 'include/menu', 'v3.12', ['pcat' => $pageCategory]); 	
+get_template_part( 'include/menu', 'v4.0', ['pcat' => $pageCategory]); 	
 }
 ?>

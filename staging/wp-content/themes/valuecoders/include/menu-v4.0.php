@@ -4,11 +4,11 @@
       <div class="header-item-left">
         <a href="https://www.valuecoders.com/staging/" class="brand">
           <div class="large">
-            <img class="light" loading="lazy" src="header-images/logo-light.svg" alt="Valuecoders" width="400" height="88">
-            <img class="dark" loading="lazy" src="header-images/logo-dark.svg" alt="Valuecoders" width="400" height="88">
+            <img class="light" loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/logo-light.svg" alt="Valuecoders" width="400" height="88">
+            <img class="dark" loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/logo-dark.svg" alt="Valuecoders" width="400" height="88">
           </div>
           <div class="small">
-            <img loading="lazy" src="header-images/logo-small.svg" alt="Valuecoders" width="80" height="80">
+            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/logo-small.svg" alt="Valuecoders" width="80" height="80">
           </div>
         </a>
       </div>
@@ -36,7 +36,7 @@
                       <div class="right-tabs">
                         <div class="tab-content is-active">
                           <div class="four-column">
-                            <div class="tab-title"><a href="#"><img loading="lazy" src="header-images/serv-01.svg" class="menuicon" alt="menuicon"><span class="title">Software Development</span>
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/serv-01.svg" class="menuicon" alt="menuicon"><span class="title">Software Development</span>
                               Innovative, future-proof software solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
@@ -93,7 +93,7 @@
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="#"><img loading="lazy" src="header-images/serv-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Development</span>
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/serv-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Development</span>
                               Skilled developers, transparent billing</a>
                             </div>
                             <div class="dis-flex menu-column">
@@ -124,20 +124,20 @@
                               Innovative, future-proof software solutions</a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="#"><img loading="lazy" src="header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
                               Comprehensive support solutions</a>
-                              <a href="#"><img loading="lazy" src="header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Modernization</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Modernization</span>
                               Update your applications</a>
-                              <a href="#"><img loading="lazy" src="header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">OTT App Development</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">OTT App Development</span>
                               Monetize your content</a>
-                              <a href="#"><img loading="lazy" src="header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Application Development</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Application Development</span>
                               Cloud-based software solutions</a>
                             </div>
                           </div>
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="#"><img loading="lazy" src="header-images/serv-03.svg" class="menuicon" alt="menuicon"><span class="title">Dedicated Software Teams </span>
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/serv-03.svg" class="menuicon" alt="menuicon"><span class="title">Dedicated Software Teams </span>
                               Comprehensive QA & Testing solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
@@ -164,18 +164,18 @@
                               Innovative, future-proof software solutions</a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="#"><img loading="lazy" src="header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Custom software for business goals</a>
-                              <a href="#"><img loading="lazy" src="header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               End-to-end automation solutions</a>
-                              <a href="#"><img loading="lazy" src="header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                             </div>
                           </div>
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="#"><img loading="lazy" src="header-images/serv-04.svg" class="menuicon" alt="menuicon"><span class="title">eCommerce</span>
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/serv-04.svg" class="menuicon" alt="menuicon"><span class="title">eCommerce</span>
                               Innovative, future-proof software solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
@@ -208,20 +208,20 @@
                               Innovative, future-proof software solutions</a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="#"><img loading="lazy" src="header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">B2C eCommerce</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">B2C eCommerce</span>
                               Custom software for business goals</a>
-                              <a href="#"><img loading="lazy" src="header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">B2B eCommerce</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">B2B eCommerce</span>
                               End-to-end automation solutions</a>
-                              <a href="#"><img loading="lazy" src="header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">Web Portals</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">Web Portals</span>
                               Expand with white-label services</a>
-                              <a href="#"><img loading="lazy" src="header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Supply Chain Automation</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Supply Chain Automation</span>
                               Expand with white-label services</a>
                             </div>
                           </div>
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="#"><img loading="lazy" src="header-images/serv-05.svg" class="menuicon" alt="menuicon"><span class="title">QA & Testing</span>
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/serv-05.svg" class="menuicon" alt="menuicon"><span class="title">QA & Testing</span>
                               Innovative, future-proof software solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
@@ -250,18 +250,18 @@
                               Innovative, future-proof software solutions </a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="#"><img loading="lazy" src="header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Custom software for business goals</a>
-                              <a href="#"><img loading="lazy" src="header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               End-to-end automation solutions</a>
-                              <a href="#"><img loading="lazy" src="header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                             </div>
                           </div>
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="#"><img loading="lazy" src="header-images/serv-06.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Services</span>
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/serv-06.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Services</span>
                               Innovative, future-proof software solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
@@ -287,18 +287,18 @@
                               Innovative, future-proof software solutions </a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="#"><img loading="lazy" src="header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Custom software for business goals</a>
-                              <a href="#"><img loading="lazy" src="header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               End-to-end automation solutions</a>
-                              <a href="#"><img loading="lazy" src="header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                             </div>
                           </div>
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="#"><img loading="lazy" src="header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Data Engineering</span>
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Data Engineering</span>
                               Innovative, future-proof software solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
@@ -336,18 +336,18 @@
                               Innovative, future-proof software solutions </a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="#"><img loading="lazy" src="header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Custom software for business goals</a>
-                              <a href="#"><img loading="lazy" src="header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               End-to-end automation solutions</a>
-                              <a href="#"><img loading="lazy" src="header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                             </div>
                           </div>
                         </div>
                         <div class="tab-content">
                           <div class="four-column">
-                            <div class="tab-title"><a href="#"><img loading="lazy" src="header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Artificial Intelligence</span>
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Artificial Intelligence</span>
                               Innovative, future-proof software solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
@@ -428,7 +428,7 @@
                       <div class="right-tabs">
                         <div class="tab-content is-active">
                           <div class="four-column">
-                            <div class="tab-title"><a href="#"><img loading="lazy" src="header-images/ind-01.svg" class="menuicon" alt="menuicon"><span class="title">Industries</span>
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/ind-01.svg" class="menuicon" alt="menuicon"><span class="title">Industries</span>
                             Innovative, future-proof software solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
@@ -481,7 +481,7 @@
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="#"><img loading="lazy" src="header-images/serv-02.svg" class="menuicon" alt="menuicon"><span class="title">Enterprises</span>
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/serv-02.svg" class="menuicon" alt="menuicon"><span class="title">Enterprises</span>
                             Innovative, future-proof software solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
@@ -509,11 +509,11 @@
                             Innovative, future-proof software solutions</a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="#"><img loading="lazy" src="header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Custom software for business goals</a>
-                              <a href="#"><img loading="lazy" src="header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               End-to-end automation solutions</a>
-                              <a href="#"><img loading="lazy" src="header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                               
                             </div>
@@ -521,7 +521,7 @@
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="#"><img loading="lazy" src="header-images/ind-03.svg" class="menuicon" alt="menuicon"><span class="title">Software Startups & Product Companies</span>
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/ind-03.svg" class="menuicon" alt="menuicon"><span class="title">Software Startups & Product Companies</span>
                             Innovative, future-proof software solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
@@ -553,11 +553,11 @@
                             Innovative, future-proof software solutions</a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="#"><img loading="lazy" src="header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Custom software for business goals</a>
-                              <a href="#"><img loading="lazy" src="header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               End-to-end automation solutions</a>
-                              <a href="#"><img loading="lazy" src="header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                               
                             </div>
