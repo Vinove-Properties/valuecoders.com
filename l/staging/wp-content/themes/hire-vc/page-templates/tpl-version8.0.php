@@ -396,7 +396,7 @@ if( isset($calCall['is_enable']) && ($calCall['is_enable'] == "yes") ) :
         echo $row['text'];
         if(++$i === count( $calCall['cards'] )){
           echo '<div class="col-btn">
-          <a class="yellow-btn" onclick="showPopForm();" href="javascript:void(0);">Outsource to India</a></div>';
+          <a class="yellow-btn" onclick="showPopForm();" href="javascript:void(0);">'.$calCall['cta-text'].'</a></div>';
         }
         echo '</div>';
       }
