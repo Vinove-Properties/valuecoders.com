@@ -2389,7 +2389,7 @@ small {
   align-items: center; }
   .vetting-process .process-tabs .process-tb {
     list-style-type: none;
-    flex-basis: 35%;
+    flex-basis: 45%;
     margin: 0 auto; }
     .vetting-process .process-tabs .process-tb ul {
       display: flex;
@@ -2472,7 +2472,7 @@ small {
         background: url(../images/v8/yel-shape.png) 0 0 no-repeat;
         left: 0; }
   .vetting-process .process-tabs .tab-data {
-    flex-basis: 60%; }
+    flex-basis: 55%; }
     .vetting-process .process-tabs .tab-data .tab-contents {
       display: none; }
       .vetting-process .process-tabs .tab-data .tab-contents .dis-flex {
@@ -2480,7 +2480,7 @@ small {
         justify-content: space-between; }
         .vetting-process .process-tabs .tab-data .tab-contents .dis-flex .flex-2 {
           padding: 0 25px; }
-          .vetting-process .process-tabs .tab-data .tab-contents .dis-flex .flex-2 h2 {
+          .vetting-process .process-tabs .tab-data .tab-contents .dis-flex .flex-2 h3 {
             font-size: 25px; }
         .vetting-process .process-tabs .tab-data .tab-contents .dis-flex:hover {
           background: none; }
