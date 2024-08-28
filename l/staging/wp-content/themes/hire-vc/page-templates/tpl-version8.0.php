@@ -242,87 +242,33 @@ if( isset($whyVC['is_enable']) && ($whyVC['is_enable'] == "yes") ) :
     <div class="dis-flex col-box-outer margin-t-60 items-center">
       <div class="flex-2">
         <div class="dis-flex icon-box-outer">
-          <div class="flex-2 margin-t-50">
+          <?php 
+          if( isset($whyVC['listing']) && (count( $whyVC['listing'] ) > 0) ){
+            foreach( $whyVC['listing'] as $list ) {
+            echo '<div class="flex-2 margin-t-50">
             <div class="dis-flex items-center">
-              <span class="icon">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon1.png" alt="Valuecoders" 
-              width="48" height="54">
-              </span>
-              <span class="icon-txt">Experienced<br> software developers</span>
+              <span class="icon">'.pxlGetPtag($list['icon']).'</span>
+              <span class="icon-txt">'.$list['text'].'</span>
             </div>
-          </div>
-          <div class="flex-2 margin-t-50">
-            <div class="dis-flex items-center">
-              <span class="icon">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon2.png" alt="Valuecoders" 
-              width="55" height="55">
-              </span>
-              <span class="icon-txt">Flexible engagement<br> options</span>
-            </div>
-          </div>
-          <div class="flex-2 margin-t-50">
-            <div class="dis-flex items-center">
-              <span class="icon">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon3.png" alt="Valuecoders" 
-              width="54" height="54">
-              </span>
-              <span class="icon-txt">Cost-effective<br> solutions</span>
-            </div>
-          </div>
-          <div class="flex-2 margin-t-50">
-            <div class="dis-flex items-center">
-              <span class="icon">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon4.png" alt="Valuecoders" 
-              width="55" height="54">
-              </span>
-              <span class="icon-txt">Daily/weekly/monthly<br> reporting</span>
-            </div>
-          </div>
-          <div class="flex-2 margin-t-50">
-            <div class="dis-flex items-center">
-              <span class="icon">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon5.png" alt="Valuecoders" 
-              width="59" height="54">
-              </span>
-              <span class="icon-txt">160 man hours<br> guaranteed</span>
-            </div>
-          </div>
-          <div class="flex-2 margin-t-50">
-            <div class="dis-flex items-center">
-              <span class="icon">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon6.png" alt="Valuecoders" 
-              width="50" height="50">
-              </span>
-              <span class="icon-txt">Smooth <br> communication</span>
-            </div>
-          </div>
-          <div class="flex-2 margin-t-50">
-            <div class="dis-flex items-center">
-              <span class="icon">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon7.png" alt="Valuecoders" 
-              width="44" height="54">
-              </span>
-              <span class="icon-txt">Complementary <br> development manager</span>
-            </div>
-          </div>
-          <div class="flex-2 margin-t-50">
-            <div class="dis-flex items-center">
-              <span class="icon">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/v2-icon8.png" alt="Valuecoders" 
-              width="50" height="50">
-              </span>
-              <span class="icon-txt">Ongoing internal L&D<br> programs</span>
-            </div>
-          </div>
+          </div>';    
+            }  
+          }
+          ?>
         </div>
       </div>
-      <div class="flex-2 text-right right-box">        
+      <div class="flex-2 text-right right-box">
+        <?php 
+        if( isset($whyVC['image']) && is_array( $whyVC['image'] ) ){
+          echo pxlGetPtag( $whyVC['image'] );
+        }else{
+        ?>        
         <picture>
           <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/hire-dash-image.webp">
           <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets-v2/images/hire-dash-image.png">
           <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets-v2/images/hire-dash-image.png" alt="Valuecoders" 
           width="778" height="525">
         </picture>        
+        <?php } ?>
       </div>
     </div>
     
