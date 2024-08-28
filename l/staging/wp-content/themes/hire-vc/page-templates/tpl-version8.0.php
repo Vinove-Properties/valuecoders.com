@@ -243,7 +243,7 @@ if( isset($whyVC['is_enable']) && ($whyVC['is_enable'] == "yes") ) :
       <div class="flex-2">
         <div class="dis-flex icon-box-outer">
           <?php 
-          if( isset($whyVC['listing']) && (count( $whyVC['listing'] ) > 0) ){
+          if( isset($whyVC['listing']) && is_array( $whyVC['listing'] ) && (count($whyVC['listing']) > 0) ){
             foreach( $whyVC['listing'] as $list ) {
             echo '<div class="flex-2 margin-t-50">
             <div class="dis-flex items-center">
