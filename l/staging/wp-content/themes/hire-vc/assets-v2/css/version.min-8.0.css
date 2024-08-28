@@ -2477,7 +2477,7 @@ small {
       display: none; }
       .vetting-process .process-tabs .tab-data .tab-contents .dis-flex {
         align-items: center;
-        justify-content: space-between; }
+        justify-content: center; }
         .vetting-process .process-tabs .tab-data .tab-contents .dis-flex .flex-2 {
           padding: 0 25px; }
           .vetting-process .process-tabs .tab-data .tab-contents .dis-flex .flex-2 h3 {
