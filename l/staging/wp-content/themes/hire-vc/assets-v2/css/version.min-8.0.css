@@ -2093,7 +2093,7 @@ small {
         background-size: 100%;
         position: absolute;
         right: 0;
-        top: 25px; }
+        bottom: 0; }
       .our-challenges .chal-section .chcta .yellow-btn {
         z-index: 999; }
   .our-challenges:after {
