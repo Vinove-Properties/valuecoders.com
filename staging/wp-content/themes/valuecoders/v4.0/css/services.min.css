@@ -2540,6 +2540,22 @@ body.page-template-template-testimonials .client-video-section iframe,
         .counter-column-section .dis-flex .right-sec .cir-sec .cir-box .text-wrap .fill-text {
           fill: rgba(155, 155, 155, 0.29);
           font-size: 10px; }
+.counter-column-section.bg-light {
+  background: #f8f8f8; }
+  .counter-column-section.bg-light h2 {
+    color: #05164d; }
+  .counter-column-section.bg-light .head-txt p {
+    color: #3f3f3f !important; }
+  .counter-column-section.bg-light .dis-flex .right-sec .cir-sec .cir-box .text-wrap .display {
+    color: #05164d; }
+  .counter-column-section.bg-light .dis-flex .right-sec .cir-sec .cir-box .text-wrap .paragraph {
+    color: #3f3f3f; }
+  .counter-column-section.bg-light .btn-sec .btn {
+    background: #05164d;
+    border-color: #05164d; }
+    .counter-column-section.bg-light .btn-sec .btn:hover {
+      border-color: #ffad00;
+      background: #ffad00; }
 
 @keyframes counterclockwise {
   0% {
