@@ -3527,6 +3527,8 @@ a {
                     content: "";
                     background: url(../header-images/arrow.svg) no-repeat center;
                     display: inline-block;
+                    position: relative;
+                    opacity: 1;
                     width: 14px;
                     height: 19px;
                     background-size: 100%;
