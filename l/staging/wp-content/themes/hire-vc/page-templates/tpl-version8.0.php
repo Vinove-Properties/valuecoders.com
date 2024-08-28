@@ -141,25 +141,16 @@ alt="Valuecoders" width="449" height="637">
   </div>
 </div>
 </div>
-
+<?php 
+$elmTestmonail = get_field('cl-testimonials');
+if( isset($elmTestmonail['is_enable']) && ($elmTestmonail['is_enable'] == "yes") ) :
+?>
 <section class="customer-testimonial-section padding-t-120 padding-b-120">
 <div class="container">
-  <div class="head-txt text-center">
-    <h2>What People Say After Using Our Services</h2>
-    <p>We always on delivering best-in-class app development services that will be loved by our clients.</p>
-  </div>
+  <div class="head-txt text-center"><?php echo $elmTestmonail['content']; ?></div>
   <?php 
-    // if( $isDmPage === true ){
-    //   $clReviews = get_field('dm-client-reviews');
-    // }else{
-    //   $clReviews = get_field('client-review-v4', 'option');  
-    // }
-    
     $clReviews = get_field('client-review-v4', 'option');
     if( $clReviews ){ 
-    // echo '<pre>';
-    // print_r($clReviews);
-    // echo '</pre>';  
     ?>
     <div class="glider-contain customer-testimonial-slider">
       <div class="glider" id="why-glider">
@@ -190,6 +181,7 @@ alt="Valuecoders" width="449" height="637">
     <?php } ?>
 </div>
 </section>
+<?php endif; ?>
 
 <?php 
 $searchEnds = get_field('card-one');
@@ -372,10 +364,7 @@ if( isset($vetPro['is_enable']) && ($vetPro['is_enable'] == "yes") ) :
     }
     echo '<div id="tab6" class="tab-contents">
         <div class="dis-flex">
-          <div class="flex-2">
-          <h3>Done!</h3>
-          <p>The top 1% of tech talent are hired and can start client delivery.</p>
-          </div>
+          <div class="flex-2">'.$vetPro['last-pro'].'</div>
         </div>
       </div>';  
     echo '</div>';
