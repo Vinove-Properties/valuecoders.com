@@ -410,119 +410,109 @@
             </li>
             <li class="menu-item-has-children">
               <a href="#">Solutions</a> <span class="arrow-btn"></span>
-            </li>
-            <li class="menu-item-has-children">
-              <a href="#">Whom We Serve</a> <span class="arrow-btn"></span>
               <div class="menu-mega">
                 <div class="container">
                   <div class="dis-flex tab-menu">
-                    <div id="menu-inds" class="dis-flex tab-contents">
+                    <div id="menu-sol" class="dis-flex tab-contents">
                       <div class="left-tabs">
                         <ul class="tab-nav">
-                          <li class="tab-link is-active">Industries</li>
-                          <li class="tab-link">Enterprises</li>
-                          <li class="tab-link">Product Companies</li>
-                          
+                          <li class="tab-link is-active">Solutions</li>
+                          <li class="tab-link">Industries</li>
                         </ul>
                       </div>
                       <div class="right-tabs">
                         <div class="tab-content is-active">
                           <div class="four-column">
-                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/ind-01.svg" class="menuicon" alt="menuicon"><span class="title">Industries</span>
-                            Innovative, future-proof software solutions</a>
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/ind-01.svg" class="menuicon" alt="menuicon"><span class="title">Solutions</span>
+                              Innovative, future-proof software solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
                               <div class="flex-4">
-                                
-                                <a href="#"><span class="title">Financial Services</span>
-                                Expert advice on technology</a>
-                                <a href="#"><span class="title">Banking</span>
-                                Choose the right technology</a>
-                                <a href="#"><span class="title">Insurance</span>
-                                Assistance from product conception</a>
-                                <a href="#"><span class="title">Lending</span>
-                                Validate your idea and ensure</a>
+                                <a href="<?php echo $site_url; ?>digital-financial-management"><span class="title">Financial Management</span>
+                                Strategic consulting for growth</a>
+                                <a href="<?php echo $site_url; ?>workforce-management-solutions"><span class="title">Workforce Management</span>
+                                Streamline workforce operations</a>
+                                <a href="<?php echo $site_url; ?>hr-software-solutions"><span class="title">Human Resource Management</span>
+                                Optimize HR processes</a>
+                                <a href="<?php echo $site_url; ?>elearning-solutions"><span class="title">eLearning</span>
+                                Digitalize your learning journey</a>
                               </div>
                               <div class="flex-4">
-                              
-                                <a href="#"><span class="title">Investment</span>
-                                Lead your business</a>
-                                <a href="#"><span class="title">FinTech</span>
-                                Update your web & Mobile</a>
-                                <a href="#"><span class="title">Payments</span>
-                                Effortless maintenance</a>
-                                <a href="#"><span class="title">Retail</span>
-                                Consult experts for big</a>
+                                <a href="<?php echo $site_url; ?>supply-chain-management"><span class="title">Supply Chain Management</span>
+                                Improve supply chain efficiency</a>
+                                <a href="<?php echo $site_url; ?>fleet-management"><span class="title">Fleet Management</span>
+                                Enhance fleet efficiency</a>
+                                <a href="<?php echo $site_url; ?>crm"><span class="title">CRM</span>
+                                Strengthen customer relationships</a>
+                                <a href="<?php echo $site_url; ?>operations-management-solutions"><span class="title">Operations Management</span>
+                                Optimize operational processes</a>
                               </div>
                               <div class="flex-4">
-                                
-                                <a href="#"><span class="title">Healthcare</span>
-                                Lead your business into digital</a>
-                                <a href="#"><span class="title">Manufacturing</span>
-                                Update your web and mobile</a>
-                                <a href="#"><span class="title">Professional Services</span>
-                                Effortless maintenance</a>
-                                <a href="#"><span class="title">Transportation & Logistics</span>
-                                Consult experts for big data</a>
+                                <a href="<?php echo $site_url; ?>asset-management"><span class="title">Asset Management</span>
+                                Improve asset optimization</a>
+                                <a href="<?php echo $site_url; ?>web-portal-development"><span class="title">Web Portals</span>
+                                Transform web experiences</a>
+                                <a href="<?php echo $site_url; ?>cms-development"><span class="title">Content Management System</span>
+                                Cost-effective content management</a>
+                                <a href="<?php echo $site_url; ?>erp"><span class="title">Enterprise Resource Planning</span>Enhance enterprise efficiency</a>
                               </div>
                               <div class="flex-4">
-                               
-                                <a href="#"><span class="title">Telecommunications</span>
-                                Lead your business into digital</a>
-                                <a href="#"><span class="title">Oil & Gas</span>
-                                Update your web and mobile</a>
-                                <a href="#"><span class="title">Construction</span>
-                                Effortless maintenance</a>
-                                <a href="#"><span class="title">Travel & Hospitality</span>
-                                Consult experts for big data</a>
+                                <a href="<?php echo $site_url; ?>document-management-services"><span class="title">Document Management</span>
+                                Digitize documents seamlessly</a>
+                                <a href="<?php echo $site_url; ?>rpa-development-services-company">
+                                <span class="title">Robotic Process Automation</span>
+                                Automate, Simplify, Excel</a>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div class="tab-content">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/serv-02.svg" class="menuicon" alt="menuicon"><span class="title">Enterprises</span>
-                            Innovative, future-proof software solutions</a>
+                        <div class="tab-content is-active">
+                          <div class="four-column">
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/serv-02.svg" class="menuicon" alt="menuicon"><span class="title">Industries</span>
+                              Innovative, future-proof software solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
-                              <div class="flex-2">
-                                <a href="#"><span class="title">Enterprise Software Development</span>
-                                Define policies, audit compliance, monitor quality</a>
-                                <a href="#"><span class="title">Specialized Enterprise Solutions</span>
-                                Ensure quality, performance, & functionality</a>
-                                <a href="#"><span class="title">Enterprise Digital Transformation</span>
-                                Validate mobile apps for optimal performance</a>
-                                <a href="#"><span class="title">Business Process Management</span>
-                                Make flawless apps for improved performance</a>
+                              <div class="flex-4">
+                                <a href="<?php echo $site_url; ?>industries/healthcare-software-development-services"><span class="title">Healthcare</span>
+                                Innovative digital solutions</a>
+                                <a href="<?php echo $site_url; ?>industries/isv-software-development-services"><span class="title">ISV</span>
+                                End-to-end software products</a>
+                                <a href="<?php echo $site_url; ?>industries/automotive-companies-software-development-services"><span class="title">Automotive</span>
+                                Result-driven automotive software</a>
+                                <a href="<?php echo $site_url; ?>industries/fintech-software-development-company"><span class="title">Fintech</span>
+                                Build end-to-end, robust solutions</a>
                               </div>
-                              <div class="flex-2">
-                                <a href="#"><span class="title">Business Automation</span>
-                                Testing experts for every stage </a>
-                                <a href="#"><span class="title">Crisis Management</span>
-                                Plan, build, & ship quality products</a>
-                               
+                              <div class="flex-4">
+                                <a href="<?php echo $site_url; ?>industries/retail-ecommerce-software-development"><span class="title">Retail & eCommerce</span>
+                                Feature-rich eCommerce solutions</a>
+                                <a href="<?php echo $site_url; ?>industries/manufacturing-software-development"><span class="title">Manufacturing</span>
+                                Next-gen manufacturing mastery</a>
+                                <a href="<?php echo $site_url; ?>industries/telecommunications"><span class="title">Telecommunications</span>
+                                Connect digital dimensions</a>
+                                <a href="<?php echo $site_url; ?>industries/education-elearning-software-development"><span class="title">Education & eLearning</span>
+                                Custom and platform-based LMS</a>
                               </div>
-                            </div>
-                          </div>
-                          <div class="other-menu">
-                            <div class="tab-title"><a href="#"><span class="title">Client Type</span>
-                            Innovative, future-proof software solutions</a>
-                            </div>
-                            <div class="flex-1 menu-column">
-                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
-                              Custom software for business goals</a>
-                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
-                              End-to-end automation solutions</a>
-                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
-                              Expand with white-label services</a>
-                              
+                              <div class="flex-4">
+                                <a href="<?php echo $site_url; ?>industries/retail-ecommerce-software-development"><span class="title">Retail & eCommerce</span>
+                                Feature-rich eCommerce solutions</a>
+                                <a href="<?php echo $site_url; ?>industries/manufacturing-software-development"><span class="title">Manufacturing</span>
+                                Next-gen manufacturing mastery</a>
+                                <a href="<?php echo $site_url; ?>industries/telecommunications"><span class="title">Telecommunications</span>
+                                Connect digital dimensions</a>
+                                <a href="<?php echo $site_url; ?>industries/education-elearning-software-development"><span class="title">Education & eLearning</span>
+                                Custom and platform-based LMS</a>
+                              </div>
+                              <div class="flex-4">
+                                <a href="<?php echo $site_url; ?>industries/professional-services-software-development"><span class="title">Professional Services</span>Craft client success</a>
+                                <a href="<?php echo $site_url; ?>industries/oil-gas"><span class="title">Oil & Gas</span>Innovate energy engagements</a>
+                              </div>
                             </div>
                           </div>
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
                             <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/ind-03.svg" class="menuicon" alt="menuicon"><span class="title">Software Startups & Product Companies</span>
-                            Innovative, future-proof software solutions</a>
+                              Innovative, future-proof software solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
                               <div class="flex-2">
@@ -544,13 +534,12 @@
                                 Plan, build, & ship quality products</a>
                                 <a href="#"><span class="title">SaaS Development</span>
                                 Plan, build, & ship quality products</a>
-                               
                               </div>
                             </div>
                           </div>
                           <div class="other-menu">
                             <div class="tab-title"><a href="#"><span class="title">Client Type</span>
-                            Innovative, future-proof software solutions</a>
+                              Innovative, future-proof software solutions</a>
                             </div>
                             <div class="flex-1 menu-column">
                               <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
@@ -559,28 +548,569 @@
                               End-to-end automation solutions</a>
                               <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
-                              
                             </div>
                           </div>
                         </div>
-                      
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-
-
-
+            </li>
+            <li class="menu-item-has-children">
+              <a href="#">Whom We Serve</a> <span class="arrow-btn"></span>
+              <div class="menu-mega">
+                <div class="container">
+                  <div class="dis-flex tab-menu">
+                    <div id="menu-inds" class="dis-flex tab-contents">
+                      <div class="left-tabs">
+                        <ul class="tab-nav">
+                          <li class="tab-link is-active">Industries</li>
+                          <li class="tab-link">Enterprises</li>
+                          <li class="tab-link">Product Companies</li>
+                        </ul>
+                      </div>
+                      <div class="right-tabs">
+                        <div class="tab-content is-active">
+                          <div class="four-column">
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/ind-01.svg" class="menuicon" alt="menuicon"><span class="title">Industries</span>
+                              Innovative, future-proof software solutions</a>
+                            </div>
+                            <div class="dis-flex menu-column">
+                              <div class="flex-4">
+                                <a href="#"><span class="title">Financial Services</span>
+                                Expert advice on technology</a>
+                                <a href="#"><span class="title">Banking</span>
+                                Choose the right technology</a>
+                                <a href="#"><span class="title">Insurance</span>
+                                Assistance from product conception</a>
+                                <a href="#"><span class="title">Lending</span>
+                                Validate your idea and ensure</a>
+                              </div>
+                              <div class="flex-4">
+                                <a href="#"><span class="title">Investment</span>
+                                Lead your business</a>
+                                <a href="#"><span class="title">FinTech</span>
+                                Update your web & Mobile</a>
+                                <a href="#"><span class="title">Payments</span>
+                                Effortless maintenance</a>
+                                <a href="#"><span class="title">Retail</span>
+                                Consult experts for big</a>
+                              </div>
+                              <div class="flex-4">
+                                <a href="#"><span class="title">Healthcare</span>
+                                Lead your business into digital</a>
+                                <a href="#"><span class="title">Manufacturing</span>
+                                Update your web and mobile</a>
+                                <a href="#"><span class="title">Professional Services</span>
+                                Effortless maintenance</a>
+                                <a href="#"><span class="title">Transportation & Logistics</span>
+                                Consult experts for big data</a>
+                              </div>
+                              <div class="flex-4">
+                                <a href="#"><span class="title">Telecommunications</span>
+                                Lead your business into digital</a>
+                                <a href="#"><span class="title">Oil & Gas</span>
+                                Update your web and mobile</a>
+                                <a href="#"><span class="title">Construction</span>
+                                Effortless maintenance</a>
+                                <a href="#"><span class="title">Travel & Hospitality</span>
+                                Consult experts for big data</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-content">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/serv-02.svg" class="menuicon" alt="menuicon"><span class="title">Enterprises</span>
+                              Innovative, future-proof software solutions</a>
+                            </div>
+                            <div class="dis-flex menu-column">
+                              <div class="flex-2">
+                                <a href="#"><span class="title">Enterprise Software Development</span>
+                                Define policies, audit compliance, monitor quality</a>
+                                <a href="#"><span class="title">Specialized Enterprise Solutions</span>
+                                Ensure quality, performance, & functionality</a>
+                                <a href="#"><span class="title">Enterprise Digital Transformation</span>
+                                Validate mobile apps for optimal performance</a>
+                                <a href="#"><span class="title">Business Process Management</span>
+                                Make flawless apps for improved performance</a>
+                              </div>
+                              <div class="flex-2">
+                                <a href="#"><span class="title">Business Automation</span>
+                                Testing experts for every stage </a>
+                                <a href="#"><span class="title">Crisis Management</span>
+                                Plan, build, & ship quality products</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="other-menu">
+                            <div class="tab-title"><a href="#"><span class="title">Client Type</span>
+                              Innovative, future-proof software solutions</a>
+                            </div>
+                            <div class="flex-1 menu-column">
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              Custom software for business goals</a>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              End-to-end automation solutions</a>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              Expand with white-label services</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-content">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/ind-03.svg" class="menuicon" alt="menuicon"><span class="title">Software Startups & Product Companies</span>
+                              Innovative, future-proof software solutions</a>
+                            </div>
+                            <div class="dis-flex menu-column">
+                              <div class="flex-2">
+                                <a href="#"><span class="title">Startup Consulting</span>
+                                Define policies, audit compliance, monitor quality</a>
+                                <a href="#"><span class="title">Startup Software Development</span>
+                                Ensure quality, performance, & functionality</a>
+                                <a href="#"><span class="title">How to Launch a Software Startup</span>
+                                Validate mobile apps for optimal performance</a>
+                                <a href="#"><span class="title">How to Start a SaaS Startup</span>
+                                Make flawless apps for improved performance</a>
+                              </div>
+                              <div class="flex-2">
+                                <a href="#"><span class="title">How to Hire Startup Developers</span>
+                                Testing experts for every stage  </a>
+                                <a href="#"><span class="title">Software Product Development</span>
+                                Plan, build, & ship quality products</a>
+                                <a href="#"><span class="title">SaaS Consulting</span>
+                                Plan, build, & ship quality products</a>
+                                <a href="#"><span class="title">SaaS Development</span>
+                                Plan, build, & ship quality products</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="other-menu">
+                            <div class="tab-title"><a href="#"><span class="title">Client Type</span>
+                              Innovative, future-proof software solutions</a>
+                            </div>
+                            <div class="flex-1 menu-column">
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              Custom software for business goals</a>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              End-to-end automation solutions</a>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              Expand with white-label services</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
             <li class="menu-item-has-children">
               <a href="#">Technologies</a> <span class="arrow-btn"></span>
+              <div class="menu-mega">
+                <div class="container">
+                  <div class="dis-flex tab-menu">
+                    <div id="menu-tech" class="dis-flex tab-contents">
+                      <div class="left-tabs">
+                        <ul class="tab-nav">
+                          <li class="tab-link is-active">Software Development</li>
+                          <li class="tab-link">Application Development</li>
+                          <li class="tab-link">Dedicated Software Teams</li>
+                          <li class="tab-link">eCommerce</li>
+                          <li class="tab-link">QA & Testing</li>
+                          <li class="tab-link">Cloud Services</li>
+                          <li class="tab-link">Data Engineering</li>
+                          <li class="tab-link">Artificial Intelligence</li>
+                        </ul>
+                      </div>
+                      <div class="right-tabs">
+                        <div class="tab-content is-active">
+                          <div class="four-column">
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/serv-01.svg" class="menuicon" alt="menuicon"><span class="title">Software Development</span>
+                              Innovative, future-proof software solutions</a>
+                            </div>
+                            <div class="dis-flex menu-column">
+                              <div class="flex-4">
+                                <span class="head">Development</span>
+                                <a href="#"><span class="title">Web App Development</span>
+                                Innovative browser applications</a>
+                                <a href="#"><span class="title">Large-Scale Software</span>
+                                Choose the right technology</a>
+                                <a href="#"><span class="title">MVP Development</span>
+                                Assistance from product conception</a>
+                                <a href="#"><span class="title">Application Development</span>
+                                Validate your idea and ensure</a>
+                                <a href="#" class="view-more">View More</a>
+                              </div>
+                              <div class="flex-4">
+                                <span class="head">Consulting</span>
+                                <a href="#"><span class="title">Software Consulting</span>
+                                Lead your business</a>
+                                <a href="#"><span class="title">SOA Consulting</span>
+                                Update your web & Mobile</a>
+                                <a href="#"><span class="title">Agile Consulting</span>
+                                Effortless maintenance</a>
+                                <a href="#"><span class="title">DevOps Consulting</span>
+                                Validate your idea and ensure</a>
+                                <a href="#" class="view-more">View More</a>
+                              </div>
+                              <div class="flex-4">
+                                <span class="head">Maintenance & Support</span>
+                                <a href="#"><span class="title">Software Maintenance</span>
+                                Lead your business into digital</a>
+                                <a href="#"><span class="title">Application Maintenance</span>
+                                Update your web and mobile</a>
+                                <a href="#"><span class="title">Application Modernization</span>
+                                Effortless maintenance</a>
+                                <a href="#"><span class="title">Code Review</span>
+                                Consult experts for big data</a>
+                                <a href="#" class="view-more">View More</a>
+                              </div>
+                              <div class="flex-4">
+                                <span class="head">Delivery Models</span>
+                                <a href="#"><span class="title">Software Outsourcing</span>
+                                Lead your business into digital</a>
+                                <a href="#"><span class="title">IT Staff Augmentation</span>
+                                Update your web and mobile</a>
+                                <a href="#"><span class="title">Nearshore Staff Augmentation</span>
+                                Effortless maintenance</a>
+                                <a href="#"><span class="title">Offshore Developers for Hire</span>
+                                Consult experts for big data</a>
+                                <a href="#" class="view-more">View More</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-content">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/serv-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Development</span>
+                              Skilled developers, transparent billing</a>
+                            </div>
+                            <div class="dis-flex menu-column">
+                              <div class="flex-2">
+                                <a href="#"><span class="title">Web App Development</span>
+                                Innovative browser applications</a>
+                                <a href="#"><span class="title">Backend Development</span>
+                                Robust server/client expertise</a>
+                                <a href="#"><span class="title">Website & Portal Development</span>
+                                Secure, user-centric solutions</a>
+                                <a href="#"><span class="title">Frontend Development</span>
+                                Flawless UI/UX creation</a>
+                              </div>
+                              <div class="flex-2">
+                                <a href="#"><span class="title">Mobile App Development</span>
+                                Seamless mobile experiences</a>
+                                <a href="#"><span class="title">Cross-Platform App Development</span>
+                                Unified multi-platform solutions</a>
+                                <a href="#"><span class="title">API Development</span>
+                                Efficient API management</a>
+                                <a href="#"><span class="title">Full Stack Development</span>
+                                Secure scalable applications</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="other-menu">
+                            <div class="tab-title"><a href="#"><span class="title">Other Services</span>
+                              Innovative, future-proof software solutions</a>
+                            </div>
+                            <div class="flex-1 menu-column">
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
+                              Comprehensive support solutions</a>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Modernization</span>
+                              Update your applications</a>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">OTT App Development</span>
+                              Monetize your content</a>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Application Development</span>
+                              Cloud-based software solutions</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-content">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/serv-03.svg" class="menuicon" alt="menuicon"><span class="title">Dedicated Software Teams </span>
+                              Comprehensive QA & Testing solutions</a>
+                            </div>
+                            <div class="dis-flex menu-column">
+                              <div class="flex-2">
+                                <span class="head">Solutions</span>
+                                <a href="#"><span class="title">Offshore Development Center</span>
+                                Unleash the power of offshore development</a>
+                                <a href="#"><span class="title">Offshore Software Development</span>
+                                Leverage talent, cost-effectiveness</a>
+                                <a href="#"><span class="title">Nearshore Software Development</span>
+                                Technical expertise, shared time zone</a>
+                              </div>
+                              <div class="flex-2">
+                                <span class="head">Solutions</span>
+                                <a href="#"><span class="title">Staff Augmentation</span>
+                                Access top technical resources on-demand</a>
+                                <a href="#"><span class="title">Hire Software Developers</span>
+                                Work with skilled & dedicated developers</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="other-menu">
+                            <div class="tab-title"><a href="#"><span class="title">Client Type</span>
+                              Innovative, future-proof software solutions</a>
+                            </div>
+                            <div class="flex-1 menu-column">
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              Custom software for business goals</a>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              End-to-end automation solutions</a>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              Expand with white-label services</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-content">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/serv-04.svg" class="menuicon" alt="menuicon"><span class="title">eCommerce</span>
+                              Innovative, future-proof software solutions</a>
+                            </div>
+                            <div class="dis-flex menu-column">
+                              <div class="flex-2">
+                                <span class="head">EXPERTISE</span>
+                                <a href="#"><span class="title">eCommerce Consulting</span>
+                                Innovative, future-proof software solutions</a>
+                                <a href="#"><span class="title">eCommerce Web Design</span>
+                                Skilled developers, transparent billing</a>
+                                <a href="#"><span class="title">Mobile App Testing</span>
+                                Validate mobile apps for optimal performance</a>
+                                <a href="#"><span class="title">Web App Testing</span>
+                                Make flawless apps for improved performance</a>
+                              </div>
+                              <div class="flex-2">
+                                <span class="head">TECHNOLOGY</span>
+                                <a href="#"><span class="title">Magento</span>
+                                Testing experts for every stage </a>
+                                <a href="#"><span class="title">Shopify</span>
+                                Next-level solutions for B2B & B2C</a>
+                                <a href="#"><span class="title">WooCommerce</span>
+                                Build foundations with data</a>
+                                <a href="#"><span class="title">OpenCart</span>
+                                Drive technological innovation</a>    
+                              </div>
+                            </div>
+                          </div>
+                          <div class="other-menu">
+                            <div class="tab-title"><a href="#"><span class="title">Solutions</span>
+                              Innovative, future-proof software solutions</a>
+                            </div>
+                            <div class="flex-1 menu-column">
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">B2C eCommerce</span>
+                              Custom software for business goals</a>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">B2B eCommerce</span>
+                              End-to-end automation solutions</a>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">Web Portals</span>
+                              Expand with white-label services</a>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Supply Chain Automation</span>
+                              Expand with white-label services</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-content">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/serv-05.svg" class="menuicon" alt="menuicon"><span class="title">QA & Testing</span>
+                              Innovative, future-proof software solutions</a>
+                            </div>
+                            <div class="dis-flex menu-column">
+                              <div class="flex-2">
+                                <a href="#"><span class="title">QA Consulting</span>
+                                Define policies, audit compliance, monitor quality</a>
+                                <a href="#"><span class="title">Application Testing</span>
+                                Ensure quality, performance, & functionality</a>
+                                <a href="#"><span class="title">Mobile App Testing</span>
+                                Validate mobile apps for optimal performance</a>
+                                <a href="#"><span class="title">Web App Testing</span>
+                                Make flawless apps for improved performance</a>
+                              </div>
+                              <div class="flex-2">
+                                <a href="#"><span class="title">Testing Teams</span>
+                                Testing experts for every stage </a>
+                                <a href="#"><span class="title">Hire Software QA</span>
+                                Plan, build, & ship quality products</a>
+                                <a href="#"><span class="title">QA Outsourcing</span>
+                                Hire experts for flawless performance</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="other-menu">
+                            <div class="tab-title"><a href="#"><span class="title">Client Type</span>
+                              Innovative, future-proof software solutions </a>
+                            </div>
+                            <div class="flex-1 menu-column">
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              Custom software for business goals</a>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              End-to-end automation solutions</a>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              Expand with white-label services</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-content">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/serv-06.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Services</span>
+                              Innovative, future-proof software solutions</a>
+                            </div>
+                            <div class="dis-flex menu-column">
+                              <div class="flex-2">
+                                <a href="#"><span class="title">Cloud Strategy & Consulting</span>
+                                Strategic Cloud Guidance</a>
+                                <a href="#"><span class="title">DevOps as a Service</span>
+                                Effortless DevOps Integration</a>
+                                <a href="#"><span class="title">24x7 Managed Services</span>
+                                Round-the-Clock Seamless Service</a>
+                              </div>
+                              <div class="flex-2">
+                                <a href="#"><span class="title">Cloud FinOps Services</span>
+                                Cloud Savings Made Simple</a>
+                                <a href="#"><span class="title">Cloud Migration</span>
+                                Seamless, Swift Cloud Transition
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="other-menu">
+                            <div class="tab-title"><a href="#"><span class="title">Client Type</span>
+                              Innovative, future-proof software solutions </a>
+                            </div>
+                            <div class="flex-1 menu-column">
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              Custom software for business goals</a>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              End-to-end automation solutions</a>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              Expand with white-label services</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-content">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Data Engineering</span>
+                              Innovative, future-proof software solutions</a>
+                            </div>
+                            <div class="dis-flex menu-column">
+                              <div class="flex-2">
+                                <span class="head">Business Intelligence (BI)</span>
+                                <a href="#"><span class="title">BI Consulting</span>
+                                Guiding success with BI insights</a>
+                                <a href="#"><span class="title">BI Implementation</span>
+                                Implementing BI, driving growth</a>
+                                <a href="#"><span class="title">Microsoft Power BI</span>
+                                Powering decisions with Microsoft BI</a>
+                                <a href="#"><span class="title">BI Reporting & Dashboard</span>
+                                Visualizing success with BI</a>
+                                <a href="#" class="view-more">View More</a>
+                              </div>
+                              <div class="flex-2">
+                                <span class="head">DATA SCIENCE & ANALYTICS</span>
+                                <a href="#"><span class="title">Data Science Consulting</span>
+                                Transforming data into insights</a>
+                                <a href="#"><span class="title">Hire Expert Data Scientists</span>
+                                Hire brilliance, harness data power
+                                </a>
+                                <a href="#"><span class="title">Big Data Solutions</span>
+                                Harnessing power of big data
+                                </a>
+                                <a href="#"><span class="title">Data Analytics Consulting</span>
+                                Transforming data into action
+                                </a>
+                                <a href="#" class="view-more">View More</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="other-menu">
+                            <div class="tab-title"><a href="#"><span class="title">Client Type</span>
+                              Innovative, future-proof software solutions </a>
+                            </div>
+                            <div class="flex-1 menu-column">
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              Custom software for business goals</a>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              End-to-end automation solutions</a>
+                              <a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              Expand with white-label services</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-content">
+                          <div class="four-column">
+                            <div class="tab-title"><a href="#"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Artificial Intelligence</span>
+                              Innovative, future-proof software solutions</a>
+                            </div>
+                            <div class="dis-flex menu-column">
+                              <div class="flex-4">
+                                <span class="head">Artificial Intelligence</span>
+                                <a href="#"><span class="title">AI Development</span>
+                                Crafting future with AI</a>
+                                <a href="#"><span class="title">AI Consulting</span>
+                                Choose the right technology</a>
+                                <a href="#"><span class="title">AI Chatbot Development</span>
+                                Transform communication </a>
+                                <a href="#"><span class="title">AI-Powered  Development</span>
+                                Innovative AI mobile apps</a>
+                                <a href="#" class="view-more">View More</a>
+                              </div>
+                              <div class="flex-4">
+                                <span class="head">ML & Advanced Analytics</span>
+                                <a href="#"><span class="title">ML Development</span>
+                                Learning today, leading</a>
+                                <a href="#"><span class="title">Computer Vision Solutions</span>
+                                Seeing beyond with AI</a>
+                                <a href="#"><span class="title">MLOps Consulting</span>
+                                Optimizing ML, maximizing </a>
+                                <a href="#"><span class="title">RPA Services</span>
+                                Efficient RPA automation</a>
+                                <a href="#" class="view-more">View More</a>
+                              </div>
+                              <div class="flex-4">
+                                <span class="head">Generative AI</span>
+                                <a href="#"><span class="title">Generative AI Development</span>
+                                Creating with AI innovation</a>
+                                <a href="#"><span class="title">Generative AI Integration</span>
+                                Integrating creativity with AI</a>
+                                <a href="#"><span class="title">Custom GPT Solutions</span>
+                                Optimizing ML, maximizing </a>
+                                <a href="#"><span class="title">RPA Services</span>
+                                Efficient RPA automation</a>
+                                <a href="#" class="view-more">View More</a>
+                              </div>
+                              <div class="flex-4">
+                                <span class="head">Expertise</span>
+                                <a href="#"><span class="title">LLM Services</span>
+                                Advanced language model solutions</a>
+                                <a href="#"><span class="title">Adaptive AI Development</span>
+                                Custom, adaptive AI solutions</a>
+                                <a href="#"><span class="title">Custom GPT Solutions</span>
+                                Personalized GPT technologies </a>
+                                <a href="#"><span class="title">Transformer Model Development</span>
+                                Cutting-edge transformer tech</a>
+                                <a href="#" class="view-more">View More</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
             <li class="menu-item-has-children">
               <a href="#">Case Studies</a> <span class="arrow-btn"></span>
             </li>
             <li class="menu-item-has-children">
               <a href="#">Company</a> <span class="arrow-btn"></span>
+              <div class="menu-mega small-menu">
+                <a href="<?php echo $site_url; ?>about"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/comp-01.svg" class="menuicon" alt="menuicon">Overview</a>
+                <a href="<?php echo $site_url; ?>in-media"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/comp-02.svg" class="menuicon" alt="menuicon">In Media</a>
+                <a href="<?php echo $site_url; ?>testimonials"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/comp-03.svg" class="menuicon" alt="menuicon">Clients & Testimonials</a>
+                <a href="<?php echo $site_url; ?>careers"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/comp-04.svg" class="menuicon" alt="menuicon">Careers</a>
+                <a href="https://www.valuecoders.com/blog/" target="_blank"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/header-images/comp-05.svg" class="menuicon" alt="menuicon">Blog</a>
+              </div>
             </li>
           </ul>
         </nav>
