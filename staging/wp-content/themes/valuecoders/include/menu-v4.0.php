@@ -34,6 +34,7 @@
       <div class="header-item-right">
         <nav class="menu mob-nav" id="menu">
           <ul>
+            <!-- Services Menu Starts -->
             <li class="menu-item-has-children">
               <a href="<?php echo $site_url; ?>">Services</a> <span class="arrow-btn"></span>
               <div class="menu-mega">
@@ -428,6 +429,10 @@
                 </div>
               </div>
             </li>
+            <!-- //Services Menu Ends -->
+
+            <?php if( $mcat === "demand-teams" ) : ?>
+            <!-- Hire Menu Starts -->
             <li class="menu-item-has-children">
               <a href="<?php echo $site_url; ?>">Hire</a> <span class="arrow-btn"></span>
               <div class="menu-mega">
@@ -833,6 +838,14 @@
                 </div>
               </div>
             </li>
+            <!-- //Hire Menu Ends -->
+            <?php endif; ?>
+
+            <?php 
+            // Hide Solution Menu Is Page Catrgoty is : eCommerce
+            if(!in_array($mcat,['ecommerce','demand-teams','agencies','startups','devops','data-science','ai-ml'])) :
+            ?>
+            <!-- Solution Menu Starts -->
             <li class="menu-item-has-children">
               <a href="<?php echo $site_url; ?>">Solutions</a> <span class="arrow-btn"></span>
               <div class="menu-mega">
@@ -940,6 +953,9 @@
                 </div>
               </div>
             </li>
+            <!-- //Solution Menu Ends -->
+            <?php endif; ?>
+
             <li class="menu-item-has-children">
               <a href="<?php echo $site_url; ?>">Who We Serve</a> <span class="arrow-btn"></span>
               <div class="menu-mega">
@@ -1089,6 +1105,11 @@
                 </div>
               </div>
             </li>
+
+            <?php 
+            if( !in_array($mcat, ['devops', 'demand-teams', 'qa-testing', 'enterprises', 'data-science', 'ai-ml']) ) : 
+            ?>
+            <!-- Technologies Menus Starts -->
             <li class="menu-item-has-children">
               <a href="<?php echo $site_url; ?>">Technologies</a> <span class="arrow-btn"></span>
               <div class="menu-mega">
@@ -1215,7 +1236,13 @@
                 </div>
               </div>
             </li>
+            <!-- //Technologies Menus Ends -->
+            <?php endif; ?>
+            
+            <?php if( !in_array( $mcat, ['demand-teams', 'qa-testing'] ) ) : ?>
             <li class="menu-item-has-children"><a href="<?php echo $site_url; ?>">Case Studies</a></li>
+            <?php endif; ?>
+            
             <li class="menu-item-has-children">
               <a href="<?php echo $site_url; ?>">Company</a> <span class="arrow-btn"></span>
               <div class="menu-mega small-menu">
