@@ -57,7 +57,7 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                             <div class="dis-flex menu-column">
                               <div class="flex-4">
                                 <span class="head">Development</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Web App Development</span>
+                                <a href="<?php echo $site_url; ?>web-application-development"><span class="title">Web App Development</span>
                                 Innovative browser applications</a>
                                 <a href="<?php echo $site_url; ?>"><span class="title">Large-Scale Software</span>
                                 Choose the right technology</a>
