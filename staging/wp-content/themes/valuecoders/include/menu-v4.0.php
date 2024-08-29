@@ -705,18 +705,18 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                             </div>
                             <div class="dis-flex menu-column">
                               <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>android-app-development-company-india"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>angular-js-development-company-india"><span class="title">Angular</span></a>
+                                <a href="<?php echo $site_url; ?>top-drupal-development-services-company-india"><span class="title">Drupal</span></a>
+                                <a href="<?php echo $site_url; ?>flutter-app-development-company"><span class="title">Flutter</span></a>
+                                <a href="<?php echo $site_url; ?>ios-application-development-company-india"><span class="title">iOs / iPhone</span></a>
                               </div>
                               <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>java-web-application-development-company"><span class="title">Java</span></a>
+                                <a href="<?php echo $site_url; ?>top-laravel-development-services-company-india"><span class="title">Lavavel</span></a>
+                                <a href="<?php echo $site_url; ?>net-maui-app-development"><span class="title">.NET MAUI</span></a>
+                                <a href="<?php echo $site_url; ?>aspdotnet-development-company-india"><span class="title">.NET</span></a>
+                                <a href="<?php echo $site_url; ?>node-js-development-company-india"><span class="title">Node</span></a>
                               </div>
                             </div>
                           </div>
@@ -741,18 +741,20 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                             </div>
                             <div class="dis-flex menu-column">
                               <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>iot-development-company"><span class="title">Internet of Things</span></a>
+                                <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><span class="title">Big Data</span></a>
+                                <a href="<?php echo $site_url; ?>data-engineering/data-science-consulting-services"><span class="title">Data Science</span></a>
+                                <a href="<?php echo $site_url; ?>data-analytics"><span class="title">Data Analytics</span></a>
+                                <a href="<?php echo $site_url; ?>ai"><span class="title">AI & Machine Learning</span></a>
+                                <a href="<?php echo $site_url; ?>blockchain-development-company"><span class="title">Blockchain</span></a>
                               </div>
                               <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>ar-vr-development-company"><span class="title">AR/ VR</span></a>
+                                <a href="<?php echo $site_url; ?>machine-learning/computer-vision-software-development"><span class="title">Computer Vision</span></a>
+                                <a href="<?php echo $site_url; ?>ott-development"><span class="title">OTT</span></a>
+                                <a href="<?php echo $site_url; ?>machine-learning/rpa-development-services-company"><span class="title">RPA</span></a>
+                                <a href="<?php echo $site_url; ?>serverless-development"><span class="title">Serverless</span></a>
+                                <a href="<?php echo $site_url; ?>chatbot-development-company"><span class="title">Chatbot</span></a>
                               </div>
                             </div>
                           </div>
@@ -777,18 +779,17 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                             </div>
                             <div class="dis-flex menu-column">
                               <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>salesforce"><span class="title">Salesforce</span></a>
+                                <a href="<?php echo $site_url; ?>microsoft-power-bi-development-services-company"><span class="title">Microsoft Power BI</span></a>
+                                <a href="<?php echo $site_url; ?>cloud-services/amazon-cloud"><span class="title">Amazon Web Services</span></a>
+                                <a href="<?php echo $site_url; ?>microsoft-power-platform"><span class="title">Microsoft Power Platforms</span></a>
+                                <a href="<?php echo $site_url; ?>microsoft-dynamics"><span class="title">Microsoft Dynamics</span></a>
                               </div>
                               <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>microsoft-powerapp-development"><span class="title">PowerApps</span></a>
+                                <a href="<?php echo $site_url; ?>sharepoint-application-development-services-company"><span class="title">SharePoint</span></a>
+                                <a href="<?php echo $site_url; ?>cloud-services/azure-cloud"><span class="title">Azure</span></a>
+                                <a href="<?php echo $site_url; ?>odoo-development-services"><span class="title">Odoo</span></a>
                               </div>
                             </div>
                           </div>
@@ -813,9 +814,7 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                 </div>
               </div>
             </li>
-            <li class="menu-item-has-children">
-              <a href="<?php echo $site_url; ?>">Case Studies</a> <span class="arrow-btn"></span>
-            </li>
+            <li class="menu-item-has-children"><a href="<?php echo $site_url; ?>">Case Studies</a></li>
             <li class="menu-item-has-children">
               <a href="<?php echo $site_url; ?>">Company</a> <span class="arrow-btn"></span>
               <div class="menu-mega small-menu">
