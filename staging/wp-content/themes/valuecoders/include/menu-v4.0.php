@@ -428,7 +428,7 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
               <div class="menu-mega">
                 <div class="container">
                   <div class="dis-flex tab-menu">
-                    <div id="menu-sol" class="dis-flex tab-contents">
+                    <div id="mnu-sol" class="dis-flex tab-contents">
                       <div class="left-tabs">
                         <ul class="tab-nav">
                           <li class="tab-link is-active">Solutions</li>
@@ -481,7 +481,7 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                             </div>
                           </div>
                         </div>
-                        <div class="tab-content is-active">
+                        <div class="tab-content">
                           <div class="four-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-02.svg" class="menuicon" alt="menuicon"><span class="title">Industries</span>
                               Innovative, future-proof software solutions</a>
@@ -523,55 +523,14 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="tab-content">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/ind-03.svg" class="menuicon" alt="menuicon"><span class="title">Software Startups & Product Companies</span>
-                              Innovative, future-proof software solutions</a>
-                            </div>
-                            <div class="dis-flex menu-column">
-                              <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>"><span class="title">Startup Consulting</span>
-                                Define policies, audit compliance, monitor quality</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Startup Software Development</span>
-                                Ensure quality, performance, & functionality</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">How to Launch a Software Startup</span>
-                                Validate mobile apps for optimal performance</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">How to Start a SaaS Startup</span>
-                                Make flawless apps for improved performance</a>
-                              </div>
-                              <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>"><span class="title">How to Hire Startup Developers</span>
-                                Testing experts for every stage  </a>
-                                <a href="<?php echo $site_url; ?>outsource-software-product-development-services"><span class="title">Software Product Development</span>
-                                Plan, build, & ship quality products</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">SaaS Consulting</span>
-                                Plan, build, & ship quality products</a>
-                                <a href="<?php echo $site_url; ?>saas-consulting-development-services"><span class="title">SaaS Development</span>
-                                Plan, build, & ship quality products</a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="other-menu">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Client Type</span>
-                              Innovative, future-proof software solutions</a>
-                            </div>
-                            <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
-                              Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
-                              End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
-                              Expand with white-label services</a>
-                            </div>
-                          </div>
-                        </div>
+                        </div>                        
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </li>
+
             <li class="menu-item-has-children">
               <a href="<?php echo $site_url; ?>">Whom We Serve</a> <span class="arrow-btn"></span>
               <div class="menu-mega">
