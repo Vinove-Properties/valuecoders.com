@@ -5006,7 +5006,8 @@ a {
   .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents {
     min-height: 520px; }
     .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs .tab-nav li {
-      font-size: 15px; }
+      font-size: 15px;
+      padding: 13px 35px 13px 15px; }
     .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .title {
       font-size: 15px;
       line-height: 24px; }
