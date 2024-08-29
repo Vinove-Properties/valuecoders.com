@@ -4866,6 +4866,7 @@ a {
                     background-size: 100%;
                     vertical-align: middle;
                     margin-left: 10px;
+                    bottom: auto;
                     transition: all 0.3s ease-in-out; }
                   .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content a.view-more:hover {
                     background-color: transparent; }
