@@ -452,7 +452,7 @@
                       <div class="right-tabs">
                         <div class="tab-content is-active">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-backend-developers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Backend</span>Innovative, future-proof software solutions</a>
                             </div>
@@ -494,7 +494,7 @@
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-front-end-developers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Frontend</span>Innovative, future-proof software solutions</a>
                             </div>
@@ -528,7 +528,7 @@
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-cms-developers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">CMS</span>Innovative, future-proof software solutions</a>
                             </div>
@@ -562,7 +562,7 @@
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-mobile-app-developers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Mobile</span>Innovative, future-proof software solutions</a>
                             </div>
@@ -597,7 +597,7 @@
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-ecommerce-developers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">eCommerce</span>Innovative, future-proof software solutions</a>
                             </div>
@@ -627,7 +627,7 @@
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-devops-developers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">DevOps</span>Innovative, future-proof software solutions</a>
                             </div>
@@ -657,7 +657,7 @@
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-full-stack-developers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Full Stack</span>Innovative, future-proof software solutions</a>
                             </div>
@@ -687,7 +687,7 @@
                         </div>
                         <div class="tab-content">
                           <div class="three-column mob-hide">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-blockchain-developers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Blockchain</span>Innovative, future-proof software solutions</a>
                             </div>
@@ -718,7 +718,7 @@
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire/digital-marketing-experts">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Digital Marketing</span>Innovative, future-proof software solutions</a>
                             </div>
@@ -750,7 +750,7 @@
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">AI/ML</span>Innovative, future-proof software solutions</a>
                             </div>
@@ -797,7 +797,7 @@
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>services/low-code-no-code">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Low - Code</span>Innovative, future-proof software solutions</a>
                             </div>
