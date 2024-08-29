@@ -1249,9 +1249,12 @@ function _morePPCTable(){
             n = 0,
             r = !1,
             l = function (e, t) {
+                if( !isMobileDevice() ){
                 e.addEventListener("mouseover", function (e) {
                     e.preventDefault(), o(t);
-                });
+                });    
+                }
+                
             },
             o = function (e) {
                 e !== n && e >= 0 && e <= s.length && (s[n].classList.remove("is-active"), s[e].classList.add("is-active"), a[n].classList.remove("is-active"), a[e].classList.add("is-active"), (n = e));
