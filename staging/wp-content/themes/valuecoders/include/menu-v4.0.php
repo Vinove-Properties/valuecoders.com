@@ -720,7 +720,7 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                               </div>
                             </div>
                           </div>
-                          <div class="other-menu">
+                          <div class="other-menu mob-hide">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Client Type</span>
                               Innovative, future-proof software solutions</a>
                             </div>
@@ -758,7 +758,7 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                               </div>
                             </div>
                           </div>
-                          <div class="other-menu">
+                          <div class="other-menu mob-hide">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Client Type</span>
                               Innovative, future-proof software solutions</a>
                             </div>
@@ -806,7 +806,7 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                               Expand with white-label services</a>
                             </div>
                           </div>
-                        </div
+                        </div>
 
                       </div>
                     </div>
