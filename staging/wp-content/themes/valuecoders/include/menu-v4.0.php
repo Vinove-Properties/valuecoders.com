@@ -944,7 +944,7 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
             </li>
 
             <li class="menu-item-has-children">
-              <a href="<?php echo $site_url; ?>">Whom We Serve</a> <span class="arrow-btn"></span>
+              <a href="<?php echo $site_url; ?>">Who We Serve</a> <span class="arrow-btn"></span>
               <div class="menu-mega">
                 <div class="container">
                   <div class="dis-flex tab-menu">
