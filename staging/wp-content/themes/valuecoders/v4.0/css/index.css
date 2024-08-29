@@ -3813,6 +3813,8 @@ a {
               color: #fff; }
               .header-two .header-item-right .menu ul li.menu-item-has-children a:after {
                 display: none; }
+            .header-two .header-item-right .menu ul li:hover .menu-mega {
+              display: none; }
             .header-two .header-item-right .menu ul li .menu-mega {
               position: relative;
               display: none;
@@ -3824,17 +3826,19 @@ a {
               display: none;
               background: #fff; }
               .header-two .header-item-right .menu ul li .menu-mega.small-menu {
-                left: 100%;
+                left: auto;
                 width: 100%;
-                padding: 0;
-                border-radius: none; }
+                border-radius: 0; }
                 .header-two .header-item-right .menu ul li .menu-mega.small-menu a {
                   padding: 15px 15px 15px 55px;
                   position: relative;
                   display: flex;
                   margin: 0;
                   align-items: center;
-                  border-radius: 10px; }
+                  border-radius: 10px;
+                  color: #5d6579; }
+                  .header-two .header-item-right .menu ul li .menu-mega.small-menu a .title {
+                    color: #262626; }
                   .header-two .header-item-right .menu ul li .menu-mega.small-menu a:after {
                     display: none; }
                   .header-two .header-item-right .menu ul li .menu-mega.small-menu a .menuicon {
@@ -3870,26 +3874,29 @@ a {
                       transition: all 0.3s ease-in-out;
                       margin-bottom: 2px; }
                     .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .tab-title {
-                      padding: 15px 0;
+                      padding: 10px 0;
                       border-bottom: 1px solid #e6e6e6;
                       width: 100%; }
                       .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .tab-title a {
-                        padding-left: 58px; }
+                        padding: 10px 10px 10px 55px;
+                        margin: 0 0 0 -10px; }
                         .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .tab-title a .title {
                           font-size: 16px;
                           line-height: 22px;
                           color: #262626; }
                         .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .tab-title a .menuicon {
-                          left: 0; }
+                          left: 8px;
+                          width: 35px;
+                          height: 35px; }
                     .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content.is-active {
                       display: block; }
                     .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column {
-                      padding: 15px 0 30px;
+                      padding: 15px 0 0;
                       width: 100%; }
                       .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column .flex-2 {
                         flex-basis: 100%;
                         padding: 0;
-                        margin: 0 0 25px; }
+                        margin: 0; }
                       .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column .flex-4 {
                         flex-basis: 100%;
                         padding: 0;
@@ -3926,17 +3933,15 @@ a {
                       position: relative;
                       padding-left: 0;
                       border-left: none;
-                      background: #f8f9fa; }
+                      background: #fff; }
                       .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .other-menu:after {
-                        content: "";
-                        position: absolute;
-                        right: -60px;
-                        top: 0;
-                        height: 100%;
-                        width: 20%;
-                        background: #f8f9fa; }
-                      .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .other-menu .tab-title a {
-                        padding-left: 10px; }
+                        display: none; }
+                      .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .other-menu .tab-title {
+                        padding: 0; }
+                        .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .other-menu .tab-title a {
+                          padding: 8px;
+                          width: calc(100% - 10px);
+                          margin: 0 0 10px -10px; }
                       .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .other-menu .flex-1 {
                         flex-basis: 100%; }
                         .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .other-menu .flex-1 a {
@@ -3949,8 +3954,6 @@ a {
               .header-two .header-item-right .menu ul li .menu-mega.m-active {
                 display: block;
                 padding: 0; }
-            .header-two .header-item-right .menu ul li:hover .menu-mega {
-              display: block; }
       .header-two .header-item-right .mob-nav {
         position: fixed;
         width: 100%;
