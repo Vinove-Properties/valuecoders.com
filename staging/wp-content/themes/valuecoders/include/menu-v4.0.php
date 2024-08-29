@@ -25,6 +25,11 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
             <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/logo-small.svg" alt="Valuecoders" width="80" height="80">
           </div>
         </a>
+        <div class="hamberger-menu">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
       </div>
       <div class="header-item-right">
         <nav class="menu mob-nav" id="menu">
@@ -821,9 +826,14 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                 <a href="https://www.valuecoders.com/blog/" target="_blank"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/comp-05.svg" class="menuicon" alt="menuicon">Blog</a>
               </div>
             </li>
+            <li class="cta-wrap small-reso">
+          <div class="btn-sec">
+            <a href="https://www.valuecoders.com/staging/contact" class="btn rounded"><span class="text-white">Get Started</span></a>
+          </div>
+         </li>
           </ul>
         </nav>
-        <div class="cta-wrap">
+        <div class="cta-wrap large-reso">
           <div class="btn-sec">
             <a href="https://www.valuecoders.com/staging/contact" class="btn rounded"><span class="text-white">Get Started</span></a>
           </div>
