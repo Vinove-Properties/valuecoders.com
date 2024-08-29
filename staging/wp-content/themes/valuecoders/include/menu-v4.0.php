@@ -429,6 +429,413 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
               </div>
             </li>
             <li class="menu-item-has-children">
+   <a href="<?php echo $site_url; ?>">Hire</a> <span class="arrow-btn"></span>
+   <div class="menu-mega">
+      <div class="container">
+         <div class="dis-flex tab-menu">
+            <div id="mnu-hire" class="dis-flex tab-contents">
+               <div class="left-tabs">
+                  <ul class="tab-nav">
+                     <li class="tab-link is-active">Backend</li>
+                     <li class="tab-link">Frontend</li>
+                     <li class="tab-link">CMS</li>
+                     <li class="tab-link">Mobile</li>
+                     <li class="tab-link">eCommerce</li>
+                     <li class="tab-link">DevOps</li>
+                     <li class="tab-link">Full Stack</li>
+                     <li class="tab-link">Blockchain</li>
+                     <li class="tab-link">Digital Marketing</li>
+                     <li class="tab-link">AI/ML</li>
+                     <li class="tab-link">Low - Code</li>
+                  </ul>
+               </div>
+               <div class="right-tabs">
+                  <div class="tab-content is-active">
+                     <div class="three-column">
+                        <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                           <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              class="menuicon" alt="menuicon"><span class="title">Backend</span>Innovative, future-proof software solutions</a>
+                        </div>
+                        <div class="dis-flex menu-column">
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>                              
+                           </div>
+                           </div>
+                           </div>
+                           <div class="other-menu">
+                              <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Other Services</span>
+                                 Innovative, future-proof software solutions</a>
+                              </div>
+                              <div class="flex-1 menu-column">
+                                 <a href="<?php echo $site_url; ?>application-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
+                                 Comprehensive support solutions</a>
+                                 <a href="<?php echo $site_url; ?>application-modernization"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Modernization</span>
+                                 Update your applications</a>
+                                 <a href="<?php echo $site_url; ?>ott-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">OTT App Development</span>
+                                 Monetize your content</a>
+                                 <a href="<?php echo $site_url; ?>cloud-application-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Application Development</span>
+                                 Cloud-based software solutions</a>
+                              </div>
+                           </div>
+                </div>
+
+                <div class="tab-content">
+                     <div class="three-column">
+                        <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                           <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              class="menuicon" alt="menuicon"><span class="title">Backend</span>Innovative, future-proof software solutions</a>
+                        </div>
+                        <div class="dis-flex menu-column">
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           </div>
+                           </div>
+                           <div class="other-menu">
+                              <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Other Services</span>
+                                 Innovative, future-proof software solutions</a>
+                              </div>
+                              <div class="flex-1 menu-column">
+                                 <a href="<?php echo $site_url; ?>application-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
+                                 Comprehensive support solutions</a>
+                                 <a href="<?php echo $site_url; ?>application-modernization"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Modernization</span>
+                                 Update your applications</a>
+                                 <a href="<?php echo $site_url; ?>ott-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">OTT App Development</span>
+                                 Monetize your content</a>
+                                 <a href="<?php echo $site_url; ?>cloud-application-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Application Development</span>
+                                 Cloud-based software solutions</a>
+                              </div>
+                           </div>
+                </div>
+
+                <div class="tab-content">
+                     <div class="three-column">
+                        <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                           <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              class="menuicon" alt="menuicon"><span class="title">Backend</span>Innovative, future-proof software solutions</a>
+                        </div>
+                        <div class="dis-flex menu-column">
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           </div>
+                           </div>
+                           <div class="other-menu">
+                              <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Other Services</span>
+                                 Innovative, future-proof software solutions</a>
+                              </div>
+                              <div class="flex-1 menu-column">
+                                 <a href="<?php echo $site_url; ?>application-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
+                                 Comprehensive support solutions</a>
+                                 <a href="<?php echo $site_url; ?>application-modernization"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Modernization</span>
+                                 Update your applications</a>
+                                 <a href="<?php echo $site_url; ?>ott-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">OTT App Development</span>
+                                 Monetize your content</a>
+                                 <a href="<?php echo $site_url; ?>cloud-application-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Application Development</span>
+                                 Cloud-based software solutions</a>
+                              </div>
+                           </div>
+                </div>
+                <div class="tab-content">
+                     <div class="three-column">
+                        <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                           <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              class="menuicon" alt="menuicon"><span class="title">Backend</span>Innovative, future-proof software solutions</a>
+                        </div>
+                        <div class="dis-flex menu-column">
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           </div>
+                           </div>
+                           <div class="other-menu">
+                              <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Other Services</span>
+                                 Innovative, future-proof software solutions</a>
+                              </div>
+                              <div class="flex-1 menu-column">
+                                 <a href="<?php echo $site_url; ?>application-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
+                                 Comprehensive support solutions</a>
+                                 <a href="<?php echo $site_url; ?>application-modernization"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Modernization</span>
+                                 Update your applications</a>
+                                 <a href="<?php echo $site_url; ?>ott-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">OTT App Development</span>
+                                 Monetize your content</a>
+                                 <a href="<?php echo $site_url; ?>cloud-application-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Application Development</span>
+                                 Cloud-based software solutions</a>
+                              </div>
+                           </div>
+                </div>
+                <div class="tab-content">
+                     <div class="three-column">
+                        <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                           <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              class="menuicon" alt="menuicon"><span class="title">Backend</span>Innovative, future-proof software solutions</a>
+                        </div>
+                        <div class="dis-flex menu-column">
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           </div>
+                           </div>
+                           <div class="other-menu">
+                              <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Other Services</span>
+                                 Innovative, future-proof software solutions</a>
+                              </div>
+                              <div class="flex-1 menu-column">
+                                 <a href="<?php echo $site_url; ?>application-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
+                                 Comprehensive support solutions</a>
+                                 <a href="<?php echo $site_url; ?>application-modernization"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Modernization</span>
+                                 Update your applications</a>
+                                 <a href="<?php echo $site_url; ?>ott-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">OTT App Development</span>
+                                 Monetize your content</a>
+                                 <a href="<?php echo $site_url; ?>cloud-application-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Application Development</span>
+                                 Cloud-based software solutions</a>
+                              </div>
+                           </div>
+                </div>
+                <div class="tab-content">
+                     <div class="three-column">
+                        <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                           <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              class="menuicon" alt="menuicon"><span class="title">Backend</span>Innovative, future-proof software solutions</a>
+                        </div>
+                        <div class="dis-flex menu-column">
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           </div>
+                           </div>
+                           <div class="other-menu">
+                              <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Other Services</span>
+                                 Innovative, future-proof software solutions</a>
+                              </div>
+                              <div class="flex-1 menu-column">
+                                 <a href="<?php echo $site_url; ?>application-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
+                                 Comprehensive support solutions</a>
+                                 <a href="<?php echo $site_url; ?>application-modernization"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Modernization</span>
+                                 Update your applications</a>
+                                 <a href="<?php echo $site_url; ?>ott-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">OTT App Development</span>
+                                 Monetize your content</a>
+                                 <a href="<?php echo $site_url; ?>cloud-application-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Application Development</span>
+                                 Cloud-based software solutions</a>
+                              </div>
+                           </div>
+                </div>
+                <div class="tab-content">
+                     <div class="three-column">
+                        <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                           <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              class="menuicon" alt="menuicon"><span class="title">Backend</span>Innovative, future-proof software solutions</a>
+                        </div>
+                        <div class="dis-flex menu-column">
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           </div>
+                           </div>
+                           <div class="other-menu">
+                              <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Other Services</span>
+                                 Innovative, future-proof software solutions</a>
+                              </div>
+                              <div class="flex-1 menu-column">
+                                 <a href="<?php echo $site_url; ?>application-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
+                                 Comprehensive support solutions</a>
+                                 <a href="<?php echo $site_url; ?>application-modernization"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Modernization</span>
+                                 Update your applications</a>
+                                 <a href="<?php echo $site_url; ?>ott-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">OTT App Development</span>
+                                 Monetize your content</a>
+                                 <a href="<?php echo $site_url; ?>cloud-application-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Application Development</span>
+                                 Cloud-based software solutions</a>
+                              </div>
+                           </div>
+                </div>
+                <div class="tab-content">
+                     <div class="three-column">
+                        <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                           <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              class="menuicon" alt="menuicon"><span class="title">Backend</span>Innovative, future-proof software solutions</a>
+                        </div>
+                        <div class="dis-flex menu-column">
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           </div>
+                           </div>
+                           <div class="other-menu">
+                              <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Other Services</span>
+                                 Innovative, future-proof software solutions</a>
+                              </div>
+                              <div class="flex-1 menu-column">
+                                 <a href="<?php echo $site_url; ?>application-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
+                                 Comprehensive support solutions</a>
+                                 <a href="<?php echo $site_url; ?>application-modernization"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Modernization</span>
+                                 Update your applications</a>
+                                 <a href="<?php echo $site_url; ?>ott-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">OTT App Development</span>
+                                 Monetize your content</a>
+                                 <a href="<?php echo $site_url; ?>cloud-application-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Application Development</span>
+                                 Cloud-based software solutions</a>
+                              </div>
+                           </div>
+                </div>
+                <div class="tab-content">
+                     <div class="three-column">
+                        <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                           <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              class="menuicon" alt="menuicon"><span class="title">Backend</span>Innovative, future-proof software solutions</a>
+                        </div>
+                        <div class="dis-flex menu-column">
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           </div>
+                           </div>
+                           <div class="other-menu">
+                              <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Other Services</span>
+                                 Innovative, future-proof software solutions</a>
+                              </div>
+                              <div class="flex-1 menu-column">
+                                 <a href="<?php echo $site_url; ?>application-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
+                                 Comprehensive support solutions</a>
+                                 <a href="<?php echo $site_url; ?>application-modernization"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Modernization</span>
+                                 Update your applications</a>
+                                 <a href="<?php echo $site_url; ?>ott-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">OTT App Development</span>
+                                 Monetize your content</a>
+                                 <a href="<?php echo $site_url; ?>cloud-application-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Application Development</span>
+                                 Cloud-based software solutions</a>
+                              </div>
+                           </div>
+                </div>
+                <div class="tab-content">
+                     <div class="three-column">
+                        <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                           <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              class="menuicon" alt="menuicon"><span class="title">Backend</span>Innovative, future-proof software solutions</a>
+                        </div>
+                        <div class="dis-flex menu-column">
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           </div>
+                           </div>
+                           <div class="other-menu">
+                              <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Other Services</span>
+                                 Innovative, future-proof software solutions</a>
+                              </div>
+                              <div class="flex-1 menu-column">
+                                 <a href="<?php echo $site_url; ?>application-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
+                                 Comprehensive support solutions</a>
+                                 <a href="<?php echo $site_url; ?>application-modernization"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Modernization</span>
+                                 Update your applications</a>
+                                 <a href="<?php echo $site_url; ?>ott-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">OTT App Development</span>
+                                 Monetize your content</a>
+                                 <a href="<?php echo $site_url; ?>cloud-application-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Application Development</span>
+                                 Cloud-based software solutions</a>
+                              </div>
+                           </div>
+                </div>
+                <div class="tab-content">
+                     <div class="three-column">
+                        <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
+                           <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              class="menuicon" alt="menuicon"><span class="title">Backend</span>Innovative, future-proof software solutions</a>
+                        </div>
+                        <div class="dis-flex menu-column">
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           <div class="flex-2">                                
+                              <a href="<?php echo $site_url; ?>"><span class="title">.NET</span></a>
+                              <a href="<?php echo $site_url; ?>"><span class="title"></span></a>
+                           </div>
+                           </div>
+                           </div>
+                           <div class="other-menu">
+                              <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Other Services</span>
+                                 Innovative, future-proof software solutions</a>
+                              </div>
+                              <div class="flex-1 menu-column">
+                                 <a href="<?php echo $site_url; ?>application-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
+                                 Comprehensive support solutions</a>
+                                 <a href="<?php echo $site_url; ?>application-modernization"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Modernization</span>
+                                 Update your applications</a>
+                                 <a href="<?php echo $site_url; ?>ott-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">OTT App Development</span>
+                                 Monetize your content</a>
+                                 <a href="<?php echo $site_url; ?>cloud-application-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Application Development</span>
+                                 Cloud-based software solutions</a>
+                              </div>
+                           </div>
+                </div>
+
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</li>
+            <li class="menu-item-has-children">
               <a href="<?php echo $site_url; ?>">Solutions</a> <span class="arrow-btn"></span>
               <div class="menu-mega">
                 <div class="container">

@@ -1271,7 +1271,7 @@ function _morePPCTable(){
     };
     window.tabs = e;
 })();
-const menuElm = ["menu-serv", "mnu-sol", "menu-inds", "mnu-tech"];
+const menuElm = ["menu-serv", "mnu-sol", "menu-inds", "mnu-tech", "mnu-hire"];
 menuElm.forEach(function(elm){
   if(document.getElementById(elm)){
     var e = tabs({el:"#"+elm, tabNavigationLinks:".tab-link",tabContentContainers:".tab-content"});
