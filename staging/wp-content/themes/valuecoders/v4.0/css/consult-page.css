@@ -1654,11 +1654,12 @@ body.page-template-template-testimonials .client-video-section iframe,
         text-decoration: none;
         font-size: 16px;
         line-height: 20px;
-        padding: 0 10px 30px;
+        padding: 0 10px 35px;
         border: none;
         outline: none;
         color: #fff;
-        transition: color 0.3s ease; }
+        transition: color 0.3s ease;
+        font-weight: 500; }
         .header-two .header-item-right .menu ul li.menu-item-has-children a:after {
           content: "";
           background: #ffad00;
@@ -1666,7 +1667,7 @@ body.page-template-template-testimonials .client-video-section iframe,
           height: 3px;
           position: absolute;
           left: 0;
-          bottom: 0;
+          bottom: -4px;
           opacity: 0; }
         .header-two .header-item-right .menu ul li.menu-item-has-children a:hover:after {
           opacity: 1;
@@ -1678,11 +1679,11 @@ body.page-template-template-testimonials .client-video-section iframe,
         width: 100%;
         height: auto;
         margin-top: 0;
-        top: 90%;
+        top: 98%;
         padding: 0;
         z-index: 1;
         border-top: 1px solid #dedede;
-        box-shadow: 4px 4px 60px rgba(59, 85, 112, 0.25);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         display: none;
         background: #fff; }
         .header-two .header-item-right .menu ul li .menu-mega.small-menu {
@@ -1694,6 +1695,7 @@ body.page-template-template-testimonials .client-video-section iframe,
             padding: 15px 15px 15px 55px;
             position: relative;
             display: flex;
+            color: #05164d;
             margin: 0;
             align-items: center;
             border-radius: 10px; }
@@ -1768,7 +1770,8 @@ body.page-template-template-testimonials .client-video-section iframe,
                   padding-left: 70px;
                   position: relative;
                   display: block;
-                  margin: 0; }
+                  margin: 0;
+                  font-weight: 400 !important; }
                   .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .tab-title a .title {
                     font-size: 16px;
                     line-height: 22px;
@@ -1966,7 +1969,9 @@ body.page-template-template-testimonials .client-video-section iframe,
 
 @media screen and (max-width: 1600px) {
   .header-two .container {
-    max-width: 100%; } }
+    max-width: 100%; }
+  .header-two .header-item-right .menu ul li .menu-mega.small-menu {
+    left: 60%; } }
 @media screen and (max-width: 1440px) {
   .header-two .container {
     padding: 0 20px; }
@@ -2236,7 +2241,7 @@ body.page-template-template-testimonials .client-video-section iframe,
                             top: 15px; }
               .header-two .header-item-right .menu ul li .menu-mega.m-active {
                 display: block;
-                padding: 0; }
+                padding: 0 0 30px; }
       .header-two .header-item-right .mob-nav {
         position: fixed;
         width: 100%;
@@ -2319,7 +2324,7 @@ body.page-template-template-testimonials .client-video-section iframe,
         content: "";
         clear: both;
         display: block;
-        background: url(../images/button-icons-sprite.png) -21px -47px no-repeat;
+        background: url(../header-images/button-icons-sprite.png) -21px -47px no-repeat;
         width: 18px;
         height: 20px;
         position: absolute;
@@ -2345,7 +2350,7 @@ body.page-template-template-testimonials .client-video-section iframe,
       position: relative;
       width: 70px;
       height: 24px;
-      background: url(../images/mobile-btn.png) 40px -2px no-repeat;
+      background: url(../header-images/mobile-btn.png) 40px -2px no-repeat;
       vertical-align: top;
       text-align: right;
       float: right; }
