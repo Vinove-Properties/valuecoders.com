@@ -7,7 +7,7 @@ $site_url   = 'https://www.valuecoders.com/';
 }  
 
 if( isset($_SERVER['HTTP_HOST']) && ($_SERVER['HTTP_HOST'] == "localhost") ){
-  $site_url   = 'http://localhost/valuecoders.com/staging/';
+  $site_url   = trailingslashit(get_bloginfo('url'));
 }
 $tpl_url    = $site_url.'wp-content/themes/valuecoders';
 $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] : 'master';
@@ -685,142 +685,33 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
               <div class="menu-mega">
                 <div class="container">
                   <div class="dis-flex tab-menu">
-                    <div id="menu-tech" class="dis-flex tab-contents">
+                    <div id="mnu-tech" class="dis-flex tab-contents">
                       <div class="left-tabs">
                         <ul class="tab-nav">
-                          <li class="tab-link is-active">Software Development</li>
-                          <li class="tab-link">Application Development</li>
-                          <li class="tab-link">Dedicated Software Teams</li>
-                          <li class="tab-link">eCommerce</li>
-                          <li class="tab-link">QA & Testing</li>
-                          <li class="tab-link">Cloud Services</li>
-                          <li class="tab-link">Data Engineering</li>
-                          <li class="tab-link">Artificial Intelligence</li>
+                          <li class="tab-link is-active">Programming</li>
+                          <li class="tab-link">Trending</li>
+                          <li class="tab-link">Platforms</li>                          
                         </ul>
                       </div>
                       <div class="right-tabs">
                         <div class="tab-content is-active">
-                          <div class="four-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" class="menuicon" alt="menuicon"><span class="title">Software Development</span>
-                              Innovative, future-proof software solutions</a>
-                            </div>
-                            <div class="dis-flex menu-column">
-                              <div class="flex-4">
-                                <span class="head">Development</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Web App Development</span>
-                                Innovative browser applications</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Large-Scale Software</span>
-                                Choose the right technology</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">MVP Development</span>
-                                Assistance from product conception</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Application Development</span>
-                                Validate your idea and ensure</a>
-                                <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
-                              </div>
-                              <div class="flex-4">
-                                <span class="head">Consulting</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Software Consulting</span>
-                                Lead your business</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">SOA Consulting</span>
-                                Update your web & Mobile</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Agile Consulting</span>
-                                Effortless maintenance</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">DevOps Consulting</span>
-                                Validate your idea and ensure</a>
-                                <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
-                              </div>
-                              <div class="flex-4">
-                                <span class="head">Maintenance & Support</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Software Maintenance</span>
-                                Lead your business into digital</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Application Maintenance</span>
-                                Update your web and mobile</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Application Modernization</span>
-                                Effortless maintenance</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Code Review</span>
-                                Consult experts for big data</a>
-                                <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
-                              </div>
-                              <div class="flex-4">
-                                <span class="head">Delivery Models</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Software Outsourcing</span>
-                                Lead your business into digital</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">IT Staff Augmentation</span>
-                                Update your web and mobile</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Nearshore Staff Augmentation</span>
-                                Effortless maintenance</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Offshore Developers for Hire</span>
-                                Consult experts for big data</a>
-                                <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Development</span>
-                              Skilled developers, transparent billing</a>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-03.svg" class="menuicon" alt="menuicon"><span class="title">Programming </span>Innovative, future-proof software solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
-                              <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>"><span class="title">Web App Development</span>
-                                Innovative browser applications</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Backend Development</span>
-                                Robust server/client expertise</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Website & Portal Development</span>
-                                Secure, user-centric solutions</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Frontend Development</span>
-                                Flawless UI/UX creation</a>
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
                               </div>
-                              <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>"><span class="title">Mobile App Development</span>
-                                Seamless mobile experiences</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Cross-Platform App Development</span>
-                                Unified multi-platform solutions</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">API Development</span>
-                                Efficient API management</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Full Stack Development</span>
-                                Secure scalable applications</a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="other-menu">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Other Services</span>
-                              Innovative, future-proof software solutions</a>
-                            </div>
-                            <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
-                              Comprehensive support solutions</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Modernization</span>
-                              Update your applications</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">OTT App Development</span>
-                              Monetize your content</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Application Development</span>
-                              Cloud-based software solutions</a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tab-content">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-03.svg" class="menuicon" alt="menuicon"><span class="title">Dedicated Software Teams </span>
-                              Comprehensive QA & Testing solutions</a>
-                            </div>
-                            <div class="dis-flex menu-column">
-                              <div class="flex-2">
-                                <span class="head">Solutions</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Offshore Development Center</span>
-                                Unleash the power of offshore development</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Offshore Software Development</span>
-                                Leverage talent, cost-effectiveness</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Nearshore Software Development</span>
-                                Technical expertise, shared time zone</a>
-                              </div>
-                              <div class="flex-2">
-                                <span class="head">Solutions</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Staff Augmentation</span>
-                                Access top technical resources on-demand</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Hire Software Developers</span>
-                                Work with skilled & dedicated developers</a>
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
                               </div>
                             </div>
                           </div>
@@ -829,244 +720,88 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                               Innovative, future-proof software solutions</a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                             </div>
                           </div>
                         </div>
-                        <div class="tab-content">
+
+                        <div class="tab-content is-active">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-04.svg" class="menuicon" alt="menuicon"><span class="title">eCommerce</span>
-                              Innovative, future-proof software solutions</a>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-03.svg" class="menuicon" alt="menuicon"><span class="title">Trending</span>Innovative, future-proof software solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
-                              <div class="flex-2">
-                                <span class="head">EXPERTISE</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">eCommerce Consulting</span>
-                                Innovative, future-proof software solutions</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">eCommerce Web Design</span>
-                                Skilled developers, transparent billing</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Mobile App Testing</span>
-                                Validate mobile apps for optimal performance</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Web App Testing</span>
-                                Make flawless apps for improved performance</a>
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
                               </div>
-                              <div class="flex-2">
-                                <span class="head">TECHNOLOGY</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Magento</span>
-                                Testing experts for every stage </a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Shopify</span>
-                                Next-level solutions for B2B & B2C</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">WooCommerce</span>
-                                Build foundations with data</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">OpenCart</span>
-                                Drive technological innovation</a>    
-                              </div>
-                            </div>
-                          </div>
-                          <div class="other-menu">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Solutions</span>
-                              Innovative, future-proof software solutions</a>
-                            </div>
-                            <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">B2C eCommerce</span>
-                              Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">B2B eCommerce</span>
-                              End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">Web Portals</span>
-                              Expand with white-label services</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Supply Chain Automation</span>
-                              Expand with white-label services</a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tab-content">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-05.svg" class="menuicon" alt="menuicon"><span class="title">QA & Testing</span>
-                              Innovative, future-proof software solutions</a>
-                            </div>
-                            <div class="dis-flex menu-column">
-                              <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>"><span class="title">QA Consulting</span>
-                                Define policies, audit compliance, monitor quality</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Application Testing</span>
-                                Ensure quality, performance, & functionality</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Mobile App Testing</span>
-                                Validate mobile apps for optimal performance</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Web App Testing</span>
-                                Make flawless apps for improved performance</a>
-                              </div>
-                              <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>"><span class="title">Testing Teams</span>
-                                Testing experts for every stage </a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Hire Software QA</span>
-                                Plan, build, & ship quality products</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">QA Outsourcing</span>
-                                Hire experts for flawless performance</a>
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
                               </div>
                             </div>
                           </div>
                           <div class="other-menu">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Client Type</span>
-                              Innovative, future-proof software solutions </a>
+                              Innovative, future-proof software solutions</a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                             </div>
                           </div>
                         </div>
-                        <div class="tab-content">
+
+                        <div class="tab-content is-active">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-06.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Services</span>
-                              Innovative, future-proof software solutions</a>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-03.svg" class="menuicon" alt="menuicon"><span class="title">Platforms </span>Innovative, future-proof software solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
-                              <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>"><span class="title">Cloud Strategy & Consulting</span>
-                                Strategic Cloud Guidance</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">DevOps as a Service</span>
-                                Effortless DevOps Integration</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">24x7 Managed Services</span>
-                                Round-the-Clock Seamless Service</a>
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
                               </div>
-                              <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>"><span class="title">Cloud FinOps Services</span>
-                                Cloud Savings Made Simple</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Cloud Migration</span>
-                                Seamless, Swift Cloud Transition
-                                </a>
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Android</span></a>
                               </div>
                             </div>
                           </div>
                           <div class="other-menu">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Client Type</span>
-                              Innovative, future-proof software solutions </a>
+                              Innovative, future-proof software solutions</a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                             </div>
                           </div>
-                        </div>
-                        <div class="tab-content">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Data Engineering</span>
-                              Innovative, future-proof software solutions</a>
-                            </div>
-                            <div class="dis-flex menu-column">
-                              <div class="flex-2">
-                                <span class="head">Business Intelligence (BI)</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">BI Consulting</span>
-                                Guiding success with BI insights</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">BI Implementation</span>
-                                Implementing BI, driving growth</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Microsoft Power BI</span>
-                                Powering decisions with Microsoft BI</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">BI Reporting & Dashboard</span>
-                                Visualizing success with BI</a>
-                                <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
-                              </div>
-                              <div class="flex-2">
-                                <span class="head">DATA SCIENCE & ANALYTICS</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Data Science Consulting</span>
-                                Transforming data into insights</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Hire Expert Data Scientists</span>
-                                Hire brilliance, harness data power
-                                </a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Big Data Solutions</span>
-                                Harnessing power of big data
-                                </a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Data Analytics Consulting</span>
-                                Transforming data into action
-                                </a>
-                                <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="other-menu">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Client Type</span>
-                              Innovative, future-proof software solutions </a>
-                            </div>
-                            <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
-                              Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
-                              End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
-                              Expand with white-label services</a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tab-content">
-                          <div class="four-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Artificial Intelligence</span>
-                              Innovative, future-proof software solutions</a>
-                            </div>
-                            <div class="dis-flex menu-column">
-                              <div class="flex-4">
-                                <span class="head">Artificial Intelligence</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">AI Development</span>
-                                Crafting future with AI</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">AI Consulting</span>
-                                Choose the right technology</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">AI Chatbot Development</span>
-                                Transform communication </a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">AI-Powered  Development</span>
-                                Innovative AI mobile apps</a>
-                                <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
-                              </div>
-                              <div class="flex-4">
-                                <span class="head">ML & Advanced Analytics</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">ML Development</span>
-                                Learning today, leading</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Computer Vision Solutions</span>
-                                Seeing beyond with AI</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">MLOps Consulting</span>
-                                Optimizing ML, maximizing </a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">RPA Services</span>
-                                Efficient RPA automation</a>
-                                <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
-                              </div>
-                              <div class="flex-4">
-                                <span class="head">Generative AI</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Generative AI Development</span>
-                                Creating with AI innovation</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Generative AI Integration</span>
-                                Integrating creativity with AI</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Custom GPT Solutions</span>
-                                Optimizing ML, maximizing </a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">RPA Services</span>
-                                Efficient RPA automation</a>
-                                <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
-                              </div>
-                              <div class="flex-4">
-                                <span class="head">Expertise</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">LLM Services</span>
-                                Advanced language model solutions</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Adaptive AI Development</span>
-                                Custom, adaptive AI solutions</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Custom GPT Solutions</span>
-                                Personalized GPT technologies </a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Transformer Model Development</span>
-                                Cutting-edge transformer tech</a>
-                                <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                        </div
+
                       </div>
                     </div>
                   </div>
