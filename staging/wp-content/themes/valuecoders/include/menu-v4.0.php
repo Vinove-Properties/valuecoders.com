@@ -152,7 +152,7 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-03.svg" class="menuicon" alt="menuicon"><span class="title">Dedicated Software Teams </span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>dedicated-development-teams"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-03.svg" class="menuicon" alt="menuicon"><span class="title">Dedicated Software Teams </span>
                               Comprehensive QA & Testing solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
@@ -236,26 +236,26 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-05.svg" class="menuicon" alt="menuicon"><span class="title">QA & Testing</span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>software-quality-assurance-testing-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-05.svg" class="menuicon" alt="menuicon"><span class="title">QA & Testing</span>
                               Innovative, future-proof software solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
                               <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>"><span class="title">QA Consulting</span>
+                                <a href="<?php echo $site_url; ?>qa-consulting-services"><span class="title">QA Consulting</span>
                                 Define policies, audit compliance, monitor quality</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Application Testing</span>
+                                <a href="<?php echo $site_url; ?>application-testing-services"><span class="title">Application Testing</span>
                                 Ensure quality, performance, & functionality</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Mobile App Testing</span>
+                                <a href="<?php echo $site_url; ?>mobile-app-testing-services"><span class="title">Mobile App Testing</span>
                                 Validate mobile apps for optimal performance</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Web App Testing</span>
+                                <a href="<?php echo $site_url; ?>web-application-testing-services"><span class="title">Web App Testing</span>
                                 Make flawless apps for improved performance</a>
                               </div>
                               <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>"><span class="title">Testing Teams</span>
+                                <a href="<?php echo $site_url; ?>software-testing-teams"><span class="title">Testing Teams</span>
                                 Testing experts for every stage </a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Hire Software QA</span>
+                                <a href="<?php echo $site_url; ?>hire-developers/software-qa-testers-india"><span class="title">Hire Software QA</span>
                                 Plan, build, & ship quality products</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">QA Outsourcing</span>
+                                <a href="<?php echo $site_url; ?>qa-outsourcing-services"><span class="title">QA Outsourcing</span>
                                 Hire experts for flawless performance</a>
                               </div>
                             </div>
@@ -265,33 +265,33 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                               Innovative, future-proof software solutions </a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                             </div>
                           </div>
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-06.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Services</span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>cloud-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-06.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Services</span>
                               Innovative, future-proof software solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
                               <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>"><span class="title">Cloud Strategy & Consulting</span>
+                                <a href="<?php echo $site_url; ?>cloud-services/strategy-consulting"><span class="title">Cloud Strategy & Consulting</span>
                                 Strategic Cloud Guidance</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">DevOps as a Service</span>
+                                <a href="<?php echo $site_url; ?>cloud-services/devops-automation"><span class="title">DevOps as a Service</span>
                                 Effortless DevOps Integration</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">24x7 Managed Services</span>
+                                <a href="<?php echo $site_url; ?>cloud-services/cloud-managed-services"><span class="title">24x7 Managed Services</span>
                                 Round-the-Clock Seamless Service</a>
                               </div>
                               <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>"><span class="title">Cloud FinOps Services</span>
+                                <a href="<?php echo $site_url; ?>cloud-services/cloud-finops-service"><span class="title">Cloud FinOps Services</span>
                                 Cloud Savings Made Simple</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Cloud Migration</span>
+                                <a href="<?php echo $site_url; ?>cloud-services/cloud-migration"><span class="title">Cloud Migration</span>
                                 Seamless, Swift Cloud Transition
                                 </a>
                               </div>
@@ -302,47 +302,47 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                               Innovative, future-proof software solutions </a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                             </div>
                           </div>
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Data Engineering</span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>data-engineering"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Data Engineering</span>
                               Innovative, future-proof software solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
                               <div class="flex-2">
                                 <span class="head">Business Intelligence (BI)</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">BI Consulting</span>
+                                <a href="<?php echo $site_url; ?>business-intelligence-consulting-services"><span class="title">BI Consulting</span>
                                 Guiding success with BI insights</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">BI Implementation</span>
+                                <a href="<?php echo $site_url; ?>bi-implementation"><span class="title">BI Implementation</span>
                                 Implementing BI, driving growth</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Microsoft Power BI</span>
+                                <a href="<?php echo $site_url; ?>microsoft-power-bi-development-services-company"><span class="title">Microsoft Power BI</span>
                                 Powering decisions with Microsoft BI</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">BI Reporting & Dashboard</span>
+                                <a href="<?php echo $site_url; ?>data-engineering/bi-reporting-dashboard"><span class="title">BI Reporting & Dashboard</span>
                                 Visualizing success with BI</a>
-                                <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
+                                <a href="<?php echo $site_url; ?>data-engineering/business-intelligence" class="view-more">View More</a>
                               </div>
                               <div class="flex-2">
                                 <span class="head">DATA SCIENCE & ANALYTICS</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Data Science Consulting</span>
+                                <a href="<?php echo $site_url; ?>data-engineering/data-science-consulting-services"><span class="title">Data Science Consulting</span>
                                 Transforming data into insights</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Hire Expert Data Scientists</span>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-data-scientists"><span class="title">Hire Expert Data Scientists</span>
                                 Hire brilliance, harness data power
                                 </a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Big Data Solutions</span>
+                                <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><span class="title">Big Data Solutions</span>
                                 Harnessing power of big data
                                 </a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Data Analytics Consulting</span>
+                                <a href="<?php echo $site_url; ?>data-engineering/data-analytics-consulting-services"><span class="title">Data Analytics Consulting</span>
                                 Transforming data into action
                                 </a>
-                                <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
+                                <a href="<?php echo $site_url; ?>data-analytics" class="view-more">View More</a>
                               </div>
                             </div>
                           </div>
@@ -351,66 +351,66 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                               Innovative, future-proof software solutions </a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                             </div>
                           </div>
                         </div>
                         <div class="tab-content">
                           <div class="four-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Artificial Intelligence</span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>ai"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Artificial Intelligence</span>
                               Innovative, future-proof software solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
                               <div class="flex-4">
                                 <span class="head">Artificial Intelligence</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">AI Development</span>
+                                <a href="<?php echo $site_url; ?>ai/application-development-company"><span class="title">AI Development</span>
                                 Crafting future with AI</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">AI Consulting</span>
+                                <a href="<?php echo $site_url; ?>ai/consulting-services-company"><span class="title">AI Consulting</span>
                                 Choose the right technology</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">AI Chatbot Development</span>
+                                <a href="<?php echo $site_url; ?>chatbot-development-company"><span class="title">AI Chatbot Development</span>
                                 Transform communication </a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">AI-Powered  Development</span>
+                                <a href="<?php echo $site_url; ?>ai/mobile-app-development"><span class="title">AI-Powered App Development</span>
                                 Innovative AI mobile apps</a>
-                                <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
+                                <a href="<?php echo $site_url; ?>ai" class="view-more">View More</a>
                               </div>
                               <div class="flex-4">
                                 <span class="head">ML & Advanced Analytics</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">ML Development</span>
+                                <a href="<?php echo $site_url; ?>machine-learning/development"><span class="title">ML Development</span>
                                 Learning today, leading</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Computer Vision Solutions</span>
+                                <a href="<?php echo $site_url; ?>machine-learning/computer-vision-software-development"><span class="title">Computer Vision Solutions</span>
                                 Seeing beyond with AI</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">MLOps Consulting</span>
+                                <a href="<?php echo $site_url; ?>machine-learning/mlops-consulting-services"><span class="title">MLOps Consulting</span>
                                 Optimizing ML, maximizing </a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">RPA Services</span>
+                                <a href="<?php echo $site_url; ?>machine-learning/rpa-development-services-company"><span class="title">RPA Services</span>
                                 Efficient RPA automation</a>
-                                <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
+                                <a href="<?php echo $site_url; ?>machine-learning" class="view-more">View More</a>
                               </div>
                               <div class="flex-4">
                                 <span class="head">Generative AI</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Generative AI Development</span>
+                                <a href="<?php echo $site_url; ?>ai/generative-ai-development"><span class="title">Generative AI Development</span>
                                 Creating with AI innovation</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Generative AI Integration</span>
+                                <a href="<?php echo $site_url; ?>ai/generative-ai-integration-service"><span class="title">Generative AI Integration</span>
                                 Integrating creativity with AI</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Custom GPT Solutions</span>
-                                Optimizing ML, maximizing </a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">RPA Services</span>
-                                Efficient RPA automation</a>
-                                <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
+                                <a href="<?php echo $site_url; ?>ai/generative-ai-consulting-company"><span class="title">Generative AI Consultings</span>
+                                Guided generative growth </a>
+                                <a href="<?php echo $site_url; ?>ai/stable-diffusion-development-services"><span class="title">Stable Diffusion Development</span>
+                                Stable AI, peak performance</a>
+                                <a href="<?php echo $site_url; ?>ai/generative-ai-services" class="view-more">View More</a>
                               </div>
                               <div class="flex-4">
                                 <span class="head">Expertise</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">LLM Services</span>
+                                <a href="<?php echo $site_url; ?>ai/large-language-model"><span class="title">LLM Services</span>
                                 Advanced language model solutions</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Adaptive AI Development</span>
+                                <a href="<?php echo $site_url; ?>ai/adaptive-ai-development"><span class="title">Adaptive AI Development</span>
                                 Custom, adaptive AI solutions</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Custom GPT Solutions</span>
+                                <a href="<?php echo $site_url; ?>chatgpt-solutions"><span class="title">Custom GPT Solutions</span>
                                 Personalized GPT technologies </a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Transformer Model Development</span>
+                                <a href="<?php echo $site_url; ?>ai/transformer-model-development-services"><span class="title">Transformer Model Development</span>
                                 Cutting-edge transformer tech</a>
                                 <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
                               </div>
@@ -543,11 +543,11 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                               <div class="flex-2">
                                 <a href="<?php echo $site_url; ?>"><span class="title">How to Hire Startup Developers</span>
                                 Testing experts for every stage  </a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Software Product Development</span>
+                                <a href="<?php echo $site_url; ?>outsource-software-product-development-services"><span class="title">Software Product Development</span>
                                 Plan, build, & ship quality products</a>
                                 <a href="<?php echo $site_url; ?>"><span class="title">SaaS Consulting</span>
                                 Plan, build, & ship quality products</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">SaaS Development</span>
+                                <a href="<?php echo $site_url; ?>saas-consulting-development-services"><span class="title">SaaS Development</span>
                                 Plan, build, & ship quality products</a>
                               </div>
                             </div>
@@ -557,11 +557,11 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                               Innovative, future-proof software solutions</a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                             </div>
                           </div>
@@ -595,9 +595,9 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                               <div class="flex-4">
                                 <a href="<?php echo $site_url; ?>"><span class="title">Financial Services</span>
                                 Expert advice on technology</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Banking</span>
+                                <a href="<?php echo $site_url; ?>industries/banking-financial-services"><span class="title">Banking</span>
                                 Choose the right technology</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Insurance</span>
+                                <a href="<?php echo $site_url; ?>insurance"><span class="title">Insurance</span>
                                 Assistance from product conception</a>
                                 <a href="<?php echo $site_url; ?>"><span class="title">Lending</span>
                                 Validate your idea and ensure</a>
@@ -605,31 +605,31 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                               <div class="flex-4">
                                 <a href="<?php echo $site_url; ?>"><span class="title">Investment</span>
                                 Lead your business</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">FinTech</span>
+                                <a href="<?php echo $site_url; ?>industries/fintech-software-development-company"><span class="title">FinTech</span>
                                 Update your web & Mobile</a>
                                 <a href="<?php echo $site_url; ?>"><span class="title">Payments</span>
                                 Effortless maintenance</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Retail</span>
+                                <a href="<?php echo $site_url; ?>industries/retail-ecommerce-software-development"><span class="title">Retail</span>
                                 Consult experts for big</a>
                               </div>
                               <div class="flex-4">
-                                <a href="<?php echo $site_url; ?>"><span class="title">Healthcare</span>
+                                <a href="<?php echo $site_url; ?>industries/healthcare-software-development-services"><span class="title">Healthcare</span>
                                 Lead your business into digital</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Manufacturing</span>
+                                <a href="<?php echo $site_url; ?>industries/manufacturing-software-development"><span class="title">Manufacturing</span>
                                 Update your web and mobile</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Professional Services</span>
+                                <a href="<?php echo $site_url; ?>industries/professional-services-software-development"><span class="title">Professional Services</span>
                                 Effortless maintenance</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Transportation & Logistics</span>
+                                <a href="<?php echo $site_url; ?>industries/logistics-transportation-software-development"><span class="title">Transportation & Logistics</span>
                                 Consult experts for big data</a>
                               </div>
                               <div class="flex-4">
-                                <a href="<?php echo $site_url; ?>"><span class="title">Telecommunications</span>
+                                <a href="<?php echo $site_url; ?>industries/telecommunications"><span class="title">Telecommunications</span>
                                 Lead your business into digital</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Oil & Gas</span>
+                                <a href="<?php echo $site_url; ?>industries/oil-gas"><span class="title">Oil & Gas</span>
                                 Update your web and mobile</a>
                                 <a href="<?php echo $site_url; ?>"><span class="title">Construction</span>
                                 Effortless maintenance</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Travel & Hospitality</span>
+                                <a href="<?php echo $site_url; ?>industries/travel-tourism-software-development-services"><span class="title">Travel & Hospitality</span>
                                 Consult experts for big data</a>
                               </div>
                             </div>
@@ -642,7 +642,7 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                             </div>
                             <div class="dis-flex menu-column">
                               <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>"><span class="title">Enterprise Software Development</span>
+                                <a href="<?php echo $site_url; ?>enterprise-software-development-services"><span class="title">Enterprise Software Development</span>
                                 Define policies, audit compliance, monitor quality</a>
                                 <a href="<?php echo $site_url; ?>"><span class="title">Specialized Enterprise Solutions</span>
                                 Ensure quality, performance, & functionality</a>
@@ -664,11 +664,11 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                               Innovative, future-proof software solutions</a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                             </div>
                           </div>
@@ -692,11 +692,11 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                               <div class="flex-2">
                                 <a href="<?php echo $site_url; ?>"><span class="title">How to Hire Startup Developers</span>
                                 Testing experts for every stage  </a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Software Product Development</span>
+                                <a href="<?php echo $site_url; ?>outsource-software-product-development-services"><span class="title">Software Product Development</span>
                                 Plan, build, & ship quality products</a>
                                 <a href="<?php echo $site_url; ?>"><span class="title">SaaS Consulting</span>
                                 Plan, build, & ship quality products</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">SaaS Development</span>
+                                <a href="<?php echo $site_url; ?>saas-consulting-development-services"><span class="title">SaaS Development</span>
                                 Plan, build, & ship quality products</a>
                               </div>
                             </div>
@@ -706,11 +706,11 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
                               Innovative, future-proof software solutions</a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                             </div>
                           </div>
