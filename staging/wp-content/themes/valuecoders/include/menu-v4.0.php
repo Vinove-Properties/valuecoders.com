@@ -76,11 +76,13 @@
                             <div class="dis-flex menu-column">
                               <div class="flex-4">
                                 <span class="head">Development</span>
-                                <a href="<?php echo $site_url; ?>web-application-development"><span class="title">Custom Software Development</span>
+                                <a href="<?php echo $site_url; ?>web-application-development"><span class="title">Custom Software</span>
                                 Bespoke solutions for business</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Enterprise Software Development </span>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Enterprise Software </span>
                                 Choose the right technology</a>
-                                <a href="<?php echo $site_url; ?>application-development"><span class="title">Software Development Outsourcing services</span>
+                                <a href="<?php echo $site_url; ?>outsource-software-product-development-services"><span class="title">Software Product Engineering</span>
+                                Validate your idea and ensure</a>
+								<a href="<?php echo $site_url; ?>application-development"><span class="title">Application Development</span>
                                 Validate your idea and ensure</a>
                                 <a href="<?php echo $site_url; ?>software-development-services-company" class="view-more">View More</a>
                               </div>
@@ -883,16 +885,16 @@
                             <div class="dis-flex menu-column">
                               <div class="flex-2">
                                 <span class="head">Startups</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Startup Consulting</span>
+                                <a href="<?php echo $site_url; ?>startup-consulting-services"><span class="title">Startup Consulting</span>
                                 Define policies, audit compliance, monitor quality</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Startup Software Development</span>
+                                <a href="<?php echo $site_url; ?>discovery-phase-process"><span class="title">Product Discovery Phase</span>
                                 Ensure quality, performance, & functionality</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">How to Launch a Software Startup</span>
+                                <a href="<?php echo $site_url; ?>startup-product-development"><span class="title">Startup Product Development</span>
                                 Validate mobile apps for optimal performance</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">How to Start a SaaS Startup</span>
+                                <a href="<?php echo $site_url; ?>cto-as-a-service"><span class="title">CTO as a Service</span>
                                 Make flawless apps for improved performance</a>
-								<a href="<?php echo $site_url; ?>"><span class="title">How to Hire Startup Developers</span>
-                                Testing experts for every stage  </a>
+								<!--<a href="<?php echo $site_url; ?>"><span class="title">How to Hire Startup Developers</span>
+                                Testing experts for every stage  </a>-->
                               </div>
                               <div class="flex-2">
                                 <span class="head">Product</span>
@@ -901,6 +903,10 @@
                                 <a href="<?php echo $site_url; ?>"><span class="title">SaaS Consulting</span>
                                 Plan, build, & ship quality products</a>
                                 <a href="<?php echo $site_url; ?>saas-consulting-development-services"><span class="title">SaaS Development</span>
+                                Plan, build, & ship quality products</a>
+								<a href="<?php echo $site_url; ?>mvp-app-development-company"><span class="title">MVP Development</span>
+                                Plan, build, & ship quality products</a>
+								<a href="<?php echo $site_url; ?>product-ui-ux-design"><span class="title">Product UI/UX Design</span>
                                 Plan, build, & ship quality products</a>
                               </div>
                             </div>
@@ -926,21 +932,21 @@
                             </div>
                             <div class="dis-flex menu-column">
                               <div class="flex-4 margin-0">
-                                <a href="<?php echo $site_url; ?>"><span class="title">Financial Services</span>
-                                Expert advice on technology</a>
+                                <!--<a href="<?php echo $site_url; ?>"><span class="title">Financial Services</span>
+                                Expert advice on technology</a>-->
                                 <a href="<?php echo $site_url; ?>industries/banking-financial-services"><span class="title">Banking</span>
                                 Choose the right technology</a>
                                 <a href="<?php echo $site_url; ?>insurance"><span class="title">Insurance</span>
                                 Assistance from product conception</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Lending</span>
-                                Validate your idea and ensure</a>
+                                <!--<a href="<?php echo $site_url; ?>"><span class="title">Lending</span>
+                                Validate your idea and ensure</a>-->
                               </div>
                               <div class="flex-4 margin-0">
-                                <a href="<?php echo $site_url; ?>"><span class="title">Investment</span>
-                                Lead your business</a>
-                                <a href="<?php echo $site_url; ?>industries/fintech-software-development-company"><span class="title">FinTech</span>
+                               <!-- <a href="<?php echo $site_url; ?>"><span class="title">Investment</span>
+                                Lead your business</a>-->
+                                <!--<a href="<?php echo $site_url; ?>industries/fintech-software-development-company"><span class="title">FinTech</span>
                                 Update your web & Mobile</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Payments</span>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Payments</span>-->
                                 Effortless maintenance</a>
                                 <a href="<?php echo $site_url; ?>industries/retail-ecommerce-software-development"><span class="title">Retail</span>
                                 Consult experts for big</a>
