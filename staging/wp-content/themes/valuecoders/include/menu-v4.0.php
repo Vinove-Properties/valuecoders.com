@@ -16,10 +16,12 @@
   <div class="container">
     <div class="wrapper">
       <div class="header-item-left">
-        <a href="https://www.valuecoders.com/staging/" class="brand">
+        <a href="<?php bloginfo('url'); ?>" class="brand">
           <div class="large">
-            <img class="light" loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/logo-light.svg" alt="Valuecoders" width="400" height="88">
-            <img class="dark" loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/logo-dark.svg" alt="Valuecoders" width="400" height="88">
+            <img class="light" loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/logo-light.svg" 
+            alt="Valuecoders" width="400" height="88">
+            <img class="dark" loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/logo-dark.svg" 
+            alt="Valuecoders" width="400" height="88">
           </div>
           <div class="small">
             <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/logo-small.svg" alt="Valuecoders" width="80" height="80">
@@ -1242,7 +1244,7 @@
             <?php if( !in_array( $mcat, ['demand-teams', 'qa-testing'] ) ) : ?>
             <li class="menu-item-has-children"><a href="<?php echo $site_url; ?>">Case Studies</a></li>
             <?php endif; ?>
-            
+
             <li class="menu-item-has-children">
               <a href="<?php echo $site_url; ?>">Company</a> <span class="arrow-btn"></span>
               <div class="menu-mega small-menu">

@@ -186,10 +186,14 @@ function consultCTA_cb(){
 </script>
 <?php if( is_home() || is_front_page() ) : ?>
 <link rel="preload" as="video" href="<?php bloginfo('template_url'); ?>/video/home-video.mp4">
-<?php endif; ?>
+<?php endif; 
+global $post;   
+$pageCategory = get_post_meta( $post->ID, 'vc-mcategory', true);
+?>
 </head>
-<body id="themeAdd" <?php body_class(); ?> data-mpid="<?php global $post; echo $post->ID; ?>" 
-data-ptemplate="<?php echo basename( get_page_template() ); ?>" data-gcaploaded="0" data-url="<?php the_permalink(); ?>">
+<body id="themeAdd" <?php body_class(); ?> data-mpid="<?php echo $post->ID; ?>" 
+data-ptemplate="<?php echo basename( get_page_template() ); ?>" data-gcaploaded="0" 
+data-url="<?php the_permalink(); ?>" data-pcat="<?php echo $pageCategory; ?>">
 <?php 
 if( isStaggingVersion() === false ) :
 
@@ -209,9 +213,6 @@ style="display:none;visibility:hidden"></iframe></noscript>
 
 <?php 
 if(!is_page_template(['page-templates/template-contact-v8.php','page-templates/template-contact-v9.php'])){
-global $post;	
-$pageCategory = get_post_meta( $post->ID, 'vc-mcategory', true);
-//echo '<pre>'.$pageCategory.'</pre>';
 get_template_part( 'include/menu', 'v4.0', ['pcat' => $pageCategory]); 	
 }
 ?>

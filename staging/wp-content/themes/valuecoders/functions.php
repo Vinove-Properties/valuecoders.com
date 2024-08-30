@@ -874,10 +874,14 @@ function getVcBlogCategory(){
 
 
 add_filter( 'body_class', function( $classes ){
-	if( isset( $_GET['theme'] ) &&  ($_GET['theme'] == "light") ){
-		$classes[] 	= "day";
+	global $post;   
+	$pageCategory = get_post_meta( $post->ID, 'vc-mcategory', true);
+	if( $pageCategory ){
+		$classes[] 	= "velm-".$pageCategory;
 	}
-	
+	// if( isset( $_GET['theme'] ) &&  ($_GET['theme'] == "light") ){
+	// 	$classes[] 	= "day";
+	// }	
 	return $classes;
 });
 
