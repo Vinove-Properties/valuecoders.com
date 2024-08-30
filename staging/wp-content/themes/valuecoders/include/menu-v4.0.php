@@ -9,8 +9,14 @@
   if( isset($_SERVER['HTTP_HOST']) && ($_SERVER['HTTP_HOST'] == "localhost") ){
     $site_url   = trailingslashit(get_bloginfo('url'));
   }
+  $catList    = ['engineering', 'app-development', 'demand-teams', 'ecommerce', 'qa-testing', 'devops', 'data-science', 
+  'startups', 'enterprises', 'agencies', 'ai-ml'];
+
   $tpl_url    = $site_url.'wp-content/themes/valuecoders';
   $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] : 'master';
+  function isActiveMenu( $menu, $cat ){
+    return ( $menu === $cat ) ? "is-active" : '';
+  }
   ?>
 <header class="header-two">
   <div class="container">
@@ -45,18 +51,18 @@
                     <div id="menu-serv" class="dis-flex tab-contents">
                       <div class="left-tabs">
                         <ul class="tab-nav">
-                          <li class="tab-link is-active">Software Development</li>
-                          <li class="tab-link">Application Development</li>
-                          <li class="tab-link">Dedicated Software Teams</li>
-                          <li class="tab-link">eCommerce</li>
-                          <li class="tab-link">QA & Testing</li>
-                          <li class="tab-link">Cloud Services</li>
-                          <li class="tab-link">Data Engineering</li>
-                          <li class="tab-link">Artificial Intelligence</li>
+                          <li class="tab-link">Software Development</li>
+                          <li class="tab-link <?php echo isActiveMenu("app-development", $mcat); ?>">Application Development</li>
+                          <li class="tab-link <?php echo isActiveMenu("demand-teams", $mcat); ?>">Dedicated Software Teams</li>
+                          <li class="tab-link <?php echo isActiveMenu("ecommerce", $mcat); ?>">eCommerce</li>
+                          <li class="tab-link <?php echo isActiveMenu("qa-testing", $mcat); ?>">QA & Testing</li>
+                          <li class="tab-link <?php echo isActiveMenu("devops", $mcat); ?>">Cloud Services</li>
+                          <li class="tab-link <?php echo isActiveMenu("data-science", $mcat); ?>">Data Engineering</li>
+                          <li class="tab-link <?php echo isActiveMenu("ai-ml", $mcat); ?>">Artificial Intelligence</li>
                         </ul>
                       </div>
                       <div class="right-tabs">
-                        <div class="tab-content is-active">
+                        <div class="tab-content">
                           <div class="four-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
@@ -114,7 +120,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="tab-content">
+                        <div class="tab-content <?php echo isActiveMenu("app-development", $mcat); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Development</span>
                               Skilled developers, transparent billing</a>
@@ -158,7 +164,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="tab-content">
+                        <div class="tab-content <?php echo isActiveMenu("demand-teams", $mcat); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>dedicated-development-teams"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-03.svg" class="menuicon" alt="menuicon"><span class="title">Dedicated Software Teams </span>
                               Comprehensive QA & Testing solutions</a>
@@ -196,7 +202,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="tab-content">
+                        <div class="tab-content <?php echo isActiveMenu("ecommerce", $mcat); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>ecommerce-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-04.svg" class="menuicon" alt="menuicon"><span class="title">eCommerce</span>
                               Innovative, future-proof software solutions</a>
@@ -242,7 +248,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="tab-content">
+                        <div class="tab-content <?php echo isActiveMenu("qa-testing", $mcat); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>software-quality-assurance-testing-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-05.svg" class="menuicon" alt="menuicon"><span class="title">QA & Testing</span>
                               Innovative, future-proof software solutions</a>
@@ -282,7 +288,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="tab-content">
+                        <div class="tab-content <?php echo isActiveMenu("devops", $mcat); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>cloud-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-06.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Services</span>
                               Innovative, future-proof software solutions</a>
@@ -319,7 +325,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="tab-content">
+                        <div class="tab-content <?php echo isActiveMenu("data-science", $mcat); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>data-engineering"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Data Engineering</span>
                               Innovative, future-proof software solutions</a>
@@ -368,7 +374,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="tab-content">
+                        <div class="tab-content <?php echo isActiveMenu("ai-ml", $mcat); ?>">
                           <div class="four-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>ai"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Artificial Intelligence</span>
                               Innovative, future-proof software solutions</a>
