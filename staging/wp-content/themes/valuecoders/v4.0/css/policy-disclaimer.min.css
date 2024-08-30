@@ -2635,6 +2635,8 @@ body.page-template-template-testimonials .client-video-section iframe,
           font-size: 15px;
           margin: 30px auto 0;
           cursor: pointer; }
+          .header-two .header-item-right .cta-wrap .btn-sec .btn.rounded:before {
+            top: 3px; }
         .header-two .header-item-right .cta-wrap.large-reso {
           display: none; }
         .header-two .header-item-right .cta-wrap.small-reso {
@@ -2676,7 +2678,7 @@ body.page-template-template-testimonials .client-video-section iframe,
         .header-two:hover .header-item-right .menu ul li.menu-item-has-children a {
           color: #fff; }
         .header-two:hover .header-item-right .cta-wrap .btn-sec .btn {
-          border-color: #fff; }
+          border-color: rgba(5, 22, 77, 0.08); }
     .header-two .bar1,
     .header-two .bar2,
     .header-two .bar3 {
