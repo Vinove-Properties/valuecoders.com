@@ -2123,7 +2123,7 @@ body.page-template-template-testimonials .client-video-section iframe,
                   width: calc(100% - 10px);
                   margin: 0 0 10px -10px; }
               .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content a {
-                font-weight: 400;
+                font-weight: 400 !important;
                 font-size: 14px;
                 line-height: 20px;
                 color: #5d6579;
@@ -2287,11 +2287,17 @@ body.page-template-template-testimonials .client-video-section iframe,
       .header-two:hover .header-item-right .cta-wrap .btn-sec .btn {
         border-color: rgba(5, 22, 77, 0.08); }
 
+.velm-demand-teams .header-two .header-item-right .menu ul li .menu-mega.small-menu {
+  left: 39%; }
+
 @media screen and (max-width: 1600px) {
   .header-two .container {
     max-width: 100%; }
   .header-two .header-item-right .menu ul li .menu-mega.small-menu {
-    left: 60%; } }
+    left: 60%; }
+
+  .velm-demand-teams .header-two .header-item-right .menu ul li .menu-mega.small-menu {
+    left: 40%; } }
 @media screen and (max-width: 1440px) {
   .header-two .container {
     padding: 0 20px; }
@@ -2677,7 +2683,10 @@ body.page-template-template-testimonials .client-video-section iframe,
       float: right; }
       .header-two .arrow-btn.rot,
       .header-two .hr-arrow-btn.rot {
-        background-position: 36px -33px; } }
+        background-position: 36px -33px; }
+
+  .velm-demand-teams .header-two .header-item-right .menu ul li .menu-mega.small-menu {
+    left: auto; } }
 .btn-sec {
   display: flex;
   align-items: center;
