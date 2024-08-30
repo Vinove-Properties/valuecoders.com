@@ -843,71 +843,7 @@
             <!-- //Hire Menu Ends -->
             <?php //endif; ?>
 
-            <?php 
-            // Hide Solution Menu Is Page Catrgoty is : eCommerce
-            if(!in_array($mcat,['ecommerce','demand-teams','agencies','startups','devops','data-science','ai-ml'])) :
-            ?>
-            <!-- Solution Menu Starts -->
-            <li class="menu-item-has-children">
-              <a href="<?php echo $site_url; ?>">Solutions</a> <span class="arrow-btn"></span>
-              <div class="menu-mega">
-                <div class="container">
-                  <div class="dis-flex tab-menu">
-                    <div class="dis-flex tab-contents">                      
-                      <div class="right-tabs flex-full">
-                        <div class="tab-content is-active">
-                          <div class="four-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/ind-01.svg" class="menuicon" alt="menuicon"><span class="title">Solutions</span>
-                              Innovative, future-proof software solutions</a>
-                            </div>
-                            <div class="dis-flex menu-column">
-                              <div class="flex-4 margin-0">
-                                <a href="<?php echo $site_url; ?>digital-financial-management"><span class="title">Financial Management</span>
-                                Strategic consulting for growth</a>
-                                <a href="<?php echo $site_url; ?>workforce-management-solutions"><span class="title">Workforce Management</span>
-                                Streamline workforce operations</a>
-                                <a href="<?php echo $site_url; ?>hr-software-solutions"><span class="title">Human Resource Management</span>
-                                Optimize HR processes</a>
-                                <a href="<?php echo $site_url; ?>elearning-solutions"><span class="title">eLearning</span>
-                                Digitalize your learning journey</a>
-                              </div>
-                              <div class="flex-4 margin-0">
-                                <a href="<?php echo $site_url; ?>supply-chain-management"><span class="title">Supply Chain Management</span>
-                                Improve supply chain efficiency</a>
-                                <a href="<?php echo $site_url; ?>fleet-management"><span class="title">Fleet Management</span>
-                                Enhance fleet efficiency</a>
-                                <a href="<?php echo $site_url; ?>crm"><span class="title">CRM</span>
-                                Strengthen customer relationships</a>
-                                <a href="<?php echo $site_url; ?>operations-management-solutions"><span class="title">Operations Management</span>
-                                Optimize operational processes</a>
-                              </div>
-                              <div class="flex-4 margin-0">
-                                <a href="<?php echo $site_url; ?>asset-management"><span class="title">Asset Management</span>
-                                Improve asset optimization</a>
-                                <a href="<?php echo $site_url; ?>web-portal-development"><span class="title">Web Portals</span>
-                                Transform web experiences</a>
-                                <a href="<?php echo $site_url; ?>cms-development"><span class="title">Content Management System</span>
-                                Cost-effective content management</a>
-                                <a href="<?php echo $site_url; ?>erp"><span class="title">Enterprise Resource Planning</span>Enhance enterprise efficiency</a>
-                              </div>
-                              <div class="flex-4">
-                                <a href="<?php echo $site_url; ?>document-management-services"><span class="title">Document Management</span>
-                                Digitize documents seamlessly</a>
-                                <a href="<?php echo $site_url; ?>rpa-development-services-company">
-                                <span class="title">Robotic Process Automation</span>
-                                Automate, Simplify, Excel</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <!-- //Solution Menu Ends -->
-            <?php endif; ?>
+            
 
             <li class="menu-item-has-children">
               <a href="<?php echo $site_url; ?>">Who We Serve</a> <span class="arrow-btn"></span>
@@ -917,13 +853,55 @@
                     <div id="menu-inds" class="dis-flex tab-contents">
                       <div class="left-tabs">
                         <ul class="tab-nav">
-                          <li class="tab-link is-active">Industries</li>
-                          <li class="tab-link">Enterprises</li>
-                          <li class="tab-link">Product Companies</li>
+                          <li class="tab-link is-active">Startup & Product Companies</li>
+                          <li class="tab-link">Industries</li>
+                          <li class="tab-link">Enterprises</li>                          
                         </ul>
                       </div>
                       <div class="right-tabs">
                         <div class="tab-content is-active">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/ind-03.svg" class="menuicon" alt="menuicon"><span class="title">Software Startups & Product Companies</span>
+                              Innovative, future-proof software solutions</a>
+                            </div>
+                            <div class="dis-flex menu-column">
+                              <div class="flex-2">
+                                <a href="<?php echo $site_url; ?>"><span class="title">Startup Consulting</span>
+                                Define policies, audit compliance, monitor quality</a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Startup Software Development</span>
+                                Ensure quality, performance, & functionality</a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">How to Launch a Software Startup</span>
+                                Validate mobile apps for optimal performance</a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">How to Start a SaaS Startup</span>
+                                Make flawless apps for improved performance</a>
+                              </div>
+                              <div class="flex-2">
+                                <a href="<?php echo $site_url; ?>"><span class="title">How to Hire Startup Developers</span>
+                                Testing experts for every stage  </a>
+                                <a href="<?php echo $site_url; ?>outsource-software-product-development-services"><span class="title">Software Product Development</span>
+                                Plan, build, & ship quality products</a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">SaaS Consulting</span>
+                                Plan, build, & ship quality products</a>
+                                <a href="<?php echo $site_url; ?>saas-consulting-development-services"><span class="title">SaaS Development</span>
+                                Plan, build, & ship quality products</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="other-menu">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Client Type</span>
+                              Innovative, future-proof software solutions</a>
+                            </div>
+                            <div class="flex-1 menu-column">
+                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              Custom software for business goals</a>
+                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              End-to-end automation solutions</a>
+                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              Expand with white-label services</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-content">
                           <div class="four-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/ind-01.svg" class="menuicon" alt="menuicon"><span class="title">Industries</span>
                               Innovative, future-proof software solutions</a>
@@ -1010,48 +988,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="tab-content">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/ind-03.svg" class="menuicon" alt="menuicon"><span class="title">Software Startups & Product Companies</span>
-                              Innovative, future-proof software solutions</a>
-                            </div>
-                            <div class="dis-flex menu-column">
-                              <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>"><span class="title">Startup Consulting</span>
-                                Define policies, audit compliance, monitor quality</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Startup Software Development</span>
-                                Ensure quality, performance, & functionality</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">How to Launch a Software Startup</span>
-                                Validate mobile apps for optimal performance</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">How to Start a SaaS Startup</span>
-                                Make flawless apps for improved performance</a>
-                              </div>
-                              <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>"><span class="title">How to Hire Startup Developers</span>
-                                Testing experts for every stage  </a>
-                                <a href="<?php echo $site_url; ?>outsource-software-product-development-services"><span class="title">Software Product Development</span>
-                                Plan, build, & ship quality products</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">SaaS Consulting</span>
-                                Plan, build, & ship quality products</a>
-                                <a href="<?php echo $site_url; ?>saas-consulting-development-services"><span class="title">SaaS Development</span>
-                                Plan, build, & ship quality products</a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="other-menu">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Client Type</span>
-                              Innovative, future-proof software solutions</a>
-                            </div>
-                            <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
-                              Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
-                              End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
-                              Expand with white-label services</a>
-                            </div>
-                          </div>
-                        </div>
+                        
                       </div>
                     </div>
                   </div>
@@ -1160,6 +1097,72 @@
               </div>
             </li>
             <!-- //Technologies Menus Ends -->
+            <?php endif; ?>
+            
+            <?php 
+            // Hide Solution Menu Is Page Catrgoty is : eCommerce
+            if(!in_array($mcat,['ecommerce','demand-teams','agencies','startups','devops','data-science','ai-ml'])) :
+            ?>
+            <!-- Solution Menu Starts -->
+            <li class="menu-item-has-children">
+              <a href="<?php echo $site_url; ?>">Solutions</a> <span class="arrow-btn"></span>
+              <div class="menu-mega">
+                <div class="container">
+                  <div class="dis-flex tab-menu">
+                    <div class="dis-flex tab-contents">                      
+                      <div class="right-tabs flex-full">
+                        <div class="tab-content is-active">
+                          <div class="four-column">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/ind-01.svg" class="menuicon" alt="menuicon"><span class="title">Solutions</span>
+                              Innovative, future-proof software solutions</a>
+                            </div>
+                            <div class="dis-flex menu-column">
+                              <div class="flex-4 margin-0">
+                                <a href="<?php echo $site_url; ?>digital-financial-management"><span class="title">Financial Management</span>
+                                Strategic consulting for growth</a>
+                                <a href="<?php echo $site_url; ?>workforce-management-solutions"><span class="title">Workforce Management</span>
+                                Streamline workforce operations</a>
+                                <a href="<?php echo $site_url; ?>hr-software-solutions"><span class="title">Human Resource Management</span>
+                                Optimize HR processes</a>
+                                <a href="<?php echo $site_url; ?>elearning-solutions"><span class="title">eLearning</span>
+                                Digitalize your learning journey</a>
+                              </div>
+                              <div class="flex-4 margin-0">
+                                <a href="<?php echo $site_url; ?>supply-chain-management"><span class="title">Supply Chain Management</span>
+                                Improve supply chain efficiency</a>
+                                <a href="<?php echo $site_url; ?>fleet-management"><span class="title">Fleet Management</span>
+                                Enhance fleet efficiency</a>
+                                <a href="<?php echo $site_url; ?>crm"><span class="title">CRM</span>
+                                Strengthen customer relationships</a>
+                                <a href="<?php echo $site_url; ?>operations-management-solutions"><span class="title">Operations Management</span>
+                                Optimize operational processes</a>
+                              </div>
+                              <div class="flex-4 margin-0">
+                                <a href="<?php echo $site_url; ?>asset-management"><span class="title">Asset Management</span>
+                                Improve asset optimization</a>
+                                <a href="<?php echo $site_url; ?>web-portal-development"><span class="title">Web Portals</span>
+                                Transform web experiences</a>
+                                <a href="<?php echo $site_url; ?>cms-development"><span class="title">Content Management System</span>
+                                Cost-effective content management</a>
+                                <a href="<?php echo $site_url; ?>erp"><span class="title">Enterprise Resource Planning</span>Enhance enterprise efficiency</a>
+                              </div>
+                              <div class="flex-4">
+                                <a href="<?php echo $site_url; ?>document-management-services"><span class="title">Document Management</span>
+                                Digitize documents seamlessly</a>
+                                <a href="<?php echo $site_url; ?>rpa-development-services-company">
+                                <span class="title">Robotic Process Automation</span>
+                                Automate, Simplify, Excel</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- //Solution Menu Ends -->
             <?php endif; ?>
             
             <?php if( !in_array( $mcat, ['demand-teams', 'qa-testing'] ) ) : ?>
