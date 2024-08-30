@@ -3893,7 +3893,7 @@ a {
                       transition: all 0.3s ease-in-out;
                       margin-bottom: 2px; }
                     .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .tab-title {
-                      padding: 10px 0;
+                      padding: 10px 30px 10px 0;
                       border-bottom: 1px solid #e6e6e6;
                       width: 100%;
                       display: flex;
@@ -4106,13 +4106,13 @@ a {
         background-position: 36px -33px; }
     .header-two .ser-arrow-btn {
       display: inline-block;
-      position: relative;
       position: absolute;
       right: 15px;
       width: 18px;
       height: 12px;
       background: url(../header-images/arrow-mob.png) no-repeat;
-      background-size: 100%; }
+      background-size: 100%;
+      z-index: 999; }
       .header-two .ser-arrow-btn.rot {
         transform: rotate(90deg); }
 
