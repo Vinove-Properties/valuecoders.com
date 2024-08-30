@@ -92,6 +92,8 @@ function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $email
 
 $varIPAdd = get_client_ip_user(); 
 
+$emailTO = ['parvesh@vinove.com', 'akhil@valuecoders.com', 'sanjiv@valuecoders.com'];
+
 if( isset($_POST['frm-type']) &&  ($_POST['frm-type'] == "feedback") ){
 $name       = __issetEmpty( $_POST, 'user-name' );
 $email      = __issetEmpty( $_POST, 'user-email' );
@@ -118,8 +120,15 @@ If you have any additional thoughts or concerns, please don\'t hesitate to reach
 Best regards<br>
 Team ValueCoders';
 smtpEmailFunction($email, "Thank You for Your Feedback!", $autoEmailBody, "auto", $email,[],[],[]);
-smtpEmailFunction( "nitin.baluni@mail.vinove.com", "New Feedback Form Submission Received - ValueCoders", $Mailbody, "lead", 
-$email, [], [], [], $name);
+
+foreach( $emailTO as $mailTO ){
+    $ccEMail = [];
+    if( $mailTO == "sanjiv@valuecoders.com" ){
+    $ccEMail = ['neha.raina@valuecoders.com', 'nitin.baluni@mail.vinove.com'];
+    }
+    smtpEmailFunction( $mailTO, "New Feedback Form Submission Received - ValueCoders", $Mailbody, "lead", $email, $ccEMail, 
+    [], [], $name );
+}
 header('location: https://www.valuecoders.com/staging/thanks');
 die;
 }
@@ -160,8 +169,16 @@ Looking forward to a great collaboration!<br><br>
 Best regards<br>
 Team ValueCoders';
 smtpEmailFunction($email, "Thank You for Trusting ValueCoders - Next Steps Await", $autoEmailBody, "auto", $email,[],[],[]);
-smtpEmailFunction( "nitin.baluni@mail.vinove.com", "Paperwork Details Form Data Received - ValueCoders", $Mailbody, "lead", 
-$email, [], [], [], $name );
+
+foreach( $emailTO as $mailTO ){
+    $ccEMail = [];
+    if( $mailTO == "sanjiv@valuecoders.com" ){
+    $ccEMail = ['neha.raina@valuecoders.com', 'nitin.baluni@mail.vinove.com'];
+    }
+    smtpEmailFunction( $mailTO, "Paperwork Details Form Data Received - ValueCoders", $Mailbody, "lead", $email, $ccEMail, 
+    [], [], $name );
+}
+
 header('location: https://www.valuecoders.com/staging/thanks');
 die;
 }
