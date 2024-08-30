@@ -854,7 +854,7 @@
                 <div class="container">
                   <div class="dis-flex tab-menu">
                     <div class="dis-flex tab-contents">                      
-                      <div class="right-tabs" style="flex-basis: 100%;">
+                      <div class="right-tabs flex-full">
                         <div class="tab-content is-active">
                           <div class="four-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/ind-01.svg" class="menuicon" alt="menuicon"><span class="title">Solutions</span>
@@ -1091,7 +1091,8 @@
                                 <a href="<?php echo $site_url; ?>ai"><span class="title">AI & Machine Learning</span></a>
                                 <a href="<?php echo $site_url; ?>blockchain-development-company"><span class="title">Blockchain</span></a>
                               </div>
-                              <div class="flex-4">                                
+                              <div class="flex-4">  
+                              <span class="head opacity-0">Trending</span>                              
                                 <a href="<?php echo $site_url; ?>ar-vr-development-company"><span class="title">AR/ VR</span></a>
                                 <a href="<?php echo $site_url; ?>machine-learning/computer-vision-software-development"><span class="title">Computer Vision</span></a>
                                 <a href="<?php echo $site_url; ?>ott-development"><span class="title">OTT</span></a>
@@ -1107,7 +1108,8 @@
                                 <a href="<?php echo $site_url; ?>microsoft-power-platform"><span class="title">Microsoft Power Platforms</span></a>
                                 <a href="<?php echo $site_url; ?>microsoft-dynamics"><span class="title">Microsoft Dynamics</span></a>
                               </div>
-                              <div class="flex-4">                                
+                              <div class="flex-4">    
+                              <span class="head opacity-0">Platforms</span>                             
                                 <a href="<?php echo $site_url; ?>microsoft-powerapp-development"><span class="title">PowerApps</span></a>
                                 <a href="<?php echo $site_url; ?>sharepoint-application-development-services-company"><span class="title">SharePoint</span></a>
                                 <a href="<?php echo $site_url; ?>cloud-services/azure-cloud"><span class="title">Azure</span></a>
