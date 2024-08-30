@@ -178,6 +178,15 @@
                               Comprehensive QA & Testing solutions</a>
                             </div>
                             <div class="dis-flex menu-column">
+							 <div class="flex-2">
+                                <span class="head">Expertise</span>
+                                <a href="<?php echo $site_url; ?>it-staff-augmentation-services"><span class="title">Staff Augmentation</span>
+                                Access top technical resources on-demand</a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-software-developers-india"><span class="title">Hire Software Developers</span>
+                                Work with skilled & dedicated developers</a>
+								 <a href="<?php echo $site_url; ?>it-outsourcing-services"><span class="title">IT Outsourcing</span>
+                                Technical expertise, shared time zone</a>
+                              </div>
                               <div class="flex-2">
                                 <span class="head">Solutions</span>
                                 <a href="<?php echo $site_url; ?>offshore-software-development-center-india"><span class="title">Offshore Development Center</span>
@@ -186,13 +195,8 @@
                                 Leverage talent, cost-effectiveness</a>
                                 <a href="<?php echo $site_url; ?>nearshore-software-development-services"><span class="title">Nearshore Software Development</span>
                                 Technical expertise, shared time zone</a>
-                              </div>
-                              <div class="flex-2">
-                                <span class="head">Solutions</span>
-                                <a href="<?php echo $site_url; ?>it-staff-augmentation-services"><span class="title">Staff Augmentation</span>
-                                Access top technical resources on-demand</a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-software-developers-india"><span class="title">Hire Software Developers</span>
-                                Work with skilled & dedicated developers</a>
+							<a href="<?php echo $site_url; ?>why-india"><span class="title">Software Development in India</span>
+                                Technical expertise, shared time zone</a>
                               </div>
                             </div>
                           </div>
