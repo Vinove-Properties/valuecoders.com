@@ -62,7 +62,9 @@ get_header('nonav');
             <p>We understand that making a decision takes time. Schedule another call to discuss further details or invite additional team members or decision makers.</p>
           </div>
           <div class="btn-sec">
-            <a href="#" class="btn rounded"><span class="text-white">Schedule A Call</span></a>
+            <a href="https://calendly.com/valuecoders/discuss" target="_blank" class="btn rounded">
+              <span class="text-white">Schedule A Call</span>
+            </a>
           </div>
         </div>
       </div>  
