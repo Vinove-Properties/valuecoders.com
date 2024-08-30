@@ -71,6 +71,10 @@ function isMobileDeviceNA(){
     return check;
 }
 
+function isMobileDevice_NA2(){
+    return ( screen.width < 1139 ) ? true : false;
+}
+
 function isMobileDevice(){
     var check = false;
     (function(a) {
@@ -79,9 +83,7 @@ function isMobileDevice(){
     return check;
 }
 
-function isMobileDevice_NA2(){
-    return ( screen.width < 1139 ) ? true : false;
-}
+
 
 
 function vmRestDefault(){
