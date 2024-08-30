@@ -932,17 +932,20 @@
                             </div>
                             <div class="dis-flex menu-column">
                               <div class="flex-4 margin-0">
-                                <!--<a href="<?php echo $site_url; ?>"><span class="title">Financial Services</span>
-                                Expert advice on technology</a>-->
+                                <!--
+                                <a href="<?php echo $site_url; ?>"><span class="title">Financial Services</span>
+                                Expert advice on technology</a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Lending</span>
+                                Validate your idea and ensure</a>
+                                -->
                                 <a href="<?php echo $site_url; ?>industries/banking-financial-services"><span class="title">Banking</span>
                                 Choose the right technology</a>
                                 <a href="<?php echo $site_url; ?>insurance"><span class="title">Insurance</span>
                                 Assistance from product conception</a>
                                 <a href="<?php echo $site_url; ?>industries/healthcare-software-development-services"><span class="title">Healthcare</span>
                                 Lead your business into digital</a>
-                                
-                                <!--<a href="<?php echo $site_url; ?>"><span class="title">Lending</span>
-                                Validate your idea and ensure</a>-->
+                                <a href="<?php echo $site_url; ?>industries/education-elearning-software-development"><span class="title">Education & eLearning</span>
+                                Custom and platform-based LMS</a>                                
                               </div>
                               <div class="flex-4 margin-0">
                                 <a href="<?php echo $site_url; ?>industries/manufacturing-software-development"><span class="title">Manufacturing</span>
@@ -951,30 +954,32 @@
                                 Effortless maintenance</a>
                                 <a href="<?php echo $site_url; ?>industries/logistics-transportation-software-development"><span class="title">Transportation & Logistics</span>
                                 Consult experts for big data</a>
+                                <a href="<?php echo $site_url; ?>industries/banking-financial-services"><span class="title">BFSI</span>Enhance agility & efficiency</a>
+
                                <!-- <a href="<?php echo $site_url; ?>"><span class="title">Investment</span>
-                                Lead your business</a>-->
-                                <!--<a href="<?php echo $site_url; ?>industries/fintech-software-development-company"><span class="title">FinTech</span>
+                                Lead your business</a>
+                                <a href="<?php echo $site_url; ?>industries/fintech-software-development-company"><span class="title">FinTech</span>
                                 Update your web & Mobile</a>
                                 <a href="<?php echo $site_url; ?>"><span class="title">Payments</span>
                                 Effortless maintenance</a>
-                              -->
+                                -->
                                 
                               </div>
                               <div class="flex-4 margin-0">
-                                
-                                
-                                
                                 <a href="<?php echo $site_url; ?>industries/telecommunications"><span class="title">Telecommunications</span>
                                 Lead your business into digital</a>
                                 <a href="<?php echo $site_url; ?>industries/oil-gas"><span class="title">Oil & Gas</span>
                                 Update your web and mobile</a>
+                                <a href="<?php echo $site_url; ?>industries/media-software-development-services"><span class="title">Media & Entertainment</span>
+                                Media & OTT apps, ERP, & more</a>
+                                <a href="<?php echo $site_url; ?>industries/fintech-software-development-company"><span class="title">Fintech</span>Build end-to-end, robust solutions</a>
                               </div>
                               <div class="flex-4 margin-0">
-                                
-                                <a href="<?php echo $site_url; ?>"><span class="title">Construction</span>
-                                Effortless maintenance</a>
+                                <!-- <a href="<?php echo $site_url; ?>"><span class="title">Construction</span>
+                                Effortless maintenance</a> -->
                                 <a href="<?php echo $site_url; ?>industries/travel-tourism-software-development-services"><span class="title">Travel & Hospitality</span>
                                 Consult experts for big data</a>
+                                <a href="<?php echo $site_url; ?>industries/isv-software-development-services"><span class="title">ISV</span>End-to-end software products</a>
                               </div>
                             </div>
                           </div>
