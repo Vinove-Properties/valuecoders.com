@@ -76,51 +76,51 @@
                             <div class="dis-flex menu-column">
                               <div class="flex-4">
                                 <span class="head">Development</span>
-                                <a href="<?php echo $site_url; ?>web-application-development"><span class="title">Web App Development</span>
-                                Innovative browser applications</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Large-Scale Software</span>
+                                <a href="<?php echo $site_url; ?>web-application-development"><span class="title">Custom Software Development</span>
+                                Bespoke solutions for business</a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Enterprise Software Development </span>
                                 Choose the right technology</a>
-                                <a href="<?php echo $site_url; ?>mvp-app-development-company"><span class="title">MVP Development</span>
+                                <a href="<?php echo $site_url; ?>mvp-app-development-company"><span class="title">NearShore Software Development</span>
                                 Assistance from product conception</a>
-                                <a href="<?php echo $site_url; ?>application-development"><span class="title">Application Development</span>
+                                <a href="<?php echo $site_url; ?>application-development"><span class="title">Software Development Outsourcing services</span>
                                 Validate your idea and ensure</a>
-                                <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
+                                <a href="<?php echo $site_url; ?>software-development-services-company" class="view-more">View More</a>
                               </div>
                               <div class="flex-4">
                                 <span class="head">Consulting</span>
                                 <a href="<?php echo $site_url; ?>software-consulting"><span class="title">Software Consulting</span>
                                 Lead your business</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">SOA Consulting</span>
+                                <a href="<?php echo $site_url; ?>it-strategy-consulting-firms"><span class="title">IT Consulting</span>
                                 Update your web & Mobile</a>
                                 <a href="<?php echo $site_url; ?>agile-consulting"><span class="title">Agile Consulting</span>
                                 Effortless maintenance</a>
-                                <a href="<?php echo $site_url; ?>cloud-services/devops-consulting"><span class="title">DevOps Consulting</span>
+                                <a href="<?php echo $site_url; ?>crm-consulting"><span class="title">CRM Consulting</span>
                                 Validate your idea and ensure</a>
-                                <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
+                                <a href="<?php echo $site_url; ?>software-consulting" class="view-more">View More</a>
                               </div>
                               <div class="flex-4">
                                 <span class="head">Maintenance & Support</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Software Maintenance</span>
-                                Lead your business into digital</a>
+                                <!--<a href="<?php echo $site_url; ?>"><span class="title">Software Maintenance</span>
+                                Lead your business into digital</a>-->
                                 <a href="<?php echo $site_url; ?>application-maintenance"><span class="title">Application Maintenance</span>
                                 Update your web and mobile</a>
                                 <a href="<?php echo $site_url; ?>application-modernization"><span class="title">Application Modernization</span>
                                 Effortless maintenance</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Code Review</span>
-                                Consult experts for big data</a>
-                                <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
+                                <!--<a href="<?php echo $site_url; ?>"><span class="title">Code Review</span>
+                                Consult experts for big data</a>-->
+                                <!--<a href="<?php echo $site_url; ?>" class="view-more">View More</a>-->
                               </div>
                               <div class="flex-4">
                                 <span class="head">Delivery Models</span>
-                                <a href="<?php echo $site_url; ?>software-outsourcing-services-company"><span class="title">Software Outsourcing</span>
+                                <a href="<?php echo $site_url; ?>software-outsourcing-services-company"><span class="title">Software Development Outsourcing</span>
                                 Lead your business into digital</a>
                                 <a href="<?php echo $site_url; ?>it-staff-augmentation-services"><span class="title">IT Staff Augmentation</span>
                                 Update your web and mobile</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Nearshore Staff Augmentation</span>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Dedicated Development Team</span>
                                 Effortless maintenance</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Offshore Developers for Hire</span>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Nearshore Software Development</span>
                                 Consult experts for big data</a>
-                                <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
+                                <a href="<?php echo $site_url; ?>software-outsourcing-services-company" class="view-more">View More</a>
                               </div>
                             </div>
                           </div>
@@ -134,20 +134,23 @@
                               <div class="flex-2">
                                 <a href="<?php echo $site_url; ?>web-application-development"><span class="title">Web App Development</span>
                                 Innovative browser applications</a>
-                                <a href="<?php echo $site_url; ?>backend-development-services"><span class="title">Backend Development</span>
-                                Robust server/client expertise</a>
+								 <a href="<?php echo $site_url; ?>mobile-application-development"><span class="title">Mobile App Development</span>
+                                Seamless mobile experiences</a>
+								<a href="<?php echo $site_url; ?>api-development-services"><span class="title">API Development</span>
+                                Efficient API management</a>
+                              
                                 <a href="<?php echo $site_url; ?>top-website-development-company"><span class="title">Website & Portal Development</span>
                                 Secure, user-centric solutions</a>
-                                <a href="<?php echo $site_url; ?>frontend-development-services"><span class="title">Frontend Development</span>
-                                Flawless UI/UX creation</a>
+                             
                               </div>
                               <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>mobile-application-development"><span class="title">Mobile App Development</span>
-                                Seamless mobile experiences</a>
+							     <a href="<?php echo $site_url; ?>frontend-development-services"><span class="title">Frontend Development</span>
+                                Flawless UI/UX creation</a>
+                                 <a href="<?php echo $site_url; ?>backend-development-services"><span class="title">Backend Development</span>
+                                Robust server/client expertise</a>
                                 <a href="<?php echo $site_url; ?>cross-platform-app-development-services"><span class="title">Cross-Platform App Development</span>
                                 Unified multi-platform solutions</a>
-                                <a href="<?php echo $site_url; ?>api-development-services"><span class="title">API Development</span>
-                                Efficient API management</a>
+                                
                                 <a href="<?php echo $site_url; ?>full-stack-development"><span class="title">Full Stack Development</span>
                                 Secure scalable applications</a>
                               </div>
