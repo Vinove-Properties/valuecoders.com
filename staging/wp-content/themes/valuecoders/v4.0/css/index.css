@@ -3924,6 +3924,8 @@ a {
                       .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column .head {
                         font-size: 14px;
                         margin: 8px 0 8px; }
+                        .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column .head.opacity-0 {
+                          display: none; }
                       .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column a {
                         width: calc(100% - 10px);
                         margin: 0 0 5px -10px; }
