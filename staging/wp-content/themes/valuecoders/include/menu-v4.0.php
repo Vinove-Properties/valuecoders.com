@@ -80,8 +80,6 @@
                                 Bespoke solutions for business</a>
                                 <a href="<?php echo $site_url; ?>"><span class="title">Enterprise Software Development </span>
                                 Choose the right technology</a>
-                                <a href="<?php echo $site_url; ?>mvp-app-development-company"><span class="title">NearShore Software Development</span>
-                                Assistance from product conception</a>
                                 <a href="<?php echo $site_url; ?>application-development"><span class="title">Software Development Outsourcing services</span>
                                 Validate your idea and ensure</a>
                                 <a href="<?php echo $site_url; ?>software-development-services-company" class="view-more">View More</a>
@@ -239,8 +237,8 @@
                                 Next-level solutions for B2B & B2C</a>
                                 <a href="<?php echo $site_url; ?>top-wordpress-development-services-company-india"><span class="title">WooCommerce</span>
                                 Build foundations with data</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">OpenCart</span>
-                                Drive technological innovation</a>    
+                                <!--<a href="<?php echo $site_url; ?>"><span class="title">OpenCart</span>
+                                Drive technological innovation</a>-->
                               </div>
                             </div>
                           </div>
@@ -893,11 +891,11 @@
                                 Validate mobile apps for optimal performance</a>
                                 <a href="<?php echo $site_url; ?>"><span class="title">How to Start a SaaS Startup</span>
                                 Make flawless apps for improved performance</a>
+								<a href="<?php echo $site_url; ?>"><span class="title">How to Hire Startup Developers</span>
+                                Testing experts for every stage  </a>
                               </div>
                               <div class="flex-2">
                                 <span class="head">Product</span>
-                                <a href="<?php echo $site_url; ?>"><span class="title">How to Hire Startup Developers</span>
-                                Testing experts for every stage  </a>
                                 <a href="<?php echo $site_url; ?>outsource-software-product-development-services"><span class="title">Software Product Development</span>
                                 Plan, build, & ship quality products</a>
                                 <a href="<?php echo $site_url; ?>"><span class="title">SaaS Consulting</span>
