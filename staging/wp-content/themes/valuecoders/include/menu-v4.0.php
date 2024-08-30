@@ -9,14 +9,19 @@
   if( isset($_SERVER['HTTP_HOST']) && ($_SERVER['HTTP_HOST'] == "localhost") ){
     $site_url   = trailingslashit(get_bloginfo('url'));
   }
-  $catList    = ['engineering', 'app-development', 'demand-teams', 'ecommerce', 'qa-testing', 'devops', 'data-science', 
-  'startups', 'enterprises', 'agencies', 'ai-ml'];
-
+  
   $tpl_url    = $site_url.'wp-content/themes/valuecoders';
   $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] : 'master';
+  
   function isActiveMenu( $menu, $cat ){
     return ( $menu === $cat ) ? "is-active" : '';
   }
+
+  function defActiveMenu( $cat = "master" ){
+    $catList = ['app-development', 'demand-teams', 'ecommerce', 'qa-testing', 'devops', 'data-science', 'ai-ml'];
+    return ( !in_array( $cat, $catList ) ) ? "is-active" : '';
+  }
+
   ?>
 <header class="header-two">
   <div class="container">
@@ -51,7 +56,7 @@
                     <div id="menu-serv" class="dis-flex tab-contents">
                       <div class="left-tabs">
                         <ul class="tab-nav">
-                          <li class="tab-link">Software Development</li>
+                          <li class="tab-link <?php echo defActiveMenu($mcat); ?>">Software Development</li>
                           <li class="tab-link <?php echo isActiveMenu("app-development", $mcat); ?>">Application Development</li>
                           <li class="tab-link <?php echo isActiveMenu("demand-teams", $mcat); ?>">Dedicated Software Teams</li>
                           <li class="tab-link <?php echo isActiveMenu("ecommerce", $mcat); ?>">eCommerce</li>
@@ -62,7 +67,7 @@
                         </ul>
                       </div>
                       <div class="right-tabs">
-                        <div class="tab-content">
+                        <div class="tab-content <?php echo defActiveMenu($mcat); ?>">
                           <div class="four-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
