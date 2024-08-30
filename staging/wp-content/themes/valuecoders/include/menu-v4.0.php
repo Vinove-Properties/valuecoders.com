@@ -873,7 +873,7 @@
                         <ul class="tab-nav">
                           <li class="tab-link is-active">Startup & Product Companies</li>
                           <li class="tab-link">Industries</li>
-                          <li class="tab-link">Enterprises</li>                          
+                          <!-- <li class="tab-link">Enterprises</li> -->
                         </ul>
                       </div>
                       <div class="right-tabs">
@@ -938,34 +938,39 @@
                                 Choose the right technology</a>
                                 <a href="<?php echo $site_url; ?>insurance"><span class="title">Insurance</span>
                                 Assistance from product conception</a>
+                                <a href="<?php echo $site_url; ?>industries/healthcare-software-development-services"><span class="title">Healthcare</span>
+                                Lead your business into digital</a>
+                                
                                 <!--<a href="<?php echo $site_url; ?>"><span class="title">Lending</span>
                                 Validate your idea and ensure</a>-->
                               </div>
                               <div class="flex-4 margin-0">
-                               <!-- <a href="<?php echo $site_url; ?>"><span class="title">Investment</span>
-                                Lead your business</a>-->
-                                <!--<a href="<?php echo $site_url; ?>industries/fintech-software-development-company"><span class="title">FinTech</span>
-                                Update your web & Mobile</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Payments</span>-->
-                                Effortless maintenance</a>
-                                <a href="<?php echo $site_url; ?>industries/retail-ecommerce-software-development"><span class="title">Retail</span>
-                                Consult experts for big</a>
-                              </div>
-                              <div class="flex-4 margin-0">
-                                <a href="<?php echo $site_url; ?>industries/healthcare-software-development-services"><span class="title">Healthcare</span>
-                                Lead your business into digital</a>
                                 <a href="<?php echo $site_url; ?>industries/manufacturing-software-development"><span class="title">Manufacturing</span>
                                 Update your web and mobile</a>
                                 <a href="<?php echo $site_url; ?>industries/professional-services-software-development"><span class="title">Professional Services</span>
                                 Effortless maintenance</a>
                                 <a href="<?php echo $site_url; ?>industries/logistics-transportation-software-development"><span class="title">Transportation & Logistics</span>
                                 Consult experts for big data</a>
+                               <!-- <a href="<?php echo $site_url; ?>"><span class="title">Investment</span>
+                                Lead your business</a>-->
+                                <!--<a href="<?php echo $site_url; ?>industries/fintech-software-development-company"><span class="title">FinTech</span>
+                                Update your web & Mobile</a>
+                                <a href="<?php echo $site_url; ?>"><span class="title">Payments</span>
+                                Effortless maintenance</a>
+                              -->
+                                
                               </div>
                               <div class="flex-4 margin-0">
+                                
+                                
+                                
                                 <a href="<?php echo $site_url; ?>industries/telecommunications"><span class="title">Telecommunications</span>
                                 Lead your business into digital</a>
                                 <a href="<?php echo $site_url; ?>industries/oil-gas"><span class="title">Oil & Gas</span>
                                 Update your web and mobile</a>
+                              </div>
+                              <div class="flex-4 margin-0">
+                                
                                 <a href="<?php echo $site_url; ?>"><span class="title">Construction</span>
                                 Effortless maintenance</a>
                                 <a href="<?php echo $site_url; ?>industries/travel-tourism-software-development-services"><span class="title">Travel & Hospitality</span>
@@ -973,46 +978,7 @@
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="tab-content">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-02.svg" class="menuicon" alt="menuicon"><span class="title">Enterprises</span>
-                              Innovative, future-proof software solutions</a>
-                            </div>
-                            <div class="dis-flex menu-column">
-                              <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>enterprise-software-development-services"><span class="title">Enterprise Software Development</span>
-                                Define policies, audit compliance, monitor quality</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Specialized Enterprise Solutions</span>
-                                Ensure quality, performance, & functionality</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Enterprise Digital Transformation</span>
-                                Validate mobile apps for optimal performance</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Business Process Management</span>
-                                Make flawless apps for improved performance</a>
-                              </div>
-                              <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>"><span class="title">Business Automation</span>
-                                Testing experts for every stage </a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Crisis Management</span>
-                                Plan, build, & ship quality products</a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="other-menu">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Client Type</span>
-                              Innovative, future-proof software solutions</a>
-                            </div>
-                            <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
-                              Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
-                              End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
-                              Expand with white-label services</a>
-                            </div>
-                          </div>
-                        </div>
-                        
+                        </div>                                                
                       </div>
                     </div>
                   </div>
