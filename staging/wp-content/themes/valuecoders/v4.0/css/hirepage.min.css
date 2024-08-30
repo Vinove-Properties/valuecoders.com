@@ -4673,7 +4673,9 @@ body.page-template-template-testimonials .client-video-section iframe,
                     .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .tab-title {
                       padding: 10px 0;
                       border-bottom: 1px solid #e6e6e6;
-                      width: 100%; }
+                      width: 100%;
+                      display: flex;
+                      align-items: center; }
                       .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .tab-title a {
                         padding: 10px 10px 10px 55px;
                         margin: 0 0 0 -10px; }
@@ -4690,6 +4692,10 @@ body.page-template-template-testimonials .client-video-section iframe,
                     .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column {
                       padding: 15px 0 0;
                       width: 100%; }
+                      .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column.sub-service {
+                        display: none; }
+                      .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column.m-active {
+                        display: block; }
                       .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column .flex-2 {
                         flex-basis: 100%;
                         padding: 0;
@@ -4745,6 +4751,8 @@ body.page-template-template-testimonials .client-video-section iframe,
                           padding: 8px;
                           width: calc(100% - 10px);
                           margin: 0 0 5px -10px; }
+                        .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .other-menu .tab-title .ser-arrow-btn {
+                          right: -5px; }
                       .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .other-menu .flex-1 {
                         flex-basis: 100%; }
                         .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .other-menu .flex-1 a {
@@ -4874,6 +4882,17 @@ body.page-template-template-testimonials .client-video-section iframe,
       .header-two .arrow-btn.rot,
       .header-two .hr-arrow-btn.rot {
         background-position: 36px -33px; }
+    .header-two .ser-arrow-btn {
+      display: inline-block;
+      position: relative;
+      position: absolute;
+      right: 15px;
+      width: 18px;
+      height: 12px;
+      background: url(../header-images/arrow-mob.png) no-repeat;
+      background-size: 100%; }
+      .header-two .ser-arrow-btn.rot {
+        transform: rotate(90deg); }
 
   .velm-demand-teams .header-two .header-item-right .menu ul li .menu-mega.small-menu {
     left: auto; } }
