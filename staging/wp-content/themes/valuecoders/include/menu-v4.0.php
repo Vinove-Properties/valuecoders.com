@@ -877,6 +877,7 @@
                             </div>
                             <div class="dis-flex menu-column">
                               <div class="flex-2">
+                                <span class="head">Startups</span>
                                 <a href="<?php echo $site_url; ?>"><span class="title">Startup Consulting</span>
                                 Define policies, audit compliance, monitor quality</a>
                                 <a href="<?php echo $site_url; ?>"><span class="title">Startup Software Development</span>
@@ -887,6 +888,7 @@
                                 Make flawless apps for improved performance</a>
                               </div>
                               <div class="flex-2">
+                                <span class="head">Product</span>
                                 <a href="<?php echo $site_url; ?>"><span class="title">How to Hire Startup Developers</span>
                                 Testing experts for every stage  </a>
                                 <a href="<?php echo $site_url; ?>outsource-software-product-development-services"><span class="title">Software Product Development</span>
