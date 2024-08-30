@@ -50,7 +50,9 @@ get_header('nonav');
             <p>Let’s Set up a Date & Time for the Call.</p>
           </div>
           <div class="btn-sec">
-            <a href="#" class="btn rounded"><span class="text-white">Schedule A Call</span></a>
+            <a href="https://calendly.com/valuecoders/discuss" target="_blank" class="btn rounded">
+              <span class="text-white">Schedule A Call</span>
+            </a>
           </div>
         </div>
       </div>  
