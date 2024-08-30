@@ -433,7 +433,7 @@
             </li>
             <!-- //Services Menu Ends -->
 
-            <?php if( $mcat === "demand-teams" ) : ?>
+            <?php //if( $mcat === "demand-teams" ) : ?>
             <!-- Hire Menu Starts -->
             <li class="menu-item-has-children">
               <a href="<?php echo $site_url; ?>">Hire</a> <span class="arrow-btn"></span>
@@ -841,7 +841,7 @@
               </div>
             </li>
             <!-- //Hire Menu Ends -->
-            <?php endif; ?>
+            <?php //endif; ?>
 
             <?php 
             // Hide Solution Menu Is Page Catrgoty is : eCommerce
@@ -853,14 +853,8 @@
               <div class="menu-mega">
                 <div class="container">
                   <div class="dis-flex tab-menu">
-                    <div id="mnu-sol" class="dis-flex tab-contents">
-                      <div class="left-tabs">
-                        <ul class="tab-nav">
-                          <li class="tab-link is-active">Solutions</li>
-                          <li class="tab-link">Industries</li>
-                        </ul>
-                      </div>
-                      <div class="right-tabs">
+                    <div class="dis-flex tab-contents">                      
+                      <div class="right-tabs" style="flex-basis: 100%;">
                         <div class="tab-content is-active">
                           <div class="four-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/ind-01.svg" class="menuicon" alt="menuicon"><span class="title">Solutions</span>
@@ -905,50 +899,7 @@
                               </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="tab-content">
-                          <div class="four-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-02.svg" class="menuicon" alt="menuicon"><span class="title">Industries</span>
-                              Innovative, future-proof software solutions</a>
-                            </div>
-                            <div class="dis-flex menu-column">
-                              <div class="flex-4">
-                                <a href="<?php echo $site_url; ?>industries/healthcare-software-development-services"><span class="title">Healthcare</span>
-                                Innovative digital solutions</a>
-                                <a href="<?php echo $site_url; ?>industries/isv-software-development-services"><span class="title">ISV</span>
-                                End-to-end software products</a>
-                                <a href="<?php echo $site_url; ?>industries/automotive-companies-software-development-services"><span class="title">Automotive</span>
-                                Result-driven automotive software</a>
-                                <a href="<?php echo $site_url; ?>industries/fintech-software-development-company"><span class="title">Fintech</span>
-                                Build end-to-end, robust solutions</a>
-                              </div>
-                              <div class="flex-4">
-                                <a href="<?php echo $site_url; ?>industries/retail-ecommerce-software-development"><span class="title">Retail & eCommerce</span>
-                                Feature-rich eCommerce solutions</a>
-                                <a href="<?php echo $site_url; ?>industries/manufacturing-software-development"><span class="title">Manufacturing</span>
-                                Next-gen manufacturing mastery</a>
-                                <a href="<?php echo $site_url; ?>industries/telecommunications"><span class="title">Telecommunications</span>
-                                Connect digital dimensions</a>
-                                <a href="<?php echo $site_url; ?>industries/education-elearning-software-development"><span class="title">Education & eLearning</span>
-                                Custom and platform-based LMS</a>
-                              </div>
-                              <div class="flex-4">
-                                <a href="<?php echo $site_url; ?>industries/retail-ecommerce-software-development"><span class="title">Retail & eCommerce</span>
-                                Feature-rich eCommerce solutions</a>
-                                <a href="<?php echo $site_url; ?>industries/manufacturing-software-development"><span class="title">Manufacturing</span>
-                                Next-gen manufacturing mastery</a>
-                                <a href="<?php echo $site_url; ?>industries/telecommunications"><span class="title">Telecommunications</span>
-                                Connect digital dimensions</a>
-                                <a href="<?php echo $site_url; ?>industries/education-elearning-software-development"><span class="title">Education & eLearning</span>
-                                Custom and platform-based LMS</a>
-                              </div>
-                              <div class="flex-4">
-                                <a href="<?php echo $site_url; ?>industries/professional-services-software-development"><span class="title">Professional Services</span>Craft client success</a>
-                                <a href="<?php echo $site_url; ?>industries/oil-gas"><span class="title">Oil & Gas</span>Innovate energy engagements</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                        </div>                        
                       </div>
                     </div>
                   </div>
@@ -1120,13 +1071,52 @@
                     <div id="mnu-tech" class="dis-flex tab-contents">
                       <div class="left-tabs">
                         <ul class="tab-nav">
-                          <li class="tab-link is-active">Programming</li>
-                          <li class="tab-link">Trending</li>
-                          <li class="tab-link">Platforms</li>
+                          <li class="tab-link is-active">Trending & Platforms</li> 
+                          <li class="tab-link">Programming</li>
+                                                   
                         </ul>
                       </div>
-                      <div class="right-tabs">
+                      <div class="right-tabs">                        
                         <div class="tab-content is-active">
+                          <div class="four-column">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-03.svg" class="menuicon" alt="menuicon"><span class="title">Trending & Platforms</span>Innovative, future-proof software solutions</a>
+                            </div>
+                            <div class="dis-flex menu-column">
+                              <div class="flex-4">
+                                <span class="head">Trending</span>
+                                <a href="<?php echo $site_url; ?>iot-development-company"><span class="title">Internet of Things</span></a>
+                                <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><span class="title">Big Data</span></a>
+                                <a href="<?php echo $site_url; ?>data-engineering/data-science-consulting-services"><span class="title">Data Science</span></a>
+                                <a href="<?php echo $site_url; ?>data-analytics"><span class="title">Data Analytics</span></a>
+                                <a href="<?php echo $site_url; ?>ai"><span class="title">AI & Machine Learning</span></a>
+                                <a href="<?php echo $site_url; ?>blockchain-development-company"><span class="title">Blockchain</span></a>
+                              </div>
+                              <div class="flex-4">                                
+                                <a href="<?php echo $site_url; ?>ar-vr-development-company"><span class="title">AR/ VR</span></a>
+                                <a href="<?php echo $site_url; ?>machine-learning/computer-vision-software-development"><span class="title">Computer Vision</span></a>
+                                <a href="<?php echo $site_url; ?>ott-development"><span class="title">OTT</span></a>
+                                <a href="<?php echo $site_url; ?>machine-learning/rpa-development-services-company"><span class="title">RPA</span></a>
+                                <a href="<?php echo $site_url; ?>serverless-development"><span class="title">Serverless</span></a>
+                                <a href="<?php echo $site_url; ?>chatbot-development-company"><span class="title">Chatbot</span></a>
+                              </div>
+                              <div class="flex-4">
+                                <span class="head">Platforms</span>                                
+                                <a href="<?php echo $site_url; ?>salesforce"><span class="title">Salesforce</span></a>
+                                <a href="<?php echo $site_url; ?>microsoft-power-bi-development-services-company"><span class="title">Microsoft Power BI</span></a>
+                                <a href="<?php echo $site_url; ?>cloud-services/amazon-cloud"><span class="title">Amazon Web Services</span></a>
+                                <a href="<?php echo $site_url; ?>microsoft-power-platform"><span class="title">Microsoft Power Platforms</span></a>
+                                <a href="<?php echo $site_url; ?>microsoft-dynamics"><span class="title">Microsoft Dynamics</span></a>
+                              </div>
+                              <div class="flex-4">                                
+                                <a href="<?php echo $site_url; ?>microsoft-powerapp-development"><span class="title">PowerApps</span></a>
+                                <a href="<?php echo $site_url; ?>sharepoint-application-development-services-company"><span class="title">SharePoint</span></a>
+                                <a href="<?php echo $site_url; ?>cloud-services/azure-cloud"><span class="title">Azure</span></a>
+                                <a href="<?php echo $site_url; ?>odoo-development-services"><span class="title">Odoo</span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-content">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-03.svg" class="menuicon" alt="menuicon"><span class="title">Programming </span>Innovative, future-proof software solutions</a>
                             </div>
@@ -1144,77 +1134,6 @@
                                 <a href="<?php echo $site_url; ?>net-maui-app-development"><span class="title">.NET MAUI</span></a>
                                 <a href="<?php echo $site_url; ?>aspdotnet-development-company-india"><span class="title">.NET</span></a>
                                 <a href="<?php echo $site_url; ?>node-js-development-company-india"><span class="title">Node</span></a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="other-menu mob-hide">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Client Type</span>
-                              Innovative, future-proof software solutions</a>
-                            </div>
-                            <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
-                              Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
-                              End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
-                              Expand with white-label services</a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tab-content is-active">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-03.svg" class="menuicon" alt="menuicon"><span class="title">Trending</span>Innovative, future-proof software solutions</a>
-                            </div>
-                            <div class="dis-flex menu-column">
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>iot-development-company"><span class="title">Internet of Things</span></a>
-                                <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><span class="title">Big Data</span></a>
-                                <a href="<?php echo $site_url; ?>data-engineering/data-science-consulting-services"><span class="title">Data Science</span></a>
-                                <a href="<?php echo $site_url; ?>data-analytics"><span class="title">Data Analytics</span></a>
-                                <a href="<?php echo $site_url; ?>ai"><span class="title">AI & Machine Learning</span></a>
-                                <a href="<?php echo $site_url; ?>blockchain-development-company"><span class="title">Blockchain</span></a>
-                              </div>
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>ar-vr-development-company"><span class="title">AR/ VR</span></a>
-                                <a href="<?php echo $site_url; ?>machine-learning/computer-vision-software-development"><span class="title">Computer Vision</span></a>
-                                <a href="<?php echo $site_url; ?>ott-development"><span class="title">OTT</span></a>
-                                <a href="<?php echo $site_url; ?>machine-learning/rpa-development-services-company"><span class="title">RPA</span></a>
-                                <a href="<?php echo $site_url; ?>serverless-development"><span class="title">Serverless</span></a>
-                                <a href="<?php echo $site_url; ?>chatbot-development-company"><span class="title">Chatbot</span></a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="other-menu mob-hide">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Client Type</span>
-                              Innovative, future-proof software solutions</a>
-                            </div>
-                            <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
-                              Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
-                              End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
-                              Expand with white-label services</a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tab-content is-active">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-03.svg" class="menuicon" alt="menuicon"><span class="title">Platforms </span>Innovative, future-proof software solutions</a>
-                            </div>
-                            <div class="dis-flex menu-column">
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>salesforce"><span class="title">Salesforce</span></a>
-                                <a href="<?php echo $site_url; ?>microsoft-power-bi-development-services-company"><span class="title">Microsoft Power BI</span></a>
-                                <a href="<?php echo $site_url; ?>cloud-services/amazon-cloud"><span class="title">Amazon Web Services</span></a>
-                                <a href="<?php echo $site_url; ?>microsoft-power-platform"><span class="title">Microsoft Power Platforms</span></a>
-                                <a href="<?php echo $site_url; ?>microsoft-dynamics"><span class="title">Microsoft Dynamics</span></a>
-                              </div>
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>microsoft-powerapp-development"><span class="title">PowerApps</span></a>
-                                <a href="<?php echo $site_url; ?>sharepoint-application-development-services-company"><span class="title">SharePoint</span></a>
-                                <a href="<?php echo $site_url; ?>cloud-services/azure-cloud"><span class="title">Azure</span></a>
-                                <a href="<?php echo $site_url; ?>odoo-development-services"><span class="title">Odoo</span></a>
                               </div>
                             </div>
                           </div>
