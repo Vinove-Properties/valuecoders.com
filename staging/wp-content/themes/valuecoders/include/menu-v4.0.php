@@ -28,8 +28,12 @@ function defActiveMenu( $cat = "master" ){
   return ( !in_array( $cat, $catList ) ) ? "is-active" : '';
 }
 
-function defActiveHire( $hirePage ){
-  return ( ($hirePage == "backend") || ($hirePage === false) ) ? "is-active" : '';
+function defActiveHire( $hirePage, $exCat ){
+  if( in_array( $exCat, ['ai-ml'] ) ){
+    return "is-active";
+  }else{
+    return ( ($hirePage == "backend") || ($hirePage === false) ) ? "is-active" : '';
+  }
 }
 ?>
 <header class="header-two">
@@ -467,7 +471,7 @@ function defActiveHire( $hirePage ){
                     <div id="mnu-hire" class="dis-flex tab-contents">
                       <div class="left-tabs">
                         <ul class="tab-nav">
-                          <li class="tab-link <?php echo defActiveHire($hireElm) ?>">Backend</li>
+                          <li class="tab-link <?php echo defActiveHire($hireElm, $mcat); ?>">Backend</li>
                           <li class="tab-link <?php echo isActiveMenu("frontend", $hireElm); ?>">Frontend</li>
                           <li class="tab-link <?php echo isActiveMenu([$hireElm,$mcat] ,"ai-ml"); ?>">AI/ML</li>
                           <li class="tab-link <?php echo isActiveMenu("dm", $hireElm); ?>">Digital Marketing</li>
@@ -481,7 +485,7 @@ function defActiveHire( $hirePage ){
                         </ul>
                       </div>
                       <div class="right-tabs">
-                        <div class="tab-content <?php echo defActiveHire($hireElm) ?>">
+                        <div class="tab-content <?php echo defActiveHire($hireElm, $mcat); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-backend-developers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
