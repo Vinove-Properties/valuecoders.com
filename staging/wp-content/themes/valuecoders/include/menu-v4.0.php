@@ -874,20 +874,7 @@
                             <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/ind-03.svg" class="menuicon" alt="menuicon"><span class="title">Software Startups & Product Companies</span>
                               Innovative, future-proof software solutions</a>
                             </div>
-                            <div class="dis-flex menu-column">
-                              <div class="flex-2">
-                                <span class="head">Startups</span>
-                                <a href="<?php echo $site_url; ?>startup-consulting-services"><span class="title">Startup Consulting</span>
-                                Define policies, audit compliance, monitor quality</a>
-                                <a href="<?php echo $site_url; ?>discovery-phase-process"><span class="title">Product Discovery Phase</span>
-                                Ensure quality, performance, & functionality</a>
-                                <a href="<?php echo $site_url; ?>startup-product-development"><span class="title">Startup Product Development</span>
-                                Validate mobile apps for optimal performance</a>
-                                <a href="<?php echo $site_url; ?>cto-as-a-service"><span class="title">CTO as a Service</span>
-                                Make flawless apps for improved performance</a>
-                                <!--<a href="<?php echo $site_url; ?>"><span class="title">How to Hire Startup Developers</span>
-                                  Testing experts for every stage  </a>-->
-                              </div>
+                            <div class="dis-flex menu-column">                              
                               <div class="flex-2">
                                 <span class="head">Product</span>
                                 <a href="<?php echo $site_url; ?>outsource-software-product-development-services"><span class="title">Software Product Development</span>
@@ -901,6 +888,21 @@
                                 <a href="<?php echo $site_url; ?>product-ui-ux-design"><span class="title">Product UI/UX Design</span>
                                 Plan, build, & ship quality products</a>
                               </div>
+
+                              <div class="flex-2">
+                                <span class="head">Startups</span>
+                                <a href="<?php echo $site_url; ?>startup-consulting-services"><span class="title">Startup Consulting</span>
+                                Define policies, audit compliance, monitor quality</a>
+                                <a href="<?php echo $site_url; ?>discovery-phase-process"><span class="title">Product Discovery Phase</span>
+                                Ensure quality, performance, & functionality</a>
+                                <a href="<?php echo $site_url; ?>startup-product-development"><span class="title">Startup Product Development</span>
+                                Validate mobile apps for optimal performance</a>
+                                <a href="<?php echo $site_url; ?>cto-as-a-service"><span class="title">CTO as a Service</span>
+                                Make flawless apps for improved performance</a>
+                                <!--<a href="<?php echo $site_url; ?>"><span class="title">How to Hire Startup Developers</span>
+                                  Testing experts for every stage  </a>-->
+                              </div>
+                              
                             </div>
                           </div>
                           <div class="other-menu">
