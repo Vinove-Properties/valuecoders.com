@@ -30,7 +30,7 @@ function defActiveMenu( $cat = "master" ){
 
 function defActiveHire( $hirePage, $exCat ){
   if( in_array( $exCat, ['ai-ml'] ) ){
-    return "is-active";
+    return "";
   }else{
     return ( ($hirePage == "backend") || ($hirePage === false) ) ? "is-active" : '';
   }
