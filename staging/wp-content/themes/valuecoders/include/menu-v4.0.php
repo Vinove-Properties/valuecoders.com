@@ -467,7 +467,7 @@ function defActiveHire( $hirePage ){
                           <li class="tab-link <?php echo isActiveMenu("frontend", $hireElm); ?>">Frontend</li>
                           <li class="tab-link <?php echo isActiveMenu("ai-ml", $hireElm); ?>">AI/ML</li>
                           <li class="tab-link <?php echo isActiveMenu("dm", $hireElm); ?>">Digital Marketing</li>
-                          <li class="tab-link <?php echo isActiveMenu("mpbile", $hireElm); ?>">Mobile</li>
+                          <li class="tab-link <?php echo isActiveMenu("mobile", $hireElm); ?>">Mobile</li>
                           <li class="tab-link <?php echo isActiveMenu("full-stack", $hireElm); ?>">Full Stack</li>
                           <li class="tab-link <?php echo isActiveMenu("devops", $hireElm); ?>">DevOps</li>
                           <li class="tab-link <?php echo isActiveMenu("cms", $hireElm); ?>">CMS</li>                          
@@ -477,7 +477,7 @@ function defActiveHire( $hirePage ){
                         </ul>
                       </div>
                       <div class="right-tabs">
-                        <div class="tab-content is-active">
+                        <div class="tab-content <?php echo defActiveHire($hireElm) ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-backend-developers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
@@ -519,7 +519,7 @@ function defActiveHire( $hirePage ){
                             </div>
                           </div>
                         </div>
-                        <div class="tab-content">
+                        <div class="tab-content <?php echo isActiveMenu("frontend", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-front-end-developers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
@@ -555,7 +555,7 @@ function defActiveHire( $hirePage ){
                         </div>
 
 
-                         <div class="tab-content">
+                         <div class="tab-content <?php echo isActiveMenu("ai-ml", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
@@ -601,7 +601,7 @@ function defActiveHire( $hirePage ){
                           </div>
                         </div>
 
-                         <div class="tab-content">
+                         <div class="tab-content <?php echo isActiveMenu("dm", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire/digital-marketing-experts">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
@@ -633,7 +633,7 @@ function defActiveHire( $hirePage ){
                           </div>
                         </div>
 
-                        <div class="tab-content">
+                        <div class="tab-content <?php echo isActiveMenu("mobile", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-mobile-app-developers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
@@ -668,7 +668,7 @@ function defActiveHire( $hirePage ){
                           </div>
                         </div>
 
-                         <div class="tab-content">
+                         <div class="tab-content <?php echo isActiveMenu("full-stack", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-full-stack-developers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
@@ -698,7 +698,7 @@ function defActiveHire( $hirePage ){
                           </div>
                         </div>
 
-                        <div class="tab-content">
+                        <div class="tab-content <?php echo isActiveMenu("devops", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-devops-developers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
@@ -728,7 +728,7 @@ function defActiveHire( $hirePage ){
                           </div>
                         </div>
 
-                        <div class="tab-content">
+                        <div class="tab-content <?php echo isActiveMenu("cms", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-cms-developers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
@@ -762,7 +762,7 @@ function defActiveHire( $hirePage ){
                           </div>
                         </div>
                         
-                        <div class="tab-content">
+                        <div class="tab-content <?php echo isActiveMenu("ecom", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-ecommerce-developers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
@@ -790,8 +790,9 @@ function defActiveHire( $hirePage ){
                               Expand with white-label services</a>
                             </div>
                           </div>
-                        </div>                                               
-                        <div class="tab-content">
+                        </div>
+
+                        <div class="tab-content <?php echo isActiveMenu("bc", $hireElm); ?>">
                           <div class="three-column mob-hide">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-blockchain-developers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
@@ -821,7 +822,7 @@ function defActiveHire( $hirePage ){
                             </div>
                           </div>
                         </div>                       
-                        <div class="tab-content">
+                        <div class="tab-content <?php echo isActiveMenu("lc", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>services/low-code-no-code">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
