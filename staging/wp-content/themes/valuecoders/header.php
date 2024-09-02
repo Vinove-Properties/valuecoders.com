@@ -213,6 +213,6 @@ style="display:none;visibility:hidden"></iframe></noscript>
 
 <?php 
 if(!is_page_template(['page-templates/template-contact-v8.php','page-templates/template-contact-v9.php'])){
-get_template_part( 'include/menu', 'v4.0', ['pcat' => $pageCategory]); 	
+get_template_part( 'include/menu', 'v4.0', ['pcat' => $pageCategory, 'pid' => $post->ID]); 	
 }
 ?>

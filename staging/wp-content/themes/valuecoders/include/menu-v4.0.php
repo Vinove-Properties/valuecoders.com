@@ -1,28 +1,33 @@
 <?php 
-  $is_staging = ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'staging' ) !== false) )  ?  true : false;
-  if( $is_staging ){
-  $site_url   = 'https://www.valuecoders.com/staging/';
-  }else{
-  $site_url   = 'https://www.valuecoders.com/';
-  }  
-  
-  if( isset($_SERVER['HTTP_HOST']) && ($_SERVER['HTTP_HOST'] == "localhost") ){
-    $site_url   = trailingslashit(get_bloginfo('url'));
-  }
-  
-  $tpl_url    = $site_url.'wp-content/themes/valuecoders';
-  $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] : 'master';
-  
-  function isActiveMenu( $menu, $cat ){
-    return ( $menu === $cat ) ? "is-active" : '';
-  }
-  
-  function defActiveMenu( $cat = "master" ){
-    $catList = ['app-development', 'demand-teams', 'ecommerce', 'qa-testing', 'devops', 'data-science', 'ai-ml'];
-    return ( !in_array( $cat, $catList ) ) ? "is-active" : '';
-  }
-  
-  ?>
+$is_staging = ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'staging' ) !== false) )  ?  true : false;
+if( $is_staging ){
+$site_url   = 'https://www.valuecoders.com/staging/';
+}else{
+$site_url   = 'https://www.valuecoders.com/';
+}  
+
+if( isset($_SERVER['HTTP_HOST']) && ($_SERVER['HTTP_HOST'] == "localhost") ){
+  $site_url   = trailingslashit(get_bloginfo('url'));
+}
+
+$tpl_url    = $site_url.'wp-content/themes/valuecoders';
+$mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] : 'master';
+
+function isActiveMenu( $menu, $cat ){
+  return ( $menu === $cat ) ? "is-active" : '';
+}
+
+function defActiveMenu( $cat = "master" ){
+  $catList = ['app-development', 'demand-teams', 'ecommerce', 'qa-testing', 'devops', 'data-science', 'ai-ml'];
+  return ( !in_array( $cat, $catList ) ) ? "is-active" : '';
+}
+
+$hireElm = (isset($args['pid']) && get_post_meta($args['pid'],'hp-mcategory', true) ) ?  get_post_meta($args['pid'],'hp-mcategory', true) : false;
+
+function defActiveHire( $hirePage ){
+  return ( ($hirePage == "backend") || ($hirePage === false) ) ? "is-active" : '';
+}
+?>
 <header class="header-two">
   <div class="container">
     <div class="wrapper">
@@ -458,17 +463,17 @@
                     <div id="mnu-hire" class="dis-flex tab-contents">
                       <div class="left-tabs">
                         <ul class="tab-nav">
-                          <li class="tab-link is-active">Backend</li>
-                          <li class="tab-link">Frontend</li>
-                          <li class="tab-link">AI/ML</li>
-                          <li class="tab-link">Digital Marketing</li>
-                          <li class="tab-link">Mobile</li>
-                          <li class="tab-link">Full Stack</li>
-                          <li class="tab-link">DevOps</li>
-                          <li class="tab-link">CMS</li>                          
-                          <li class="tab-link">eCommerce</li>                                                    
-                          <li class="tab-link">Blockchain</li>
-                          <li class="tab-link">Low - Code</li>
+                          <li class="tab-link <?php echo defActiveHire($hireElm) ?>">Backend</li>
+                          <li class="tab-link <?php echo isActiveMenu("frontend", $hireElm); ?>">Frontend</li>
+                          <li class="tab-link <?php echo isActiveMenu("ai-ml", $hireElm); ?>">AI/ML</li>
+                          <li class="tab-link <?php echo isActiveMenu("dm", $hireElm); ?>">Digital Marketing</li>
+                          <li class="tab-link <?php echo isActiveMenu("mpbile", $hireElm); ?>">Mobile</li>
+                          <li class="tab-link <?php echo isActiveMenu("full-stack", $hireElm); ?>">Full Stack</li>
+                          <li class="tab-link <?php echo isActiveMenu("devops", $hireElm); ?>">DevOps</li>
+                          <li class="tab-link <?php echo isActiveMenu("cms", $hireElm); ?>">CMS</li>                          
+                          <li class="tab-link <?php echo isActiveMenu("ecom", $hireElm); ?>">eCommerce</li>
+                          <li class="tab-link <?php echo isActiveMenu("bc", $hireElm); ?>">Blockchain</li>
+                          <li class="tab-link <?php echo isActiveMenu("lc", $hireElm); ?>">Low - Code</li>
                         </ul>
                       </div>
                       <div class="right-tabs">
@@ -902,7 +907,7 @@
                                 <!--<a href="<?php echo $site_url; ?>"><span class="title">How to Hire Startup Developers</span>
                                   Testing experts for every stage  </a>-->
                               </div>
-                              
+
                             </div>
                           </div>
                           <div class="other-menu">
