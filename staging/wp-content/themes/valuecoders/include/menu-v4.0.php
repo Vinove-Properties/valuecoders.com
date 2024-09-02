@@ -12,17 +12,21 @@ if( isset($_SERVER['HTTP_HOST']) && ($_SERVER['HTTP_HOST'] == "localhost") ){
 
 $tpl_url    = $site_url.'wp-content/themes/valuecoders';
 $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] : 'master';
+$hireElm    = (isset($args['pid']) && get_post_meta($args['pid'],'hp-mcategory', true) ) ? 
+get_post_meta($args['pid'],'hp-mcategory', true) : false;
 
 function isActiveMenu( $menu, $cat ){
-  return ( $menu === $cat ) ? "is-active" : '';
+  if( is_array( $menu ) ){
+    return in_array( $cat, $menu ) ? "is-active" : '';
+  }else{
+    return ( $menu === $cat ) ? "is-active" : '';  
+  }  
 }
 
 function defActiveMenu( $cat = "master" ){
   $catList = ['app-development', 'demand-teams', 'ecommerce', 'qa-testing', 'devops', 'data-science', 'ai-ml'];
   return ( !in_array( $cat, $catList ) ) ? "is-active" : '';
 }
-
-$hireElm = (isset($args['pid']) && get_post_meta($args['pid'],'hp-mcategory', true) ) ?  get_post_meta($args['pid'],'hp-mcategory', true) : false;
 
 function defActiveHire( $hirePage ){
   return ( ($hirePage == "backend") || ($hirePage === false) ) ? "is-active" : '';
@@ -465,7 +469,7 @@ function defActiveHire( $hirePage ){
                         <ul class="tab-nav">
                           <li class="tab-link <?php echo defActiveHire($hireElm) ?>">Backend</li>
                           <li class="tab-link <?php echo isActiveMenu("frontend", $hireElm); ?>">Frontend</li>
-                          <li class="tab-link <?php echo isActiveMenu("ai-ml", $hireElm); ?>">AI/ML</li>
+                          <li class="tab-link <?php echo isActiveMenu([$hireElm,$mcat] ,"ai-ml"); ?>">AI/ML</li>
                           <li class="tab-link <?php echo isActiveMenu("dm", $hireElm); ?>">Digital Marketing</li>
                           <li class="tab-link <?php echo isActiveMenu("mobile", $hireElm); ?>">Mobile</li>
                           <li class="tab-link <?php echo isActiveMenu("full-stack", $hireElm); ?>">Full Stack</li>
