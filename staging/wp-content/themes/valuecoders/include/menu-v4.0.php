@@ -15,9 +15,7 @@ $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] 
 $hireElm    = (isset($args['pid']) && get_post_meta($args['pid'],'hp-mcategory', true) ) ? 
 get_post_meta($args['pid'],'hp-mcategory', true) : false;
 
-echo '<pre>';
-echo $hireElm;
-echo '</pre>';
+//echo '<pre>'; echo $hireElm; echo '</pre>';
 
 function isActiveMenu( $menu, $cat ){
   if( is_array( $menu ) ){
