@@ -559,7 +559,7 @@ function defActiveHire( $hirePage ){
                         </div>
 
 
-                         <div class="tab-content <?php echo isActiveMenu("ai-ml", $hireElm); ?>">
+                         <div class="tab-content <?php echo isActiveMenu([$hireElm,$mcat] ,"ai-ml"); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
