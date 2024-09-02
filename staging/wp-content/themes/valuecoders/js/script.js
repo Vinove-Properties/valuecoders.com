@@ -76,7 +76,18 @@ function isMobileDevice_NA2(){
 }
 
 function isMobileDevice(){
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
     const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    if (/iPad|Macintosh/i.test(userAgent) && 'ontouchend' in document) { 
+        console.log("iPad");
+        return true;
+    }
+
+    if( screen.width < 1139 ){
+        console.log("width 1139");
+        return true;
+        
+    }
     return regex.test(navigator.userAgent);
 }
 

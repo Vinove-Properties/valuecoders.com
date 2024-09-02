@@ -1004,7 +1004,8 @@
                             <div class="dis-flex menu-column">
                               <div class="flex-4">
                                 <span class="head">Trending</span>
-                                <a href="<?php echo $site_url; ?>ai"><span class="title">AI & Machine Learning</span></a>
+                                <a href="<?php echo $site_url; ?>ai"><span class="title">Artificial Intelligence</span></a>
+                                <a href="<?php echo $site_url; ?>machine-learning"><span class="title">Machine Learning</span></a>
                                 <a href="<?php echo $site_url; ?>data-engineering/data-science-consulting-services"><span class="title">Data Science</span></a>
                                 <a href="<?php echo $site_url; ?>data-analytics"><span class="title">Data Analytics</span></a>
                                 <a href="<?php echo $site_url; ?>machine-learning/computer-vision-software-development"><span class="title">Computer Vision</span></a>
