@@ -3146,7 +3146,7 @@ body.page-template-template-testimonials .client-video-section iframe,
     font-size: 15px; }
   .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents {
     min-height: 520px; }
-    .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs .tab-nav li {
+    .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs .tab-nav li a {
       font-size: 15px;
       padding: 13px 35px 13px 15px; }
     .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .title {
@@ -3179,10 +3179,10 @@ body.page-template-template-testimonials .client-video-section iframe,
     min-height: 450px; }
     .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs {
       padding: 15px 20px 15px 0; }
-      .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs .tab-nav li {
+      .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs .tab-nav li a {
         font-size: 14px;
         padding: 10px 25px 10px 10px; }
-        .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs .tab-nav li:after {
+        .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs .tab-nav li a:after {
           top: 14px;
           right: 10px;
           width: 11px;
