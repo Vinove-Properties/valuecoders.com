@@ -64,7 +64,7 @@ function defActiveHire( $hirePage, $exCat ){
           <ul>
             <!-- Services Menu Starts -->
             <li class="menu-item-has-children">
-              <a class="mst-link" href="<?php echo $site_url; ?>">Services</a> <span class="arrow-btn"></span>
+              <a class="mst-link" href="<?php echo $site_url; ?>software-development-services-company">Services</a> <span class="arrow-btn"></span>
               <div class="menu-mega">
                 <div class="container">
                   <div class="dis-flex tab-menu">
@@ -777,7 +777,7 @@ function defActiveHire( $hirePage, $exCat ){
 
                             <a href="<?php echo $site_url; ?>dedicated-development-teams"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">Dedicated Software Teams</span>Hire Dedicated Developers</a>
                             </div>
-                            <a href="http://localhost/valuecoders.com/staging/software-development-services-company" class="view-more">View More</a>
+                            <a href="<?php echo $site_url; ?>hire-developers" class="view-more">View More</a>
                           </div>
                       </div>
                     </div>
@@ -788,7 +788,7 @@ function defActiveHire( $hirePage, $exCat ){
             <!-- //Hire Menu Ends -->
             <?php //endif; ?>
             <li class="menu-item-has-children">
-              <a class="mst-link" href="<?php echo $site_url; ?>">Who We Serve</a> <span class="arrow-btn"></span>
+              <a class="mst-link" href="javascript:void(0);">Who We Serve</a> <span class="arrow-btn"></span>
               <div class="menu-mega">
                 <div class="container">
                   <div class="dis-flex tab-menu">
@@ -920,7 +920,7 @@ function defActiveHire( $hirePage, $exCat ){
             ?>
             <!-- Technologies Menus Starts -->
             <li class="menu-item-has-children">
-              <a class="mst-link" href="<?php echo $site_url; ?>">Technologies</a> <span class="arrow-btn"></span>
+              <a class="mst-link" href="javascript:void(0);">Technologies</a> <span class="arrow-btn"></span>
               <div class="menu-mega">
                 <div class="container">
                   <div class="dis-flex tab-menu">
@@ -1029,7 +1029,7 @@ function defActiveHire( $hirePage, $exCat ){
             
             <?php if( $mcat == "demand-teams") : ?>
             <li class="menu-item-has-children">
-              <a class="mst-link" href="<?php echo $site_url; ?>">Resources</a><span class="arrow-btn"></span>
+              <a class="mst-link" href="<?php echo $site_url; ?>resources">Resources</a><span class="arrow-btn"></span>
               <div class="menu-mega small-menu">
               <a href="<?php echo $site_url; ?>hire-developers/hire-software-developers-india">
               <img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/resources-icon1.svg" class="menuicon" alt="menuicon">Hire Indian Developers </a>
@@ -1054,7 +1054,7 @@ function defActiveHire( $hirePage, $exCat ){
             ?>
             <!-- Solution Menu Starts -->
             <li class="menu-item-has-children">
-              <a class="mst-link" href="<?php echo $site_url; ?>">Solutions</a> <span class="arrow-btn"></span>
+              <a class="mst-link" href="javascript:void(0);">Solutions</a> <span class="arrow-btn"></span>
               <div class="menu-mega">
                 <div class="container">
                   <div class="dis-flex tab-menu">
@@ -1113,10 +1113,10 @@ function defActiveHire( $hirePage, $exCat ){
             <!-- //Solution Menu Ends -->
             <?php endif; ?>
             <?php if( !in_array( $mcat, ['demand-teams', 'qa-testing'] ) ) : ?>
-            <li class="menu-item-has-children"><a class="mst-link" href="<?php echo $site_url; ?>">Case Studies</a></li>
+            <li class="menu-item-has-children"><a class="mst-link" href="<?php echo $site_url; ?>/case-studies/">Case Studies</a></li>
             <?php endif; ?>
             <li class="menu-item-has-children">
-              <a class="mst-link" href="<?php echo $site_url; ?>">Company</a> <span class="arrow-btn"></span>
+              <a class="mst-link" href="<?php echo $site_url; ?>about">Company</a> <span class="arrow-btn"></span>
               <div class="menu-mega small-menu">
                 <a href="<?php echo $site_url; ?>about"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/comp-01.svg" class="menuicon" alt="menuicon">Overview</a>
                 <a href="<?php echo $site_url; ?>in-media"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/comp-02.svg" class="menuicon" alt="menuicon">In Media</a>
@@ -1127,14 +1127,14 @@ function defActiveHire( $hirePage, $exCat ){
             </li>
             <li class="cta-wrap small-reso">
               <div class="btn-sec">
-                <a href="https://www.valuecoders.com/staging/contact" class="btn rounded"><span class="text-white">Get Started</span></a>
+                <a href="<?php echo $site_url; ?>contact" class="btn rounded"><span class="text-white">Get Started</span></a>
               </div>
             </li>
           </ul>
         </nav>
         <div class="cta-wrap large-reso">
           <div class="btn-sec">
-            <a href="https://www.valuecoders.com/staging/contact" class="btn rounded"><span class="text-white">Get Started</span></a>
+            <a href="<?php echo $site_url; ?>contact" class="btn rounded"><span class="text-white">Get Started</span></a>
           </div>
         </div>
       </div>
