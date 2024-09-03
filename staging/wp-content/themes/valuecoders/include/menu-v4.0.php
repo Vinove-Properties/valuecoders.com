@@ -1027,7 +1027,8 @@ function defActiveHire( $hirePage, $exCat ){
             <?php endif; ?>
             <?php 
             // Hide Solution Menu Is Page Catrgoty is : eCommerce
-            if(!in_array($mcat,['ecommerce','demand-teams','agencies','startups','devops','data-science','ai-ml'])) :
+            //if(!in_array($mcat,['ecommerce','demand-teams','agencies','startups','devops','data-science','ai-ml'])) :
+            if( !in_array($mcat,['demand-teams']) ) :
             ?>
             <!-- Solution Menu Starts -->
             <li class="menu-item-has-children">
