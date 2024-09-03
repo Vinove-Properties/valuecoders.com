@@ -261,7 +261,7 @@ function vmRestSubDefault(){
                         event.target.classList.remove("rot");
                         techLinkRow.classList.remove("m-active");
                     }else{
-                        vmRestSerDefault();
+                        vmRestTechDefault();
                         event.target.classList.add("rot");
                         techLinkRow.classList.add("m-active");    
                     }

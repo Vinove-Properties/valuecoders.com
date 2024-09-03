@@ -4850,8 +4850,7 @@ body.page-template-template-testimonials .client-video-section iframe,
                         .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs.hire-tabs .other-menu .tab-title .ser-arrow-btn {
                           right: -15px; }
               .header-two .header-item-right .menu ul li .menu-mega.m-active {
-                display: block;
-                padding: 0 0 30px; }
+                display: block; }
       .header-two .header-item-right .mob-nav {
         position: fixed;
         width: 100%;
@@ -4956,8 +4955,7 @@ body.page-template-template-testimonials .client-video-section iframe,
       opacity: 0; }
     .header-two .open-close .bar3 {
       transform: rotate(45deg) translate(-5px, -3px); }
-    .header-two .arrow-btn,
-    .header-two .hr-arrow-btn {
+    .header-two .arrow-btn {
       display: inline-block;
       position: relative;
       width: 70px;
@@ -4966,8 +4964,7 @@ body.page-template-template-testimonials .client-video-section iframe,
       vertical-align: top;
       text-align: right;
       float: right; }
-      .header-two .arrow-btn.rot,
-      .header-two .hr-arrow-btn.rot {
+      .header-two .arrow-btn.rot {
         background-position: 36px -33px; }
     .header-two .ser-arrow-btn, .header-two .hr-arrow-btn, .header-two .tech-arrow-btn {
       display: inline-block;
