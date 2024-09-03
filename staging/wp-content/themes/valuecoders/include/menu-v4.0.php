@@ -1139,5 +1139,4 @@ function defActiveHire( $hirePage, $exCat ){
       </div>
     </div>
   </div>
-  </div>
 </header>
