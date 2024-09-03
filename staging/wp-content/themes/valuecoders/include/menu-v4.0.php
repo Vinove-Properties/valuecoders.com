@@ -72,15 +72,29 @@ function defActiveHire( $hirePage, $exCat ){
                       <div class="left-tabs">
                         <ul class="tab-nav">
                           <li class="tab-link <?php echo defActiveMenu($mcat); ?>">
-                            <a href="/hire-developers">Software Development</a>
+                            <a href="<?php echo $site_url; ?>hire-developers">Software Development</a>
                           </li>
-                          <li class="tab-link <?php echo isActiveMenu("app-development", $mcat); ?>">Application Development</li>
-                          <li class="tab-link <?php echo isActiveMenu("demand-teams", $mcat); ?>">Dedicated Software Teams</li>
-                          <li class="tab-link <?php echo isActiveMenu("ecommerce", $mcat); ?>">eCommerce</li>
-                          <li class="tab-link <?php echo isActiveMenu("qa-testing", $mcat); ?>">QA & Testing</li>
-                          <li class="tab-link <?php echo isActiveMenu("devops", $mcat); ?>">Cloud Services</li>
-                          <li class="tab-link <?php echo isActiveMenu("data-science", $mcat); ?>">Data Engineering</li>
-                          <li class="tab-link <?php echo isActiveMenu("ai-ml", $mcat); ?>">Artificial Intelligence</li>
+                          <li class="tab-link <?php echo isActiveMenu("app-development", $mcat); ?>">
+                            <a href="<?php echo $site_url; ?>hire-developers">Application Development</a>
+                          </li>
+                          <li class="tab-link <?php echo isActiveMenu("demand-teams", $mcat); ?>">
+                            <a href="<?php echo $site_url; ?>hire-developers">Dedicated Software Teams</a>
+                          </li>
+                          <li class="tab-link <?php echo isActiveMenu("ecommerce", $mcat); ?>">
+                            <a href="<?php echo $site_url; ?>hire-developers">eCommerce</a>
+                          </li>
+                          <li class="tab-link <?php echo isActiveMenu("qa-testing", $mcat); ?>">
+                            <a href="<?php echo $site_url; ?>hire-developers">QA & Testing</a>
+                          </li>
+                          <li class="tab-link <?php echo isActiveMenu("devops", $mcat); ?>">
+                            <a href="<?php echo $site_url; ?>hire-developers">Cloud Services</a>
+                          </li>
+                          <li class="tab-link <?php echo isActiveMenu("data-science", $mcat); ?>">
+                            <a href="<?php echo $site_url; ?>hire-developers">Data Engineering</a>
+                          </li>
+                          <li class="tab-link <?php echo isActiveMenu("ai-ml", $mcat); ?>">
+                            <a href="<?php echo $site_url; ?>hire-developers">Artificial Intelligence</a>
+                          </li>
                         </ul>
                       </div>
                       <div class="right-tabs">
