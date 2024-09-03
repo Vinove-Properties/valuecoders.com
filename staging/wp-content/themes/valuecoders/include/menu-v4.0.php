@@ -747,16 +747,17 @@ function defActiveHire( $hirePage, $exCat ){
                          
                         </div>
                          <div class="tab-content other-menu">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Client Type</span>
-                              Innovative, future-proof software solutions</a>
+                            <div class="tab-title">
+                              <a href="<?php echo $site_url; ?>">
+                                <span class="title">Other Services</span>Innovative, future-proof software solutions
+                              </a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
-                              Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
-                              End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
-                              Expand with white-label services</a>
+                            <a href="<?php echo $site_url; ?>it-staff-augmentation-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">Staff Augmentation</span>Access top technical resources on-demand</a>
+
+                            <a href="<?php echo $site_url; ?>hire-developers/hire-software-developers-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">Hire Software Developers</span>Work with skilled & dedicated developers</a>
+
+                            <a href="<?php echo $site_url; ?>dedicated-development-teams"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">Dedicated Software Teams</span>Hire Dedicated Developers</a>
                             </div>
                           </div>
                       </div>
@@ -775,8 +776,8 @@ function defActiveHire( $hirePage, $exCat ){
                     <div id="menu-inds" class="dis-flex tab-contents">
                       <div class="left-tabs">
                         <ul class="tab-nav">
-                          <li class="tab-link is-active">Startup & Product Companies</li>
-                          <li class="tab-link">Industries</li>
+                          <li class="no-link tab-link is-active"><a href="javascript:void(0);">Startup & Product Companies</a></li>
+                          <li class="no-link tab-link"><a href="javascript:void(0);">Industries</a></li>
                           <!-- <li class="tab-link">Enterprises</li> -->
                         </ul>
                       </div>
