@@ -1943,7 +1943,7 @@ body.page-template-template-testimonials .client-video-section iframe,
                 padding: 15px 35px 15px 15px;
                 color: #262626;
                 position: relative;
-                cursor: pointer;
+                cursor: default;
                 background: #fff;
                 border-radius: 10px;
                 font-weight: 500;
@@ -1960,7 +1960,12 @@ body.page-template-template-testimonials .client-video-section iframe,
                   background-size: 100%;
                   opacity: 0;
                   left: auto;
-                  bottom: auto; }
+                  bottom: auto;
+                  cursor: pointer; }
+              .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs .tab-nav li .no-link a {
+                cursor: default; }
+                .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs .tab-nav li .no-link a:after {
+                  cursor: default; }
               .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs .tab-nav li.is-active a {
                 background: #fff9eb; }
                 .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs .tab-nav li.is-active a:after {
