@@ -4694,8 +4694,6 @@ a {
           position: absolute;
           left: 0;
           bottom: -4px;
-          opacity: 0; }
-        .header-two .header-item-right .menu ul li.menu-item-has-children a.active:hover:after {
           opacity: 1;
           z-index: 9; }
       .header-two .header-item-right .menu ul li .menu-mega {
