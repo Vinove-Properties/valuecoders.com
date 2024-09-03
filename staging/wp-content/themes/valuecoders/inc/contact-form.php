@@ -142,10 +142,10 @@
               <input type="hidden" name="page_url" value="<?php the_permalink(); ?>">
               <input type="hidden" name="vc_csrf" value="<?php echo $csrf_token; ?>">
               <?php 
-                if(is_page_template(['page-templates/template-hirepage.php', 'page-templates/tpl-free-trial.php'])){
-                  echo '<input type="hidden" name="is_free_trial" value="true">';
-                }
-                ?>            
+              if(is_page_template(['page-templates/template-hirepage.php', 'page-templates/tpl-free-trial.php'])){
+                //echo '<input type="hidden" name="is_free_trial" value="true">';
+              }
+              ?>            
               <div class="user-input btn rounded checkout">
                 <input type="submit" id="submitButton" class="checkout-submit" 
                   value="<?php echo (is_page_template(['page-templates/template-hirepage.php', 'page-templates/tpl-free-trial.php'])) ? 'Enquire Now' : 'Enquire Now' ?>" />
