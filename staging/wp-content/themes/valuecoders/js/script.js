@@ -1345,11 +1345,30 @@ menuElm.forEach(function(elm){
 });
 
 
-const anchorsLnk = document.querySelectorAll('a.mst-link');
+
+/*Menu Active COde */
+const menuItemElm   = document.querySelectorAll('.menu-item-has-children');
+const anchorsLnk    = document.querySelectorAll('a.mst-link');
 function addClass() {
     anchorsLnk.forEach(anchor => anchor.classList.remove('active'));
     this.classList.add('active');
 }
-anchorsLnk.forEach(anchor => {
-    anchor.addEventListener('mouseover', addClass);    
-});
+
+function removeActiveClass() {
+    setTimeout(() => {
+    if(!document.querySelector('.menu-item-has-children:hover')){
+        anchorsLnk.forEach(anchor => anchor.classList.remove('active'));
+    }
+    }, 100);
+}
+if( anchorsLnk ){
+    anchorsLnk.forEach(anchor => {
+        anchor.addEventListener('mouseover', addClass);    
+    });    
+}
+
+if( menuItemElm ){
+    menuItemElm.forEach(item => {
+        item.addEventListener('mouseleave', removeActiveClass);
+    });
+}
