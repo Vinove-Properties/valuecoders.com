@@ -141,6 +141,22 @@ function vmRestSerDefault(){
     }
 }
 
+function vmRestTechDefault(){
+    let allArrow = document.querySelectorAll(".tech-arrow-btn");
+    if( allArrow ){
+        [].forEach.call(allArrow, function(el) {
+            el.classList.remove("rot");
+        });
+    }
+    
+    let allMM = document.querySelectorAll(".sub-tech");
+    if( allMM ){
+        [].forEach.call(allMM, function(el){
+            el.classList.remove("m-active");
+        });
+    }
+}
+
 function vmRestHireDefault(){
     let allArrow = document.querySelectorAll(".hr-arrow-btn");
     if( allArrow ){
@@ -149,7 +165,7 @@ function vmRestHireDefault(){
         });
     }
     
-    let allMM = document.querySelectorAll(".hr-menu-mega");
+    let allMM = document.querySelectorAll(".hr-submenu");
     if( allMM ){
         [].forEach.call(allMM, function(el){
             el.classList.remove("m-active");
@@ -232,6 +248,22 @@ function vmRestSubDefault(){
                         vmRestSerDefault();
                         event.target.classList.add("rot");
                         serLinkRow.classList.add("m-active");    
+                    }
+                }                
+            }
+
+
+
+            if(event.target.classList.contains('.tech-arrow-btn')){
+                let techLinkRow = event.target.parentElement.nextElementSibling;
+                if( techLinkRow ){
+                    if( event.target.classList.contains('rot') ){
+                        event.target.classList.remove("rot");
+                        techLinkRow.classList.remove("m-active");
+                    }else{
+                        vmRestSerDefault();
+                        event.target.classList.add("rot");
+                        techLinkRow.classList.add("m-active");    
                     }
                 }                
             }
