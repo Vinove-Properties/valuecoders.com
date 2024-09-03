@@ -512,7 +512,7 @@ function defActiveHire( $hirePage, $exCat ){
                         <div class="tab-content <?php echo defActiveHire($hireElm, $mcat); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-backend-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/hire-01.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Backend</span>Build robust backend</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -543,7 +543,7 @@ function defActiveHire( $hirePage, $exCat ){
                         <div class="tab-content <?php echo isActiveMenu("frontend", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-front-end-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/hire-02.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Frontend</span>Improve your frontend design</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -567,7 +567,7 @@ function defActiveHire( $hirePage, $exCat ){
                          <div class="tab-content <?php echo isActiveMenu([$hireElm,$mcat] ,"ai-ml"); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/hire-03.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">AI/ML</span>Transform with AI/ML experts</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -602,7 +602,7 @@ function defActiveHire( $hirePage, $exCat ){
                          <div class="tab-content <?php echo isActiveMenu("dm", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire/digital-marketing-experts">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/hire-04.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Digital Marketing</span>Boost your brand digitally</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -623,7 +623,7 @@ function defActiveHire( $hirePage, $exCat ){
                         <div class="tab-content <?php echo isActiveMenu("mobile", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-mobile-app-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/hire-05.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Mobile</span>Hire skilled mobile developers</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -647,7 +647,7 @@ function defActiveHire( $hirePage, $exCat ){
                          <div class="tab-content <?php echo isActiveMenu("full-stack", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-full-stack-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/hire-06.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Full Stack</span>Fullstack developers for hire</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -666,7 +666,7 @@ function defActiveHire( $hirePage, $exCat ){
                         <div class="tab-content <?php echo isActiveMenu("devops", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-devops-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/hire-07.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">DevOps</span>Streamline with DevOps pros</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -685,7 +685,7 @@ function defActiveHire( $hirePage, $exCat ){
                         <div class="tab-content <?php echo isActiveMenu("cms", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-cms-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/hire-08.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">CMS</span>Build powerful CMS solutions</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -708,7 +708,7 @@ function defActiveHire( $hirePage, $exCat ){
                         <div class="tab-content <?php echo isActiveMenu("ecom", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-ecommerce-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/hire-09.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">eCommerce</span>Expert eCommerce developers for hire</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -727,7 +727,7 @@ function defActiveHire( $hirePage, $exCat ){
                         <div class="tab-content <?php echo isActiveMenu("bc", $hireElm); ?>">
                           <div class="three-column mob-hide">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-blockchain-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/hire-10.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Blockchain</span>Unlock blockchain potential</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -746,7 +746,7 @@ function defActiveHire( $hirePage, $exCat ){
                         <div class="tab-content <?php echo isActiveMenu("lc", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>services/low-code-no-code">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-01.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/hire-11.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Low - Code</span>Hire low-code experts</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
