@@ -489,17 +489,17 @@ function defActiveHire( $hirePage, $exCat ){
                     <div id="mnu-hire" class="dis-flex tab-contents">
                       <div class="left-tabs">
                         <ul class="tab-nav">
-                          <li class="tab-link <?php echo defActiveHire($hireElm, $mcat); ?>">Backend</li>
-                          <li class="tab-link <?php echo isActiveMenu("frontend", $hireElm); ?>">Frontend</li>
-                          <li class="tab-link <?php echo isActiveMenu([$hireElm,$mcat] ,"ai-ml"); ?>">AI/ML</li>
-                          <li class="tab-link <?php echo isActiveMenu("dm", $hireElm); ?>">Digital Marketing</li>
-                          <li class="tab-link <?php echo isActiveMenu("mobile", $hireElm); ?>">Mobile</li>
-                          <li class="tab-link <?php echo isActiveMenu("full-stack", $hireElm); ?>">Full Stack</li>
-                          <li class="tab-link <?php echo isActiveMenu("devops", $hireElm); ?>">DevOps</li>
-                          <li class="tab-link <?php echo isActiveMenu("cms", $hireElm); ?>">CMS</li>                          
-                          <li class="tab-link <?php echo isActiveMenu("ecom", $hireElm); ?>">eCommerce</li>
-                          <li class="tab-link <?php echo isActiveMenu("bc", $hireElm); ?>">Blockchain</li>
-                          <li class="tab-link <?php echo isActiveMenu("lc", $hireElm); ?>">Low - Code</li>
+                          <li class="tab-link <?php echo defActiveHire($hireElm, $mcat); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-backend-developers">Backend</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("frontend", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-front-end-developers">Frontend</a></li>
+                          <li class="tab-link <?php echo isActiveMenu([$hireElm,$mcat] ,"ai-ml"); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers">AI/ML</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("dm", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire/digital-marketing-experts">Digital Marketing</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("mobile", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-mobile-app-developers">Mobile</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("full-stack", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-full-stack-developers">Full Stack</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("devops", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-devops-developers">DevOps</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("cms", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-cms-developers">CMS</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("ecom", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-ecommerce-developers">eCommerce</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("bc", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-blockchain-developers">Blockchain</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("lc", $hireElm); ?>"><a href="<?php echo $site_url; ?>services/low-code-no-code">Low - Code</a></li>
                         </ul>
                       </div>
                       <div class="right-tabs">
@@ -533,8 +533,8 @@ function defActiveHire( $hirePage, $exCat ){
                           </div>
                           <div class="other-menu mob-hide">
                             <div class="tab-title">
-                              <a href="<?php echo $site_url; ?>">
-                                <span class="title">Other Services</span>Innovative, future-proof software solutions
+                              <a href="<?php echo $site_url; ?>hire-developers">
+                                <span class="title">Hire Dedicated Developers</span>Innovative, future-proof software solutions
                               </a>
                             </div>
                             <div class="flex-1 menu-column">
