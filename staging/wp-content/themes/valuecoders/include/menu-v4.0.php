@@ -187,7 +187,7 @@ function defActiveHire( $hirePage, $exCat ){
                           </div>
                           <div class="other-menu">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Other Services</span>
-                              Innovative, future-proof software solutions</a> <span class="ser-arrow-btn"></span>
+                              Explore our diverse services</a> <span class="ser-arrow-btn"></span>
                             </div>
                             <div class="flex-1 menu-column sub-service">
                               <a href="<?php echo $site_url; ?>application-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
@@ -231,7 +231,7 @@ function defActiveHire( $hirePage, $exCat ){
                           </div>
                           <div class="other-menu">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Client Type</span>
-                              Innovative, future-proof software solutions</a> <span class="ser-arrow-btn"></span>
+                              Tailored solutions for all businesses</a> <span class="ser-arrow-btn"></span>
                             </div>
                             <div class="flex-1 menu-column sub-service">
                               <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
@@ -275,7 +275,7 @@ function defActiveHire( $hirePage, $exCat ){
                           </div>
                           <div class="other-menu">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Solutions</span>
-                              Innovative, future-proof software solutions</a><span class="ser-arrow-btn"></span>
+                              Boost sales with smart eCommerce</a><span class="ser-arrow-btn"></span>
                             </div>
                             <div class="flex-1 menu-column sub-service">
                               <a href="<?php echo $site_url; ?>b2c-ecommerce"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">B2C eCommerce</span>
@@ -317,7 +317,7 @@ function defActiveHire( $hirePage, $exCat ){
                           </div>
                           <div class="other-menu">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Client Type</span>
-                              Innovative, future-proof software solutions </a><span class="ser-arrow-btn"></span>
+                              Tailored solutions for all businesses</a><span class="ser-arrow-btn"></span>
                             </div>
                             <div class="flex-1 menu-column sub-service">
                               <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
@@ -354,20 +354,20 @@ function defActiveHire( $hirePage, $exCat ){
                           </div>
                           <div class="other-menu">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Technologies</span>
-                              Content Required Here... </a><span class="ser-arrow-btn"></span>
+                              Innovating the future </a><span class="ser-arrow-btn"></span>
                             </div>
                             <div class="flex-1 menu-column sub-service">
                               <a href="<?php echo $site_url; ?>cloud-services/amazon-cloud"><img loading="lazy" 
                               src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon6.svg" class="menuicon" 
-                              alt="menuicon"><span class="title">Amazon AWS</span>Content Required Here...</a>
+                              alt="menuicon"><span class="title">Amazon AWS</span>Build, scale, innovate on AWS</a>
 
                               <a href="<?php echo $site_url; ?>cloud-services/azure-cloud"><img loading="lazy" 
                               src="<?php echo $tpl_url; ?>/menu-images/devops-02.svg" class="menuicon" 
-                              alt="menuicon"><span class="title">Azure</span>Content Required Here...</a>
+                              alt="menuicon"><span class="title">Azure</span>Infinite possibilities, one cloud</a>
 
                               <a href="<?php echo $site_url; ?>cloud-services/google-cloud"><img loading="lazy" 
                               src="<?php echo $tpl_url; ?>/menu-images/gcloud.svg" class="menuicon" 
-                              alt="menuicon"><span class="title">Google Cloud</span>Content Required Here...</a>
+                              alt="menuicon"><span class="title">Google Cloud</span>Explore limitless potential with Google</a>
                               
                             </div>
                           </div>
@@ -409,7 +409,7 @@ function defActiveHire( $hirePage, $exCat ){
                           </div>
                           <div class="other-menu">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Client Type</span>
-                              Innovative, future-proof software solutions </a><span class="ser-arrow-btn"></span>
+                              Tailored solutions for all businesses</a><span class="ser-arrow-btn"></span>
                             </div>
                             <div class="flex-1 menu-column sub-service">
                               <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
@@ -755,7 +755,7 @@ function defActiveHire( $hirePage, $exCat ){
                          <div class="tab-content other-menu">
                             <div class="tab-title">
                               <a href="<?php echo $site_url; ?>hire-developers">
-                                <span class="title">Hire Dedicated Developers</span>Innovative, future-proof software solutions
+                              <span class="title">Hire Dedicated Developers</span>Build faster with on-demand team
                               </a>
                             </div>
                             <div class="flex-1 menu-column">
@@ -1048,8 +1048,7 @@ function defActiveHire( $hirePage, $exCat ){
                       <div class="right-tabs flex-full">
                         <div class="tab-content is-active">
                           <div class="four-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/ind-01.svg" class="menuicon" alt="menuicon"><span class="title">Solutions</span>
-                              Innovative, future-proof software solutions</a>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/ind-01.svg" class="menuicon" alt="menuicon"><span class="title">Solutions</span>Growth-driven solutions for diverse industries</a>
                             </div>
                             <div class="dis-flex menu-column">
                               <div class="flex-4 margin-0">
