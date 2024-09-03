@@ -1015,9 +1015,10 @@ function defActiveHire( $hirePage, $exCat ){
                 </div>
               </div>
             </li>
+
             <?php 
-              if( !in_array($mcat, ['devops', 'demand-teams', 'qa-testing', 'enterprises', 'data-science', 'ai-ml']) ) : 
-              ?>
+            //if( !in_array($mcat, ['devops', 'demand-teams', 'qa-testing', 'enterprises', 'data-science', 'ai-ml']) ) : 
+            ?>
             <!-- Technologies Menus Starts -->
             <li class="menu-item-has-children">
               <a href="<?php echo $site_url; ?>">Technologies</a> <span class="arrow-btn"></span>
@@ -1123,7 +1124,8 @@ function defActiveHire( $hirePage, $exCat ){
               </div>
             </li>
             <!-- //Technologies Menus Ends -->
-            <?php endif; ?>
+            <?php //endif; ?>
+            
             <?php if( $mcat == "demand-teams") : ?>
             <li class="menu-item-has-children">
               <a href="<?php echo $site_url; ?>">Resources</a><span class="arrow-btn"></span>
