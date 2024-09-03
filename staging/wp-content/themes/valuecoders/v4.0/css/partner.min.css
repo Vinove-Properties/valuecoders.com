@@ -3240,12 +3240,12 @@ body.page-template-template-testimonials .client-video-section iframe,
                       padding-left: 0;
                       border-left: none;
                       background: #fff; }
-                      .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs.hire-tabs .other-menu.mob-hide {
-                        display: none; }
                       .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs.hire-tabs .other-menu.tab-content {
                         width: 100%;
                         height: auto;
                         min-height: auto; }
+                      .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs.hire-tabs .other-menu.mob-hide {
+                        display: none !important; }
                       .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs.hire-tabs .other-menu:after {
                         display: none; }
                       .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs.hire-tabs .other-menu .tab-title {
@@ -3380,7 +3380,7 @@ body.page-template-template-testimonials .client-video-section iframe,
       right: 5px;
       width: 30px;
       height: 30px;
-      background: url(../header-images/arrow-mob.png) no-repeat;
+      background: url(../header-images/arrow-mob.svg) no-repeat;
       background-size: 16px;
       z-index: 999;
       background-position: center center; }
