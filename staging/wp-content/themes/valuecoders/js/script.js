@@ -254,7 +254,7 @@ function vmRestSubDefault(){
 
 
 
-            if(event.target.classList.contains('.tech-arrow-btn')){
+            if(event.target.classList.contains('tech-arrow-btn')){
                 let techLinkRow = event.target.parentElement.nextElementSibling;
                 if( techLinkRow ){
                     if( event.target.classList.contains('rot') ){
