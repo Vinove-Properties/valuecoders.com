@@ -353,16 +353,22 @@ function defActiveHire( $hirePage, $exCat ){
                             </div>
                           </div>
                           <div class="other-menu">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Client Type</span>
-                              Innovative, future-proof software solutions </a><span class="ser-arrow-btn"></span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Technologies</span>
+                              Content Required Here... </a><span class="ser-arrow-btn"></span>
                             </div>
                             <div class="flex-1 menu-column sub-service">
-                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
-                              Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
-                              End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
-                              Expand with white-label services</a>
+                              <a href="<?php echo $site_url; ?>cloud-services/amazon-cloud"><img loading="lazy" 
+                              src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon6.svg" class="menuicon" 
+                              alt="menuicon"><span class="title">Amazon AWS</span>Content Required Here...</a>
+
+                              <a href="<?php echo $site_url; ?>cloud-services/azure-cloud"><img loading="lazy" 
+                              src="<?php echo $tpl_url; ?>/menu-images/devops-02.svg" class="menuicon" 
+                              alt="menuicon"><span class="title">Azure</span>Content Required Here...</a>
+
+                              <a href="<?php echo $site_url; ?>cloud-services/google-cloud"><img loading="lazy" 
+                              src="<?php echo $tpl_url; ?>/menu-images/gcloud.svg" class="menuicon" 
+                              alt="menuicon"><span class="title">Google Cloud</span>Content Required Here...</a>
+                              
                             </div>
                           </div>
                         </div>
