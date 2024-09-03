@@ -3407,7 +3407,7 @@ a {
         background: #fff; }
         .header-two .header-item-right .menu ul li .menu-mega.small-menu {
           left: 52%;
-          width: 300px;
+          width: 350px;
           padding: 25px;
           border-radius: 15px; }
           .header-two .header-item-right .menu ul li .menu-mega.small-menu a {
@@ -3732,7 +3732,7 @@ a {
         border-color: rgba(5, 22, 77, 0.08); }
 
 .velm-demand-teams .header-two .header-item-right .menu ul li .menu-mega.small-menu {
-  left: 39%; }
+  left: 43%; }
 
 @media screen and (max-width: 1600px) {
   .header-two .container {
@@ -3741,7 +3741,7 @@ a {
     left: 60%; }
 
   .velm-demand-teams .header-two .header-item-right .menu ul li .menu-mega.small-menu {
-    left: 40%; } }
+    left: 43%; } }
 @media screen and (max-width: 1440px) {
   .header-two .container {
     padding: 0 20px; }

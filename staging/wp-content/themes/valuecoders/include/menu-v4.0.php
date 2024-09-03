@@ -358,7 +358,7 @@ function defActiveHire( $hirePage, $exCat ){
                             </div>
                             <div class="flex-1 menu-column sub-service">
                               <a href="<?php echo $site_url; ?>cloud-services/amazon-cloud"><img loading="lazy" 
-                              src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon6.svg" class="menuicon" 
+                              src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon6.svg" width="40" class="menuicon" 
                               alt="menuicon"><span class="title">Amazon AWS</span>Build, scale, innovate on AWS</a>
 
                               <a href="<?php echo $site_url; ?>cloud-services/azure-cloud"><img loading="lazy" 
@@ -937,7 +937,7 @@ function defActiveHire( $hirePage, $exCat ){
                             <span class="tech-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-tech">
-                              <div class="flex-4">
+                              <div class="flex-4 margin-0">
                                 <span class="head">Trending</span>
                                 <a href="<?php echo $site_url; ?>ai"><span class="title">Artificial Intelligence</span></a>
                                 <a href="<?php echo $site_url; ?>machine-learning"><span class="title">Machine Learning</span></a>
@@ -947,7 +947,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>machine-learning/rpa-development-services-company"><span class="title">RPA</span></a>
                                 <a href="<?php echo $site_url; ?>ar-vr-development-company"><span class="title">AR/ VR</span></a>                                
                               </div>
-                              <div class="flex-4">  
+                              <div class="flex-4 margin-0">  
                                 <span class="head opacity-0">Trending</span>                              
                                 <a href="<?php echo $site_url; ?>chatbot-development-company"><span class="title">Chatbot</span></a>
                                 <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><span class="title">Big Data</span></a>
@@ -957,7 +957,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>ott-development"><span class="title">OTT</span></a>
                               </div>
 
-                              <div class="flex-4">
+                              <div class="flex-4 margin-0">
                                 <span class="head">Platforms</span>                                
                                 <a href="<?php echo $site_url; ?>salesforce"><span class="title">Salesforce</span></a>
                                 <a href="<?php echo $site_url; ?>microsoft-dynamics"><span class="title">Microsoft Dynamics</span></a>
@@ -982,7 +982,7 @@ function defActiveHire( $hirePage, $exCat ){
                             <span class="tech-arrow-btn"></span>
                           </div>
                             <div class="dis-flex menu-column sub-tech">
-                              <div class="flex-2">
+                              <div class="flex-2 margin-0">
                                 <a href="<?php echo $site_url; ?>python-web-development-services-company"><span class="title">Python</span></a>
                                 <a href="<?php echo $site_url; ?>aspdotnet-development-company-india"><span class="title">.NET</span></a>
                                 <a href="<?php echo $site_url; ?>java-web-application-development-company"><span class="title">Java</span></a>
