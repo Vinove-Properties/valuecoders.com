@@ -851,7 +851,7 @@ function defActiveHire( $hirePage, $exCat ){
                         </div>
                         <div class="tab-content">
                           <div class="four-column">
-                            <div class="tab-title"><a href="javascript:void(0);"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/ind-01.svg" class="menuicon" alt="menuicon"><span class="title">Industries</span>
+                            <div class="tab-title"><a href="javascript:void(0);"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/indust.svg" class="menuicon" alt="menuicon"><span class="title">Industries</span>
                               Expertise across sectors</a>
                             </div>
                             <div class="dis-flex menu-column">
@@ -932,7 +932,7 @@ function defActiveHire( $hirePage, $exCat ){
                       <div class="right-tabs">
                         <div class="tab-content is-active">
                           <div class="four-column">
-                            <div class="tab-title"><a href="javascript:void(0);"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-03.svg" class="menuicon" alt="menuicon"><span class="title">Trending & Platforms</span>Leading-edge tech solutions</a>
+                            <div class="tab-title"><a href="javascript:void(0);"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/trend.svg" class="menuicon" alt="menuicon"><span class="title">Trending & Platforms</span>Leading-edge tech solutions</a>
                             <span class="tech-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-tech">
@@ -977,7 +977,7 @@ function defActiveHire( $hirePage, $exCat ){
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="javascript:void(0);"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-03.svg" class="menuicon" alt="menuicon"><span class="title">Programming </span>Mastery in key languages</a>
+                            <div class="tab-title"><a href="javascript:void(0);"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/prog.svg" class="menuicon" alt="menuicon"><span class="title">Programming </span>Mastery in key languages</a>
                             <span class="tech-arrow-btn"></span>
                           </div>
                             <div class="dis-flex menu-column sub-tech">
