@@ -1311,3 +1311,13 @@ menuElm.forEach(function(elm){
     e.init();
   }
 });
+
+
+const anchorsLnk = document.querySelectorAll('a.mst-link');
+function addClass() {
+    anchorsLnk.forEach(anchor => anchor.classList.remove('active'));
+    this.classList.add('active');
+}
+anchorsLnk.forEach(anchor => {
+    anchor.addEventListener('mouseover', addClass);    
+});

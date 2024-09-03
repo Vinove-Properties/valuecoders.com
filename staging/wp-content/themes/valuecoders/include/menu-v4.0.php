@@ -64,7 +64,7 @@ function defActiveHire( $hirePage, $exCat ){
           <ul>
             <!-- Services Menu Starts -->
             <li class="menu-item-has-children">
-              <a href="<?php echo $site_url; ?>">Services</a> <span class="arrow-btn"></span>
+              <a class="mst-link" href="<?php echo $site_url; ?>">Services</a> <span class="arrow-btn"></span>
               <div class="menu-mega">
                 <div class="container">
                   <div class="dis-flex tab-menu">
@@ -108,9 +108,9 @@ function defActiveHire( $hirePage, $exCat ){
                             <div class="dis-flex menu-column sub-service">
                               <div class="flex-4">
                                 <span class="head">Development</span>
-                                <a href="<?php echo $site_url; ?>web-application-development"><span class="title">Custom Software</span>
+                                <a href="<?php echo $site_url; ?>custom-software-development-services-company"><span class="title">Custom Software</span>
                                 Tailored solutions for excellence</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Enterprise Software </span>
+                                <a href="<?php echo $site_url; ?>enterprise-software-development-services"><span class="title">Enterprise Software </span>
                                 Powering enterprise growth</a>
                                 <a href="<?php echo $site_url; ?>outsource-software-product-development-services"><span class="title">Software Product Engineering</span>
                                 Building market-ready software</a>
@@ -148,9 +148,9 @@ function defActiveHire( $hirePage, $exCat ){
                                 Outsource, excel, succeed</a>
                                 <a href="<?php echo $site_url; ?>it-staff-augmentation-services"><span class="title">IT Staff Augmentation</span>
                                 On-demand top resources</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Dedicated Development Team</span>
+                                <a href="<?php echo $site_url; ?>dedicated-development-teams"><span class="title">Dedicated Development Team</span>
                                 Your expert dev team</a>
-                                <a href="<?php echo $site_url; ?>"><span class="title">Nearshore Software Development</span>
+                                <a href="<?php echo $site_url; ?>nearshore-software-development-services"><span class="title">Nearshore Software Development</span>
                                 Nearshore excellence, always</a>
                                 <a href="<?php echo $site_url; ?>software-outsourcing-services-company" class="view-more">View More</a>
                               </div>
@@ -488,7 +488,7 @@ function defActiveHire( $hirePage, $exCat ){
             <?php //if( $mcat === "demand-teams" ) : ?>
             <!-- Hire Menu Starts -->
             <li class="menu-item-has-children">
-              <a href="<?php echo $site_url; ?>hire-developers">Hire</a> <span class="arrow-btn"></span>
+              <a class="mst-link" href="<?php echo $site_url; ?>hire-developers">Hire</a> <span class="arrow-btn"></span>
               <div class="menu-mega">
                 <div class="container">
                   <div class="dis-flex tab-menu">
@@ -765,6 +765,7 @@ function defActiveHire( $hirePage, $exCat ){
 
                             <a href="<?php echo $site_url; ?>dedicated-development-teams"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">Dedicated Software Teams</span>Hire Dedicated Developers</a>
                             </div>
+                            <a href="http://localhost/valuecoders.com/staging/software-development-services-company" class="view-more">View More</a>
                           </div>
                       </div>
                     </div>
@@ -775,7 +776,7 @@ function defActiveHire( $hirePage, $exCat ){
             <!-- //Hire Menu Ends -->
             <?php //endif; ?>
             <li class="menu-item-has-children">
-              <a href="<?php echo $site_url; ?>">Who We Serve</a> <span class="arrow-btn"></span>
+              <a class="mst-link" href="<?php echo $site_url; ?>">Who We Serve</a> <span class="arrow-btn"></span>
               <div class="menu-mega">
                 <div class="container">
                   <div class="dis-flex tab-menu">
@@ -907,7 +908,7 @@ function defActiveHire( $hirePage, $exCat ){
             ?>
             <!-- Technologies Menus Starts -->
             <li class="menu-item-has-children">
-              <a href="<?php echo $site_url; ?>">Technologies</a> <span class="arrow-btn"></span>
+              <a class="mst-link" href="<?php echo $site_url; ?>">Technologies</a> <span class="arrow-btn"></span>
               <div class="menu-mega">
                 <div class="container">
                   <div class="dis-flex tab-menu">
@@ -991,13 +992,13 @@ function defActiveHire( $hirePage, $exCat ){
                           </div>
                           <div class="other-menu">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>"><span class="title">Client Type</span>
-                              Innovative, future-proof software solutions</a>
+                              Empowering businesses of all sizes</a>
                             </div>
                             <div class="flex-1 menu-column">
                               <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
-                              Custom software for business goals</a>
+                              Custom software for growing businesses</a>
                               <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
-                              End-to-end automation solutions</a>
+                              End-to-end solutions for maximum impact</a>
                               <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                             </div>
@@ -1014,7 +1015,7 @@ function defActiveHire( $hirePage, $exCat ){
             
             <?php if( $mcat == "demand-teams") : ?>
             <li class="menu-item-has-children">
-              <a href="<?php echo $site_url; ?>">Resources</a><span class="arrow-btn"></span>
+              <a class="mst-link" href="<?php echo $site_url; ?>">Resources</a><span class="arrow-btn"></span>
               <div class="menu-mega small-menu">
               <a href="<?php echo $site_url; ?>hire-developers/hire-software-developers-india">
               <img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/resources-icon1.svg" class="menuicon" alt="menuicon">Hire Indian Developers </a>
@@ -1039,7 +1040,7 @@ function defActiveHire( $hirePage, $exCat ){
             ?>
             <!-- Solution Menu Starts -->
             <li class="menu-item-has-children">
-              <a href="<?php echo $site_url; ?>">Solutions</a> <span class="arrow-btn"></span>
+              <a class="mst-link" href="<?php echo $site_url; ?>">Solutions</a> <span class="arrow-btn"></span>
               <div class="menu-mega">
                 <div class="container">
                   <div class="dis-flex tab-menu">
@@ -1099,10 +1100,10 @@ function defActiveHire( $hirePage, $exCat ){
             <!-- //Solution Menu Ends -->
             <?php endif; ?>
             <?php if( !in_array( $mcat, ['demand-teams', 'qa-testing'] ) ) : ?>
-            <li class="menu-item-has-children"><a href="<?php echo $site_url; ?>">Case Studies</a></li>
+            <li class="menu-item-has-children"><a class="mst-link" href="<?php echo $site_url; ?>">Case Studies</a></li>
             <?php endif; ?>
             <li class="menu-item-has-children">
-              <a href="<?php echo $site_url; ?>">Company</a> <span class="arrow-btn"></span>
+              <a class="mst-link" href="<?php echo $site_url; ?>">Company</a> <span class="arrow-btn"></span>
               <div class="menu-mega small-menu">
                 <a href="<?php echo $site_url; ?>about"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/comp-01.svg" class="menuicon" alt="menuicon">Overview</a>
                 <a href="<?php echo $site_url; ?>in-media"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/comp-02.svg" class="menuicon" alt="menuicon">In Media</a>
