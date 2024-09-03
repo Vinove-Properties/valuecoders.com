@@ -2750,7 +2750,9 @@ body.page-template-template-testimonials .client-video-section iframe,
       float: right; }
       .header-two .arrow-btn.rot {
         background-position: 36px -33px; }
-    .header-two .ser-arrow-btn, .header-two .hr-arrow-btn, .header-two .tech-arrow-btn {
+    .header-two .ser-arrow-btn,
+    .header-two .hr-arrow-btn,
+    .header-two .tech-arrow-btn {
       display: inline-block;
       position: absolute;
       right: 5px;
@@ -2760,7 +2762,9 @@ body.page-template-template-testimonials .client-video-section iframe,
       background-size: 16px;
       z-index: 999;
       background-position: center center; }
-      .header-two .ser-arrow-btn.rot, .header-two .hr-arrow-btn.rot, .header-two .tech-arrow-btn.rot {
+      .header-two .ser-arrow-btn.rot,
+      .header-two .hr-arrow-btn.rot,
+      .header-two .tech-arrow-btn.rot {
         transform: rotate(90deg); }
 
   .velm-demand-teams .header-two .header-item-right .menu ul li .menu-mega.small-menu {
