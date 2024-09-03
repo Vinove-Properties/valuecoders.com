@@ -71,7 +71,9 @@ function defActiveHire( $hirePage, $exCat ){
                     <div id="menu-serv" class="dis-flex tab-contents">
                       <div class="left-tabs">
                         <ul class="tab-nav">
-                          <li class="tab-link <?php echo defActiveMenu($mcat); ?>">Software Development</li>
+                          <li class="tab-link <?php echo defActiveMenu($mcat); ?>">
+                            <a href="/hire-developers">Software Development</a>
+                          </li>
                           <li class="tab-link <?php echo isActiveMenu("app-development", $mcat); ?>">Application Development</li>
                           <li class="tab-link <?php echo isActiveMenu("demand-teams", $mcat); ?>">Dedicated Software Teams</li>
                           <li class="tab-link <?php echo isActiveMenu("ecommerce", $mcat); ?>">eCommerce</li>
@@ -1108,10 +1110,30 @@ function defActiveHire( $hirePage, $exCat ){
             </li>
             <!-- //Technologies Menus Ends -->
             <?php endif; ?>
+            <?php if( $mcat == "demand-teams") : ?>
+            <li class="menu-item-has-children">
+              <a href="<?php echo $site_url; ?>">Resources</a><span class="arrow-btn"></span>
+              <div class="menu-mega small-menu">
+              <a href="<?php echo $site_url; ?>hire-developers/hire-software-developers-india">
+              <img loading="lazy" src="<?php echo $tpl_url; ?>menu-images/resources-icon1.svg" class="menuicon" alt="menuicon">Hire Indian Developers </a>
+              <a href="<?php echo $site_url; ?>it-outsourcing-services">
+              <img loading="lazy" src="<?php echo $tpl_url; ?>menu-images/resources-icon2.svg" class="menuicon" alt="menuicon">IT Outsourcing</a>
+              <a href="<?php echo $site_url; ?>how-it-works">
+                <img loading="lazy" src="<?php echo $tpl_url; ?>menu-images/resources-icon3.svg" class="menuicon" 
+                alt="menuicon">How It Works</a>
+              <a href="<?php echo $site_url; ?>benefits-of-hiring-remote-developers">
+                <img loading="lazy" src="<?php echo $tpl_url; ?>menu-images/resources-icon4.svg" class="menuicon" alt="menuicon">Hiring Remote Developers</a>
+              <a href="<?php echo $site_url; ?>why-india"><img loading="lazy" src="<?php echo $tpl_url; ?>menu-images/resources-icon5.svg" class="menuicon" alt="menuicon">Software Development in India</a>
+              <a href="<?php echo $site_url; ?>faq"><img loading="lazy" src="<?php echo $tpl_url; ?>menu-images/resources-icon6.svg" class="menuicon" alt="menuicon">FAQs</a>
+              <a href="<?php echo $site_url; ?>ratecard">
+                <img loading="lazy" src="<?php echo $tpl_url; ?>menu-images/on-demands-icon2.svg" class="menuicon" alt="menuicon">Ratecard</a>
+              </div>
+            </li>
+            <?php endif; ?>
             <?php 
-              // Hide Solution Menu Is Page Catrgoty is : eCommerce
-              if(!in_array($mcat,['ecommerce','demand-teams','agencies','startups','devops','data-science','ai-ml'])) :
-              ?>
+            // Hide Solution Menu Is Page Catrgoty is : eCommerce
+            if(!in_array($mcat,['ecommerce','demand-teams','agencies','startups','devops','data-science','ai-ml'])) :
+            ?>
             <!-- Solution Menu Starts -->
             <li class="menu-item-has-children">
               <a href="<?php echo $site_url; ?>">Solutions</a> <span class="arrow-btn"></span>

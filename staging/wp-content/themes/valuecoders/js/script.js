@@ -75,7 +75,9 @@ function isMobileDevice_NA2(){
     return ( screen.width < 1139 ) ? true : false;
 }
 
-function isMobileDevice(){
+function isMobileDevice(){ 
+    //return true;
+    console.log( screen.width + navigator.userAgent );
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
     const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
     if (/iPad|Macintosh/i.test(userAgent) && 'ontouchend' in document) { 
@@ -83,11 +85,10 @@ function isMobileDevice(){
         return true;
     }
 
-    if( screen.width < 1139 ){
-        console.log("width 1139");
-        return true;
-        
-    }
+    // if( screen.width < 1139 ){
+    //     console.log("width 1139");
+    //     return true;        
+    // }
     return regex.test(navigator.userAgent);
 }
 
