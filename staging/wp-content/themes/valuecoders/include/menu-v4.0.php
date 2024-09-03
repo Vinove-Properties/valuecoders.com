@@ -143,13 +143,13 @@ function defActiveHire( $hirePage, $exCat ){
                                 <!--<a href="<?php echo $site_url; ?>" class="view-more">View More</a>-->
                               </div>
                               <div class="flex-4">
-                                <span class="head">Delivery Models</span>
-                                <a href="<?php echo $site_url; ?>software-outsourcing-services-company"><span class="title">Software Development Outsourcing</span>
-                                Outsource, excel, succeed</a>
+                                <span class="head">Delivery Models</span>                                
                                 <a href="<?php echo $site_url; ?>it-staff-augmentation-services"><span class="title">IT Staff Augmentation</span>
                                 On-demand top resources</a>
                                 <a href="<?php echo $site_url; ?>dedicated-development-teams"><span class="title">Dedicated Development Team</span>
                                 Your expert dev team</a>
+                                <a href="<?php echo $site_url; ?>software-outsourcing-services-company"><span class="title">Software Development Outsourcing</span>
+                                Outsource, excel, succeed</a>
                                 <a href="<?php echo $site_url; ?>nearshore-software-development-services"><span class="title">Nearshore Software Development</span>
                                 Nearshore excellence, always</a>
                                 <a href="<?php echo $site_url; ?>software-outsourcing-services-company" class="view-more">View More</a>
@@ -803,8 +803,7 @@ function defActiveHire( $hirePage, $exCat ){
                       <div class="right-tabs">
                         <div class="tab-content is-active">
                           <div class="three-column">
-                            <div class="tab-title"><a href="javascript:void(0);"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/ind-03.svg" class="menuicon" alt="menuicon"><span class="title">Software Startups & Product Companies</span>
-                              Tailored solutions for growth</a>
+                            <div class="tab-title"><a href="javascript:void(0);"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/ind-03.svg" class="menuicon" alt="menuicon"><span class="title">Software Startups & Product Companies</span>Your vision, our expertise</a>
                             </div>
                             <div class="dis-flex menu-column">                              
                               <div class="flex-2">
