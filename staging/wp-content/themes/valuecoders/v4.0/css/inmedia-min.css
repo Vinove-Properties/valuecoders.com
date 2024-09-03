@@ -2442,7 +2442,7 @@ body.page-template-template-testimonials .client-video-section iframe,
             display: block; }
             .header-two .header-item-right .menu ul li.menu-item-has-children a {
               padding: 0;
-              font-size: 16px;
+              font-size: 15px;
               color: #fff; }
               .header-two .header-item-right .menu ul li.menu-item-has-children a:after {
                 display: none; }
@@ -2502,24 +2502,25 @@ body.page-template-template-testimonials .client-video-section iframe,
                       width: 100%; }
                     .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .title {
                       font-weight: 500;
-                      font-size: 16px;
+                      font-size: 15px;
                       line-height: 26px;
                       color: #000;
                       display: block;
                       transition: all 0.3s ease-in-out;
                       margin-bottom: 2px; }
                     .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .tab-title {
-                      padding: 10px 30px 10px 0;
+                      padding: 10px 25px 10px 0;
                       border-bottom: 1px solid #e6e6e6;
                       width: 100%;
                       display: flex;
                       align-items: center; }
                       .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .tab-title a {
                         padding: 10px 10px 10px 55px;
-                        margin: 0 0 0 -10px; }
+                        margin: 0 0 0 -10px;
+                        width: 100%; }
                         .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .tab-title a .title {
-                          font-size: 16px;
-                          line-height: 22px;
+                          font-size: 15px;
+                          line-height: 20px;
                           color: #262626; }
                         .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .tab-title a .menuicon {
                           left: 8px;
@@ -2531,6 +2532,8 @@ body.page-template-template-testimonials .client-video-section iframe,
                       padding: 15px 0 0;
                       width: 100%; }
                       .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column.sub-service {
+                        display: none; }
+                      .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column.hr-submenu {
                         display: none; }
                       .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column.m-active {
                         display: block; }
@@ -2545,7 +2548,7 @@ body.page-template-template-testimonials .client-video-section iframe,
                         .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column .flex-4.margin-0 {
                           margin: 0; }
                       .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column .head {
-                        font-size: 14px;
+                        font-size: 13px;
                         margin: 8px 0 8px; }
                         .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column .head.opacity-0 {
                           display: none; }
@@ -2554,7 +2557,7 @@ body.page-template-template-testimonials .client-video-section iframe,
                         margin: 0 0 5px -10px; }
                     .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content a {
                       font-weight: 400;
-                      font-size: 14px;
+                      font-size: 13px;
                       line-height: 20px;
                       color: #5d6579;
                       display: block;
@@ -2562,8 +2565,8 @@ body.page-template-template-testimonials .client-video-section iframe,
                       border-radius: 10px;
                       background: transparent; }
                       .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content a .title {
-                        font-size: 15px;
-                        line-height: 22px; }
+                        font-size: 14px;
+                        line-height: 20px; }
                       .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content a:hover {
                         background: #fff9eb; }
                         .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content a:hover:after {
@@ -2747,16 +2750,16 @@ body.page-template-template-testimonials .client-video-section iframe,
       .header-two .arrow-btn.rot,
       .header-two .hr-arrow-btn.rot {
         background-position: 36px -33px; }
-    .header-two .ser-arrow-btn {
+    .header-two .ser-arrow-btn, .header-two hr-arrow-btn {
       display: inline-block;
       position: absolute;
-      right: 15px;
-      width: 18px;
-      height: 12px;
+      right: 5px;
+      width: 30px;
+      height: 30px;
       background: url(../header-images/arrow-mob.png) no-repeat;
-      background-size: 100%;
+      background-size: 16px;
       z-index: 999; }
-      .header-two .ser-arrow-btn.rot {
+      .header-two .ser-arrow-btn.rot, .header-two hr-arrow-btn.rot {
         transform: rotate(90deg); }
 
   .velm-demand-teams .header-two .header-item-right .menu ul li .menu-mega.small-menu {
