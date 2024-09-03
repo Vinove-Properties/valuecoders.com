@@ -5373,7 +5373,7 @@ a {
                           width: calc(100% - 10px);
                           margin: 0 0 5px -10px; }
                         .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs.hire-tabs .other-menu .tab-title .ser-arrow-btn {
-                          right: -5px; }
+                          right: -15px; }
               .header-two .header-item-right .menu ul li .menu-mega.m-active {
                 display: block;
                 padding: 0 0 30px; }
@@ -5502,7 +5502,8 @@ a {
       height: 30px;
       background: url(../header-images/arrow-mob.png) no-repeat;
       background-size: 16px;
-      z-index: 999; }
+      z-index: 999;
+      background-position: center center; }
       .header-two .ser-arrow-btn.rot, .header-two hr-arrow-btn.rot {
         transform: rotate(90deg); }
 
