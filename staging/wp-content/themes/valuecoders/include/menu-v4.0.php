@@ -926,8 +926,8 @@ function defActiveHire( $hirePage, $exCat ){
                     <div id="mnu-tech" class="dis-flex tab-contents">
                       <div class="left-tabs">
                         <ul class="tab-nav">
-                          <li class="tab-link is-active"><a href="#">Trending & Platforms</a></li>
-                          <li class="tab-link"><a href="#">Programming</a></li>
+                          <li class="tab-link is-active"><a href="javascript:void(0);">Trending & Platforms</a></li>
+                          <li class="tab-link"><a href="javascript:void(0);">Programming</a></li>
                         </ul>
                       </div>
                       <div class="right-tabs">
@@ -970,7 +970,8 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>microsoft-power-platform"><span class="title">Microsoft Power Platforms</span></a>
                                 <a href="<?php echo $site_url; ?>microsoft-powerapp-development"><span class="title">PowerApps</span></a>
                                 <a href="<?php echo $site_url; ?>cloud-services/amazon-cloud"><span class="title">Amazon Web Services</span></a>
-                                <a href="<?php echo $site_url; ?>cloud-services/azure-cloud"><span class="title">Azure</span></a>                                
+                                <a href="<?php echo $site_url; ?>cloud-services/azure-cloud"><span class="title">Azure</span></a>
+                                <a href="<?php echo $site_url; ?>cloud-services/google-cloud"><span class="title">Google Cloud</span></a>                                
                               </div>
                             </div>
                           </div>
