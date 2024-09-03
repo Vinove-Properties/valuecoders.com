@@ -111,9 +111,9 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>web-application-development"><span class="title">Custom Software</span>
                                 Tailored solutions for excellence</a>
                                 <a href="<?php echo $site_url; ?>"><span class="title">Enterprise Software </span>
-                                Robust solutions for empowering businesses</a>
+                                Powering enterprise growth</a>
                                 <a href="<?php echo $site_url; ?>outsource-software-product-development-services"><span class="title">Software Product Engineering</span>
-                                Turn ideas into market-ready software</a>
+                                Building market-ready software</a>
                                 <a href="<?php echo $site_url; ?>application-development"><span class="title">Application Development</span>
                                 Transform ideas into powerful apps</a>
                                 <a href="<?php echo $site_url; ?>software-development-services-company" class="view-more">View More</a>
@@ -123,11 +123,11 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>software-consulting"><span class="title">Software Consulting</span>
                                 Expert advice on tech</a>
                                 <a href="<?php echo $site_url; ?>it-strategy-consulting-firms"><span class="title">IT Consulting</span>
-                                Transformative IT solutions by experts</a>
+                                Expert IT solutions, delivered</a>
                                 <a href="<?php echo $site_url; ?>agile-consulting"><span class="title">Agile Consulting</span>
                                 Agile expertise, faster results</a>
                                 <a href="<?php echo $site_url; ?>crm-consulting"><span class="title">CRM Consulting</span>
-                                Optimize customer relationships for growth</a>
+                                Optimizing customer relations</a>
                                 <a href="<?php echo $site_url; ?>software-consulting" class="view-more">View More</a>
                               </div>
                               <div class="flex-4">
@@ -145,13 +145,13 @@ function defActiveHire( $hirePage, $exCat ){
                               <div class="flex-4">
                                 <span class="head">Delivery Models</span>
                                 <a href="<?php echo $site_url; ?>software-outsourcing-services-company"><span class="title">Software Development Outsourcing</span>
-                                Effortless outsourcing, exceptional software</a>
+                                Outsource, excel, succeed</a>
                                 <a href="<?php echo $site_url; ?>it-staff-augmentation-services"><span class="title">IT Staff Augmentation</span>
                                 On-demand top resources</a>
                                 <a href="<?php echo $site_url; ?>"><span class="title">Dedicated Development Team</span>
-                                Simple outsourcing, exceptional results</a>
+                                Your expert dev team</a>
                                 <a href="<?php echo $site_url; ?>"><span class="title">Nearshore Software Development</span>
-                                Technical expertise, shared time-zone</a>
+                                Nearshore excellence, always</a>
                                 <a href="<?php echo $site_url; ?>software-outsourcing-services-company" class="view-more">View More</a>
                               </div>
                             </div>
@@ -337,17 +337,17 @@ function defActiveHire( $hirePage, $exCat ){
                             <div class="dis-flex menu-column sub-service">
                               <div class="flex-2">
                                 <a href="<?php echo $site_url; ?>cloud-services/strategy-consulting"><span class="title">Cloud Strategy & Consulting</span>
-                                Strategic Cloud Guidance</a>
+                                Strategic cloud guidance</a>
                                 <a href="<?php echo $site_url; ?>cloud-services/devops-automation"><span class="title">DevOps as a Service</span>
-                                Effortless DevOps Integration</a>
+                                Effortless DevOps integration</a>
                                 <a href="<?php echo $site_url; ?>cloud-services/cloud-managed-services"><span class="title">24x7 Managed Services</span>
-                                Round-the-Clock Seamless Service</a>
+                                Round-the-clock seamless service</a>
                               </div>
                               <div class="flex-2">
                                 <a href="<?php echo $site_url; ?>cloud-services/cloud-finops-service"><span class="title">Cloud FinOps Services</span>
-                                Cloud Savings Made Simple</a>
+                                Cloud savings made simple</a>
                                 <a href="<?php echo $site_url; ?>cloud-services/cloud-migration"><span class="title">Cloud Migration</span>
-                                Seamless, Swift Cloud Transition
+                                Seamless, swift cloud transition
                                 </a>
                               </div>
                             </div>
@@ -424,11 +424,11 @@ function defActiveHire( $hirePage, $exCat ){
                               <div class="flex-4">
                                 <span class="head">Artificial Intelligence</span>
                                 <a href="<?php echo $site_url; ?>ai/application-development-company"><span class="title">AI Development</span>
-                                Crafting future with AI</a>
+                                Advancing intelligent solutions</a>
                                 <a href="<?php echo $site_url; ?>ai/consulting-services-company"><span class="title">AI Consulting</span>
-                                Choose the right technology</a>
+                                Navigating AI's future</a>
                                 <a href="<?php echo $site_url; ?>chatbot-development-company"><span class="title">AI Chatbot Development</span>
-                                Transform communication </a>
+                                Future-ready chatbots </a>
                                 <a href="<?php echo $site_url; ?>ai/mobile-app-development"><span class="title">AI-Powered App Development</span>
                                 Innovative AI mobile apps</a>
                                 <a href="<?php echo $site_url; ?>ai" class="view-more">View More</a>
@@ -436,11 +436,11 @@ function defActiveHire( $hirePage, $exCat ){
                               <div class="flex-4">
                                 <span class="head">ML & Advanced Analytics</span>
                                 <a href="<?php echo $site_url; ?>machine-learning/development"><span class="title">ML Development</span>
-                                Learning today, leading</a>
+                                Harnessing data power</a>
                                 <a href="<?php echo $site_url; ?>machine-learning/computer-vision-software-development"><span class="title">Computer Vision Solutions</span>
-                                Seeing beyond with AI</a>
+                                Transforming visual data</a>
                                 <a href="<?php echo $site_url; ?>machine-learning/mlops-consulting-services"><span class="title">MLOps Consulting</span>
-                                Optimizing ML, maximizing </a>
+                                ML operations optimized </a>
                                 <a href="<?php echo $site_url; ?>machine-learning/rpa-development-services-company"><span class="title">RPA Services</span>
                                 Efficient RPA automation</a>
                                 <a href="<?php echo $site_url; ?>machine-learning" class="view-more">View More</a>
@@ -448,9 +448,9 @@ function defActiveHire( $hirePage, $exCat ){
                               <div class="flex-4">
                                 <span class="head">Generative AI</span>
                                 <a href="<?php echo $site_url; ?>ai/generative-ai-development"><span class="title">Generative AI Development</span>
-                                Creating with AI innovation</a>
+                                Creating AI possibilities</a>
                                 <a href="<?php echo $site_url; ?>ai/generative-ai-integration-service"><span class="title">Generative AI Integration</span>
-                                Integrating creativity with AI</a>
+                                Elevate with generative AI</a>
                                 <a href="<?php echo $site_url; ?>ai/generative-ai-consulting-company"><span class="title">Generative AI Consultings</span>
                                 Guided generative growth </a>
                                 <a href="<?php echo $site_url; ?>ai/stable-diffusion-development-services"><span class="title">Stable Diffusion Development</span>
@@ -460,11 +460,11 @@ function defActiveHire( $hirePage, $exCat ){
                               <div class="flex-4">
                                 <span class="head">Expertise</span>
                                 <a href="<?php echo $site_url; ?>ai/large-language-model"><span class="title">LLM Services</span>
-                                Advanced language model solutions</a>
+                                Advanced LLM services</a>
                                 <a href="<?php echo $site_url; ?>ai/adaptive-ai-development"><span class="title">Adaptive AI Development</span>
                                 Custom, adaptive AI solutions</a>
                                 <a href="<?php echo $site_url; ?>chatgpt-solutions"><span class="title">Custom GPT Solutions</span>
-                                Personalized GPT technologies </a>
+                                Personalized GPT tech </a>
                                 <a href="<?php echo $site_url; ?>ai/transformer-model-development-services"><span class="title">Transformer Model Development</span>
                                 Cutting-edge transformer tech</a>
                                 <a href="<?php echo $site_url; ?>" class="view-more">View More</a>
