@@ -4769,7 +4769,7 @@ a {
                   opacity: 0;
                   left: auto;
                   bottom: auto; }
-              .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs .tab-nav li .no-link a {
+              .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs .tab-nav li.no-link a {
                 cursor: default; }
               .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs .tab-nav li.is-active a {
                 background: #fff9eb; }
