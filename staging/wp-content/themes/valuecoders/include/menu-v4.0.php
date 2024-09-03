@@ -754,8 +754,8 @@ function defActiveHire( $hirePage, $exCat ){
                         </div>
                          <div class="tab-content other-menu">
                             <div class="tab-title">
-                              <a href="<?php echo $site_url; ?>">
-                                <span class="title">Other Services</span>Innovative, future-proof software solutions
+                              <a href="<?php echo $site_url; ?>hire-developers">
+                                <span class="title">Hire Dedicated Developers</span>Innovative, future-proof software solutions
                               </a>
                             </div>
                             <div class="flex-1 menu-column">
