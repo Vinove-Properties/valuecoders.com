@@ -689,7 +689,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 class="menuicon" alt="menuicon"><span class="title">CMS</span>Build powerful CMS solutions</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
-                            <div class="dis-flex menu-column hr-submenu"">
+                            <div class="dis-flex menu-column hr-submenu">
                               <div class="flex-2">                                
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-drupal-developers" title="Drupal"><span class="title">Drupal</span></a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-kentico-developers" title="kentico"><span class="title">Kentico</span></a>
