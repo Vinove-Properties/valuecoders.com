@@ -4751,7 +4751,7 @@ a {
                 padding: 15px 35px 15px 15px;
                 color: #262626;
                 position: relative;
-                cursor: default;
+                cursor: pointer;
                 background: #fff;
                 border-radius: 10px;
                 font-weight: 500;
@@ -4768,12 +4768,9 @@ a {
                   background-size: 100%;
                   opacity: 0;
                   left: auto;
-                  bottom: auto;
-                  cursor: pointer; }
+                  bottom: auto; }
               .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs .tab-nav li .no-link a {
                 cursor: default; }
-                .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs .tab-nav li .no-link a:after {
-                  cursor: default; }
               .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs .tab-nav li.is-active a {
                 background: #fff9eb; }
                 .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs .tab-nav li.is-active a:after {
