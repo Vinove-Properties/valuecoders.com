@@ -1305,6 +1305,7 @@ function _morePPCTable(){
 }
 
 /*Menu v4 Script*/
+/*
 !(function(){
     "use strict";
     var e = function (e) {
@@ -1322,7 +1323,11 @@ function _morePPCTable(){
                 
             },
             o = function (e) {
-                e !== n && e >= 0 && e <= s.length && (s[n].classList.remove("is-active"), s[e].classList.add("is-active"), a[n].classList.remove("is-active"), a[e].classList.add("is-active"), (n = e));
+            e !== n && e >= 0 && e <= s.length && (s[n].classList.remove("is-active"), 
+            s[e].classList.add("is-active"), 
+            a[n].classList.remove("is-active"), 
+            a[e].classList.add("is-active"), 
+            (n = e));
             };
         return {
             init: function () {
@@ -1336,6 +1341,69 @@ function _morePPCTable(){
     };
     window.tabs = e;
 })();
+*/
+(function() {
+    "use strict";
+
+    // Tabs component function
+    var tabsComponent = function(options) {
+        var container = document.querySelector(options.el), // Select the main container
+            tabLinks = container.querySelectorAll(options.tabNavigationLinks), // Select all tab navigation links
+            tabContents = container.querySelectorAll(options.tabContentContainers), // Select all tab content containers
+            currentIndex = 0, // Initialize to the first tab
+            initialized = false, // Flag to check if the component has been initialized
+
+            // Function to handle mouseover event on tabs
+            addHoverEvent = function(tabLink, index) {
+                if (!isMobileDevice()) { // If not a mobile device, add the hover event
+                    tabLink.addEventListener("mouseover", function(event) {
+                        event.preventDefault(); // Prevent default behavior
+                        switchTab(index); // Switch to the tab on hover
+                    });
+                }
+            },
+
+            // Function to switch to a different tab
+            switchTab = function(index) {
+                if (index !== currentIndex && index >= 0 && index < tabLinks.length) {
+                    // Remove the active class from the current tab and its content
+                    tabLinks[currentIndex].classList.remove("is-active");
+                    tabContents[currentIndex].classList.remove("is-active");
+
+                    // Add the active class to the new tab and its content
+                    tabLinks[index].classList.add("is-active");
+                    tabContents[index].classList.add("is-active");
+
+                    // Update the currentIndex to the new tab
+                    currentIndex = index;
+                }
+            };
+
+        // Return an object with init and goToTab methods
+        return {
+            init: function() {
+                if (!initialized) { // If not already initialized
+                    initialized = true; // Set the initialized flag
+                    container.classList.remove("no-js"); // Remove the no-js class from the container
+
+                    // Find the initially active tab and set currentIndex
+                    for (var i = 0; i < tabLinks.length; i++) {
+                        if (tabLinks[i].classList.contains("is-active")) {
+                            currentIndex = i; // Set the current index to the active tab
+                        }
+                        addHoverEvent(tabLinks[i], i); // Add hover events to all tab links
+                    }
+                }
+            },
+            goToTab: switchTab, // Public method to switch tabs
+        };
+    };
+
+    // Attach the tabs component to the global window object
+    window.tabs = tabsComponent;
+})();
+
+
 const menuElm = ["menu-serv", "mnu-sol", "menu-inds", "mnu-tech", "mnu-hire"];
 menuElm.forEach(function(elm){
   if(document.getElementById(elm)){
