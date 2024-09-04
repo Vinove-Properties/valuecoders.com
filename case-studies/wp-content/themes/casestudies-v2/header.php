@@ -42,5 +42,5 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 $root_dir = ( $_SERVER['DOCUMENT_ROOT'] ) ? $_SERVER['DOCUMENT_ROOT'] : '';
 //require_once $root_dir.'/vc-nevigation.php';
 //require_once $root_dir.'/menu-v3.php';
-require_once get_stylesheet_directory().'/menu-v3.12.php';
+require_once get_stylesheet_directory().'/menu-v4.0.php';
 ?>

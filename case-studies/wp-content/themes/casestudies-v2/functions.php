@@ -377,6 +377,7 @@ function casestudies_scripts() {
 
 
     wp_register_script('modernizr-custom', get_template_directory_uri() . '/assets/js/modernizr-custom.js', array('jquery'),'1.1', true);
+    wp_enqueue_script('menu-v4', get_template_directory_uri() . '/js/menu-v4.js', [],'1.1', true);
 
     wp_localize_script( 'jquery', 'my_ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
