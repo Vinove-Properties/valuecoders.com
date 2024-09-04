@@ -5214,7 +5214,8 @@ a {
                 border-radius: 0;
                 padding: 20px 10px !important; }
                 .header-two .header-item-right .menu ul li .menu-mega.small-menu.company-menu {
-                  left: auto; }
+                  left: auto;
+                  width: 100%; }
                 .header-two .header-item-right .menu ul li .menu-mega.small-menu a {
                   padding: 15px 15px 15px 55px;
                   position: relative;
