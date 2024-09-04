@@ -1032,18 +1032,18 @@ function defActiveHire( $hirePage, $exCat ){
               <a class="mst-link" href="<?php echo $site_url; ?>resources">Resources</a><span class="arrow-btn"></span>
               <div class="menu-mega small-menu">
               <a href="<?php echo $site_url; ?>hire-developers/hire-software-developers-india">
-              <img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/resources-icon1.svg" class="menuicon" alt="menuicon">Hire Indian Developers </a>
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/res-01.svg" class="menuicon" alt="menuicon">Hire Indian Developers </a>
               <a href="<?php echo $site_url; ?>it-outsourcing-services">
-              <img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/resources-icon2.svg" class="menuicon" alt="menuicon">IT Outsourcing</a>
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/res-01.svg" class="menuicon" alt="menuicon">IT Outsourcing</a>
               <a href="<?php echo $site_url; ?>how-it-works">
-                <img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/resources-icon3.svg" class="menuicon" 
+                <img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/res-01.svg" class="menuicon" 
                 alt="menuicon">How It Works</a>
               <a href="<?php echo $site_url; ?>benefits-of-hiring-remote-developers">
-                <img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/resources-icon4.svg" class="menuicon" alt="menuicon">Hiring Remote Developers</a>
-              <a href="<?php echo $site_url; ?>why-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/resources-icon5.svg" class="menuicon" alt="menuicon">Software Development in India</a>
-              <a href="<?php echo $site_url; ?>faq"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/resources-icon6.svg" class="menuicon" alt="menuicon">FAQs</a>
+                <img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/res-01.svg" class="menuicon" alt="menuicon">Hiring Remote Developers</a>
+              <a href="<?php echo $site_url; ?>why-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/res-01.svg" class="menuicon" alt="menuicon">Software Development in India</a>
+              <a href="<?php echo $site_url; ?>faq"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/res-01.svg" class="menuicon" alt="menuicon">FAQs</a>
               <a href="<?php echo $site_url; ?>ratecard">
-                <img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/on-demands-icon2.svg" class="menuicon" alt="menuicon">Ratecard</a>
+                <img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/res-07.svg" class="menuicon" alt="menuicon">Ratecard</a>
               </div>
             </li>
             <?php endif; ?>

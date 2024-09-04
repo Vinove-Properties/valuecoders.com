@@ -762,6 +762,7 @@
    }
 	.header-two .header-item-right .menu ul li .menu-mega.small-menu.company-menu {
 		left: auto;
+		width: 100%;
    }
 	.header-two .header-item-right .menu ul li .menu-mega.small-menu a {
 		padding: 15px 15px 15px 55px;
