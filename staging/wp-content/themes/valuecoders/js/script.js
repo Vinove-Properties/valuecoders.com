@@ -1,4 +1,5 @@
 
+
 const vcTailerd = document.getElementById("tailored-slide");
 if( vcTailerd ){
 window.addEventListener("load", function() {
