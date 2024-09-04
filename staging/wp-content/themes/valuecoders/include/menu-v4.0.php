@@ -1116,7 +1116,7 @@ function defActiveHire( $hirePage, $exCat ){
             <?php //endif; ?>
             <li class="menu-item-has-children">
               <a class="mst-link" href="<?php echo $site_url; ?>about">Company</a> <span class="arrow-btn"></span>
-              <div class="menu-mega small-menu">
+              <div class="menu-mega small-menu company-menu">
                 <a href="<?php echo $site_url; ?>about"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/comp-01.svg" class="menuicon" alt="menuicon">Overview</a>
                 <a href="<?php echo $site_url; ?>in-media"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/comp-02.svg" class="menuicon" alt="menuicon">In Media</a>
                 <a href="<?php echo $site_url; ?>testimonials"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/comp-03.svg" class="menuicon" alt="menuicon">Clients & Testimonials</a>

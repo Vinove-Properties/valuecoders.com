@@ -1903,10 +1903,13 @@ body.page-template-template-testimonials .client-video-section iframe,
         display: none;
         background: #fff; }
         .header-two .header-item-right .menu ul li .menu-mega.small-menu {
-          left: 52%;
+          left: 42%;
           width: 360px;
           padding: 25px;
           border-radius: 15px; }
+          .header-two .header-item-right .menu ul li .menu-mega.small-menu.company-menu {
+            width: 290px;
+            left: 53%; }
           .header-two .header-item-right .menu ul li .menu-mega.small-menu a {
             padding: 15px 15px 15px 55px;
             position: relative;
@@ -2228,22 +2231,27 @@ body.page-template-template-testimonials .client-video-section iframe,
       .header-two:hover .header-item-right .cta-wrap .btn-sec .btn {
         border-color: rgba(5, 22, 77, 0.08); }
 
-.velm-demand-teams .header-two .header-item-right .menu ul li .menu-mega.small-menu {
-  left: 43%; }
-
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1700px) {
   .header-two .container {
     max-width: 100%; }
   .header-two .header-item-right .menu ul li .menu-mega.small-menu {
-    left: 60%; }
-
-  .velm-demand-teams .header-two .header-item-right .menu ul li .menu-mega.small-menu {
-    left: 43%; } }
+    left: 57%; }
+    .header-two .header-item-right .menu ul li .menu-mega.small-menu.company-menu {
+      left: 57%; } }
+@media screen and (max-width: 1580px) {
+  .header-two .header-item-right .menu ul li .menu-mega.small-menu {
+    left: 44%; }
+    .header-two .header-item-right .menu ul li .menu-mega.small-menu.company-menu {
+      left: 60%; } }
 @media screen and (max-width: 1440px) {
   .header-two .container {
     padding: 0 20px; }
   .header-two .header-item-right .menu ul li.menu-item-has-children a {
     font-size: 15px; }
+  .header-two .header-item-right .menu ul li .menu-mega.small-menu {
+    left: 44%; }
+    .header-two .header-item-right .menu ul li .menu-mega.small-menu.company-menu {
+      left: 61%; }
   .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents {
     min-height: 520px; }
     .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .left-tabs .tab-nav li a {
@@ -2397,6 +2405,8 @@ body.page-template-template-testimonials .client-video-section iframe,
                 width: 100%;
                 border-radius: 0;
                 padding: 20px 10px !important; }
+                .header-two .header-item-right .menu ul li .menu-mega.small-menu.company-menu {
+                  left: auto; }
                 .header-two .header-item-right .menu ul li .menu-mega.small-menu a {
                   padding: 15px 15px 15px 55px;
                   position: relative;
@@ -2701,10 +2711,7 @@ body.page-template-template-testimonials .client-video-section iframe,
       .header-two .ser-arrow-btn.rot,
       .header-two .hr-arrow-btn.rot,
       .header-two .tech-arrow-btn.rot {
-        transform: rotate(90deg); }
-
-  .velm-demand-teams .header-two .header-item-right .menu ul li .menu-mega.small-menu {
-    left: auto; } }
+        transform: rotate(90deg); } }
 body {
   background: linear-gradient(180deg, #211f47 0%, #05164d 100%);
   color: #BDB7B7; }
