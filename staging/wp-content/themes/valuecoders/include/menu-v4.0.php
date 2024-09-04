@@ -995,9 +995,9 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>top-laravel-development-services-company-india"><span class="title">Lavavel</span></a>
                                 <a href="<?php echo $site_url; ?>net-maui-app-development"><span class="title">.NET MAUI</span></a>
                                 <a href="<?php echo $site_url; ?>node-js-development-company-india"><span class="title">Node</span></a>
-                                <a href="<?php echo $site_url; ?>best-react-native-development-services-company-india"><span class="title">.React Native</span></a>
+                                <a href="<?php echo $site_url; ?>best-react-native-development-services-company-india"><span class="title">React Native</span></a>
                                 <a href="<?php echo $site_url; ?>php-development-services-company"><span class="title">PHP</span></a>
-                                <a href="<?php echo $site_url; ?>top-wordpress-development-services-company-india"><span class="title">.Wordpress</span></a>
+                                <a href="<?php echo $site_url; ?>top-wordpress-development-services-company-india"><span class="title">Wordpress</span></a>
                                 <a href="<?php echo $site_url; ?>strapi-development-services"><span class="title">Strapi</span></a>
                                 <a href="<?php echo $site_url; ?>top-drupal-development-services-company-india"><span class="title">Drupal</span></a>  
                               </div>
