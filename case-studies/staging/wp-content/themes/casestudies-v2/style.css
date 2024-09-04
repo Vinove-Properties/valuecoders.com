@@ -688,7 +688,7 @@ transition: all .3s ease-in-out; background-size: 120%; background-position:cent
     .full-width-two-column .learn-more .round-arrow-icon {
         width: 24px;
     height: 24px;
-    background: url(https://www.valuecoders.com/v2wp/wp-content/themes/valuecoders/v3.0/images/arrow-circle.png) 0 0 no-repeat;
+    background: url(https://www.valuecoders.com/wp-content/themes/valuecoders/v3.0/images/arrow-circle.png) 0 0 no-repeat;
     display: inline-block;
     margin-left: 10px;
     transition: all 0.3s ease;
@@ -696,7 +696,7 @@ transition: all .3s ease-in-out; background-size: 120%; background-position:cent
     .full-width-two-column .learn-more:hover{color: #ffad00;}  
 
     .full-width-two-column .learn-more:hover .round-arrow-icon {
-        background-image: url(https://www.valuecoders.com/v2wp/wp-content/themes/valuecoders/v3.0/images/arrow-circle-hover.png);
+        background-image: url(https://www.valuecoders.com/wp-content/themes/valuecoders/v3.0/images/arrow-circle-hover.png);
         background-position: 0 0;
     margin-left: 20px;
     }
