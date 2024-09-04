@@ -1,4 +1,7 @@
 .single  .header-two{background: linear-gradient(180deg, #211f47 0%, #05164d 100%);}
+.single .header-two.header-bg {background:transparent;}
+.single .header-two.header-bg:hover {background:#fff;}
+
 
 .header-two {
 	position: fixed;
@@ -1042,6 +1045,10 @@
 	.header-two.header-bg.sc-up {
 		background: #1d1c39;
    }
+
+   .single  .header-two{background: #1d1c39;}
+.single .header-two.header-bg {background: #1d1c39;}
+.single .header-two.header-bg:hover {background: #1d1c39;}
 	.header-two.header-bg.sc-up .header-item-left {
 		opacity: 1;
    }
