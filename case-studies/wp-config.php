@@ -22,7 +22,7 @@ if( V_ENV == "localhost" ){
 define( 'DB_CHARSET', 'utf8mb4' );
 define( 'DB_COLLATE', '' );
 define( 'WP_POST_REVISIONS', false );
-define( 'WP_DEBUG', true );
+define( 'WP_DEBUG', false );
 define( 'WP_DEBUG_LOG', true );
 define( 'FS_METHOD', 'direct' );
 
