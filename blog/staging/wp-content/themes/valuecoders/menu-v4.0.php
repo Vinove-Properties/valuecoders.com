@@ -1113,7 +1113,7 @@ function defActiveHire( $hirePage, $exCat ){
             <!-- //Solution Menu Ends -->
             <?php endif; ?>
             <?php //if( !in_array( $mcat, ['demand-teams', 'qa-testing'] ) ) : ?>
-            <li class="menu-item-has-children"><a class="mst-link" href="<?php echo $site_url; ?>/case-studies/">Case Studies</a></li>
+            <li class="menu-item-has-children"><a class="mst-link" href="<?php echo $site_url; ?>case-studies/">Case Studies</a></li>
             <?php //endif; ?>
             <li class="menu-item-has-children">
               <a class="mst-link" href="<?php echo $site_url; ?>about">Company</a> <span class="arrow-btn"></span>
