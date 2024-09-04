@@ -202,7 +202,7 @@ width="250" height="88">
       </div>
     </header>
 <?php }elseif('page-templates/tpl-version8.0.php'){ ?>
-<header>
+<header id="tophead">
   <div class="container">
     <div class="dis-flex items-center">
       <div class="head-right">

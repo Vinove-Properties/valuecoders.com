@@ -1,3 +1,8 @@
+
+window.addEventListener("scroll", () => {
+    window.scrollY > 10 ? document.getElementById("tophead").classList.add("shady") : document.getElementById("tophead").classList.remove("shady");
+  })
+
 window.addEventListener("load", function(){
 document.querySelector(".customer-testimonial-slider .glider").addEventListener("glider-slide-visible",
 function(event) {

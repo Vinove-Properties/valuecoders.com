@@ -1,3 +1,5 @@
+
+
 function GliderSliderAuto(slider, miliseconds) {
   const slidesCount = slider.track.childElementCount;
   let slideTimeout = null;
