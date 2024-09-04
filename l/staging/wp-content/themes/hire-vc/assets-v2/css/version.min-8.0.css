@@ -46,8 +46,8 @@ html {
   scroll-behavior: smooth; }
 
 h1 {
-  font-size: 55px;
-  line-height: 77px;
+  font-size: 52px;
+  line-height: 71px;
   color: #ffffff;
   font-weight: 600; }
 
@@ -228,7 +228,7 @@ textarea {
   font-family: "Noto Sans", sans-serif; }
 
 header {
-  padding: 45px 0;
+  padding: 20px 0;
   position: absolute;
   display: block;
   top: 0;
@@ -238,6 +238,14 @@ header {
   margin: 0 auto;
   z-index: 99;
   transition: all 0.3s ease-in-out; }
+  header.shady {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08);
+    background: #051a57;
+    transition: all 0.5s ease 0s;
+    border-bottom: 1.5px solid #ffffff54;
+    padding: 12px 0;
+    position: fixed;
+    z-index: 9999; }
   header .dis-flex {
     justify-content: space-between; }
   header .head-left {
@@ -394,7 +402,11 @@ header {
     font-size: 16px; } }
 @media only screen and (max-width: 1440px) {
   .container {
-    max-width: 1260px; } }
+    max-width: 1260px; }
+
+  h1 {
+    font-size: 40px;
+    line-height: 55px; } }
 @media only screen and (max-width: 1320px) {
   h1 {
     font-size: 35px;
@@ -1483,7 +1495,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  padding: 130px 0 40px;
+  padding: 100px 0 40px;
   position: relative;
   display: flex;
   align-items: center; }
@@ -3102,6 +3114,8 @@ small {
 @media only screen and (max-width: 1440px) {
   .banner-img-section {
     padding: 140px 0 40px; }
+    .banner-img-section .two-box .content-box h2 {
+      font-size: 16px; }
 
   .our-challenges .chal-section .chall-row .chall-content ul {
     padding-right: 0; }
