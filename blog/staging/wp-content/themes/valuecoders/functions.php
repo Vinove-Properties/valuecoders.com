@@ -1001,3 +1001,18 @@ function ebook_ajax_cb(){
 
     }
 }
+
+// Hook into 'the_content' filter
+add_filter('the_content', 'replace_template_literals_with_query_values');
+function replace_template_literals_with_query_values($content) {
+    $pattern = '/{{(.*?)}}/';
+    $content = preg_replace_callback($pattern, function($matches) {
+        $key = trim($matches[1]); // Extract the key inside {{key}}
+        if(isset($_GET[$key])){
+            return sanitize_text_field($_GET[$key]); // Return the query string value
+        }else{
+            return ''; // If not present, replace with an empty string (or provide a default value if needed)
+        }
+    }, $content);    
+    return $content;
+}
