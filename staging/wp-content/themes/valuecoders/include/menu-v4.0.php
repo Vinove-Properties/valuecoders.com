@@ -771,11 +771,11 @@ function defActiveHire( $hirePage, $exCat ){
                               <span class="hr-arrow-btn"></span>
                             </div>
                             <div class="flex-1 menu-column hr-submenu">
-                            <a href="<?php echo $site_url; ?>it-staff-augmentation-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">Staff Augmentation</span>Access top technical resources on-demand</a>
+                            <a href="<?php echo $site_url; ?>it-staff-augmentation-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/dhire-01.svg" class="menuicon" alt="menuicon"><span class="title">Staff Augmentation</span>Access top technical resources on-demand</a>
 
-                            <a href="<?php echo $site_url; ?>hire-developers/hire-software-developers-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">Hire Software Developers</span>Work with skilled & dedicated developers</a>
+                            <a href="<?php echo $site_url; ?>hire-developers/hire-software-developers-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/dhire-02.svg" class="menuicon" alt="menuicon"><span class="title">Hire Software Developers</span>Work with skilled & dedicated developers</a>
 
-                            <a href="<?php echo $site_url; ?>dedicated-development-teams"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">Dedicated Software Teams</span>Hire Dedicated Developers</a>
+                            <a href="<?php echo $site_url; ?>dedicated-development-teams"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/dhire-03.svg" class="menuicon" alt="menuicon"><span class="title">Dedicated Software Teams</span>Hire Dedicated Developers</a>
                             </div>
                             <a href="<?php echo $site_url; ?>hire-developers" class="view-more">View More</a>
                           </div>
