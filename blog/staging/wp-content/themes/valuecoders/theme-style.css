@@ -510,8 +510,8 @@ span.author.vcard a {
 
 .entry-content{margin:10px 0 0;}
 .entry-content p {
-  line-height: 29px; margin:0 0 20px;
-  color:rgba(101, 101, 101, 1); font-weight: 500;overflow: hidden;
+
+  color:rgba(101, 101, 101, 1);overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   line-clamp: 2;
