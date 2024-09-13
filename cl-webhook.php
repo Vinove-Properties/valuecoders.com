@@ -414,7 +414,7 @@ if( isset( $json['event'] ) && $json['event'] == "invitee.created" ){
     'UTM_Campaign'  => $utm_campaign,
     'Company_Headcount' => "",
     'Calendly_Booked'   => "Yes",
-    'refurl'        => $pageUrl
+    'Ref_Url'        => $pageUrl
     ));
 
     $sJSON          = str_replace('{','[{',$sJSON);
