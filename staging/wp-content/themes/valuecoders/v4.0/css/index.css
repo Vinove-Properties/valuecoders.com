@@ -1,34 +1,5 @@
 @media only screen and (min-width: 768px) {
-  @font-face {
-    font-family: "Noto Sans";
-    src: url("../fonts/NotoSans-Regular.woff2") format("woff2"), url("../fonts/NotoSans-Regular.woff") format("woff"), url("../fonts/NotoSans-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap; }
-  @font-face {
-    font-family: "Noto Sans";
-    src: url("../fonts/NotoSans-Bold.woff2") format("woff2"), url("../fonts/NotoSans-Bold.woff") format("woff"), url("../fonts/NotoSans-Bold.ttf") format("truetype");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap; }
-  @font-face {
-    font-family: "Noto Sans";
-    src: url("../fonts/NotoSans-Medium.woff2") format("woff2"), url("../fonts/NotoSans-Medium.woff") format("woff"), url("../fonts/NotoSans-Medium.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap; }
-  @font-face {
-    font-family: "Noto Sans";
-    src: url("../fonts/NotoSans-SemiBold.woff2") format("woff2"), url("../fonts/NotoSans-SemiBold.woff") format("woff"), url("../fonts/NotoSans-SemiBold.ttf") format("truetype");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap; }
-  @font-face {
-    font-family: "Noto Sans";
-    src: url("../fonts/NotoSans-Light.woff2") format("woff2"), url("../fonts/NotoSans-Light.woff") format("woff"), url("../fonts//NotoSans-Light.ttf") format("truetype");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap; } }
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"); }
 * {
   margin: 0;
   padding: 0;
@@ -37,9 +8,9 @@
 body {
   background-color: #ffffff;
   color: #656565;
-  font-family: "Noto Sans", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", 'Noto Sans JP', Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: normal;
-  font-size: 16px;
+  font-size: 17px;
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale; }
@@ -88,7 +59,7 @@ h6 {
   font-size: 18px; }
 
 p {
-  font-size: 16px;
+  font-size: 17px;
   color: #666666;
   line-height: 29px;
   margin: 0 0 20px; }
@@ -5563,5 +5534,19 @@ a {
       margin: 0 auto; }
       .slide-logo .logo-section .glide__slide {
         height: auto; } }
+.header-two .header-item-right .menu ul li.menu-item-has-children a {
+  font-size: 17px; }
+
+.header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content a .title {
+  font-size: 16px; }
+
+.header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column a {
+  font-size: 15px; }
+
+.header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content a .title {
+  font-size: 16px; }
+
+.header-two .header-item-right .cta-wrap .btn-sec .btn {
+  font-size: 17px; }
 
 /*# sourceMappingURL=index.css.map */
