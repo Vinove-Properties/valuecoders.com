@@ -10,7 +10,7 @@ body {
   color: #656565;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", 'Noto Sans JP', Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: normal;
-  font-size: 17px;
+  font-size: 16px;
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale; }
@@ -59,7 +59,7 @@ h6 {
   font-size: 18px; }
 
 p {
-  font-size: 17px;
+  font-size: 16px;
   color: #666666;
   line-height: 29px;
   margin: 0 0 20px; }
@@ -5534,50 +5534,5 @@ a {
       margin: 0 auto; }
       .slide-logo .logo-section .glide__slide {
         height: auto; } }
-.header-two .header-item-right .menu ul li.menu-item-has-children a {
-  font-size: 17px; }
-
-.header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content a .title {
-  font-size: 16px; }
-
-.header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column a {
-  font-size: 15px; }
-
-.header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content a .title {
-  font-size: 16px; }
-
-.header-two .header-item-right .cta-wrap .btn-sec .btn {
-  font-size: 17px; }
-
-@media screen and (max-width: 1440px) {
-  .header-two .header-item-right .menu ul li.menu-item-has-children a {
-    font-size: 16px; }
-
-  .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content a .title {
-    font-size: 15px; }
-
-  .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column a {
-    font-size: 14px; }
-
-  .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content a .title {
-    font-size: 15px; }
-
-  .header-two .header-item-right .cta-wrap .btn-sec .btn {
-    font-size: 17px; } }
-@media screen and (max-width: 1280px) {
-  .header-two .header-item-right .menu ul li.menu-item-has-children a {
-    font-size: 15px; }
-
-  .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content a .title {
-    font-size: 14px; }
-
-  .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content .menu-column a {
-    font-size: 13px; }
-
-  .header-two .header-item-right .menu ul li .menu-mega .tab-menu .tab-contents .right-tabs .tab-content a .title {
-    font-size: 14px; }
-
-  .header-two .header-item-right .cta-wrap .btn-sec .btn {
-    font-size: 17px; } }
 
 /*# sourceMappingURL=index.css.map */
