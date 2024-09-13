@@ -973,25 +973,17 @@ div#ez-toc-widget-container h3 {
 
 
 .bialty-container p {
-  margin-bottom: 20px;
-  font-size:16px;
-  line-height: 29px;
+
   color:rgba(101, 101, 101, 1);
-  font-weight: 400;
+
 }
 .bialty-container h2 {
   margin-top: 50px;
-  font-size: 30px;
-  line-height: 42px;
-  font-weight: 600;
-  margin-bottom: 20px;
   color: #05164D;
  
 }
 .bialty-container h3 {
-  font-size: 20px;
-  line-height:28px;
-  font-weight: 600;
+
   color: rgba(5, 22, 77, 1);
   margin-bottom: 20px;
   margin-top:25px;
