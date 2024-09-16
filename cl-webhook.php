@@ -335,7 +335,15 @@ if( isset( $json['event'] ) && $json['event'] == "invitee.created" ){
         $utm_medium = $json['payload']['tracking']['utm_medium'];
     }
     
-    $phone      = $json['payload']['text_reminder_number'];
+    $phone      = isset($json['payload']['text_reminder_number']) && !empty($json['payload']['text_reminder_number']) ? $json['payload']['text_reminder_number'] : false;
+
+    if( $phone === false ){
+        $phone = (
+        isset($json['payload']['questions_and_answers'][0]['answer']) && 
+        !empty($json['payload']['questions_and_answers'][0]['answer'])
+        ) ? $json['payload']['questions_and_answers'][0]['answer'] : '';
+    }
+    
     $phoneee    = explode(" ", $phone);    
     $country    = ( isset( $phoneee[0] ) ) ? globalCountryListAry( $phoneee[0] ) : "";
     $email      = $json['payload']['email'];
