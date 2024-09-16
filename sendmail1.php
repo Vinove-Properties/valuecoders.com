@@ -188,10 +188,7 @@ if( isset( $_POST['user-name'] ) && in_array($_POST['user-name'], $spamNameManua
     die;
 }
 
-if( isset($_SERVER['HTTP_REFERER']) && empty($_SERVER['HTTP_REFERER']) ){
-    header('location:thanks?empty-referer=true');
-    die;
-}
+
 
 if( $isAjay === false ){
 $captcha = (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) ? $_POST['g-recaptcha-response'] : 
@@ -212,6 +209,12 @@ false;
 $ip = get_client_ip_user();
 if( (array_search($ip, $deny_ips))!== FALSE ) {
     die("locked IP");
+}
+
+if( !isset($_SERVER['HTTP_REFERER']) || empty($_SERVER['HTTP_REFERER']) ){
+    logSpamException( $_POST, "Empty Or Not Set HTTP_REFERER" );
+    header('location:thanks?empty-referer=true');
+    die;
 }
 
 
