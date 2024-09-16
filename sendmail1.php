@@ -16,9 +16,17 @@ require 'countries-array.php';
 require 'vc-config.php';
 require 'vc-mailto.php';
 
-$is_staging = ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'v2wp' ) !== false) )  ?  true : false;
+
+$is_staging = ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'staging' ) !== false) )  ?  true : false;
 $ajxData    = json_decode(file_get_contents("php://input"), true);
 $isAjay     = ( isset( $ajxData['_doing_ajax'] ) && ($ajxData['_doing_ajax'] === true) ) ? true : false;
+
+$thisUrl = "https://www.valuecoders.com/";
+if( $is_staging ){
+$thisUrl   = 'https://www.valuecoders.com/staging/';
+}
+define( 'SITE_ROOT_URL', $thisUrl );
+
 
 $spamIpAddr = ['141.95.234.1', '89.22.225.45','94.156.64.107'];
 $thisIPAddr = get_client_ip_user();
@@ -177,6 +185,11 @@ if( isset( $_POST['user-email'] ) && in_array($_POST['user-email'], $spamEmailMa
 
 if( isset( $_POST['user-name'] ) && in_array($_POST['user-name'], $spamNameManual) ){
     header( 'location:thanks.php' );
+    die;
+}
+
+if( isset($_SERVER['HTTP_REFERER']) && empty($_SERVER['HTTP_REFERER']) ){
+    header('location:thanks?empty-referer=true');
     die;
 }
 
@@ -897,8 +910,8 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
     */
 
     array_shift( $arrEmail );
-    $bccEmails      = ['parvesh@vinove.com', 'nitin.baluni@mail.vinove.com'];
-    //$bccEmails    = ['parvesh@vinove.com'];
+    //$bccEmails      = ['parvesh@vinove.com', 'nitin.baluni@mail.vinove.com'];
+    $bccEmails    = ['parvesh@vinove.com'];
     $sampledata = [
     'name'          => $user_name,
     'email'         => $user_email,
@@ -926,7 +939,7 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
             //'Phone'       => $zoho_user_phone,
             'Country'       => $user_country,
             'Lead Status'   => 'Not Contacted Yet',
-            'Lead Source'   => $lead_source,
+            'Lead Source'   => $inSource,
             'UTM Source'    => $inSource,
             'UTM Medium'    => $getUTM_medium,
             'Property'      => 'ValueCoders',
@@ -961,11 +974,11 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
             
             smtpEmailFunction( $eSender['mail_to'], $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], 
             $bccEmails, [], $user_name, false );            
-            /*
-            $emailBBB =  $Mailbody.$bodyBr.json_encode($eSender).print_r($arrZoho_v2, 1);
-            smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Contact Us v8 - {v2wp}", $emailBBB, "lead", 
+            
+            $emailBBB =  $Mailbody.$bodyBr.print_r( $_COOKIE, 1 );
+            smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Contact Us", $emailBBB, "lead", 
             $user_email, [], [], [], $user_name );
-            */            
+            
             $insType = (isset($arrPostParams['z-leadid']) && !empty($arrPostParams['z-leadid'])) ? $arrPostParams['z-leadid'] : false;
             zohoCrmUpdate_v2( $arrZoho_v2, $utm_source, $eSender['lead_to'], $insType );
             }
