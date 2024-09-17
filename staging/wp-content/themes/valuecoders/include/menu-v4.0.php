@@ -504,8 +504,8 @@ function defActiveHire( $hirePage, $exCat ){
                           <li class="tab-link <?php echo isActiveMenu("devops", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-devops-developers">DevOps</a></li>
                           <li class="tab-link <?php echo isActiveMenu("cms", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-cms-developers">CMS</a></li>
                           <li class="tab-link <?php echo isActiveMenu("ecom", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-ecommerce-developers">eCommerce</a></li>
-                          <li class="tab-link <?php echo isActiveMenu("bc", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-blockchain-developers">Blockchain</a></li>
                           <li class="tab-link <?php echo isActiveMenu("dm", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire/digital-marketing-experts">Digital Marketing</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("bc", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-blockchain-developers">Blockchain</a></li>
                           <li class="tab-link <?php echo isActiveMenu("lc", $hireElm); ?>"><a href="<?php echo $site_url; ?>services/low-code-no-code">Low - Code</a></li>
                         </ul>
                       </div>
@@ -703,26 +703,6 @@ function defActiveHire( $hirePage, $exCat ){
                           </div>
                           
                         </div>
-
-                        <div class="tab-content <?php echo isActiveMenu("bc", $hireElm); ?>">
-                          <div class="three-column mob-hide">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-blockchain-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/hire-10.svg" 
-                                class="menuicon" alt="menuicon"><span class="title">Blockchain</span>Unlock blockchain potential</a>
-                                <span class="hr-arrow-btn"></span>
-                            </div>
-                            <div class="dis-flex menu-column hr-submenu">
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-ethereum-developer" title="Ethereum"><span class="title">Ethereum</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-smartcontract-developers" title="Smart Contract"><span class="title">Smart Contract</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-solidity-developers" title="Solidity"><span class="title">Solidity</span></a>
-                              </div>
-                              <div class="flex-2">                                
-                              </div>
-                            </div>
-                          </div>
-                         
-                        </div>  
                         <div class="tab-content <?php echo isActiveMenu("dm", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire/digital-marketing-experts">
@@ -743,7 +723,25 @@ function defActiveHire( $hirePage, $exCat ){
                           </div>
                          
                         </div>
-                        
+                        <div class="tab-content <?php echo isActiveMenu("bc", $hireElm); ?>">
+                          <div class="three-column mob-hide">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-blockchain-developers">
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/hire-10.svg" 
+                                class="menuicon" alt="menuicon"><span class="title">Blockchain</span>Unlock blockchain potential</a>
+                                <span class="hr-arrow-btn"></span>
+                            </div>
+                            <div class="dis-flex menu-column hr-submenu">
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-ethereum-developer" title="Ethereum"><span class="title">Ethereum</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-smartcontract-developers" title="Smart Contract"><span class="title">Smart Contract</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-solidity-developers" title="Solidity"><span class="title">Solidity</span></a>
+                              </div>
+                              <div class="flex-2">                                
+                              </div>
+                            </div>
+                          </div>
+                         
+                        </div>  
                         <div class="tab-content <?php echo isActiveMenu("lc", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>services/low-code-no-code">
@@ -821,11 +819,11 @@ function defActiveHire( $hirePage, $exCat ){
                               <a href="<?php echo $site_url; ?>saas-consulting-development-services"><span class="title">SaaS Development</span>
                                 Build scalable SaaS products</a>
                               <a href="<?php echo $site_url; ?>outsource-software-product-development-services"><span class="title">Software Product Development</span>
-                              Innovate with expert developers</a>
-                                <a href="<?php echo $site_url; ?>startup-product-development"><span class="title">Startup Product Development</span>
-                                Develop your startup vision</a>
+                              Outsource development needs to experts</a>
+                                <a href="<?php echo $site_url; ?>startup-product-development"><span class="title">Product Development for Startups</span>
+                                Launch your startup idea with expert guidance</a>
                                 <a href="<?php echo $site_url; ?>cto-as-a-service"><span class="title">CTO as a Service</span>
-                                Strategic tech leadership</a>
+                                Grow faster with strategic tech leadership</a>
                               </div>
 
                             </div>
