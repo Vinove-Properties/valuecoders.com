@@ -499,13 +499,13 @@ function defActiveHire( $hirePage, $exCat ){
                           <li class="tab-link <?php echo defActiveHire($hireElm, $mcat); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-backend-developers">Backend</a></li>
                           <li class="tab-link <?php echo isActiveMenu("frontend", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-front-end-developers">Frontend</a></li>
                           <li class="tab-link <?php echo isActiveMenu([$hireElm,$mcat] ,"ai-ml"); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers">AI/ML</a></li>
-                          <li class="tab-link <?php echo isActiveMenu("dm", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire/digital-marketing-experts">Digital Marketing</a></li>
                           <li class="tab-link <?php echo isActiveMenu("mobile", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-mobile-app-developers">Mobile</a></li>
                           <li class="tab-link <?php echo isActiveMenu("full-stack", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-full-stack-developers">Full Stack</a></li>
                           <li class="tab-link <?php echo isActiveMenu("devops", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-devops-developers">DevOps</a></li>
                           <li class="tab-link <?php echo isActiveMenu("cms", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-cms-developers">CMS</a></li>
                           <li class="tab-link <?php echo isActiveMenu("ecom", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-ecommerce-developers">eCommerce</a></li>
                           <li class="tab-link <?php echo isActiveMenu("bc", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-blockchain-developers">Blockchain</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("dm", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire/digital-marketing-experts">Digital Marketing</a></li>
                           <li class="tab-link <?php echo isActiveMenu("lc", $hireElm); ?>"><a href="<?php echo $site_url; ?>services/low-code-no-code">Low - Code</a></li>
                         </ul>
                       </div>
@@ -594,27 +594,6 @@ function defActiveHire( $hirePage, $exCat ){
                                 </a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-rpa-developers" title="RPA"><span class="title">RPA</span>
                                 </a>
-                              </div>
-                            </div>
-                          </div>
-                         
-                        </div>
-
-                         <div class="tab-content <?php echo isActiveMenu("dm", $hireElm); ?>">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire/digital-marketing-experts">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/hire-04.svg" 
-                                class="menuicon" alt="menuicon"><span class="title">Digital Marketing</span>Boost your brand digitally</a>
-                                <span class="hr-arrow-btn"></span>
-                            </div>
-                            <div class="dis-flex menu-column hr-submenu">
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire/seo-experts" title="SEO"><span class="title">SEO</span></a>
-                                <a href="<?php echo $site_url; ?>hire/ppc-experts" title="PPC"><span class="title">PPC</span></a>
-                                <a href="<?php echo $site_url; ?>hire/smo-experts" title="SMO"><span class="title">SMO</span></a>
-                                <a href="<?php echo $site_url; ?>hire/content-writers" title="Content Writer"><span class="title">Content Writer</span></a>
-                              </div>
-                              <div class="flex-2">                                
                               </div>
                             </div>
                           </div>
@@ -743,7 +722,28 @@ function defActiveHire( $hirePage, $exCat ){
                             </div>
                           </div>
                          
-                        </div>                       
+                        </div>  
+                        <div class="tab-content <?php echo isActiveMenu("dm", $hireElm); ?>">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire/digital-marketing-experts">
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/hire-04.svg" 
+                                class="menuicon" alt="menuicon"><span class="title">Digital Marketing</span>Boost your brand digitally</a>
+                                <span class="hr-arrow-btn"></span>
+                            </div>
+                            <div class="dis-flex menu-column hr-submenu">
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire/seo-experts" title="SEO"><span class="title">SEO</span></a>
+                                <a href="<?php echo $site_url; ?>hire/ppc-experts" title="PPC"><span class="title">PPC</span></a>
+                                <a href="<?php echo $site_url; ?>hire/smo-experts" title="SMO"><span class="title">SMO</span></a>
+                                <a href="<?php echo $site_url; ?>hire/content-writers" title="Content Writer"><span class="title">Content Writer</span></a>
+                              </div>
+                              <div class="flex-2">                                
+                              </div>
+                            </div>
+                          </div>
+                         
+                        </div>
+                        
                         <div class="tab-content <?php echo isActiveMenu("lc", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>services/low-code-no-code">
