@@ -106,6 +106,18 @@ function defActiveHire( $hirePage, $exCat ){
                               <span class="ser-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-service">
+                            <div class="flex-4">
+                                <span class="head">Consulting</span>
+                                <a href="<?php echo $site_url; ?>software-consulting"><span class="title">Software Consulting</span>
+                                Expert advice on tech</a>
+                                <a href="<?php echo $site_url; ?>it-strategy-consulting-firms"><span class="title">IT Consulting</span>
+                                Expert IT solutions, delivered</a>
+                                <a href="<?php echo $site_url; ?>agile-consulting"><span class="title">Agile Consulting</span>
+                                Agile expertise, faster results</a>
+                                <a href="<?php echo $site_url; ?>crm-consulting"><span class="title">CRM Consulting</span>
+                                Optimizing customer relations</a>
+                                <a href="<?php echo $site_url; ?>software-consulting" class="view-more">View More</a>
+                              </div>
                               <div class="flex-4">
                                 <span class="head">Development</span>
                                 <a href="<?php echo $site_url; ?>custom-software-development-services-company"><span class="title">Custom Software</span>
@@ -118,18 +130,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 Transform ideas into powerful apps</a>
                                 <a href="<?php echo $site_url; ?>software-development-services-company" class="view-more">View More</a>
                               </div>
-                              <div class="flex-4">
-                                <span class="head">Consulting</span>
-                                <a href="<?php echo $site_url; ?>software-consulting"><span class="title">Software Consulting</span>
-                                Expert advice on tech</a>
-                                <a href="<?php echo $site_url; ?>it-strategy-consulting-firms"><span class="title">IT Consulting</span>
-                                Expert IT solutions, delivered</a>
-                                <a href="<?php echo $site_url; ?>agile-consulting"><span class="title">Agile Consulting</span>
-                                Agile expertise, faster results</a>
-                                <a href="<?php echo $site_url; ?>crm-consulting"><span class="title">CRM Consulting</span>
-                                Optimizing customer relations</a>
-                                <a href="<?php echo $site_url; ?>software-consulting" class="view-more">View More</a>
-                              </div>
+                             
                               <div class="flex-4">
                                 <span class="head">Maintenance & Support</span>
                                 <!--<a href="<?php echo $site_url; ?>"><span class="title">Software Maintenance</span>
@@ -255,10 +256,10 @@ function defActiveHire( $hirePage, $exCat ){
                                 Your store, our success strategy</a>
                                 <a href="<?php echo $site_url; ?>ecommerce-web-design"><span class="title">eCommerce Web Design</span>
                                 Designing conversion pathways</a>
-                                <a href="<?php echo $site_url; ?>ecommerce/maintenance-support"><span class="title">eCommerce Maintenance & Support</span>
-                                Elevate every eExperience</a>
                                 <a href="<?php echo $site_url; ?>ecommerce/implementation-services"><span class="title">eCommerce Implementation</span>
                                 Bring digital storefronts to life</a>
+                                <a href="<?php echo $site_url; ?>ecommerce/maintenance-support"><span class="title">eCommerce Maintenance & Support</span>
+                                Elevate every eExperience</a>
                               </div>
                               <div class="flex-2">
                                 <span class="head">TECHNOLOGY</span>
@@ -394,14 +395,14 @@ function defActiveHire( $hirePage, $exCat ){
                                 <span class="head">DATA SCIENCE & ANALYTICS</span>
                                 <a href="<?php echo $site_url; ?>data-engineering/data-science-consulting-services"><span class="title">Data Science Consulting</span>
                                 Transforming data into insights</a>
+                                <a href="<?php echo $site_url; ?>data-engineering/data-analytics-consulting-services"><span class="title">Data Analytics Consulting</span>
+                                Transforming data into action
+                                </a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-data-scientists"><span class="title">Hire Expert Data Scientists</span>
                                 Hire brilliance, harness data power
                                 </a>
                                 <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><span class="title">Big Data Solutions</span>
                                 Harnessing power of big data
-                                </a>
-                                <a href="<?php echo $site_url; ?>data-engineering/data-analytics-consulting-services"><span class="title">Data Analytics Consulting</span>
-                                Transforming data into action
                                 </a>
                                 <a href="<?php echo $site_url; ?>data-analytics" class="view-more">View More</a>
                               </div>
@@ -429,10 +430,10 @@ function defActiveHire( $hirePage, $exCat ){
                             <div class="dis-flex menu-column sub-service">
                               <div class="flex-4">
                                 <span class="head">Artificial Intelligence</span>
-                                <a href="<?php echo $site_url; ?>ai/application-development-company"><span class="title">AI Development</span>
-                                Advancing intelligent solutions</a>
                                 <a href="<?php echo $site_url; ?>ai/consulting-services-company"><span class="title">AI Consulting</span>
                                 Navigating AI's future</a>
+                                <a href="<?php echo $site_url; ?>ai/application-development-company"><span class="title">AI Development</span>
+                                Advancing intelligent solutions</a>
                                 <a href="<?php echo $site_url; ?>chatbot-development-company"><span class="title">AI Chatbot Development</span>
                                 Future-ready chatbots </a>
                                 <a href="<?php echo $site_url; ?>ai/mobile-app-development"><span class="title">AI-Powered App Development</span>
@@ -441,24 +442,24 @@ function defActiveHire( $hirePage, $exCat ){
                               </div>
                               <div class="flex-4">
                                 <span class="head">ML & Advanced Analytics</span>
+                                <a href="<?php echo $site_url; ?>machine-learning/mlops-consulting-services"><span class="title">MLOps Consulting</span>
+                                ML operations optimized </a>
                                 <a href="<?php echo $site_url; ?>machine-learning/development"><span class="title">ML Development</span>
                                 Harnessing data power</a>
                                 <a href="<?php echo $site_url; ?>machine-learning/computer-vision-software-development"><span class="title">Computer Vision Solutions</span>
                                 Transforming visual data</a>
-                                <a href="<?php echo $site_url; ?>machine-learning/mlops-consulting-services"><span class="title">MLOps Consulting</span>
-                                ML operations optimized </a>
                                 <a href="<?php echo $site_url; ?>machine-learning/rpa-development-services-company"><span class="title">RPA Services</span>
                                 Efficient RPA automation</a>
                                 <a href="<?php echo $site_url; ?>machine-learning" class="view-more">View More</a>
                               </div>
                               <div class="flex-4">
                                 <span class="head">Generative AI</span>
+                                <a href="<?php echo $site_url; ?>ai/generative-ai-consulting-company"><span class="title">Generative AI Consultings</span>
+                                Guided generative growth </a>
                                 <a href="<?php echo $site_url; ?>ai/generative-ai-development"><span class="title">Generative AI Development</span>
                                 Creating AI possibilities</a>
                                 <a href="<?php echo $site_url; ?>ai/generative-ai-integration-service"><span class="title">Generative AI Integration</span>
                                 Elevate with generative AI</a>
-                                <a href="<?php echo $site_url; ?>ai/generative-ai-consulting-company"><span class="title">Generative AI Consultings</span>
-                                Guided generative growth </a>
                                 <a href="<?php echo $site_url; ?>ai/stable-diffusion-development-services"><span class="title">Stable Diffusion Development</span>
                                 Stable AI, peak performance</a>
                                 <a href="<?php echo $site_url; ?>ai/generative-ai-services" class="view-more">View More</a>
@@ -803,34 +804,28 @@ function defActiveHire( $hirePage, $exCat ){
                       <div class="right-tabs">
                         <div class="tab-content is-active">
                           <div class="three-column">
-                            <div class="tab-title"><a href="javascript:void(0);"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/ind-03.svg" class="menuicon" alt="menuicon"><span class="title">Software Startups & Product Companies</span>Your vision, our expertise</a>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>outsource-software-product-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/ind-03.svg" class="menuicon" alt="menuicon"><span class="title">Software Startups & Product Companies</span>Your vision, our expertise</a>
                             </div>
                             <div class="dis-flex menu-column">                              
                               <div class="flex-2">
-                                <span class="head">Product</span>
-                                <a href="<?php echo $site_url; ?>outsource-software-product-development-services"><span class="title">Software Product Development</span>
-                                Innovate with expert developers</a>
-                                <!-- <a href="<?php //echo $site_url; ?>"><span class="title">SaaS Consulting</span>
-                                SaaS success starts here</a> -->
-                                <a href="<?php echo $site_url; ?>saas-consulting-development-services"><span class="title">SaaS Development</span>
-                                Build scalable SaaS products</a>
-                                <a href="<?php echo $site_url; ?>mvp-app-development-company"><span class="title">MVP Development</span>
-                                Launch your MVP faster</a>
-                                <a href="<?php echo $site_url; ?>product-ui-ux-design"><span class="title">Product UI/UX Design</span>
-                                Designs that captivate users</a>
+                              <a href="<?php echo $site_url; ?>startup-consulting-services"><span class="title">Product Consulting</span>
+                              Guidance for startup success</a>
+                              <a href="<?php echo $site_url; ?>discovery-phase-process"><span class="title">Product Discovery Phase</span>
+                              Refine ideas into solutions</a>
+                              <a href="<?php echo $site_url; ?>product-ui-ux-design"><span class="title">Product UI/UX Design</span>
+                              Designs that captivate users</a>
+                              <a href="<?php echo $site_url; ?>mvp-app-development-company"><span class="title">MVP Development</span>
+                              Launch your MVP faster</a>
                               </div>
-
                               <div class="flex-2">
-                                <span class="head">Startups</span>
-                                <a href="<?php echo $site_url; ?>startup-consulting-services"><span class="title">Startup Consulting</span>
-                                Guidance for startup success</a>
-                                <a href="<?php echo $site_url; ?>discovery-phase-process"><span class="title">Product Discovery Phase</span>
-                                Refine ideas into solutions</a>
+                              <a href="<?php echo $site_url; ?>saas-consulting-development-services"><span class="title">SaaS Development</span>
+                                Build scalable SaaS products</a>
+                              <a href="<?php echo $site_url; ?>outsource-software-product-development-services"><span class="title">Software Product Development</span>
+                              Innovate with expert developers</a>
                                 <a href="<?php echo $site_url; ?>startup-product-development"><span class="title">Startup Product Development</span>
                                 Develop your startup vision</a>
                                 <a href="<?php echo $site_url; ?>cto-as-a-service"><span class="title">CTO as a Service</span>
                                 Strategic tech leadership</a>
-                                <!--<a href="<?php echo $site_url; ?>"><span class="title">How to Hire Startup Developers</span>Testing experts for every stage  </a>-->
                               </div>
 
                             </div>
