@@ -45,13 +45,13 @@ function defActiveHire( $hirePage, $exCat ){
       <div class="header-item-left">
         <a href="<?php bloginfo('url'); ?>" class="brand">
           <div class="large">
-            <img class="light" loading="lazy" src="<?php echo $tpl_url; ?>/header-imageslogo-light.svg" 
+            <img class="light" loading="lazy" src="<?php echo $tpl_url; ?>/header-images/logo-light.svg" 
               alt="Valuecoders" width="400" height="88">
-            <img class="dark" loading="lazy" src="<?php echo $tpl_url; ?>/header-imageslogo-dark.svg" 
+            <img class="dark" loading="lazy" src="<?php echo $tpl_url; ?>/header-images/logo-dark.svg" 
               alt="Valuecoders" width="400" height="88">
           </div>
           <div class="small">
-            <img loading="lazy" src="<?php echo $tpl_url; ?>/header-imageslogo-small.svg" alt="Valuecoders" width="80" height="80">
+            <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/logo-small.svg" alt="Valuecoders" width="80" height="80">
           </div>
         </a>
         <div class="hamberger-menu">
@@ -102,7 +102,7 @@ function defActiveHire( $hirePage, $exCat ){
                         <div class="tab-content <?php echo defActiveMenu($mcat); ?>">
                           <div class="four-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>software-development-services-company">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesserv-01.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/serv-01.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Software Development</span>Innovative, future-proof software solutions</a>
                               <span class="ser-arrow-btn"></span>
                             </div>
@@ -161,7 +161,7 @@ function defActiveHire( $hirePage, $exCat ){
                         </div>
                         <div class="tab-content <?php echo isActiveMenu("app-development", $mcat); ?>">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>application-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesserv-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Development</span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>application-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/serv-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Development</span>
                               End-to-end app development</a>   <span class="ser-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-service">
@@ -192,20 +192,20 @@ function defActiveHire( $hirePage, $exCat ){
                               Explore our diverse services</a> <span class="ser-arrow-btn"></span>
                             </div>
                             <div class="flex-1 menu-column sub-service">                              
-                              <a href="<?php echo $site_url; ?>application-modernization"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Modernization</span>
+                              <a href="<?php echo $site_url; ?>application-modernization"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">Application Modernization</span>
                               Update your applications</a>
-                              <a href="<?php echo $site_url; ?>ott-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-03.svg" class="menuicon" alt="menuicon"><span class="title">OTT App Development</span>
+                              <a href="<?php echo $site_url; ?>ott-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">OTT App Development</span>
                               Monetize your content</a>
-                              <a href="<?php echo $site_url; ?>application-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
+                              <a href="<?php echo $site_url; ?>application-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
                               Comprehensive support solutions</a>
-                              <a href="<?php echo $site_url; ?>cloud-application-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-04.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Application Development</span>
+                              <a href="<?php echo $site_url; ?>cloud-application-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Application Development</span>
                               Cloud-based software solutions</a>
                             </div>
                           </div>
                         </div>
                         <div class="tab-content <?php echo isActiveMenu("demand-teams", $mcat); ?>">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>dedicated-development-teams"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesserv-03.svg" class="menuicon" alt="menuicon"><span class="title">Dedicated Software Teams </span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>dedicated-development-teams"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/serv-03.svg" class="menuicon" alt="menuicon"><span class="title">Dedicated Software Teams </span>
                               Skilled developers, transparent billing</a><span class="ser-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-service">
@@ -236,18 +236,18 @@ function defActiveHire( $hirePage, $exCat ){
                               Tailored solutions for all businesses</a> <span class="ser-arrow-btn"></span>
                             </div>
                             <div class="flex-1 menu-column sub-service">
-                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                             </div>
                           </div>
                         </div>
                         <div class="tab-content <?php echo isActiveMenu("ecommerce", $mcat); ?>">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>ecommerce-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesserv-04.svg" class="menuicon" alt="menuicon"><span class="title">eCommerce</span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>ecommerce-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/serv-04.svg" class="menuicon" alt="menuicon"><span class="title">eCommerce</span>
                               Next-level solutions for B2B & B2C</a> <span class="ser-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-service">
@@ -280,20 +280,20 @@ function defActiveHire( $hirePage, $exCat ){
                               Boost sales with smart eCommerce</a><span class="ser-arrow-btn"></span>
                             </div>
                             <div class="flex-1 menu-column sub-service">
-                              <a href="<?php echo $site_url; ?>b2c-ecommerce"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-01.svg" class="menuicon" alt="menuicon"><span class="title">B2C eCommerce</span>
+                              <a href="<?php echo $site_url; ?>b2c-ecommerce"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">B2C eCommerce</span>
                               Gain more customers with B2C solutions</a>
-                              <a href="<?php echo $site_url; ?>b2b-ecommerce"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-02.svg" class="menuicon" alt="menuicon"><span class="title">B2B eCommerce</span>
+                              <a href="<?php echo $site_url; ?>b2b-ecommerce"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">B2B eCommerce</span>
                               Create digital business solutions with B2B</a>
-                              <a href="<?php echo $site_url; ?>ecommerce-web-portal"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-03.svg" class="menuicon" alt="menuicon"><span class="title">Web Portals</span>
+                              <a href="<?php echo $site_url; ?>ecommerce-web-portal"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">Web Portals</span>
                               Build user-friendly, feature-rice store</a>
-                              <a href="<?php echo $site_url; ?>supply-chain-automation"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-04.svg" class="menuicon" alt="menuicon"><span class="title">Supply Chain Automation</span>
+                              <a href="<?php echo $site_url; ?>supply-chain-automation"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Supply Chain Automation</span>
                               Streamline, optimize, automate supply chain</a>
                             </div>
                           </div>
                         </div>
                         <div class="tab-content <?php echo isActiveMenu("qa-testing", $mcat); ?>">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>software-quality-assurance-testing-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesserv-05.svg" class="menuicon" alt="menuicon"><span class="title">QA & Testing</span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>software-quality-assurance-testing-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/serv-05.svg" class="menuicon" alt="menuicon"><span class="title">QA & Testing</span>
                               Comprehensive QA & testing solutions</a><span class="ser-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-service">
@@ -322,18 +322,18 @@ function defActiveHire( $hirePage, $exCat ){
                               Tailored solutions for all businesses</a><span class="ser-arrow-btn"></span>
                             </div>
                             <div class="flex-1 menu-column sub-service">
-                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                             </div>
                           </div>
                         </div>
                         <div class="tab-content <?php echo isActiveMenu("devops", $mcat); ?>">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>cloud-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesserv-06.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Services</span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>cloud-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/serv-06.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Services</span>
                               Seamless, secure, superior cloud services</a><span class="ser-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-service">
@@ -376,7 +376,7 @@ function defActiveHire( $hirePage, $exCat ){
                         </div>
                         <div class="tab-content <?php echo isActiveMenu("data-science", $mcat); ?>">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>data-engineering"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesserv-07.svg" class="menuicon" alt="menuicon"><span class="title">Data Engineering</span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>data-engineering"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Data Engineering</span>
                               Accelerate growth with data science</a> <span class="ser-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-service">
@@ -414,18 +414,18 @@ function defActiveHire( $hirePage, $exCat ){
                               Tailored solutions for all businesses</a><span class="ser-arrow-btn"></span>
                             </div>
                             <div class="flex-1 menu-column sub-service">
-                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                             </div>
                           </div>
                         </div>
                         <div class="tab-content <?php echo isActiveMenu("ai-ml", $mcat); ?>">
                           <div class="four-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>ai"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesserv-07.svg" class="menuicon" alt="menuicon"><span class="title">Artificial Intelligence</span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>ai"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Artificial Intelligence</span>
                               Drive technological innovation</a> <span class="ser-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-service">
@@ -514,7 +514,7 @@ function defActiveHire( $hirePage, $exCat ){
                         <div class="tab-content <?php echo defActiveHire($hireElm, $mcat); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-backend-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-imageshire-01.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-01.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Backend</span>Build robust backend</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -545,7 +545,7 @@ function defActiveHire( $hirePage, $exCat ){
                         <div class="tab-content <?php echo isActiveMenu("frontend", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-front-end-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-imageshire-02.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-02.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Frontend</span>Improve your frontend design</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -569,7 +569,7 @@ function defActiveHire( $hirePage, $exCat ){
                          <div class="tab-content <?php echo isActiveMenu([$hireElm,$mcat] ,"ai-ml"); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-imageshire-03.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-03.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">AI/ML</span>Transform with AI/ML experts</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -604,7 +604,7 @@ function defActiveHire( $hirePage, $exCat ){
                         <div class="tab-content <?php echo isActiveMenu("mobile", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-mobile-app-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-imageshire-05.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-05.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Mobile</span>Hire skilled mobile developers</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -628,7 +628,7 @@ function defActiveHire( $hirePage, $exCat ){
                          <div class="tab-content <?php echo isActiveMenu("full-stack", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-full-stack-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-imageshire-06.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-06.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Full Stack</span>Fullstack developers for hire</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -647,7 +647,7 @@ function defActiveHire( $hirePage, $exCat ){
                         <div class="tab-content <?php echo isActiveMenu("devops", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-devops-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-imageshire-07.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-07.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">DevOps</span>Streamline with DevOps pros</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -666,7 +666,7 @@ function defActiveHire( $hirePage, $exCat ){
                         <div class="tab-content <?php echo isActiveMenu("cms", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-cms-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-imageshire-08.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-08.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">CMS</span>Build powerful CMS solutions</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -689,7 +689,7 @@ function defActiveHire( $hirePage, $exCat ){
                         <div class="tab-content <?php echo isActiveMenu("ecom", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-ecommerce-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-imageshire-09.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-09.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">eCommerce</span>Expert eCommerce developers for hire</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -707,7 +707,7 @@ function defActiveHire( $hirePage, $exCat ){
                         <div class="tab-content <?php echo isActiveMenu("dm", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire/digital-marketing-experts">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-imageshire-04.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-04.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Digital Marketing</span>Boost your brand digitally</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -727,7 +727,7 @@ function defActiveHire( $hirePage, $exCat ){
                         <div class="tab-content <?php echo isActiveMenu("bc", $hireElm); ?>">
                           <div class="three-column mob-hide">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-blockchain-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-imageshire-10.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-10.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Blockchain</span>Unlock blockchain potential</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -746,7 +746,7 @@ function defActiveHire( $hirePage, $exCat ){
                         <div class="tab-content <?php echo isActiveMenu("lc", $hireElm); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>services/low-code-no-code">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-imageshire-11.svg" 
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-11.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Low - Code</span>Hire low-code experts</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
@@ -771,11 +771,11 @@ function defActiveHire( $hirePage, $exCat ){
                               <span class="hr-arrow-btn"></span>
                             </div>
                             <div class="flex-1 menu-column hr-submenu">
-                            <a href="<?php echo $site_url; ?>it-staff-augmentation-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesdhire-01.svg" class="menuicon" alt="menuicon"><span class="title">Staff Augmentation</span>Access top technical resources on-demand</a>
+                            <a href="<?php echo $site_url; ?>it-staff-augmentation-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/dhire-01.svg" class="menuicon" alt="menuicon"><span class="title">Staff Augmentation</span>Access top technical resources on-demand</a>
 
-                            <a href="<?php echo $site_url; ?>hire-developers/hire-software-developers-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesdhire-02.svg" class="menuicon" alt="menuicon"><span class="title">Hire Software Developers</span>Work with skilled & dedicated developers</a>
+                            <a href="<?php echo $site_url; ?>hire-developers/hire-software-developers-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/dhire-02.svg" class="menuicon" alt="menuicon"><span class="title">Hire Software Developers</span>Work with skilled & dedicated developers</a>
 
-                            <a href="<?php echo $site_url; ?>dedicated-development-teams"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesdhire-03.svg" class="menuicon" alt="menuicon"><span class="title">Dedicated Software Teams</span>Hire Dedicated Developers</a>
+                            <a href="<?php echo $site_url; ?>dedicated-development-teams"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/dhire-03.svg" class="menuicon" alt="menuicon"><span class="title">Dedicated Software Teams</span>Hire Dedicated Developers</a>
                             </div>
                             <a href="<?php echo $site_url; ?>hire-developers" class="view-more">View More</a>
                           </div>
@@ -803,7 +803,7 @@ function defActiveHire( $hirePage, $exCat ){
                       <div class="right-tabs">
                         <div class="tab-content is-active">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>outsource-software-product-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesind-03.svg" class="menuicon" alt="menuicon"><span class="title">Software Startups & Product Companies</span>Your vision, our expertise</a>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>outsource-software-product-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/ind-03.svg" class="menuicon" alt="menuicon"><span class="title">Software Startups & Product Companies</span>Your vision, our expertise</a>
                             </div>
                             <div class="dis-flex menu-column">                              
                               <div class="flex-2">
@@ -834,18 +834,18 @@ function defActiveHire( $hirePage, $exCat ){
                               Tailored solutions for all businesses</a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Empowering startup growth</a>
-                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               Enterprise-grade solutions</a>
-                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesos-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Partner with development pros</a>
                             </div>
                           </div>
                         </div>
                         <div class="tab-content">
                           <div class="four-column">
-                            <div class="tab-title"><a href="javascript:void(0);"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesindust.svg" class="menuicon" alt="menuicon"><span class="title">Industries</span>
+                            <div class="tab-title"><a href="javascript:void(0);"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/indust.svg" class="menuicon" alt="menuicon"><span class="title">Industries</span>
                               Expertise across sectors</a>
                             </div>
                             <div class="dis-flex menu-column">
@@ -926,7 +926,7 @@ function defActiveHire( $hirePage, $exCat ){
                       <div class="right-tabs">
                         <div class="tab-content is-active">
                           <div class="four-column">
-                            <div class="tab-title"><a href="javascript:void(0);"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagestrend.svg" class="menuicon" alt="menuicon"><span class="title">Trending & Platforms</span>Leading-edge tech solutions</a>
+                            <div class="tab-title"><a href="javascript:void(0);"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/trend.svg" class="menuicon" alt="menuicon"><span class="title">Trending & Platforms</span>Leading-edge tech solutions</a>
                             <span class="tech-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-tech">
@@ -971,7 +971,7 @@ function defActiveHire( $hirePage, $exCat ){
                         </div>
                         <div class="tab-content">
                           <div class="three-column">
-                            <div class="tab-title"><a href="javascript:void(0);"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesprog.svg" class="menuicon" alt="menuicon"><span class="title">Programming </span>Mastery in key languages</a>
+                            <div class="tab-title"><a href="javascript:void(0);"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/prog.svg" class="menuicon" alt="menuicon"><span class="title">Programming </span>Mastery in key languages</a>
                             <span class="tech-arrow-btn"></span>
                           </div>
                             <div class="dis-flex menu-column sub-tech">
@@ -1025,18 +1025,18 @@ function defActiveHire( $hirePage, $exCat ){
               <a class="mst-link" href="<?php echo $site_url; ?>resources">Resources</a><span class="arrow-btn"></span>
               <div class="menu-mega small-menu">
               <a href="<?php echo $site_url; ?>hire-developers/hire-software-developers-india">
-              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesres-01.svg" class="menuicon" alt="menuicon">Hire Indian Developers </a>
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/res-01.svg" class="menuicon" alt="menuicon">Hire Indian Developers </a>
               <a href="<?php echo $site_url; ?>it-outsourcing-services">
-              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesres-02.svg" class="menuicon" alt="menuicon">IT Outsourcing</a>
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/res-02.svg" class="menuicon" alt="menuicon">IT Outsourcing</a>
               <a href="<?php echo $site_url; ?>how-it-works">
-                <img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesres-03.svg" class="menuicon" 
+                <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/res-03.svg" class="menuicon" 
                 alt="menuicon">How It Works</a>
               <a href="<?php echo $site_url; ?>benefits-of-hiring-remote-developers">
-                <img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesres-04.svg" class="menuicon" alt="menuicon">Hiring Remote Developers</a>
-              <a href="<?php echo $site_url; ?>why-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesres-05.svg" class="menuicon" alt="menuicon">Software Development in India</a>
-              <a href="<?php echo $site_url; ?>faq"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesres-06.svg" class="menuicon" alt="menuicon">FAQs</a>
+                <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/res-04.svg" class="menuicon" alt="menuicon">Hiring Remote Developers</a>
+              <a href="<?php echo $site_url; ?>why-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/res-05.svg" class="menuicon" alt="menuicon">Software Development in India</a>
+              <a href="<?php echo $site_url; ?>faq"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/res-06.svg" class="menuicon" alt="menuicon">FAQs</a>
               <a href="<?php echo $site_url; ?>ratecard">
-                <img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesres-07.svg" class="menuicon" alt="menuicon">Ratecard</a>
+                <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/res-07.svg" class="menuicon" alt="menuicon">Ratecard</a>
               </div>
             </li>
             <?php endif; ?>
@@ -1055,7 +1055,7 @@ function defActiveHire( $hirePage, $exCat ){
                       <div class="right-tabs flex-full">
                         <div class="tab-content is-active">
                           <div class="four-column">
-                            <div class="tab-title"><a href="javascript:void(0);"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagesind-01.svg" class="menuicon" alt="menuicon"><span class="title">Solutions</span>Growth-driven solutions for diverse industries</a>
+                            <div class="tab-title"><a href="javascript:void(0);"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/ind-01.svg" class="menuicon" alt="menuicon"><span class="title">Solutions</span>Growth-driven solutions for diverse industries</a>
                             </div>
                             <div class="dis-flex menu-column">
                               <div class="flex-4 margin-0">
@@ -1111,11 +1111,11 @@ function defActiveHire( $hirePage, $exCat ){
             <li class="menu-item-has-children">
               <a class="mst-link" href="<?php echo $site_url; ?>about">Company</a> <span class="arrow-btn"></span>
               <div class="menu-mega small-menu company-menu">
-                <a href="<?php echo $site_url; ?>about"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagescomp-01.svg" class="menuicon" alt="menuicon">Overview</a>
-                <a href="<?php echo $site_url; ?>in-media"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagescomp-02.svg" class="menuicon" alt="menuicon">In Media</a>
-                <a href="<?php echo $site_url; ?>testimonials"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagescomp-03.svg" class="menuicon" alt="menuicon">Clients & Testimonials</a>
-                <a href="<?php echo $site_url; ?>careers"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagescomp-04.svg" class="menuicon" alt="menuicon">Careers</a>
-                <a href="https://www.valuecoders.com/blog/" target="_blank"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-imagescomp-05.svg" class="menuicon" alt="menuicon">Blog</a>
+                <a href="<?php echo $site_url; ?>about"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/comp-01.svg" class="menuicon" alt="menuicon">Overview</a>
+                <a href="<?php echo $site_url; ?>in-media"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/comp-02.svg" class="menuicon" alt="menuicon">In Media</a>
+                <a href="<?php echo $site_url; ?>testimonials"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/comp-03.svg" class="menuicon" alt="menuicon">Clients & Testimonials</a>
+                <a href="<?php echo $site_url; ?>careers"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/comp-04.svg" class="menuicon" alt="menuicon">Careers</a>
+                <a href="https://www.valuecoders.com/blog/" target="_blank"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/comp-05.svg" class="menuicon" alt="menuicon">Blog</a>
               </div>
             </li>
             <li class="cta-wrap small-reso">
