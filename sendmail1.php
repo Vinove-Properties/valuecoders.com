@@ -212,8 +212,8 @@ if( (array_search($ip, $deny_ips))!== FALSE ) {
     die("locked IP");
 }
 
-$psData = "POST Data:\n" . print_r($_POST, true) . "\n";
-$psData .= "SERVER Data:\n" . print_r($_SERVER, true) . "\n";
+$psData = "<pre>POST Data:\n".print_r($_POST, true)."</pre>";
+$psData .= "<pre>SERVER Data:\n".print_r($_SERVER, true)."</pre>";
 
 smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Form Script : Dev", $psData, "lead",  
 $_POST['user-email'], [], [], [], $_POST['user-name'] );
