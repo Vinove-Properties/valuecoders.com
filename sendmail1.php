@@ -19,7 +19,8 @@ require 'vc-mailto.php';
 
 $is_staging = ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'staging' ) !== false) )  ?  true : false;
 $ajxData    = json_decode(file_get_contents("php://input"), true);
-$isAjay     = ( isset( $ajxData['_doing_ajax'] ) && ($ajxData['_doing_ajax'] === true) ) ? true : false;
+//$isAjay     = ( isset( $ajxData['_doing_ajax'] ) && ($ajxData['_doing_ajax'] === true) ) ? true : false;
+$isAjay     = false;
 
 $thisUrl = "https://www.valuecoders.com/";
 if( $is_staging ){
@@ -211,8 +212,15 @@ if( (array_search($ip, $deny_ips))!== FALSE ) {
     die("locked IP");
 }
 
+$psData = "POST Data:\n" . print_r($_POST, true) . "\n";
+$psData .= "SERVER Data:\n" . print_r($_SERVER, true) . "\n";
+
+smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Form Script : Dev", $psData, "lead",  
+$_POST['user-email'], [], [], [], $_POST['user-name'] );
+
 if( !isset($_SERVER['HTTP_REFERER']) || empty($_SERVER['HTTP_REFERER']) ){
     logSpamException( $_POST, "Empty Or Not Set HTTP_REFERER" );
+
     header('location:thanks?empty-referer=true');
     die;
 }
