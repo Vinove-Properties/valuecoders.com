@@ -140,19 +140,27 @@ function temp_logSpamEmails( $formData ){
     $conn->close();    
 }
 
-function validatereCaptchaResponse( $captcha, $formdata ){
-    $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LfpW60nAAAAAOlG7J8lk1cOIk2x0O00Uqr9tErV&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
-    $response = json_decode($response);
-    if($response->success === false){
-        logSpamException( $formdata, 'Invalid Google reCaptcha Response' );
+function validatereCaptchaResponse( $captcha, $formdata ){ 
+    $response   = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LfpW60nAAAAAOlG7J8lk1cOIk2x0O00Uqr9tErV&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
+    if( ($response !== false) && (!empty($response)) ){
+        $response = json_decode($response);        
+        if($response->success === false){
+            logSpamException( $formdata, 'Invalid Google reCaptcha Response' );
+            temp_logSpamEmails( $formdata );
+            return false;
+        }else{
+            return true;
+        }
+        // if( ($response->success == true) && ($response->score <= 0.5) ){
+        //     logSpamException( $formdata, 'Invalid Google reCaptcha score' );
+        //     temp_logSpamEmails( $formdata );
+        //     return false;
+        // }
+    }else{
+        logSpamException( $formdata, 'Empty Google reCaptcha Response' );
         temp_logSpamEmails( $formdata );
         return false;
-    }
-    if( ($response->success == true) && ($response->score <= 0.5) ){
-        logSpamException( $formdata, 'Invalid Google reCaptcha score' );
-        temp_logSpamEmails( $formdata );
-        return false;
-    }
+    }    
     return true;
 }
 
