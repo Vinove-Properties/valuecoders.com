@@ -140,7 +140,13 @@ function temp_logSpamEmails( $formData ){
     $conn->close();    
 }
 
-function validatereCaptchaResponse( $captcha, $formdata ){ 
+function validatereCaptchaResponse( $captcha, $formdata ){    
+    if( preg_match('/\s/', $captcha) ){
+        logSpamException( $formdata, 'Marked Spam Invalid reCaptcha Response Token ' );
+        temp_logSpamEmails( $formdata );
+        return false;
+    }
+    
     $response   = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LfpW60nAAAAAOlG7J8lk1cOIk2x0O00Uqr9tErV&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
     if( ($response !== false) && (!empty($response)) ){
         $response = json_decode($response);        
