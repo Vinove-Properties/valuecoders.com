@@ -566,7 +566,11 @@ $psProcess = ( isset($ourProcess['sec-type']) && ($ourProcess['sec-type'] == "ps
   </div>
 </section>
 <?php endif; ?>
-<?php getCmnIndustriesv4(); ?>
+<?php 
+if( !is_page( 13436 ) ) {
+  getCmnIndustriesv4(); 
+}
+?>
 <!-- Hire Model #Starts Here -->
 <?php 
   $hireModel 			  = get_field('hiring_models');
@@ -625,11 +629,12 @@ $psProcess = ( isset($ourProcess['sec-type']) && ($ourProcess['sec-type'] == "ps
   </div>
 </section>
 <?php 
-  }else{
-  	hireModelCmn( $secTheme );
-  } 
-  endif; 
-  ?>
+}else{
+	hireModelCmn( $secTheme );
+} 
+endif; 
+?>
+
 <?php getPageCaseStudiesV3( $thisPostID ); ?>
 <?php 
   /*
