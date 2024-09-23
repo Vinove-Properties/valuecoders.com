@@ -1497,7 +1497,7 @@ function hireCmn_cta(){
 	</div>	
 	<span class="devide">OR</span>
 	<div class="free-con">
-	<a href="javascript:void(0)" onclick="consultCTA_cb();" target="_self">Book A Call</a>
+	<a href="javascript:void(0)"; onclick="consultCTA_cb();" target="_self">Book A Call</a>
 	</div>	
 	</div>';
 }
