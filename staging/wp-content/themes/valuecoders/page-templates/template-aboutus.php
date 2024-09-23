@@ -140,7 +140,7 @@ get_header();
 	  </div>
 	</div>
 	<div class="proud-existance-img margin-t-100 text-center">
-	  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/about-proud-exist-img.svg" alt="about-exp-img" width="1589" height="470">
+	  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/about-proud-exist-img.png" alt="about-exp-img" width="1340" height="403">
 	</div>
 	</div>
 </section>
