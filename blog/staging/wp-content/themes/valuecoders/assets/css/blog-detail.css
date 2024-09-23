@@ -221,15 +221,21 @@ top:0; background:#FFAD00; color:#000000; border-radius: 0 5px 5px 0; border:0; 
 }
 
 @media (max-width: 1380px){
-    .vcb-col-left.sticky{right:50px;}
+    .vcb-col-left.sticky{right:65px;}
     .cta-section .ctaRit {flex-basis: 48%;}
     
+}
+
+@media (max-width: 1320px){
+
+.vcb-col-left.sticky{right:20px;}
 }
 
 @media (max-width: 1024px){
     .customcta .cusimg{width: 85px;}
 .cta-section .colMid{left: 7%;}
 .cta-section .top-cta{padding: 30px 25px;}
+
 }
 
 @media (max-width: 991px){
