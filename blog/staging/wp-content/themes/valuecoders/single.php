@@ -144,7 +144,7 @@
           
           
           <?php if( $isTocDisable === false ) : ?>  
-          <div class="table-c" id="elm-toc">
+          <div class="table-c active" id="elm-toc">
             <h3>Table of Contents <a class="sw-hd" href="javascript:void(0);" onclick="document.getElementById('elm-toc').classList.toggle('active');">
               <span class="hide">(Hide)</span>
               <span class="show">(Show)</span>
@@ -165,14 +165,18 @@
             $sbText  = (isset( $sbCTA['text'] ) && !empty($sbCTA['text'])) ? $sbCTA['text'] : 'Struggling with Tech Complexity?';
             ?>
           <div class="customcta">
+          <div class="cusimg">
             <picture>
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/custom-image.svg" alt="pixel" width="209" height="140">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/cta-img.svg" alt="pixel" width="149" height="206">
             </picture>
+            </div>
+            <div class="cus-cont">
             <div class="cushed"><?php echo $sbText; ?></div>
             <div class="btn-container">
               <div class="btn-sec">
-                <a href="https://www.valuecoders.com/contact" target="_blank" class="btn rounded" data-wpel-link="external" rel="nofollow external noopener noreferrer"><span class="text-white">Book A Free Consultation</span></a>
+                <a href="https://www.valuecoders.com/contact" target="_blank" class="btn rounded" data-wpel-link="external" rel="nofollow external noopener noreferrer"><span class="text-white">Schedule A Call</span></a>
               </div>
+            </div>
             </div>
           </div>
           <?php endif; ?>
