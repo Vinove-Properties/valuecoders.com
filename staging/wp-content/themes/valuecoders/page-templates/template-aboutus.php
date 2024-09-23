@@ -132,7 +132,7 @@ get_header();
 	<div class="container">
 	<div class="dis-flex top-content">
 	  <div class="flex-2">
-	    <h2>18+ years of Proud Existence</h2>
+	    <h2>20+ years of Proud Existence</h2>
 	  </div>
 	  <div class="flex-2">
 	    <p>ValueCoders set its first stone down in 2007 and has been thriving ever since. The company takes great pride in announcing that they've managed to provide top-notch IT service to their clients for 18 years.
@@ -171,7 +171,7 @@ get_header();
       <h2>Awards & Recognitions</h2>
       <a class="title-link" href="/in-media"></a>
     </div>
-    <p>In the last 18 years, we have been acknowledged by prestigious organizations and awarded for our work.</p>
+    <p>In the last 20 years, we have been acknowledged by prestigious organizations and awarded for our work.</p>
   </div>
 </div>
 </div>
