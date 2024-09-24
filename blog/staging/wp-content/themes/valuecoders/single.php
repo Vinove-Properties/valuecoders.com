@@ -154,10 +154,7 @@
             </div>
           </div>
           <?php endif; ?>
-          <div class="detail-subsbox">
-            <h3>Subscribe to our blog</h3>
-            <?php echo do_shortcode('[email-subscribers-form id="1"]'); ?>
-          </div>
+       
 
           <?php 
             $sbCTA = get_field('sb-cta');  
@@ -177,6 +174,12 @@
             </div>
           </div>
           <?php endif; ?>
+
+
+          <div class="detail-subsbox">
+            <h3>Subscribe to our blog</h3>
+            <?php echo do_shortcode('[email-subscribers-form id="1"]'); ?>
+          </div>
          
         </div>
         <div class="vcb-col-right <?php echo ( $isTocDisable === true ) ? ' no-toc-row' : ''; ?>" id="vcb-col-right">
