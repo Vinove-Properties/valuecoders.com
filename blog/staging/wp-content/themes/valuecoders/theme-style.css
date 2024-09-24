@@ -796,6 +796,7 @@ form input[type="submit"] {
     bottom: 50px;
     top: auto;
     position: absolute;
+    right: 0;
 }
 .ez-toc-widget-container nav ul li.ez-toc-heading-level-3 a:before {
     content: "";
