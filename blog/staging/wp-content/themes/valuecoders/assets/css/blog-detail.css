@@ -271,6 +271,7 @@ top:0; background:#FFAD00; color:#000000; border-radius: 0 5px 5px 0; border:0; 
 
 .detail-page {padding: 50px 0;}
 .tocsec{overflow-y: auto; height: auto; padding-right:0;}
+.vcb-col-left.sticky #elm-toc .tocsec{ height: auto;}
 .vcb-col-left{width: 100%; text-align: left;}	
 .vcb-col-right {width: 100%; margin:10px 0 0; padding: 0;}
 .left-bar {flex-basis: 100%; max-width:100%;}
