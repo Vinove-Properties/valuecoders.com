@@ -165,13 +165,10 @@
             $sbText  = (isset( $sbCTA['text'] ) && !empty($sbCTA['text'])) ? $sbCTA['text'] : 'Struggling with Tech Complexity?';
             ?>
           <div class="customcta">
-          <div class="cusimg">
-            <picture>
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/cta-img.svg" alt="pixel" width="149" height="206">
-            </picture>
-            </div>
+          
             <div class="cus-cont">
             <div class="cushed"><?php echo $sbText; ?></div>
+            <div class="text">With React, developers can create mobile and web apps that are</div>
             <div class="btn-container">
               <div class="btn-sec">
                 <a href="https://www.valuecoders.com/contact" target="_blank" class="btn rounded" data-wpel-link="external" rel="nofollow external noopener noreferrer"><span class="text-white">Schedule A Call</span></a>
