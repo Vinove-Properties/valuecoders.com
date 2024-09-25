@@ -1392,6 +1392,7 @@ small{
   color: #8e8c8c;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+  line-height: 20px;
 }
 .footer a:hover {
   color: #fff;
