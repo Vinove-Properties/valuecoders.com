@@ -148,17 +148,17 @@
             if( (isset( $sbCTA['required'] ) && ($sbCTA['required'] != "no"))  || (!isset( $sbCTA['required']) ) ) :
             $sbText  = (isset( $sbCTA['text'] ) && !empty($sbCTA['text'])) ? $sbCTA['text'] : 'Struggling with Tech Complexity?';
             ?>
-          <div class="customcta">
-          
-            <div class="cus-cont">
-            <div class="cushed"><?php echo $sbText; ?></div>
-            <div class="text">With React, developers can create mobile and web apps that are</div>
-            <div class="btn-container">
-              <div class="btn-sec">
-                <a href="https://www.valuecoders.com/contact" target="_blank" class="btn rounded" data-wpel-link="external" rel="nofollow external noopener noreferrer"><span class="text-white">Schedule A Call</span></a>
-              </div>
+          <div class="customcta">          
+          <div class="cus-cont">
+          <div class="cushed"><?php echo $sbText; ?></div>
+          <div class="text"><?php echo $sbCTA; ?></div>
+          <div class="btn-container">
+            <div class="btn-sec">
+            <a href="https://www.valuecoders.com/contact" target="_blank" class="btn rounded" data-wpel-link="external" 
+            rel="nofollow external noopener noreferrer"><span class="text-white">Schedule A Call</span></a>
             </div>
-            </div>
+          </div>
+          </div>
           </div>
           <?php endif; ?>
           
