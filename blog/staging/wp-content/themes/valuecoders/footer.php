@@ -5,7 +5,7 @@
   <div class="container">
     <?php 
     if( is_single() ){
-    echo '<h3>Subscribe to our blog</h3>';  
+    echo '<h2>Subscribe to our blog</h2>';  
     echo do_shortcode('[email-subscribers-form id="1"]');
     }else{
     ?>

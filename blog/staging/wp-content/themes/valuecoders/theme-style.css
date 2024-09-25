@@ -1572,6 +1572,11 @@ small{
 .multiple .gradient-border,.multiple .gradient-border:before,.multiple .gradient-border:after{border-width:2px;}#nav ul li a,#nav ul li a:after{background-color:transparent;border:1px solid transparent;transition:border .25s linear, background-color .25s linear;}#nav ul li a.active{border:1px solid #a89cc8;}#header > p{max-width:600px;margin:0 auto 2em auto;}#nav{overflow-x:auto;-webkit-overflow-scrolling:touch;}@media(max-width:480px){#nav{width:calc(100% - 2em);max-width:calc(100% - 2em);} #nav ul{display:flex;}}.spotlight .content > p{font-size:18px}@media screen and (max-width:736px){#nav{display:block;} #nav ul{width:734px;} .spotlight{margin-top:50px;}}code.slim{margin:0 5px;padding:.15em .4em;}@media screen and (max-width:767px){.glider-prev, .glider-next{top:100%;} .post-animation .glider-next{width:36px;height:36px;right:60px !important;} .post-animation .glider-prev{width:36px;height:36px;left:60px !important;} .glider-prev svg, .glider-next svg{width:12px !important;height:10px !important;} .glider-prev, .glider-next{line-height:35px;} }.author-box img{max-width:54px!important;height:54px;border-radius:50%;}
 
 
+
+
+.experts-talk-first-section .es-field-wrap input{min-width: 300px;}
+.experts-talk-first-section form input[type="submit"]{font-size: 18px; margin-top: 10px;}
+
     @media only screen and (max-width: 1600px) {
       .footer .divider {
           margin: 0 1px; }
