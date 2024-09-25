@@ -138,7 +138,7 @@ function temp_logSpamEmails( $formData ){
     $stmt->bind_param("ss", $userEmail, $userIP);
     $stmt->execute();
     $result = $stmt->get_result();
-    if( $result->num_rows > 3 ){
+    if( $result->num_rows >= 2 ){
     $insert_stmt = $conn->prepare("INSERT INTO spam_attack (email, ip, created_at) VALUES (?, ?, NOW())");
     $insert_stmt->bind_param("ss", $userEmail, $userIP);
     $insert_stmt->execute();
@@ -170,7 +170,7 @@ function validateSpamAttacker( $email, $ip ){
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $stmt = $conn->prepare("SELECT * FROM spam_attack WHERE (email = ? AND ip = ?) ORDER BY created_at DESC LIMIT 1;");
+    $stmt = $conn->prepare("SELECT * FROM spam_attack WHERE (email = ? AND ip = ?);");
     $stmt->bind_param("ss", $email, $ip);
     $stmt->execute();
     $result = $stmt->get_result();
