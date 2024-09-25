@@ -175,12 +175,13 @@
           </div>
           <?php endif; ?>
 
-
-          <div class="detail-subsbox">
-            <h3>Subscribe to our blog</h3>
-            <?php echo do_shortcode('[email-subscribers-form id="1"]'); ?>
-          </div>
-         
+        <?php /* ?>
+        <div class="detail-subsbox">
+          <h3>Subscribe to our blog</h3>
+          <?php echo do_shortcode('[email-subscribers-form id="1"]'); ?>
+        </div>
+        <?php */ ?> 
+        
         </div>
         <div class="vcb-col-right <?php echo ( $isTocDisable === true ) ? ' no-toc-row' : ''; ?>" id="vcb-col-right">
           <article id="post-<?php echo esc_attr( get_the_ID() ); ?>" class="nv-single-post-wrap">

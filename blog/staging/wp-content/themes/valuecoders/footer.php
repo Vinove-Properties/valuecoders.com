@@ -3,19 +3,24 @@
 
 <section class="experts-talk-first-section">
   <div class="container">
+    <?php 
+    if( is_single() ){
+    echo '<h3>Subscribe to our blog</h3>';  
+    echo do_shortcode('[email-subscribers-form id="1"]');
+    }else{
+    ?>
     <div class="head-txt text-center">
       <h2>Got a Project in Mind?</h2>
       <p>Let's embark on a journey to transform your idea into a compelling digital presence.</p>
     </div>
     <div class="cta-wrap margin-t-50  justify-center">
-      <div class="cta-btn">
-      <div class="btn-sec">
-<a href="https://www.valuecoders.com/contact"  class="btn rounded"><span class="text-white"> Talk To Our Experts</span></a>
-</div>
-
-        
-      </div>
+    <div class="cta-btn">
+    <div class="btn-sec">
+    <a href="https://www.valuecoders.com/contact" class="btn rounded"><span class="text-white"> Talk To Our Experts</span></a>
     </div>
+    </div>
+    </div>
+    <?php } ?>
   </div>
 </section>
 

@@ -131,10 +131,10 @@ min-width: 247px; z-index: 9; margin:15px 0 0;}
 .ez-toc-widget-container nav ol li, .ez-toc-widget-container nav ul li {list-style-type: none; margin: 0 0 5px;
 padding: 0 0 0 13px; border-radius: 5px; background: transparent; height: auto !important;}
 .ez-toc-widget-container nav ol li a,
-.ez-toc-widget-container nav ul li a {padding: 0;color: rgba(65, 65, 65, 0.5); position: relative; display: block;
+.ez-toc-widget-container nav ul li a {padding: 0;color: #05164D; position: relative; display: block;
 font-weight: 400; font-size:14px; line-height:22px;}
 .ez-toc-widget-container nav ol li a:hover,
-.ez-toc-widget-container nav ul li a:hover {color: #05164D;}
+.ez-toc-widget-container nav ul li a:hover {color: #47578b;}
 #ezw_tco-2 .ez-toc-widget-container ul.ez-toc-list li.active{background: #fff;  color: #05164D;}
 #ezw_tco-2 .ez-toc-widget-container ul.ez-toc-list li:hover{background: #fff; color: #05164D;}
 .ez-toc-widget-container ul li.active a, .ez-toc-widget-container ol li.active a{background: #fff !important;}
@@ -180,16 +180,9 @@ top:0; background:#FFAD00; color:#000000; border-radius: 0 5px 5px 0; border:0; 
 #elm-toc.active .tocsec {display: block;}
 .vcb-col-left.sticky{right: 32.7%;}
 
-
-
-
-.vcb-col-left.sticky #elm-toc .tocsec{height: 120px;}
-
-
+/*.vcb-col-left.sticky #elm-toc .tocsec{height: 120px;}*/
 
 /*23-09-07 Changes*/
-
-
 /*Media Query Start From Here*/
 
 @media (max-width: 4000px){
