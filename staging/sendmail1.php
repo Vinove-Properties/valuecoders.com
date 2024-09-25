@@ -19,14 +19,14 @@ require 'vc-mailto.php';
 
 $is_staging = ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'staging' ) !== false) )  ?  true : false;
 $ajxData    = json_decode(file_get_contents("php://input"), true);
-$isAjay     = ( isset( $ajxData['_doing_ajax'] ) && ($ajxData['_doing_ajax'] === true) ) ? true : false;
+//$isAjay     = ( isset( $ajxData['_doing_ajax'] ) && ($ajxData['_doing_ajax'] === true) ) ? true : false;
+$isAjay     = false;
 
 $thisUrl = "https://www.valuecoders.com/";
 if( $is_staging ){
 $thisUrl   = 'https://www.valuecoders.com/staging/';
 }
 define( 'SITE_ROOT_URL', $thisUrl );
-
 
 $spamIpAddr = ['141.95.234.1', '89.22.225.45','94.156.64.107'];
 $thisIPAddr = get_client_ip_user();
@@ -172,8 +172,9 @@ define('CLIENT_SECRET','e9a796ffde50de7a3198d63f134196d125bae343d0');
 define('ACESS_TOKEN','1000.cae698c21d5f8adc4f5f8e1ae60a3c39.6008000ac10c5df23ebf773f63194b81');
 define('REFRESH_TOKEN','1000.b4d2d568df487f80bc73675a27101c45.d7cc4b483d0157d16f672e86dc354d62');
 
-$arrEmail = array('parvesh@vinove.com', 'akhil@valuecoders.com');
-$deny_ips = array( '146.185.253.167', '146.185.253.165' );
+$arrEmail   = array('parvesh@vinove.com', 'akhil@valuecoders.com');
+$deny_ips   = array( '146.185.253.167', '146.185.253.165' );
+$ip         = get_client_ip_user();
 
 $spamEmailManual = ['MerinoBart@o2.pl', 'ericjonesmyemail@gmail.com'];
 $spamNameManual = ['CrytoPenPen'];
@@ -187,6 +188,11 @@ if( isset( $_POST['user-name'] ) && in_array($_POST['user-name'], $spamNameManua
     header( 'location:thanks.php' );
     die;
 }
+if( validateSpamAttacker( $_POST['user-email'], $ip ) === false ){
+    header( 'location:thanks.php?spam-attacker=block' );
+    die;
+}
+
 
 if( $isAjay === false ){
 $captcha = (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) ? $_POST['g-recaptcha-response'] : 
@@ -204,9 +210,21 @@ false;
     }
 }
 
-$ip = get_client_ip_user();
+
 if( (array_search($ip, $deny_ips))!== FALSE ) {
     die("locked IP");
+}
+
+if( !isset($_SERVER['HTTP_REFERER']) || empty($_SERVER['HTTP_REFERER']) ){
+    
+    $psData = "<pre>POST Data:\n".print_r($_POST, true)."</pre>";
+    $psData .= "<pre>SERVER Data:\n".print_r($_SERVER, true)."</pre>";
+    smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Form Script : Dev", $psData, "lead",  
+    $_POST['user-email'], [], [], [], $_POST['user-name'] );
+
+    logSpamException( $_POST, "Empty Or Not Set HTTP_REFERER" );
+    header('location:thanks?empty-referer=true');
+    die;
 }
 
 
@@ -934,7 +952,7 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
             //'Phone'       => $zoho_user_phone,
             'Country'       => $user_country,
             'Lead Status'   => 'Not Contacted Yet',
-            'Lead Source'   => $lead_source,
+            'Lead Source'   => $inSource,
             'UTM Source'    => $inSource,
             'UTM Medium'    => $getUTM_medium,
             'Property'      => 'ValueCoders',
@@ -967,15 +985,17 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
             $tempEmailSubject = "Request for 7-Day Trial [".$ticketID."]";    
             }
             
+            /*
             smtpEmailFunction( $eSender['mail_to'], $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], 
-            $bccEmails, [], $user_name, false );            
+            $bccEmails, [], $user_name, false );
+            */
             
             $emailBBB =  $Mailbody.$bodyBr.print_r( $_COOKIE, 1 );
             smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Contact Us", $emailBBB, "lead", 
             $user_email, [], [], [], $user_name );
             
             $insType = (isset($arrPostParams['z-leadid']) && !empty($arrPostParams['z-leadid'])) ? $arrPostParams['z-leadid'] : false;
-            zohoCrmUpdate_v2( $arrZoho_v2, $utm_source, $eSender['lead_to'], $insType );
+            //zohoCrmUpdate_v2( $arrZoho_v2, $utm_source, $eSender['lead_to'], $insType );
             }
     }
 

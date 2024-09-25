@@ -128,31 +128,87 @@ function temp_logSpamEmails( $formData ){
         }
         $form_data[$key] = $tmpD;
     }
-    $form_data['ip_addr'] = get_client_ip_user();
+    $userIP     = get_client_ip_user();
+    $userEmail  = (isset($formData['user-email']) && !empty($formData['user-email'])) ? $formData['user-email'] : '';
+    $form_data['ip_addr'] = $userIP;
     
+    /*Added Spam Attacker Logs*/
+    $stmt = $conn->prepare("SELECT * FROM spam_leads WHERE (email = ? AND ip = ?) AND 
+    TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 60 ORDER BY created_at DESC LIMIT 1;");
+    $stmt->bind_param("ss", $userEmail, $userIP);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    if($result->num_rows > 0){
+        $insert_stmt = $conn->prepare("INSERT INTO spam_attack (email, ip, created_at) VALUES (?, ?, NOW())");
+        $insert_stmt->bind_param("ss", $userEmail, $userIP);
+        $insert_stmt->close();
+    }
+    /*Added Spam Attacker Logs : Close*/
+
     $data = serialize( $form_data );
-    $sql = "INSERT INTO spam_leads ( data, created_at ) 
-    VALUES (
-    '{$data}',     
-    '{$created_at}'
-    )";
+    $sql = "INSERT INTO spam_leads ( data, email, ip, created_at ) 
+    VALUES ('{$data}', '{$userEmail}', '{$userIP}', '{$created_at}')";
     $conn->query( $sql );
-    $conn->close();    
+    $conn->close(); 
 }
 
-function validatereCaptchaResponse( $captcha, $formdata ){
-    $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LfpW60nAAAAAOlG7J8lk1cOIk2x0O00Uqr9tErV&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
-    $response = json_decode($response);
-    if($response->success === false){
-        logSpamException( $formdata, 'Invalid Google reCaptcha Response' );
+function validateSpamAttacker( $email, $ip ){
+    if( isset($_SERVER['HTTP_HOST']) && ($_SERVER['HTTP_HOST'] == "localhost") ){
+      $servername = "localhost";
+      $username   = "phpmyadmin";
+      $password   = "root";
+      $dbname     = "valuecoders-wp";
+    }else{
+      $servername = "localhost";
+      $username   = "valuecoders-com-crm-prod-db-user";
+      $password   = "5CxYSHEaVglFgCA";
+      $dbname     = "valuecoders-com-crm-prod-db";
+    }
+    $conn = new mysqli( $servername, $username, $password, $dbname );
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $stmt = $conn->prepare("SELECT * FROM spam_attack WHERE (email = ? AND ip = ?) ORDER BY created_at DESC LIMIT 1;");
+    $stmt->bind_param("ss", $email, $ip);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $conn->close();
+    if($result->num_rows > 0){
+        return false;        
+    }else{
+        return true;
+    }
+    
+}
+
+function validatereCaptchaResponse( $captcha, $formdata ){    
+    if( preg_match('/\s/', $captcha) ){
+        logSpamException( $formdata, 'Marked Spam Invalid reCaptcha Response Token ' );
         temp_logSpamEmails( $formdata );
         return false;
     }
-    if( ($response->success == true) && ($response->score <= 0.5) ){
-        logSpamException( $formdata, 'Invalid Google reCaptcha score' );
+    
+    $response   = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LfpW60nAAAAAOlG7J8lk1cOIk2x0O00Uqr9tErV&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
+    if( ($response !== false) && (!empty($response)) ){
+        $response = json_decode($response);        
+        if($response->success === false){
+            logSpamException( $formdata, 'Invalid Google reCaptcha Response' );
+            temp_logSpamEmails( $formdata );
+            return false;
+        }else{
+            return true;
+        }
+        // if( ($response->success == true) && ($response->score <= 0.5) ){
+        //     logSpamException( $formdata, 'Invalid Google reCaptcha score' );
+        //     temp_logSpamEmails( $formdata );
+        //     return false;
+        // }
+    }else{
+        logSpamException( $formdata, 'Empty Google reCaptcha Response' );
         temp_logSpamEmails( $formdata );
         return false;
-    }
+    }    
     return true;
 }
 

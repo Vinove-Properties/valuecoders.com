@@ -149,7 +149,7 @@ function temp_logSpamEmails( $formData ){
     $sql = "INSERT INTO spam_leads ( data, email, ip, created_at ) 
     VALUES ('{$data}', '{$userEmail}', '{$userIP}', '{$created_at}')";
     $conn->query( $sql );
-    $conn->close();    
+    $conn->close(); 
 }
 
 function validateSpamAttacker( $email, $ip ){
