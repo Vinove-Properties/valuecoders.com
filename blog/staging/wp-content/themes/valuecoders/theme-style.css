@@ -785,8 +785,7 @@ form input[type="submit"] {
   width: 330px;
   text-align: right;
 }
-.tocsec{overflow-y: auto;
-  height:330px;   padding-right: 10px;}
+.tocsec{  padding-right: 10px;}
 
 
 .vcb-col-left h2 {
@@ -2386,7 +2385,7 @@ h1, .single h1.entry-title {
   padding: 6px 15px;}
 
   .ez-toc-widget-container nav ol li, .ez-toc-widget-container nav ul li{margin: 0 0 8px;}
-  .tocsec{height: 310px;}
+ 
   .vcb-col-left .rightcustom{padding:30px 25px;}
 }
 
@@ -2397,9 +2396,7 @@ h1, .single h1.entry-title {
       padding: 25px 20px;
       margin: 20px 0 0;
   }
-  .tocsec {
-    height: 250px;
-}
+
 }
 
 
