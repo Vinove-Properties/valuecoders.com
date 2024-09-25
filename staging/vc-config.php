@@ -134,7 +134,7 @@ function temp_logSpamEmails( $formData ){
     
     /*Added Spam Attacker Logs*/
     $stmt = $conn->prepare("SELECT * FROM spam_leads WHERE (email = ? AND ip = ?) AND 
-    TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 300 ORDER BY created_at DESC LIMIT 1;");
+    TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 300");
     $stmt->bind_param("ss", $userEmail, $userIP);
     $stmt->execute();
     $result = $stmt->get_result();
