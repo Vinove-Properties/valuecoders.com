@@ -125,7 +125,7 @@ min-width: 247px; z-index: 9; margin:15px 0 0;}
 
 
 .table-c{width:100%;}
-.tocsec{overflow-y: auto; height:250px; padding-left:0; padding-right:0; direction: rtl; text-align: left;}
+.tocsec{overflow-y: auto; height:auto; max-height:250px; padding-left:0; padding-right:0; direction: rtl; text-align: left;}
 .table-c h3 {color: #414141; text-align: left; font-size:16px; font-weight:700; margin:0 0 15px;}
 .table-c h3 a{font-weight: 400;}
 .ez-toc-widget-container nav ol li, .ez-toc-widget-container nav ul li {list-style-type: none; margin: 0 0 5px;
@@ -263,7 +263,7 @@ top:0; background:#FFAD00; color:#000000; border-radius: 0 5px 5px 0; border:0; 
 .detail-subsbox h3{margin: 0 0 15px; text-align: center}
 
 .detail-page {padding: 50px 0;}
-.tocsec{overflow-y: auto; height: auto; padding-right:0;}
+.tocsec{overflow-y: auto; height: auto; max-height: auto; padding-right:0;}
 .vcb-col-left.sticky #elm-toc .tocsec{ height: auto;}
 .vcb-col-left{width: 100%; text-align: left;}	
 .vcb-col-right {width: 100%; margin:10px 0 0; padding: 0;}

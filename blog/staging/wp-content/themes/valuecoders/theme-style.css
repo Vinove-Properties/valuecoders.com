@@ -944,6 +944,8 @@ div#ez-toc-widget-container h3 {
   content: counters(item, ".") " ";
   counter-increment: item;
 }
+
+.ez-toc-widget-container nav ol, .ez-toc-widget-container nav ul{margin-bottom:5px;}
 .vcb-col-right a {
   color: rgba(101, 101, 101, 1); text-decoration: underline;
 }
