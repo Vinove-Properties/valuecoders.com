@@ -11,7 +11,7 @@
 .single .header-two.header-bg .large .light-theme-logo{display: none;}
 .single .header-two:hover .large .dark-theme-logo{display: block;}
 .single .header-two:hover .large .light-theme-logo{display: none;}
-.single .header-two.header-bg.sc-up .menu ul li a{color:#fff;}
+.single .header-two.header-bg.sc-up .menu ul li a{color:#05164d;}
 .single .header-two.header-bg.sc-up  .menu-item-has-children .menu-mega a {color: #5d6579;}
 .single .header-two.header-bg.sc-up .menu-item-has-children .menu-mega .last-list a{color: #212121;}
 .single .header-two.header-bg.sc-up  .for-company .menu-mega a{color: #212121;}
