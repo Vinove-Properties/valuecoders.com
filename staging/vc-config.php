@@ -133,7 +133,7 @@ function temp_logSpamEmails( $formData ){
     $form_data['ip_addr'] = $userIP;
     
     /*Added Spam Attacker Logs*/
-    $stmt = $conn->prepare("SELECT * FROM spam_leads WHERE (email = 'jack.spam@yopmail.com' AND ip = '43.230.64.34') AND 
+    $stmt = $conn->prepare("SELECT * FROM spam_leads WHERE (email = ? AND ip = ?) AND 
     TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 300");
     $stmt->bind_param("ss", $userEmail, $userIP);
     $stmt->execute();
