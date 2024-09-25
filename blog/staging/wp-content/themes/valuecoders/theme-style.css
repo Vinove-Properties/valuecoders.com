@@ -1576,7 +1576,7 @@ small{
 
 .experts-talk-first-section .es-field-wrap input{min-width: 300px;}
 .experts-talk-first-section form input[type="submit"]{font-size: 18px; margin-top: 10px; background: #ffad00; border-color:#ffad00;}
-.experts-talk-first-section form input[type="submit"]{ background: #fff; border-color:#fff;}
+.experts-talk-first-section form input[type="submit"]:hover{ background: #fff; border-color:#fff;}
 
     @media only screen and (max-width: 1600px) {
       .footer .divider {
