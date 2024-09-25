@@ -138,7 +138,7 @@ function temp_logSpamEmails( $formData ){
     $stmt->bind_param("ss", $userEmail, $userIP);
     $stmt->execute();
     $result = $stmt->get_result();
-    if( $result->num_rows >= 2 ){
+    if( $result->num_rows > 2 ){
     $insert_stmt = $conn->prepare("INSERT INTO spam_attack (email, ip, created_at) VALUES (?, ?, NOW())");
     $insert_stmt->bind_param("ss", $userEmail, $userIP);
     $insert_stmt->execute();
