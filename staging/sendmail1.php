@@ -182,16 +182,16 @@ $spamEmailManual = ['MerinoBart@o2.pl', 'ericjonesmyemail@gmail.com'];
 $spamNameManual = ['CrytoPenPen'];
 
 if( isset( $_POST['user-email'] ) && in_array($_POST['user-email'], $spamEmailManual) ){
-    header( 'location:thanks.php' );
+    header( 'location:thanks' );
     die;
 }
 
 if( isset( $_POST['user-name'] ) && in_array($_POST['user-name'], $spamNameManual) ){
-    header( 'location:thanks.php' );
+    header( 'location:thanks' );
     die;
 }
 if( validateSpamAttacker( $_POST['user-email'], $ip ) === false ){
-    header( 'location:thanks.php?spam-attacker=block' );
+    header( 'location:thanks?spam-attacker=block' );
     die;
 }
 
@@ -260,7 +260,7 @@ $spamReferer    = ['so5ni.com'];
 if( $varRefererURL ){
     foreach( $spamReferer as $spam ){
         if( strpos( $varRefererURL, $spam ) || (strpos( $varRefererURL, $spam ) === 0) ){
-            header( 'location:thanks.php' );
+            header( 'location:thanks' );
             die;
         }
     }
@@ -272,7 +272,7 @@ if( $varRefererURL ){
 $htFields = hiddenBoatField('list');
 foreach( $_POST as $key => $fields ){
     if( in_array( $key, $htFields ) && ($_POST[$key] != "") ){
-        header('location:thanks.php');
+        header('location:thanks');
         die;
     }
 }
@@ -282,7 +282,7 @@ function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $email
     $cname = null, $spam = false ){
     $spamEmails = getSpamEmailsListings("/home/vc-leads/spamemails.json");
     if( in_array( $emailTo, $spamEmails ) || in_array( $userEmail, $spamEmails ) ){
-        header('location:thanks.php');
+        header('location:thanks');
         die;
     }
 
