@@ -976,7 +976,7 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
             die;
             }
             
-            smtpEmailFunction( $user_email, "ValueCoders - We've received your request", $autoEmailBody, "auto", $user_email, [], [], $attachmentDoc );
+            smtpEmailFunction( $user_email, "ValueCoders - We've received your request {STAGING}", $autoEmailBody, "auto", $user_email, [], [], $attachmentDoc );
             $eSender = splEmailData( $user_country );
             
             if( isset( $eSender['mail_to'] ) ){
@@ -991,7 +991,7 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
             */
             
             $emailBBB =  $Mailbody.$bodyBr.print_r( $_COOKIE, 1 );
-            smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Contact Us", $emailBBB, "lead", 
+            smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Lead {STAGING}", $emailBBB, "lead", 
             $user_email, [], [], [], $user_name );
             
             $insType = (isset($arrPostParams['z-leadid']) && !empty($arrPostParams['z-leadid'])) ? $arrPostParams['z-leadid'] : false;
