@@ -131,6 +131,10 @@ function temp_logSpamEmails( $formData ){
     $userIP     = get_client_ip_user();
     $userEmail  = (isset($formData['user-email']) && !empty($formData['user-email'])) ? $formData['user-email'] : '';
     $form_data['ip_addr'] = $userIP;
+    $data = serialize( $form_data );
+    $sql = "INSERT INTO spam_leads ( data, email, ip, created_at ) 
+    VALUES ('{$data}', '{$userEmail}', '{$userIP}', '{$created_at}')";
+    $conn->query( $sql );
     
     /*Added Spam Attacker Logs*/
     $stmt = $conn->prepare("SELECT * FROM spam_leads WHERE (email = ? AND ip = ?) AND 
@@ -146,11 +150,8 @@ function temp_logSpamEmails( $formData ){
     }
     /*Added Spam Attacker Logs : Close*/
 
-    $data = serialize( $form_data );
-    $sql = "INSERT INTO spam_leads ( data, email, ip, created_at ) 
-    VALUES ('{$data}', '{$userEmail}', '{$userIP}', '{$created_at}')";
-    $conn->query( $sql );
-    $conn->close(); 
+    $conn->close();
+     
 }
 
 function validateSpamAttacker( $email, $ip ){
