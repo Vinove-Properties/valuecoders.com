@@ -309,7 +309,7 @@ button.newsletter{width: 28px; height: 28px;}
 .banner-section .top-header-section{padding: 15px 0 0;}
 .detail-page{padding: 0;}
 .customcta .btn-sec .btn.rounded::before {top: 1px;}
-.detail-subsbox .es_subscription_form_submit{width: 120px;  padding: 0;}
+.detail-subsbox .es_subscription_form_submit{width: 130px;  padding: 0;}
 
 .customcta{text-align: center;}
 .customcta .cusimg{display:none;}
