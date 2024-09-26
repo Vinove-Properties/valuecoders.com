@@ -1372,7 +1372,7 @@ if( $clientele['is_enabled'] == 'yes' ) :
       $cltext     = vCodeRemoveUlTags( $clContent );
       echo $cltext;
       echo '<ul>
-      <li>18+ Yrs of Tech Mastery</li>
+      <li>20+ Yrs of Tech Mastery</li>
       <li>Transparent Communication</li>
       <li>Agile & Adaptive Approach</li>
       <li>Secure IP-Rights Protection</li>

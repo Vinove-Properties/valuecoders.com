@@ -141,7 +141,7 @@ if( $osSection == "yes" ) :
       </div>
       <div class="flex-2">
         <p>
-          Take a glance at our Awards & Recognitions. This is how we made success stories for over 18+ years with our market-leading digitally advanced software solutions.
+          Take a glance at our Awards & Recognitions. This is how we made success stories for over 20+ years with our market-leading digitally advanced software solutions.
         </p>
       </div>
     </div>
@@ -263,7 +263,7 @@ if( $clSection == "yes" ) :
 	<div class="dis-flex items-center  justify-sb counter-column-outer">
 	  <div class="left-box">
 	    <h2>Ready To Get Started?</h2>
-	    <p>Consistently recognized as one of India’s best software development companies with the proven success of over 18+ years with thousands of customers globally. You can entrust us with your software development and outsourcing needs.</p>
+	    <p>Consistently recognized as one of India’s best software development companies with the proven success of over 20+ years with thousands of customers globally. You can entrust us with your software development and outsourcing needs.</p>
 	    
 	    <div class="cta-wrap margin-t-50">
       <div class="cta-btn">
@@ -283,7 +283,7 @@ if( $clSection == "yes" ) :
 	      <div class="flex-3 counter-box">
 	        <span class="icon icon1 vlazy"></span>
 	        <span class="icon-txt">
-	        <span class="large-txt clr-white">18+</span>
+	        <span class="large-txt clr-white">20+</span>
 	        Years Experience</span>
 	      </div>
 	      <div class="flex-3 counter-box">

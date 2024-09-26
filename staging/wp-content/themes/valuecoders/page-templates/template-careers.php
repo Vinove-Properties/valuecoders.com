@@ -19,7 +19,7 @@ get_header();
 	<?php endwhile; ?>
     <div class="count-box-outer dis-flex">
       <div class="count-box">
-        <h2>18+</h2>
+        <h2>20+</h2>
         <p>Years Experience</p>
       </div>
       <div class="count-box">
