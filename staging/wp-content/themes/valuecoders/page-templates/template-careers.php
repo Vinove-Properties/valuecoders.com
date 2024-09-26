@@ -308,7 +308,7 @@ $teamImageWebp	= $teamVc['image-webp'];
             </div>
         </div>
     </section>
-<section class="keka-iframe-section padding-t-150 padding-b-150">
+<section class=" padding-t-150 padding-b-150">
 	<div class="container">
 		<div class="head-txt text-center">
 			<h2>Let’s Work Together!</h2>
