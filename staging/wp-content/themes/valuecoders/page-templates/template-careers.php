@@ -69,7 +69,7 @@ if( $iswEnabled == "yes" ){
       </div>
       <div class="flex-2 image-box">
         <picture>
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v3.0/images/counter-image.svg" width="543" height="500" alt="valuecoders">
+          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/20-year-exp.svg" width="543" height="500" alt="valuecoders">
         </picture>
       </div>
     </div>
