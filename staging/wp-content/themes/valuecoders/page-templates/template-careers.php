@@ -37,71 +37,7 @@ get_header();
     </div>
   </div>
 </section>
-<?php vcTrustedStartups(); ?>
-<?php
-$whyhire = get_field('why-vc');
-if( $whyhire ) :
-$iswEnabled = $whyhire['is_enable'];
-if( $iswEnabled == "yes" ){
-?>
-<section class="global-counter padding-t-120 padding-b-120">
-  <div class="container">
-    <div class="dis-flex justify-sb items-center">
-      <div class="flex-2 content-box top-content tick-icon-list">
-        <?php echo $whyhire['content']; ?>
-        <?php 
-        if( $whyhire['options'] ){
-        	echo '<ul>';
-        	foreach( $whyhire['options'] as $row ){
-        		echo '<li>'.$row['title'].'</li>';
-    		}
-    		echo '</ul>';
-        }
-    	?>
-        <h4>Awards &amp; Certifications -</h4>
-        <div class="award-logo dis-flex">
-          <div class="logo-box logo1"></div>
-          <div class="logo-box logo2"></div>
-          <div class="logo-box logo3"></div>
-          <div class="logo-box logo4"></div>
-          <div class="logo-box logo5"></div>
-        </div>
-      </div>
-      <div class="flex-2 image-box">
-        <picture>
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/20-year-exp.svg" width="543" height="500" alt="valuecoders">
-        </picture>
-      </div>
-    </div>
-  </div>
-</section>
-<?php 
-}
-endif;
-?>
-<!-- WHy Hire Developer From VC -->
-
-<?php 
-$clientele = get_field( 'vc-clients' );
-if( $clientele['is_enabled'] == 'yes' ) :
-?>
-<section class="global-companies padding-b-120">
-<div class="container">
-<div class="dis-flex justify-sb items-center">
-  <div class="flex-2 image-box">
-    <picture>
-      <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v3.0/images/global-companies.png">
-      <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v3.0/images/global-companies.png">
-      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v3.0/images/global-companies.png" width="647" height="411" 
-      alt="valuecoders">
-    </picture>
-  </div>
-  <div class="flex-2 content-box top-content"><?php echo $clientele['content']; ?></div>
-</div>
-</div>
-</section>
-<?php endif; ?>
-<!-- ValueCoder clientele #Ends Here -->
+<?php get_template_part('include/why', 'hirev4.0'); ?>
 
 <?php 
 $teamVc = get_field( 'team-vc' );
