@@ -131,8 +131,9 @@ function temp_logSpamEmails( $formData ){
     $userIP     = get_client_ip_user();
     $userEmail  = (isset($formData['user-email']) && !empty($formData['user-email'])) ? $formData['user-email'] : '';
     $form_data['ip_addr'] = $userIP;
-    $data = serialize( $form_data );
-    $sql = "INSERT INTO spam_leads ( data, email, ip, created_at ) 
+    
+    $data   = serialize( $form_data );
+    $sql    = "INSERT INTO spam_leads ( data, email, ip, created_at ) 
     VALUES ('{$data}', '{$userEmail}', '{$userIP}', '{$created_at}')";
     $conn->query( $sql );
     

@@ -82,7 +82,7 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front flip-round">
-                <div class="value">19+</div>
+                <div class="value">20+</div>
                  <span class="title">YEARS OF EXPERIENCE</span>
                    <!--<p class="desc"> In-house Experts</p>-->
               </div>
@@ -337,7 +337,7 @@ $grwBody  = (isset($vcBtn['text-3']) && !empty($vcBtn['text-3'])) ? $vcBtn['text
           </div>
           <div class="cir-box">
             <div class="text-wrap">
-              <span class="display">19+</span>
+              <span class="display">20+</span>
               <span class="paragraph">Years Experience</span>
               <svg viewBox="0 0 100 100" class="animate-spin-slow wheel-sc">
                 <path id=":R8pm9lb:" fill="none" d="M0,50a50,50 0 1,1 100,0a50,50 0 1,1 -100,0"></path>

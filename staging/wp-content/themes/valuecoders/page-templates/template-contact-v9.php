@@ -150,7 +150,7 @@ get_header();
             <div class="col-box dis-flex">
               <div class="icon"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-01.svg" alt="pixel" width="40" height="40"></div>
               <div class="desp">
-                <h4>19+ years of experience</h4>
+                <h4>20+ years of experience</h4>
                 <p>We can handle projects of all complexities.</p>
               </div>
             </div>
