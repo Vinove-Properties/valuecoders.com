@@ -855,7 +855,7 @@ function defActiveHire( $hirePage, $exCat ){
                                   <a href="<?php echo $site_url; ?>"><span class="title">Lending</span>
                                   Validate your idea and ensure</a>
                                   -->
-                                <a href="<?php echo $site_url; ?>industries/banking-financial-services"><span class="title">Banking</span>
+                                <a href="<?php echo $site_url; ?>banking"><span class="title">Banking</span>
                                 Banking on innovation</a>
                                 <a href="<?php echo $site_url; ?>insurance"><span class="title">Insurance</span>
                                 Secure insurance solutions</a>
