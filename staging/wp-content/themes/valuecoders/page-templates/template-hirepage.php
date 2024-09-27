@@ -879,8 +879,9 @@ endif;
 <?php 
 $disThree = (isset($dmCTA['dis-3']) && ($dmCTA['dis-3'] == "yes")) ? true : false;
 if( $disThree === false ) :
+$ctaTheme = ( isset($dmCTA['style']) && $dmCTA['style'] == "light" ) ? "bg-light" : "";   
 ?>
-<section class="counter-column-section bg-blue-linear bg-dark padding-t-70 padding-b-70">
+<section class="counter-column-section bg-blue-linear <?php echo $ctaTheme; ?> bg-dark padding-t-70 padding-b-70">
   <div class="container">
     <div class="dis-flex justify-sb">
       <div class="left-sec">
