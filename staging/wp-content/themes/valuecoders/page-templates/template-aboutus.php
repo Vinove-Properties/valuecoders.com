@@ -135,7 +135,7 @@ get_header();
 	    <h2>20+ years of Proud Existence</h2>
 	  </div>
 	  <div class="flex-2">
-	    <p>ValueCoders set its first stone down in 2007 and has been thriving ever since. The company takes great pride in announcing that they've managed to provide top-notch IT service to their clients for 18 years.
+	    <p>ValueCoders set its first stone down in 2007 and has been thriving ever since. The company takes great pride in announcing that they've managed to provide top-notch IT service to their clients for 20 years.
 	    </p>
 	  </div>
 	</div>
