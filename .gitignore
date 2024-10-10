@@ -25,6 +25,7 @@ blog/staging/wp-content/*
 !blog/staging/wp-content/themes/
 blog/staging/wp-content/themes/*
 !blog/staging/wp-content/themes/valuecoders/
+!blog/staging/wp-content/themes/valuecoders-v2/
 
 case-studies/wp-content/*
 case-studies/wp-admin/*

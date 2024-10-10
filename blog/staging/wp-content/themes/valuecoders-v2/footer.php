@@ -1,0 +1,180 @@
+</main>
+<?php //get_template_part('inc/cmn', 'footer'); ?>
+
+<footer class="footer">
+  <div class="container">
+    <div class="dis-flex footer-top">
+      <div class="count-sec">
+        <div class="count-col">
+          <h5>24,859,684+</h5>
+          <p>LEADS DRIVEN FOR CLIENTS</p>
+        </div>
+        <div class="count-col">
+          <h5>$6,021,182,299+</h5>
+          <p>REVENUE DRIVEN FOR CLIENTS</p>
+        </div>
+        <div class="count-col">
+          <h5>3,212,407</h5>
+          <p>HOURS OF EXPERTISE</p>
+        </div>
+        <div class="count-col">
+          <h5>500</h5>
+          <p>EXPERTS ON STAFF</p>
+        </div>
+      </div>
+      <div class="subs-box">
+        <h3>Discover how we can 
+          help your business grow
+        </h3>
+
+
+        <div class="cta-wrap  justify-center">
+      <div class="cta-btn">
+      <div class="btn-sec">
+<a href="https://www.valuecoders.com/contact" class="btn rounded"><span class="text-white">Get Started</span></a>
+</div>
+
+        
+      </div>
+    </div>
+
+
+
+      </div>
+    </div>
+    <div class="dis-flex footer-middle">
+      <div class="flex-5">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">In Media</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Our Blog</a></li>
+          <li><a href="#">Testimonial & Clients</a></li>
+        </ul>
+      </div>
+      <div class="flex-5">
+        <h4>Our Expertise</h4>
+        <ul>
+          <li><a href="#">Software Product Engineering</a></li>
+          <li><a href="#">Application Development</a></li>
+          <li><a href="#">Staff Augmentation</a></li>
+          <li><a href="#">eCommerce Development</a></li>
+          <li><a href="#">Cloud Services</a></li>
+          <li><a href="#">AI & ML</a></li>
+          <li><a href="#">Hire Software Developers</a></li>
+        </ul>
+      </div>
+      <div class="flex-5">
+        <h4>Hire Developers</h4>
+        <ul>
+          <li><a href="#">Hire Backend Developers</a></li>
+          <li><a href="#">Hire Frontend Developers</a></li>
+          <li><a href="#">Hire eCommerce Developers</a></li>
+          <li><a href="#">Hire Blockchain Developers</a></li>
+          <li><a href="#">Hire Mobile Developers</a></li>
+          <li><a href="#">Hire Full-Stack Developers</a></li>
+          <li><a href="#">Hire Low-Code Developers</a></li>
+
+        </ul>
+      </div>
+      <div class="flex-5">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="#">Offshore Development Center</a></li>
+          <li><a href="#">Offshore Software Development</a></li>
+          <li><a href="#">Nearshore Software Development</a></li>
+        </ul>
+      </div>
+      <div class="flex-5">
+        <h4>Clients We Serve</h4>
+        <ul>
+          <li><a href="#">For Startups</a></li>
+          <li><a href="#">For Enterprises</a></li>
+          <li><a href="#">For Agencies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="dis-flex footer-bottom">
+      <div class="flex-3 logo-box">
+        <h3>PROUDLY BROUGHT TO YOU BY PixelCryaons</h3>
+        <div class="dis-flex">
+          <a href="https://www.invoicera.com/">
+            <picture>
+              <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/inv-logo.svg" width="156" height="40" alt="Invoicera">
+            </picture>
+          </a>
+          <a href="https://www.workstatus.io/>
+            <picture>
+            <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/ws-logo.svg" width="188" height="26" alt="Workstatus"> 
+          </picture>
+          </a>
+        </div>
+      </div>
+      <div class="flex-3 social-box">
+        <h3>Follow Us</h3>
+        <div class="dis-flex">
+          <a href="https://www.linkedin.com/company/valuecoders" target="_blank">
+            <picture>
+              <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/soc-01.svg" width="29" height="29" alt="linkedin">
+            </picture>
+          </a>
+          <a href="https://www.facebook.com/ValueCoders" target="_blank">
+            <picture>
+              <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/soc-02.svg" width="29" height="29" alt="facebook">
+            </picture>
+          </a>
+          <a href="https://twitter.com/ValueCoders" target="_blank">
+            <picture>
+              <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/soc-03.svg" width="29" height="29" alt="twitter">
+            </picture>
+          </a>
+          <a href="https://www.instagram.com/valuecodersofficial_/?igshid=qfk286mq0wee" target="_blank">
+            <picture>
+              <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/soc-04.svg" width="29" height="29" alt="instagram">
+            </picture>
+          </a>
+          <a href="https://www.youtube.com/channel/UCCnijyLczGPUGI8aBkK3pTw?sub_confirmation=1" target="_blank">
+            <picture>
+              <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/soc-05.svg" width="29" height="29" alt="youtube">
+            </picture>
+          </a>
+        </div>
+      </div>
+      <div class="flex-3 copyright">
+        <a href="https://www.pixelcrayons.com/" target="_blank">
+          <picture>
+            <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/vc-logo.svg" width="191" height="42" alt="Logo">
+          </picture>
+        </a>
+        <p>Copyright © 2004 - 2024 PixelCrayons, <br>
+          All Rights Reserved. A Vinove Company.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="popup-section">
+<div id="intentPopup" class="popup-wrapper exit-intent-popup">
+  <div class="popWrap">
+    <div class="popup-content">
+      <span class="closeicon" onclick="closeIntPopUp('intentPopup', false);">      
+      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/cross-image.svg" alt="Valuecoders" width="11" height="11"></span>
+
+      <h2>Stay With Us</h2>
+      <h3>Are you looking for the perfect 
+        partner for your next software project?
+      </h3>
+      <p>Let's discuss how we can bring your vision to life.</p>
+      <div class="ctasec">
+        <a href="https://www.valuecoders.com/contact" class="book-btn">Book a Free Consultation</a>
+        <a href="javascript:void(0);" onclick="closeIntPopUp('intentPopup', true);" class="subscribe-btn">Subscribe to our newsletter</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<?php wp_footer(); ?>
+</body>
+</html>
