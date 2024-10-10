@@ -6,180 +6,86 @@ global $post;
 $thisPostID = $post->ID;
 $vcBtn 			= get_field('vc-cta', $thisPostID);
 get_header();
+$template_assets  = get_bloginfo('template_url').'/v5.0/';
 $mainServicePage  = 11941;
 $cmnBanner        = get_field('sbg-thumbnail');
-$bannerImageSrc   = get_bloginfo('template_url').'/v3.0/images/service-banner.png';
+$bannerImageSrc   = $template_assets.'images/service-banner.png';
 if( is_array( $cmnBanner ) ){
 $bannerImageSrc = getVcWebpSrcURL( $cmnBanner );
 }
-$hasReview = get_field('review-section');
-if( isset($hasReview['is_enabled']) && ($hasReview['is_enabled'] == "yes") ){
-$rwThumbnail = ( $hasReview['review_thumb'] ) ? $hasReview['review_thumb'] : 
-get_bloginfo('template_url').'/v4.0/images/card-thumb.png'; 
 ?>
-<section class="banner-section padding-t-120 padding-b-120" style="background-image:url(<?php echo $bannerImageSrc; ?>);">
-  <div class="container">
-    <div class="banner-wrap dis-flex justify-sb">
-      <div class="left-sec">
-        <div class="breadcrumbs">
-          <?php 
-            $bcCategory = get_field('bc-vcategory');
-            $bcTitle 		= get_field('bc-title');
-            if( $bcTitle ){
-            $bct = $bcTitle;
-            }else{
-            $bct = get_the_title();
-            }
-            
-            if( isset( $bcCategory ) && ($bcCategory == "solutions") ){
-            echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Solutions</span> '.$bct;		
-            }elseif( isset( $bcCategory ) && ($bcCategory == "industries") ){
-               echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Industries</span> '.$bct;   
-               }
-               else{
-            echo '<a href="'.get_bloginfo('url').'">Home</a> 
-               <a href="'.site_url('/software-development-services-company').'">Services</a> '.$bct;
-            }
-            ?>
-        </div>
-        <div class="badges">
-          <picture>
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/partner-01.svg" alt="valuecoders"
-              width="107" height="60">
-          </picture>
-          <picture>
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/partner-02.svg" alt="valuecoders"
-              width="107" height="60">
-          </picture>
-          <picture>
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/partner-03.svg" alt="valuecoders"
-              width="107" height="60">
-          </picture>
-          <picture>
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/partner-04.svg" alt="valuecoders"
-              width="107" height="60">
-          </picture>
-        </div>
-        <div class="banner-content">
-          <?php 
-            while( have_posts() ) : the_post();
-            	the_content();
-            endwhile;	
-            ?>
-        </div>
-        <div class="btn-sec margin-t-50 ">
-          <a href="https://www.valuecoders.com/contact" class="btn rounded">
-          <span class="text-white">Get Free Consultation</span>
-          </a>
-        </div>
-      </div>
-      <div class="right-sec">
-        <div class="flip-section">
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front flip-round">
-                <div class="value">20+</div>
-                 <span class="title">YEARS OF EXPERIENCE</span>
-                   <!--<p class="desc"> In-house Experts</p>-->
-              </div>
-              <div class="flip-card-back flip-round">
-                <span class="title">DELIVERING PROVEN RESULTS & EXPERTISE</span>
-                <!--<p class="desc">Helping Businesses with Digital Transformation</p>-->
-              </div>
-            </div>
-          </div>
-          <div class="flip-card flip-card-two">
-            <div class="flip-card-inner">
-              <div class="flip-card-front flip-round">
-                <div class="value">97%</div>
-                <span class="title">Client-retention</span>
-                <!--<p class="desc">Industry Average:50%</p>-->
-              </div>
-              <div class="flip-card-back flip-round">
-                 <span class="title">Building Lasting Partnerships</span>
-                 <!--<p class="desc">Building Lasting Partnerships</p>-->
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="hero-card">
-          <div class="strt-sec">
-            <div class="img-div"> 
-            <picture>
-            <img loading="lazy" src="<?php echo $rwThumbnail; ?>" alt="valuecoders" width="88" height="88">
-            </picture>
-            </div>
-            <div class="cont-div">
-              <?php echo $hasReview['review-content'];  ?>
-            </div>
-          </div>
-          <div class="clb">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/flavia.png" alt="Clutch icon">
-            Review from Clutch.co
-          </div>
-          <div class="ratings">
-            <div class="rating">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/5-star.svg" alt="Clutch icon">
-              <span>Rated 4.8/5 stars on <strong>G2</strong></span>
-            </div>
-            <div class="rating">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/5-star.svg" alt="Clutch icon"><span>Rated 4.9/5 stars on <strong>Clutch</strong></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<?php }else{ ?>
-<section class="hero-section vlazy" style="background-image:url(<?php echo $bannerImageSrc; ?>);">
+<section class="hero-section" style="background-image:url(<?php echo $bannerImageSrc; ?>);">
   <div class="container">
     <div class="content-wrap">
-      <div class="breadcrumbs">
-        <?php 
+      <div class="dis-flex justify-sb">
+        <div class="left-box">
+          <div class="breadcrumbs">
+          <?php 
           $bcCategory = get_field('bc-vcategory');
-          $bcTitle 		= get_field('bc-title');
+          $bcTitle    = get_field('bc-title');
           if( $bcTitle ){
           $bct = $bcTitle;
           }else{
           $bct = get_the_title();
           }
-          
           if( isset( $bcCategory ) && ($bcCategory == "solutions") ){
-          echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Solutions</span> '.$bct;		
+          echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Solutions</span> '.$bct;   
           }elseif( isset( $bcCategory ) && ($bcCategory == "industries") ){
-             echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Industries</span> '.$bct;   
-             }
-             else{
+          echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Industries</span> '.$bct;   
+          }
+          else{
           echo '<a href="'.get_bloginfo('url').'">Home</a> 
-             <a href="'.site_url('/software-development-services-company').'">Services</a> '.$bct;
+          <a href="'.site_url('/software-development-services-company').'">Services</a> '.$bct;
           }
           ?>
-      </div>
-      <div class="for-client-logo-box dis-flex">
-        <div class="logo-box logo1"></div>
-        <div class="logo-box logo2"></div>
-        <div class="logo-box logo3"></div>
-        <div class="logo-box logo4"></div>
-      </div>
-      <div class="dis-flex">
-        <div class="left-box">
-          <?php 
-            while( have_posts() ) : the_post();
-            	the_content();
-            endwhile;	
-            ?>
-          <?php cmnCTA_v3('Book a Free Consultation', false); ?>          
+          </div>
+          <h1>Software Development<br> Services</h1>
+          <p>With years of experience in the IT industry, ValueCoders focuses on providing complete outsourced product development services.
+          </p>
+          <ul>
+            <li>100% In-House Developers, 5+ Yrs Avg Exp.</li>
+            <li>Zero Hiring Fee, No Interview Headaches, Quick Onboarding</li>
+            <li>Flexible Engagement Models – Fixed Cost, Hourly or Monthly</li>
+          </ul>
+          <div class="btn-sec margin-t-50 ">
+            <a href="https://www.valuecoders.com/v2wp/contact" class="btn rounded">
+            <span class="text-white">Get Free Consulation</span>
+            </a>
+          </div>
+        </div>
+        <div class="right-box">
+          <div class="card-box">
+            <div class="card-top">
+              <picture>
+                <img loading="lazy" src="<?php echo $template_assets; ?>images/card-image.png" width="" height="" alt="valuecoders">
+              </picture>
+              <p><strong>Valuecoders'</strong> digital marketing services have been a game-changer for our business, significantly boosting our online.</p>
+            </div>
+            <div class="ratings">
+              <div class="rating">
+                <img loading="lazy" src="https://www.valuecoders.com/staging/wp-content/themes/valuecoders/v4.0/images/5-star.svg" alt="Clutch icon">
+                <span>Rated 4.8/5 stars on <strong>G2</strong></span>
+              </div>
+              <div class="rating">
+                <img loading="lazy" src="https://www.valuecoders.com/staging/wp-content/themes/valuecoders/v4.0/images/5-star.svg" alt="Clutch icon"><span>Rated 4.9/5 stars on <strong>Clutch</strong></span>
+              </div>
+            </div>
+          </div>
+          <div class="se-logo-box dis-flex">
+            <div class="logo-box logo1"></div>
+            <div class="logo-box logo2"></div>
+            <div class="logo-box logo3"></div>
+            <div class="logo-box logo4"></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<?php } 
-get_template_part('inc/cmn', 'startups');
-?>
+<?php get_template_part('inc/cmn', 'startups'); ?>
+
 <?php  	
-// tech Specification in accordian format.
+// tech Specification in accordian format.,
 $specifications = get_field('tech-spec');
 if( isset( $specifications['is_enabled'] ) && ($specifications['is_enabled'] == "yes") ){ 
 $htContent 	  = $specifications['content'];
@@ -379,20 +285,16 @@ $grwBody  = (isset($vcBtn['text-3']) && !empty($vcBtn['text-3'])) ? $vcBtn['text
         <div class="glider" id="glider">
           <?php 
             if( $tailTech['cards'] ){
-            foreach( $tailTech['cards'] as $card ){
-              echo '<div class="flex-3">
-              <div class="box-3" style="background-image:url('.$card['image'].');">
-            <h3>'.$card['title'].'</h3>
-            <div class="overlay-text">
-            <div class="over-img">
-            <img class="icon" alt="'.$card['title'].'" src="'.$card['icon'].'">
-            </div>
-            '.$card['content'].'
-            </div>
-            
-            
-              </div>
-              </div>';
+              foreach( $tailTech['cards'] as $card ){
+                echo '<div class="flex-3">
+                <div class="box-3" style="background-image:url('.$card['image'].');">
+                <h3>'.$card['title'].'</h3>
+                <div class="overlay-text">
+                <div class="over-img">
+                <img class="icon" alt="'.$card['title'].'" src="'.$card['icon'].'">
+                </div>
+                '.$card['content'].'
+                </div></div></div>';
               }  
             }
             ?>

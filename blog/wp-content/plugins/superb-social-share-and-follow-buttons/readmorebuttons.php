@@ -1,1 +1,0 @@
-<a href="<?php echo esc_url('https://superbthemes.com/plugins/social-media-share-and-follow-buttons/') ?>" target="_blank" class="view-premium-topright">View Premium Version</a>
