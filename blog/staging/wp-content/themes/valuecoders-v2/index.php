@@ -1,15 +1,24 @@
-<?php get_header();?>
+<?php 
+get_header();
+
+$popularPosts = get_field('pop-posts', 'option');
+$popularPosts = explode(',', $popularPosts);
+
+$catBlockOne  = get_field('row-c1', 'option');
+$catBlockTwo  = get_field('row-c2', 'option'); 
+?>
+
 <section class="blog-main-page">
   <div class="container">
     <div class="blog-cat">
       <ul>
-        <li class="active"><a href="#">Blog Home</a></li>
-        <li><a href="#">Dedicated Teams</a></li>
-        <li><a href="#">Digital Marketing</a></li>
-        <li><a href="#">Digital Transformation</a></li>
-        <li><a href="#">eCommerce</a></li>
-        <li><a href="#">Industries</a></li>
-        <li><a href="#">Software Development</a></li>
+        <li class="active mobhide"><a href="<?php echo site_url(); ?>">Blog Home</a></li>
+        <li><a href="<?php echo get_category_link(3479); ?>">Dedicated Teams</a></li>
+        <li><a href="<?php echo get_category_link(1396); ?>">Digital Marketing</a></li>
+        <li><a href="<?php echo get_category_link(3199); ?>">Digital Transformation</a></li>
+        <li><a href="<?php echo get_category_link(87); ?>">eCommerce</a></li>
+        <li><a href="<?php echo get_category_link(3480); ?>">Industries</a></li>
+        <li><a href="<?php echo get_category_link(2414); ?>">Software Development</a></li>
       </ul>
     </div>
     <div class="top-content">
@@ -26,6 +35,64 @@
         </form>
       </div>
     </div>
+    <?php 
+    //$sticky_posts = get_option('sticky_posts');
+    if( $popularPosts ) :
+    $popQuery = new WP_Query([
+    'post_type'       => 'post',
+    'post__in'        => $popularPosts,
+    'orderby'         => 'post__in',
+    'posts_per_page'  => 5,
+    'ignore_sticky_posts' => 1
+    ]);
+    if( $popQuery->have_posts() ){
+    //print_r($popQuery);
+    echo '<div class="pc-blog-list popular-post">';
+    echo '<div class="main-intro"><h2>Popular Posts</h2></div>';
+    echo '<div class="blog-posts-list two-columns">';
+    $st = 0;
+    while( $popQuery->have_posts()){ 
+      $popQuery->the_post();
+      $st++;
+      $cat = getPostPrimeCategory( get_the_ID() );      
+      $stkThumb   = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' );
+      if( $st === 1 ){
+        echo '<div class="blog-post-col big-size">
+        <div class="blog-image">
+          <a href="'.get_permalink().'"><img width="1024" height="462" src="'.$stkThumb.'" alt="pixel" loading="lazy"></a>
+        </div>
+        <div class="blog-content">
+          <span class="category">'.$cat.'</span>
+          <div class="title two-line"><a href="'.get_permalink().'">'.get_the_title().'</a></div>
+          <div class="content">'.get_field('pp-cont', 'option').'</div>
+          '.getMcAutor(get_the_ID()).'
+        </div>
+        </div>';
+      echo '<div class="blog-post-col small-size">';  
+      }else{
+        echo '<div class="blog-posts-list">
+          <div class="blog-post-col">
+            <div class="blog-image">
+              <a href="">
+              <img width="1024" height="462" src="'.$stkThumb.'" alt="pixel" loading="lazy"></a>              
+            </div>
+            <div class="blog-content">
+              <span class="category">'.$cat.'</span>
+              <div class="title three-line"><a href="'.get_permalink().'">'.get_the_title().'</a></div>
+              '.getMcAutor(get_the_ID()).'
+            </div>
+          </div>
+        </div>';
+      }
+      if( $st === 5 ) break;
+    }
+    echo '</div>';
+    wp_reset_postdata();
+    echo '</div>';
+    echo '</div>';  
+    }  
+    endif;
+    ?>
     <div class="pc-blog-list popular-post">
       <div class="main-intro">
         <h2>Popular Posts</h2>

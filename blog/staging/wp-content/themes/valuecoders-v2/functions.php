@@ -1001,3 +1001,20 @@ function ebook_ajax_cb(){
 
     }
 }
+
+/*Optoins Page Optoins Here*/
+if( function_exists('acf_add_options_page') ){ 
+    acf_add_options_page(array(
+        'page_title'  => 'Theme General Settings',
+        'menu_title'  => 'Blog Options',
+        'menu_slug'   => 'theme-general-settings',
+        'capability'  => 'edit_posts  ',
+        'redirect'    => false
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'  => 'Common Settings',
+        'menu_title'  => 'Common Settings',
+        'parent_slug' => 'theme-general-settings'
+    ));  
+}

@@ -1699,3 +1699,10 @@ function vcGetThisPageUrl(){
     $current_url = $protocol . $host . $request_uri;    
     return $current_url;
 }
+
+add_filter( 'wpseo_robots', function(){
+	if( is_category( $string = '' ) ){
+		$string = 'noindex';
+	}
+	return $string;
+}, 999 );
