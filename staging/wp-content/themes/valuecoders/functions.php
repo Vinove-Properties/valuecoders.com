@@ -1700,8 +1700,8 @@ function vcGetThisPageUrl(){
     return $current_url;
 }
 
-add_filter( 'wpseo_robots', function(){
-	if( is_category( $string = '' ) ){
+add_filter( 'wpseo_robots', function( $string = '' ){
+	if( is_category() ){
 		$string = 'noindex';
 	}
 	return $string;
