@@ -82,9 +82,9 @@
           <div class="large">
             <?php 
             if( is_single() ){
-            echo '<img loading="lazy" src="'.get_bloginfo('template_url').'/dev-img/blog-logo.svg" alt="Valuecoders" class="dark-theme-logo-lg" width="232" height="52">';  
+            echo '<img loading="lazy" src="'.get_bloginfo('template_url').'/dev-img/lg-dark.svg" alt="Valuecoders" class="dark-theme-logo-lg" width="400" height="88">';  
             }
-            echo '<img loading="lazy" src="'.$tpl_url.'/dev-img/blog-logo.svg" alt="Valuecoders" class="dark-theme-logo" width="232" height="52">';
+            echo '<img loading="lazy" src="'.$tpl_url.'/dev-img/logo-light.svg" alt="Valuecoders" class="dark-theme-logo" width="400" height="88">';
             ?>
           </div>
           <div class="small">
@@ -156,7 +156,7 @@
           <!-- 
             <img loading="lazy" src="<?php echo $tpl_url; ?>/images/logo-v2.svg" alt="Valuecoders" class="dark-theme-logo" width="260" height="46"> 
           -->
-          <img loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/blog-logo.svg" alt="Valuecoders" class="dark-theme-logo" width="232" height="52">
+          <img loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/logo-light.svg" alt="Valuecoders" class="dark-theme-logo" width="400" height="88">
           </a>
           <ul>
             <li class="menu-item-has-children">

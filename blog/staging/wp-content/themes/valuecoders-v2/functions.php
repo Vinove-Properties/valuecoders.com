@@ -109,6 +109,7 @@ function valuecoders_scripts() {
 
 	wp_style_add_data( 'valuecoders-style', 'rtl', 'replace' );
     wp_enqueue_script( 'valuecoders-glider', get_template_directory_uri() . '/assets/js/glider.min.js', array(), _S_VERSION, true );
+    wp_enqueue_script( 'valuecoders-menu', get_template_directory_uri() . '/assets/js/menu-v4.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'valuecoders-navigation', get_template_directory_uri() . '/assets/js/custom.js', array(), _S_VERSION, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
