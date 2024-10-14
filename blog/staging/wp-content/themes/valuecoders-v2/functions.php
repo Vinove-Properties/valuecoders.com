@@ -1018,3 +1018,90 @@ if( function_exists('acf_add_options_page') ){
         'parent_slug' => 'theme-general-settings'
     ));  
 }
+
+
+add_action( 'pre_get_posts', 'custom_post_archive_changes' );
+function custom_post_archive_changes( $query ) {
+    if ( is_home() && $query->is_main_query() ) {
+        $stickies = get_option("sticky_posts");
+        $query->set( 'post__not_in', $stickies );
+    }
+}
+
+function getMcAuthorThumb( $author_id ){
+  $authThumbnail    = get_template_directory_uri().'/assets/images/author.png';
+  $authorThumbnail  = get_field( 'auth-thumb', 'user_'.$author_id );
+  if( $authorThumbnail && isset( $authorThumbnail['url'] ) ){
+    $authThumbnail = $authorThumbnail['url'];
+  }else{  
+    $user_avtar   = get_user_meta( $author_id, 'wp_user_avatars', true );
+    if( $user_avtar ){
+      $authThumbnail = isset( $user_avtar['full'] ) ? $user_avtar['full'] : 
+      get_bloginfo('template_url').'/dev-img/author-profile.png';
+    }
+  }
+  return $authThumbnail;
+}
+
+function getMcAutor( $post_id ){
+$author_id  = get_post_field('post_author', $post_id);
+$authorName = get_the_author_meta('display_name', $author_id);
+return '<div class="auth-wrap">
+  <div class="author-img">
+  <img loading="lazy" src="'.getMcAuthorThumb($author_id).'" width="36" height="36" alt="'.$authorName.'">
+  </div>
+  <div class="entry-meta">by <a href="'.get_author_posts_url($author_id).'" title="Posts by '.$authorName.'">'.$authorName.'</a></div>
+  </div>';
+}
+
+function bigBlockPost( $post_id ){
+//$thumb = wp_get_attachment_url( get_post_thumbnail_id( $post_id ), 'single-post-thumbnail' );  
+$postThumbID  = get_post_thumbnail_id( $post_id );  
+$image_path   = wp_get_original_image_path($postThumbID);
+if( file_exists( $image_path ) ){
+  $thumb  = wp_get_attachment_url(get_post_thumbnail_id( $post_id ), 'medium');    
+}else{
+  $thumb  = get_bloginfo('template_url').'/dev-img/default-image.jpg';
+}
+return '<div class="blog-image">
+    <a href="'.get_permalink($post_id).'"><img width="1024" height="462" src="'.$thumb.'" alt="pixel" loading="lazy"></a>
+    </div>
+    <div class="blog-content">
+    <span class="category">'.getPostPrimeCategory($post_id).'</span>
+    <div class="title two-line"><a href="'.get_permalink($post_id).'">'.get_the_title($post_id).'</a></div>
+    '.getMcAutor($post_id).'
+    </div>';
+}
+
+function smallBlockPost($post_id){
+$postThumbID  = get_post_thumbnail_id( $post_id );  
+$image_path   = wp_get_original_image_path($postThumbID);
+if( file_exists( $image_path ) ){
+  $thumb  = wp_get_attachment_url( get_post_thumbnail_id( $post_id ), 'medium' );    
+}else{
+  $thumb  = get_bloginfo('template_url').'/dev-img/default-image.jpg';
+}
+
+
+return '<div class="devs-col">
+  <div class="blog-image">
+  <a href="'.get_permalink($post_id).'" target="_blank">
+    <picture><img src="'.$thumb.'" alt="pixel" loading="lazy"></picture>
+    </a>
+  </div>
+  <div class="blog-content">
+    <span class="category">'.getPostPrimeCategory($post_id).'</span>
+    <div class="title three-line">
+      <a href="'.get_permalink($post_id).'">'.get_the_title($post_id).'</a>
+    </div>
+    '.getMcAutor($post_id).'
+  </div>
+  </div>';
+}
+
+function getPostPrimeCategory( $postid ){
+  $categories = get_the_category($postid);
+  if( $categories ){
+    return '<a href="'.esc_url(get_category_link($categories[0]->cat_ID)).'">'.$categories[0]->name.'</a>';
+  }  
+}

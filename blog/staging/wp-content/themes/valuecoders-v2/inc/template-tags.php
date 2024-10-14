@@ -171,3 +171,39 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 		do_action( 'wp_body_open' );
 	}
 endif;
+
+
+function pxlCardThumbnail() {
+	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+	return;
+	}
+
+	if ( is_singular() ) : ?>
+	<div class="post-thumbnail">
+	<?php the_post_thumbnail(); ?>				
+	</div><!-- .post-thumbnail -->
+	<?php 
+	else : 
+	$post_id = get_the_ID();
+	$thePostImage = get_the_post_thumbnail( $post_id, 'medium', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) );	
+
+	if( function_exists('get_field') ){
+		$listThubnail = get_field( 'pl-thumbnail', $post_id );
+		if( $listThubnail && is_array( $listThubnail ) ){
+			if( isset( $listThubnail['sizes']['plist-thumbnail'] ) &&  !empty( $listThubnail['sizes']['plist-thumbnail'] ) ){
+			$thePostImage = '<img loading="lazy" src="'.$listThubnail['sizes']['plist-thumbnail'].'" 
+			alt="'.$listThubnail['title'].'" width="'.$listThubnail['sizes']['plist-thumbnail-width'].'" 
+			height="'.$listThubnail['sizes']['plist-thumbnail-height'].'">';	
+			}else{
+			$thePostImage = '<img loading="lazy" src="'.$listThubnail['url'].'" alt="'.$listThubnail['title'].'" width="'.$listThubnail['width'].'" height="'.$listThubnail['height'].'">';	
+			}				
+		}
+	}
+	?>
+
+	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+	<?php echo $thePostImage; ?>			
+	</a>
+	<?php
+	endif; // End is_singular().
+}

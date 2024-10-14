@@ -4,6 +4,8 @@ get_header();
 $popularPosts = get_field('pop-posts', 'option');
 $popularPosts = explode(',', $popularPosts);
 
+//print_r($popularPosts); die;
+
 $catBlockOne  = get_field('row-c1', 'option');
 $catBlockTwo  = get_field('row-c2', 'option'); 
 ?>
@@ -35,6 +37,7 @@ $catBlockTwo  = get_field('row-c2', 'option');
         </form>
       </div>
     </div>
+    <?php if( !is_paged() ) : ?>
     <?php 
     //$sticky_posts = get_option('sticky_posts');
     if( $popularPosts ) :
@@ -46,7 +49,6 @@ $catBlockTwo  = get_field('row-c2', 'option');
     'ignore_sticky_posts' => 1
     ]);
     if( $popQuery->have_posts() ){
-    //print_r($popQuery);
     echo '<div class="pc-blog-list popular-post">';
     echo '<div class="main-intro"><h2>Popular Posts</h2></div>';
     echo '<div class="blog-posts-list two-columns">';
@@ -54,10 +56,10 @@ $catBlockTwo  = get_field('row-c2', 'option');
     while( $popQuery->have_posts()){ 
       $popQuery->the_post();
       $st++;
-      $cat = getPostPrimeCategory( get_the_ID() );      
+      $cat = getPostPrimeCategory( get_the_ID() );
       $stkThumb   = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' );
       if( $st === 1 ){
-        echo '<div class="blog-post-col big-size">
+        echo '<div class="blog-post-col big-size postid-'.get_the_ID().'">
         <div class="blog-image">
           <a href="'.get_permalink().'"><img width="1024" height="462" src="'.$stkThumb.'" alt="pixel" loading="lazy"></a>
         </div>
@@ -70,7 +72,7 @@ $catBlockTwo  = get_field('row-c2', 'option');
         </div>';
       echo '<div class="blog-post-col small-size">';  
       }else{
-        echo '<div class="blog-posts-list">
+        echo '<div class="blog-posts-list postid-'.get_the_ID().'">
           <div class="blog-post-col">
             <div class="blog-image">
               <a href="">
@@ -93,126 +95,13 @@ $catBlockTwo  = get_field('row-c2', 'option');
     }  
     endif;
     ?>
-    <div class="pc-blog-list popular-post">
-      <div class="main-intro">
-        <h2>Popular Posts</h2>
-      </div>
-      <div class="blog-posts-list two-columns">
-        <div class="blog-post-col big-size">
-          <div class="blog-image">
-            <a href=""><img width="1024" height="462" src="<?php bloginfo('template_url'); ?>/assets/images/dm-image.png" alt="pixel" loading="lazy"> </a>
-          </div>
-          <div class="blog-content">
-            <span class="category"><a href="">Digital Marketing</a></span>
-            <div class="title"><a href="">Why Online Reviews Matter Even More With AI-Powered Search</a></div>
-            <div class="content">
-              <p>Have you ever wondered why some businesses stand out more than others online? Well, it’s not just about having a fancy website or catchy ads. It’s about what customers say about them!</p>
-              <p>Imagine you’re searching for a new restaurant nearby. You type it into Google, and what pops up?</p>
-            </div>
-            <div class="auth-wrap">
-              <div class="author-img">
-                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/varun-bhagat.png" width="36" height="36" alt="Varun Bhagat">
-              </div>
-              <div class="entry-meta">
-                by 
-                <a href="https://www.pixelcrayons.com/blog/staging/?author=4310" title="Posts by Varun Bhagat" rel="author follow noopener" data-wpel-link="internal">Varun Bhagat</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="blog-post-col small-size">
-          <div class="blog-posts-list">
-            <div class="blog-post-col">
-              <div class="blog-image">
-                <a href=""><img width="1024" height="462" src="<?php bloginfo('template_url'); ?>/assets/images/dm-image.png" alt="pixel" loading="lazy">  </a>              
-              </div>
-              <div class="blog-content">
-                <span class="category"><a href="">Industries</a></span>
-                <div class="title"><a href="#">Planning for Pharmacy Automation? Consider These Top Solutions & Technologies</a></div>
-                <div class="auth-wrap">
-                  <div class="author-img">
-                    <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/varun-bhagat.png" width="36" height="36" alt="Varun Bhagat">
-                  </div>
-                  <div class="entry-meta">
-                    by 
-                    <a href="https://www.pixelcrayons.com/blog/staging/?author=4310" title="Posts by Varun Bhagat" rel="author follow noopener" data-wpel-link="internal">Varun Bhagat</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="blog-posts-list">
-            <div class="blog-post-col">
-              <div class="blog-image">
-                <a href=""><img width="1024" height="462" src="<?php bloginfo('template_url'); ?>/assets/images/dm-image.png" alt="pixel" loading="lazy">  </a>              
-              </div>
-              <div class="blog-content">
-                <span class="category"><a href="">Industries</a></span>
-                <div class="title"><a href="#">Planning for Pharmacy Automation? Consider These Top Solutions & Technologies</a></div>
-                <div class="auth-wrap">
-                  <div class="author-img">
-                    <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/varun-bhagat.png" width="36" height="36" alt="Varun Bhagat">
-                  </div>
-                  <div class="entry-meta">
-                    by 
-                    <a href="https://www.pixelcrayons.com/blog/staging/?author=4310" title="Posts by Varun Bhagat" rel="author follow noopener" data-wpel-link="internal">Varun Bhagat</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="blog-posts-list">
-            <div class="blog-post-col">
-              <div class="blog-image">
-                <a href=""><img width="1024" height="462" src="<?php bloginfo('template_url'); ?>/assets/images/dm-image.png" alt="pixel" loading="lazy">  </a>              
-              </div>
-              <div class="blog-content">
-                <span class="category"><a href="">Industries</a></span>
-                <div class="title"><a href="#">Planning for Pharmacy Automation? Consider These Top Solutions & Technologies</a></div>
-                <div class="auth-wrap">
-                  <div class="author-img">
-                    <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/varun-bhagat.png" width="36" height="36" alt="Varun Bhagat">
-                  </div>
-                  <div class="entry-meta">
-                    by 
-                    <a href="https://www.pixelcrayons.com/blog/staging/?author=4310" title="Posts by Varun Bhagat" rel="author follow noopener" data-wpel-link="internal">Varun Bhagat</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="blog-posts-list">
-            <div class="blog-post-col">
-              <div class="blog-image">
-                <a href=""><img width="1024" height="462" src="<?php bloginfo('template_url'); ?>/assets/images/dm-image.png" alt="pixel" loading="lazy">  </a>              
-              </div>
-              <div class="blog-content">
-                <span class="category"><a href="">Industries</a></span>
-                <div class="title"><a href="#">Planning for Pharmacy Automation? Consider These Top Solutions & Technologies</a></div>
-                <div class="auth-wrap">
-                  <div class="author-img">
-                    <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/varun-bhagat.png" width="36" height="36" alt="Varun Bhagat">
-                  </div>
-                  <div class="entry-meta">
-                    by 
-                    <a href="https://www.pixelcrayons.com/blog/staging/?author=4310" title="Posts by Varun Bhagat" rel="author follow noopener" data-wpel-link="internal">Varun Bhagat</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="cta-flex">
       <div class="custom-left">
         <picture>
           <img loading="lazy"  src="<?php bloginfo('template_url'); ?>/assets/images/home-custom.svg" alt="pixel" width="214" height="176">
         </picture>
         <div class="cus-cont">
-          <div class="cushed">Elevate Projects with 
-            Top Management Tools
-          </div>
+          <div class="cushed">Elevate Projects with Top Management Tools</div>
           <div class="btn-container">
             <a target="_blank" class="white-btn blue pxl-ext" href="https://www.pixelcrayons.com/contact-us" data-wpel-link="internal" rel="follow noopener">Start Free Trial</a>
           </div>
@@ -227,9 +116,7 @@ $catBlockTwo  = get_field('row-c2', 'option');
     <div class="pc-blog-list videos-post">
       <div class="main-intro">
         <h2>Watch Now</h2>
-        <a href="#" class="view-all-link" target="_blank" rel="noopener">
-        View All 
-        </a>
+        <a href="#" class="view-all-link" target="_blank" rel="noopener">View All</a>
       </div>
       <div class="blog-posts-list  three-columns">
         <div class="blog-post-col medium-size">
@@ -285,133 +172,42 @@ $catBlockTwo  = get_field('row-c2', 'option');
         </div>
       </div>
     </div>
+    <?php endif; //Ignore For Paged ?>
     <div class="pc-blog-list latest">
-      <div class="main-intro">
-        <h2>Latest </h2>
+      <div class="main-intro"><h2>Latest</h2></div>
+      <div class="blog-posts-list two-columns list-view">      
+      <?php
+      if( have_posts() ) : 
+      while ( have_posts() ) : the_post(); 
+      $post_thumb   = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' );  
+      ?>
+      <div class="blog-post-col medium-size">
+      <div class="blog-image"><?php pxlCardThumbnail(); ?></div>
+      <div class="blog-content">
+        <span class="category"><?php echo getPostPrimeCategory( get_the_ID() ); ?></span>
+        <div class="title two-line">
+          <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </div>
+        <?php echo getMcAutor( get_the_ID() ); ?>
       </div>
-      <div class="blog-posts-list  two-columns list-view">
-        <div class="blog-post-col medium-size">
-          <div class="blog-image">
-            <picture><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/latest-img01.png" alt="pixel" loading="lazy">  </a>   </picture>
-          </div>
-          <div class="blog-content">
-            <span class="category"><a href="" data-wpel-link="internal" target="_blank" rel="follow noopener">Industries</a></span>
-            <div class="title"><a href="#">Building Topical Authority? How to 
-              Get It Right the First Time?</a>
-            </div>
-            <div class="auth-wrap">
-              <div class="author-img">
-                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/varun-bhagat.png" width="36" height="36" alt="Varun Bhagat">
-              </div>
-              <div class="entry-meta">
-                by 
-                <a href="#" title="Posts by Varun Bhagat" rel="author noopener follow" data-wpel-link="internal" target="_blank">Varun Bhagat</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="blog-post-col medium-size">
-          <div class="blog-image">
-            <picture><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/latest-img01.png" alt="pixel" loading="lazy">  </a>   </picture>
-          </div>
-          <div class="blog-content">
-            <span class="category"><a href="" data-wpel-link="internal" target="_blank" rel="follow noopener">Industries</a></span>
-            <div class="title"><a href="#">Building Topical Authority? How to 
-              Get It Right the First Time?</a>
-            </div>
-            <div class="auth-wrap">
-              <div class="author-img">
-                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/varun-bhagat.png" width="36" height="36" alt="Varun Bhagat">
-              </div>
-              <div class="entry-meta">
-                by 
-                <a href="#" title="Posts by Varun Bhagat" rel="author noopener follow" data-wpel-link="internal" target="_blank">Varun Bhagat</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="blog-post-col medium-size">
-          <div class="blog-image">
-            <picture><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/latest-img01.png" alt="pixel" loading="lazy">  </a>   </picture>
-          </div>
-          <div class="blog-content">
-            <span class="category"><a href="" data-wpel-link="internal" target="_blank" rel="follow noopener">Industries</a></span>
-            <div class="title"><a href="#">Building Topical Authority? How to 
-              Get It Right the First Time?</a>
-            </div>
-            <div class="auth-wrap">
-              <div class="author-img">
-                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/varun-bhagat.png" width="36" height="36" alt="Varun Bhagat">
-              </div>
-              <div class="entry-meta">
-                by 
-                <a href="#" title="Posts by Varun Bhagat" rel="author noopener follow" data-wpel-link="internal" target="_blank">Varun Bhagat</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="blog-post-col medium-size">
-          <div class="blog-image">
-            <picture><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/latest-img01.png" alt="pixel" loading="lazy">  </a>   </picture>
-          </div>
-          <div class="blog-content">
-            <span class="category"><a href="" data-wpel-link="internal" target="_blank" rel="follow noopener">Industries</a></span>
-            <div class="title"><a href="#">Building Topical Authority? How to 
-              Get It Right the First Time?</a>
-            </div>
-            <div class="auth-wrap">
-              <div class="author-img">
-                <img loading="lazy" src="http://localhost/pixelcrayons.com/blog/staging/wp-content/themes/pxlblog-v2/assets/images/varun-bhagat.png" width="36" height="36" alt="Varun Bhagat">
-              </div>
-              <div class="entry-meta">
-                by 
-                <a href="https://www.pixelcrayons.com/blog/staging/?author=4310" title="Posts by Varun Bhagat" rel="author noopener follow" data-wpel-link="internal" target="_blank">Varun Bhagat</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="blog-post-col medium-size">
-          <div class="blog-image">
-            <picture><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/latest-img01.png" alt="pixel" loading="lazy">  </a>   </picture>
-          </div>
-          <div class="blog-content">
-            <span class="category"><a href="" data-wpel-link="internal" target="_blank" rel="follow noopener">Industries</a></span>
-            <div class="title"><a href="#">Building Topical Authority? How to 
-              Get It Right the First Time?</a>
-            </div>
-            <div class="auth-wrap">
-              <div class="author-img">
-                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/varun-bhagat.png" width="36" height="36" alt="Varun Bhagat">
-              </div>
-              <div class="entry-meta">
-                by 
-                <a href="#" title="Posts by Varun Bhagat" rel="author noopener follow" data-wpel-link="internal" target="_blank">Varun Bhagat</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="blog-post-col medium-size">
-          <div class="blog-image">
-            <picture><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/latest-img01.png" alt="pixel" loading="lazy">  </a>   </picture>
-          </div>
-          <div class="blog-content">
-            <span class="category"><a href="" data-wpel-link="internal" target="_blank" rel="follow noopener">Industries</a></span>
-            <div class="title"><a href="#">Building Topical Authority? How to 
-              Get It Right the First Time?</a>
-            </div>
-            <div class="auth-wrap">
-              <div class="author-img">
-                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/varun-bhagat.png" width="36" height="36" alt="Varun Bhagat">
-              </div>
-              <div class="entry-meta">
-                by 
-                <a href="#" title="Posts by Varun Bhagat" rel="author noopener follow" data-wpel-link="internal" target="_blank">Varun Bhagat</a>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+      <?php 
+      endwhile;      
+      global $wp_query;
+      $pagination_args = array(
+        'current' => max(1, get_query_var('paged')),
+        'total' => $wp_query->max_num_pages,
+        'prev_text' => __('Previous', 'pxlblog'),
+        'next_text' => __('Next', 'pxlblog')      
+      );
+      echo '<div class="pagination-section">'.paginate_links( $pagination_args ).'</div>';
+      else :
+      //get_template_part( 'template-parts/content', 'none' );
+      endif;
+      ?>      
       </div>
     </div>
+    <?php if( !is_paged() ) : ?>
     <div class="pc-blog-list">
       <div class="main-intro">
         <h2>Mobile App Development</h2>
@@ -614,6 +410,7 @@ $catBlockTwo  = get_field('row-c2', 'option');
         </div>
       </div>
     </div>
+    <?php endif; ?>
     <div class="cta-flex subscribe-footer">
       <div class="detail-subsbox subs-box">
         <div class="subs-head">
