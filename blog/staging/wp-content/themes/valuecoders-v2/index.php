@@ -12,7 +12,8 @@ $catBlockTwo  = get_field('row-c2', 'option');
 
 <section class="blog-main-page">
   <div class="container">
-    <div class="blog-cat">
+  <div class="mobile-active"><a href="javascript:void(0)">Blog Home</a></div>
+    <div class="blog-cat hidden" id="blog-cat">
       <ul>
         <li class="active mobhide"><a href="<?php echo site_url(); ?>">Blog Home</a></li>
         <li><a href="<?php echo get_category_link(3479); ?>">Dedicated Teams</a></li>
@@ -422,4 +423,13 @@ $catBlockTwo  = get_field('row-c2', 'option');
     </div>
   </div>
 </section>
+<script>
+const showDivButtons  = document.querySelectorAll('.mobile-active');
+const hiddenDivs      = document.querySelectorAll('.blog-cat');
+showDivButtons.forEach((button, index) => {
+  button.addEventListener('click', () => { 
+    hiddenDivs[index].classList.toggle('is-visible');
+  });
+});
+</script>
 <?php get_footer();

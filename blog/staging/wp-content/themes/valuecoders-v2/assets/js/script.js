@@ -1,3 +1,4 @@
+
 // Form Validation and Pop JS Start 
 
 var modal = document.querySelector(".modal");

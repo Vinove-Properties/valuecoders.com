@@ -28,9 +28,22 @@
 	  border-radius: 15px;
 	  border: 1px solid #f0f7ff;
 	   color: var(--yellow);
-	  border- color: var(--yellow);
+	  border-color: var(--yellow);
 	  display: block;
+	  position: relative;
 	}
+
+	.mobile-active a:after{content: "";
+		background: url(assets/images/down-arrow.png) no-repeat center;
+		background-size: auto;
+		background-size: auto;
+		background-size: 100%;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		right: 13px;
+		top: 15px;
+		background-size: 100%;}
 
 	.blog-cat{margin: 30px 0 0;}
   
@@ -38,6 +51,7 @@
 	  margin-right: 5px;
 	  display: inline-block;
 	}
+	
   
 	.blog-cat ul li a {
 	  padding: 11px 20px;
@@ -58,7 +72,7 @@
 	}
   
 	.top-content {
-	  margin:50px 0 0;
+	  margin:40px 0 0;
 	}
   
 	.top-content h1 {
@@ -467,8 +481,8 @@
 	}
   
 	.custom-left .btn-container .white-btn:hover {
-	  background: #016be3;
-	  border-color: #016be3;
+	  background: #05164D;
+	  border-color: #05164D;
 	  color: #fff;
 	  text-decoration: none;
 	}
@@ -915,11 +929,11 @@
 
 
 
-.pagination-section{ width: 100%;  justify-content: center; display: flex; padding: 80px 0;}
+.pagination-section{ width: 100%;  justify-content: center; display: flex; padding: 80px 0 20px;}
 .pagination-section .page-numbers{padding: 10px 15px; border: 1px solid rgba(235, 235, 235, 1); border-radius: 10px; color:#333333; margin: 0 10px;}
-.pagination-section .page-numbers:hover{background:var(--blue); color:var(--white); border- color: var(--yellow);}
+.pagination-section .page-numbers:hover{background:var(--blue); color:var(--white); border-color: var(--blue);}
 .pagination-section .page-numbers.dots{border:0;}
-.pagination-section .page-numbers.current{background:var(--blue); color:var(--white); border- color: var(--yellow);}
+.pagination-section .page-numbers.current{background:var(--blue); color:var(--white); border-color: var(--blue);}
 .pagination-section .page-numbers.next{border:0;}
 .pagination-section .page-numbers.prev {border:0;}
 
@@ -1010,6 +1024,7 @@
   @media (max-width: 1024px) {
 	.blog-main-page {
 	  padding: 120px 0 80px;
+	  .blog-cat{margin:0;}
 	  .blog-cat ul li {
 		margin: 0 5px 10px 0;
 	  }
@@ -1207,6 +1222,7 @@
 		display: block;
 		margin: 0 0 5px;
 	  }
+	  .blog-cat ul li.mobhide{display:none;}
 	  .blog-cat ul li a {
 		width: 100%;
 		display: block;
