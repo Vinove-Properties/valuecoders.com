@@ -1,6 +1,27 @@
 </main>
 <?php //get_template_part('inc/cmn', 'footer'); ?>
-
+<section class="experts-talk-first-section">
+  <div class="container">
+    <?php 
+    if( is_single() ){
+    echo '<h2>Subscribe to our blog</h2>';  
+    echo do_shortcode('[email-subscribers-form id="1"]');
+    }else{
+    ?>
+    <div class="head-txt text-center">
+      <h2>Got a Project in Mind?</h2>
+      <p>Let's embark on a journey to transform your idea into a compelling digital presence.</p>
+    </div>
+    <div class="cta-wrap margin-t-50  justify-center">
+    <div class="cta-btn">
+    <div class="btn-sec">
+    <a href="https://www.valuecoders.com/contact" class="btn rounded"><span class="text-white"> Talk To Our Experts</span></a>
+    </div>
+    </div>
+    </div>
+    <?php } ?>
+  </div>
+</section>
 <footer class="footer">
   <div class="container">
     <div class="dis-flex footer-top">
@@ -26,20 +47,13 @@
         <h3>Discover how we can 
           help your business grow
         </h3>
-
-
         <div class="cta-wrap  justify-center">
-      <div class="cta-btn">
-      <div class="btn-sec">
-<a href="https://www.valuecoders.com/contact" class="btn rounded"><span class="text-white">Get Started</span></a>
-</div>
-
-        
-      </div>
-    </div>
-
-
-
+          <div class="cta-btn">
+            <div class="btn-sec">
+              <a href="https://www.valuecoders.com/contact" class="btn rounded"><span class="text-white">Get Started</span></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="dis-flex footer-middle">
@@ -76,7 +90,6 @@
           <li><a href="#">Hire Mobile Developers</a></li>
           <li><a href="#">Hire Full-Stack Developers</a></li>
           <li><a href="#">Hire Low-Code Developers</a></li>
-
         </ul>
       </div>
       <div class="flex-5">
@@ -156,24 +169,23 @@
   </div>
 </footer>
 <div class="popup-section">
-<div id="intentPopup" class="popup-wrapper exit-intent-popup">
-  <div class="popWrap">
-    <div class="popup-content">
-      <span class="closeicon" onclick="closeIntPopUp('intentPopup', false);">      
-      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/cross-image.svg" alt="Valuecoders" width="11" height="11"></span>
-
-      <h2>Stay With Us</h2>
-      <h3>Are you looking for the perfect 
-        partner for your next software project?
-      </h3>
-      <p>Let's discuss how we can bring your vision to life.</p>
-      <div class="ctasec">
-        <a href="https://www.valuecoders.com/contact" class="book-btn">Book a Free Consultation</a>
-        <a href="javascript:void(0);" onclick="closeIntPopUp('intentPopup', true);" class="subscribe-btn">Subscribe to our newsletter</a>
+  <div id="intentPopup" class="popup-wrapper exit-intent-popup">
+    <div class="popWrap">
+      <div class="popup-content">
+        <span class="closeicon" onclick="closeIntPopUp('intentPopup', false);">      
+        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/cross-image.svg" alt="Valuecoders" width="11" height="11"></span>
+        <h2>Stay With Us</h2>
+        <h3>Are you looking for the perfect 
+          partner for your next software project?
+        </h3>
+        <p>Let's discuss how we can bring your vision to life.</p>
+        <div class="ctasec">
+          <a href="https://www.valuecoders.com/contact" class="book-btn">Book a Free Consultation</a>
+          <a href="javascript:void(0);" onclick="closeIntPopUp('intentPopup', true);" class="subscribe-btn">Subscribe to our newsletter</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 <?php wp_footer(); ?>
 </body>

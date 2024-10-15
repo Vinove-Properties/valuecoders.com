@@ -127,24 +127,11 @@
     <div class="second-row" id="stickytoc">
       <div class="buyers-guide">
         <div class="vcb-col-left" id="vcb-col-left">          
-          <?php 
-          $haspostPdf     = get_post_meta( $post->ID, 'post_pdf', true );
-          $haspostPdflink = get_post_meta( $post->ID, 'vc-post-pdf', true );
-          if( $haspostPdf || $haspostPdflink){
-          $guidename  = (!empty(get_post_meta($post->ID,'guide_name',true))) ? 
-          get_post_meta($post->ID,'guide_name',true) :  'A Complete Guide to<br> IT Outsourcing 2023';
-          echo '<div class="customcta padd1">
-            <div class="cushed">'.$guidename.'</div>
-            <div class="btn-container">
-              <a class="white-btn" onclick="_triggerEbook();" href="javascript:void(0);">Download Now</a>
-            </div>
-          </div>';
-          }
-          ?>
+          
           
           
           <?php if( $isTocDisable === false ) : ?>  
-          <div class="table-c" id="elm-toc">
+          <div class="table-c active" id="elm-toc">
             <h3>Table of Contents <a class="sw-hd" href="javascript:void(0);" onclick="document.getElementById('elm-toc').classList.toggle('active');">
               <span class="hide">(Hide)</span>
               <span class="show">(Show)</span>
@@ -154,29 +141,49 @@
             </div>
           </div>
           <?php endif; ?>
-          <div class="detail-subsbox">
-            <h3>Subscribe to our blog</h3>
-            <?php echo do_shortcode('[email-subscribers-form id="1"]'); ?>
-          </div>
+       
 
           <?php 
             $sbCTA = get_field('sb-cta');  
             if( (isset( $sbCTA['required'] ) && ($sbCTA['required'] != "no"))  || (!isset( $sbCTA['required']) ) ) :
             $sbText  = (isset( $sbCTA['text'] ) && !empty($sbCTA['text'])) ? $sbCTA['text'] : 'Struggling with Tech Complexity?';
             ?>
-          <div class="customcta">
-            <picture>
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/custom-image.svg" alt="pixel" width="209" height="140">
-            </picture>
-            <div class="cushed"><?php echo $sbText; ?></div>
-            <div class="btn-container">
-              <div class="btn-sec">
-                <a href="https://www.valuecoders.com/contact" target="_blank" class="btn rounded" data-wpel-link="external" rel="nofollow external noopener noreferrer"><span class="text-white">Book A Free Consultation</span></a>
-              </div>
+          <div class="customcta">          
+          <div class="cus-cont">
+          <div class="cushed"><?php echo $sbText; ?></div>
+          <!-- <div class="text"><?php echo $sbCTA; ?></div> -->
+          <div class="btn-container">
+            <div class="btn-sec">
+            <a href="https://www.valuecoders.com/contact" target="_blank" class="btn rounded" data-wpel-link="external" 
+            rel="nofollow external noopener noreferrer"><span class="text-white">Schedule A Call</span></a>
             </div>
           </div>
+          </div>
+          </div>
           <?php endif; ?>
-         
+          
+          <?php 
+          $haspostPdf     = get_post_meta( $post->ID, 'post_pdf', true );
+          $haspostPdflink = get_post_meta( $post->ID, 'vc-post-pdf', true );
+          if( $haspostPdf || $haspostPdflink){
+          $guidename  = (!empty(get_post_meta($post->ID,'guide_name',true))) ? 
+          get_post_meta($post->ID,'guide_name',true) :  'A Complete Guide to<br> IT Outsourcing 2023';
+          echo '<div class="customcta">
+            <div class="cushed">'.$guidename.'</div>
+            <div class="btn-container">
+              <a class="white-btn" onclick="_triggerEbook();" href="javascript:void(0);">Download Now</a>
+            </div>
+          </div>';
+          }
+          ?>
+
+        <?php /* ?>
+        <div class="detail-subsbox">
+          <h3>Subscribe to our blog</h3>
+          <?php echo do_shortcode('[email-subscribers-form id="1"]'); ?>
+        </div>
+        <?php */ ?> 
+        
         </div>
         <div class="vcb-col-right <?php echo ( $isTocDisable === true ) ? ' no-toc-row' : ''; ?>" id="vcb-col-right">
           <article id="post-<?php echo esc_attr( get_the_ID() ); ?>" class="nv-single-post-wrap">

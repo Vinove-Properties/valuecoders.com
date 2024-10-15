@@ -1,6 +1,4 @@
 
-
-
 //Sticky Section
 let vcbColRight = document.querySelector(".vcb-col-right");
 if( vcbColRight ){
