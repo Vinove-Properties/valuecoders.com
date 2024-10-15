@@ -90,7 +90,7 @@
   .footer-top .cta-wrap{margin:15px 0 0;}
   .footer-top  .cta-wrap .btn-sec .btn{background: #fff;     padding:13px 80px 13px 30px;}
   .footer-top  .cta-wrap .btn-sec .btn.rounded .text-white{color:#05164D;}
-  .footer-top  .btn-sec .btn.rounded::before{background: #05164D url(../images/white-icon.svg) 0 0 no-repeat; top: 2px; width: 40px; height: 40px;     background-position: center right 12px;}
+  .footer-top  .btn-sec .btn.rounded::before{background: #05164D url(../images/white-icon.svg) 0 0 no-repeat; top: 4px; width: 40px; height: 40px;     background-position: center right 12px;}
   .footer-top .cta-wrap .btn-sec .btn:hover{border-color: #05164D;
     background: #05164D; opacity:1;}
     .footer-top .cta-wrap .btn-sec .btn:hover .text-white{color:#fff;}
