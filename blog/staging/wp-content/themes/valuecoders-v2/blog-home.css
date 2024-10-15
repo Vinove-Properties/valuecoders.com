@@ -31,6 +31,8 @@
 	  border- color: var(--yellow);
 	  display: block;
 	}
+
+	.blog-cat{margin: 30px 0 0;}
   
 	.blog-cat ul li {
 	  margin-right: 5px;
@@ -56,7 +58,7 @@
 	}
   
 	.top-content {
-	  margin: 80px 0 0;
+	  margin:50px 0 0;
 	}
   
 	.top-content h1 {
@@ -65,6 +67,7 @@
 	  line-height: 75px;
 	  position: relative;
 	  width: max-content;
+	  margin: 0 0 30px;
 	}
   
 	.top-content h1:after {
@@ -88,7 +91,7 @@
 	  width: 100%;
 	  display: flex;
 	  align-items: center;
-	  padding: 40px 0 0;
+	  padding: 30px 0 0;
 	  justify-content: space-between;
 	}
   
