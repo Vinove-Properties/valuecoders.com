@@ -2039,7 +2039,7 @@ h1, .single h1.entry-title {
 
 .cust-secton1 .dis-flex{justify-content: space-between; align-items: center;}
 .cust-secton1 .colleft{flex-basis: 55%;}
-.cust-secton1 .colrit{flex-basis:30%;     text-align: right;}
+.cust-secton1 .colrit{flex-basis: 40%;  text-align: right;}
 .cust-secton1 .colrit a{color: #1D1C39 !important; text-decoration: none !important; display: initial !important;}
 .cust-secton1 .colrit a:hover{text-decoration: underline !important; background:#fff !important;}
 .colleft .pb-heading{color:#fff; font-size:20px; line-height:29px;  font-weight:600;}
