@@ -1,7 +1,3 @@
-.single  .header-two{background: linear-gradient(180deg, #211f47 0%, #05164d 100%);}
-.single .header-two.header-bg {background:transparent;}
-.single .header-two.header-bg:hover {background:#fff;}
-
 
 .header-two {
 	position: fixed;
@@ -14,6 +10,7 @@
 	padding: 25px 0;
 	z-index: 99;
 	transition: all 0.3s ease-in-out;
+	background: linear-gradient(180deg, #211f47 0%, #05164d 100%);
 }
 .header-two .container {
 	padding: 0 30px;
