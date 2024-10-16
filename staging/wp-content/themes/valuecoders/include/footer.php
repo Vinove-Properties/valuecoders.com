@@ -140,7 +140,7 @@ var data = "total_points=" + total_points + "&user_ip=" + user_ip + "&rating_pag
     <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/footer-iso-logo.png" alt="Valuecoders" width="97" height="69">
     </picture>    
     <a href="https://www.facebook.com/ValueCoders" target="_blank"><i class="social-icon facebook vlazy"></i></a>
-    <a href="https://twitter.com/ValueCoders" target="_blank"><i class="social-icon twitter vlazy"></i></a>
+    <a href="https://x.com/ValueCoders" target="_blank"><i class="social-icon twitter vlazy"></i></a>
     <a href="https://www.linkedin.com/company/valuecoders" target="_blank"><i class="social-icon linked-in vlazy"></i></a>
     <a href="https://www.instagram.com/valuecodersofficial_/?igshid=qfk286mq0wee" target="_blank"><i class="social-icon insta vlazy"></i></a>
     <a href="https://www.youtube.com/channel/UCCnijyLczGPUGI8aBkK3pTw?sub_confirmation=1" target="_blank"><i class="social-icon you-tube vlazy"></i></a>
