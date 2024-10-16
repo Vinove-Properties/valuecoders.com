@@ -752,15 +752,15 @@ textarea {
       display: inline-block;
       margin-left: 12px; }
       .footer .footer-last a:hover .social-icon.facebook {
-        background-position: 0 -49px; }
+        opacity: 0.8; }
       .footer .footer-last a:hover .social-icon.twitter {
-        background-position: -43px -49px; }
+        opacity: 0.8; }
       .footer .footer-last a:hover .social-icon.linked-in {
-        background-position: -86px -49px; }
+        opacity: 0.8; }
       .footer .footer-last a:hover .social-icon.insta {
-        background-position: -129px -49px; }
+        opacity: 0.8; }
       .footer .footer-last a:hover .social-icon.you-tube {
-        background-position: -173px -49px; }
+        opacity: 0.8; }
   .footer .icon {
     background: url(../images/footer-icons.png) 0 -34px no-repeat;
     width: 14px;
@@ -777,7 +777,7 @@ textarea {
   .footer .theme {
     margin-right: 20px; }
   .footer .social-icon {
-    background: url(../images/social-icon-sprite.png) 0 0 no-repeat;
+    background: url(../images/social-icons.svg) 0 0 no-repeat;
     width: 31px;
     height: 31px;
     display: inline-block; }

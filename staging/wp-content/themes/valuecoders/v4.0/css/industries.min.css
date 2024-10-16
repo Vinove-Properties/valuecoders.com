@@ -1,4 +1,4 @@
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (min-width: 768px) {
   @font-face {
     font-family: "Noto Sans";
     src: url("../fonts/NotoSans-Regular.woff2") format("woff2"), url("../fonts/NotoSans-Regular.woff") format("woff"), url("../fonts/NotoSans-Regular.ttf") format("truetype");
@@ -38,8 +38,8 @@ body {
   background-color: #ffffff;
   color: #656565;
   font-family: "Noto Sans", sans-serif;
-  font-weight: normal;
   font-size: 16px;
+  font-weight: inherit;
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale; }
@@ -86,6 +86,9 @@ h4 {
 
 h6 {
   font-size: 18px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit; }
 
 p {
   font-size: 16px;
@@ -749,15 +752,15 @@ textarea {
       display: inline-block;
       margin-left: 12px; }
       .footer .footer-last a:hover .social-icon.facebook {
-        background-position: 0 -49px; }
+        opacity: 0.8; }
       .footer .footer-last a:hover .social-icon.twitter {
-        background-position: -43px -49px; }
+        opacity: 0.8; }
       .footer .footer-last a:hover .social-icon.linked-in {
-        background-position: -86px -49px; }
+        opacity: 0.8; }
       .footer .footer-last a:hover .social-icon.insta {
-        background-position: -129px -49px; }
+        opacity: 0.8; }
       .footer .footer-last a:hover .social-icon.you-tube {
-        background-position: -173px -49px; }
+        opacity: 0.8; }
   .footer .icon {
     background: url(../images/footer-icons.png) 0 -34px no-repeat;
     width: 14px;
@@ -774,7 +777,7 @@ textarea {
   .footer .theme {
     margin-right: 20px; }
   .footer .social-icon {
-    background: url(../images/social-icon-sprite.png) 0 0 no-repeat;
+    background: url(../images/social-icons.svg) 0 0 no-repeat;
     width: 31px;
     height: 31px;
     display: inline-block; }
