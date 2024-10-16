@@ -72,7 +72,7 @@
         <h4>Our Expertise</h4>
         <ul>
           <li><a href="<?php echo $site_url.'outsource-software-product-development-services'; ?>">Software Product Engineering</a></li>
-          <li><a href="<?php echo $site_url.'outsource-software-product-development-services'; ?><?php echo site_url('/application-development'); ?>">Application Development</a></li>
+          <li><a href="<?php echo $site_url.'application-development'; ?>">Application Development</a></li>
           <li><a href="<?php echo site_url('/it-staff-augmentation-services'); ?>">Staff Augmentation</a></li>
           <li><a href="<?php echo site_url('/ecommerce-development-services'); ?>">eCommerce Development</a></li>
           <li><a href="<?php echo site_url('/cloud-services'); ?>">Cloud Services</a></li>
