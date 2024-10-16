@@ -4,12 +4,9 @@ get_header();
 $popularPosts = get_field('pop-posts', 'option');
 $popularPosts = explode(',', $popularPosts);
 
-//print_r($popularPosts); die;
-
 $catBlockOne  = get_field('row-c1', 'option');
 $catBlockTwo  = get_field('row-c2', 'option'); 
 ?>
-
 <section class="blog-main-page">
   <div class="container">
   <div class="mobile-active"><span class="blogtog" href="javascript:void(0)">Blog Home</span></div>
@@ -209,209 +206,185 @@ $catBlockTwo  = get_field('row-c2', 'option');
       </div>
     </div>
     <?php if( !is_paged() ) : ?>
-    <div class="pc-blog-list">
-      <div class="main-intro">
-        <h2>Mobile App Development</h2>
-        <a href="#" class="view-all-link" target="_blank" rel="noopener">
-        View All
-        </a>
+<?php 
+if( 
+  isset($catBlockOne['required']) && 
+  ($catBlockOne['required'] == "yes") && 
+  is_array( $catBlockOne['cat-tab'] ) && 
+  (count($catBlockOne['cat-tab']) > 0)  
+) :
+$getActiveCat = $catBlockOne['cat-tab'][0]['link'];
+?>
+<div class="pc-blog-list" id="cat-sec-1">
+<div class="main-intro">
+<h2><?php echo $catBlockOne['title']; ?></h2>
+<a href="<?php echo $getActiveCat; ?>" class="view-all-link" target="_blank" rel="noopener">View All</a>
+</div>
+  <div class="devs-category">
+    <?php   
+    echo '<ul class="tabing_panel">';
+    $tb = 0;
+    foreach( $catBlockOne['cat-tab'] as $tab ){
+      $tb++;
+      $isActive = ( $tb === 1 ) ? 'active' : ''; 
+      echo '<li onclick="switchCat(\'cat-sec-1\', \'term_ID-'.$tab['tag-posts']->term_id.'\', this);" 
+      data-link="'.$tab['link'].'" class="'.$isActive.'">'.$tab['tag-posts']->name.'</li>';
+    }
+    echo '</ul>';    
+    ?>
+  </div> 
+  <?php 
+  $tc = 0;  
+  foreach( $catBlockOne['cat-tab'] as $catBlock ){
+    if( $catBlock['tag-posts'] ){ $tc++;
+    $isActive = ( $tc === 1 ) ? 'active' : '';   
+    $catID      = $catBlock['tag-posts']->term_id;
+    $postBlock  = pxlGetTopThreePosts( $catID, 'tag' );
+    ?>     
+    <div class="blog-posts-list two-columns developsc tabc-elm <?php echo $isActive; ?>" id="term_ID-<?php echo $catID; ?>">
+      <div class="blog-post-col big-size">
+      <?php
+      if( isset($postBlock[0]) ){
+        echo bigBlockPost( $postBlock[0] );
+      }
+      ?>
       </div>
-      <div class="devs-category">
-        <ul class="tabing_panel">
-          <li class="active">Android</li>
-          <li class="">iOS</li>
-          <li class="">React Native</li>
-          <li class="">Flutter</li>
-          <li class="">App Development</li>
-        </ul>
+      <div class="blog-post-col medium-size">
+      <div class="develop-row wid-75" id="pc1-sp">
+        <?php 
+        if( isset($postBlock[1] ) ){
+          echo smallBlockPost($postBlock[1]);
+        }
+
+        if( isset( $postBlock[2] ) ){
+          echo smallBlockPost($postBlock[2]);
+        }
+        ?>
       </div>
-      <div class="blog-posts-list  two-columns developsc">
-        <div class="blog-post-col big-size">
+      
+      <div class="develop-row wid-35 bg-yellow">
+        <div class="devs-col">
           <div class="blog-image">
-            <a href="" data-wpel-link="internal" rel="follow noopener"><img width="1024" height="462" src="<?php bloginfo('template_url'); ?>/assets/images/dm-image.png" alt="pixel" loading="lazy"> </a>
+            <?php 
+            if( $catBlockOne['e-image'] ){
+            echo '<picture>
+            <img src="'.$catBlockOne['e-image']['url'].'" 
+            height="'.$catBlockOne['e-image']['height'].'" 
+            width="'.$catBlockOne['e-image']['width'].'" 
+            alt="pixel" loading="lazy">
+            </picture>';  
+            }
+            ?>
           </div>
           <div class="blog-content">
-            <span class="category"><a href="" data-wpel-link="internal" rel="follow noopener">Digital Marketing</a></span>
-            <div class="title two-line"><a href="" data-wpel-link="internal" rel="follow noopener">10 Reasons Your Agency Needs White Label Digital Marketing Service</a></div>
-            <div class="auth-wrap">
-              <div class="author-img">
-                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/varun-bhagat.png" width="36" height="36" alt="Varun Bhagat">
-              </div>
-              <div class="entry-meta">
-                by
-                <a href="#" title="Posts by Varun Bhagat" rel="author noopener follow" data-wpel-link="internal">Varun Bhagat</a>
-              </div>
+            <div class="title three-line"><?php echo $catBlockOne['e-title']; ?></div>
+            <p><?php echo $catBlockOne['e-text']; ?></p>
+            <div class="btn-container">
+              <a class="white-btn blue pxl-ext" 
+              onclick="geteBookpopup('<?php echo $catBlockOne['e-title']; ?>', '<?php echo $catBlockOne['e-link']; ?>')" href="javascript:void(0);">Download Now</a>
             </div>
           </div>
         </div>
-        <div class="blog-post-col medium-size">
-          <div class="develop-row wid-75">
-            <div class="devs-col">
-              <div class="blog-image">
-                <picture><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/grid-01.png" alt="pixel" loading="lazy"> </a> </picture>
-              </div>
-              <div class="blog-content">
-                <span class="category"><a href="" data-wpel-link="internal" target="_blank" rel="noopener follow">Industries</a></span>
-                <div class="title three-line"><a href="#">Building Topical Authority? How to
-                  Get It Right the First Time?</a>
-                </div>
-                <div class="auth-wrap">
-                  <div class="author-img">
-                    <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/varun-bhagat.png" width="36" height="36" alt="Varun Bhagat">
-                  </div>
-                  <div class="entry-meta">
-                    by
-                    <a href="#" title="Posts by Varun Bhagat" rel="author noopener follow" data-wpel-link="internal" target="_blank">Varun Bhagat</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="devs-col">
-              <div class="blog-image">
-                <picture><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/grid-01.png" alt="pixel" loading="lazy"> </a> </picture>
-              </div>
-              <div class="blog-content">
-                <span class="category"><a href="" data-wpel-link="internal" target="_blank" rel="noopener follow">Industries</a></span>
-                <div class="title three-line"><a href="#">Building Topical Authority? How to
-                  Get It Right the First Time?</a>
-                </div>
-                <div class="auth-wrap">
-                  <div class="author-img">
-                    <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/varun-bhagat.png" width="36" height="36" alt="Varun Bhagat">
-                  </div>
-                  <div class="entry-meta">
-                    by
-                    <a href="#" title="Posts by Varun Bhagat" rel="author noopener follow" data-wpel-link="internal" target="_blank">Varun Bhagat</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="develop-row wid-35 bg-yellow">
-            <div class="devs-col">
-              <div class="blog-image">
-                <picture><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/cta-img01.png" alt="pixel" loading="lazy"> </a> </picture>
-              </div>
-              <div class="blog-content">
-                <div class="title three-line"><a href="#">From an amazing
-                  idea to an amazing
-                  app that</a>
-                </div>
-                <p>Learn the secret to how to
-                  enter the world of mobile
-                  apps .....
-                </p>
-                <div class="btn-container">
-                  <a target="_blank" class="white-btn blue pxl-ext" href="https://www.valuecoders.com/contact" data-wpel-link="internal" rel="noopener follow">Download Now</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+
       </div>
     </div>
-    <div class="pc-blog-list">
-      <div class="main-intro">
-        <h2>Mobile App Development</h2>
-        <a href="#" class="view-all-link" target="_blank" rel="noopener">
-        View All
-        </a>
+    <?php 
+    }
+  }
+  ?>
+</div>
+<?php endif; ?>
+
+<?php 
+if( 
+  isset($catBlockTwo['required']) && 
+  ($catBlockTwo['required'] == "yes") && 
+  is_array( $catBlockTwo['cat-tab'] ) && 
+  (count($catBlockTwo['cat-tab']) > 0)  
+) :
+$getActiveCat = $catBlockTwo['cat-tab'][0]['link'];
+?>
+<div class="pc-blog-list" id="cat-sec-2">
+<div class="main-intro">
+<h2><?php echo $catBlockTwo['title']; ?></h2>
+<a href="<?php echo $getActiveCat; ?>" class="view-all-link" target="_blank" rel="noopener">View All</a>
+</div>
+  <div class="devs-category">
+    <?php   
+    echo '<ul class="tabing_panel">';
+    $tb = 0;
+    foreach( $catBlockTwo['cat-tab'] as $tab ){
+      $tb++;
+      $isActive = ( $tb === 1 ) ? 'active' : ''; 
+      echo '<li onclick="switchCat(\'cat-sec-2\', \'term_ID-'.$tab['tag-posts']->term_id.'\', this);" 
+      data-link="'.$tab['link'].'" class="'.$isActive.'">'.$tab['tag-posts']->name.'</li>';
+    }
+    echo '</ul>';    
+    ?>
+  </div> 
+  <?php 
+  $tc = 0;  
+  foreach( $catBlockTwo['cat-tab'] as $catBlock ){
+    if( $catBlock['tag-posts'] ){ $tc++;
+    $isActive = ( $tc === 1 ) ? 'active' : '';   
+    $catID      = $catBlock['tag-posts']->term_id;
+    $postBlock  = pxlGetTopThreePosts( $catID, 'tag' );
+    ?>     
+    <div class="blog-posts-list two-columns developsc tabc-elm <?php echo $isActive; ?>" id="term_ID-<?php echo $catID; ?>">
+      <div class="blog-post-col big-size">
+      <?php
+      if( isset($postBlock[0]) ){
+        echo bigBlockPost( $postBlock[0] );
+      }
+      ?>
       </div>
-      <div class="devs-category">
-        <ul class="tabing_panel">
-          <li class="active">Android</li>
-          <li class="">iOS</li>
-          <li class="">React Native</li>
-          <li class="">Flutter</li>
-          <li class="">App Development</li>
-        </ul>
+      <div class="blog-post-col medium-size">
+      <div class="develop-row wid-75" id="pc2-sp">
+        <?php 
+        if( isset($postBlock[1] ) ){
+          echo smallBlockPost($postBlock[1]);
+        }
+
+        if( isset( $postBlock[2] ) ){
+          echo smallBlockPost($postBlock[2]);
+        }
+        ?>
       </div>
-      <div class="blog-posts-list  two-columns developsc">
-        <div class="blog-post-col big-size">
+      <div class="develop-row wid-35 bg-blue">
+        <div class="devs-col">
           <div class="blog-image">
-            <a href="" data-wpel-link="internal" rel="follow noopener"><img width="1024" height="462" src="<?php bloginfo('template_url'); ?>/assets/images/dm-image.png" alt="pixel" loading="lazy"> </a>
+            <?php 
+            if( $catBlockTwo['e-image'] ){
+            echo '<picture>
+            <img src="'.$catBlockTwo['e-image']['url'].'" 
+            height="'.$catBlockTwo['e-image']['height'].'" 
+            width="'.$catBlockTwo['e-image']['width'].'" 
+            alt="pixel" loading="lazy">
+            </picture>';  
+            }
+            ?>
           </div>
           <div class="blog-content">
-            <span class="category"><a href="" data-wpel-link="internal" rel="follow noopener">Digital Marketing</a></span>
-            <div class="title two-line"><a href="" data-wpel-link="internal" rel="follow noopener">10 Reasons Your Agency Needs White Label Digital Marketing Service</a></div>
-            <div class="auth-wrap">
-              <div class="author-img">
-                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/varun-bhagat.png" width="36" height="36" alt="Varun Bhagat">
-              </div>
-              <div class="entry-meta">
-                by
-                <a href="#" title="Posts by Varun Bhagat" rel="author noopener follow" data-wpel-link="internal">Varun Bhagat</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="blog-post-col medium-size">
-          <div class="develop-row wid-75">
-            <div class="devs-col">
-              <div class="blog-image">
-                <picture><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/grid-01.png" alt="pixel" loading="lazy"> </a> </picture>
-              </div>
-              <div class="blog-content">
-                <span class="category"><a href="" data-wpel-link="internal" target="_blank" rel="noopener follow">Industries</a></span>
-                <div class="title three-line"><a href="#">Building Topical Authority? How to
-                  Get It Right the First Time?</a>
-                </div>
-                <div class="auth-wrap">
-                  <div class="author-img">
-                    <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/varun-bhagat.png" width="36" height="36" alt="Varun Bhagat">
-                  </div>
-                  <div class="entry-meta">
-                    by
-                    <a href="#" title="Posts by Varun Bhagat" rel="author noopener follow" data-wpel-link="internal" target="_blank">Varun Bhagat</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="devs-col">
-              <div class="blog-image">
-                <picture><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/grid-01.png" alt="pixel" loading="lazy"> </a> </picture>
-              </div>
-              <div class="blog-content">
-                <span class="category"><a href="" data-wpel-link="internal" target="_blank" rel="noopener follow">Industries</a></span>
-                <div class="title three-line"><a href="#">Building Topical Authority? How to
-                  Get It Right the First Time?</a>
-                </div>
-                <div class="auth-wrap">
-                  <div class="author-img">
-                    <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/varun-bhagat.png" width="36" height="36" alt="Varun Bhagat">
-                  </div>
-                  <div class="entry-meta">
-                    by
-                    <a href="#" title="Posts by Varun Bhagat" rel="author noopener follow" data-wpel-link="internal" target="_blank">Varun Bhagat</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="develop-row wid-35 bg-yellow">
-            <div class="devs-col">
-              <div class="blog-image">
-                <picture><a href="#" target="_blank"><img src="<?php bloginfo('template_url'); ?>/assets/images/cta-img01.png" alt="pixel" loading="lazy"> </a> </picture>
-              </div>
-              <div class="blog-content">
-                <div class="title three-line"><a href="#">From an amazing
-                  idea to an amazing
-                  app that</a>
-                </div>
-                <p>Learn the secret to how to
-                  enter the world of mobile
-                  apps .....
-                </p>
-                <div class="btn-container">
-                  <a target="_blank" class="white-btn blue pxl-ext" href="https://www.valuecoders.com/contact" data-wpel-link="internal" rel="noopener follow">Download Now</a>
-                </div>
-              </div>
+            <div class="title three-line"><?php echo $catBlockTwo['e-title']; ?></div>
+            <p><?php echo $catBlockTwo['e-text']; ?></p>
+            <div class="btn-container">
+              <a class="white-btn blue pxl-ext" 
+              onclick="geteBookpopup('<?php echo $catBlockTwo['e-title']; ?>', '<?php echo $catBlockTwo['e-link']; ?>')" 
+              href="javascript:void(0);">Download Now</a>
             </div>
           </div>
         </div>
       </div>
+      </div>
     </div>
-    <?php endif; ?>
+    <?php 
+    }
+  }
+  ?>
+</div>
+<?php 
+endif; endif; // Ignore For Paged ?>
     <div class="cta-flex subscribe-footer">
       <div class="detail-subsbox subs-box">
         <div class="subs-head">
