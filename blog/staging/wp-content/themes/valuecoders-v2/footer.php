@@ -77,7 +77,6 @@
           <li><a href="<?php echo $site_url.'ecommerce-development-services'; ?>">eCommerce Development</a></li>
           <li><a href="<?php echo $site_url.'cloud-services'; ?>">Cloud Services</a></li>
           <li><a href="<?php echo $site_url.'ai'; ?>">AI & ML</a></li>
-          <li><a href="<?php echo $site_url.'hire-software-developers-india'; ?>">Hire Software Developers</a></li>
         </ul>
       </div>
       <div class="flex-5">
