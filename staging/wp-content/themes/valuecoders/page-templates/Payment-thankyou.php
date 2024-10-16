@@ -39,7 +39,7 @@ Template Name: Payment Thankyou
 	
 	<li><a href="https://www.facebook.com/ValueCoders"><img src="<?php bloginfo('template_url'); ?>/images/facebookicon.png"></a></li>
 	<li><a href="https://www.instagram.com/valuecodersofficial_/?igshid=qfk286mq0wee"><img src="<?php bloginfo('template_url'); ?>/images/instagramicon.png"></a></li>
-	<li><a href="https://twitter.com/ValueCoders"><img src="<?php bloginfo('template_url'); ?>/images/Twitter.png"></a></li>
+	<li><a href="https://twitter.com/ValueCoders"><img src="<?php bloginfo('template_url'); ?>/images/Twitter.svg"></a></li>
 	<li><a href="https://www.linkedin.com/company/valuecoders"><img src="<?php bloginfo('template_url'); ?>/images/linkedinicon.png"></a></li>
 	</ul>
 </div>
