@@ -26,6 +26,23 @@ function windowOnClick(event) {
 }
 
 if( trigger !== null ){
+    for( let i = 0; i < trigger.length; i++ ){
+        trigger[i].addEventListener("click", toggleModal);
+    }
+}
+
+if( imgtrigger !== null ){
+    for( let i = 0; i < imgtrigger.length; i++ ){
+        //console.log("Counter " + i);
+        imgtrigger[i].addEventListener("click", toggleModal);
+    }
+}
+
+function _triggerEbook(){
+    toggleModal();
+}
+
+if( trigger !== null ){
     trigger.addEventListener("click", toggleModal);    
 }
 
@@ -41,8 +58,7 @@ if( closeButton !== null ){
     closeButton.addEventListener("click", toggleModal);
 }
 window.addEventListener("click", windowOnClick);
-
-//*Form Validation Code Starts*/
+/*Form Validation Code Starts*/
 const vcform    = document.getElementById('vc-lead-form');
 const fname     = document.getElementById('first_name');
 const email     = document.getElementById('txtEmail');

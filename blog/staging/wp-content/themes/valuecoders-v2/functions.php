@@ -88,13 +88,13 @@ function valuecoders_scripts() {
       $reqEbook = true;  
     }elseif( is_single() ){
       $haspostPdf     = get_post_meta( $post->ID, 'post_pdf', true );
-      $haspostPdflink = get_post_meta( $post->ID, 'vc-post-pdf', true );  
-      if( $haspostPdf || $haspostPdflink){ 
+      $haspostPdflink = get_post_meta( $post->ID, 'vc-post-pdf', true );
+      if( $haspostPdf || $haspostPdflink ){ 
         $reqEbook = true; 
       }  
     }
 
-    if( $reqEbook === true ){      
+    if( $reqEbook === true ){
       wp_enqueue_script( 'pxl-ebook', get_template_directory_uri() . '/assets/js/ebook-v2.js', array(), time(), true );
       wp_localize_script( 'pxl-ebook', 'pxlObj', 
       [

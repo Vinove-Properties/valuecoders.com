@@ -434,4 +434,76 @@ endif; // Ignore For Paged ?>
 </div>
 </div>
 </section>
+<div id="eb-modal" 
+class="modal <?php echo (isset($_GET['ep-action']) && ($_GET['ep-action'] == "show")) ? 'show-modal epaction': ''; ?>">
+  <section class="pop-up-section">
+    <span class="close-button">×</span>
+    <div class="container" id="formid">
+      <h2>Download Your FREE e-Guide NOW!</h2>
+      <p>Discover What, Why & How of "<span id="eguide-title"></span>" with this FREE e-Guide!</p>
+      <div class="left-right-box">        
+        <?php 
+        if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !empty($_GET['hash'])){
+          echo '<div class="afterverify">';  
+          global $wpdb; 
+          $email    = $_GET['email'];
+          $hashval  = $_GET['hash'];
+          $result   = $wpdb->get_row( $wpdb->prepare("SELECT * FROM `wp_ebookdata` where hashcode = '%s' AND 
+          email = '%s'", $hashval, $email ) );
+          if($result){
+            $eData = unserialize( $result->pdflink );
+            if( isset( $eData['file'] ) && !empty( $eData['file'] ) ){
+            echo '<h3>Thank you for verifying your email id. Please click on Download button to download your e-guide</h3>';
+            echo '<button id="temp-epf-title" data-title="'.$eData['title'].'"><a href="'.$eData['file'].'" download>Download Now</a></button>';  
+            }         
+          }
+          echo '</div>';
+        }else{
+        ?>        
+        <div class="rightnew">
+          <div class="left-img">
+            <picture>
+              <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/dev-img/pdf-book.png">
+              <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/dev-img/pdf-book.png">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/pdf-book.png" alt="PixelCrayons" 
+              width="215" height="277">
+            </picture>
+          </div>
+          <div class="right-img">
+            <p id="responce" style="color:#fff;"></p>
+            <form method="post" onsubmit="return _eBookDownload( this );" id="elm-eForm" class="orderform eguide-section">
+              <p>Fill out the form below to download the e-Guide now.</p>
+              <div class="">
+                <input type="text" maxlength="50" name="firstName" id="first_name" placeholder="Enter your full name"
+                class="input-field" onkeypress="return ValidateName(event,'lblError_firstname','firstName');" value="">
+                <small class="error-msg-section" id="lblError_firstname"></small>
+              </div>
+              <div class="">
+                <input type="email" placeholder="Enter your Email Address" maxlength="50" id="txtEmail" 
+                class="input-field" value="" name="email">
+                <small class="error-msg-section" id="lblError_email"></small>
+              </div>
+              <div class="country-fld">
+                <input type="text" placeholder="Enter your Country"
+                maxlength="25" class="input-field" value="" name="country" id="country" 
+                onkeypress="return ValidateName(event,'lblError_country','country');">
+                <small class="error-msg-section" id="lblError_country"></small>
+              </div>
+              <div class="">
+                <input type="tel" placeholder="Enter your Phone Number" class="input-field" value="" name="phone" 
+                id="phone_no" maxlength="20">
+                <small class="error-msg-section" id="lblError_phone"></small>
+              </div>
+              <input type="hidden" value="" name="pd-elink" id="pdf-elink">
+              <input type="hidden" value="" name="posttitle" id="input-etitle">              
+              <input type="submit" id="pxldebtn" name="submit-me" value="Download Our e-Guide">
+              <p id="errResp" style="padding:20px 10px;background:#fff;color:#f21010;margin-top:20px;display: none;"></p>
+            </form>
+          </div>
+        </div>
+        <?php } ?>
+      </div>
+    </div>
+  </section>
+</div>
 <?php get_footer();
