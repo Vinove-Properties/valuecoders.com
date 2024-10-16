@@ -74,20 +74,37 @@ function valuecoders_scripts() {
 	wp_dequeue_style( 'wp-block-library' );
     wp_dequeue_style( 'wp-block-library-theme' );
     wp_deregister_script( 'wp-embed' );
-    if(is_single()){
-        $haspostPdf     = get_post_meta( $post->ID, 'post_pdf', true );
-        $haspostPdflink = get_post_meta( $post->ID, 'vc-post-pdf', true );
-        if( $haspostPdf || $haspostPdflink){ 
-        wp_enqueue_script('vc-ebook', get_stylesheet_directory_uri().'/assets/js/ebook.js', array(), time(), 'true');
-        wp_localize_script('vc-ebook', 'vcObj',['ajaxurl' => admin_url('admin-ajax.php'), 'site_url' => get_bloginfo('url')]);
-        }
-        /*
-        $sliderScript = "jQuery(document).ready(function($){
-        jQuery('.creview-slider').slick({dots:false,infinite:true,speed:300,slidesToShow:1,adaptiveHeight:true});
-        })";
-        wp_add_inline_script( 'vc-silk-slider', $sliderScript );
-        */
+    // if(is_single()){
+    //     $haspostPdf     = get_post_meta( $post->ID, 'post_pdf', true );
+    //     $haspostPdflink = get_post_meta( $post->ID, 'vc-post-pdf', true );
+    //     if( $haspostPdf || $haspostPdflink){ 
+    //     wp_enqueue_script('vc-ebook', get_stylesheet_directory_uri().'/assets/js/ebook.js', array(), time(), 'true');
+    //     wp_localize_script('vc-ebook', 'vcObj',['ajaxurl' => admin_url('admin-ajax.php'), 'site_url' => get_bloginfo('url')]);
+    //     }
+    // }
+
+    $reqEbook = false;
+    if( is_front_page() ){
+      $reqEbook = true;  
+    }elseif( is_single() ){
+      $haspostPdf     = get_post_meta( $post->ID, 'post_pdf', true );
+      $haspostPdflink = get_post_meta( $post->ID, 'vc-post-pdf', true );  
+      if( $haspostPdf || $haspostPdflink){ 
+        $reqEbook = true; 
+      }  
     }
+
+    if( $reqEbook === true ){      
+      wp_enqueue_script( 'pxl-ebook', get_template_directory_uri() . '/assets/js/ebook-v2.js', array(), time(), true );
+      wp_localize_script( 'pxl-ebook', 'pxlObj', 
+      [
+        'tpl_url'     => get_bloginfo('template_url'),
+        'web_url'     => get_bloginfo('url'),
+        'admin_ajax'  => admin_url('admin-ajax.php')
+       ]
+      );
+      wp_enqueue_style( 'pxl-ebook', get_stylesheet_directory_uri() . '/assets/css/pxl-ebook.css', array(), time() );  
+    }   
 
 	wp_enqueue_style( 'valuecoders-style', get_stylesheet_uri(), array(), _S_VERSION );
 	//wp_enqueue_style( 'vc-navigation', get_template_directory_uri().'/assets/css/vc-menu.css', array(), _S_VERSION );

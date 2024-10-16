@@ -12,7 +12,7 @@ endif;
 }
 ?>
 
-<?php  
+<?php
 //if( is_page_template( 'page-templates/template-hirepage.php' ) ) : 
 $relatedServices = get_field('rel-services');
 if( $relatedServices ){
