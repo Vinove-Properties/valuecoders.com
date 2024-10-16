@@ -73,39 +73,39 @@
         <ul>
           <li><a href="<?php echo $site_url.'outsource-software-product-development-services'; ?>">Software Product Engineering</a></li>
           <li><a href="<?php echo $site_url.'application-development'; ?>">Application Development</a></li>
-          <li><a href="<?php echo site_url('/it-staff-augmentation-services'); ?>">Staff Augmentation</a></li>
-          <li><a href="<?php echo site_url('/ecommerce-development-services'); ?>">eCommerce Development</a></li>
-          <li><a href="<?php echo site_url('/cloud-services'); ?>">Cloud Services</a></li>
-          <li><a href="<?php echo site_url('/ai'); ?>">AI & ML</a></li>
-          <li><a href="<?php echo site_url('/hire-software-developers-india'); ?>">Hire Software Developers</a></li>
+          <li><a href="<?php echo $site_url.'it-staff-augmentation-services'; ?>">Staff Augmentation</a></li>
+          <li><a href="<?php echo $site_url.'ecommerce-development-services'; ?>">eCommerce Development</a></li>
+          <li><a href="<?php echo $site_url.'cloud-services'; ?>">Cloud Services</a></li>
+          <li><a href="<?php echo $site_url.'ai'; ?>">AI & ML</a></li>
+          <li><a href="<?php echo $site_url.'hire-software-developers-india'; ?>">Hire Software Developers</a></li>
         </ul>
       </div>
       <div class="flex-5">
         <h4>Hire Developers</h4>
         <ul>
-          <li><a href="<?php echo site_url('/hire-backend-developers'); ?>">Hire Backend Developers</a></li>
-          <li><a href="<?php echo site_url('/hire-front-end-developers'); ?>">Hire Frontend Developers</a></li>
-          <li><a href="<?php echo site_url('/hire-ecommerce-developers'); ?>">Hire eCommerce Developers</a></li>
-          <li><a href="<?php echo site_url('/hire-blockchain-developers'); ?>">Hire Blockchain Developers</a></li>
-          <li><a href="<?php echo site_url('/hire-mobile-app-developers '); ?>">Hire Mobile Developers</a></li>
-          <li><a href="<?php echo site_url('/hire-full-stack-developers'); ?>">Hire Full-Stack Developers</a></li>
-          <li><a href="<?php echo site_url('/services/low-code-no-code'); ?>">Hire Low-Code Developers</a></li>
+          <li><a href="<?php echo $site_url.'hire-backend-developers'; ?>">Hire Backend Developers</a></li>
+          <li><a href="<?php echo $site_url.'hire-front-end-developers'; ?>">Hire Frontend Developers</a></li>
+          <li><a href="<?php echo $site_url.'hire-ecommerce-developers'; ?>">Hire eCommerce Developers</a></li>
+          <li><a href="<?php echo $site_url.'hire-blockchain-developers'; ?>">Hire Blockchain Developers</a></li>
+          <li><a href="<?php echo $site_url.'hire-mobile-app-developers'; ?>">Hire Mobile Developers</a></li>
+          <li><a href="<?php echo $site_url.'hire-full-stack-developers'; ?>">Hire Full-Stack Developers</a></li>
+          <li><a href="<?php echo $site_url.'services/low-code-no-code'; ?>">Hire Low-Code Developers</a></li>
         </ul>
       </div>
       <div class="flex-5">
         <h4>Solutions</h4>
         <ul>
-          <li><a href="<?php echo site_url('/offshore-software-development-center-india'); ?>">Offshore Development Center</a></li>
-          <li><a href="<?php echo site_url('/offshore-software-development-services-company'); ?>">Offshore Software Development</a></li>
-          <li><a href="<?php echo site_url('/nearshore-software-development-services'); ?>">Nearshore Software Development</a></li>
+          <li><a href="<?php echo $site_url.'offshore-software-development-center-india'; ?>">Offshore Development Center</a></li>
+          <li><a href="<?php echo $site_url.'offshore-software-development-services-company'; ?>">Offshore Software Development</a></li>
+          <li><a href="<?php echo $site_url.'nearshore-software-development-services'; ?>">Nearshore Software Development</a></li>
         </ul>
       </div>
       <div class="flex-5">
         <h4>Clients We Serve</h4>
         <ul>
-          <li><a href="<?php echo site_url('/startup-product-development'); ?>">For Startups</a></li>
-          <li><a href="<?php echo site_url('/enterprise-software-development-services'); ?>">For Enterprises</a></li>
-          <li><a href="<?php echo site_url('/agencies-software-development-services'); ?>">For Agencies</a></li>
+          <li><a href="<?php echo $site_url.'startup-product-development'; ?>">For Startups</a></li>
+          <li><a href="<?php echo $site_url.'enterprise-software-development-services'; ?>">For Enterprises</a></li>
+          <li><a href="<?php echo $site_url.'agencies-software-development-services'; ?>">For Agencies</a></li>
         </ul>
       </div>
     </div>
