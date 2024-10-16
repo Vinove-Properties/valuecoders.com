@@ -12,7 +12,7 @@ $catBlockTwo  = get_field('row-c2', 'option');
 
 <section class="blog-main-page">
   <div class="container">
-  <div class="mobile-active"><a href="javascript:void(0)">Blog Home</a></div>
+  <div class="mobile-active"><span class="blogtog" href="javascript:void(0)">Blog Home</span></div>
     <div class="blog-cat hidden" id="blog-cat">
       <ul>
         <li class="active mobhide"><a href="<?php echo site_url(); ?>">Blog Home</a></li>

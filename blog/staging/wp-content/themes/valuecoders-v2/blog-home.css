@@ -22,7 +22,7 @@
 	  display: none;
 	}
   
-	.mobile-active a {
+	.mobile-active .blogtog {
 	  padding: 10px 20px;
 	  background: #f0f7ff;
 	  border-radius: 15px;
@@ -31,9 +31,10 @@
 	  border-color: var(--yellow);
 	  display: block;
 	  position: relative;
+	  cursor: pointer;
 	}
 
-	.mobile-active a:after{content: "";
+	.mobile-active .blogtog:after{content: "";
 		background: url(assets/images/down-arrow.png) no-repeat center;
 		background-size: auto;
 		background-size: auto;
@@ -1415,8 +1416,8 @@ height: 30px !important; font-size: 0;}
 		margin: 0 0 5px;
 	  }
 	  .blog-posts-list .blog-post-col.medium-size .title {
-		font-size: 18px;
-		line-height: 30px;
+		font-size: 17px;
+        line-height: 26px
 	  }
 	  .blog-posts-list.list-view .auth-wrap {
 		margin: 15px 0 0;
