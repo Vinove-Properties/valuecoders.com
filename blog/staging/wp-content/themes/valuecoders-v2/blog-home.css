@@ -239,7 +239,8 @@
 	.main-intro .view-all-link:hover {
 	  text-decoration: underline;
 	}
-  
+  .blog-posts-list.tabc-elm{display:none !important;}
+  .blog-posts-list.tabc-elm.active{display:flex !important;}
 	.blog-posts-list {
 	  width: 100%;
 	  height: auto;

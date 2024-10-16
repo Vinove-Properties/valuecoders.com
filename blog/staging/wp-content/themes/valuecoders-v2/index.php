@@ -111,6 +111,42 @@ $catBlockTwo  = get_field('row-c2', 'option');
         <?php echo do_shortcode('[email-subscribers-form id="1"]'); ?>
       </div>
     </div>
+
+    <?php 
+    $videoBlock  = get_field('px-videos', 'option');
+    if( isset( $videoBlock['required'] ) && ($videoBlock['required'] == "yes") ) : ?>
+    <div class="pc-blog-list videos-post">
+      <div class="main-intro">
+        <h2><?php echo $videoBlock['title']; ?></h2>
+        <a href="https://www.youtube.com/@pixelcrayons" class="view-all-link" target="_blank" rel="noopener">View All</a>
+      </div>
+      <div class="blog-posts-list three-columns">
+        <?php 
+        if( $videoBlock['videos'] ){
+          foreach( $videoBlock['videos'] as $video ){
+          $viidThumb = ( $video['thumb'] ) ? $video['thumb']['url'] : 
+          get_bloginfo('template_url').'/dev-img/default-image.jpg';
+
+          echo '<div class="blog-post-col medium-size">
+          <div class="blog-image">
+            <span class="play-btn" onclick="_playYTmedia(\''.$video['link'].'\')">
+            <img alt="play btn" loading="lazy" src="'.get_bloginfo('template_url').'/assets/images/play-btn.png">
+            </span>
+            <picture>
+            <img class="video-thumb" src="'.$viidThumb.'" alt="pixel" loading="lazy">
+            </picture>
+          </div>
+          <div class="blog-content">
+            <div class="title two-line"><a href="#">'.$video['title'].'</a></div>
+          </div>
+          </div>';
+          }
+        }
+        ?>        
+      </div>
+    </div>
+    <?php endif; ?>
+
     <div class="pc-blog-list videos-post">
       <div class="main-intro">
         <h2>Watch Now</h2>
@@ -384,25 +420,18 @@ $getActiveCat = $catBlockTwo['cat-tab'][0]['link'];
   ?>
 </div>
 <?php 
-endif; endif; // Ignore For Paged ?>
-    <div class="cta-flex subscribe-footer">
-      <div class="detail-subsbox subs-box">
-        <div class="subs-head">
-          <h3>Subscribe to our blog</h3>
-          <p>Stay up to date with the latest marketing, sales, and SEO tips and news</p>
-        </div>
-        <?php echo do_shortcode('[email-subscribers-form id="1"]'); ?>
-      </div>
+endif; 
+
+endif; // Ignore For Paged ?>
+<div class="cta-flex subscribe-footer">
+  <div class="detail-subsbox subs-box">
+    <div class="subs-head">
+      <h3>Subscribe to our blog</h3>
+      <p>Stay up to date with the latest marketing, sales, and SEO tips and news</p>
     </div>
+    <?php echo do_shortcode('[email-subscribers-form id="1"]'); ?>
   </div>
+</div>
+</div>
 </section>
-<script>
-const showDivButtons  = document.querySelectorAll('.mobile-active');
-const hiddenDivs      = document.querySelectorAll('.blog-cat');
-showDivButtons.forEach((button, index) => {
-  button.addEventListener('click', () => { 
-    hiddenDivs[index].classList.toggle('is-visible');
-  });
-});
-</script>
 <?php get_footer();

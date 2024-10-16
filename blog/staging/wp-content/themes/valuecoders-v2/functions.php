@@ -78,13 +78,8 @@ function valuecoders_scripts() {
         $haspostPdf     = get_post_meta( $post->ID, 'post_pdf', true );
         $haspostPdflink = get_post_meta( $post->ID, 'vc-post-pdf', true );
         if( $haspostPdf || $haspostPdflink){ 
-
         wp_enqueue_script('vc-ebook', get_stylesheet_directory_uri().'/assets/js/ebook.js', array(), time(), 'true');
-        wp_localize_script('vc-ebook', 'vcObj', 
-            [
-            'ajaxurl' => admin_url( 'admin-ajax.php' ),
-            'site_url' => get_bloginfo('url')
-        ]); 
+        wp_localize_script('vc-ebook', 'vcObj',['ajaxurl' => admin_url('admin-ajax.php'), 'site_url' => get_bloginfo('url')]);
         }
         /*
         $sliderScript = "jQuery(document).ready(function($){
@@ -1105,4 +1100,17 @@ function getPostPrimeCategory( $postid ){
   if( $categories ){
     return '<a href="'.esc_url(get_category_link($categories[0]->cat_ID)).'">'.$categories[0]->name.'</a>';
   }  
+}
+
+function pxlGetTopThreePosts($id, $taxType = 'tag' ){
+    if( $taxType == "tag" ){
+        $args   = ['tag_id' => $id, 'posts_per_page' => 3, 'orderby' => 'date', 'order' => 'DESC', 'fields' => 'ids'];      
+    }else{
+        $args   = ['cat' => $id, 'posts_per_page' => 3, 'orderby' => 'date', 'order' => 'DESC', 'fields' => 'ids'];
+    }
+        
+    $query      = new WP_Query( $args );
+    $post_ids   = $query->posts;
+    wp_reset_postdata();
+    return $post_ids;
 }

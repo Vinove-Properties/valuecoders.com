@@ -192,3 +192,26 @@ function load_author_posts( e, author_id ){
   };  
   xhttp.send(JSON.stringify({'author_id':author_id, 'paged': parseInt(e.getAttribute("data-counter"))}) );
 }
+
+function switchCat( tab_ul, tabcon, e ){
+    let TabElms = document.getElementById(tab_ul).querySelectorAll('li');
+    TabElms.forEach(function(elm){
+        elm.classList.remove("active");
+    });
+    e.classList.add("active");
+    let TabElmc = document.getElementById(tab_ul).querySelectorAll('.tabc-elm');
+    TabElmc.forEach(function(elm){
+        elm.classList.remove("active");
+    });
+    document.getElementById(tabcon).classList.add("active");
+    let viewElm = document.getElementById(tab_ul).getElementsByClassName("view-all-link")[0];
+    viewElm.setAttribute('href', e.dataset.link);
+}
+
+const showDivButtons    = document.querySelectorAll('.mobile-active');
+const hiddenDivs        = document.querySelectorAll('.blog-cat');
+showDivButtons.forEach((button, index) => {
+  button.addEventListener('click', () => { 
+    hiddenDivs[index].classList.toggle('is-visible');
+  });
+});

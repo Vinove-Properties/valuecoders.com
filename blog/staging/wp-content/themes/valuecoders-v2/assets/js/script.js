@@ -331,5 +331,3 @@ function spaceTrimFunction() {
 }
 
 // Pop Js End
-
-

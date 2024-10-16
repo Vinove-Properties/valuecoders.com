@@ -117,7 +117,7 @@
               <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/inv-logo.svg" width="156" height="40" alt="Invoicera">
             </picture>
           </a>
-          <a href="https://www.workstatus.io/>
+          <a href="https://www.workstatus.io/">
             <picture>
             <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/ws-logo.svg" width="188" height="26" alt="Workstatus"> 
           </picture>
@@ -160,13 +160,23 @@
             <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/vc-logo.svg" width="191" height="42" alt="Logo">
           </picture>
         </a>
-        <p>Copyright © 2004 - 2024 PixelCrayons, <br>
+        <p>Copyright © 2004 - <?php echo date("Y"); ?> PixelCrayons, <br>
           All Rights Reserved. A Vinove Company.
         </p>
       </div>
     </div>
   </div>
 </footer>
+<div class="blogvideo-popup">
+  <div id="gen-vpopup" class="popup-wrapper" style="display:none;">
+    <div class="popWrap">
+      <div class="popup-content">
+      <span class="closeicon" onclick="closeGenVideo('gen-vpopup', false)">Close</span>
+      <iframe id="gen-video" class="videoIframe js-videoIframe" allowfullscreen="" src="#" allow='autoplay'></iframe>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="popup-section">
   <div id="intentPopup" class="popup-wrapper exit-intent-popup">
     <div class="popWrap">
