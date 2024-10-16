@@ -28,10 +28,10 @@ get_header();
         <div class="dark-theme-img">
 	<ul class="dis-flex">
 	
-	<li><a href="https://www.facebook.com/ValueCoders"><img src="<?php bloginfo('template_url'); ?>/images/facebookicon.png"></a></li>
-	<li><a href="https://www.instagram.com/valuecodersofficial_/?igshid=qfk286mq0wee"><img src="<?php bloginfo('template_url'); ?>/images/instagramicon.png"></a></li>
-	<li style="margin-top:5px;"><a href="https://twitter.com/ValueCoders"><img src="<?php bloginfo('template_url'); ?>/images/Twitter.svg"></a></li>
-	<li><a href="https://www.linkedin.com/company/valuecoders"><img src="<?php bloginfo('template_url'); ?>/images/linkedinicon.png"></a></li>
+	<li><a href="https://www.facebook.com/ValueCoders" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/facebookicon.png"></a></li>
+	<li><a href="https://www.instagram.com/valuecodersofficial_/?igshid=qfk286mq0wee" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/instagramicon.png"></a></li>
+	<li style="margin-top:5px;"><a href="https://twitter.com/ValueCoders" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/Twitter.svg"></a></li>
+	<li><a href="https://www.linkedin.com/company/valuecoders" target="_blank"><img src="<?php bloginfo('template_url'); ?>/images/linkedinicon.png"></a></li>
 	</ul>
 </div>
 <div class="lighter-theme-img">
