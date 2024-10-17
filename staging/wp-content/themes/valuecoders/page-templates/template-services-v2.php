@@ -663,7 +663,7 @@ endif;
       $topics = $guideTopics['topics'];
       if( $topics ) :
       ?>
-    <div id="scroll-box" class="dis-flex margin-t-100 tab-contents">
+    <div id="scroll-box" class="dis-flex margin-t-80 tab-contents">
       <div class="left-tabs" id="left-scroll">
         <div class="sticky-tab">
           <span class="tab-head clr-white">Guide Topics</span>

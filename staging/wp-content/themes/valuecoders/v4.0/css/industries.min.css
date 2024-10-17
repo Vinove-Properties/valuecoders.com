@@ -1777,10 +1777,10 @@ body.page-template-template-testimonials .client-video-section iframe,
   .tab-scroll-section .tab-nav .tab-link {
     display: block;
     color: #656565;
-    margin: 0 0 15px;
+    margin: 0 0 10px;
     text-decoration: none;
     line-height: 26px;
-    padding: 15px 20px;
+    padding: 10px 20px;
     border-radius: 5px;
     font-weight: 500;
     border-right: 4px transparent solid;

@@ -30,7 +30,6 @@ Template Name: Payment Thankyou
             <h1>Thank You!</h1>
            Thank you for the order confirmation! An expert from our team will connect with you shortly to further help you through the process.
         </div>
-    	
     </div>
 	
 	<div class="social-con">
