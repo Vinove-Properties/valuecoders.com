@@ -1651,7 +1651,7 @@ body.page-template-template-testimonials .client-video-section iframe,
       background: rgba(255, 173, 0, 0.15);
       position: relative; }
 .tab-scroll-section .tab-content {
-  padding-top: 60px; }
+  padding-top: 40px; }
   .tab-scroll-section .tab-content.is-active {
     display: block; }
   .tab-scroll-section .tab-content p {
