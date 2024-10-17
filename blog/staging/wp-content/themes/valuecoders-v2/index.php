@@ -118,7 +118,7 @@ $catBlockTwo  = get_field('row-c2', 'option');
     <div class="pc-blog-list videos-post">
       <div class="main-intro">
         <h2><?php echo $videoBlock['title']; ?></h2>
-        <a href="https://www.youtube.com/@pixelcrayons" class="view-all-link" target="_blank" rel="noopener">View All</a>
+        <a href="https://www.youtube.com/@Valuecoders" class="view-all-link" target="_blank" rel="noopener">View All</a>
       </div>
       <div class="blog-posts-list three-columns">
         <?php 
@@ -126,7 +126,6 @@ $catBlockTwo  = get_field('row-c2', 'option');
           foreach( $videoBlock['videos'] as $video ){
           $viidThumb = ( $video['thumb'] ) ? $video['thumb']['url'] : 
           get_bloginfo('template_url').'/dev-img/default-image.jpg';
-
           echo '<div class="blog-post-col medium-size">
           <div class="blog-image">
             <span class="play-btn" onclick="_playYTmedia(\''.$video['link'].'\')">
@@ -146,66 +145,6 @@ $catBlockTwo  = get_field('row-c2', 'option');
       </div>
     </div>
     <?php endif; ?>
-
-    <div class="pc-blog-list videos-post">
-      <div class="main-intro">
-        <h2>Watch Now</h2>
-        <a href="#" class="view-all-link" target="_blank" rel="noopener">View All</a>
-      </div>
-      <div class="blog-posts-list  three-columns">
-        <div class="blog-post-col medium-size">
-          <div class="blog-image">
-            <span class="play-btn">
-            <img alt="play btn" loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/play-btn.png">
-            </span>
-            <picture><a href="#" target="_blank"><img class="video-thumb"   src="<?php bloginfo('template_url'); ?>/assets/images/video-thumb01.png" alt="pixel" loading="lazy">  </a>   </picture>
-          </div>
-          <div class="blog-content">
-            <span class="category"><a href="">Digital Marketing</a></span>
-            <div class="title"><a href="#">Balancing Paid & Organic Search: Tips 
-              & Tricks!</a>
-            </div>
-            <div class="auth-wrap">
-              <span class="time-read">2 minute</span>
-            </div>
-          </div>
-        </div>
-        <div class="blog-post-col medium-size">
-          <div class="blog-image">
-            <span class="play-btn">
-            <img alt="play btn" loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/play-btn.png">
-            </span>
-            <picture><a href="#" target="_blank"><img class="video-thumb"  src="<?php bloginfo('template_url'); ?>/assets/images/video-thumb01.png" alt="pixel" loading="lazy">  </a>   </picture>
-          </div>
-          <div class="blog-content">
-            <span class="category"><a href="">Digital Marketing</a></span>
-            <div class="title"><a href="#">Balancing Paid & Organic Search: Tips 
-              & Tricks!</a>
-            </div>
-            <div class="auth-wrap">
-              <span class="time-read">2 minute</span>
-            </div>
-          </div>
-        </div>
-        <div class="blog-post-col medium-size">
-          <div class="blog-image">
-            <span class="play-btn">
-            <img alt="play btn" loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/play-btn.png">
-            </span>
-            <picture><a href="#" target="_blank"><img class="video-thumb"   src="<?php bloginfo('template_url'); ?>/assets/images/video-thumb01.png" alt="pixel" loading="lazy">  </a>   </picture>
-          </div>
-          <div class="blog-content">
-            <span class="category"><a href="">Digital Marketing</a></span>
-            <div class="title"><a href="#">Balancing Paid & Organic Search: Tips 
-              & Tricks!</a>
-            </div>
-            <div class="auth-wrap">
-              <span class="time-read">2 minute</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <?php endif; //Ignore For Paged ?>
     <div class="pc-blog-list latest">
       <div class="main-intro"><h2>Latest</h2></div>
