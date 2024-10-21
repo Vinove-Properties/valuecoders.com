@@ -24,11 +24,10 @@
   
 	.mobile-active .blogtog {
 	  padding: 10px 20px;
-	  background: #f0f7ff;
+	  background: #FFFCF1;
 	  border-radius: 15px;
-	  border: 1px solid #f0f7ff;
-	   color: var(--yellow);
-	  border-color: var(--yellow);
+	  border: 1px solid var(--yellow);
+	color: var(--yellow);
 	  display: block;
 	  position: relative;
 	  cursor: pointer;
