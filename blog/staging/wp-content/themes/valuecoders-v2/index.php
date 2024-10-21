@@ -59,7 +59,7 @@ $catBlockTwo  = get_field('row-c2', 'option');
       if( $st === 1 ){
         echo '<div class="blog-post-col big-size postid-'.get_the_ID().'">
         <div class="blog-image">
-          <a href="'.get_permalink().'"><img width="1024" height="462" src="'.$stkThumb.'" alt="pixel" loading="lazy"></a>
+          <a href="'.get_permalink().'"><img width="1024" height="462" src="'.$stkThumb.'" alt="valuecoders" loading="lazy"></a>
         </div>
         <div class="blog-content">
           <span class="category">'.$cat.'</span>
@@ -74,7 +74,7 @@ $catBlockTwo  = get_field('row-c2', 'option');
           <div class="blog-post-col">
             <div class="blog-image">
               <a href="">
-              <img width="1024" height="462" src="'.$stkThumb.'" alt="pixel" loading="lazy"></a>              
+              <img width="1024" height="462" src="'.$stkThumb.'" alt="valuecoders" loading="lazy"></a>              
             </div>
             <div class="blog-content">
               <span class="category">'.$cat.'</span>
@@ -96,12 +96,12 @@ $catBlockTwo  = get_field('row-c2', 'option');
     <div class="cta-flex">
       <div class="custom-left">
         <picture>
-          <img loading="lazy"  src="<?php bloginfo('template_url'); ?>/assets/images/home-custom.svg" alt="pixel" width="214" height="176">
+          <img loading="lazy"  src="<?php bloginfo('template_url'); ?>/assets/images/home-custom.svg" alt="valuecoders" width="214" height="176">
         </picture>
         <div class="cus-cont">
           <div class="cushed">Elevate Projects with Top Management Tools</div>
           <div class="btn-container">
-            <a target="_blank" class="white-btn blue pxl-ext" href="https://www.pixelcrayons.com/contact-us" data-wpel-link="internal" rel="follow noopener">Start Free Trial</a>
+            <a target="_blank" class="white-btn blue pxl-ext" href="https://www.valuecoderscrayons.com/contact-us" data-wpel-link="internal" rel="follow noopener">Start Free Trial</a>
           </div>
         </div>
       </div>
@@ -132,7 +132,7 @@ $catBlockTwo  = get_field('row-c2', 'option');
             <img alt="play btn" loading="lazy" src="'.get_bloginfo('template_url').'/assets/images/play-btn.png">
             </span>
             <picture>
-            <img class="video-thumb" src="'.$viidThumb.'" alt="pixel" loading="lazy">
+            <img class="video-thumb" src="'.$viidThumb.'" alt="valuecoders" loading="lazy">
             </picture>
           </div>
           <div class="blog-content">
@@ -246,7 +246,7 @@ $getActiveCat = $catBlockOne['cat-tab'][0]['link'];
             <img src="'.$catBlockOne['e-image']['url'].'" 
             height="'.$catBlockOne['e-image']['height'].'" 
             width="'.$catBlockOne['e-image']['width'].'" 
-            alt="pixel" loading="lazy">
+            alt="valuecoders" loading="lazy">
             </picture>';  
             }
             ?>
@@ -335,7 +335,7 @@ $getActiveCat = $catBlockTwo['cat-tab'][0]['link'];
             <img src="'.$catBlockTwo['e-image']['url'].'" 
             height="'.$catBlockTwo['e-image']['height'].'" 
             width="'.$catBlockTwo['e-image']['width'].'" 
-            alt="pixel" loading="lazy">
+            alt="valuecoders" loading="lazy">
             </picture>';  
             }
             ?>
@@ -404,7 +404,7 @@ class="modal <?php echo (isset($_GET['ep-action']) && ($_GET['ep-action'] == "sh
             <picture>
               <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/dev-img/pdf-book.png">
               <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/dev-img/pdf-book.png">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/pdf-book.png" alt="PixelCrayons" 
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/pdf-book.png" alt="valuecodersCrayons" 
               width="215" height="277">
             </picture>
           </div>
