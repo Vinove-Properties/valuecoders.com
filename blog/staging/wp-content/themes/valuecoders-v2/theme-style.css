@@ -1136,6 +1136,7 @@ text-transform: capitalize;
     cursor: pointer;
     border-radius: 0.25rem;
     color: #fff;
+    font-size: 30px;
 }
 .pop-up-section h2 {
     font-family: noto_sansmedium,sans-serif;
