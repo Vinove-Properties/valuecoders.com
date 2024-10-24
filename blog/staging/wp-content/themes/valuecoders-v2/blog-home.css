@@ -27,7 +27,7 @@
 	  background: #FFFCF1;
 	  border-radius: 15px;
 	  border: 1px solid var(--yellow);
-	color: var(--yellow);
+	  color: var(--yellow);
 	  display: block;
 	  position: relative;
 	  cursor: pointer;

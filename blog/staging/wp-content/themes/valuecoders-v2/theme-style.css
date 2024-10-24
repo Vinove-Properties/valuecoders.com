@@ -1109,11 +1109,14 @@ text-transform: capitalize;
     visibility: visible;
     transform: scale(1);
     transition: visibility 0s linear 0s,opacity .25s 0s,transform .25s;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 .pop-up-section {
   width: 60%;
   background: #232244;
-  padding: 1rem 60px 0;
+  padding: 30px;
   margin: 52px auto;
   max-width: 996px;
 }

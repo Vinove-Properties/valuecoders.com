@@ -22,8 +22,8 @@ $catBlockTwo  = get_field('row-c2', 'option');
       </ul>
     </div>
     <div class="top-content">
-      <h1>Smart marketing starts here.</h1>
-      <p>Join over 200,000 marketing managers, and get the best digital marketing insights, <br>strategies, and tips delivered straight to your inbox!</p>
+      <h1>Join a Community of Tech Innovators</h1>
+      <p>Become part of a thriving community of IT professionals, software engineers, and tech enthusiasts.</p>
     </div>
     <div class="search-blogs">
       <div class="ser-left">Featured In <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/blog-part.svg" alt="Valuecoders">
@@ -107,7 +107,7 @@ $catBlockTwo  = get_field('row-c2', 'option');
       </div>
       <div class="detail-subsbox subs-box">
         <h3>Subscribe to our blog</h3>
-        <p>Stay up to date with the latest marketing, sales, and SEO tips and news</p>
+        <p>Be a part of a thriving community of 10000+ tech enthusiasts and learners.</p>
         <?php echo do_shortcode('[email-subscribers-form id="1"]'); ?>
       </div>
     </div>
@@ -366,7 +366,7 @@ endif; // Ignore For Paged ?>
   <div class="detail-subsbox subs-box">
     <div class="subs-head">
       <h3>Subscribe to our blog</h3>
-      <p>Stay up to date with the latest marketing, sales, and SEO tips and news</p>
+      <p>Be a part of a thriving community of 10000+ tech enthusiasts and learners.</p>
     </div>
     <?php echo do_shortcode('[email-subscribers-form id="1"]'); ?>
   </div>
@@ -402,10 +402,10 @@ class="modal <?php echo (isset($_GET['ep-action']) && ($_GET['ep-action'] == "sh
         <div class="rightnew">
           <div class="left-img">
             <picture>
-              <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/dev-img/pdf-book.png">
-              <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/dev-img/pdf-book.png">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/pdf-book.png" alt="valuecodersCrayons" 
-              width="215" height="277">
+              <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/dev-img/assets/images/home-custom.svg">
+              <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets/images/home-custom.svg">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/home-custom.svg" alt="valuecoders" 
+              width="215" height="176">
             </picture>
           </div>
           <div class="right-img">
