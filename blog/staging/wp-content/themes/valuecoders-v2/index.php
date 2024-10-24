@@ -22,7 +22,7 @@ $catBlockTwo  = get_field('row-c2', 'option');
       </ul>
     </div>
     <div class="top-content">
-      <h1>Join Community of Tech Innovators</h1>
+      <h1>Be A Tech Innovator</h1>
       <p>Become part of a thriving community of IT professionals, software engineers, and tech enthusiasts.</p>
     </div>
     <div class="search-blogs">
