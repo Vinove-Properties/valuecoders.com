@@ -26,7 +26,7 @@ $catBlockTwo  = get_field('row-c2', 'option');
       <p>Become part of a thriving community of IT professionals, software engineers, and tech enthusiasts.</p>
     </div>
     <div class="search-blogs">
-      <div class="ser-left">Featured In <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/blog-part.svg" alt="Valuecoders">
+      <div class="ser-left">Featured In <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/featured-logos.svg" alt="Valuecoders">
       </div>
       <div class="searchBox">
         <form action="<?php echo site_url(); ?>" method="get" class="search-form"> 

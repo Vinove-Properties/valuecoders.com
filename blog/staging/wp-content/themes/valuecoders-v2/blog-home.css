@@ -110,18 +110,19 @@
 	}
   
 	.search-blogs .ser-left {
-	  flex-basis: 60%;
+		flex-basis: 72%;
 	  display: flex;
 	  align-items: center;
 	  color: var(--gray);
 	}
   
 	.search-blogs .ser-left img {
-	  margin-left: 15px;
+		margin-left: 15px;
+        width: 82%;
 	}
   
 	.searchBox {
-	  flex-basis: 35%;
+	  flex-basis:25%;
 	  position: relative;
 	  display: flex;
 	  justify-content: right;
@@ -1075,6 +1076,7 @@ height: 30px !important; font-size: 0;}
 	  .search-blogs .ser-left img {
 		margin-left: 0;
 		margin-top: 10px;
+		width: 100%;
 	  }
 	  .searchBox {
 		flex-basis: 100%;
