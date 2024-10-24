@@ -26,7 +26,7 @@ $catBlockTwo  = get_field('row-c2', 'option');
       <p>Become part of a thriving community of IT professionals, software engineers, and tech enthusiasts.</p>
     </div>
     <div class="search-blogs">
-      <div class="ser-left">Featured In <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/featured-logos.svg" alt="Valuecoders">
+      <div class="ser-left"><span class="ftin">Featured In</span> <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/featured-logos.svg" alt="Valuecoders">
       </div>
       <div class="searchBox">
         <form action="<?php echo site_url(); ?>" method="get" class="search-form"> 
@@ -402,9 +402,9 @@ class="modal <?php echo (isset($_GET['ep-action']) && ($_GET['ep-action'] == "sh
         <div class="rightnew">
           <div class="left-img">
             <picture>
-              <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/dev-img/assets/images/home-custom.svg">
-              <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/assets/images/home-custom.svg">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/assets/images/home-custom.svg" alt="valuecoders" 
+              <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/dev-img/home-custom.svg">
+              <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/dev-img/home-custom.svg">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/home-custom.svg" alt="valuecoders" 
               width="215" height="176">
             </picture>
           </div>
