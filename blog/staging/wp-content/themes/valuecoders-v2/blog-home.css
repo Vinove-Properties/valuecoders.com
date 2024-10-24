@@ -976,6 +976,8 @@ height: 30px !important; font-size: 0;}
   @media (max-width: 1390px) {
 	.blog-main-page {
 	  padding: 120px 0 90px;
+	  .top-content h1{font-size: 55px;}
+    
 	  .pc-blog-list {
 		padding: 70px 0 0;
 	  }
