@@ -292,7 +292,7 @@ if( $sectionType == "tab" ){
   $profileContent   = $vcProfile['content']; 
   $proText          = vCodeRemoveUlTags( $profileContent );
   $whContent .=  $proText;
-  if( is_page([19106,19105]) ){
+  if(is_page(19105)){
     $whContent .=  '<ul>
     <li>Customized solutions for unique projects</li>
     <li>97% client satisfaction rate</li>
@@ -303,7 +303,21 @@ if( $sectionType == "tab" ){
     <li>Future-focused, scalable solutions guaranteed</li>
     '.$vcProfile['add-pointers'].'
     </ul>';  
-  }else{
+  }
+  elseif( is_page(19106)){
+    $whContent .=  '<ul>
+    <li>Trusted by startups to Fortune 500</li>
+    <li>97% client satisfaction rate</li>
+    <li>Data-driven marketing strategies</li>
+    <li>100% transparent reporting</li>
+    <li>Experienced industry professionals</li>
+    <li>Expertise in all digital channels</li>
+    <li>Competitive and flexible pricing</li>
+    <li>Omnichannel personalization approach</li>
+    '.$vcProfile['add-pointers'].'
+    </ul>';
+  }
+  else{
     $whContent .=  '<ul>
     <li>India\'s Top 1% Software Talent</li>
     <li>Trusted by Startups to Fortune 500</li>
