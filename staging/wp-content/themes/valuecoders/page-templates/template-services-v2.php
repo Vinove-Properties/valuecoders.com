@@ -292,16 +292,29 @@ if( $sectionType == "tab" ){
   $profileContent   = $vcProfile['content']; 
   $proText          = vCodeRemoveUlTags( $profileContent );
   $whContent .=  $proText;
-  $whContent .=  '<ul>
-  <li>India\'s Top 1% Software Talent</li>
-  <li>Trusted by Startups to Fortune 500</li>
-  <li>Idea to Deployment, We Handle All</li>
-  <li>Time-Zone Friendly: Global Presence</li>
-  <li>Top-tier Data Security Protocols</li>
-  <li>On-time Delivery, No Surprises</li>
-  '.$vcProfile['add-pointers'].'
-  </ul>';
-    get_template_part( 'include/why', 'hirev4.0', ['content' => $whContent] );   
+  if( is_page([19106,19105]) ){
+    $whContent .=  '<ul>
+    <li>Customized solutions for unique projects</li>
+    <li>97% client satisfaction rate</li>
+    <li>Proven track record of success</li>
+    <li>Expert team of seasoned professionals</li>
+    <li>Comprehensive risk assessment strategies</li>
+    <li>Fast turnaround time for prototypes</li>
+    <li>Future-focused, scalable solutions guaranteed</li>
+    '.$vcProfile['add-pointers'].'
+    </ul>';  
+  }else{
+    $whContent .=  '<ul>
+    <li>India\'s Top 1% Software Talent</li>
+    <li>Trusted by Startups to Fortune 500</li>
+    <li>Idea to Deployment, We Handle All</li>
+    <li>Time-Zone Friendly: Global Presence</li>
+    <li>Top-tier Data Security Protocols</li>
+    <li>On-time Delivery, No Surprises</li>
+    '.$vcProfile['add-pointers'].'
+    </ul>';  
+  }
+  get_template_part( 'include/why', 'hirev4.0', ['content' => $whContent] );   
   } 
 endif; 
 

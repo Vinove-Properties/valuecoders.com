@@ -1,0 +1,212 @@
+.tech-stack-section {
+  .technology-slider {
+    margin: 50px 0 0;
+
+    .col-box {
+      margin-top: 20px;
+      padding: 0 10px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .inner-box {
+        border-bottom: 4px solid rgba(238, 238, 238, 1);
+        padding-bottom: 45px;
+        width: 100%;
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        min-height: 292px;
+        h3 {
+          position: relative;
+          margin-bottom: 15px;
+          min-height: 56px;
+        }
+        ul {
+          padding: 0 0 30px;
+          li {
+            border: 1px solid #e8e8e8;
+            border-radius: 10px;
+            padding: 7px 8px 7px 18px;
+            display: inline-block;
+            margin: 10px 5px 0 0;
+            line-height: 22px;
+            font-size: 14px;
+            text-align: center;
+            color: rgba(63, 63, 63, 0.8);
+            font-weight: 600;
+            background-color: $white;
+            position: relative;
+            z-index: 9;
+            &:before {
+              content: "";
+              width: 5px;
+              height: 5px;
+              position: absolute;
+              left: 7px;
+              top: 15px;
+              background: rgba(128, 128, 128, 0.3);
+              border-radius: 100%;
+            }
+            a {
+              display: block;
+              color: rgba(63, 63, 63, 0.8);
+              font-weight: 600 !important;
+              &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                background: transparent;
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                z-index: -1;
+              }
+              &:hover {
+                color: $white;
+                border-color: #ffad00;
+                &:after {
+                  background: $yellow;
+                }
+              }
+            }
+            &:hover {
+              &:before {
+                background: $white;
+              }
+            }
+          }
+
+          a:hover li {
+            background: black;
+          }
+        }
+      }
+    }
+
+    .glider-dots {
+      margin-top: 30px;
+      display: none;
+      .glider-dot {
+        display: inline-block;
+        &.active {
+          background: $yellow;
+        }
+      }
+    }
+
+    .tech-prev,
+    .tech-next{
+      background: #fff url(../images/arrow-tech.png) 0 0 no-repeat;
+      width: 45px;
+      height: 45px;
+      border-radius: 100%;
+      border: 1px solid #e8e8e8;
+      box-shadow: 8.54px 25.61px 42.68px 8.54px rgba(0, 0, 0, 0.05);
+      background-size: 16px;
+      z-index: 9;
+      opacity: 1;
+      background-position: center;
+      top: 42%;
+      left: -20px;
+      transform: rotate(0);
+      font-size: 0;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $yellow;
+      }
+
+      &.tech-next {
+        left: auto;
+        right: -15px;
+        transform: rotate(180deg);
+      }
+    }
+
+    .glider-next.disabled,
+    .glider-prev.disabled {
+      cursor: default;
+    }
+  }
+}
+
+@media only screen and (max-width: 1320px) {
+}
+
+@media only screen and (max-width: 991px) {
+  .tech-stack-section {
+    .technology-slider {
+      margin: 30px 0 0;
+      .col-box {
+        margin-top: 15px;
+        padding: 0 10px;
+        .inner-box {
+          h3 {
+            margin-bottom: 15px;
+          }
+          ul {
+            padding: 0 0 20px;
+            li {
+              padding: 7px 8px 7px 18px;
+              margin: 8px 4px 0 0;
+            }
+          }
+        }
+      }
+
+      .glider-dots {
+        margin-top: 30px;
+        display: none;
+        .glider-dot {
+          &.active {
+            background: $yellow;
+          }
+        }
+      }
+
+      .tech-prev,
+      .tech-next {
+        width: 40px;
+        height: 40px;
+        left: -15px;
+        &.glider-next {
+          right: -10px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tech-stack-section {
+    .technology-slider {
+      .col-box {
+        margin-top: 15px;
+        padding: 0 5px;
+        .inner-box {
+          min-height: initial;
+          ul {
+            li {
+              line-height: 20px;
+              font-size: 13px;
+            }
+          }
+          h3 {
+            margin-bottom: 15px;
+            min-height: initial;
+          }
+        }
+      }
+
+      .glider-dots {
+        display: block;
+      }
+
+      .tech-prev,
+      .tech-next  {
+        display: none;
+      }
+    }
+  }
+}

@@ -185,6 +185,9 @@ function valuecoders_scripts() {
 	elseif( is_page_template( 'page-templates/template-services-v2.php' ) ){
 		wp_enqueue_style( 'vc-service-v2', get_stylesheet_directory_uri().'/v4.0/css/service-updated.css', [], _S_VERSION );
 	}
+	elseif( is_page_template( 'page-templates/tpl-services-v5.0.php' ) ){
+		wp_enqueue_style( 'vc-service-v5', get_stylesheet_directory_uri().'/v5.0/css/services.min.css', [], _S_VERSION );
+	}
 	elseif( is_page_template( 'page-templates/template-contact.php' ) ){
 		wp_enqueue_style( 'vc-contact', get_stylesheet_directory_uri().'/css/contact-form.min.css', [], _S_VERSION );
 		wp_enqueue_script( 'vc-cfscript', get_stylesheet_directory_uri(). '/js/form-validation.js', array(), 
@@ -406,6 +409,12 @@ if( function_exists('acf_add_options_page') ){
 		'menu_title'	=> 'SE - CMN Section',
 		'parent_slug'	=> 'theme-general-settings',
 	));
+
+	// acf_add_options_sub_page(array(
+	// 	'page_title' 	=> 'Common - Tech Stacks',
+	// 	'menu_title'	=> 'Tech Stacks',
+	// 	'parent_slug'	=> 'theme-general-settings',
+	// ));
 }
 
 require get_template_directory() . '/inc/custom-header.php';
@@ -1243,41 +1252,6 @@ function vcTrustedStartups( $pageID = false ){
 	</div>
 	</div>';
 }
-
-/*
-add_action('init', function(){
-	@session_start();
-	//unset( $_SESSION['vc-csrf'] ); die;
-	if( isset($_SESSION['vc-csrf']) && is_array($_SESSION['vc-csrf']) && (count($_SESSION['vc-csrf']) > 50) ){
-	unset( $_SESSION['vc-csrf'] );
-	}
-	$vc_token = bin2hex(random_bytes(4));
-	if( 
-		isset( $_SESSION['vc-csrf'] ) && 
-		is_array( $_SESSION['vc-csrf'] ) && 
-		( count( $_SESSION['vc-csrf'] ) > 0 )
-	){
-		$pre_token = $_SESSION['vc-csrf'];
-		array_push( $pre_token, $vc_token );
-		$_SESSION['vc-csrf'] = $pre_token;
-	}else{
-		$_SESSION['vc-csrf'] = [$vc_token];
-	}
-	debug_dd( $_SESSION['vc-csrf'] );
-	if( isset($_GET['debug']) && ($_GET['debug'] == "true") ){
-	    debug_dd( $_SESSION['vc-csrf'] );    
-	}
-});
-add_action( 'wp_head', function(){
-	if(is_front_page()){
-		echo '<link rel="preload" as="image" href="'.get_bloginfo('template_url').'/images/logo-right.png">';
-		echo '<link rel="preload" as="image" href="'.get_bloginfo('template_url').'/images/logo-right.webp">';
-
-		echo '<link rel="preload" as="image" href="'.get_bloginfo('template_url').'/images/logo-for-light.png">';
-		echo '<link rel="preload" as="image" href="'.get_bloginfo('template_url').'/images/logo-for-light.webp">';
-	}
-}, 90);
-*/
 
 function vcHasHTML($string){
 return $string != strip_tags($string) ? true:false;

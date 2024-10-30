@@ -1,0 +1,192 @@
+.fixfull-section {
+  .entire-sticky {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #ffffff;
+    //height: 100vh; /* Fill the viewport height */
+
+    .left-column {
+      width: calc(100% - 280px);
+      padding-right: 60px;
+    }
+
+    .right-column {
+      width: 278px;
+      //background-color: #ddd;
+      margin-right: -15px;
+    
+      .toc-sec {
+        h4 {
+          font-size: 19px;
+          font-weight: 600;
+        }
+        .toc-wrap {
+          border-left: 3px solid rgba(246, 246, 246, 1);
+          padding-left: 15px;
+          margin: 20px 0 0;
+          p {
+            color: rgba(33, 33, 33, 0.5);
+            font-weight: 500;
+            margin: 0;
+            a {
+              padding: 5px 0;
+              color: rgba(33, 33, 33, 0.5);
+              display: block;
+              position: relative;
+              &:before {
+                content: "";
+                background: #ffad00;
+                position: absolute;
+                width: 3px;
+                left: -18px;
+                top: 5px;
+                height: 30px;
+                opacity: 0;
+              }
+              &:hover {
+                color: rgba(33, 33, 33, 0.9);
+                &:before {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .sticky-button {
+        margin: 40px 0 0;
+        .sticky-cta {
+          padding: 20px 20px 20px 20px;
+          display: inline-block;
+          position: relative;
+          background: #fffaf0;
+          border-radius: 10px;
+          border: 1px solid #05164d17;
+          color: $themeDarkNight;
+          font-weight: 500;
+          font-size: 18px;
+          transition: all 0.3s ease;
+          width: 100%;
+          min-height: 97px;
+          display: flex;
+          align-items: center;
+          p {
+            margin: 0;
+            color: $themeDarkNight;
+          }
+          &:after {
+            content: "";
+            width: 86px;
+            height: 97px;
+            background: url(../images/side-shape.png) 0 0 no-repeat;
+            background-size: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+
+          &:before {
+            content: "";
+            width: 7px;
+            height: 100%;
+            background-color: $yellow;
+            background-size: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 0.3s ease;
+            border-radius: 10px 0 0 10px;
+          }
+
+          .gtexprt {
+            display: none;
+            position: relative;
+            cursor: pointer;
+          }
+
+          &:hover {
+            transition: all 0.3s ease;
+            p {
+              display: none;
+            }
+            .gtexprt {
+              display: inline-block;
+              color: $themeDarkNight;
+            }
+
+            &:before {
+              width: 100%;
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+
+      &.fixed {
+        position: fixed;
+        top: 80px;
+        right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1380px) {
+}
+
+@media (max-width: 979px) {
+
+  .fixfull-section {
+    .entire-sticky {
+      flex-wrap: wrap;
+  
+      .left-column {
+        width:100%;
+        padding-right:0;
+        order:2;
+      }
+  
+      .right-column {
+        width:100%;
+        margin-right:0;
+        order:1;
+        .toc-sec {
+          h4 {
+            font-size: 18px;
+          }
+          .toc-wrap {
+            margin: 10px 0 0;
+          }
+        }
+  
+        .sticky-button {
+          margin:30px 0 0;
+          .sticky-cta {
+            font-size: 17px;
+            min-height: 60px;
+         
+            
+            &:after {
+              width: 70px;
+              height: 64px;
+            }
+  
+            &:before {
+              width: 5px;
+            }
+          }
+        }
+  
+        &.fixed {
+          position: initial;
+        }
+      }
+    }
+  }
+
+}

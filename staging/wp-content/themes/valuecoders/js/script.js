@@ -1441,3 +1441,95 @@ if( menuItemElm ){
         item.addEventListener('mouseleave', removeActiveClass);
     });
 }
+
+/*Services Page v5.0 Template Requirement*/
+function _expandListing(e){
+    e.closest('div').classList.toggle("show-li")
+    e.classList.toggle("expanded-btn");
+}
+
+document.addEventListener("scroll", function () {
+    const rightColumn = document.getElementById("valc-toc");
+    if( rightColumn ){
+        const stickySection = document.querySelector(".entire-sticky");
+        const containerRect = stickySection.getBoundingClientRect(); 
+        const rightOffset = window.innerWidth - (containerRect.right); 
+
+        if (containerRect.top <= 80 && containerRect.bottom >= 0) {
+        rightColumn.classList.add("fixed");
+        rightColumn.style.right = `${rightOffset}px`; // Adjust right based on container
+        } else {
+        rightColumn.classList.remove("fixed");
+        rightColumn.style.right = '0';
+        }
+    }
+    
+});
+
+const cmnIndustriesv5 = document.getElementById("induscater-glider");
+if( cmnIndustriesv5 ){
+window.addEventListener("load", function() {
+    document.querySelector(".indcater-slider .glider").addEventListener("glider-slide-visible",
+    function(event){
+        var glider = Glider(this);
+    });
+    window._ = new Glider(document.querySelector(".indcater-slider .glider"),{
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    draggable: true,
+    scrollLock: false,
+    dots: ".indcater-slider .dots",
+    dragDistance: true,
+    arrows:{prev:'#ind-movers .ind-prev', next:'#ind-movers .ind-next'},
+    responsive: [
+        {breakpoint: 320,settings: {slidesToShow:1, duration:2.25}},
+        {breakpoint: 767,settings: {slidesToShow:2, itemWidth:150, duration:1.25}},
+        {breakpoint: 1024,settings: {slidesToShow: 3,itemWidth: 150,duration: 1.25}},
+        {breakpoint: 1400,settings: {slidesToShow: 3,itemWidth: 150,duration: 3}}
+    ],
+    });
+});
+}
+
+if (document.getElementById("technology-glider")) {
+window.addEventListener("load", function() {
+    var gliderElement = document.querySelector(".technology-slider .glider");
+    if (gliderElement) {      
+    new Glider(gliderElement, {
+    slidesToShow: 4, 
+    slidesToScroll: 4,
+    draggable: true,
+    scrollLock: false,
+    dots: ".technology-slider .dots",
+    dragDistance: true,
+    arrows: { prev: '#technology-glider .tech-prev', next: '#technology-glider .tech-next' },      
+    responsive: [
+    {breakpoint: 320, settings: {slidesToShow:1,slidesToScroll:1,duration: 0.25}},
+    {breakpoint: 767, settings: {slidesToShow: 2, slidesToScroll: 1, itemWidth: 150, duration: 0.25}},
+    {breakpoint: 1024, settings: {slidesToShow: 3, slidesToScroll: 1, itemWidth: 150, duration: 0.25}},
+    {breakpoint: 1400, settings: {slidesToShow: 3, slidesToScroll: 1, itemWidth: 150, duration: 0.25}}          
+    ]
+    });
+    }
+});
+}
+
+var tabMC = document.querySelectorAll("#hiring-models .tablist");
+tabMC.forEach(function(label, index){
+    label.addEventListener("click", tabHireModels);
+}); 
+function tabHireModels(e){
+var tabPanesMc  = document.getElementsByClassName("tab-contents");
+    e.preventDefault();  
+    tabMC.forEach(function(label, index){
+        label.classList.remove("active");
+    });
+    [].forEach.call(tabPanesMc, function(pane, index){
+        pane.classList.remove("active");
+    }); 
+    if( e.target === this || this.contains(e.target)){
+        var clickedTab = this.getAttribute("data-tab");
+        this.classList.add("active");
+        document.querySelector(clickedTab).classList.add("active");
+    }    
+}
