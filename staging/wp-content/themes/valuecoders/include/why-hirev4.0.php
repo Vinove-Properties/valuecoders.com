@@ -1,5 +1,4 @@
-
-<section class="client-img-section padding-t-120 padding-b-120">
+<section class="client-img-section padding-t-120 padding-b-120" id="cmn-profile">
   <div class="container">
   <div class="dis-flex justify-sb items-center">
     <div class="flex-2 left-box">

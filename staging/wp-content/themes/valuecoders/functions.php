@@ -1680,3 +1680,9 @@ add_filter( 'wpseo_robots', function( $string = '' ){
 	}
 	return $string;
 }, 999 );
+
+function GetTocTitle( $fld, $elmID ){
+	if( isset( $fld['is_enabled'] ) && ($fld['is_enabled'] == "yes") ){
+	return (isset($fld['toc-title']) && !empty($fld['toc-title'])) ? '<p><a href="#'.$elmID.'">'.$fld['toc-title'].'</a></p>' : '';
+	}
+}

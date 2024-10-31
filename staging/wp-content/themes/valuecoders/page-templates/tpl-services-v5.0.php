@@ -5,9 +5,21 @@ Template Name: Service V5.0 Template
 global $post;
 $thisPostID = $post->ID;
 $vcBtn 			= get_field('vc-cta', $thisPostID);
+
+$specifications   = get_field('tech-spec');
+$sfRow            = get_field('sf-type');
+$vcProfile        = get_field('vc-profile');
+$techStacks       = get_field('tech-stacks');
+$devCost          = get_field('dev-cost');
+$tailTech         = get_field('tailored_tech');
+$ourProcess       = get_field('our-process');
+$hireModel        = get_field('hiring_models');
+$guideTopics      = get_field('guide-topics');
+$faqs             = get_field('faq-group');
+
 get_header();
 $template_assets  = get_bloginfo('template_url').'/v5.0/';
-$mainServicePage  = 11941;
+//$mainServicePage  = 11941;
 $cmnBanner        = get_field('sbg-thumbnail');
 $bannerImageSrc   = $template_assets.'images/service-banner.png';
 if( is_array( $cmnBanner ) ){
@@ -80,8 +92,7 @@ $bannerImageSrc = getVcWebpSrcURL( $cmnBanner );
   <div class="container">
     <div class="entire-sticky">
       <div class="left-column">
-      <?php 
-      $specifications = get_field('tech-spec');
+      <?php       
       if( isset( $specifications['is_enabled'] ) && ($specifications['is_enabled'] == "yes") ){
       echo '<div class="service-section" id="our-services">';
       echo '<div class="heading">';
@@ -123,12 +134,10 @@ $bannerImageSrc = getVcWebpSrcURL( $cmnBanner );
       $eCtaOne = '<h2>'.$eOneHeading.'</h2>';
       $eCtaOne .= '<p>'.$eOneBody.'</p>';
       echo expert_talk_cta_v5( $eCtaOne, $eOnelt );
-      ?> 
+      
 
-      <?php 
-      $sfRow = get_field('sf-type');
       if( isset( $sfRow['is_enabled'] ) && ($sfRow['is_enabled'] == "yes") ){
-      echo '<div class="software-work padding-t-70" id="industry">';
+      echo '<div class="software-work padding-t-70" id="sf-type">';
       echo '<div class="heading">'.$sfRow['content'].'</div>';
       if( $sfRow['category'] ){
         foreach( $sfRow['category'] as $row ){
@@ -156,16 +165,18 @@ $bannerImageSrc = getVcWebpSrcURL( $cmnBanner );
             <div class="toc-sec">
               <h4>Table of Contents</h4>
               <div class="toc-wrap">
-                <p><a href="#our-services">Our Services</a></p>
-                <p><a href="#portfolio">Portfolio</a></p>
-                <p><a href="#about">Why Us</a></p>
-                <p><a href="#industry">Industries Served</a></p>
-                <p><a href="#techstacks">Tech Stacks</a></p>
-                <p><a href="#dev-cost">Development Cost</a> </p>
-                <p><a href="#process">Our Process</a></p>
-                <p><a href="#hiremodels">Hiring Models</a></p>
-                <p><a href="#guide">Guide Topics</a></p>
-                <p><a href="#faq">FAQs</a></p>
+                <?php 
+                echo GetTocTitle($specifications, "our-services");
+                echo GetTocTitle($sfRow, "sf-type");
+                echo GetTocTitle($vcProfile, "cmn-profile");
+                echo GetTocTitle($techStacks, "vc-techstacks");
+                echo GetTocTitle($devCost, "dev-cost");
+                echo GetTocTitle($tailTech, "tail-tech");
+                echo GetTocTitle($ourProcess, "our-process");
+                echo GetTocTitle($hireModel, "hire-model");
+                echo GetTocTitle($guideTopics, "has-ug");
+                echo GetTocTitle($faqs, "vc-faqs");
+                ?>
               </div>
             </div>
             <div class="sticky-button">
@@ -182,27 +193,22 @@ $bannerImageSrc = getVcWebpSrcURL( $cmnBanner );
 <?php //get_template_part('include/why', 'hirev4.0'); ?>
 
 <?php  
-  $vcProfile = get_field('vc-profile');
-  if( $vcProfile ) :
-  $vcProfileEnable = $vcProfile['is_enable'];
-  if( $vcProfileEnable == "yes" ) { 
-  
-  $whContent        =  $vcProfile['top-content']; 
-  $profileContent   = $vcProfile['content']; 
-  $proText          = vCodeRemoveUlTags( $profileContent );
-  $whContent .=  $proText;
-  $whContent .=  '<ul>
-  <li>India\'s Top 1% Software Talent</li>
-  <li>Trusted by Startups to Fortune 500</li>
-  <li>Idea to Deployment, We Handle All</li>
-  <li>Time-Zone Friendly: Global Presence</li>
-  <li>Top-tier Data Security Protocols</li>
-  <li>On-time Delivery, No Surprises</li>
-  '.$vcProfile['add-pointers'].'
-  </ul>';
-    get_template_part( 'include/why', 'hirev4.0', ['content' => $whContent] );   
-  } 
-endif; 
+if( isset( $vcProfile['is_enable'] ) && ($vcProfile['is_enable'] == "yes") ) {   
+$whContent        =  $vcProfile['top-content']; 
+$profileContent   = $vcProfile['content']; 
+$proText          = vCodeRemoveUlTags( $profileContent );
+$whContent .=  $proText;
+$whContent .=  '<ul>
+<li>India\'s Top 1% Software Talent</li>
+<li>Trusted by Startups to Fortune 500</li>
+<li>Idea to Deployment, We Handle All</li>
+<li>Time-Zone Friendly: Global Presence</li>
+<li>Top-tier Data Security Protocols</li>
+<li>On-time Delivery, No Surprises</li>
+'.$vcProfile['add-pointers'].'
+</ul>';
+get_template_part( 'include/why', 'hirev4.0', ['content' => $whContent] );   
+} 
 
 $grwTitle = (isset($vcBtn['title-3']) && !empty($vcBtn['title-3'])) ? $vcBtn['title-3'] : "Unlock Your Growth Potential!";
 $grwBody  = (isset($vcBtn['text-3']) && !empty($vcBtn['text-3'])) ? $vcBtn['text-3'] : "Let's break down complex IT issues into actionable solutions you can understand.";
@@ -404,10 +410,9 @@ $grwBody  = (isset($vcBtn['text-3']) && !empty($vcBtn['text-3'])) ? $vcBtn['text
       </div>
     </section>
 <?php
-$techStacks = get_field('tech-stacks');
 if( isset($techStacks['is_enabled']) && ($techStacks['is_enabled'] == "yes") ) :
 ?>
-<section class="tech-stack-section bg-light padding-t-120 padding-b-120" id="techstacks-v5">
+<section class="tech-stack-section bg-light padding-t-120 padding-b-120" id="vc-techstacks">
   <div class="container">
     <div class="head-txt text-center"><?php echo $techStacks['content']; ?></div>
     <?php 
@@ -428,7 +433,6 @@ if( isset($techStacks['is_enabled']) && ($techStacks['is_enabled'] == "yes") ) :
 <?php endif; ?>    
 
 <?php 
-$devCost = get_field('dev-cost');
 if( isset($devCost['is_enabled']) && ($devCost['is_enabled'] == "yes") ) :
 ?>
 <section class="software-costing padding-t-120 padding-b-120" id="dev-cost">
@@ -461,11 +465,8 @@ echo '</div>';
 </section>
 <?php endif; ?>
 
-<?php 
-  $tailTech = get_field( 'tailored_tech' );
-  if( $tailTech['is_enable'] == 'yes' ) :
-  ?>
-<section class="tailored-tech padding-t-120 padding-b-120">
+<?php if( isset($tailTech['is_enable']) && ($tailTech['is_enable'] == 'yes') ) : ?>
+<section id="tail-tech" class="tailored-tech padding-t-120 padding-b-120">
   <div class="container">
     <div class="dis-flex tailored-out">
       <div class="left-section">
@@ -577,12 +578,10 @@ $sdmethod = get_field('sd-method','option');
 <?php 
 endif;
 */
-
-$ourProcess = get_field( 'our-process' );
 if( $ourProcess['is_enable'] == 'yes' ) :
 $psProcess = ( isset($ourProcess['sec-type']) && ($ourProcess['sec-type'] == "ps") ) ? true : false;  
 ?>
-<section class="development-phase padding-t-120 padding-b-120">
+<section id="our-process" class="development-phase padding-t-120 padding-b-120">
   <div class="container">
     <div class="head-txt text-center">
       <?php 
@@ -646,10 +645,9 @@ $psProcess = ( isset($ourProcess['sec-type']) && ($ourProcess['sec-type'] == "ps
 <?php endif; ?>
 
 <?php 
-$hireModel = get_field('hiring_models');
 if( isset($hireModel['is_enabled']) && $hireModel['is_enabled'] == "yes" ) :
 ?>
-<section class="hire-model-tab bg-light padding-t-120 padding-b-120" id="hiremodels">
+<section class="hire-model-tab bg-light padding-t-120 padding-b-120" id="hire-model">
       <div class="container">
         <div class="heading text-center"><?php echo $hireModel['content']; ?></div>
         <?php 
@@ -705,7 +703,8 @@ if( isset($hireModel['is_enabled']) && $hireModel['is_enabled'] == "yes" ) :
 ?>
 
 <!-- Hire Model #Starts Here -->
-<?php 
+<?php
+/* 
   $hireModel 			  = get_field('hiring_models');
   $hireModelEnable 	= $hireModel['is_enabled'];
   $secTheme         = (isset($hireModel['sc_background']) && !empty($hireModel['sc_background'])) ? $hireModel['sc_background'] : '';
@@ -765,11 +764,11 @@ if( isset($hireModel['is_enabled']) && $hireModel['is_enabled'] == "yes" ) :
 	hireModelCmn( $secTheme );
 } 
 endif; 
+*/
 ?>
 
 <?php getPageCaseStudiesV3( $thisPostID ); ?>
 <?php
-$guideTopics 	= get_field('guide-topics');
 $gtEnabled 		= $guideTopics['is_enabled'];
 if( $gtEnabled == 'yes' ) :
 ?>
@@ -810,7 +809,9 @@ if( $gtEnabled == 'yes' ) :
           	if( $tn == 1 ){
           		$isActive = "is-active";
           	}
-          	echo '<div class="tab-content" id="ug'.$tn.'">'.$topicText['text'].'</div>';
+          	echo '<div class="tab-content" id="ug'.$tn.'">';
+            //'.$topicText['text'].
+            echo '</div>';
           } 
           ?>
       </div>
@@ -819,12 +820,9 @@ if( $gtEnabled == 'yes' ) :
   </div>
 </section>
 <?php endif; ?>
-<?php 
-  $faqs 		= get_field('faq-group');
-  $faqEnable 	= $faqs['is_enabled'];
-  if( $faqEnable == "yes" ) :
-  ?>
-<section class="faq-section padding-t-120 padding-b-120 bg-dark-theme" data-nosnippet>
+
+<?php if( isset( $faqs['is_enabled'] ) && ($faqs['is_enabled'] == "yes") ) : ?>
+<section id="vc-faqs" class="faq-section padding-t-120 padding-b-120 bg-dark-theme" data-nosnippet>
   <div class="container">
     <div class="head-txt text-center"><?php echo $faqs['content']; ?></div>
     <?php 
