@@ -810,7 +810,7 @@ if( $gtEnabled == 'yes' ) :
           		$isActive = "is-active";
           	}
           	echo '<div class="tab-content" id="ug'.$tn.'">';
-            //'.$topicText['text'].
+            echo $topicText['text'];
             echo '</div>';
           } 
           ?>
