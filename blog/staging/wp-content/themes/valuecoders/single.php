@@ -150,7 +150,8 @@
             ?>
           <div class="customcta">          
           <div class="cus-cont">
-          <div class="cushed"><?php echo $sbText; ?></div>
+          <div class="cushed">Get Started with ValueCoders
+          </div>
           <ul>
                   <li>Innovative Tech Solutions</li>
                   <li>Timely Project Delivery</li>
