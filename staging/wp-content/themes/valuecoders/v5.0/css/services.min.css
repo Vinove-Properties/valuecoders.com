@@ -2897,7 +2897,7 @@ body.page-template-template-testimonials .client-video-section iframe,
         flex-basis: 100%;
         color: #666666;
         display: none;
-        transition: max-height 0.5s ease-out; }
+        transition: transform 0.5s ease; }
         .software-work .soft-wrap .soft-row .soft-card .card-header ul li:nth-child(-n+2) {
           display: list-item; }
         .software-work .soft-wrap .soft-row .soft-card .card-header ul li:before {
@@ -2910,9 +2910,11 @@ body.page-template-template-testimonials .client-video-section iframe,
           position: absolute;
           left: 0;
           top: 3px; }
-    .software-work .soft-wrap .soft-row .soft-card .card-header.show-li ul li {
-      display: block;
-      transition: max-height 0.5s ease-out; }
+    .software-work .soft-wrap .soft-row .soft-card .card-header.show-li {
+      transition: transform 0.5s ease; }
+      .software-work .soft-wrap .soft-row .soft-card .card-header.show-li ul li {
+        display: block;
+        transition: transform 0.5s ease; }
     .software-work .soft-wrap .soft-row .soft-card h3 {
       margin: 0 0 15px; }
     .software-work .soft-wrap .soft-row .soft-card .expandable-content {
