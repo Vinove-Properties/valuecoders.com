@@ -151,11 +151,15 @@
           <div class="customcta">          
           <div class="cus-cont">
           <div class="cushed"><?php echo $sbText; ?></div>
-          <!-- <div class="text"><?php echo $sbCTA; ?></div> -->
+          <ul>
+                  <li>Innovative Tech Solutions</li>
+                  <li>Timely Project Delivery</li>
+                  <li>Top 1% Industry Professionals</li>
+                </ul>
           <div class="btn-container">
             <div class="btn-sec">
             <a href="https://www.valuecoders.com/contact" target="_blank" class="btn rounded" data-wpel-link="external" 
-            rel="nofollow external noopener noreferrer"><span class="text-white">Schedule A Call</span></a>
+            rel="nofollow external noopener noreferrer"><span class="text-white">Book Free Consultation</span></a>
             </div>
           </div>
           </div>

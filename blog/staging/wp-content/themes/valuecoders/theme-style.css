@@ -908,24 +908,7 @@ display:none !important;
 .es_caption {
   display: none;
 }
-.tocsec::-webkit-scrollbar {
-  width: 5px;
-  border-radius: 10px;
-  background-color: #f6f6f6;
-  height: 100%;
-  overflow: scroll;
-}
-div#ez-toc-widget-container h3 {
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 49px;
-  color: #212121;
-  margin-bottom: 30px;
-}
-.tocsec::-webkit-scrollbar-thumb {
-  background-color:rgba(255, 173, 0, 1);
-  border-radius: 10px;
-}
+
 .ez-toc-widget-container nav ol {
   counter-reset: item;
   padding-left: 10px;
@@ -2079,14 +2062,6 @@ padding-top:10px !important;
   max-width: 100%;
   padding:0;
 }
-.ez-toc-widget-container nav {
-    border: 2px solid #181732;
-    padding: 20px;
-}
-.ez-toc-widget-container nav ul li {
-    margin: 0 0 5px;
-}
- 
 
   .post-rel-sec .reBox {
     margin: 15px 0 0;
