@@ -127,7 +127,7 @@ min-width: 247px; z-index: 9; margin:15px 0 0;}
 
 
 .table-c{width: 100%; margin: 20px 0 0; border: 1px solid #0000001A; border-radius: 10px; padding: 15px; background: #f9f9f9;}
-.tocsec{overflow-y: auto; height: auto; height: 265px; padding-left: 0; padding-right: 0; text-align: left; }
+.tocsec{overflow-y: auto; height: auto; max-height: 265px; padding-left: 0; padding-right: 0; text-align: left; }
 .table-c h3 {color: #414141; font-size: 17px; line-height:1.3; font-weight :400; text-transform: uppercase;  margin: 0 0 15px; text-align:left;}
 .table-c h3 a{font-weight: 400;}
 .ez-toc-widget-container nav ol li, .ez-toc-widget-container nav ul li {list-style-type: none; margin:0; padding: 0 10px 0 0; 
@@ -233,7 +233,7 @@ top:0; background:#FFAD00; color:#000000; border-radius: 0 5px 5px 0; border:0; 
 .ez-toc-widget-container nav ol li a, .ez-toc-widget-container nav ul li a{font-size: 14px;  
 line-height:21px; padding:7px 10px;}
 .ez-toc-widget-container ul li.active a, .ez-toc-widget-container ol li.active a{border-radius: 8px;}    
-.tocsec {height:200px;}
+.tocsec {max-height:200px;}
 .ez-toc-widget-container ul.ez-toc-list li.active{border-radius: 8px;}
 
 .second-row {margin:0;}
@@ -286,7 +286,7 @@ line-height:21px; padding:7px 10px;}
 .detail-subsbox h3{margin: 0 0 15px; text-align: center}
 
 .detail-page {padding: 50px 0;}
-.tocsec{overflow-y: auto; height: auto; max-height: auto; padding-right:0;}
+.tocsec{overflow-y: auto; max-height:auto; height: auto; max-height: auto; padding-right:0;}
 .vcb-col-left.sticky #elm-toc .tocsec{ height: auto;}
 .vcb-col-left{width: 100%; text-align: left; margin:0 0 20px;}	
 .vcb-col-right {width: 100%; margin:10px 0 0; padding: 0;}
