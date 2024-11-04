@@ -2887,19 +2887,19 @@ body.page-template-template-testimonials .client-video-section iframe,
     position: relative;
     padding: 30px 20px;
     box-shadow: 0px 4px 40px 0px rgba(237, 246, 255, 0.3); }
-    .software-work .soft-wrap .soft-row .soft-card ul {
+    .software-work .soft-wrap .soft-row .soft-card .card-header ul {
       margin: 0;
       list-style: none; }
-      .software-work .soft-wrap .soft-row .soft-card ul li {
+      .software-work .soft-wrap .soft-row .soft-card .card-header ul li {
         position: relative;
         margin-bottom: 10px;
         padding-left: 23px;
         flex-basis: 100%;
         color: #666666;
         display: none; }
-        .software-work .soft-wrap .soft-row .soft-card ul li:nth-child(-n+2) {
+        .software-work .soft-wrap .soft-row .soft-card .card-header ul li:nth-child(-n+2) {
           display: list-item; }
-        .software-work .soft-wrap .soft-row .soft-card ul li:before {
+        .software-work .soft-wrap .soft-row .soft-card .card-header ul li:before {
           content: "";
           width: 15px;
           height: 15px;
@@ -2909,7 +2909,7 @@ body.page-template-template-testimonials .client-video-section iframe,
           position: absolute;
           left: 0;
           top: 3px; }
-    .software-work .soft-wrap .soft-row .soft-card .show-li ul li {
+    .software-work .soft-wrap .soft-row .soft-card .card-header.show-li ul li {
       display: block; }
     .software-work .soft-wrap .soft-row .soft-card h3 {
       margin: 0 0 15px; }
@@ -2963,7 +2963,7 @@ body.page-template-template-testimonials .client-video-section iframe,
     .software-work .soft-wrap .soft-row .soft-card {
       margin: 0 10px;
       padding: 20px; }
-      .software-work .soft-wrap .soft-row .soft-card h3 {
+      .software-work .soft-wrap .soft-row .soft-card .card-header h3 {
         margin: 0 0 15px; } }
 @media (max-width: 767px) {
   .software-work .flex-1,
