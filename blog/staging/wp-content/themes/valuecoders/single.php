@@ -153,9 +153,10 @@
           <div class="cushed">Get Started with ValueCoders
           </div>
           <ul>
-                  <li>Innovative Tech Solutions</li>
-                  <li>Timely Project Delivery</li>
-                  <li>Top 1% Industry Professionals</li>
+                  <li>20+ Years  in Software Development</li>
+                  <li>Access India’s Top 1% Software Talent
+                  </li>
+                  <li>On-Time Delivery, No Surprises</li>
                 </ul>
           <div class="btn-container">
             <div class="btn-sec">
