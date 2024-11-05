@@ -3539,7 +3539,8 @@ body.page-template-template-testimonials .client-video-section iframe,
     left: -20px;
     transform: rotate(0);
     font-size: 0;
-    cursor: pointer; }
+    cursor: pointer;
+    position: absolute; }
     .tech-stack-section .technology-slider .tech-prev:hover,
     .tech-stack-section .technology-slider .tech-next:hover {
       background-color: #ffad00; }
