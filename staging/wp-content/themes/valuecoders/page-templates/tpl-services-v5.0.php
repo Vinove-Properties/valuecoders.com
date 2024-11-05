@@ -26,6 +26,14 @@ if( is_array( $cmnBanner ) ){
 $bannerImageSrc = getVcWebpSrcURL( $cmnBanner );
 }
 ?>
+
+<div class="container">
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+     <span class="ham-icon"></span>
+      </div>
+    </div>
+
+
 <section class="hero-section" style="background-image:url(<?php echo $bannerImageSrc; ?>);">
 <div class="container">
   <div class="content-wrap">
