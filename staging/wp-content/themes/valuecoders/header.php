@@ -191,7 +191,7 @@ global $post;
 $pageCategory = get_post_meta( $post->ID, 'vc-mcategory', true);
 ?>
 </head>
-<body id="themeAdd" class="hb-toc" <?php body_class(); ?> data-mpid="<?php echo $post->ID; ?>" 
+<body id="themeAdd" <?php body_class(); ?> data-mpid="<?php echo $post->ID; ?>" 
 data-ptemplate="<?php echo basename( get_page_template() ); ?>" data-gcaploaded="0" 
 data-url="<?php the_permalink(); ?>" data-pcat="<?php echo $pageCategory; ?>">
 <?php 
