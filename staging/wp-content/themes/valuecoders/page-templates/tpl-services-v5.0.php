@@ -1,228 +1,224 @@
 <?php
-/*
-Template Name: Service V5.0 Template 
-*/ 
-global $post;
-$thisPostID = $post->ID;
-$vcBtn 			= get_field('vc-cta', $thisPostID);
-
-$specifications   = get_field('tech-spec');
-$sfRow            = get_field('sf-type');
-$vcProfile        = get_field('vc-profile');
-$techStacks       = get_field('tech-stacks');
-$devCost          = get_field('dev-cost');
-$tailTech         = get_field('tailored_tech');
-$ourProcess       = get_field('our-process');
-$hireModel        = get_field('hiring_models');
-$guideTopics      = get_field('guide-topics');
-$faqs             = get_field('faq-group');
-
-get_header();
-$template_assets  = get_bloginfo('template_url').'/v5.0/';
-//$mainServicePage  = 11941;
-$cmnBanner        = get_field('sbg-thumbnail');
-$bannerImageSrc   = $template_assets.'images/service-banner.png';
-if( is_array( $cmnBanner ) ){
-$bannerImageSrc = getVcWebpSrcURL( $cmnBanner );
-}
-?>
-
+  /*
+  Template Name: Service V5.0 Template 
+  */ 
+  global $post;
+  $thisPostID = $post->ID;
+  $vcBtn 			= get_field('vc-cta', $thisPostID);
+  
+  $specifications   = get_field('tech-spec');
+  $sfRow            = get_field('sf-type');
+  $vcProfile        = get_field('vc-profile');
+  $techStacks       = get_field('tech-stacks');
+  $devCost          = get_field('dev-cost');
+  $tailTech         = get_field('tailored_tech');
+  $ourProcess       = get_field('our-process');
+  $hireModel        = get_field('hiring_models');
+  $guideTopics      = get_field('guide-topics');
+  $faqs             = get_field('faq-group');
+  
+  get_header();
+  $template_assets  = get_bloginfo('template_url').'/v5.0/';
+  //$mainServicePage  = 11941;
+  $cmnBanner        = get_field('sbg-thumbnail');
+  $bannerImageSrc   = $template_assets.'images/service-banner.png';
+  if( is_array( $cmnBanner ) ){
+  $bannerImageSrc = getVcWebpSrcURL( $cmnBanner );
+  }
+  ?>
 <div class="container">
-      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-     <span class="ham-icon"></span>
-      </div>
-    </div>
-
-
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span class="ham-icon"></span>
+  </div>
+</div>
 <section class="hero-section" style="background-image:url(<?php echo $bannerImageSrc; ?>);">
-<div class="container">
-  <div class="content-wrap">
-    <div class="dis-flex justify-sb">
-      <div class="left-box">
-        <div class="breadcrumbs">
-          <?php 
-          $bcCategory = get_field('bc-vcategory');
-          $bcTitle    = get_field('bc-title');
-          if( $bcTitle ){
-          $bct = $bcTitle;
-          }else{
-          $bct = get_the_title();
-          }
-          if( isset( $bcCategory ) && ($bcCategory == "solutions") ){
-          echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Solutions</span> '.$bct;   
-          }elseif( isset( $bcCategory ) && ($bcCategory == "industries") ){
-          echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Industries</span> '.$bct;   
-          }
-          else{
-          echo '<a href="'.get_bloginfo('url').'">Home</a> 
-          <a href="'.site_url('/software-development-services-company').'">Services</a> '.$bct;
-          }
-          ?>
-        </div>
-        <?php the_content(); ?>
-        <div class="btn-sec margin-t-50 ">
-          <a href="https://www.valuecoders.com/v2wp/contact" class="btn rounded">
-          <span class="text-white">Get Free Consulation</span>
-          </a>
-        </div>
-      </div>
-      <div class="right-box">
-        <div class="card-box">
-          <div class="card-top">
-            <picture>
-              <img loading="lazy" src="<?php echo $template_assets; ?>images/card-image.png" width="" height="" alt="valuecoders">
-            </picture>
-            <p><strong>Valuecoders'</strong> digital marketing services have been a game-changer for our business, significantly boosting our online.</p>
+  <div class="container">
+    <div class="content-wrap">
+      <div class="dis-flex justify-sb">
+        <div class="left-box">
+          <div class="breadcrumbs">
+            <?php 
+              $bcCategory = get_field('bc-vcategory');
+              $bcTitle    = get_field('bc-title');
+              if( $bcTitle ){
+              $bct = $bcTitle;
+              }else{
+              $bct = get_the_title();
+              }
+              if( isset( $bcCategory ) && ($bcCategory == "solutions") ){
+              echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Solutions</span> '.$bct;   
+              }elseif( isset( $bcCategory ) && ($bcCategory == "industries") ){
+              echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Industries</span> '.$bct;   
+              }
+              else{
+              echo '<a href="'.get_bloginfo('url').'">Home</a> 
+              <a href="'.site_url('/software-development-services-company').'">Services</a> '.$bct;
+              }
+              ?>
           </div>
-          <div class="ratings">
-            <div class="rating">
-              <img loading="lazy" src="<?php echo $template_assets; ?>images/5-star.svg" alt="Clutch icon">
-              <span>Rated 4.8/5 stars on <strong>G2</strong></span>
-            </div>
-            <div class="rating">
-              <img loading="lazy" src="<?php echo $template_assets; ?>images/5-star.svg" alt="Clutch icon"><span>Rated 4.9/5 stars on <strong>Clutch</strong></span>
-            </div>
+          <?php the_content(); ?>
+          <div class="btn-sec margin-t-50 ">
+            <a href="https://www.valuecoders.com/v2wp/contact" class="btn rounded">
+            <span class="text-white">Get Free Consulation</span>
+            </a>
           </div>
         </div>
-        <div class="se-logo-box dis-flex">
-          <div class="logo-box logo1"></div>
-          <div class="logo-box logo2"></div>
-          <div class="logo-box logo3"></div>
-          <div class="logo-box logo4"></div>
+        <div class="right-box">
+          <div class="card-box">
+            <div class="card-top">
+              <picture>
+                <img loading="lazy" src="<?php echo $template_assets; ?>images/card-image.png" width="" height="" alt="valuecoders">
+              </picture>
+              <p><strong>Valuecoders'</strong> digital marketing services have been a game-changer for our business, significantly boosting our online.</p>
+            </div>
+            <div class="ratings">
+              <div class="rating">
+                <img loading="lazy" src="<?php echo $template_assets; ?>images/5-star.svg" alt="Clutch icon">
+                <span>Rated 4.8/5 stars on <strong>G2</strong></span>
+              </div>
+              <div class="rating">
+                <img loading="lazy" src="<?php echo $template_assets; ?>images/5-star.svg" alt="Clutch icon"><span>Rated 4.9/5 stars on <strong>Clutch</strong></span>
+              </div>
+            </div>
+          </div>
+          <div class="se-logo-box dis-flex">
+            <div class="logo-box logo1"></div>
+            <div class="logo-box logo2"></div>
+            <div class="logo-box logo3"></div>
+            <div class="logo-box logo4"></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </section>
 <?php get_template_part('inc/cmn', 'startups'); ?>
 <section class="fixfull-section padding-t-120 padding-b-120">
   <div class="container">
     <div class="entire-sticky">
       <div class="left-column">
-      <?php       
-      if( isset( $specifications['is_enabled'] ) && ($specifications['is_enabled'] == "yes") ){
-      echo '<div class="service-section" id="our-services">';
-      echo '<div class="heading">';
-      echo $specifications['content'];
-      echo '</div>';        
-      if( $specifications['specifications'] ){
-        echo '<div class="dis-flex margin-t-50 ser-row">';
-          foreach( $specifications['specifications'] as $row ){
-            $hasLink = ( isset($row['link']) && !empty($row['link']) ) ? 'has-vlink' : '';
-            $title = $row['title'];
-            $learnLink = '';
-            if( $hasLink ){
-            $title = '<a href="'.$row['link'].'">'.$row['title'].'</a>';    
-            }
-            
-            if( isset( $row['link'] ) && !empty( $row['link'] ) ){
-            $learnLink = '<div class="exbtn margin-t-50"><a class="explore-btn" href="'.$row['link'].'">Know More</a></div>';  
-            }
-
-            echo '<div class="flex-2 '.$hasLink.'">
-            <div class="card no-bg">
-              <div class="box-3">
-              <h3>'.$title.'</h3>
-              '.$row['content'].'
-              '.$learnLink.'
-              </div>
-            </div>
-            </div>';          
-          }
-        echo '</div>';
-      }
-      echo '</div>';  
-      }
-      ?>
-      <?php 
-      $eOneHeading  = (isset($vcBtn['title-one']) && !empty($vcBtn['title-one'])) ? $vcBtn['title-one'] : "Let's Discuss Your Project";
-      $eOneBody     = (isset($vcBtn['text-one']) && !empty($vcBtn['text-one'])) ? $vcBtn['text-one'] : "Get free consultation and let us know your project idea to turn it into an amazing digital product.";
-      $eOnelt = (isset($vcBtn['link-one']) && !empty($vcBtn['link-one'])) ? $vcBtn['link-one'] : "Book a Free Consultation"; 
-      $eCtaOne = '<h2>'.$eOneHeading.'</h2>';
-      $eCtaOne .= '<p>'.$eOneBody.'</p>';
-      echo expert_talk_cta_v5( $eCtaOne, $eOnelt );
-      
-
-      if( isset( $sfRow['is_enabled'] ) && ($sfRow['is_enabled'] == "yes") ){
-      echo '<div class="software-work padding-t-70" id="sf-type">';
-      echo '<div class="heading">'.$sfRow['content'].'</div>';
-      if( $sfRow['category'] ){
-        foreach( $sfRow['category'] as $row ){
-        echo '<div class="soft-wrap padding-t-50"><span class="sf-title">'.$row['title'].'</span>
-        <div class="dis-flex soft-row">';
-          if( $row['in-cards'] ){
-              foreach( $row['in-cards'] as $inrow ){
-              echo '<div class="flex-2">
-                <div class="soft-card">
-                <div class="card-header">'.$inrow['content'].'
-                <a href="javascript:void(0);" onclick="_expandListing(this);" class="see-more-btn">See More</a>  
+        <?php       
+          if( isset( $specifications['is_enabled'] ) && ($specifications['is_enabled'] == "yes") ){
+          echo '<div class="service-section" id="our-services">';
+          echo '<div class="heading">';
+          echo $specifications['content'];
+          echo '</div>';        
+          if( $specifications['specifications'] ){
+            echo '<div class="dis-flex margin-t-50 ser-row">';
+              foreach( $specifications['specifications'] as $row ){
+                $hasLink = ( isset($row['link']) && !empty($row['link']) ) ? 'has-vlink' : '';
+                $title = $row['title'];
+                $learnLink = '';
+                if( $hasLink ){
+                $title = '<a href="'.$row['link'].'">'.$row['title'].'</a>';    
+                }
+                
+                if( isset( $row['link'] ) && !empty( $row['link'] ) ){
+                $learnLink = '<div class="exbtn margin-t-50"><a class="explore-btn" href="'.$row['link'].'">Know More</a></div>';  
+                }
+          
+                echo '<div class="flex-2 '.$hasLink.'">
+                <div class="card no-bg">
+                  <div class="box-3">
+                  <h3>'.$title.'</h3>
+                  '.$row['content'].'
+                  '.$learnLink.'
+                  </div>
                 </div>
-                </div>
-                </div>'; 
-              }  
+                </div>';          
+              }
+            echo '</div>';
           }
-        echo '</div></div>';
-        }
-      }
-      echo '</div>';  
-      }  
-      ?>
-      </div><!--//.left-column-->
+          echo '</div>';  
+          }
+          ?>
+        <?php 
+          $eOneHeading  = (isset($vcBtn['title-one']) && !empty($vcBtn['title-one'])) ? $vcBtn['title-one'] : "Let's Discuss Your Project";
+          $eOneBody     = (isset($vcBtn['text-one']) && !empty($vcBtn['text-one'])) ? $vcBtn['text-one'] : "Get free consultation and let us know your project idea to turn it into an amazing digital product.";
+          $eOnelt = (isset($vcBtn['link-one']) && !empty($vcBtn['link-one'])) ? $vcBtn['link-one'] : "Book a Free Consultation"; 
+          $eCtaOne = '<h2>'.$eOneHeading.'</h2>';
+          $eCtaOne .= '<p>'.$eOneBody.'</p>';
+          echo expert_talk_cta_v5( $eCtaOne, $eOnelt );
+          
+          
+          if( isset( $sfRow['is_enabled'] ) && ($sfRow['is_enabled'] == "yes") ){
+          echo '<div class="software-work padding-t-70" id="sf-type">';
+          echo '<div class="heading">'.$sfRow['content'].'</div>';
+          if( $sfRow['category'] ){
+            foreach( $sfRow['category'] as $row ){
+            echo '<div class="soft-wrap padding-t-50"><span class="sf-title">'.$row['title'].'</span>
+            <div class="dis-flex soft-row">';
+              if( $row['in-cards'] ){
+                  foreach( $row['in-cards'] as $inrow ){
+                  echo '<div class="flex-2">
+                    <div class="soft-card">
+                    <div class="card-header">'.$inrow['content'].'
+                    <a href="javascript:void(0);" onclick="_expandListing(this);" class="see-more-btn">See More</a>  
+                    </div>
+                    </div>
+                    </div>'; 
+                  }  
+              }
+            echo '</div></div>';
+            }
+          }
+          echo '</div>';  
+          }  
+          ?>
+      </div>
+      <!--//.left-column-->
       <div class="right-column active" id="valc-toc" style="right: 0px;">
-            <div class="toc-sec">
-              <h4>Table of Contents</h4>
-              <div class="toc-wrap">
-                <?php 
-                echo GetTocTitle($specifications, "our-services");
-                echo GetTocTitle($sfRow, "sf-type");
-                echo GetTocTitle($vcProfile, "cmn-profile");
-                echo GetTocTitle($techStacks, "vc-techstacks");
-                echo GetTocTitle($devCost, "dev-cost");
-                echo GetTocTitle($tailTech, "tail-tech");
-                echo GetTocTitle($ourProcess, "our-process");
-                echo GetTocTitle($hireModel, "hire-model");
-                echo GetTocTitle($guideTopics, "has-ug");
-                echo GetTocTitle($faqs, "vc-faqs");
-                ?>
-              </div>
-            </div>
-            <div class="sticky-button">
-              <div class="sticky-cta">
-                <p>Have pressing questions about your project?</p>
-                <a class="gtexprt" href="#">Get Expert Advice</a>
-              </div>
-            </div>
+        <div class="toc-sec">
+          <h4>Table of Contents</h4>
+          <div class="toc-wrap">
+            <?php 
+              echo GetTocTitle($specifications, "our-services");
+              echo GetTocTitle($sfRow, "sf-type");
+              echo GetTocTitle($vcProfile, "cmn-profile");
+              echo GetTocTitle($techStacks, "vc-techstacks");
+              echo GetTocTitle($devCost, "dev-cost");
+              echo GetTocTitle($tailTech, "tail-tech");
+              echo GetTocTitle($ourProcess, "our-process");
+              echo GetTocTitle($hireModel, "hire-model");
+              echo GetTocTitle($guideTopics, "has-ug");
+              echo GetTocTitle($faqs, "vc-faqs");
+              ?>
           </div>
+        </div>
+        <div class="sticky-button">
+          <div class="sticky-cta">
+            <p>Have pressing questions about your project?</p>
+            <a class="gtexprt" href="#">Get Expert Advice</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 <!-- //END OF TOC Section -->
 <?php //get_template_part('include/why', 'hirev4.0'); ?>
-
 <?php  
-if( isset( $vcProfile['is_enable'] ) && ($vcProfile['is_enable'] == "yes") ) {   
-$whContent        =  $vcProfile['top-content']; 
-$profileContent   = $vcProfile['content']; 
-$proText          = vCodeRemoveUlTags( $profileContent );
-$whContent .=  $proText;
-$whContent .=  '<ul>
-<li>India\'s Top 1% Software Talent</li>
-<li>Trusted by Startups to Fortune 500</li>
-<li>Idea to Deployment, We Handle All</li>
-<li>Time-Zone Friendly: Global Presence</li>
-<li>Top-tier Data Security Protocols</li>
-<li>On-time Delivery, No Surprises</li>
-'.$vcProfile['add-pointers'].'
-</ul>';
-
-get_template_part( 'include/why', 'hirev4.0', ['content' => $whContent] );   
-} 
-
-$grwTitle = (isset($vcBtn['title-3']) && !empty($vcBtn['title-3'])) ? $vcBtn['title-3'] : "Unlock Your Growth Potential!";
-$grwBody  = (isset($vcBtn['text-3']) && !empty($vcBtn['text-3'])) ? $vcBtn['text-3'] : "Let's break down complex IT issues into actionable solutions you can understand.";
-?>
-
+  if( isset( $vcProfile['is_enable'] ) && ($vcProfile['is_enable'] == "yes") ) {   
+  $whContent        =  $vcProfile['top-content']; 
+  $profileContent   = $vcProfile['content']; 
+  $proText          = vCodeRemoveUlTags( $profileContent );
+  $whContent .=  $proText;
+  $whContent .=  '<ul>
+  <li>India\'s Top 1% Software Talent</li>
+  <li>Trusted by Startups to Fortune 500</li>
+  <li>Idea to Deployment, We Handle All</li>
+  <li>Time-Zone Friendly: Global Presence</li>
+  <li>Top-tier Data Security Protocols</li>
+  <li>On-time Delivery, No Surprises</li>
+  '.$vcProfile['add-pointers'].'
+  </ul>';
+  
+  get_template_part( 'include/why', 'hirev4.0', ['content' => $whContent] );   
+  } 
+  
+  $grwTitle = (isset($vcBtn['title-3']) && !empty($vcBtn['title-3'])) ? $vcBtn['title-3'] : "Unlock Your Growth Potential!";
+  $grwBody  = (isset($vcBtn['text-3']) && !empty($vcBtn['text-3'])) ? $vcBtn['text-3'] : "Let's break down complex IT issues into actionable solutions you can understand.";
+  ?>
 <section class="counter-column-section bg-blue-linear padding-t-70 padding-b-70" id="unlock-growth-cta">
   <div class="container">
     <div class="dis-flex justify-sb">
@@ -279,201 +275,198 @@ $grwBody  = (isset($vcBtn['text-3']) && !empty($vcBtn['text-3'])) ? $vcBtn['text
   </div>
 </section>
 <section class="indcater-section padding-t-120 padding-b-120">
-      <div class="container">
-        <div class="head-txt text-center">
-          <h2>Industries We Cater To</h2>
-          <p>The cost of software development depends on various factors such as service scope, sourcing model.</p>
+  <div class="container">
+    <div class="head-txt text-center">
+      <h2>Industries We Cater To</h2>
+      <p>The cost of software development depends on various factors such as service scope, sourcing model.</p>
+    </div>
+    <div class="dis-flex glider-contain indcater-slider" id="induscater-glider">
+      <div class="glider">
+        <div class="flex-3 ind-box">
+          <div class="ind-column">
+            <div class="ind-image">
+              <img loading="lazy" src="<?php echo $template_assets; ?>images/healthcare-ind.png" width="427" height="480" alt="valuecoders">
+              <h3>Healthcare</h3>
+            </div>
+            <div class="service-content">
+              <h3>Travel & Tourism</h3>
+              <p>Our travel application development team understands the terms...</p>
+              <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
+            </div>
+          </div>
         </div>
-        <div class="dis-flex glider-contain indcater-slider" id="induscater-glider">
-          <div class="glider">
-
-            <div class="flex-3 ind-box">
-              <div class="ind-column">
-                <div class="ind-image">
-                  <img loading="lazy" src="<?php echo $template_assets; ?>images/healthcare-ind.png" width="427" height="480" alt="valuecoders">
-                  <h3>Healthcare</h3>
-                </div>
-                <div class="service-content">
-                  <h3>Travel & Tourism</h3>
-                  <p>Our travel application development team understands the terms...</p>
-                  <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
-                </div>
+        <div class="flex-3 ind-box">
+          <div class="ind-column">
+            <div class="ind-image small-img">
+              <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm01.png" width="426" height="234" alt="valuecoders">
+              <h3>Travel & Tourism</h3>
+            </div>
+            <div class="service-content">
+              <h3>Travel & Tourism</h3>
+              <p>Our travel application development team understands the terms...</p>
+              <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
+            </div>
+          </div>
+          <div class="ind-flex">
+            <div class="ind-column w-50">
+              <div class="ind-image small-img">
+                <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm02.png" width="203" height="234" alt="valuecoders">
+                <h3>Travel & Tourism</h3>
+              </div>
+              <div class="service-content">
+                <h3>Travel & Tourism</h3>
+                <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
               </div>
             </div>
-            <div class="flex-3 ind-box">
-              <div class="ind-column">
-                <div class="ind-image small-img">
-                  <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm01.png" width="426" height="234" alt="valuecoders">
-                  <h3>Travel & Tourism</h3>
-                </div>
-                <div class="service-content">
-                  <h3>Travel & Tourism</h3>
-                  <p>Our travel application development team understands the terms...</p>
-                  <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
-                </div>
+            <div class="ind-column w-50">
+              <div class="ind-image small-img">
+                <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm02.png" width="203" height="234" alt="valuecoders">
+                <h3>Travel & Tourism</h3>
               </div>
-              <div class="ind-flex">
-                <div class="ind-column w-50">
-                  <div class="ind-image small-img">
-                    <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm02.png" width="203" height="234" alt="valuecoders">
-                    <h3>Travel & Tourism</h3>
-                  </div>
-                  <div class="service-content">
-                    <h3>Travel & Tourism</h3>
-                    <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
-                  </div>
-                </div>
-                <div class="ind-column w-50">
-                  <div class="ind-image small-img">
-                    <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm02.png" width="203" height="234" alt="valuecoders">
-                    <h3>Travel & Tourism</h3>
-                  </div>
-                  <div class="service-content">
-                    <h3>Travel & Tourism</h3>
-                    <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="flex-3  ind-box">
-              <div class="ind-column">
-                <div class="ind-image">
-                  <img loading="lazy" src="<?php echo $template_assets; ?>images/healthcare-ind.png" width="427" height="480" alt="valuecoders">
-                  <h3>Healthcare</h3>
-                </div>
-                <div class="service-content">
-                  <h3>Travel & Tourism</h3>
-                  <p>Our travel application development team understands the terms...</p>
-                  <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="flex-3  ind-box">
-              <div class="ind-column">
-                <div class="ind-image">
-                  <img loading="lazy" src="<?php echo $template_assets; ?>images/healthcare-ind.png" width="427" height="480" alt="valuecoders">
-                  <h3>Healthcare</h3>
-                </div>
-                <div class="service-content">
-                  <h3>Travel & Tourism</h3>
-                  <p>Our travel application development team understands the terms...</p>
-                  <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="flex-3  ind-box">
-              <div class="ind-column">
-                <div class="ind-image small-img">
-                  <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm01.png" width="426" height="234" alt="valuecoders">
-                  <h3>Travel & Tourism</h3>
-                </div>
-                <div class="service-content">
-                  <h3>Travel & Tourism</h3>
-                  <p>Our travel application development team understands the terms...</p>
-                  <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
-                </div>
-              </div>
-              <div class="ind-flex">
-                <div class="ind-column w-50">
-                  <div class="ind-image small-img">
-                    <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm02.png" width="203" height="234" alt="valuecoders">
-                    <h3>Travel & Tourism</h3>
-                  </div>
-                  <div class="service-content">
-                    <h3>Travel & Tourism</h3>
-                    <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
-                  </div>
-                </div>
-                <div class="ind-column w-50">
-                  <div class="ind-image small-img">
-                    <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm02.png" width="203" height="234" alt="valuecoders">
-                    <h3>Travel & Tourism</h3>
-                  </div>
-                  <div class="service-content">
-                    <h3>Travel & Tourism</h3>
-                    <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="flex-3  ind-box">
-              <div class="ind-column">
-                <div class="ind-image">
-                  <img loading="lazy" src="<?php echo $template_assets; ?>images/healthcare-ind.png" width="427" height="480" alt="valuecoders">
-                  <h3>Healthcare</h3>
-                </div>
-                <div class="service-content">
-                  <h3>Travel & Tourism</h3>
-                  <p>Our travel application development team understands the terms...</p>
-                  <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
-                </div>
+              <div class="service-content">
+                <h3>Travel & Tourism</h3>
+                <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
               </div>
             </div>
           </div>
-          <div class="arrow-btn" id="ind-movers">
-            <button aria-label="Previous" class="ind-prev">«</button>
-            <button aria-label="Next" class="ind-next">»</button>
+        </div>
+        <div class="flex-3  ind-box">
+          <div class="ind-column">
+            <div class="ind-image">
+              <img loading="lazy" src="<?php echo $template_assets; ?>images/healthcare-ind.png" width="427" height="480" alt="valuecoders">
+              <h3>Healthcare</h3>
+            </div>
+            <div class="service-content">
+              <h3>Travel & Tourism</h3>
+              <p>Our travel application development team understands the terms...</p>
+              <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
+            </div>
           </div>
-          <div role="tablist" class="dots"></div>
+        </div>
+        <div class="flex-3  ind-box">
+          <div class="ind-column">
+            <div class="ind-image">
+              <img loading="lazy" src="<?php echo $template_assets; ?>images/healthcare-ind.png" width="427" height="480" alt="valuecoders">
+              <h3>Healthcare</h3>
+            </div>
+            <div class="service-content">
+              <h3>Travel & Tourism</h3>
+              <p>Our travel application development team understands the terms...</p>
+              <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-3  ind-box">
+          <div class="ind-column">
+            <div class="ind-image small-img">
+              <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm01.png" width="426" height="234" alt="valuecoders">
+              <h3>Travel & Tourism</h3>
+            </div>
+            <div class="service-content">
+              <h3>Travel & Tourism</h3>
+              <p>Our travel application development team understands the terms...</p>
+              <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
+            </div>
+          </div>
+          <div class="ind-flex">
+            <div class="ind-column w-50">
+              <div class="ind-image small-img">
+                <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm02.png" width="203" height="234" alt="valuecoders">
+                <h3>Travel & Tourism</h3>
+              </div>
+              <div class="service-content">
+                <h3>Travel & Tourism</h3>
+                <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
+              </div>
+            </div>
+            <div class="ind-column w-50">
+              <div class="ind-image small-img">
+                <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm02.png" width="203" height="234" alt="valuecoders">
+                <h3>Travel & Tourism</h3>
+              </div>
+              <div class="service-content">
+                <h3>Travel & Tourism</h3>
+                <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-3  ind-box">
+          <div class="ind-column">
+            <div class="ind-image">
+              <img loading="lazy" src="<?php echo $template_assets; ?>images/healthcare-ind.png" width="427" height="480" alt="valuecoders">
+              <h3>Healthcare</h3>
+            </div>
+            <div class="service-content">
+              <h3>Travel & Tourism</h3>
+              <p>Our travel application development team understands the terms...</p>
+              <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+      <div class="arrow-btn" id="ind-movers">
+        <button aria-label="Previous" class="ind-prev">«</button>
+        <button aria-label="Next" class="ind-next">»</button>
+      </div>
+      <div role="tablist" class="dots"></div>
+    </div>
+  </div>
+</section>
 <?php
-if( isset($techStacks['is_enabled']) && ($techStacks['is_enabled'] == "yes") ) :
-?>
+  if( isset($techStacks['is_enabled']) && ($techStacks['is_enabled'] == "yes") ) :
+  ?>
 <section class="tech-stack-section bg-light padding-t-120 padding-b-120" id="vc-techstacks">
   <div class="container">
     <div class="head-txt text-center"><?php echo $techStacks['content']; ?></div>
     <?php 
-    if( $techStacks['blocks'] ){
-    echo '<div class="dis-flex glider-contain technology-slider" id="technology-glider"><div class="glider">';
-    foreach( $techStacks['blocks'] as $row ){
-    echo '<div class="flex-3 col-box"><div class="inner-box">'.$row['content'].'</div></div>';
-    }
-    echo '</div>';
-    echo '<button aria-label="Previous" class="tech-prev">«</button>
-      <button aria-label="Next" class="tech-next">»</button>
-      <div role="tablist" class="dots"></div>';
-    echo '</div>';        
-    }
-    ?>
+      if( $techStacks['blocks'] ){
+      echo '<div class="dis-flex glider-contain technology-slider" id="technology-glider"><div class="glider">';
+      foreach( $techStacks['blocks'] as $row ){
+      echo '<div class="flex-3 col-box"><div class="inner-box">'.$row['content'].'</div></div>';
+      }
+      echo '</div>';
+      echo '<button aria-label="Previous" class="tech-prev">«</button>
+        <button aria-label="Next" class="tech-next">»</button>
+        <div role="tablist" class="dots"></div>';
+      echo '</div>';        
+      }
+      ?>
   </div>
 </section>
 <?php endif; ?>    
-
 <?php 
-if( isset($devCost['is_enabled']) && ($devCost['is_enabled'] == "yes") ) :
-?>
+  if( isset($devCost['is_enabled']) && ($devCost['is_enabled'] == "yes") ) :
+  ?>
 <section class="software-costing padding-t-120 padding-b-120" id="dev-cost">
-<div class="container">
-<div class="head-txt text-center"><?php echo $devCost['content']; ?> </div>
-<?php 
-if( $devCost['cards'] ){
-echo '<div class="dis-flex costing-outer margin-t-80">';
-foreach( $devCost['cards'] as $row ){
-echo '<div class="flex-3 col-box">
-    <div class="cost-card">
-      <div class="normal-content">
-        '.vc_pictureElm($row['icon'], $row['title'], 'soft-img').'
-        <h3>'.$row['budget'].'</h3>
-        <p>'.$row['title'].'</p>
-      </div>
-      <div class="hover-content bg-royal-linear">
-        '.$row['content'].'
-        <div class="btn-sec">
-        <a href="'.$row['cta'].'" class="btn rounded"><span class="text-white">'.$row['cta-text'].'</span></a>
+  <div class="container">
+  <div class="head-txt text-center"><?php echo $devCost['content']; ?> </div>
+  <?php 
+    if( $devCost['cards'] ){
+    echo '<div class="dis-flex costing-outer margin-t-80">';
+    foreach( $devCost['cards'] as $row ){
+    echo '<div class="flex-3 col-box">
+        <div class="cost-card">
+          <div class="normal-content">
+            '.vc_pictureElm($row['icon'], $row['title'], 'soft-img').'
+            <h3>'.$row['budget'].'</h3>
+            <p>'.$row['title'].'</p>
+          </div>
+          <div class="hover-content bg-royal-linear">
+            '.$row['content'].'
+            <div class="btn-sec">
+            <a href="'.$row['cta'].'" class="btn rounded"><span class="text-white">'.$row['cta-text'].'</span></a>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>';
-}
-echo '</div>';  
-}
-?>
-</sdiv>
+      </div>';
+    }
+    echo '</div>';  
+    }
+    ?>
+  </sdiv>
 </section>
 <?php endif; ?>
-
 <?php if( isset($tailTech['is_enable']) && ($tailTech['is_enable'] == 'yes') ) : ?>
 <section id="tail-tech" class="tailored-tech padding-t-120 padding-b-120">
   <div class="container">
@@ -514,10 +507,10 @@ echo '</div>';
 </section>
 <?php endif; ?>
 <?php 
-/*
-$techSol = get_field('tech-solutions');
-if( isset( $techSol['is_enabled'] ) && ($techSol['is_enabled'] == "yes") ) :
-?>
+  /*
+  $techSol = get_field('tech-solutions');
+  if( isset( $techSol['is_enabled'] ) && ($techSol['is_enabled'] == "yes") ) :
+  ?>
 <section class="tools-developer tech-stack-list padding-t-120 padding-b-120 bg-dark-theme">
   <div class="container">
     <div class="heading text-center">
@@ -537,80 +530,80 @@ if( isset( $techSol['is_enabled'] ) && ($techSol['is_enabled'] == "yes") ) :
   </div>
 </section>
 <?php endif; 
-*/
-?>
+  */
+  ?>
 <?php 
-/*
-$eTwoHeading  = (isset($vcBtn['title-two']) && !empty($vcBtn['title-two'])) ? $vcBtn['title-two'] : "Got a Project in Mind? Tell Us More";
-$eTwoBody     = (isset($vcBtn['text-two']) && !empty($vcBtn['text-two'])) ? $vcBtn['text-two'] : "Drop us a line and we'll get back to you immediately to schedule a call and discuss your needs personally.";
-$eTwolt = (isset($vcBtn['link-two']) && !empty($vcBtn['link-two'])) ? $vcBtn['link-two'] : 
-"Talk To Our Experts"; 
-
-$eCtatwo = '<h2>'.$eTwoHeading.'</h2>';
-$eCtatwo .= '<p>'.$eTwoBody.'</p>';
-if( !is_page( [17422,17425,16003,16004,16062,16066,17235,17236,17239,16065,3725] ) ){
-echo expert_talk_cta( $eCtatwo, $eTwolt, 'one', 'padding-t-70 padding-b-70 hide-cta' );
-}
-
-$sfMethod = get_field('sf-meth');
-if( $sfMethod !== "no" )  :
-$psMethod = get_field('ps-methodology');
-$sdmethod = [];
-if( isset($psMethod['sec-type']) && ($psMethod['sec-type'] == "ps") ){
-$sdmethod['content']  = $psMethod['content'];
-$sdmethod['cards']    = $psMethod['cards'];
-}else{
-$sdmethod = get_field('sd-method','option');   
-}
-?>
+  /*
+  $eTwoHeading  = (isset($vcBtn['title-two']) && !empty($vcBtn['title-two'])) ? $vcBtn['title-two'] : "Got a Project in Mind? Tell Us More";
+  $eTwoBody     = (isset($vcBtn['text-two']) && !empty($vcBtn['text-two'])) ? $vcBtn['text-two'] : "Drop us a line and we'll get back to you immediately to schedule a call and discuss your needs personally.";
+  $eTwolt = (isset($vcBtn['link-two']) && !empty($vcBtn['link-two'])) ? $vcBtn['link-two'] : 
+  "Talk To Our Experts"; 
+  
+  $eCtatwo = '<h2>'.$eTwoHeading.'</h2>';
+  $eCtatwo .= '<p>'.$eTwoBody.'</p>';
+  if( !is_page( [17422,17425,16003,16004,16062,16066,17235,17236,17239,16065,3725] ) ){
+  echo expert_talk_cta( $eCtatwo, $eTwolt, 'one', 'padding-t-70 padding-b-70 hide-cta' );
+  }
+  
+  $sfMethod = get_field('sf-meth');
+  if( $sfMethod !== "no" )  :
+  $psMethod = get_field('ps-methodology');
+  $sdmethod = [];
+  if( isset($psMethod['sec-type']) && ($psMethod['sec-type'] == "ps") ){
+  $sdmethod['content']  = $psMethod['content'];
+  $sdmethod['cards']    = $psMethod['cards'];
+  }else{
+  $sdmethod = get_field('sd-method','option');   
+  }
+  ?>
 <section id="sd-metho" class="develop-section padding-t-120 padding-b-120">
   <div class="container">
     <div class="head-txt text-center"><?php echo $sdmethod['content']; ?></div>
     <div class="dev-cards margin-t-80">
-    <?php 
-    if($sdmethod['cards']){
-    $ic = 0;  
-    foreach( $sdmethod['cards'] as $card){ $ic++;
-    $isActive = ( $ic === 1 ) ? ' active' : '';  
-    $thumbnail = ( $card['thumbnail'] ) ? valueGetPtag( $card['thumbnail'] ) : '';  
-    echo '<div class="card '.$isActive.'">
-      '.$thumbnail.'
-      <div class="card-info">'.$card['content'].'</div>
-      <span class="card-heading">'.$card['title'].'</span>
-    </div>';
-    }  
-    }
-    ?>
+      <?php 
+        if($sdmethod['cards']){
+        $ic = 0;  
+        foreach( $sdmethod['cards'] as $card){ $ic++;
+        $isActive = ( $ic === 1 ) ? ' active' : '';  
+        $thumbnail = ( $card['thumbnail'] ) ? valueGetPtag( $card['thumbnail'] ) : '';  
+        echo '<div class="card '.$isActive.'">
+          '.$thumbnail.'
+          <div class="card-info">'.$card['content'].'</div>
+          <span class="card-heading">'.$card['title'].'</span>
+        </div>';
+        }  
+        }
+        ?>
     </div>
   </div>
 </section>
 <?php 
-endif;
-*/
-if( $ourProcess['is_enable'] == 'yes' ) :
-$psProcess = ( isset($ourProcess['sec-type']) && ($ourProcess['sec-type'] == "ps") ) ? true : false;  
-?>
+  endif;
+  */
+  if( $ourProcess['is_enable'] == 'yes' ) :
+  $psProcess = ( isset($ourProcess['sec-type']) && ($ourProcess['sec-type'] == "ps") ) ? true : false;  
+  ?>
 <section id="our-process" class="development-phase padding-t-120 padding-b-120">
   <div class="container">
     <div class="head-txt text-center">
       <?php 
-      if( $psProcess ){
-      echo $ourProcess['content'];
-      }else{
-      echo '<h2>Our Process</h2>
-      <p>We specialize in engineering custom software that\'s both stable and secure, using a variety of tech tools.</p>';
-      }
-      ?>      
+        if( $psProcess ){
+        echo $ourProcess['content'];
+        }else{
+        echo '<h2>Our Process</h2>
+        <p>We specialize in engineering custom software that\'s both stable and secure, using a variety of tech tools.</p>';
+        }
+        ?>      
     </div>
     <div class="dis-flex col-box-outer margin-t-100">
       <?php 
-      if( ($psProcess === true) && $ourProcess['process'] ){
-        foreach( $ourProcess['process'] as $pro ){
-        echo '<div class="flex-6"><div class="box">';
-        echo $pro['content'];
-        echo '</div></div>';
-        }
-      }else{ ?>
+        if( ($psProcess === true) && $ourProcess['process'] ){
+          foreach( $ourProcess['process'] as $pro ){
+          echo '<div class="flex-6"><div class="box">';
+          echo $pro['content'];
+          echo '</div></div>';
+          }
+        }else{ ?>
       <div class="flex-6">
         <div class="box">
           <h4>Software Kick-off</h4>
@@ -652,47 +645,46 @@ $psProcess = ( isset($ourProcess['sec-type']) && ($ourProcess['sec-type'] == "ps
   </div>
 </section>
 <?php endif; ?>
-
 <?php 
-if( isset($hireModel['is_enabled']) && $hireModel['is_enabled'] == "yes" ) :
-?>
+  if( isset($hireModel['is_enabled']) && $hireModel['is_enabled'] == "yes" ) :
+  ?>
 <section class="hire-model-tab bg-light padding-t-120 padding-b-120" id="hire-model">
-      <div class="container">
-        <div class="heading text-center"><?php echo $hireModel['content']; ?></div>
-        <?php 
-        if( $hireModel['hiring_cards'] ){
-        echo '<div class="hire-tabs-section margin-t-50"><div class="tab-row">';
-        echo '<nav id="hiring-models" class="tab-nav"><div class="tab-scroll">';
-        $t = 0;
-        foreach( $hireModel['hiring_cards'] as $tab){ $t++;
-        $active = ( $t === 1 ) ? "active" : ""; 
-        echo '<div class="tablist '.$active.'" data-tab="#tab0'.$t.'"><a href="#tab0'.$t.'">'.$tab['title'].'</a></div>';
-        }        
-        echo '</div></nav>';
-        echo '<div class="bcontents">';
-        $t = 0;
-        foreach( $hireModel['hiring_cards'] as $tab){ $t++;
-        //print_r($tab['image']);
-        $active = ( $t === 1 ) ? "active" : ""; 
-        echo '<div id="tab0'.$t.'" class="tab-contents '.$active.'">
-                <div class="dis-flex">
-                  <div class="content-box">'.$tab['content'].'</div>
-                  <div class="image-box">'.vc_pictureElm($tab['image']).'</div>
-                </div>
-              </div>';
-        }
-        echo '</div>';
-        echo '</div></div>';
-        }
-        ?>        
-      </div>
-    </section>
+  <div class="container">
+    <div class="heading text-center"><?php echo $hireModel['content']; ?></div>
+    <?php 
+      if( $hireModel['hiring_cards'] ){
+      echo '<div class="hire-tabs-section margin-t-50"><div class="tab-row">';
+      echo '<nav id="hiring-models" class="tab-nav"><div class="tab-scroll">';
+      $t = 0;
+      foreach( $hireModel['hiring_cards'] as $tab){ $t++;
+      $active = ( $t === 1 ) ? "active" : ""; 
+      echo '<div class="tablist '.$active.'" data-tab="#tab0'.$t.'"><a href="#tab0'.$t.'">'.$tab['title'].'</a></div>';
+      }        
+      echo '</div></nav>';
+      echo '<div class="bcontents">';
+      $t = 0;
+      foreach( $hireModel['hiring_cards'] as $tab){ $t++;
+      //print_r($tab['image']);
+      $active = ( $t === 1 ) ? "active" : ""; 
+      echo '<div id="tab0'.$t.'" class="tab-contents '.$active.'">
+              <div class="dis-flex">
+                <div class="content-box">'.$tab['content'].'</div>
+                <div class="image-box">'.vc_pictureElm($tab['image']).'</div>
+              </div>
+            </div>';
+      }
+      echo '</div>';
+      echo '</div></div>';
+      }
+      ?>        
+  </div>
+</section>
 <?php endif; ?>
 <?php 
-/*
-  $inTechnologies = get_field('lt-integration');
-  if( isset( $inTechnologies['is_enabled'] ) && ($inTechnologies['is_enabled'] == "yes") ) :
-  ?>
+  /*
+    $inTechnologies = get_field('lt-integration');
+    if( isset( $inTechnologies['is_enabled'] ) && ($inTechnologies['is_enabled'] == "yes") ) :
+    ?>
 <section class="tech-stacks padding-t-120 padding-b-120">
   <div class="container">
     <div class="heading text-center"><?php echo $inTechnologies['content']; ?></div>
@@ -708,18 +700,17 @@ if( isset($hireModel['is_enabled']) && $hireModel['is_enabled'] == "yes" ) :
   </div>
 </section>
 <?php endif; 
-*/
-?>
-
+  */
+  ?>
 <!-- Hire Model #Starts Here -->
 <?php
-/* 
-  $hireModel 			  = get_field('hiring_models');
-  $hireModelEnable 	= $hireModel['is_enabled'];
-  $secTheme         = (isset($hireModel['sc_background']) && !empty($hireModel['sc_background'])) ? $hireModel['sc_background'] : '';
-  if( ($hireModelEnable == 'yes') && !is_page( $mainServicePage ) ) : 
-  if( is_page( 10158 ) ) {
-  ?>
+  /* 
+    $hireModel 			  = get_field('hiring_models');
+    $hireModelEnable 	= $hireModel['is_enabled'];
+    $secTheme         = (isset($hireModel['sc_background']) && !empty($hireModel['sc_background'])) ? $hireModel['sc_background'] : '';
+    if( ($hireModelEnable == 'yes') && !is_page( $mainServicePage ) ) : 
+    if( is_page( 10158 ) ) {
+    ?>
 <section class="hiring-models padding-t-120 padding-b-120 <?php echo $secTheme; ?>" id="vc-hiring_models" id="vc-hiring_models">
   <div class="container">
     <div class="head-txt text-center">
@@ -769,18 +760,17 @@ if( isset($hireModel['is_enabled']) && $hireModel['is_enabled'] == "yes" ) :
   </div>
 </section>
 <?php 
-}else{
-	hireModelCmn( $secTheme );
-} 
-endif; 
-*/
-?>
-
+  }else{
+  	hireModelCmn( $secTheme );
+  } 
+  endif; 
+  */
+  ?>
 <?php getPageCaseStudiesV3( $thisPostID ); ?>
 <?php
-$gtEnabled 		= $guideTopics['is_enabled'];
-if( $gtEnabled == 'yes' ) :
-?>
+  $gtEnabled 		= $guideTopics['is_enabled'];
+  if( $gtEnabled == 'yes' ) :
+  ?>
 <section id="has-ug" class="tab-scroll-section padding-t-120 padding-b-120  <?php echo $guideTopics['sc_background']; ?>">
   <div class="container">
     <div class="head-txt text-center">
@@ -829,7 +819,6 @@ if( $gtEnabled == 'yes' ) :
   </div>
 </section>
 <?php endif; ?>
-
 <?php if( isset( $faqs['is_enabled'] ) && ($faqs['is_enabled'] == "yes") ) : ?>
 <section id="vc-faqs" class="faq-section padding-t-120 padding-b-120 bg-dark-theme" data-nosnippet>
   <div class="container">
