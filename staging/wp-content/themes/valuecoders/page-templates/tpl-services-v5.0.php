@@ -208,7 +208,8 @@ $whContent .=  '<ul>
 '.$vcProfile['add-pointers'].'
 </ul>';
 
-
+get_template_part( 'include/why', 'hirev4.0', ['content' => $whContent] );   
+} 
 
 $grwTitle = (isset($vcBtn['title-3']) && !empty($vcBtn['title-3'])) ? $vcBtn['title-3'] : "Unlock Your Growth Potential!";
 $grwBody  = (isset($vcBtn['text-3']) && !empty($vcBtn['text-3'])) ? $vcBtn['text-3'] : "Let's break down complex IT issues into actionable solutions you can understand.";
