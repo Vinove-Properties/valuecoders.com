@@ -435,9 +435,8 @@
   </div>
 </section>
 <?php endif; ?>    
-<?php 
-  if( isset($devCost['is_enabled']) && ($devCost['is_enabled'] == "yes") ) :
-  ?>
+
+<?php if( isset($devCost['is_enabled']) && ($devCost['is_enabled'] == "yes") ) : ?>
 <section class="software-costing padding-t-120 padding-b-120" id="dev-cost">
   <div class="container">
   <div class="head-txt text-center"><?php echo $devCost['content']; ?> </div>
@@ -467,6 +466,7 @@
   </sdiv>
 </section>
 <?php endif; ?>
+
 <?php if( isset($tailTech['is_enable']) && ($tailTech['is_enable'] == 'yes') ) : ?>
 <section id="tail-tech" class="tailored-tech padding-t-120 padding-b-120">
   <div class="container">

@@ -1333,7 +1333,7 @@ function getVcWebpSrcURL( array $marray ){
 	return $icWebp;
 }
 
-function vc_pictureElm(array $marray, $title = "", $class = '' ){
+function vc_pictureElm($marray, $title = "", $class = '' ){
 	if( !is_array( $marray ) ) return;
 
 	return '<picture class="'.$class.'">
