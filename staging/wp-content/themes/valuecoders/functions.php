@@ -1230,9 +1230,11 @@ add_action( 'wp_head', function(){
 });
 
 add_filter( 'wpseo_robots', function( $string ){
-	$string = "";
+	//$string = "";
     if( isset($_SERVER['SCRIPT_FILENAME']) &&  ( strpos($_SERVER['SCRIPT_FILENAME'], "404.php") !== false ) ){
 		$string = "noindex, nofollow";	
+    }elseif( is_category() || is_archive() || is_page(10027) ){
+    	$string = 'noindex, nofollow';
     }
     return $string;
 }, 999 );
@@ -1674,12 +1676,12 @@ function vcGetThisPageUrl(){
     return $current_url;
 }
 
-add_filter( 'wpseo_robots', function( $string = '' ){
-	if( is_category() ){
-		$string = 'noindex';
-	}
-	return $string;
-}, 999 );
+// add_filter( 'wpseo_robots', function( $string = '' ){
+// 	if( is_category() ){
+// 		$string = 'noindex';
+// 	}
+// 	return $string;
+// }, 999 );
 
 function GetTocTitle( $fld, $elmID ){
 	if( isset( $fld['is_enabled'] ) && ($fld['is_enabled'] == "yes") ){

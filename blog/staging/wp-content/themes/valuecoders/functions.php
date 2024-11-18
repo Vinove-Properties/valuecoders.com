@@ -49,6 +49,7 @@ function valuecoders_setup() {
 		)
 	);
 	add_image_size( 'vweb-blog', 480, 463 );
+    show_admin_bar(false);
 }
 add_action( 'after_setup_theme', 'valuecoders_setup' );
 function valuecoders_content_width() {

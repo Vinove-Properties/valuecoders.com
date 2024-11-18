@@ -593,6 +593,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-tensorflow-developers" title="Tensorflow"><span class="title">TensorFlow</span>
                                 </a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-rpa-developers" title="RPA"><span class="title">RPA</span>
+                                <a href="<?php echo $site_url; ?>hire/data-engineers" title="RPA"><span class="title">Data Engineers</span>
                                 </a>
                               </div>
                             </div>
