@@ -62,11 +62,13 @@ add_action( 'init', function(){
 });
 */
 
-add_filter('upload_mimes', function(){
+add_filter('upload_mimes', function($mime_types){
     $mime_types = [];
     $mime_types['webp'] = 'image/webp';
+    $mime_types['pdf'] = 'application/pdf';
     return $mime_types;
 });
+
 
 function valuecoders_setup() {
 	load_theme_textdomain( 'valuecoders', get_template_directory() . '/languages' );

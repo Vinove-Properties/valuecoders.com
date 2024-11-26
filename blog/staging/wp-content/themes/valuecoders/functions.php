@@ -680,7 +680,7 @@ function getRequiredPosts(){
         $author_id = $post->post_author;
         $data[] = array(
             'thumbnail'     => get_the_post_thumbnail_url( get_the_ID() ), //vweb-blog
-            'thumbnail_2'     => get_the_post_thumbnail_url( get_the_ID() , 'vweb-blog' ), //vweb-blog
+            'thumbnail_2'   => get_the_post_thumbnail_url( get_the_ID() , 'vweb-blog' ), //vweb-blog
             'title'         => get_the_title( get_the_ID() ),
             'permalink'     => get_permalink( get_the_ID() ),
             'comments'      => ( get_comments_number() > 1 ) ? get_comments_number() .' comments': get_comments_number() .' comment',
