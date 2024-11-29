@@ -380,24 +380,24 @@ function defActiveHire( $hirePage, $exCat ){
                             </div>
                             <div class="dis-flex menu-column sub-service">
                               <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>business-intelligence-consulting-services"><span class="title">Data Engineering 
+                                <a href="<?php echo $site_url; ?>data-engineering"><span class="title">Data Engineering 
                                 </span>
                                 Guiding success with BI insights</a>
-                                <a href="<?php echo $site_url; ?>bi-implementation"><span class="title">Data Science</span>
+                                <a href="<?php echo $site_url; ?>data-engineering/data-science-consulting-services"><span class="title">Data Science</span>
                                 Implementing BI, driving growth</a>
-                                <a href="<?php echo $site_url; ?>microsoft-power-bi-development-services-company"><span class="title">Data Analytics</span>
+                                <a href="<?php echo $site_url; ?>data-analytics"><span class="title">Data Analytics</span>
                                 Powering decisions with Microsoft BI</a>
                                 <a href="<?php echo $site_url; ?>data-engineering/business-intelligence" class="view-more">View More</a>
                               </div>
                               <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>data-engineering/data-science-consulting-services"><span class="title">Business Intelligence (BI) 
+                                <a href="<?php echo $site_url; ?>data-engineering/business-intelligence"><span class="title">Business Intelligence (BI) 
                                 </span>
                                 Transforming data into insights</a>
-                                <a href="<?php echo $site_url; ?>data-engineering/data-analytics-consulting-services"><span class="title">Data Visualization and Dashboarding 
+                                <a href="<?php echo $site_url; ?>data-engineering/data-visualization-services"><span class="title">Data Visualization and Dashboarding 
                                 </span>
                                 Transforming data into action
                                 </a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-data-scientists"><span class="title">Big Data</span>
+                                <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><span class="title">Big Data</span>
                                 Hire brilliance, harness data power
                                 </a>
                                 <a href="<?php echo $site_url; ?>data-analytics" class="view-more">View More</a>
@@ -601,12 +601,12 @@ function defActiveHire( $hirePage, $exCat ){
                             </div>
                             <div class="dis-flex menu-column hr-submenu">
                               <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-android-developers" title="Android"><span class="title">Data Scientists
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-data-scientists" title="Android"><span class="title">Data Scientists
                                 </span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-flutter-developers" title="Flutter"><span class="title">Data Engineers
+                                <a href="<?php echo $site_url; ?>hire-developers/hire/data-engineers" title="Flutter"><span class="title">Data Engineers
                                 </span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-ionic-developers" title="Ionic"><span class="title">ML Engineers</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-ios-developers" title="IOS"><span class="title">TensorFlow</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-ml-engineers" title="Ionic"><span class="title">ML Engineers</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-tensorflow-developers" title="IOS"><span class="title">TensorFlow</span></a>
                               </div>
                             </div>
                           </div>
