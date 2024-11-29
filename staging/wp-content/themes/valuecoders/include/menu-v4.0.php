@@ -387,7 +387,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 Implementing BI, driving growth</a>
                                 <a href="<?php echo $site_url; ?>data-analytics"><span class="title">Data Analytics</span>
                                 Powering decisions with Microsoft BI</a>
-                                <a href="<?php echo $site_url; ?>data-engineering/business-intelligence" class="view-more">View More</a>
+                                <a href="<?php echo $site_url; ?>data-engineering" class="view-more">View More</a>
                               </div>
                               <div class="flex-2">
                                 <a href="<?php echo $site_url; ?>data-engineering/business-intelligence"><span class="title">Business Intelligence (BI) 
@@ -400,7 +400,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><span class="title">Big Data</span>
                                 Hire brilliance, harness data power
                                 </a>
-                                <a href="<?php echo $site_url; ?>data-analytics" class="view-more">View More</a>
+                                <a href="<?php echo $site_url; ?>data-engineering" class="view-more">View More</a>
                               </div>
                             </div>
                           </div>
@@ -594,7 +594,7 @@ function defActiveHire( $hirePage, $exCat ){
 
                         <div class="tab-content <?php echo isActiveMenu("data-sol", $hireElm); ?>">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-mobile-app-developers">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>" class="no-link">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/data-sol.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Data Solutions</span>Innovative, future-proof software solutions</a>
                                 <span class="hr-arrow-btn"></span>
