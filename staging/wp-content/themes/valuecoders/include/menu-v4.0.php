@@ -382,7 +382,8 @@ function defActiveHire( $hirePage, $exCat ){
                               <div class="flex-2">
                                 <a href="<?php echo $site_url; ?>data-engineering"><span class="title">Data Engineering 
                                 </span>
-                                Guiding success with BI insights</a>
+                                Build scalable architectures
+                                </a>
                                 <a href="<?php echo $site_url; ?>data-engineering/data-science-consulting-services"><span class="title">Data Science</span>
                                 Implementing BI, driving growth</a>
                                 <a href="<?php echo $site_url; ?>data-analytics"><span class="title">Data Analytics</span>
@@ -392,10 +393,11 @@ function defActiveHire( $hirePage, $exCat ){
                               <div class="flex-2">
                                 <a href="<?php echo $site_url; ?>data-engineering/business-intelligence"><span class="title">Business Intelligence (BI) 
                                 </span>
-                                Transforming data into insights</a>
+                                Actionable insights, strategic decisions
+                                </a>
                                 <a href="<?php echo $site_url; ?>data-engineering/data-visualization-services"><span class="title">Data Visualization and Dashboarding 
                                 </span>
-                                Transforming data into action
+                                Simplify data visuals, get better insights
                                 </a>
                                 <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><span class="title">Big Data</span>
                                 Hire brilliance, harness data power
@@ -594,7 +596,7 @@ function defActiveHire( $hirePage, $exCat ){
 
                         <div class="tab-content <?php echo isActiveMenu("data-sol", $hireElm); ?>">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>" class="no-link">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/data-sol.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Data Solutions</span>Innovative, future-proof software solutions</a>
                                 <span class="hr-arrow-btn"></span>
