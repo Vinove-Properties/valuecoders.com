@@ -516,7 +516,7 @@ function defActiveHire( $hirePage, $exCat ){
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-backend-developers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-01.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Backend</span>Build robust backend</a>
-                                <span class="hr-arrow-btn"></span>
+                                <span class="tech-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column hr-submenu">
                               <div class="flex-2">                                
