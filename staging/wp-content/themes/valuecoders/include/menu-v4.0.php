@@ -497,7 +497,7 @@ function defActiveHire( $hirePage, $exCat ){
                           <li class="tab-link <?php echo defActiveHire($hireElm, $mcat); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-backend-developers">Backend</a></li>
                           <li class="tab-link <?php echo isActiveMenu("frontend", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-front-end-developers">Frontend</a></li>
                           <li class="tab-link <?php echo isActiveMenu([$hireElm,$mcat] ,"ai-ml"); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers">AI/ML</a></li>
-                          <li class="tab-link <?php echo isActiveMenu("data-sol", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-mobile-app-developers">Data Solutions</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("data-sol", $hireElm); ?>"><a href="<?php echo $site_url; ?>">Data Solutions</a></li>
                           <li class="tab-link <?php echo isActiveMenu("mobile", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-mobile-app-developers">Mobile</a></li>
                           <li class="tab-link <?php echo isActiveMenu("full-stack", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-full-stack-developers">Full Stack</a></li>
                           <li class="tab-link <?php echo isActiveMenu("devops", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-devops-developers">DevOps</a></li>
