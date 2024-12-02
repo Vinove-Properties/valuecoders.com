@@ -375,21 +375,20 @@ function defActiveHire( $hirePage, $exCat ){
                         </div>
                         <div class="tab-content <?php echo isActiveMenu("data-science", $mcat); ?>">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>data-engineering"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Data Solutions</span>
-                              Accelerate growth with data science</a> <span class="ser-arrow-btn"></span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>data-engineering"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Data Solutions</span>Turn data into success</a> <span class="ser-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-service">
                               <div class="flex-2">
                                 <a href="<?php echo $site_url; ?>data-engineering"><span class="title">Data Engineering 
-                                </span>Build scalable architectures</a>
-                                <a href="<?php echo $site_url; ?>data-engineering/data-science-consulting-services"><span class="title">Data Science</span>Implementing BI, driving growth</a>
+                                </span>Create scalable data systems</a>
+                                <a href="<?php echo $site_url; ?>data-engineering/data-science-consulting-services"><span class="title">Data Science</span>Innovate with data science</a>
                                 <a href="<?php echo $site_url; ?>data-analytics"><span class="title">Data Analytics</span>
-                                Powering decisions with Microsoft BI</a>                                
+                                Turn data into strategies</a>                                
                               </div>
                               <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>data-engineering/business-intelligence"><span class="title">Business Intelligence (BI)</span>Actionable insights, strategic decisions</a>
-                                <a href="<?php echo $site_url; ?>data-engineering/data-visualization-services"><span class="title">Data Visualization and Dashboarding </span>Simplify data visuals, get better insights</a>
-                                <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><span class="title">Big Data</span>Hire brilliance, harness data power</a>
+                                <a href="<?php echo $site_url; ?>data-engineering/business-intelligence"><span class="title">Business Intelligence (BI)</span>Drive success with BI insights</a>
+                                <a href="<?php echo $site_url; ?>data-engineering/data-visualization-services"><span class="title">Data Visualization and Dashboarding </span>Visualize data, drive clarity</a>
+                                <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><span class="title">Big Data</span>Big data, smarter solutions</a>
                                 
                               </div>
                             </div>
