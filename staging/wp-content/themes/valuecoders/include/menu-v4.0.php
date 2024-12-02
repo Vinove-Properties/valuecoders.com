@@ -714,9 +714,9 @@ function defActiveHire( $hirePage, $exCat ){
                             </div>
                             <div class="dis-flex menu-column hr-submenu">
                               <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire/seo-experts" title="SEO"><span class="title">SEO</span></a>
-                                <a href="<?php echo $site_url; ?>hire/ppc-experts" title="PPC"><span class="title">PPC</span></a>
-                                <a href="<?php echo $site_url; ?>hire/smo-experts" title="SMO"><span class="title">SMO</span></a>
+                                <a href="<?php echo $site_url; ?>hire/seo-experts" title="SEO"><span class="title">SEO Experts</span></a>
+                                <a href="<?php echo $site_url; ?>hire/ppc-experts" title="PPC"><span class="title">PPC Experts</span></a>
+                                <a href="<?php echo $site_url; ?>hire/smo-experts" title="SMO"><span class="title">SMO Experts</span></a>
                                 <a href="<?php echo $site_url; ?>hire/content-writers" title="Content Writer"><span class="title">Content Writer</span></a>
                               </div>
                               <div class="flex-2">                                
