@@ -381,28 +381,16 @@ function defActiveHire( $hirePage, $exCat ){
                             <div class="dis-flex menu-column sub-service">
                               <div class="flex-2">
                                 <a href="<?php echo $site_url; ?>data-engineering"><span class="title">Data Engineering 
-                                </span>
-                                Build scalable architectures
-                                </a>
-                                <a href="<?php echo $site_url; ?>data-engineering/data-science-consulting-services"><span class="title">Data Science</span>
-                                Implementing BI, driving growth</a>
+                                </span>Build scalable architectures</a>
+                                <a href="<?php echo $site_url; ?>data-engineering/data-science-consulting-services"><span class="title">Data Science</span>Implementing BI, driving growth</a>
                                 <a href="<?php echo $site_url; ?>data-analytics"><span class="title">Data Analytics</span>
-                                Powering decisions with Microsoft BI</a>
-                                <a href="<?php echo $site_url; ?>data-engineering" class="view-more">View More</a>
+                                Powering decisions with Microsoft BI</a>                                
                               </div>
                               <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>data-engineering/business-intelligence"><span class="title">Business Intelligence (BI) 
-                                </span>
-                                Actionable insights, strategic decisions
-                                </a>
-                                <a href="<?php echo $site_url; ?>data-engineering/data-visualization-services"><span class="title">Data Visualization and Dashboarding 
-                                </span>
-                                Simplify data visuals, get better insights
-                                </a>
-                                <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><span class="title">Big Data</span>
-                                Hire brilliance, harness data power
-                                </a>
-                                <a href="<?php echo $site_url; ?>data-engineering" class="view-more">View More</a>
+                                <a href="<?php echo $site_url; ?>data-engineering/business-intelligence"><span class="title">Business Intelligence (BI)</span>Actionable insights, strategic decisions</a>
+                                <a href="<?php echo $site_url; ?>data-engineering/data-visualization-services"><span class="title">Data Visualization and Dashboarding </span>Simplify data visuals, get better insights</a>
+                                <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><span class="title">Big Data</span>Hire brilliance, harness data power</a>
+                                
                               </div>
                             </div>
                           </div>
