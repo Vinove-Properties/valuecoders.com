@@ -584,7 +584,8 @@ function defActiveHire( $hirePage, $exCat ){
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/data-sol.svg" 
-                                class="menuicon" alt="menuicon"><span class="title">Data Solutions</span>Innovative, future-proof software solutions</a>
+                                class="menuicon" alt="menuicon">
+                                <span class="title">Data Solutions</span>Hire experts to unlock data's potential</a>
                                 <span class="hr-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column hr-submenu">
