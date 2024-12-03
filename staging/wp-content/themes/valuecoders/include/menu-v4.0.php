@@ -332,7 +332,7 @@ function defActiveHire( $hirePage, $exCat ){
                         </div>
                         <div class="tab-content <?php echo isActiveMenu("devops", $mcat); ?>">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>cloud-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-06.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Services</span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>cloud-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/menu-icon_cloudservices.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Services</span>
                               Seamless, secure, superior cloud services</a><span class="ser-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-service">
@@ -409,8 +409,7 @@ function defActiveHire( $hirePage, $exCat ){
                         </div>
                         <div class="tab-content <?php echo isActiveMenu("ai-ml", $mcat); ?>">
                           <div class="four-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>ai"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">AI & ML Solutions</span>
-                              Drive technological innovation</a> <span class="ser-arrow-btn"></span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>ai"><img loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/menu-icon_aiml.svg" class="menuicon" alt="menuicon"><span class="title">AI & ML Solutions</span>Drive technological innovation</a> <span class="ser-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-service">
                               <div class="flex-4">
