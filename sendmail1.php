@@ -981,8 +981,8 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
             if( isset($arrPostParams['is_free_trial']) && ($arrPostParams['is_free_trial'] == "true") ){
             $tempEmailSubject = "Request for 7-Day Trial [".$ticketID."]";    
             }
-            if( $eSender['mail_to'] === "pa" ){
-            smtpEmailFunction( "parvesh@vinove.com", $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], 'nitin.baluni@mail.vinove.com', [], $user_name, false );    
+            if( $eSender['mail_to'] == "pa" ){
+            smtpEmailFunction( "parvesh@vinove.com", $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], ['nitin.baluni@mail.vinove.com'], [], $user_name, false );    
             }else{
             smtpEmailFunction( $eSender['mail_to'], $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], $bccEmails, [], $user_name, false );        
             }
