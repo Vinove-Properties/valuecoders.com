@@ -297,8 +297,8 @@ function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $email
         */
         
         $mail->Host         = "smtp.gmail.com"; // SMTP server
-        $mail->SMTPSecure   = 'ssl';
-        $mail->Port         = 465;
+        $mail->SMTPSecure   = 'tsl';
+        $mail->Port         = 587;
         $mail->SMTPAuth     = true;
         $mail->Username     = 'do-not-reply@valuecoders.com';
         $mail->Password     = 'pdtnweysvgovhemg';
@@ -981,13 +981,14 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
             if( isset($arrPostParams['is_free_trial']) && ($arrPostParams['is_free_trial'] == "true") ){
             $tempEmailSubject = "Request for 7-Day Trial [".$ticketID."]";    
             }
-            
-            smtpEmailFunction( $eSender['mail_to'], $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], 
-            $bccEmails, [], $user_name, false );            
+            if( $eSender['mail_to'] === "pa" ){
+            smtpEmailFunction( "parvesh@vinove.com", $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], 'nitin.baluni@mail.vinove.com', [], $user_name, false );    
+            }else{
+            smtpEmailFunction( $eSender['mail_to'], $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], $bccEmails, [], $user_name, false );        
+            }
             
             $emailBBB =  $Mailbody.$bodyBr.print_r( $_COOKIE, 1 );
-            smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Contact Us", $emailBBB, "lead", 
-            $user_email, [], [], [], $user_name );
+            smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Contact Us - DEV", $emailBBB, "lead", $user_email, [], [], [], $user_name );
             
             $insType = (isset($arrPostParams['z-leadid']) && !empty($arrPostParams['z-leadid'])) ? $arrPostParams['z-leadid'] : false;
             zohoCrmUpdate_v2( $arrZoho_v2, $utm_source, $eSender['lead_to'], $insType );
