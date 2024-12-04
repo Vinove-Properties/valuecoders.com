@@ -248,7 +248,7 @@ $array_latin_america = [
 $array_apac = [
 'American Samoa',
 'Cook Islands',
-'Australia',
+//'Australia',
 'Afghanistan',
 'Bangladesh',
 'Brunei Darussalam',
@@ -282,7 +282,7 @@ $array_apac = [
 'Nepal',
 'Nauru',
 'Niue',
-'New Zealand',
+//'New Zealand',
 'Papua New Guinea',
 'Philippines',
 'Pakistan',
@@ -313,6 +313,7 @@ $array_apac = [
 'Turkmenistan',
 'Palestine',
 ];
+$array_anz = ['Australia', 'New Zealand'];
     $consoleArray = [];
     if( checkInArray( $is_country, $array_other ) ){
         $consoleArray = array( 
@@ -352,8 +353,16 @@ $array_apac = [
     elseif( checkInArray( $is_country, $array_apac ) ){
         $consoleArray = array(
             'region'    => 'apac',
-            'lead_to'   => $zoho_id['sanjiv'],
-            'mail_to'   => 'sanjiv@valuecoders.com',
+            'lead_to'   => $zoho_id['pa'],
+            'mail_to'   => 'pa',
+            'mail_cc'   => ['neha.raina@valuecoders.com']
+        );
+    }
+    elseif( checkInArray( $is_country, $array_anz ) ){
+        $consoleArray = array(
+            'region'    => 'anz',
+            'lead_to'   => $zoho_id['pa'],
+            'mail_to'   => 'pa',
             'mail_cc'   => ['neha.raina@valuecoders.com']
         );
     }
