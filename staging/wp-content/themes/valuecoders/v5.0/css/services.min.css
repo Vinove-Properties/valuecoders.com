@@ -2983,6 +2983,8 @@ body.page-template-template-testimonials .client-video-section iframe,
       margin: 0; } }
 .client-img-section {
   background: #f8f8f8; }
+  .client-img-section .dis-flex {
+    align-items: flex-start; }
   .client-img-section .left-box {
     padding-right: 60px; }
     .client-img-section .left-box h5 {
