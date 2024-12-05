@@ -92,7 +92,22 @@
     </div>
   </div>
 </section>
-<?php get_template_part('inc/cmn', 'startups'); ?>
+
+
+<div class="slide-logo  dis-flex items-center justify-sb">
+      <div class="container">
+        <div class="dis-flex">
+          <div class="logo-heading">
+            <h4><span>Trusted by startups and Fortune <strong>500</strong> companies</span></h4>
+          </div>
+           <picture>
+            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v5.0/images/company-logo.png" width="1440" height="221" alt="valuecoders">
+          </picture>
+        </div>
+      </div>
+    </div>
+
+
 <section class="fixfull-section padding-t-120 padding-b-120">
   <div class="container">
     <div class="entire-sticky">
