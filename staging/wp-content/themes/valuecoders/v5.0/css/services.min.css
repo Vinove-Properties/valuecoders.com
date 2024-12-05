@@ -3516,7 +3516,7 @@ body.page-template-template-testimonials .client-video-section iframe,
               .tech-stack-section .technology-slider .col-box .inner-box ul li a:hover:after {
                 background: #ffad00; }
           .tech-stack-section .technology-slider .col-box .inner-box ul li:hover:before {
-            background: #ffffff; }
+            background: rgba(128, 128, 128, 0.3); }
         .tech-stack-section .technology-slider .col-box .inner-box ul a:hover li {
           background: black; }
   .tech-stack-section .technology-slider .glider-dots {
