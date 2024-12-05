@@ -1,5 +1,3 @@
-
-
 const vcTailerd = document.getElementById("tailored-slide");
 if( vcTailerd ){
 window.addEventListener("load", function() {
@@ -1533,3 +1531,23 @@ var tabPanesMc  = document.getElementsByClassName("tab-contents");
         document.querySelector(clickedTab).classList.add("active");
     }    
 }
+
+function toggleTOCMenu() {
+    const hamburgerMenu     = document.getElementById('valc-toc');
+    const hamburgerButton   = document.getElementById('toc-hb');
+    hamburgerMenu.classList.toggle('active');
+    hamburgerButton.classList.toggle('show');
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    var targetElement = document.getElementById('toc-hb');
+    window.addEventListener('scroll', function () {
+        var scrollPos = window.scrollY || window.pageYOffset;
+        var targetOffset = targetElement.offsetTop;
+        if (scrollPos > targetOffset) {
+          document.body.classList.add('hb-toc');
+        }else{
+          document.body.classList.remove('hb-toc');
+        }
+    });
+});

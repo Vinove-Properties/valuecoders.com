@@ -1688,3 +1688,23 @@ function GetTocTitle( $fld, $elmID ){
 	return (isset($fld['toc-title']) && !empty($fld['toc-title'])) ? '<p><a href="#'.$elmID.'">'.$fld['toc-title'].'</a></p>' : '';
 	}
 }
+
+function _hasliCheckMoreTwo($string) {
+    if (stripos($string, '<ul') !== false && stripos($string, '<li') !== false) {
+        $dom = new DOMDocument();
+        libxml_use_internal_errors(true);
+        $dom->loadHTML($string, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+        libxml_clear_errors();
+        $ulTags = $dom->getElementsByTagName('ul');
+        foreach ($ulTags as $ul) {
+            $liCount = 0;
+            foreach ($ul->getElementsByTagName('li') as $li) {
+                $liCount++;
+            }
+            if ($liCount > 2) {
+                return true;
+            }
+        }
+    }
+    return false;
+}

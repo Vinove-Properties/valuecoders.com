@@ -27,7 +27,7 @@
   }
   ?>
 <div class="container">
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+  <div class="hamburger" onclick="toggleTOCMenu()">
     <span class="ham-icon"></span>
   </div>
 </div>
@@ -150,10 +150,11 @@
             <div class="dis-flex soft-row">';
               if( $row['in-cards'] ){
                   foreach( $row['in-cards'] as $inrow ){
+                  $more = (_hasliCheckMoreTwo($inrow['content'])) ? '<a href="javascript:void(0);" onclick="_expandListing(this);" class="see-more-btn">See More</a>' : '';
                   echo '<div class="flex-2">
                     <div class="soft-card">
                     <div class="card-header">'.$inrow['content'].'
-                    <a href="javascript:void(0);" onclick="_expandListing(this);" class="see-more-btn">See More</a>  
+                    '.$more.'
                     </div>
                     </div>
                     </div>'; 
@@ -167,7 +168,7 @@
           ?>
       </div>
       <!--//.left-column-->
-      <div class="right-column active" id="valc-toc" style="right: 0px;">
+      <div class="right-column" id="valc-toc" style="right: 0px;">
         <div class="toc-sec">
           <h4>Table of Contents</h4>
           <div class="toc-wrap">
@@ -195,6 +196,7 @@
     </div>
   </div>
 </section>
+<div id="toc-hb"></div>
 <!-- //END OF TOC Section -->
 <?php //get_template_part('include/why', 'hirev4.0'); ?>
 <?php  
@@ -771,7 +773,7 @@
   $gtEnabled 		= $guideTopics['is_enabled'];
   if( $gtEnabled == 'yes' ) :
   ?>
-<section id="has-ug" class="tab-scroll-section padding-t-120 padding-b-120  <?php echo $guideTopics['sc_background']; ?>">
+<section id="has-ug" class="tab-scroll-section padding-t-120 padding-b-120">
   <div class="container">
     <div class="head-txt text-center">
       <?php echo $guideTopics['content']; ?>
