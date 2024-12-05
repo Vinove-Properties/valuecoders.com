@@ -2986,7 +2986,7 @@ body.page-template-template-testimonials .client-video-section iframe,
   .client-img-section .dis-flex {
     align-items: flex-start; }
   .client-img-section .left-box {
-    padding-right: 60px; }
+    padding-right: 60px !important; }
     .client-img-section .left-box h5 {
       color: #0a1747;
       text-transform: uppercase;
@@ -3170,7 +3170,7 @@ body.page-template-template-testimonials .client-video-section iframe,
 
 @media only screen and (max-width: 991px) {
   .client-img-section .left-box {
-    padding-right: 0; }
+    padding-right: 0 !important; }
     .client-img-section .left-box ul {
       margin-top: 20px; }
   .client-img-section .right-box {
@@ -3510,15 +3510,24 @@ body.page-template-template-testimonials .client-video-section iframe,
               height: 100%;
               border-radius: 10px;
               z-index: -1; }
+            .tech-stack-section .technology-slider .col-box .inner-box ul li a:before {
+              content: "";
+              width: 5px;
+              height: 5px;
+              position: absolute;
+              left: 7px;
+              top: 15px;
+              background: rgba(128, 128, 128, 0.3);
+              border-radius: 100%; }
             .tech-stack-section .technology-slider .col-box .inner-box ul li a:hover {
               color: #ffffff;
               border-color: #ffad00; }
               .tech-stack-section .technology-slider .col-box .inner-box ul li a:hover:after {
                 background: #ffad00; }
+              .tech-stack-section .technology-slider .col-box .inner-box ul li a:hover:before {
+                background: #ffffff; }
           .tech-stack-section .technology-slider .col-box .inner-box ul li:hover:before {
             background: rgba(128, 128, 128, 0.3); }
-        .tech-stack-section .technology-slider .col-box .inner-box ul a:hover li {
-          background: black; }
   .tech-stack-section .technology-slider .glider-dots {
     margin-top: 30px;
     display: none; }
