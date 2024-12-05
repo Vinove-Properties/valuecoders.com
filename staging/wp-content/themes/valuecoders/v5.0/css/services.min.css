@@ -3405,17 +3405,18 @@ body.page-template-template-testimonials .client-video-section iframe,
       left: -50px;
       transform: rotate(0);
       font-size: 0;
-      cursor: pointer; }
+      cursor: pointer;
+      transform: rotate(180deg); }
       .indcater-section .indcater-slider .arrow-btn .ind-prev:hover,
       .indcater-section .indcater-slider .arrow-btn .ind-next:hover {
         background-color: #ffad00;
         border-color: #ffad00;
         opacity: 1; }
-      .indcater-section .indcater-slider .arrow-btn .ind-prev.glider-next,
-      .indcater-section .indcater-slider .arrow-btn .ind-next.glider-next {
+      .indcater-section .indcater-slider .arrow-btn .ind-prev.ind-next,
+      .indcater-section .indcater-slider .arrow-btn .ind-next.ind-next {
         left: auto;
         right: -25px;
-        transform: rotate(180deg); }
+        transform: rotate(0deg); }
   .indcater-section .indcater-slider .glider-next.disabled,
   .indcater-section .indcater-slider .glider-prev.disabled {
     opacity: 0.3;
