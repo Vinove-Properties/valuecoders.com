@@ -6021,9 +6021,11 @@ body.page-template-template-testimonials .client-video-section iframe,
           left: -15px; }
         .hero-section .content-wrap .right-box:before {
           display: none; }
-        .hero-section .content-wrap .right-box .se-logo-box .logo-box {
-          width: 77px;
-          height: 46px; }
+        .hero-section .content-wrap .right-box .se-logo-box {
+          justify-content: center; }
+          .hero-section .content-wrap .right-box .se-logo-box .logo-box {
+            width: 77px;
+            height: 46px; }
     .hero-section:before {
       display: none; }
 
