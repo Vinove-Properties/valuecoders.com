@@ -485,7 +485,7 @@
 <?php endif; ?>
 
 <?php if( isset($tailTech['is_enable']) && ($tailTech['is_enable'] == 'yes') ) : ?>
-<section id="tail-tech" class="tailored-tech padding-t-120 padding-b-120">
+<section id="tail-tech" class="tailored-tech bg-light padding-t-120 padding-b-120">
   <div class="container">
     <div class="dis-flex tailored-out">
       <div class="left-section">
