@@ -2670,7 +2670,8 @@ body.page-template-template-testimonials .client-video-section iframe,
           .fixfull-section .entire-sticky .right-column .sticky-button .sticky-cta:hover .gtexprt {
             display: inline-block;
             color: #05164d;
-            padding: 20px 20px 20px 20px; }
+            padding: 20px 20px 20px 20px;
+            text-align: center; }
           .fixfull-section .entire-sticky .right-column .sticky-button .sticky-cta:hover:before {
             width: 100%;
             border-radius: 10px; }
