@@ -2614,6 +2614,10 @@ body.page-template-template-testimonials .client-video-section iframe,
             color: rgba(33, 33, 33, 0.9); }
             .fixfull-section .entire-sticky .right-column .toc-sec .toc-wrap p a:hover:before {
               opacity: 1; }
+          .fixfull-section .entire-sticky .right-column .toc-sec .toc-wrap p a.active {
+            color: rgba(33, 33, 33, 0.9); }
+            .fixfull-section .entire-sticky .right-column .toc-sec .toc-wrap p a.active:before {
+              opacity: 1; }
     .fixfull-section .entire-sticky .right-column .sticky-button {
       margin: 40px 0 0; }
       .fixfull-section .entire-sticky .right-column .sticky-button .sticky-cta {
