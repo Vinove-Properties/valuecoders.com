@@ -2662,7 +2662,8 @@ body.page-template-template-testimonials .client-video-section iframe,
           display: none;
           position: relative;
           cursor: pointer;
-          text-align: center; }
+          text-align: center;
+          width: 100%; }
         .fixfull-section .entire-sticky .right-column .sticky-button .sticky-cta:hover {
           transition: all 0.3s ease;
           padding: 0 20px; }
@@ -2672,7 +2673,8 @@ body.page-template-template-testimonials .client-video-section iframe,
             display: inline-block;
             color: #05164d;
             padding: 20px 20px 20px 20px;
-            text-align: center; }
+            text-align: center;
+            width: 100%; }
           .fixfull-section .entire-sticky .right-column .sticky-button .sticky-cta:hover:before {
             width: 100%;
             border-radius: 10px; }
