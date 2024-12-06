@@ -2664,7 +2664,7 @@ body.page-template-template-testimonials .client-video-section iframe,
           cursor: pointer; }
         .fixfull-section .entire-sticky .right-column .sticky-button .sticky-cta:hover {
           transition: all 0.3s ease;
-          padding: 0; }
+          padding: 20px; }
           .fixfull-section .entire-sticky .right-column .sticky-button .sticky-cta:hover p {
             display: none; }
           .fixfull-section .entire-sticky .right-column .sticky-button .sticky-cta:hover .gtexprt {
