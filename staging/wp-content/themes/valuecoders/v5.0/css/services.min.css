@@ -3059,7 +3059,7 @@ body.page-template-template-testimonials .client-video-section iframe,
         .client-img-section .right-box .client-section .client-row .hover:hover {
           color: red; }
     .client-img-section .right-box .award-sc {
-      margin: 30px 0 0; }
+      margin: 20px 0 0; }
       .client-img-section .right-box .award-sc h5 {
         font-size: 15px;
         color: #0a1747; }
@@ -3072,7 +3072,7 @@ body.page-template-template-testimonials .client-video-section iframe,
           flex-basis: 31%;
           cursor: pointer;
           text-align: center;
-          padding: 12px;
+          padding: 5px;
           border: 1px solid rgba(221, 221, 221, 0.83);
           border-radius: 8px;
           background: #fff;
