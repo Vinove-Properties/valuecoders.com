@@ -2663,12 +2663,14 @@ body.page-template-template-testimonials .client-video-section iframe,
           position: relative;
           cursor: pointer; }
         .fixfull-section .entire-sticky .right-column .sticky-button .sticky-cta:hover {
-          transition: all 0.3s ease; }
+          transition: all 0.3s ease;
+          padding: 0; }
           .fixfull-section .entire-sticky .right-column .sticky-button .sticky-cta:hover p {
             display: none; }
           .fixfull-section .entire-sticky .right-column .sticky-button .sticky-cta:hover .gtexprt {
             display: inline-block;
-            color: #05164d; }
+            color: #05164d;
+            padding: 20px 20px 20px 20px; }
           .fixfull-section .entire-sticky .right-column .sticky-button .sticky-cta:hover:before {
             width: 100%;
             border-radius: 10px; }
