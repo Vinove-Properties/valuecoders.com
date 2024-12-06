@@ -4188,7 +4188,8 @@ body.page-template-template-testimonials .client-video-section iframe,
   flex-basis: 100%;
   padding: 40px 50px;
   background: #fff;
-  border-radius: 20px; }
+  border-radius: 20px;
+  border: 1px solid #05164D1A; }
   .hire-model-tab .hire-tabs-section .bcontents .tab-contents {
     display: none;
     text-align: center; }
