@@ -2661,7 +2661,8 @@ body.page-template-template-testimonials .client-video-section iframe,
         .fixfull-section .entire-sticky .right-column .sticky-button .sticky-cta .gtexprt {
           display: none;
           position: relative;
-          cursor: pointer; }
+          cursor: pointer;
+          text-align: center; }
         .fixfull-section .entire-sticky .right-column .sticky-button .sticky-cta:hover {
           transition: all 0.3s ease;
           padding: 0 20px; }
