@@ -67,7 +67,7 @@
           <div class="card-box">
             <div class="card-top">
               <picture>
-                <img loading="lazy" src="<?php echo $template_assets; ?>images/card-image.png" width="" height="" alt="valuecoders">
+                <img loading="lazy" src="<?php echo $template_assets; ?>images/card-image.png" width="129" height="129" alt="valuecoders">
               </picture>
               <p><strong>Valuecoders'</strong> digital marketing services have been a game-changer for our business, significantly boosting our online.</p>
             </div>
