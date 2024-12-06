@@ -1554,11 +1554,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
 const links = document.querySelectorAll('.toc-wrap a');
-
-
 links.forEach(link => {
     link.addEventListener('click', () => {
         links.forEach(item => item.classList.remove('active'));

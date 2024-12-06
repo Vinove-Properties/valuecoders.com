@@ -204,7 +204,7 @@
         <div class="sticky-button">
           <div class="sticky-cta">
             <p>Have pressing questions about your project?</p>
-            <a class="gtexprt" href="#">Get Expert Advice</a>
+            <a class="gtexprt" href="/contact">Get Expert Advice</a>
           </div>
         </div>
       </div>
