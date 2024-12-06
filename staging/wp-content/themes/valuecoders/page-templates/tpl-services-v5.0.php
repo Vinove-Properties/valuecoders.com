@@ -480,7 +480,7 @@
     echo '</div>';  
     }
     ?>
-  </sdiv>
+  </div>
 </section>
 <?php endif; ?>
 
