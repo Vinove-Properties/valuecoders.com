@@ -4218,7 +4218,7 @@ body.page-template-template-testimonials .client-video-section iframe,
       align-items: center;
       justify-content: space-between; }
       .hire-model-tab .hire-tabs-section .bcontents .tab-contents .dis-flex .content-box {
-        flex-basis: 50%;
+        flex-basis: 48%;
         text-align: left; }
         .hire-model-tab .hire-tabs-section .bcontents .tab-contents .dis-flex .content-box h3 {
           margin: 0; }
@@ -4250,7 +4250,7 @@ body.page-template-template-testimonials .client-video-section iframe,
               left: 0;
               top: 2px; }
       .hire-model-tab .hire-tabs-section .bcontents .tab-contents .dis-flex .image-box {
-        flex-basis: 50%; }
+        flex-basis: 48%; }
   .hire-model-tab .hire-tabs-section .bcontents .tab-contents.active {
     display: block; }
 
