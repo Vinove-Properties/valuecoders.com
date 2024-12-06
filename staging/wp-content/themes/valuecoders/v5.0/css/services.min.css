@@ -3416,7 +3416,7 @@ body.page-template-template-testimonials .client-video-section iframe,
         right: -25px;
         transform: rotate(0deg); }
   .indcater-section .indcater-slider .ind-prev.disabled,
-  .indcater-section .indcater-slider .ind-prev.disabled {
+  .indcater-section .indcater-slider .ind-next.disabled {
     opacity: 0.6;
     cursor: default; }
 
