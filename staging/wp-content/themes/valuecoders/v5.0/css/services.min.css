@@ -3409,17 +3409,15 @@ body.page-template-template-testimonials .client-video-section iframe,
       transform: rotate(180deg); }
       .indcater-section .indcater-slider .arrow-btn .ind-prev:hover,
       .indcater-section .indcater-slider .arrow-btn .ind-next:hover {
-        background-color: #ffad00;
-        border-color: #ffad00;
         opacity: 1; }
       .indcater-section .indcater-slider .arrow-btn .ind-prev.ind-next,
       .indcater-section .indcater-slider .arrow-btn .ind-next.ind-next {
         left: auto;
         right: -25px;
         transform: rotate(0deg); }
-  .indcater-section .indcater-slider .glider-next.disabled,
-  .indcater-section .indcater-slider .glider-prev.disabled {
-    opacity: 0.3;
+  .indcater-section .indcater-slider .ind-prev.disabled,
+  .indcater-section .indcater-slider .ind-prev.disabled {
+    opacity: 0.6;
     cursor: default; }
 
 @media (max-width: 979px) {
