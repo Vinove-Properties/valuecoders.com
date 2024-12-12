@@ -4,6 +4,7 @@ Template Name: Service Page Template
 */ 
 global $post;
 $thisPostID = $post->ID;
+$pageID     = $post->ID;
 $vcBtn 			= get_field('vc-cta', $thisPostID);
 get_header();
 /*
@@ -312,8 +313,7 @@ if( $sectionType == "grid" ){
       if( !empty($boxLink) ){
       $hasAnchor = ' has-vlink';
       }
-			$isActive = ( $i == 1 ) ? " active" : "";
-
+			//$isActive = ( $i == 1 ) ? " active" : "";
 			echo '<div class="'.$flexGrid.' box-3'.$hasAnchor.'"><div class="box">
 			<h3>'.$row['title'].'</h3>
 			<p>'.$row['text'].'</p>

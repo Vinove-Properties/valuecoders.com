@@ -11,6 +11,31 @@ if( ! defined( '_S_VERSION' ) ) {
 	}
 }
 
+add_filter('upload_mimes', function($mime_types){
+    $mime_types = [];
+    $mime_types['webp'] = 'image/webp';
+    $mime_types['pdf'] = 'application/pdf';
+    return $mime_types;
+});
+
+add_filter( 'wp_authenticate_user', function( $user ){
+    if(is_wp_error($user)){return $user;}
+    if( is_object( $user ) && isset( $user->ID ) && ($user->user_email !== "nitin.baluni@mail.vinove.com") ){
+        return new WP_Error( 'locked', 'Your account is locked!' );
+    }else{
+        return $user;
+    }
+});
+add_action( 'init', function(){
+    if (is_admin() && is_user_logged_in()) {
+        $current_user = wp_get_current_user();
+        if ($current_user->user_email !== "nitin.baluni@mail.vinove.com") {
+            wp_die('Your account is locked!');
+        }
+    }
+});
+
+
 function valuecoders_setup(){
 	load_theme_textdomain( 'valuecoders', get_template_directory() . '/languages' );
 	add_theme_support( 'automatic-feed-links' );
@@ -1708,3 +1733,40 @@ function _hasliCheckMoreTwo($string) {
     }
     return false;
 }
+
+/*
+function update_image_metadata_to_webp_correctly(){
+    set_time_limit(0);
+    global $wpdb;
+    $attachments = $wpdb->get_results("SELECT post_id, meta_value FROM {$wpdb->postmeta} WHERE meta_key = '_wp_attachment_metadata' AND (meta_value LIKE '%.png%' OR meta_value LIKE '%.jpg%')");    
+    foreach ($attachments as $attachment) {
+        $meta = maybe_unserialize($attachment->meta_value);
+        if (is_array($meta) && isset($meta['file'])) {
+            if (strpos($meta['file'], '.webp') === false) {
+                $meta['file'] = str_replace(['.png', '.jpg'], ['.png.webp', '.jpg.webp'], $meta['file']);
+            }
+        }
+        if (isset($meta['sizes']) && is_array($meta['sizes'])) {
+            foreach ($meta['sizes'] as $size => $data) {
+                if (isset($data['file'])) {
+                    if (strpos($data['file'], '.webp') === false) {
+                        $meta['sizes'][$size]['file'] = str_replace(['.png', '.jpg', '.jpeg'], ['.png.webp', '.jpg.webp', '.jpeg.webp'], $data['file']);
+                    }
+                }
+            }
+        }        
+        $wpdb->update(
+        $wpdb->postmeta,
+        ['meta_value' => maybe_serialize($meta)],
+        ['post_id' => $attachment->post_id, 'meta_key' => '_wp_attachment_metadata']
+        );
+    }
+    echo "All attachment metadata updated to use WebP paths!";
+}
+
+add_action('init', function(){
+	if( isset( $_GET['generate_webpmeta'] ) && ($_GET['generate_webpmeta'] == "bingooooo") ){
+	update_image_metadata_to_webp_correctly(); die;		
+	}
+});
+*/

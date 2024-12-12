@@ -438,7 +438,7 @@ function defActiveHire( $hirePage, $exCat ){
                               </div>
                               <div class="flex-4">
                                 <span class="head">Generative AI</span>
-                                <a href="<?php echo $site_url; ?>ai/generative-ai-consulting-company"><span class="title">Generative AI Consultings</span>
+                                <a href="<?php echo $site_url; ?>ai/generative-ai-consulting-company"><span class="title">Generative AI Consulting</span>
                                 Guided generative growth </a>
                                 <a href="<?php echo $site_url; ?>ai/generative-ai-development"><span class="title">Generative AI Development</span>
                                 Creating AI possibilities</a>
@@ -592,7 +592,7 @@ function defActiveHire( $hirePage, $exCat ){
                               <div class="flex-2">                                
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-data-scientists" title="Android"><span class="title">Data Scientists
                                 </span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire/data-engineers" title="Flutter"><span class="title">Data Engineers
+                                <a href="<?php echo $site_url; ?>hire/data-engineers" title="Flutter"><span class="title">Data Engineers
                                 </span></a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-ml-engineers" title="Ionic"><span class="title">ML Engineers</span></a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-tensorflow-developers" title="IOS"><span class="title">TensorFlow</span></a>
