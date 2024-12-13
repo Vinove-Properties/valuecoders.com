@@ -133,13 +133,11 @@ function temp_logSpamEmails( $formData ){
     $form_data['ip_addr'] = $userIP;
     
     $data   = serialize( $form_data );
-    $sql    = "INSERT INTO spam_leads ( data, email, ip, created_at ) 
-    VALUES ('{$data}', '{$userEmail}', '{$userIP}', '{$created_at}')";
+    $sql    = "INSERT INTO spam_leads ( data, email, ip, created_at )  VALUES ('{$data}', '{$userEmail}', '{$userIP}', '{$created_at}')";
     $conn->query( $sql );
     
     /*Added Spam Attacker Logs*/
-    $stmt = $conn->prepare("SELECT * FROM spam_leads WHERE (email = ? AND ip = ?) AND 
-    TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 300");
+    $stmt = $conn->prepare("SELECT * FROM spam_leads WHERE (email = ? AND ip = ?) AND TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 300");
     $stmt->bind_param("ss", $userEmail, $userIP);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -226,30 +224,33 @@ function storeLeadsData( $data ){
         $password   = "root";
         $dbname     = "valuecoders-wp";
     }
-   
     $created_at     = date('Y-m-d H:i:s');
-
     $conn = new mysqli( $servername, $username, $password, $dbname );
-    if ($conn->connect_error) {
+    if($conn->connect_error){
         die("Connection failed: " . $conn->connect_error);
     }
-
-    $sql = "INSERT INTO wp_webleads ( name, email, phone, country, message, attachments, IP, source, created_at ) 
-    VALUES (
-    '{$data['name']}', 
-    '{$data['email']}',  
-    '{$data['phone']}', 
-    '{$data['country']}', 
-    '{$data['message']}', 
-    '{$data['attachments']}', 
-    '{$data['ip']}', 
-    '{$data['source']}', 
-    '{$created_at}'
-    )";
-    if ($conn->query($sql) === TRUE) {
-        //echo "New record created successfully";
-    }else{
-        //echo "Error: " . $sql . "<br>" . $conn->error;
+    $sql = "INSERT INTO wp_webleads (name, email, phone, country, message, attachments, IP, source, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    if( $stmt = $mysqli->prepare($sql) ){
+        $stmt->bind_param('sssssssss', $data['name'], $data['email'], $data['phone'], $data['country'], $data['message'], $data['attachments'], $data['ip'], $data['source'], $created_at);
+        $stmt->execute();
+        $stmt->close();
     }
+    // $sql = "INSERT INTO wp_webleads (name, email, phone, country, message, attachments, IP, source, created_at) 
+    // VALUES (
+    // '{$data['name']}', 
+    // '{$data['email']}',  
+    // '{$data['phone']}', 
+    // '{$data['country']}', 
+    // '{$data['message']}', 
+    // '{$data['attachments']}', 
+    // '{$data['ip']}', 
+    // '{$data['source']}', 
+    // '{$created_at}'
+    // )";
+    // if ($conn->query($sql) === TRUE) {
+    //     //echo "New record created successfully";
+    // }else{
+    //     //echo "Error: " . $sql . "<br>" . $conn->error;
+    // }
     $conn->close();
 }

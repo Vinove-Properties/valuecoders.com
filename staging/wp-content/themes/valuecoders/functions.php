@@ -18,6 +18,7 @@ add_filter('upload_mimes', function($mime_types){
     return $mime_types;
 });
 
+/*
 add_filter( 'wp_authenticate_user', function( $user ){
     if(is_wp_error($user)){return $user;}
     if( is_object( $user ) && isset( $user->ID ) && ($user->user_email !== "nitin.baluni@mail.vinove.com") ){
@@ -34,6 +35,7 @@ add_action( 'init', function(){
         }
     }
 });
+*/
 
 
 function valuecoders_setup(){
