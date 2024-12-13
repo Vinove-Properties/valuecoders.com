@@ -198,7 +198,7 @@ if( isset( $_POST['user-name'] ) && in_array($_POST['user-name'], $spamNameManua
 if( $isAjay === false ){
     $captcha = (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) ? $_POST['g-recaptcha-response'] : false;
     if( isset($_POST['user-email']) && (strpos( $_POST['user-email'], 'spam' ) !== false) ){
-    $captcha = false;    
+    $captcha = "1000.b4d2d568df487f80bc73675a27101c45.d7cc4b483d0157d16f672e86dc354d62";    
     }
     if( $captcha !== false ){
         $isSmap = validatereCaptchaResponse( $captcha, $_POST );
