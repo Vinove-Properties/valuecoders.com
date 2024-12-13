@@ -28,6 +28,7 @@ $thisUrl   = 'https://www.valuecoders.com/staging/';
 }
 define( 'SITE_ROOT_URL', $thisUrl );
 
+
 $spamIpAddr = ['141.95.234.1', '89.22.225.45','94.156.64.107'];
 $thisIPAddr = get_client_ip_user();
 if( in_array($thisIPAddr, $spamIpAddr) ){
@@ -111,14 +112,12 @@ function logSpamException( $arrPostParams, $note = '' ){
     
     
     //Live
-    /*
     smtpEmailFunction( "web@vinove.com", "Inquiry with ValueCoders - Spam Exception", $Mailbody, "lead", 
     $user_email, [], [], [], $user_name );
-    */
     
     //Test
-    smtpEmailFunction("niraj.kumar@mail.vinove.com", "Inquiry with ValueCoders - Spam Exception", $Mailbody, "lead", 
-    $user_email, [], [], [], $user_name);
+    /*smtpEmailFunction("nitin.baluni@mail.vinove.com", "Inquiry with ValueCoders - Spam Exception", $Mailbody, "lead", 
+    $user_email, [], [], [], $user_name);*/
 }
 
 if( $isAjay === false ){ 
@@ -174,30 +173,22 @@ define('CLIENT_SECRET','e9a796ffde50de7a3198d63f134196d125bae343d0');
 define('ACESS_TOKEN','1000.cae698c21d5f8adc4f5f8e1ae60a3c39.6008000ac10c5df23ebf773f63194b81');
 define('REFRESH_TOKEN','1000.b4d2d568df487f80bc73675a27101c45.d7cc4b483d0157d16f672e86dc354d62');
 
-$arrEmail   = array('parvesh@vinove.com', 'akhil@valuecoders.com');
-$deny_ips   = array( '146.185.253.167', '146.185.253.165' );
-$ip         = get_client_ip_user();
+$arrEmail = [];
+$deny_ips = array( '146.185.253.167', '146.185.253.165' );
 
 $spamEmailManual = ['MerinoBart@o2.pl', 'ericjonesmyemail@gmail.com'];
 $spamNameManual = ['CrytoPenPen'];
 
 if( isset( $_POST['user-email'] ) && in_array($_POST['user-email'], $spamEmailManual) ){
-    header( 'location:thanks' );
+    header( 'location:thanks.php' );
     die;
 }
 
 if( isset( $_POST['user-name'] ) && in_array($_POST['user-name'], $spamNameManual) ){
-    header( 'location:thanks' );
-    die;
-}
-if( validateSpamAttacker( $_POST['user-email'], $ip ) === false ){
-    header( 'location:thanks?spam-attacker=block' );
+    header( 'location:thanks.php' );
     die;
 }
 
-if( strpos($_POST['user-email'], "spam") !== false ){
-$_POST['g-recaptcha-response'] = "03AFcWeA6LmrDcqsMEA9xXJItp9dPtaE_Rk5oEBqTI4j4DyUTMgBabLEKxJhPHh-VvenYE3WrSN7JXa2pr7WzutWUbO9NxHaCjXHn5KslyZBZThJy-JCkHC5hRSDjslP4jDO6GNg-AbKcyBv2Jlh_QQ8MGdtuNKxp9jOFb3T-zJ_VtxVF9ZbEDFHJa0UlYmmQu322V05k_6KbzIFL_UPdmwQI6BCksw99jtEYWikp0iXfQ_jONAWiOyTHEoaYFaFsfCirws1wgbhL4H4Hu7hmBR_8_FekwbY6yjaowSgzqc535eloUHq7kNVTMcOWWH8AbS6dMGWSFH6wETLTgQ5SXd1mB1DCJiBdYA5pmAma7xtaEQryNdSqrNtW4cBohaiSaqlA892LWzZ0bVZqU2M1FM7Igx4XTm8A-CwsW-teVncOWxXPtGEr2E1BbHNXBX3DCseQZ5FcsC7CY308qUgRaVLzbcXMjqqOGGoJo02alFSGi6HR9IagSgZyLOlgXqPUyk-FMC-KJMRXaL1VuMJ_fgjqRB-FrLOwt3Mvg11WVV0Q2SfgwSZjt8ckm0hRaFWof5F5OC_ox-dU2ltk6sUU5jwOa-DPV4hO1UC4cd_fzv8U9TCQbawz6hB6XfmdQyoYYPIpKhhTuiHjT5yZckMysRr1pvUiizSBH9spH1v_uLMfbIz4CVYu1-jifddxZ0o48jcCumJSNQrz8LjWlLY9Mhr2Q9H4nGT-72rn2uOPt-IeVAlqi-nZXnLFyy_3f_Larn2HNHFsJ9ECBpnGL2CmKzn3ysLHQpBbfXNZKxpJUH-bJqe7bb6NnF7UXU20vv4gH8K2e4xtraZIvE12v7Gyk48TRCxvi1LgCL9041TohuvkcA3-z9YGBMESm-KsWgnZ5IN0VJnHt7f6wlEDVCnpBgd8AfK9aRUWTx8xxaHYNli3emkl0-8jMSQ-wdA8pyxEO0VQYvnj6-5b8H5bn60TFeDnTehMI15GFxojiGQas-1IQWntDocLwmUXG1sCRJBxfqbDbzOxZp1SiWK82fovC8GrY2BSf6EsWo17uTa6Ev7JJPDmbbpXPt6tEuCHw_LGbi70WudbxEArf6KgUXHY1ni61xxU_TbHtdElGrdUcka46vukV3N36sPK8oG5CLL0x-YHggeZgUfoem_TwWcHBYhheuOm0KEt64GXMs1yxNSWCjjLfgBln30v0jrPxeZOsYf4fdt0-VBs_j8vTfjrs7cTVUqSjzj8-L-OVIsSqtlCDnWHnfpZbXvb5E51mw5axEHdyuzy3B92cIT4epkOeaFCfc_IGkqvIi_os_QzcMuvWJvsyZ-3pjTR0mt4NOdCFq2xkbm8nVmWYvsUjmJ1aMpXSprnCxWrXmrY52mEE6N3_oXsW1HXoVpU2ZBKeTIPfipa6eA3cLOm4K-KEJR8JXR-vfDZzjHlcMsKkWnqrV2lJxk6GjG2_lpi4fiT-bvUvRFa7sVUgNG43RZCzHj5n6E_wfRnJ5KqJvAe3iQ65L7oB6QU1XFwmH31Lk_2LYmwSr7pvks4fHtn1xiHVydLVgKR0NSe-dzO27My6YrepRqUgPLTU7yssbn_0p8hG04Jy7dSmtP3PoVsoXWzGU9h4IoYsF6-KWcoauHGUelU1PyH45rI5u36q4h3tmCJo6HY59y0p68ty37i_AtnRnbhzYv7ZnECrR5G1z370bMZ07bMPqO3_Dqg96ypnKcblOoT9Cm7EsnlkipkV83FnNzRrj9dJZ_wo_r7guAHf3fY5aQ8QEw_xcBQEVLA7ETHmrVIvowcd14-UaPJEhHWftaYrRCS-Ojod3mA9V9eI_fO64UfR6hQSLWXTI3AR4s39vo7qvwnMQX1JWyt0Vw3XTtie9OLZghbW9eNdGg";
-}
 
 
 if( $isAjay === false ){
@@ -216,7 +207,7 @@ false;
     }
 }
 
-
+$ip = get_client_ip_user();
 if( (array_search($ip, $deny_ips))!== FALSE ) {
     die("locked IP");
 }
@@ -260,7 +251,7 @@ $spamReferer    = ['so5ni.com'];
 if( $varRefererURL ){
     foreach( $spamReferer as $spam ){
         if( strpos( $varRefererURL, $spam ) || (strpos( $varRefererURL, $spam ) === 0) ){
-            header( 'location:thanks' );
+            header( 'location:thanks.php' );
             die;
         }
     }
@@ -272,7 +263,7 @@ if( $varRefererURL ){
 $htFields = hiddenBoatField('list');
 foreach( $_POST as $key => $fields ){
     if( in_array( $key, $htFields ) && ($_POST[$key] != "") ){
-        header('location:thanks');
+        header('location:thanks.php');
         die;
     }
 }
@@ -282,7 +273,7 @@ function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $email
     $cname = null, $spam = false ){
     $spamEmails = getSpamEmailsListings("/home/vc-leads/spamemails.json");
     if( in_array( $emailTo, $spamEmails ) || in_array( $userEmail, $spamEmails ) ){
-        header('location:thanks');
+        header('location:thanks.php');
         die;
     }
 
@@ -306,8 +297,8 @@ function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $email
         */
         
         $mail->Host         = "smtp.gmail.com"; // SMTP server
-        $mail->SMTPSecure   = 'ssl';
-        $mail->Port         = 465;
+        $mail->SMTPSecure   = 'tsl';
+        $mail->Port         = 587;
         $mail->SMTPAuth     = true;
         $mail->Username     = 'do-not-reply@valuecoders.com';
         $mail->Password     = 'pdtnweysvgovhemg';
@@ -621,8 +612,7 @@ if( $isAjay === true ){
     $eSender = splEmailData( $user_country );
     $ajxTicketID   = generateTicketID();
     if( isset( $eSender['mail_to'] ) ){
-    smtpEmailFunction( $eSender['mail_to'], "Inquiry with ValueCoders [".$ajxTicketID."]", $Mailbody, "lead", 
-    $ajxData['email'], [], ["parvesh@vinove.com", "nitin.baluni@mail.vinove.com"], [], $ajxData['name'] );
+
     }
 
     $leadReq = "How Can We Help : ".$ajxData['how_can'];
@@ -860,7 +850,6 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
     $headers .= "Content-type: text/html; charset=ISO-8859-1\r\n";
     $headers .= "From: " . $_POST["user-email"] . " <" . $_POST["user-email"] . ">" . "\r\n";
     $headers .= "Reply-To: " . $_POST["user-email"] . "\r\n";
-    //$headers .= "BCC: parvesh@vinove.com\r\n";
     for($i=0;$i<count($arrEmail);$i++){
         $headers .= "BCC: $arrEmail[$i]\r\n";
     }
@@ -929,8 +918,7 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
     */
 
     array_shift( $arrEmail );
-    //$bccEmails      = ['parvesh@vinove.com', 'nitin.baluni@mail.vinove.com'];
-    $bccEmails    = ['parvesh@vinove.com'];
+    $bccEmails      = ['nitin.baluni@mail.vinove.com'];
     $sampledata = [
     'name'          => $user_name,
     'email'         => $user_email,
@@ -974,15 +962,8 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
             if( isset( $_POST['nda'] ) ){
             $attachmentDoc = ['/home/valuecoders-com/public_html/download-pdf/ValueCoders-NDA.pdf'];    
             }
-
-            if( $arrPostParams['we-help'] == "career" ){
-            smtpEmailFunction( "careers@vinove.com", "Job Application - ValueCoders", $Mailbody, "lead", $user_email, 
-            ['parvesh@vinove.com','karma@vinove.com'], [], [], $user_name );
-            header('location:thanks');
-            die;
-            }
             
-            smtpEmailFunction( $user_email, "ValueCoders - We've received your request {STAGING}", $autoEmailBody, "auto", $user_email, [], [], $attachmentDoc );
+            smtpEmailFunction( $user_email, "ValueCoders - We've received your request", $autoEmailBody, "auto", $user_email, [], [], $attachmentDoc );
             $eSender = splEmailData( $user_country );
             
             if( isset( $eSender['mail_to'] ) ){
@@ -990,18 +971,12 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
             if( isset($arrPostParams['is_free_trial']) && ($arrPostParams['is_free_trial'] == "true") ){
             $tempEmailSubject = "Request for 7-Day Trial [".$ticketID."]";    
             }
+            smtpEmailFunction( "niraj.kumar@mail.vinove.com", $tempEmailSubject, $Mailbody, "lead", $user_email, [], $bccEmails, [], $user_name, false );        
+            // $emailBBB =  $Mailbody.$bodyBr.print_r( $_COOKIE, 1 );
+            // smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Contact Us - DEV", $emailBBB, "lead", $user_email, [], [], [], $user_name );
             
-            /*
-            smtpEmailFunction( $eSender['mail_to'], $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], 
-            $bccEmails, [], $user_name, false );
-            */
-            
-            $emailBBB =  $Mailbody.$bodyBr.print_r( $_COOKIE, 1 );
-            smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Lead {STAGING}", $emailBBB, "lead", 
-            $user_email, [], [], [], $user_name );
-            
-            $insType = (isset($arrPostParams['z-leadid']) && !empty($arrPostParams['z-leadid'])) ? $arrPostParams['z-leadid'] : false;
-            //zohoCrmUpdate_v2( $arrZoho_v2, $utm_source, $eSender['lead_to'], $insType );
+            // $insType = (isset($arrPostParams['z-leadid']) && !empty($arrPostParams['z-leadid'])) ? $arrPostParams['z-leadid'] : false;
+            // zohoCrmUpdate_v2( $arrZoho_v2, $utm_source, $eSender['lead_to'], $insType );
             }
     }
 
