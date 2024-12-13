@@ -137,17 +137,24 @@ function temp_logSpamEmails( $formData ){
     $conn->query( $sql );
     
     /*Added Spam Attacker Logs*/
-    $stmt = $conn->prepare("SELECT * FROM spam_leads WHERE (email = ? AND ip = ?) AND TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 300");
+    //$stmt = $conn->prepare("SELECT * FROM spam_leads WHERE (email = ? AND ip = ?) AND TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 300");
+    $stmt = $conn->prepare("SELECT COUNT(*) AS lead_count FROM spam_leads  WHERE email = ? AND ip = ? AND TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 300");
     $stmt->bind_param("ss", $userEmail, $userIP);
     $stmt->execute();
-    $result = $stmt->get_result();
-    if( $result->num_rows > 2 ){
+    $stmt->bind_result($lead_count);
+    $stmt->fetch();
+    $stmt->close();
+    // $stmt->bind_param("ss", $userEmail, $userIP);
+    // $stmt->execute();
+    //$result = $stmt->get_result();
+    if( $lead_count > 2 ){
         $insert_stmt = $conn->prepare("INSERT INTO spam_attack (email, ip, created_at) VALUES (?, ?, NOW())");
         $insert_stmt->bind_param("ss", $userEmail, $userIP);
         $insert_stmt->execute();
         $insert_stmt->close();
     }
     /*Added Spam Attacker Logs : Close*/
+    
     $conn->close();
      
 }
