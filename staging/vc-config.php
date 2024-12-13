@@ -1,5 +1,10 @@
 <?php 
 define('CL_LOGFILE', '/home/valuecoders-com/public_html/log/crm.log');
+function _spam_attack_notification(){
+    $subject    = "New spam attack delected";
+    $body       = ""
+}
+
 function hiddenBoatField( $type = "list" ){
     $botFields = [ 'first_name', 'last_name', 'email_user', 'user_dob', 'user_age', 'user_gender', 'user_phone', 'user_location', 
     'user_address', 'middle_name', 'nationality', 'city', 'state', 'zip', 'landmark', 'department', 'postal_code', 'hobbies', 
@@ -139,6 +144,7 @@ function temp_logSpamEmails( $formData ){
     /*Added Spam Attacker Logs*/
     //$stmt = $conn->prepare("SELECT * FROM spam_leads WHERE (email = ? AND ip = ?) AND TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 300");
     //$stmt = $conn->prepare("SELECT COUNT(*) AS lead_count FROM spam_leads WHERE email = ? AND ip = ? AND TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 300");
+
     $stmt = $conn->prepare("SELECT COUNT(*) AS lead_count FROM spam_leads WHERE email = ? AND ip = ? AND TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 300");
     $stmt->bind_param("ss", $userEmail, $userIP);
     $stmt->execute(); 
@@ -146,7 +152,7 @@ function temp_logSpamEmails( $formData ){
     $row    = $result->fetch_assoc();
     $lead_count = $row['lead_count'];
     $stmt->close();
-        
+
     if( $lead_count > 2 ){
         $insert_stmt = $conn->prepare("INSERT INTO spam_attack (email, ip, created_at) VALUES (?, ?, NOW())");
         $insert_stmt->bind_param("ss", $userEmail, $userIP);
@@ -185,8 +191,7 @@ function validateSpamAttacker( $email, $ip ){
         return false;        
     }else{
         return true;
-    }
-    
+    }    
 }
 
 function validatereCaptchaResponse( $captcha, $formdata ){    
@@ -220,7 +225,7 @@ function validatereCaptchaResponse( $captcha, $formdata ){
 }
 
 function storeLeadsData( $data ){
-    if( ($_SERVER['SERVER_NAME']=='www.valuecoders.com') || ($_SERVER['SERVER_NAME'] == 'valuecoders.com')  ){
+    if( ($_SERVER['SERVER_NAME']=='www.valuecoders.com') || ($_SERVER['SERVER_NAME'] == 'valuecoders.com') ){
         $servername = "localhost";
         $username   = "valuecoders-com-crm-prod-db-user";
         $password   = "5CxYSHEaVglFgCA";
