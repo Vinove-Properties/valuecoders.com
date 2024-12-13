@@ -237,7 +237,7 @@ function storeLeadsData( $data ){
         die("Connection failed: " . $conn->connect_error);
     }
     $sql = "INSERT INTO wp_webleads (name, email, phone, country, message, attachments, IP, source, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    if( $stmt = $mysqli->prepare($sql) ){
+    if( $stmt = $conn->prepare($sql) ){
         $stmt->bind_param('sssssssss', $data['name'], $data['email'], $data['phone'], $data['country'], $data['message'], $data['attachments'], $data['ip'], $data['source'], $created_at);
         $stmt->execute();
         $stmt->close();
