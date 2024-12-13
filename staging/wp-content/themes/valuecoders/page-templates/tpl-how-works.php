@@ -20,7 +20,9 @@ get_header();
 		</div>		
 	</div>
 </section>
-<?php vcTrustedStartups($thisPostID); ?>
+<?php
+get_template_part('inc/cmn', 'startups');
+?>
 
 <?php 
 $wprocess = get_field('working-process');
