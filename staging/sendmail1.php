@@ -42,6 +42,7 @@ if( validateSpamAttacker( $_POST['user-email'], $thisIPAddr ) === false ){
 }
 
 function logSpamException( $arrPostParams, $note = '' ){ 
+    //return true;
     $user_name      = nbHasData($arrPostParams, 'user-name');
     $user_email     = nbHasData($arrPostParams, 'user-email');
     $user_phone     = nbHasData($arrPostParams, 'user-phone');
@@ -117,12 +118,10 @@ function logSpamException( $arrPostParams, $note = '' ){
     
     
     //Live
-    smtpEmailFunction( "web@vinove.com", "Inquiry with ValueCoders - Spam Exception", $Mailbody, "lead", 
-    $user_email, [], [], [], $user_name );
+    //smtpEmailFunction( "web@vinove.com", "Inquiry with ValueCoders - Spam Exception", $Mailbody, "lead", $user_email, [], [], [], $user_name );
     
     //Test
-    /*smtpEmailFunction("nitin.baluni@mail.vinove.com", "Inquiry with ValueCoders - Spam Exception", $Mailbody, "lead", 
-    $user_email, [], [], [], $user_name);*/
+    smtpEmailFunction("niraj.kumar@mail.vinove.com", "Inquiry with ValueCoders - Spam Exception", $Mailbody, "lead", $user_email, [], ["nitin.baluni@mail.vinove.com"], [], $user_name);
 }
 
 if( $isAjay === false ){ 
@@ -197,8 +196,10 @@ if( isset( $_POST['user-name'] ) && in_array($_POST['user-name'], $spamNameManua
 
 
 if( $isAjay === false ){
-$captcha = (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) ? $_POST['g-recaptcha-response'] : 
-false;
+    $captcha = (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) ? $_POST['g-recaptcha-response'] : false;
+    if( isset($_POST['user-email']) && (strpos( $_POST['user-email'], 'spam' ) !== false) ){
+    $captcha = false;    
+    }
     if( $captcha !== false ){
         $isSmap = validatereCaptchaResponse( $captcha, $_POST );
         if( $isSmap === false ){
