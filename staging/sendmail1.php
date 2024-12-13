@@ -36,6 +36,11 @@ if( in_array($thisIPAddr, $spamIpAddr) ){
     die;
 }
 
+if( validateSpamAttacker( $_POST['user-email'], $thisIPAddr ) === false ){
+    header( 'location:thanks?spam-attacker=block' );
+    die;
+}
+
 function logSpamException( $arrPostParams, $note = '' ){ 
     $user_name      = nbHasData($arrPostParams, 'user-name');
     $user_email     = nbHasData($arrPostParams, 'user-email');
