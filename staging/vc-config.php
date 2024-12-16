@@ -240,7 +240,7 @@ function temp_logSpamEmails( $formData ){
         $insert_stmt->bind_param("ss", $userEmail, $userIP);
         $insert_stmt->execute();
         $insert_stmt->close();
-        __notifySpam( $array );
+        __notifySpam( $formData );
     }
     /*Added Spam Attacker Logs : Close*/
 
