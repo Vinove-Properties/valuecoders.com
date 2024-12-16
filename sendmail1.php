@@ -6,16 +6,6 @@ if( ($_SERVER['REQUEST_METHOD'] == 'GET') && realpath(__FILE__) == realpath( $_S
     header( 'HTTP/1.0 403 Forbidden', TRUE, 403 );
     die("HEY BOAT.. Go Away");
 }
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
-require 'countries-array.php';
-require 'vc-config.php';
-require 'vc-mailto.php';
-
 
 $is_staging = ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'staging' ) !== false) )  ?  true : false;
 $ajxData    = json_decode(file_get_contents("php://input"), true);

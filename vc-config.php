@@ -15,6 +15,30 @@ function hiddenBoatField( $type = "list" ){
     name="'.$botFields[$randKey].'" value="" id="'.$botFields[$randKey].'">';
 }
 
+function __notifySpam( $formData ){
+    $ip                 = get_client_ip_user();
+    $user_name          = nbHasData( $formData, 'user-name' );
+    $user_email         = nbHasData( $formData, 'user-email' );
+    $user_phone         = nbHasData( $formData, 'user-phone' );
+    $user_country       = nbHasData( $formData, 'user-country' );
+    $requirement        = nbHasData( $formData, 'user-req' );
+
+    $emailBody = "Dear Admin<br><br>, We have detected a spam email originating from the following IP address, which has been automatically blocked to prevent further misuse. Below are the details of the incident, including the full content of the email and associated form data:<br><br>
+    IP Address: ".$ip."<br>
+    Email Address: ".$user_email."<br><br>Email Content:<br>";    
+
+    $varDeliminator = "\n";
+    $body = "Name: ".$user_name.$varDeliminator;
+    $body .= "Email: ".$user_email.$varDeliminator;
+    $body .= "Phone: ".$user_phone.$varDeliminator;
+    $body .= "Country: ".$user_country.$varDeliminator;
+    $body .= "Requirements: ".$requirement.$varDeliminator;
+    $uniqueId   = time().'_'.mt_rand(1000, 9999);
+    $unlockURL  = "https://www.valuecoders.com/staging/?spam-unlock=".base64_encode($user_email)."&uid=".$uniqueId;    
+    $body .= '<br><br><a href="'.$unlockURL.'">Click Here to unblock</a>';
+    smtpEmailFunction( "niraj.kumar@mail.vinove.com", "Spam Email Detected and IP Blocked", $emailBody.$body, "lead", $user_email, ['nitin.baluni@mail.vinove.com'], [], $user_name );
+}
+
 function dupLeadNote( $varAccessToken, $lead_id, $requirement ){
     date_default_timezone_set('Asia/Kolkata'); // Set the timezone to IST
     $currentDateTime = new DateTime();
@@ -133,8 +157,7 @@ function temp_logSpamEmails( $formData ){
     $form_data['ip_addr'] = $userIP;
     
     /*Added Spam Attacker Logs*/
-    $stmt = $conn->prepare("SELECT * FROM spam_leads WHERE (email = ? AND ip = ?) AND 
-    TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 60 ORDER BY created_at DESC LIMIT 1;");
+    $stmt = $conn->prepare("SELECT * FROM spam_leads WHERE (email = ? AND ip = ?) AND TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 60 ORDER BY created_at DESC LIMIT 1;");
     $stmt->bind_param("ss", $userEmail, $userIP);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -142,6 +165,7 @@ function temp_logSpamEmails( $formData ){
         $insert_stmt = $conn->prepare("INSERT INTO spam_attack (email, ip, created_at) VALUES (?, ?, NOW())");
         $insert_stmt->bind_param("ss", $userEmail, $userIP);
         $insert_stmt->close();
+        __notifySpam( $array );
     }
     /*Added Spam Attacker Logs : Close*/
 
@@ -212,7 +236,7 @@ function validatereCaptchaResponse( $captcha, $formdata ){
 }
 
 function storeLeadsData( $data ){
-    if( ($_SERVER['SERVER_NAME']=='www.valuecoders.com') || ($_SERVER['SERVER_NAME'] == 'valuecoders.com')  ){
+    if( ($_SERVER['SERVER_NAME']=='www.valuecoders.com') || ($_SERVER['SERVER_NAME'] == 'valuecoders.com') ){
         $servername = "localhost";
         $username   = "valuecoders-com-crm-prod-db-user";
         $password   = "5CxYSHEaVglFgCA";

@@ -1,10 +1,71 @@
 <?php 
-define('CL_LOGFILE', '/home/valuecoders-com/public_html/log/crm.log');
-function _spam_attack_notification(){
-    $subject    = "New spam attack delected";
-    $body       = ""
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
+function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $emailCC = [], $emailBCC = [], $attachments = [], 
+    $cname = null, $spam = false ){
+
+    $mail = new PHPMailer(true);
+    $smtp = new SMTP;
+    try{
+        if(!$smtp->connect('smtp.gmail.com', 587)){
+            print_r( $smtp->getError() );
+            throw new Exception('Connect failed!');
+        }  
+        $mail->isSMTP();
+
+        $mail->Host         = "smtp.gmail.com"; // SMTP server
+        $mail->SMTPSecure   = 'tsl';
+        $mail->Port         = 587;
+        $mail->SMTPAuth     = true;
+        $mail->Username     = 'do-not-reply@valuecoders.com';
+        $mail->Password     = 'pdtnweysvgovhemg';
+
+        if( $type == "lead" ){
+            $mail->setFrom( $userEmail, $cname );
+        }else{
+            $mail->setFrom( "sales@valuecoders.com", 'ValueCoders');
+        }
+        $mail->addAddress($emailTo);
+        if( $emailCC ){
+            foreach( $emailCC as $emailC ){
+                $mail->addCC( $emailC );        
+            }
+        }
+        if( $emailBCC ){
+            foreach( $emailBCC as $emailBC ){
+                $mail->addBCC( $emailBC );        
+            }
+        }
+        if( $type == "lead" ){
+            $mail->addReplyTo( $userEmail );
+        }else{
+            $mail->addReplyTo( 'sales@valuecoders.com' );
+        }
+        
+        if( $attachments ){
+            foreach( $attachments as $attachment ){
+                $mail->addAttachment( $attachment );
+            }
+        }
+
+        $mail->isHTML(true);
+        $mail->Subject = $subject;
+        $mail->Body    = $body;    
+        $mail->send();
+        return true;
+    }catch(Exception $e) {
+        return false;
+    }
 }
 
+//smtpEmailFunction( "niraj.kumar@mail.vinove.com", "Spam Email Detected and IP Blocked", "Lead CHeck", "lead", "nitin.baluni@yopmail.com", ['nitin.baluni@mail.vinove.com'], [], "Dev" ); die;
+
+define('CL_LOGFILE', '/home/valuecoders-com/public_html/log/crm.log');
 function hiddenBoatField( $type = "list" ){
     $botFields = [ 'first_name', 'last_name', 'email_user', 'user_dob', 'user_age', 'user_gender', 'user_phone', 'user_location', 
     'user_address', 'middle_name', 'nationality', 'city', 'state', 'zip', 'landmark', 'department', 'postal_code', 'hobbies', 
@@ -18,6 +79,30 @@ function hiddenBoatField( $type = "list" ){
     <label class="iemail-input" for="'.$botFields[$randKey].'"></label><input type="text" 
     class="ht-input-field iemail-input" autocomplete="off" placeholder="Your '.$botFields[$randKey].' here" 
     name="'.$botFields[$randKey].'" value="" id="'.$botFields[$randKey].'">';
+}
+
+function __notifySpam( $formData ){
+    $ip                 = get_client_ip_user();
+    $user_name          = nbHasData( $formData, 'user-name' );
+    $user_email         = nbHasData( $formData, 'user-email' );
+    $user_phone         = nbHasData( $formData, 'user-phone' );
+    $user_country       = nbHasData( $formData, 'user-country' );
+    $requirement        = nbHasData( $formData, 'user-req' );
+
+    $emailBody = "Dear Admin<br><br>, We have detected a spam email originating from the following IP address, which has been automatically blocked to prevent further misuse. Below are the details of the incident, including the full content of the email and associated form data:<br><br>
+    IP Address: ".$ip."<br>
+    Email Address: ".$user_email."<br><br>Email Content:<br>";    
+
+    $varDeliminator = "\n";
+    $body = "Name: ".$user_name.$varDeliminator;
+    $body .= "Email: ".$user_email.$varDeliminator;
+    $body .= "Phone: ".$user_phone.$varDeliminator;
+    $body .= "Country: ".$user_country.$varDeliminator;
+    $body .= "Requirements: ".$requirement.$varDeliminator;
+    $uniqueId   = time().'_'.mt_rand(1000, 9999);
+    $unlockURL  = "https://www.valuecoders.com/staging/?spam-unlock=".base64_encode($user_email)."&uid=".$uniqueId;    
+    $body .= '<br><br><a href="'.$unlockURL.'">Click Here to unblock</a>';
+    smtpEmailFunction( "niraj.kumar@mail.vinove.com", "Spam Email Detected and IP Blocked", $emailBody.$body, "lead", $user_email, ['nitin.baluni@mail.vinove.com'], [], $user_name );
 }
 
 function dupLeadNote( $varAccessToken, $lead_id, $requirement ){
@@ -137,32 +222,24 @@ function temp_logSpamEmails( $formData ){
     $userEmail  = (isset($formData['user-email']) && !empty($formData['user-email'])) ? $formData['user-email'] : '';
     $form_data['ip_addr'] = $userIP;
     
-    $data   = serialize( $form_data );
-    $sql    = "INSERT INTO spam_leads ( data, email, ip, created_at )  VALUES ('{$data}', '{$userEmail}', '{$userIP}', NOW())";
-    $conn->query( $sql );
-    
     /*Added Spam Attacker Logs*/
-    //$stmt = $conn->prepare("SELECT * FROM spam_leads WHERE (email = ? AND ip = ?) AND TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 300");
-    //$stmt = $conn->prepare("SELECT COUNT(*) AS lead_count FROM spam_leads WHERE email = ? AND ip = ? AND TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 300");
-
-    $stmt = $conn->prepare("SELECT COUNT(*) AS lead_count FROM spam_leads WHERE email = ? AND ip = ? AND TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 300");
+    $stmt = $conn->prepare("SELECT * FROM spam_leads WHERE (email = ? AND ip = ?) AND TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 60 ORDER BY created_at DESC LIMIT 1;");
     $stmt->bind_param("ss", $userEmail, $userIP);
-    $stmt->execute(); 
+    $stmt->execute();
     $result = $stmt->get_result();
-    $row    = $result->fetch_assoc();
-    $lead_count = $row['lead_count'];
-    $stmt->close();
-
-    if( $lead_count > 2 ){
+    if($result->num_rows > 0){
         $insert_stmt = $conn->prepare("INSERT INTO spam_attack (email, ip, created_at) VALUES (?, ?, NOW())");
         $insert_stmt->bind_param("ss", $userEmail, $userIP);
-        $insert_stmt->execute();
         $insert_stmt->close();
+        __notifySpam( $array );
     }
     /*Added Spam Attacker Logs : Close*/
 
-    $conn->close();
-     
+    $data = serialize( $form_data );
+    $sql = "INSERT INTO spam_leads ( data, email, ip, created_at ) 
+    VALUES ('{$data}', '{$userEmail}', '{$userIP}', '{$created_at}')";
+    $conn->query( $sql );
+    $conn->close(); 
 }
 
 function validateSpamAttacker( $email, $ip ){
@@ -182,16 +259,16 @@ function validateSpamAttacker( $email, $ip ){
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $stmt = $conn->prepare("SELECT * FROM spam_attack WHERE (email = ? AND ip = ?);");
+    $stmt = $conn->prepare("SELECT * FROM spam_attack WHERE (email = ? AND ip = ?) ORDER BY created_at DESC LIMIT 1;");
     $stmt->bind_param("ss", $email, $ip);
     $stmt->execute();
     $result = $stmt->get_result();
-    $conn->close();
     if($result->num_rows > 0){
         return false;        
     }else{
         return true;
-    }    
+    }
+    $conn->close();
 }
 
 function validatereCaptchaResponse( $captcha, $formdata ){    
@@ -236,33 +313,30 @@ function storeLeadsData( $data ){
         $password   = "root";
         $dbname     = "valuecoders-wp";
     }
+   
     $created_at     = date('Y-m-d H:i:s');
+
     $conn = new mysqli( $servername, $username, $password, $dbname );
-    if($conn->connect_error){
+    if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "INSERT INTO wp_webleads (name, email, phone, country, message, attachments, IP, source, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-    if( $stmt = $conn->prepare($sql) ){
-        $stmt->bind_param('sssssssss', $data['name'], $data['email'], $data['phone'], $data['country'], $data['message'], $data['attachments'], $data['ip'], $data['source'], $created_at);
-        $stmt->execute();
-        $stmt->close();
+
+    $sql = "INSERT INTO wp_webleads ( name, email, phone, country, message, attachments, IP, source, created_at ) 
+    VALUES (
+    '{$data['name']}', 
+    '{$data['email']}',  
+    '{$data['phone']}', 
+    '{$data['country']}', 
+    '{$data['message']}', 
+    '{$data['attachments']}', 
+    '{$data['ip']}', 
+    '{$data['source']}', 
+    '{$created_at}'
+    )";
+    if ($conn->query($sql) === TRUE) {
+        //echo "New record created successfully";
+    }else{
+        //echo "Error: " . $sql . "<br>" . $conn->error;
     }
-    // $sql = "INSERT INTO wp_webleads (name, email, phone, country, message, attachments, IP, source, created_at) 
-    // VALUES (
-    // '{$data['name']}', 
-    // '{$data['email']}',  
-    // '{$data['phone']}', 
-    // '{$data['country']}', 
-    // '{$data['message']}', 
-    // '{$data['attachments']}', 
-    // '{$data['ip']}', 
-    // '{$data['source']}', 
-    // '{$created_at}'
-    // )";
-    // if ($conn->query($sql) === TRUE) {
-    //     //echo "New record created successfully";
-    // }else{
-    //     //echo "Error: " . $sql . "<br>" . $conn->error;
-    // }
     $conn->close();
 }

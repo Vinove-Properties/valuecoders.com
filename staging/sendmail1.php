@@ -6,12 +6,6 @@ if( ($_SERVER['REQUEST_METHOD'] == 'GET') && realpath(__FILE__) == realpath( $_S
     header( 'HTTP/1.0 403 Forbidden', TRUE, 403 );
     die("HEY BOAT.. Go Away");
 }
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
 require 'countries-array.php';
 require 'vc-config.php';
 require 'vc-mailto.php';
@@ -274,78 +268,6 @@ foreach( $_POST as $key => $fields ){
     }
 }
 */
-
-function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $emailCC = [], $emailBCC = [], $attachments = [], 
-    $cname = null, $spam = false ){
-    $spamEmails = getSpamEmailsListings("/home/vc-leads/spamemails.json");
-    if( in_array( $emailTo, $spamEmails ) || in_array( $userEmail, $spamEmails ) ){
-        header('location:thanks.php');
-        die;
-    }
-
-    $mail = new PHPMailer(true);
-    $smtp = new SMTP;
-    try{
-        if(!$smtp->connect('smtp.gmail.com', 587)){
-            print_r( $smtp->getError() );
-            throw new Exception('Connect failed!');
-        }  
-
-        $mail->isSMTP();
-
-        /*
-        $mail->Host         = "hub.vinove.com"; // SMTP server
-        $mail->SMTPSecure   = 'tls';
-        $mail->Port         = 25;
-        $mail->SMTPAuth     = true;
-        $mail->Username     = 'sales@valuecoders.com';
-        $mail->Password     = 'dZ.RNp&$~D;;';
-        */
-        
-        $mail->Host         = "smtp.gmail.com"; // SMTP server
-        $mail->SMTPSecure   = 'tsl';
-        $mail->Port         = 587;
-        $mail->SMTPAuth     = true;
-        $mail->Username     = 'do-not-reply@valuecoders.com';
-        $mail->Password     = 'pdtnweysvgovhemg';
-
-        if( $type == "lead" ){
-            $mail->setFrom( $userEmail, $cname );
-        }else{
-            $mail->setFrom( "sales@valuecoders.com", 'ValueCoders');
-        }
-        $mail->addAddress($emailTo);
-        if( $emailCC ){
-            foreach( $emailCC as $emailC ){
-                $mail->addCC( $emailC );        
-            }
-        }
-        if( $emailBCC ){
-            foreach( $emailBCC as $emailBC ){
-                $mail->addBCC( $emailBC );        
-            }
-        }
-        if( $type == "lead" ){
-            $mail->addReplyTo( $userEmail );
-        }else{
-            $mail->addReplyTo( 'sales@valuecoders.com' );
-        }
-        
-        if( $attachments ){
-            foreach( $attachments as $attachment ){
-                $mail->addAttachment( $attachment );
-            }
-        }
-
-        $mail->isHTML(true);
-        $mail->Subject = $subject;
-        $mail->Body    = $body;    
-        $mail->send();
-        return true;
-    }catch(Exception $e) {
-        return false;
-    }
-}
 
 $varIPAdd = get_client_ip_user(); 
 //$varIPAdd = $_SERVER['REMOTE_ADDR'];
