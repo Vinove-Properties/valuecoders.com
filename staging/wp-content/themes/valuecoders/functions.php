@@ -1772,3 +1772,10 @@ add_action('init', function(){
 	}
 });
 */
+
+
+add_action('init', function(){
+if( isset($_GET['spam-unlock']) && (!empty($_GET['spam-unlock'])) ){
+	
+}
+});

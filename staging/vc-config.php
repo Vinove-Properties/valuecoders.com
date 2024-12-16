@@ -6,6 +6,26 @@ require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
+function nbHasData( $array, $key ){
+    return (isset($array[$key]) && !empty($array[$key])) ? $array[$key] : '';
+}
+
+function get_client_ip_user() {
+    if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
+              $_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
+              $_SERVER['HTTP_CLIENT_IP'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
+    }
+    $client  = @$_SERVER['HTTP_CLIENT_IP'];
+    $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
+    $remote  = $_SERVER['REMOTE_ADDR'];
+
+    if(filter_var($client, FILTER_VALIDATE_IP)) { $ip = $client; }
+    elseif(filter_var($forward, FILTER_VALIDATE_IP)) { $ip = $forward; }
+    else { $ip = $remote; }
+
+    return $ip;
+}
+
 function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $emailCC = [], $emailBCC = [], $attachments = [], 
     $cname = null, $spam = false ){
 
@@ -101,7 +121,9 @@ function __notifySpam( $formData ){
     $uniqueId   = time().'_'.mt_rand(1000, 9999);
     $unlockURL  = "https://www.valuecoders.com/staging/?spam-unlock=".base64_encode($user_email)."&uid=".$uniqueId;    
     $body .= '<br><br><a href="'.$unlockURL.'">Click Here to unblock</a>';
-    smtpEmailFunction( "niraj.kumar@mail.vinove.com", "Spam Email Detected and IP Blocked", $emailBody.$body, "lead", $user_email, ['nitin.baluni@mail.vinove.com'], [], $user_name );
+    echo $emailBody.$body; die;
+    smtpEmailFunction( "niraj.kumar@mail.vinove.com", "Spam Email Detected and IP Blocked", $emailBody.$body, "lead", 
+    $user_email, ['nitin.baluni@mail.vinove.com'], [], $user_name );
 }
 
 function dupLeadNote( $varAccessToken, $lead_id, $requirement ){
@@ -147,25 +169,6 @@ function dupLeadNote( $varAccessToken, $lead_id, $requirement ){
     curl_close( $curl );
 }
 
-function get_client_ip_user() {
-    if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
-              $_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
-              $_SERVER['HTTP_CLIENT_IP'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
-    }
-    $client  = @$_SERVER['HTTP_CLIENT_IP'];
-    $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
-    $remote  = $_SERVER['REMOTE_ADDR'];
-
-    if(filter_var($client, FILTER_VALIDATE_IP)) { $ip = $client; }
-    elseif(filter_var($forward, FILTER_VALIDATE_IP)) { $ip = $forward; }
-    else { $ip = $remote; }
-
-    return $ip;
-}
-
-function nbHasData( $array, $key ){
-    return (isset($array[$key]) && !empty($array[$key])) ? $array[$key] : '';
-}
 
 function generateTicketID() {
     $alphabeticChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -232,17 +235,17 @@ function temp_logSpamEmails( $formData ){
     $lead_count = $row['lead_count'];
     $stmt->close();
 
-    if( $lead_count > 3 ){
-        $insert_stmt = $conn->prepare("INSERT INTO spam_attack (email, ip, created_at) VALUES (?, ?, NOW())");
+    if( $lead_count > 2 ){
+        $insert_stmt = $conn->prepare( "INSERT INTO spam_attack (email, ip, created_at) VALUES (?, ?, NOW())" );
         $insert_stmt->bind_param("ss", $userEmail, $userIP);
+        $insert_stmt->execute();
         $insert_stmt->close();
         __notifySpam( $array );
     }
     /*Added Spam Attacker Logs : Close*/
 
     $data = serialize( $form_data );
-    $sql = "INSERT INTO spam_leads ( data, email, ip, created_at ) 
-    VALUES ('{$data}', '{$userEmail}', '{$userIP}', '{$created_at}')";
+    $sql = "INSERT INTO spam_leads ( data, email, ip, created_at ) VALUES ('{$data}', '{$userEmail}', '{$userIP}', NOW())";
     $conn->query( $sql );
     $conn->close(); 
 }
@@ -276,7 +279,7 @@ function validateSpamAttacker( $email, $ip ){
     $conn->close();
 }
 
-function validatereCaptchaResponse( $captcha, $formdata ){    
+function validatereCaptchaResponse( $captcha, $formdata ){
     if( preg_match('/\s/', $captcha) ){
         logSpamException( $formdata, 'Marked Spam Invalid reCaptcha Response Token ' );
         temp_logSpamEmails( $formdata );
