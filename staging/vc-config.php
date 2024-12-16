@@ -121,7 +121,7 @@ function __notifySpam( $formData ){
     $uniqueId   = time().'_'.mt_rand(1000, 9999);
     $unlockURL  = "https://www.valuecoders.com/staging/?spam-unlock=".base64_encode($user_email)."&uid=".$uniqueId;    
     $body .= '<br><br><a href="'.$unlockURL.'">Click Here to unblock</a>';
-    echo $emailBody.$body; die;
+    //echo $emailBody.$body; die;
     smtpEmailFunction( "niraj.kumar@mail.vinove.com", "Spam Email Detected and IP Blocked", $emailBody.$body, "lead", 
     $user_email, ['nitin.baluni@mail.vinove.com'], [], $user_name );
 }
