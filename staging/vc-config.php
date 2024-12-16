@@ -108,11 +108,11 @@ function __notifySpam( $formData ){
     $user_country       = nbHasData( $formData, 'user-country' );
     $requirement        = nbHasData( $formData, 'user-req' );
 
-    $emailBody = "Dear Admin<br><br>, We have detected a spam email originating from the following IP address, which has been automatically blocked to prevent further misuse. Below are the details of the incident, including the full content of the email and associated form data:<br><br>
+    $emailBody = "Dear Admin,<br><br>We have detected a spam email originating from the following IP address, which has been automatically blocked to prevent further misuse. Below are the details of the incident, including the full content of the email and associated form data:<br><br>
     IP Address: ".$ip."<br>
     Email Address: ".$user_email."<br><br>Email Content:<br>";    
 
-    $varDeliminator = "\n";
+    $varDeliminator = "<br>";
     $body = "Name: ".$user_name.$varDeliminator;
     $body .= "Email: ".$user_email.$varDeliminator;
     $body .= "Phone: ".$user_phone.$varDeliminator;

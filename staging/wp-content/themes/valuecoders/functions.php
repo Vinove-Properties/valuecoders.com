@@ -1772,10 +1772,30 @@ add_action('init', function(){
 	}
 });
 */
-
+function dbConnection(){
+	if( isset( $_SERVER['HTTP_HOST'] ) && ($_SERVER['HTTP_HOST'] == "localhost") ){
+	$spdb = new wpdb('phpmyadmin','root','pixelcrayons-p2wp', 'localhost');
+	}else{
+	$spdb = new wpdb('pixelcrayons-com-crm-prod-db-user','s3BTNF070AwS7p8','pixelcrayons-com-crm-prod-db', 'localhost');
+	}
+	return $spdb;
+}
 
 add_action('init', function(){
-if( isset($_GET['spam-unlock']) && (!empty($_GET['spam-unlock'])) ){
-	
-}
+	if( isset($_GET['spam-unlock']) && (!empty($_GET['spam-unlock'])) ){
+		$email 	= base64_decode( $_GET['spam-unlock'] ); 
+		$spdb 	= new wpdb('valuecoders-com-crm-prod-db-user','5CxYSHEaVglFgCA','valuecoders-com-crm-prod-db', 'localhost');
+		$receivedUid = $_GET['uid'];
+		list($timestamp, $randomPart) = explode('_', $receivedUid);
+		if( is_numeric($timestamp) && is_numeric($randomPart) ){
+			if( $spdb->delete( 'spam_attack', ['email' => $email] ) ){
+				echo "Record unblocked Successfully.";
+			}else{
+				echo "Invalid Request. Please try again.";
+			}
+		}else{
+			echo "Invalid Request. Please try again.";
+		}
+		die;
+	}
 });
