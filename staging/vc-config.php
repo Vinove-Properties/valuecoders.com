@@ -63,7 +63,6 @@ function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $email
     }
 }
 
-//smtpEmailFunction( "niraj.kumar@mail.vinove.com", "Spam Email Detected and IP Blocked", "Lead CHeck", "lead", "nitin.baluni@yopmail.com", ['nitin.baluni@mail.vinove.com'], [], "Dev" ); die;
 
 define('CL_LOGFILE', '/home/valuecoders-com/public_html/log/crm.log');
 function hiddenBoatField( $type = "list" ){
@@ -232,7 +231,7 @@ function temp_logSpamEmails( $formData ){
     $row    = $result->fetch_assoc();
     $lead_count = $row['lead_count'];
     $stmt->close();
-            
+
     if( $lead_count > 3 ){
         $insert_stmt = $conn->prepare("INSERT INTO spam_attack (email, ip, created_at) VALUES (?, ?, NOW())");
         $insert_stmt->bind_param("ss", $userEmail, $userIP);

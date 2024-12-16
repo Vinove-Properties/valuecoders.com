@@ -182,7 +182,8 @@
 <?php } 
 get_template_part('inc/cmn', 'startups');
 //vcTrustedStartups($thisPostID); 
-?>	
+?>
+<?php	
 // tech Specification in accordian format.
 $specifications = get_field('tech-spec');
 if( isset( $specifications['is_enabled'] ) && ($specifications['is_enabled'] == "yes") ){ 
