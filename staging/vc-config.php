@@ -120,10 +120,8 @@ function __notifySpam( $formData ){
     $body .= "Requirements: ".$requirement.$varDeliminator;
     $uniqueId   = time().'_'.mt_rand(1000, 9999);
     $unlockURL  = "https://www.valuecoders.com/staging/?spam-unlock=".base64_encode($user_email)."&uid=".$uniqueId;    
-    $body .= '<br><br><a href="'.$unlockURL.'">Click Here to unblock</a>';
-    //echo $emailBody.$body; die;
-    smtpEmailFunction( "niraj.kumar@mail.vinove.com", "Spam Email Detected and IP Blocked", $emailBody.$body, "lead", 
-    $user_email, ['nitin.baluni@mail.vinove.com'], [], $user_name );
+    $body .= '<br><br><a href="'.$unlockURL.'">Click Here to unblock</a>';    
+    smtpEmailFunction( "nitin.baluni@mail.vinove.com", "Spam Email Detected and IP Blocked", $emailBody.$body, "lead", $user_email, ['parvesh@vinove.com', 'vivek.avasthi@mail.vinove.com'], [], $user_name );
 }
 
 function dupLeadNote( $varAccessToken, $lead_id, $requirement ){
@@ -225,8 +223,7 @@ function temp_logSpamEmails( $formData ){
     $form_data['ip_addr'] = $userIP;
     
     /*Added Spam Attacker Logs*/
-    $stmt = $conn->prepare("SELECT COUNT(*) AS lead_count FROM spam_leads WHERE email = ? AND ip = ? AND 
-    TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 300");
+    $stmt = $conn->prepare("SELECT COUNT(*) AS lead_count FROM spam_leads WHERE email = ? AND ip = ? AND TIMESTAMPDIFF(SECOND, created_at, NOW()) <= 120");
 
     $stmt->bind_param("ss", $userEmail, $userIP);
     $stmt->execute(); 
@@ -235,7 +232,7 @@ function temp_logSpamEmails( $formData ){
     $lead_count = $row['lead_count'];
     $stmt->close();
 
-    if($lead_count >= 2){
+    if($lead_count >= 10){
         $insert_stmt = $conn->prepare( "INSERT INTO spam_attack (email, ip, created_at) VALUES (?, ?, NOW())" );
         $insert_stmt->bind_param("ss", $userEmail, $userIP);
         $insert_stmt->execute();

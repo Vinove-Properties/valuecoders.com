@@ -7,6 +7,10 @@ if( ($_SERVER['REQUEST_METHOD'] == 'GET') && realpath(__FILE__) == realpath( $_S
     die("HEY BOAT.. Go Away");
 }
 
+require 'countries-array.php';
+require 'vc-config.php';
+require 'vc-mailto.php';
+
 $is_staging = ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'staging' ) !== false) )  ?  true : false;
 $ajxData    = json_decode(file_get_contents("php://input"), true);
 //$isAjay     = ( isset( $ajxData['_doing_ajax'] ) && ($ajxData['_doing_ajax'] === true) ) ? true : false;
@@ -23,6 +27,11 @@ $spamIpAddr = ['141.95.234.1', '89.22.225.45','94.156.64.107'];
 $thisIPAddr = get_client_ip_user();
 if( in_array($thisIPAddr, $spamIpAddr) ){
     header('location:thanks');
+    die;
+}
+
+if( validateSpamAttacker( $_POST['user-email'], $thisIPAddr ) === false ){
+    header( 'location:thanks?spam-attacker=block' );
     die;
 }
 
