@@ -23,7 +23,7 @@ $thisUrl   = 'https://www.valuecoders.com/staging/';
 define( 'SITE_ROOT_URL', $thisUrl );
 
 
-$spamIpAddr = ['141.95.234.1', '89.22.225.45','94.156.64.107'];
+$spamIpAddr = ['141.95.234.1', '89.22.225.45', '94.156.64.107'];
 $thisIPAddr = get_client_ip_user();
 if( in_array($thisIPAddr, $spamIpAddr) ){
     header('location:thanks');

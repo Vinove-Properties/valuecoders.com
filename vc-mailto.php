@@ -345,8 +345,8 @@ $array_anz = ['Australia', 'New Zealand'];
     elseif( checkInArray( $is_country, $array_europe ) ){
         $consoleArray = array( 
             'region'    => 'europe', 
-            'lead_to'   => $zoho_id['pa'], 
-            'mail_to'   => "pa", 
+            'lead_to'   => $zoho_id['sanjiv'],
+            'mail_to'   => 'sanjiv@valuecoders.com',
             'mail_cc'   => ['neha.raina@valuecoders.com']
         );
     }
