@@ -58,18 +58,40 @@
           </div>
           <?php the_content(); ?>
           <div class="btn-sec margin-t-50 ">
-            <a href="https://www.valuecoders.com/v2wp/contact" class="btn rounded">
+            <a href="<?php echo site_url('/contact'); ?>" class="btn rounded">
             <span class="text-white">Get Free Consulation</span>
             </a>
           </div>
         </div>
+        <?php 
+        $randReviews = [
+        'laura' => [
+        'img' => $template_assets.'images/card-image.png', 
+        'text' => 'Professional, reliable, and results-driven – they delivered exactly what we needed, on time and within budget.'
+        ],
+        'samantha' => [
+        'img' => $template_assets.'images/card-image.png', 
+        'text' => 'A seamless experience from start to finish. Their attention to detail is unmatched!'
+        ],
+        'jonathan' => [
+        'img' => $template_assets.'images/card-image.png', 
+        'text' => 'Outstanding results, clear communication, and a dedicated team. We’re extremely satisfied with their IT services.'
+        ],
+        'rebecca' => [
+        'img' => $template_assets.'images/card-image.png', 
+        'text' => 'They go above and beyond to ensure quality and satisfaction. A true partner in every sense.'
+        ]
+        ];
+        $randKey  = array_rand($randReviews);
+        $pickTest = $randReviews[$randKey];
+        ?>
         <div class="right-box">
           <div class="card-box">
             <div class="card-top">
               <picture>
-                <img loading="lazy" src="<?php echo $template_assets; ?>images/card-image.png" width="129" height="129" alt="valuecoders">
+                <img loading="lazy" src="<?php echo $pickTest['img']; ?>" width="129" height="129" alt="valuecoders">
               </picture>
-              <p><strong>Valuecoders'</strong> digital marketing services have been a game-changer for our business, significantly boosting our online.</p>
+              <p><?php echo $pickTest['text']; ?></p>
             </div>
             <div class="ratings">
               <div class="rating">
