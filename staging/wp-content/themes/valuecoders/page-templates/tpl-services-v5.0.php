@@ -306,9 +306,9 @@
               <h3>Healthcare</h3>
             </div>
             <div class="service-content">
-              <h3>Travel & Tourism</h3>
-              <p>Our travel application development team understands the terms...</p>
-              <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
+              <h3>Healthcare</h3>
+              <p>Building smart healthcare solutions</p>
+              <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/healthcare-software-development-services'); ?>">Learn more</a></div>
             </div>
           </div>
         </div>
@@ -320,7 +320,7 @@
             </div>
             <div class="service-content">
               <h3>Travel & Tourism</h3>
-              <p>Our travel application development team understands the terms...</p>
+              <p>Revolutionizing travel services</p>
               <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
             </div>
           </div>
@@ -328,60 +328,61 @@
             <div class="ind-column w-50">
               <div class="ind-image small-img">
                 <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm02.png" width="203" height="234" alt="valuecoders">
-                <h3>Travel & Tourism</h3>
+                <h3>Fintech</h3>
               </div>
               <div class="service-content">
-                <h3>Travel & Tourism</h3>
+                <h3>Fintech</h3>
                 <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
               </div>
             </div>
             <div class="ind-column w-50">
               <div class="ind-image small-img">
                 <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm02.png" width="203" height="234" alt="valuecoders">
-                <h3>Travel & Tourism</h3>
+                <h3>BFSI</h3>
               </div>
               <div class="service-content">
-                <h3>Travel & Tourism</h3>
+                <h3>BFSI</h3>
                 <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="flex-3  ind-box">
+        <div class="flex-3 ind-box">
           <div class="ind-column">
             <div class="ind-image">
               <img loading="lazy" src="<?php echo $template_assets; ?>images/healthcare-ind.png" width="427" height="480" alt="valuecoders">
-              <h3>Healthcare</h3>
+              <h3>Automotive</h3>
             </div>
             <div class="service-content">
-              <h3>Travel & Tourism</h3>
-              <p>Our travel application development team understands the terms...</p>
+              <h3>Automotive</h3>
+              <p>Transforming auto experiences</p>
               <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
             </div>
           </div>
         </div>
-        <div class="flex-3  ind-box">
+        <div class="flex-3 ind-box">
           <div class="ind-column">
             <div class="ind-image">
               <img loading="lazy" src="<?php echo $template_assets; ?>images/healthcare-ind.png" width="427" height="480" alt="valuecoders">
-              <h3>Healthcare</h3>
+              <h3>Education & eLearning</h3>
             </div>
             <div class="service-content">
-              <h3>Travel & Tourism</h3>
-              <p>Our travel application development team understands the terms...</p>
+              <h3>Education & eLearning</h3>
+              <p>Shaping digital learning</p>
               <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
             </div>
           </div>
         </div>
-        <div class="flex-3  ind-box">
+
+        <div class="flex-3 ind-box">
           <div class="ind-column">
             <div class="ind-image small-img">
               <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm01.png" width="426" height="234" alt="valuecoders">
-              <h3>Travel & Tourism</h3>
+              <h3>Retail & eCommerce</h3>
             </div>
             <div class="service-content">
-              <h3>Travel & Tourism</h3>
-              <p>Our travel application development team understands the terms...</p>
+              <h3>Retail & eCommerce</h3>
+              <p>Enhancing retail journeys</p>
               <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
             </div>
           </div>
@@ -389,38 +390,39 @@
             <div class="ind-column w-50">
               <div class="ind-image small-img">
                 <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm02.png" width="203" height="234" alt="valuecoders">
-                <h3>Travel & Tourism</h3>
+                <h3>Logistics & Transportation</h3>
               </div>
               <div class="service-content">
-                <h3>Travel & Tourism</h3>
+                <h3>Logistics & Transportation</h3>
                 <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
               </div>
             </div>
             <div class="ind-column w-50">
               <div class="ind-image small-img">
                 <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm02.png" width="203" height="234" alt="valuecoders">
-                <h3>Travel & Tourism</h3>
+                <h3>Media & Entertainment</h3>
               </div>
               <div class="service-content">
-                <h3>Travel & Tourism</h3>
+                <h3>Media & Entertainment</h3>
                 <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="flex-3  ind-box">
+        <div class="flex-3 ind-box">
           <div class="ind-column">
             <div class="ind-image">
               <img loading="lazy" src="<?php echo $template_assets; ?>images/healthcare-ind.png" width="427" height="480" alt="valuecoders">
-              <h3>Healthcare</h3>
+              <h3>Banking & Fintech</h3>
             </div>
             <div class="service-content">
-              <h3>Travel & Tourism</h3>
-              <p>Our travel application development team understands the terms...</p>
+              <h3>Banking & Fintech</h3>
+              <p>Streamlining financial growth</p>
               <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
             </div>
           </div>
         </div>
+
       </div>
       <div class="arrow-btn" id="ind-movers">
         <button aria-label="Previous" class="ind-prev">«</button>
@@ -460,24 +462,29 @@
   <?php 
     if( $devCost['cards'] ){
     echo '<div class="dis-flex costing-outer margin-t-80">';
-    foreach( $devCost['cards'] as $row ){
-    echo '<div class="flex-3 col-box">
+      foreach( $devCost['cards'] as $row ){
+        echo '<div class="flex-3 col-box">
         <div class="cost-card">
-          <div class="normal-content">
-            '.vc_pictureElm($row['icon'], $row['title'], 'soft-img').'
-            <h3>'.$row['budget'].'</h3>
-            <p>'.$row['title'].'</p>
-          </div>
-          <div class="hover-content bg-royal-linear">
-            '.$row['content'].'
+        <div class="normal-content">
+        '.vc_pictureElm( $row['icon'], $row['title'], 'soft-img' ).'
+        <h3>'.$row['budget'].'</h3>
+        <p>'.$row['title'].'</p>
+        </div>
+        </div>
+        </div>';
+      }
+      echo '<div class="flex-3 col-box">
+          <div class="cost-card">
+            <div class="hover-content bg-royal-linear" style="display:flex;">
+            <h3>Wondering how much your development project will cost?</h3>
+            <p>Jump to our free cost calculators to quickly learn the budget for your software initiative.</p>
             <div class="btn-sec">
-            <a href="'.$row['cta'].'" class="btn rounded"><span class="text-white">'.$row['cta-text'].'</span></a>
+            <a href="javascript:void(0);" class="btn rounded"><span class="text-white">Calculate the Cost</span></a>
+            </div>
             </div>
           </div>
-        </div>
-      </div>';
-    }
-    echo '</div>';  
+          </div>';
+      echo '</div>';
     }
     ?>
   </div>
