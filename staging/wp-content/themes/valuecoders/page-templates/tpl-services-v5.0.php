@@ -65,19 +65,19 @@
         </div>
         <?php 
         $randReviews = [
-        'laura' => [
+        'Laura' => [
         'img' => $template_assets.'images/card-image.png', 
         'text' => 'Professional, reliable, and results-driven – they delivered exactly what we needed, on time and within budget.'
         ],
-        'samantha' => [
+        'Samantha' => [
         'img' => $template_assets.'images/card-image.png', 
         'text' => 'A seamless experience from start to finish. Their attention to detail is unmatched!'
         ],
-        'jonathan' => [
+        'Jonathan' => [
         'img' => $template_assets.'images/card-image.png', 
         'text' => 'Outstanding results, clear communication, and a dedicated team. We’re extremely satisfied with their IT services.'
         ],
-        'rebecca' => [
+        'Rebecca' => [
         'img' => $template_assets.'images/card-image.png', 
         'text' => 'They go above and beyond to ensure quality and satisfaction. A true partner in every sense.'
         ]
@@ -92,6 +92,7 @@
                 <img loading="lazy" src="<?php echo $pickTest['img']; ?>" width="129" height="129" alt="valuecoders">
               </picture>
               <p><?php echo $pickTest['text']; ?></p>
+              <p style="font-weight:bold;">- <?php echo $randKey; ?></p>
             </div>
             <div class="ratings">
               <div class="rating">
