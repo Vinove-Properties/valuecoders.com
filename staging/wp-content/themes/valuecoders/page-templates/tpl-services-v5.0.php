@@ -325,7 +325,7 @@
         <div class="flex-3 ind-box">
           <div class="ind-column">
             <div class="ind-image">
-              <img loading="lazy" src="<?php echo $template_assets; ?>images/healthcare-ind.png" width="427" height="480" alt="valuecoders">
+              <img loading="lazy" src="<?php echo $template_assets; ?>images/inds-01.webp" width="427" height="480" alt="valuecoders">
               <h3>Healthcare</h3>
             </div>
             <div class="service-content">
@@ -338,7 +338,7 @@
         <div class="flex-3 ind-box">
           <div class="ind-column">
             <div class="ind-image small-img">
-              <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm01.png" width="426" height="234" alt="valuecoders">
+              <img loading="lazy" src="<?php echo $template_assets; ?>images/inds-02.webp" width="426" height="234" alt="valuecoders">
               <h3>Travel & Tourism</h3>
             </div>
             <div class="service-content">
@@ -350,7 +350,7 @@
           <div class="ind-flex">
             <div class="ind-column w-50">
               <div class="ind-image small-img">
-                <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm02.png" width="203" height="234" alt="valuecoders">
+                <img loading="lazy" src="<?php echo $template_assets; ?>images/inds-03.webp" width="203" height="234" alt="valuecoders">
                 <h3>Fintech</h3>
               </div>
               <div class="service-content">
@@ -360,7 +360,7 @@
             </div>
             <div class="ind-column w-50">
               <div class="ind-image small-img">
-                <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm02.png" width="203" height="234" alt="valuecoders">
+                <img loading="lazy" src="<?php echo $template_assets; ?>images/inds-04.webp" width="203" height="234" alt="valuecoders">
                 <h3>BFSI</h3>
               </div>
               <div class="service-content">
@@ -373,7 +373,7 @@
         <div class="flex-3 ind-box">
           <div class="ind-column">
             <div class="ind-image">
-              <img loading="lazy" src="<?php echo $template_assets; ?>images/healthcare-ind.png" width="427" height="480" alt="valuecoders">
+              <img loading="lazy" src="<?php echo $template_assets; ?>images/inds-05.webp" width="427" height="480" alt="valuecoders">
               <h3>Automotive</h3>
             </div>
             <div class="service-content">
@@ -386,7 +386,7 @@
         <div class="flex-3 ind-box">
           <div class="ind-column">
             <div class="ind-image">
-              <img loading="lazy" src="<?php echo $template_assets; ?>images/healthcare-ind.png" width="427" height="480" alt="valuecoders">
+              <img loading="lazy" src="<?php echo $template_assets; ?>images/inds-06.webp" width="427" height="480" alt="valuecoders">
               <h3>Education & eLearning</h3>
             </div>
             <div class="service-content">
@@ -400,7 +400,7 @@
         <div class="flex-3 ind-box">
           <div class="ind-column">
             <div class="ind-image small-img">
-              <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm01.png" width="426" height="234" alt="valuecoders">
+              <img loading="lazy" src="<?php echo $template_assets; ?>images/inds-07.webp" width="426" height="234" alt="valuecoders">
               <h3>Retail & eCommerce</h3>
             </div>
             <div class="service-content">
@@ -412,7 +412,7 @@
           <div class="ind-flex">
             <div class="ind-column w-50">
               <div class="ind-image small-img">
-                <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm02.png" width="203" height="234" alt="valuecoders">
+                <img loading="lazy" src="<?php echo $template_assets; ?>images/inds-08.webp" width="203" height="234" alt="valuecoders">
                 <h3>Logistics & Transportation</h3>
               </div>
               <div class="service-content">
@@ -422,7 +422,7 @@
             </div>
             <div class="ind-column w-50">
               <div class="ind-image small-img">
-                <img loading="lazy" src="<?php echo $template_assets; ?>images/ind-sm02.png" width="203" height="234" alt="valuecoders">
+                <img loading="lazy" src="<?php echo $template_assets; ?>images/inds-09.webp" width="203" height="234" alt="valuecoders">
                 <h3>Media & Entertainment</h3>
               </div>
               <div class="service-content">
@@ -435,7 +435,7 @@
         <div class="flex-3 ind-box">
           <div class="ind-column">
             <div class="ind-image">
-              <img loading="lazy" src="<?php echo $template_assets; ?>images/healthcare-ind.png" width="427" height="480" alt="valuecoders">
+              <img loading="lazy" src="<?php echo $template_assets; ?>images/inds-10.webp" width="427" height="480" alt="valuecoders">
               <h3>Banking & Fintech</h3>
             </div>
             <div class="service-content">
