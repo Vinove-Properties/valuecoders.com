@@ -78,7 +78,7 @@
         'text' => 'Outstanding results, clear communication, and a dedicated team. We’re extremely satisfied with their IT services.'
         ],
         'Rebecca' => [
-        'img' => $template_assets.'images/author-04.webp, 
+        'img' => $template_assets.'images/author-04.webp', 
         'text' => 'They go above and beyond to ensure quality and satisfaction. A true partner in every sense.'
         ]
         ];
