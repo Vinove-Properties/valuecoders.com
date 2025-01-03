@@ -3723,7 +3723,7 @@ body.page-template-template-testimonials .client-video-section iframe,
       .software-costing .costing-outer .col-box .cost-card:hover:after {
         opacity: 1; }
       .software-costing .costing-outer .col-box .cost-card:hover .normal-content {
-        opacity: 0;
+        opacity: 1;
         transition: opacity 0.3s ease; }
     .software-costing .costing-outer .col-box .cost-card.no-hover.hover .hover-content {
       display: none; }
