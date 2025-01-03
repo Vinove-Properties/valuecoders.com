@@ -3492,6 +3492,10 @@ body.page-template-template-testimonials .client-video-section iframe,
       .tech-stack-section .technology-slider .col-box .inner-box h3 {
         position: relative;
         margin-bottom: 15px; }
+        .tech-stack-section .technology-slider .col-box .inner-box h3 a {
+          color: #3f3f3f; }
+          .tech-stack-section .technology-slider .col-box .inner-box h3 a:hover {
+            text-decoration: underline; }
       .tech-stack-section .technology-slider .col-box .inner-box ul {
         padding: 0 0 30px; }
         .tech-stack-section .technology-slider .col-box .inner-box ul li {
