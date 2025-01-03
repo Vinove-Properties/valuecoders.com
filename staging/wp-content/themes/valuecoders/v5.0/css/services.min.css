@@ -3346,6 +3346,7 @@ body.page-template-template-testimonials .client-video-section iframe,
         font-weight: 600; }
       .indcater-section .indcater-slider .ind-box .ind-column .service-content {
         position: absolute;
+        width: 100%;
         height: 100%;
         justify-content: flex-end;
         display: flex;
@@ -3714,12 +3715,18 @@ body.page-template-template-testimonials .client-video-section iframe,
       transform: translateY(-10px); }
       .software-costing .costing-outer .col-box .cost-card:hover .hover-content {
         display: flex;
-        transition: opacity 0.3s ease; }
+        transition: opacity 0.3s ease;
+        display: none; }
+        .software-costing .costing-outer .col-box .cost-card:hover .hover-content.bg-royal-linear {
+          display: flex;
+          transition: opacity 0.3s ease; }
       .software-costing .costing-outer .col-box .cost-card:hover:after {
         opacity: 1; }
       .software-costing .costing-outer .col-box .cost-card:hover .normal-content {
         opacity: 0;
         transition: opacity 0.3s ease; }
+    .software-costing .costing-outer .col-box .cost-card.no-hover.hover .hover-content {
+      display: none; }
 
 @media only screen and (max-width: 1320px) {
   .tech-stacks .col-box-outer .col-box {
