@@ -539,7 +539,7 @@
                 <h3>'.$card['title'].'</h3>
                 <div class="overlay-text">
                 <div class="over-img">
-                  <img class="icon" alt="'.$card['title'].'" src="'.get_bloginfo('template_url').'/dev-img/'.$iconElm[$i].'">
+                  <img class="icon" alt="'.$card['title'].'" src="'.get_bloginfo('template_url').'/dev-img/tailored-icon/'.$iconElm[$i].'">
                 </div>
                 '.$card['content'].'
                 </div></div></div>';
