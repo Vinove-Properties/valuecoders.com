@@ -72,6 +72,7 @@ a.ws-dotted{ border-bottom:1px dotted #000000; color:#000000; }
 a.ws-dotted:hover{text-decoration: none !important; color: #656565;}
 .client-img-section .right-box .award-sc .award-row .award-col p{display:none;}
 #cf-requirement textarea::placeholder{white-space: pre-line;}
+.tailored-tech .tailored-out .tailored-slider .flex-3 .box-3{cursor: inherit !important;}
 </style>
 <?php wp_head(); ?>
 

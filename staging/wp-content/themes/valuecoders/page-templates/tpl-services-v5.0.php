@@ -329,7 +329,7 @@
               <h3>Healthcare</h3>
             </div>
             <div class="service-content">
-              <h3>Healthcare</h3>
+              <h3><a href="<?php echo site_url('/industries/healthcare-software-development-services'); ?>">Healthcare</a></h3>
               <p>Building smart healthcare solutions</p>
               <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/healthcare-software-development-services'); ?>">Learn more</a></div>
             </div>
@@ -342,7 +342,7 @@
               <h3>Travel & Tourism</h3>
             </div>
             <div class="service-content">
-              <h3>Travel & Tourism</h3>
+              <h3><a href="<?php echo site_url('/industries/travel-tourism-software-development-services'); ?>">Travel & Tourism</a></h3>
               <p>Revolutionizing travel services</p>
               <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/travel-tourism-software-development-services'); ?>">Learn more</a></div>
             </div>
@@ -354,7 +354,7 @@
                 <h3>Fintech</h3>
               </div>
               <div class="service-content">
-                <h3>Fintech</h3>
+                <h3><a href="<?php echo site_url('/industries/fintech-software-development-company'); ?>">Fintech</a></h3>
                 <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/fintech-software-development-company'); ?>">Learn more</a></div>
               </div>
             </div>
@@ -364,7 +364,7 @@
                 <h3>BFSI</h3>
               </div>
               <div class="service-content">
-                <h3>BFSI</h3>
+                <h3><a href="<?php echo site_url('/industries/banking-financial-services'); ?>">BFSI</a></h3>
                 <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/banking-financial-services'); ?>">Learn more</a></div>
               </div>
             </div>
@@ -377,7 +377,7 @@
               <h3>Automotive</h3>
             </div>
             <div class="service-content">
-              <h3>Automotive</h3>
+              <h3><a href="<?php echo site_url('/industries/automotive-companies-software-development-services'); ?>">Automotive</a></h3>
               <p>Transforming auto experiences</p>
               <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/automotive-companies-software-development-services'); ?>">Learn more</a></div>
             </div>
@@ -391,7 +391,7 @@
               <h3>Education & eLearning</h3>
             </div>
             <div class="service-content">
-              <h3>Education & eLearning</h3>
+              <h3><a href="<?php echo site_url('/industries/education-elearning-software-development'); ?>">Education & eLearning</a></h3>
               <p>Shaping digital learning</p>
               <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/education-elearning-software-development'); ?>">Learn more</a></div>
             </div>
@@ -405,7 +405,7 @@
               alt="valuecoders"><h3>Retail & eCommerce</h3>
             </div>
             <div class="service-content">
-              <h3>Retail & eCommerce</h3>
+              <h3><a href="<?php echo site_url('/industries/retail-ecommerce-software-development'); ?>">Retail & eCommerce</a></h3>
               <p>Enhancing retail journeys</p>
               <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/retail-ecommerce-software-development'); ?>">Learn more</a></div>
             </div>
@@ -418,7 +418,7 @@
                 <h3>Logistics & Transportation</h3>
               </div>
               <div class="service-content">
-                <h3>Logistics & Transportation</h3>
+                <h3><a href="<?php echo site_url('/industries/logistics-transportation-software-development'); ?>">Logistics & Transportation</a></h3>
                 <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/logistics-transportation-software-development'); ?>">Learn more</a></div>
               </div>
             </div>
@@ -428,7 +428,7 @@
                 <h3>Media & Entertainment</h3>
               </div>
               <div class="service-content">
-                <h3>Media & Entertainment</h3>
+                <h3><a href="<?php echo site_url('/industries/media-software-development-services'); ?>">Media & Entertainment</a></h3>
                 <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/media-software-development-services'); ?>">Learn more</a></div>
               </div>
             </div>
@@ -441,7 +441,7 @@
               <h3>Banking & Fintech</h3>
             </div>
             <div class="service-content">
-              <h3>Banking & Fintech</h3>
+              <h3><a href="<?php echo site_url('/industries/banking-financial-services'); ?>">Banking & Fintech</a></h3>
               <p>Streamlining financial growth</p>
               <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/banking-financial-services'); ?>">Learn more</a></div>
             </div>
