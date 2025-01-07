@@ -762,9 +762,8 @@
             </div>
             <div class="image-box">
             <picture>
-            <source type="image/webp" srcset="https://www.valuecoders.com/staging/wp-content/uploads/2024/12/hiring-model01.webp">
-            <img loading="lazy" src="https://www.valuecoders.com/staging/wp-content/uploads/2024/12/hiring-model01.webp" alt="hiring-model01" width="1203" 
-            height="718">
+              <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/dev-img/hm-1.webp">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/hm-1.webp" alt="hiring-model01" width="665" height="366">
             </picture>
           </div>
           </div>
@@ -783,9 +782,8 @@
         </div>
         <div class="image-box">
         <picture>
-        <source type="image/webp" srcset="https://www.valuecoders.com/staging/wp-content/uploads/2024/12/hiring-model02.webp">
-        <img loading="lazy" src="https://www.valuecoders.com/staging/wp-content/uploads/2024/12/hiring-model02.webp" alt="hiring-model02" width="1203" 
-        height="718">
+          <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/dev-img/hm-2.webp">
+          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/hm-2.webp" alt="hiring-model01" width="665" height="366">
         </picture>
         </div>
         </div>
@@ -803,9 +801,8 @@
           </div>
           <div class="image-box">
           <picture>
-          <source type="image/webp" srcset="https://www.valuecoders.com/staging/wp-content/uploads/2024/12/hiring-model03.webp">
-          <img loading="lazy" src="https://www.valuecoders.com/staging/wp-content/uploads/2024/12/hiring-model03.webp" alt="hiring-model03" width="1203" 
-          height="718">
+            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/dev-img/hm-3.webp">
+            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/hm-3.webp" alt="hiring-model01" width="665" height="366">
           </picture>
           </div>
           </div>
