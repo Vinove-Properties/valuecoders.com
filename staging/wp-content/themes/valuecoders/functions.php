@@ -1519,11 +1519,11 @@ function getCmnIndustries( $bg, $content ){ ?>
 		?>
 		<div class="flex-3 col-box">
 			<div class="img-box img1 vlazy" style="background-image:url(<?php echo $ind_thumbnail; ?>);">
-				<h3><?php echo $row['card_title']; ?></h3>
+				<h3><a href="<?php echo vc_siteurl( $cardlink ); ?>"><?php echo $row['card_title']; ?></a></h3>
 				<p><?php echo $row['card_excerpt']; ?></p>
 				<?php 
 				$cardlink = $row['card_link'];
-				if(  $cardlink  ): 
+				if( $cardlink ): 
 				?>
 				<a href="<?php echo vc_siteurl( $cardlink ); ?>" class="learn-more clr-white">Learn More<i class="round-arrow-icon"></i></a>
 				<?php endif; ?>
