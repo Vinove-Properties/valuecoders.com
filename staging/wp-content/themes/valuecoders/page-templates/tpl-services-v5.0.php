@@ -443,7 +443,7 @@
             <div class="service-content">
               <h3>Banking & Fintech</h3>
               <p>Streamlining financial growth</p>
-              <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
+              <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/banking-financial-services'); ?>">Learn more</a></div>
             </div>
           </div>
         </div>
