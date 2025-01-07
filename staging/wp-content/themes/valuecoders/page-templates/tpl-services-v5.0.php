@@ -344,7 +344,7 @@
             <div class="service-content">
               <h3>Travel & Tourism</h3>
               <p>Revolutionizing travel services</p>
-              <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
+              <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/travel-tourism-software-development-services'); ?>">Learn more</a></div>
             </div>
           </div>
           <div class="ind-flex">
@@ -355,7 +355,7 @@
               </div>
               <div class="service-content">
                 <h3>Fintech</h3>
-                <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
+                <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/fintech-software-development-company'); ?>">Learn more</a></div>
               </div>
             </div>
             <div class="ind-column w-50">
@@ -365,7 +365,7 @@
               </div>
               <div class="service-content">
                 <h3>BFSI</h3>
-                <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
+                <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/banking-financial-services'); ?>">Learn more</a></div>
               </div>
             </div>
           </div>
@@ -379,20 +379,21 @@
             <div class="service-content">
               <h3>Automotive</h3>
               <p>Transforming auto experiences</p>
-              <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
+              <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/automotive-companies-software-development-services'); ?>">Learn more</a></div>
             </div>
           </div>
         </div>
+
         <div class="flex-3 ind-box">
           <div class="ind-column">
             <div class="ind-image">
-              <img loading="lazy" src="<?php echo $template_assets; ?>images/inds-06.webp" width="427" height="480" alt="valuecoders">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/industries/education.webp" width="427" height="480" alt="valuecoders">
               <h3>Education & eLearning</h3>
             </div>
             <div class="service-content">
               <h3>Education & eLearning</h3>
               <p>Shaping digital learning</p>
-              <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
+              <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/education-elearning-software-development'); ?>">Learn more</a></div>
             </div>
           </div>
         </div>
@@ -400,34 +401,35 @@
         <div class="flex-3 ind-box">
           <div class="ind-column">
             <div class="ind-image small-img">
-              <img loading="lazy" src="<?php echo $template_assets; ?>images/inds-07.webp" width="426" height="234" alt="valuecoders">
-              <h3>Retail & eCommerce</h3>
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/industries/ecommerce.webp" width="426" height="234" 
+              alt="valuecoders"><h3>Retail & eCommerce</h3>
             </div>
             <div class="service-content">
               <h3>Retail & eCommerce</h3>
               <p>Enhancing retail journeys</p>
-              <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
+              <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/retail-ecommerce-software-development'); ?>">Learn more</a></div>
             </div>
           </div>
           <div class="ind-flex">
             <div class="ind-column w-50">
               <div class="ind-image small-img">
-                <img loading="lazy" src="<?php echo $template_assets; ?>images/inds-08.webp" width="203" height="234" alt="valuecoders">
+                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/industries/logistics.webp" width="203" height="234" 
+                alt="valuecoders">
                 <h3>Logistics & Transportation</h3>
               </div>
               <div class="service-content">
                 <h3>Logistics & Transportation</h3>
-                <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
+                <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/logistics-transportation-software-development'); ?>">Learn more</a></div>
               </div>
             </div>
             <div class="ind-column w-50">
               <div class="ind-image small-img">
-                <img loading="lazy" src="<?php echo $template_assets; ?>images/inds-09.webp" width="203" height="234" alt="valuecoders">
+                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/industries/media.webp" width="203" height="234" alt="valuecoders">
                 <h3>Media & Entertainment</h3>
               </div>
               <div class="service-content">
                 <h3>Media & Entertainment</h3>
-                <div class="cta-box"><a class="stretched-link" href="https://www.valuecoders.com/staging/industries/healthcare-software-development-services">Learn more</a></div>
+                <div class="cta-box"><a class="stretched-link" href="<?php echo site_url('/industries/media-software-development-services'); ?>">Learn more</a></div>
               </div>
             </div>
           </div>
@@ -435,7 +437,7 @@
         <div class="flex-3 ind-box">
           <div class="ind-column">
             <div class="ind-image">
-              <img loading="lazy" src="<?php echo $template_assets; ?>images/inds-10.webp" width="427" height="480" alt="valuecoders">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/industries/banking.webp" width="427" height="480" alt="valuecoders">
               <h3>Banking & Fintech</h3>
             </div>
             <div class="service-content">
