@@ -530,15 +530,20 @@
       <div class="dis-flex tailored-slider" id="tailored-slide">
         <div class="glider" id="glider">
           <?php 
+            $iconElm = ['startup.svg', 'digital.svg', 'enterprices.svg', 'product.svg', 'cmo.svg', 'cto.svg'];
             if( $tailTech['cards'] ){
+              $i = 0;
               foreach( $tailTech['cards'] as $card ){
                 echo '<div class="flex-3">
                 <div class="box-3" style="background-image:url('.$card['image'].');">
                 <h3>'.$card['title'].'</h3>
                 <div class="overlay-text">
-                <div class="over-img"><img class="icon" alt="'.$card['title'].'" src="'.$card['icon'].'"></div>
+                <div class="over-img">
+                  <img class="icon" alt="'.$card['title'].'" src="'.get_bloginfo('template_url').'/dev-img/'.$iconElm[$i].'">
+                </div>
                 '.$card['content'].'
                 </div></div></div>';
+                $i++;
               }  
             }
             ?>
@@ -692,9 +697,7 @@
   </div>
 </section>
 <?php endif; ?>
-<?php 
-  if( isset($hireModel['is_enabled']) && $hireModel['is_enabled'] == "yes" ) :
-  ?>
+<?php if( isset($hireModel['is_enabled']) && $hireModel['is_enabled'] == "yes" ) : /* ?>
 <section class="hire-model-tab bg-light padding-t-120 padding-b-120" id="hire-model">
   <div class="container">
     <div class="heading text-center"><?php echo $hireModel['content']; ?></div>
@@ -725,6 +728,92 @@
       }
       ?>        
   </div>
+</section>
+<?php */ ?>
+<section class="hire-model-tab bg-light padding-t-120 padding-b-120" id="hire-model">
+<div class="container">
+  <div class="heading text-center">
+    <h2>Our Custom Hiring Models</h2>
+    <div class="head-txt text-center">
+    <p>Choose from our flexible hiring models designed to fit your needs and budget.</p>
+    </div>
+  </div>
+<div class="hire-tabs-section margin-t-50">
+  <div class="tab-row">
+    <nav id="hiring-models" class="tab-nav">
+      <div class="tab-scroll">
+        <div class="tablist active" data-tab="#tab01"><a href="#tab01">Fixed Price Model</a></div>
+        <div class="tablist" data-tab="#tab02"><a href="#tab02">Dedicated Hiring Model</a></div>
+        <div class="tablist" data-tab="#tab03"><a href="#tab03">Time & Material Model</a></div>
+      </div>
+    </nav>
+    <div class="bcontents">
+      <div id="tab01" class="tab-contents active">
+          <div class="dis-flex">
+            <div class="content-box"><h3>Fixed Price Model</h3>
+            <p>For businesses with well-defined project scope and requirements.</p>
+            <ul>
+            <li>Simplified process</li>
+            <li>Higher predictability</li>
+            <li>Greater transparency</li>
+            <li>Reduced risk</li>
+            <li>Low management efforts</li>
+            </ul>
+            </div>
+            <div class="image-box">
+            <picture>
+            <source type="image/webp" srcset="https://www.valuecoders.com/staging/wp-content/uploads/2024/12/hiring-model01.webp">
+            <img loading="lazy" src="https://www.valuecoders.com/staging/wp-content/uploads/2024/12/hiring-model01.webp" alt="hiring-model01" width="1203" 
+            height="718">
+            </picture>
+          </div>
+          </div>
+        </div>
+        
+        <div id="tab02" class="tab-contents">
+        <div class="dis-flex">
+        <div class="content-box"><h3>Dedicated Hiring Model</h3>
+        <p>For businesses with long-term project requirements or complex development process. They get more control of the process.</p>
+        <ul>
+        <li>Complete control</li>
+        <li>More flexibility</li>
+        <li>Focused and dedicated approach</li>
+        <li>Faster time to market</li>
+        </ul>
+        </div>
+        <div class="image-box">
+        <picture>
+        <source type="image/webp" srcset="https://www.valuecoders.com/staging/wp-content/uploads/2024/12/hiring-model02.webp">
+        <img loading="lazy" src="https://www.valuecoders.com/staging/wp-content/uploads/2024/12/hiring-model02.webp" alt="hiring-model02" width="1203" 
+        height="718">
+        </picture>
+        </div>
+        </div>
+        </div>
+
+        <div id="tab03" class="tab-contents">
+          <div class="dis-flex">
+          <div class="content-box"><h3>Time & Material Model</h3>
+          <p>For businesses looking to pay for completed project instead of committing to fixed project cost.</p>
+          <ul>
+          <li>Faster project start</li>
+          <li>Flexibility to adapt as per changing needs</li>
+          <li>Pay as you go model</li>
+          </ul>
+          </div>
+          <div class="image-box">
+          <picture>
+          <source type="image/webp" srcset="https://www.valuecoders.com/staging/wp-content/uploads/2024/12/hiring-model03.webp">
+          <img loading="lazy" src="https://www.valuecoders.com/staging/wp-content/uploads/2024/12/hiring-model03.webp" alt="hiring-model03" width="1203" 
+          height="718">
+          </picture>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>        
+</div>
 </section>
 <?php endif; ?>
 <?php 
