@@ -1442,8 +1442,13 @@ if( menuItemElm ){
 
 /*Services Page v5.0 Template Requirement*/
 function _expandListing(e){
-    e.closest('div').classList.toggle("show-li")
+    e.closest('div').classList.toggle("show-li");    
     e.classList.toggle("expanded-btn");
+    if(e.innerText === "See More"){    
+        e.innerText = "See Less";
+    }else{
+        e.innerText = "See More";
+    }
 }
 
 document.addEventListener("scroll", function () {

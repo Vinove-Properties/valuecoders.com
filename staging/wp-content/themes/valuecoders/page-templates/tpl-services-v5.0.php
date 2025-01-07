@@ -65,20 +65,20 @@
         </div>
         <?php 
         $randReviews = [
-        'Laura' => [
-        'img' => $template_assets.'images/author-01.webp', 
+        'James' => [
+        'img' => $template_assets.'images/author-04.webp', 
         'text' => 'Professional, reliable, and results-driven – they delivered exactly what we needed, on time and within budget.'
         ],
         'Samantha' => [
-        'img' => $template_assets.'images/author-02.webp', 
+        'img' => $template_assets.'images/author-03.webp', 
         'text' => 'A seamless experience from start to finish. Their attention to detail is unmatched!'
         ],
         'Jonathan' => [
-        'img' => $template_assets.'images/author-03.webp', 
+        'img' => $template_assets.'images/author-02.webp', 
         'text' => 'Outstanding results, clear communication, and a dedicated team. We’re extremely satisfied with their IT services.'
         ],
         'Rebecca' => [
-        'img' => $template_assets.'images/author-04.webp', 
+        'img' => $template_assets.'images/author-01.webp', 
         'text' => 'They go above and beyond to ensure quality and satisfaction. A true partner in every sense.'
         ]
         ];
@@ -536,9 +536,7 @@
                 <div class="box-3" style="background-image:url('.$card['image'].');">
                 <h3>'.$card['title'].'</h3>
                 <div class="overlay-text">
-                <div class="over-img">
-                <img class="icon" alt="'.$card['title'].'" src="'.$card['icon'].'">
-                </div>
+                <div class="over-img"><img class="icon" alt="'.$card['title'].'" src="'.$card['icon'].'"></div>
                 '.$card['content'].'
                 </div></div></div>';
               }  
