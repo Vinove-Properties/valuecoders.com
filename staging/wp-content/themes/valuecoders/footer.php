@@ -123,7 +123,6 @@ if( empty($rName) ){
 "image": "<?php echo $ogImage; ?>",
 "description": "<?php echo $ymetaDescription; ?>",
 "telephone": "+917042020782",
-"areaServed": ["Noida","Gurugram", "Bangalore"],
 "address": {
    "@type": "PostalAddress",
    "streetAddress": "10th floor, Tower-B, UNITECH CYBER PARK, Durga Colony, Sector 39,",
