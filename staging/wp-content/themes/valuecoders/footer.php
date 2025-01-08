@@ -82,18 +82,26 @@ if( empty($rName) ){
    "name" : "ValueCoders | On-Demand Software Development Company",
    "priceRange" : "$18 - $49",
    "image" : "<?php echo $ogImage; ?>",
-   "address" : {
-       "@type" : "PostalAddress",
-       "streetAddress" : "2nd Floor, 55P, Sector 44,",
-       "addressLocality" : "Gurugram",
-       "addressRegion" : "IN",
-       "postalCode" : "122003",
-       "telephone" : "+917042020782",
-       "addressCountry" : {
-           "@type" : "Country",
-           "name" : "India"
-       }
+   "address" : [
+   {
+   "@type" : "PostalAddress",
+   "streetAddress" : "10th floor, Tower-B, UNITECH CYBER PARK, Durga Colony, Sector 39,",
+   "addressLocality" : "Gurugram",
+   "addressRegion" : "IN",
+   "postalCode" : "122001",
+   "telephone" : "+917042020782",
+   "addressCountry" : {"@type" : "Country","name" : "India"}
    },
+   {
+   "@type" : "PostalAddress",
+   "streetAddress" : "11th Floor, Max Square, Noida-Greater Noida Expy, Sector 129,",
+   "addressLocality" : "Noida",
+   "addressRegion" : "IN",
+   "postalCode" : "201304",
+   "telephone" : "+917042020782",
+   "addressCountry" : {"@type" : "Country","name" : "India"}
+   }
+   ],
     "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
@@ -118,10 +126,10 @@ if( empty($rName) ){
 "areaServed": ["Noida","Gurugram", "Bangalore"],
 "address": {
    "@type": "PostalAddress",
-   "streetAddress": "2nd Floor, 55P, Sector 44,",
+   "streetAddress": "10th floor, Tower-B, UNITECH CYBER PARK, Durga Colony, Sector 39,",
    "addressLocality": "Gurugram",
    "addressRegion": "IN",
-   "postalCode":"122003"
+   "postalCode":"122001"
 }
 }
 </script>
