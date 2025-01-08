@@ -111,7 +111,9 @@ if( empty($rName) ){
     "reviewCount": "568"
     }
 }
-},
+}
+</script>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org/",
   "@type": "LocalBusiness",
@@ -149,7 +151,7 @@ if( empty($rName) ){
     "https://www.linkedin.com/company/valuecoders",
     "https://www.youtube.com/valuecoders/"
   ]
-}
+}   
 </script>
 <script type="application/ld+json">
 {
