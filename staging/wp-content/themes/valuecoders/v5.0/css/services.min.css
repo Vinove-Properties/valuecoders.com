@@ -2893,7 +2893,7 @@ body.page-template-template-testimonials .client-video-section iframe,
 .software-work .flex-3 {
   margin-top: 20px; }
 .software-work .soft-wrap .sf-title {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
   color: rgba(5, 22, 77, 0.9);
   display: block; }
@@ -2983,7 +2983,7 @@ body.page-template-template-testimonials .client-video-section iframe,
   .software-work .flex-3 {
     flex-basis: 50%; }
   .software-work .soft-wrap .sf-title {
-    font-size: 18px; }
+    font-size: 20px; }
   .software-work .soft-wrap .soft-row {
     width: 100%;
     margin-left: 0; }
