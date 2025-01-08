@@ -139,7 +139,7 @@ if( empty($rName) ){
   ],
   "telephone": "+917042020782",
   "openingHours": ["Mo-Fr 09:00-18:00"],
-  "image": "https://www.valuecoders.com/blog/wp-content/uploads/2019/08/logo-2-1.png",
+  "image": "https://www.valuecoders.com/wp-content/uploads/2022/05/IT-outsourcing-Company.jpg.webp",
   "priceRange": "$18 - $49",
   "areaServed": ["India"],
   "sameAs": [
