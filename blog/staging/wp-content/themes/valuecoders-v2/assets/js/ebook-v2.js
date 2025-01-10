@@ -377,10 +377,10 @@ function geteBookpopup( title, pdfLink ){
 function _eBookDownload(e){
     checkRequired( [fname, email, phone, country] );
     if(
-        (vcSpaceChecker(fname.value.trim()) === true) &&
-        (vcSpaceChecker(email.value.trim()) === true) &&
-        (vcSpaceChecker(phone.value.trim()) === true) &&
-        (vcSpaceChecker(country.value.trim()) === true)
+    (vcSpaceChecker(fname.value.trim()) === true) &&
+    (vcSpaceChecker(email.value.trim()) === true) &&
+    (vcSpaceChecker(phone.value.trim()) === true) &&
+    (vcSpaceChecker(country.value.trim()) === true)
     ){
         const sre = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if( !sre.test(email.value.trim()) ){
@@ -399,7 +399,7 @@ function _eBookDownload(e){
         fetch( pxlObj.admin_ajax+"?action=_ebookRequest", {
             method: 'POST',
             headers: {'Accept': 'application/json', 'Content-Type': 'application/json'},
-            body: JSON.stringify(obj)
+            body: JSON.stringify( obj )
         })
         .then(response => response.json())
         .then(data => {

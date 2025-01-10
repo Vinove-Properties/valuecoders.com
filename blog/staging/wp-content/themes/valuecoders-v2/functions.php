@@ -1198,3 +1198,58 @@ function pxlGetTopThreePosts($id, $taxType = 'tag' ){
     wp_reset_postdata();
     return $post_ids;
 }
+
+function _elmCheck( $array, $key ){
+  return ( isset( $array[$key] ) && !empty( $array[$key] ) ) ? $array[$key] : '';
+}
+
+add_action('wp_ajax__ebookRequest', '_ebookReqHandlerCB');
+add_action('wp_ajax_nopriv__ebookRequest', '_ebookReqHandlerCB');
+function _ebookReqHandlerCB(){
+    $jsonData = file_get_contents('php://input');
+    $data     = json_decode($jsonData, true);
+    $name     = _elmCheck( $data, 'firstName' );
+    $email    = _elmCheck( $data, 'email' );
+    $country  = _elmCheck( $data, 'country' );
+    $phone    = _elmCheck( $data, 'phone' );
+    $eLink    = _elmCheck( $data, 'pd-elink' );
+    
+    $title    = _elmCheck( $data, 'posttitle' );
+    $hash     = md5( rand(0,1000) ); 
+
+    global $wpdb;
+    $result = $wpdb->insert( 'wp_ebookdata',[
+    "fname"     => $name,
+    "email"     => $email,
+    "phone"     => $phone,
+    "country"   => $country,
+    "postid"    => 0,
+    "pdflink"   => serialize(['file' => $eLink, 'title' => $title]),
+    "hashcode"  => $hash,
+    "formdate"  => date("Y/m/d H:i:s")
+    ]);
+    $dwnLink = get_bloginfo('url').'/?ep-action=show&email='.$email.'&hash='.$hash;    
+    $subject = 'Email Verification';
+    $message = '<html><body>';
+    $message .= '<p>Hi '.$name.',</p>';
+    $message .= '<p>Thank you for opting for the downloaded version of our e-guide on "'.$title.'".</p>';
+    $message .= '<p>Please click the link below to verify your email address & initiate the download</p>';
+    $message .= '<p><a href="'.$dwnLink.'">'.$dwnLink.'</a></p>';
+    $message .= '<p>You may also wish to connect with us for more queries on outsourcing your software development projects - "<a href="https://www.valuecoders.com/contact-us?utm_source=global-outsourcing&utm_medium=email&utm_campaign=eguide">Contact Us</a>"</p>';
+    $message .= '<p>Regards,<br>
+    Varun Bhagat<br>
+    Customer Delight Officer<br>
+    <a href="https://www.valuecoders.com/?utm_source=global-outsourcing&utm_medium=email&utm_campaign=eguide">PixelCrayons</a><br>
+    marketing@valuecoders.com<br>
+    </p>';
+    $message .= '</body></html>';
+
+    $headers    = array('Content-Type: text/html; charset=UTF-8');
+    $mail       = wp_mail( $email, $subject, $message, $headers );
+    if( $mail ){
+      wp_send_json(['success' => true, 'message' => 'Thank you! We have sent you the email verification link via email. Please check your mail. <br><br>P.S. - E-mail may take few minutes to arrive.' ]);  
+    }else{
+      wp_send_json(['success' => false, 'message' => 'Something went wrong. Please try again' ]);
+    }
+    die;
+}
