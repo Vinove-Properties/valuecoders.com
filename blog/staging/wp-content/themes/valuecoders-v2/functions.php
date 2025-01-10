@@ -1014,8 +1014,8 @@ add_action( 'phpmailer_init', 'ws_smtp_phpemailer' );
 function ws_smtp_phpemailer( $phpmailer ){
     $phpmailer->isSMTP();  
     $phpmailer->Host          = 'smtp.gmail.com';
-    $phpmailer->SMTPSecure    = 'ssl';
-    $phpmailer->Port          = 465;
+    $phpmailer->SMTPSecure    = 'tsl';
+    $phpmailer->Port          = 587;
     $phpmailer->SMTPAuth      = true;
     $phpmailer->Username      = 'do-not-reply@valuecoders.com';
     $phpmailer->Password      = 'pdtnweysvgovhemg';
