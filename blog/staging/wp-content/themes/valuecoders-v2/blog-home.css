@@ -480,6 +480,7 @@
 	  min-width: 174px;
 	  z-index: 9;
 	  text-align: center;
+	  border-radius: 50px;
 	}
   
 	.custom-left .btn-container .white-btn:hover {
