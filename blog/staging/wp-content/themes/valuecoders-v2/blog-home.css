@@ -934,7 +934,7 @@
 
 .pagination-section{ width: 100%;  justify-content: center; display: flex; padding: 80px 0 20px;}
 .pagination-section .page-numbers{padding: 10px 15px; border: 1px solid rgba(235, 235, 235, 1); border-radius: 10px; color:#333333; margin: 0 10px;}
-.pagination-section .page-numbers:hover{background:var(--blue); color:var(--white); border-color: var(--blue);}
+.pagination-section .page-numbers:hover{background:var(--yellow); color:var(--white); border-color: var(--yellow);}
 .pagination-section .page-numbers.dots{border:0;}
 .pagination-section .page-numbers.current{background:var(--yellow); color:var(--white); border-color: var(--yellow);}
 .pagination-section .page-numbers.next{border:0;}
