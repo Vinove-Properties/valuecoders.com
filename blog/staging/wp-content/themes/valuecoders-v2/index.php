@@ -102,7 +102,8 @@ $catBlockTwo  = get_field('row-c2', 'option');
         <div class="cus-cont">
           <div class="cushed">Elevate Projects with Top Management Tools</div>
           <div class="btn-container">
-            <a target="_blank" class="white-btn blue pxl-ext" href="https://www.valuecoderscrayons.com/contact-us" data-wpel-link="internal" rel="follow noopener">Start Free Trial</a>
+            <a target="_blank" class="white-btn blue pxl-ext" 
+            href="https://www.workstatus.io/?free-trial" data-wpel-link="internal" rel="follow noopener">Start Free Trial</a>
           </div>
         </div>
       </div>
