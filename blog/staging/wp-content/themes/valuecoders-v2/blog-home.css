@@ -559,6 +559,8 @@
 	  width: auto;
 	  margin-right: 10px;
 	}
+
+	.es_subscription_message.success{color:#fff !important;}
   
 	.blog-posts-list.three-columns {
 	  flex-direction: row;
@@ -807,7 +809,7 @@
   
 	.blog-posts-list .develop-row.wid-35 p {
 	  color: var(--white);
-	  opacity: 0.6;
+	  opacity: 0.8;
 	  font-size: 14px;
 	  line-height: 22px;
 	}
@@ -928,6 +930,8 @@
 	.subscribe-footer .subs-box:after {
 	  display: none;
 	}
+
+	.subscribe-footer .es_subscription_message.success{color:#fff !important;}
   }
 
 

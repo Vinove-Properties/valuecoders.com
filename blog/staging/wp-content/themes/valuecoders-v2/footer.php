@@ -88,7 +88,6 @@
           <li><a href="<?php echo $site_url.'hire-blockchain-developers'; ?>">Hire Blockchain Developers</a></li>
           <li><a href="<?php echo $site_url.'hire-mobile-app-developers'; ?>">Hire Mobile Developers</a></li>
           <li><a href="<?php echo $site_url.'hire-full-stack-developers'; ?>">Hire Full-Stack Developers</a></li>
-          <li><a href="<?php echo $site_url.'services/low-code-no-code'; ?>">Hire Low-Code Developers</a></li>
         </ul>
       </div>
       <div class="flex-5">
