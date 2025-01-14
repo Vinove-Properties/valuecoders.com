@@ -10,8 +10,7 @@ if( isset($_SERVER['HTTP_HOST']) && ($_SERVER['HTTP_HOST'] == "localhost") ){
   $site_url   = trailingslashit(get_bloginfo('url'));
 }
 
-$tpl_url    = get_bloginfo('template_url');
-
+$tpl_url    = $site_url.'wp-content/themes/valuecoders';
 $mcat       = (isset( $args['pcat']) && !empty($args['pcat']) ) ? $args['pcat'] : 'master';
 $hireElm    = (isset($args['pid']) && get_post_meta($args['pid'],'hp-mcategory', true) ) ? 
 get_post_meta($args['pid'],'hp-mcategory', true) : false;
@@ -91,10 +90,10 @@ function defActiveHire( $hirePage, $exCat ){
                             <a href="<?php echo $site_url; ?>cloud-services">Cloud Services</a>
                           </li>
                           <li class="tab-link <?php echo isActiveMenu("data-science", $mcat); ?>">
-                            <a href="<?php echo $site_url; ?>data-engineering">Data Engineering</a>
+                            <a href="<?php echo $site_url; ?>data-engineering">Data Solutions</a>
                           </li>
                           <li class="tab-link <?php echo isActiveMenu("ai-ml", $mcat); ?>">
-                            <a href="<?php echo $site_url; ?>ai">Artificial Intelligence</a>
+                            <a href="<?php echo $site_url; ?>ai">AI & ML Solutions</a>
                           </li>
                         </ul>
                       </div>
@@ -333,7 +332,7 @@ function defActiveHire( $hirePage, $exCat ){
                         </div>
                         <div class="tab-content <?php echo isActiveMenu("devops", $mcat); ?>">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>cloud-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/serv-06.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Services</span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>cloud-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/menu-icon_cloudservices.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Services</span>
                               Seamless, secure, superior cloud services</a><span class="ser-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-service">
@@ -376,36 +375,21 @@ function defActiveHire( $hirePage, $exCat ){
                         </div>
                         <div class="tab-content <?php echo isActiveMenu("data-science", $mcat); ?>">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>data-engineering"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Data Engineering</span>
-                              Accelerate growth with data science</a> <span class="ser-arrow-btn"></span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>data-engineering"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Data Solutions</span>Turn data into success</a> <span class="ser-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-service">
                               <div class="flex-2">
-                                <span class="head">Business Intelligence (BI)</span>
-                                <a href="<?php echo $site_url; ?>business-intelligence-consulting-services"><span class="title">BI Consulting</span>
-                                Guiding success with BI insights</a>
-                                <a href="<?php echo $site_url; ?>bi-implementation"><span class="title">BI Implementation</span>
-                                Implementing BI, driving growth</a>
-                                <a href="<?php echo $site_url; ?>microsoft-power-bi-development-services-company"><span class="title">Microsoft Power BI</span>
-                                Powering decisions with Microsoft BI</a>
-                                <a href="<?php echo $site_url; ?>data-engineering/bi-reporting-dashboard"><span class="title">BI Reporting & Dashboard</span>
-                                Visualizing success with BI</a>
-                                <a href="<?php echo $site_url; ?>data-engineering/business-intelligence" class="view-more">View More</a>
+                                <a href="<?php echo $site_url; ?>data-engineering"><span class="title">Data Engineering 
+                                </span>Create scalable data systems</a>
+                                <a href="<?php echo $site_url; ?>data-engineering/data-science-consulting-services"><span class="title">Data Science</span>Innovate with data science</a>
+                                <a href="<?php echo $site_url; ?>data-analytics"><span class="title">Data Analytics</span>
+                                Turn data into strategies</a>                                
                               </div>
                               <div class="flex-2">
-                                <span class="head">DATA SCIENCE & ANALYTICS</span>
-                                <a href="<?php echo $site_url; ?>data-engineering/data-science-consulting-services"><span class="title">Data Science Consulting</span>
-                                Transforming data into insights</a>
-                                <a href="<?php echo $site_url; ?>data-engineering/data-analytics-consulting-services"><span class="title">Data Analytics Consulting</span>
-                                Transforming data into action
-                                </a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-data-scientists"><span class="title">Hire Expert Data Scientists</span>
-                                Hire brilliance, harness data power
-                                </a>
-                                <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><span class="title">Big Data Solutions</span>
-                                Harnessing power of big data
-                                </a>
-                                <a href="<?php echo $site_url; ?>data-analytics" class="view-more">View More</a>
+                                <a href="<?php echo $site_url; ?>data-engineering/business-intelligence"><span class="title">Business Intelligence (BI)</span>Drive success with BI insights</a>
+                                <a href="<?php echo $site_url; ?>data-engineering/data-visualization-services"><span class="title">Data Visualization and Dashboarding </span>Visualize data, drive clarity</a>
+                                <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><span class="title">Big Data</span>Big data, smarter solutions</a>
+                                
                               </div>
                             </div>
                           </div>
@@ -425,8 +409,7 @@ function defActiveHire( $hirePage, $exCat ){
                         </div>
                         <div class="tab-content <?php echo isActiveMenu("ai-ml", $mcat); ?>">
                           <div class="four-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>ai"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Artificial Intelligence</span>
-                              Drive technological innovation</a> <span class="ser-arrow-btn"></span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>ai"><img loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/menu-icon_aiml.svg" class="menuicon" alt="menuicon"><span class="title">AI & ML Solutions</span>Drive technological innovation</a> <span class="ser-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-service">
                               <div class="flex-4">
@@ -455,7 +438,7 @@ function defActiveHire( $hirePage, $exCat ){
                               </div>
                               <div class="flex-4">
                                 <span class="head">Generative AI</span>
-                                <a href="<?php echo $site_url; ?>ai/generative-ai-consulting-company"><span class="title">Generative AI Consultings</span>
+                                <a href="<?php echo $site_url; ?>ai/generative-ai-consulting-company"><span class="title">Generative AI Consulting</span>
                                 Guided generative growth </a>
                                 <a href="<?php echo $site_url; ?>ai/generative-ai-development"><span class="title">Generative AI Development</span>
                                 Creating AI possibilities</a>
@@ -500,6 +483,7 @@ function defActiveHire( $hirePage, $exCat ){
                           <li class="tab-link <?php echo defActiveHire($hireElm, $mcat); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-backend-developers">Backend</a></li>
                           <li class="tab-link <?php echo isActiveMenu("frontend", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-front-end-developers">Frontend</a></li>
                           <li class="tab-link <?php echo isActiveMenu([$hireElm,$mcat] ,"ai-ml"); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers">AI/ML</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("data-sol", $hireElm); ?>"><a href="<?php echo $site_url; ?>">Data Solutions</a></li>
                           <li class="tab-link <?php echo isActiveMenu("mobile", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-mobile-app-developers">Mobile</a></li>
                           <li class="tab-link <?php echo isActiveMenu("full-stack", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-full-stack-developers">Full Stack</a></li>
                           <li class="tab-link <?php echo isActiveMenu("devops", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-devops-developers">DevOps</a></li>
@@ -516,7 +500,7 @@ function defActiveHire( $hirePage, $exCat ){
                             <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-backend-developers">
                               <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-01.svg" 
                                 class="menuicon" alt="menuicon"><span class="title">Backend</span>Build robust backend</a>
-                                <span class="tech-arrow-btn"></span>
+                                <span class="hr-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column hr-submenu">
                               <div class="flex-2">                                
@@ -581,17 +565,12 @@ function defActiveHire( $hirePage, $exCat ){
                                 </a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-gpt-expert" title="GPT Experts"><span class="title">GPT Experts</span>
                                 </a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-data-scientists" title="Data Scientists"><span class="title">Data Scientists</span>
-                                </a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-ml-engineers" title="ML Engineers"><span class="title">ML Engineers</span>
-                                </a>
+                                
                               </div>
                               <div class="flex-2">                                
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-chatbot-developers" title="Chatbot"><span class="title">Chatbot</span>
                                 </a>
                                 <a href="<?php echo $site_url; ?>hire-developers/dialogflow-developers" title="Dialogflow"><span class="title">Dialogflow</span>
-                                </a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-tensorflow-developers" title="Tensorflow"><span class="title">TensorFlow</span>
                                 </a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-rpa-developers" title="RPA"><span class="title">RPA</span>
                                 </a>
@@ -599,6 +578,28 @@ function defActiveHire( $hirePage, $exCat ){
                             </div>
                           </div>
                          
+                        </div>
+
+                        <div class="tab-content <?php echo isActiveMenu("data-sol", $hireElm); ?>">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>">
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/data-sol.svg" 
+                                class="menuicon" alt="menuicon">
+                                <span class="title">Data Solutions</span>Hire experts to unlock data's potential</a>
+                                <span class="hr-arrow-btn"></span>
+                            </div>
+                            <div class="dis-flex menu-column hr-submenu">
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-data-scientists" title="Android"><span class="title">Data Scientists
+                                </span></a>
+                                <a href="<?php echo $site_url; ?>hire/data-engineers" title="Flutter"><span class="title">Data Engineers
+                                </span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-ml-engineers" title="Ionic"><span class="title">ML Engineers</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-tensorflow-developers" title="IOS"><span class="title">TensorFlow</span></a>
+                              </div>
+                            </div>
+                          </div>
+                          
                         </div>
 
                         <div class="tab-content <?php echo isActiveMenu("mobile", $hireElm); ?>">
@@ -713,9 +714,9 @@ function defActiveHire( $hirePage, $exCat ){
                             </div>
                             <div class="dis-flex menu-column hr-submenu">
                               <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire/seo-experts" title="SEO"><span class="title">SEO</span></a>
-                                <a href="<?php echo $site_url; ?>hire/ppc-experts" title="PPC"><span class="title">PPC</span></a>
-                                <a href="<?php echo $site_url; ?>hire/smo-experts" title="SMO"><span class="title">SMO</span></a>
+                                <a href="<?php echo $site_url; ?>hire/seo-experts" title="SEO"><span class="title">SEO Experts</span></a>
+                                <a href="<?php echo $site_url; ?>hire/ppc-experts" title="PPC"><span class="title">PPC Experts</span></a>
+                                <a href="<?php echo $site_url; ?>hire/smo-experts" title="SMO"><span class="title">SMO Experts</span></a>
                                 <a href="<?php echo $site_url; ?>hire/content-writers" title="Content Writer"><span class="title">Content Writer</span></a>
                               </div>
                               <div class="flex-2">                                
@@ -982,16 +983,16 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>flutter-app-development-company"><span class="title">Flutter</span></a>
                                 <a href="<?php echo $site_url; ?>angular-js-development-company-india"><span class="title">Angular</span></a>
                                 <a href="<?php echo $site_url; ?>android-app-development-company-india"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>ios-application-development-company-india"><span class="title">iOs / iPhone</span></a>
+                                <a href="<?php echo $site_url; ?>ios-application-development-company-india"><span class="title">iOS / iPhone</span></a>
                                 <a href="<?php echo $site_url; ?>react-js-development-services-company"><span class="title">React</span></a>                                
                               </div>
                               <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>top-laravel-development-services-company-india"><span class="title">Lavavel</span></a>
+                                <a href="<?php echo $site_url; ?>top-laravel-development-services-company-india"><span class="title">Laravel</span></a>
                                 <a href="<?php echo $site_url; ?>net-maui-app-development"><span class="title">.NET MAUI</span></a>
                                 <a href="<?php echo $site_url; ?>node-js-development-company-india"><span class="title">Node</span></a>
                                 <a href="<?php echo $site_url; ?>best-react-native-development-services-company-india"><span class="title">React Native</span></a>
                                 <a href="<?php echo $site_url; ?>php-development-services-company"><span class="title">PHP</span></a>
-                                <a href="<?php echo $site_url; ?>top-wordpress-development-services-company-india"><span class="title">Wordpress</span></a>
+                                <a href="<?php echo $site_url; ?>top-wordpress-development-services-company-india"><span class="title">WordPress</span></a>
                                 <a href="<?php echo $site_url; ?>strapi-development-services"><span class="title">Strapi</span></a>
                                 <a href="<?php echo $site_url; ?>top-drupal-development-services-company-india"><span class="title">Drupal</span></a>  
                               </div>
@@ -1002,11 +1003,11 @@ function defActiveHire( $hirePage, $exCat ){
                               Empowering businesses of all sizes</a>
                             </div>
                             <div class="flex-1 menu-column">
-                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
                               Custom software for growing businesses</a>
-                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
                               End-to-end solutions for maximum impact</a>
-                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $site_url; ?>wp-content/themes/valuecoders/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
                             </div>
                           </div>
