@@ -109,7 +109,7 @@
     </div>
     <div class="dis-flex footer-bottom">
       <div class="flex-3 logo-box">
-        <h3>PROUDLY BROUGHT TO YOU BY PixelCryaons</h3>
+        <h3>PROUDLY BROUGHT TO YOU BY ValueCoders</h3>
         <div class="dis-flex">
           <a href="https://www.invoicera.com/">
             <picture>
