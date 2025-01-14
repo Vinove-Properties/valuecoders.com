@@ -82,12 +82,12 @@
       <div class="flex-5">
         <h4>Hire Developers</h4>
         <ul>
+          <li><a href="<?php echo $site_url.'hire-developers/hire-ai-engineers'; ?>">Hire AI Engineers</a></li>
           <li><a href="<?php echo $site_url.'hire-backend-developers'; ?>">Hire Backend Developers</a></li>
           <li><a href="<?php echo $site_url.'hire-front-end-developers'; ?>">Hire Frontend Developers</a></li>
           <li><a href="<?php echo $site_url.'hire-ecommerce-developers'; ?>">Hire eCommerce Developers</a></li>
           <li><a href="<?php echo $site_url.'hire-blockchain-developers'; ?>">Hire Blockchain Developers</a></li>
-          <li><a href="<?php echo $site_url.'hire-mobile-app-developers'; ?>">Hire Mobile Developers</a></li>
-          <li><a href="<?php echo $site_url.'hire-full-stack-developers'; ?>">Hire Full-Stack Developers</a></li>
+          <li><a href="<?php echo $site_url.'hire-mobile-app-developers'; ?>">Hire Mobile Developers</a></li>          
         </ul>
       </div>
       <div class="flex-5">
