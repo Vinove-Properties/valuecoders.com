@@ -72,7 +72,7 @@ function defActiveHire( $hirePage, $exCat ){
                       <div class="left-tabs">
                         <ul class="tab-nav">
                           <li class="tab-link <?php echo defActiveMenu($mcat); ?>">
-                            <a href="<?php echo $site_url; ?>software-development-services-company">Software Development</a>
+                            <a href="<?php echo $site_url; ?>software-development-services-company">Software Development New</a>
                           </li>
                           <li class="tab-link <?php echo isActiveMenu("app-development", $mcat); ?>">
                             <a href="<?php echo $site_url; ?>application-development">Application Development</a>
