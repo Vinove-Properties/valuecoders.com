@@ -138,7 +138,7 @@ $catBlockTwo  = get_field('row-c2', 'option');
             </picture>
           </div>
           <div class="blog-content">
-            <div class="title two-line"><a href="javascript:void(0);" onclick="_playYTmedia(\''.$video['link'].'\')">'.$video['title'].'</a></div>
+            <div class="title two-line"><a href="javascript:void(0);" class="igl_link" onclick="_playYTmedia(\''.$video['link'].'\')">'.$video['title'].'</a></div>
           </div>
           </div>';
           }

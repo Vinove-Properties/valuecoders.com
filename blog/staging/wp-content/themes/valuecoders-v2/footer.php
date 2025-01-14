@@ -40,7 +40,7 @@
           <p>HOURS OF EXPERTISE</p>
         </div>
         <div class="count-col">
-          <h5>500</h5>
+          <h5>675+</h5>
           <p>EXPERTS ON STAFF</p>
         </div>
       </div>
@@ -160,8 +160,7 @@
             <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/vc-logo.svg" width="191" height="42" alt="Logo">
           </picture>
         </a>
-        <p>Copyright © 2004 - <?php echo date("Y"); ?> PixelCrayons, <br>
-          All Rights Reserved. A Vinove Company.
+        <p>Copyright © 2004 - <?php echo date("Y"); ?> Valuecoders, <br>All Rights Reserved. A Vinove Company.
         </p>
       </div>
     </div>
