@@ -116,6 +116,8 @@ h2 {
   color: rgba(63, 63, 63, 1);
 }
 
+.entry-title{font-size: 24px; line-height: 38px;}
+
 .justify-sb {
   justify-content: space-between;
 }
@@ -1598,6 +1600,8 @@ text-align: center;
     font-size: 32px;
     line-height: 44px;
   }
+
+  .entry-title{font-size: 24px; line-height: 38px;}
   
   
   p {
@@ -1772,6 +1776,8 @@ p#responce {
 padding-top:10px !important;
 }
 .entry-header h2.entry-title a{min-height:auto;}
+
+.entry-title{font-size: 20px; line-height: 32px;}
 
 
 
