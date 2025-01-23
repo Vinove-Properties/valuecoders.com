@@ -23,7 +23,7 @@ $thisUrl   = 'https://www.valuecoders.com/staging/';
 define( 'SITE_ROOT_URL', $thisUrl );
 
 
-$spamIpAddr = ['141.95.234.1', '89.22.225.45', '94.156.64.107'];
+$spamIpAddr = ['141.95.234.1', '89.22.225.45','94.156.64.107'];
 $thisIPAddr = get_client_ip_user();
 if( in_array($thisIPAddr, $spamIpAddr) ){
     header('location:thanks');
@@ -794,8 +794,11 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
         $lead_source = "Website";
     }
 
-    $getUTM_source = (isset($_COOKIE['utm_source']) && !empty($_COOKIE['utm_source'])) ? $_COOKIE['utm_source'] : '';
-    $getUTM_medium = (isset($_COOKIE['utm_medium']) && !empty($_COOKIE['utm_medium'])) ? $_COOKIE['utm_medium'] : '';
+    $getUTM_source  = (isset($_COOKIE['utm_source']) && !empty($_COOKIE['utm_source'])) ? $_COOKIE['utm_source'] : '';
+    $getUTM_medium  = (isset($_COOKIE['utm_medium']) && !empty($_COOKIE['utm_medium'])) ? $_COOKIE['utm_medium'] : '';
+    $getUTM_camp    = (isset($_COOKIE['utm_campaign']) && !empty($_COOKIE['utm_campaign'])) ? 
+    $_COOKIE['utm_campaign'] : '';
+    
 
     /*
     gglads =  Advertisement: Google
@@ -862,64 +865,93 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
     storeLeadsData( $sampledata );
     //die;
 
-    if(!$isSpam) {
-        $varRefererURL = isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : "";
+    if(!$isSpam){
+        $varRefererURL = isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : "";    
+        if (isset($_SERVER['HTTP_REFERER']) && !empty($_SERVER['HTTP_REFERER'])){
+            $referer_url    = $_SERVER['HTTP_REFERER'];
+            $parsed_url     = parse_url($referer_url);
+
+            $query_params = [];
+            if(isset($parsed_url['query'])){
+                parse_str($parsed_url['query'], $query_params);
+            }
+            if(!empty($getUTM_source)) {
+                $query_params['utm_source'] = $getUTM_source;
+            }
+            if(!empty($getUTM_medium)) {
+                $query_params['utm_medium'] = $getUTM_medium;
+            }
+            if(!empty($getUTM_camp)) {
+                $query_params['utm_campaign'] = $getUTM_camp;
+            }    
+            $new_query_string   = http_build_query($query_params);    
+            $varRefererURL      = $parsed_url['scheme'] . '://' . $parsed_url['host'];
+            if (isset($parsed_url['path'])) {
+                $varRefererURL .= $parsed_url['path'];
+            }
+            if (!empty($new_query_string)) {
+                $varRefererURL .= '?' . $new_query_string;
+            }
+            if (isset($parsed_url['fragment'])) {
+                $varRefererURL .= '#' . $parsed_url['fragment'];
+            }
+        } 
         //$result = checkCaptcha($token);
         //if($result) {
-            $varDesc = "File Uploaded :" . $uploaded_file_path . " Requirements: " . $requirement;
+        $varDesc = "File Uploaded :" . $uploaded_file_path . " Requirements: " . $requirement;
 
-            $arrZoho_v2 = array(
-            'Email'         => $user_email,
-            'First Name'    => $firstn,
-            'Last Name'     => $lastn,
-            'Phone'         => $user_phone,
-            //'Phone'       => $zoho_user_phone,
-            'Country'       => $user_country,
-            'Lead Status'   => 'Not Contacted Yet',
-            'Lead Source'   => $inSource,
-            'UTM Source'    => $inSource,
-            'UTM Medium'    => $getUTM_medium,
-            'Property'      => 'ValueCoders',
-            'IP Address'    => $ip_addr,
-            'Description'   => $varDesc,
-            'URL'           => $customUrlLink,
-            'File Uploaded' => $uploaded_file_path,
-            'Requirements'  => $requirement,
-            'refurl'        => $varRefererURL
-            );
+        $arrZoho_v2 = array(
+        'Email'         => $user_email,
+        'First Name'    => $firstn,
+        'Last Name'     => $lastn,
+        'Phone'         => $user_phone,
+        //'Phone'       => $zoho_user_phone,
+        'Country'       => $user_country,
+        'Lead Status'   => 'Not Contacted Yet',
+        'Lead Source'   => $inSource,
+        'UTM Source'    => $inSource,
+        'UTM Medium'    => $getUTM_medium,
+        'Property'      => 'ValueCoders',
+        'IP Address'    => $ip_addr,
+        'Description'   => $varDesc,
+        'URL'           => $customUrlLink,
+        'File Uploaded' => $uploaded_file_path,
+        'Requirements'  => $requirement,
+        'refurl'        => $varRefererURL
+        );
 
-            $attachmentDoc = [];
-            if( isset( $_POST['nda'] ) ){
-            $attachmentDoc = ['/home/valuecoders-com/public_html/download-pdf/ValueCoders-NDA.pdf'];    
-            }
+        $attachmentDoc = [];
+        if( isset( $_POST['nda'] ) ){
+        $attachmentDoc = ['/home/valuecoders-com/public_html/download-pdf/ValueCoders-NDA.pdf'];    
+        }
 
-            if( $arrPostParams['we-help'] == "career" ){
-            smtpEmailFunction( "careers@vinove.com", "Job Application - ValueCoders", $Mailbody, "lead", $user_email, 
-            ['parvesh@vinove.com','karma@vinove.com'], [], [], $user_name );
-            header('location:thanks');
-            die;
-            }
-            
-            smtpEmailFunction( $user_email, "ValueCoders - We've received your request", $autoEmailBody, "auto", $user_email, [], [], $attachmentDoc );
-            $eSender = splEmailData( $user_country );
-            
-            if( isset( $eSender['mail_to'] ) ){
-            $tempEmailSubject = "Inquiry with ValueCoders [".$ticketID."]";
-            if( isset($arrPostParams['is_free_trial']) && ($arrPostParams['is_free_trial'] == "true") ){
-            $tempEmailSubject = "Request for 7-Day Trial [".$ticketID."]";    
-            }
-            if( $eSender['mail_to'] == "pa" ){
-            smtpEmailFunction( "parvesh@vinove.com", $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], ['nitin.baluni@mail.vinove.com'], [], $user_name, false );    
-            }else{
-            smtpEmailFunction( $eSender['mail_to'], $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], $bccEmails, [], $user_name, false );        
-            }
-            
-            $emailBBB =  $Mailbody.$bodyBr.print_r( $_COOKIE, 1 );
-            smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Contact Us - DEV", $emailBBB, "lead", $user_email, [], [], [], $user_name );
-            
-            $insType = (isset($arrPostParams['z-leadid']) && !empty($arrPostParams['z-leadid'])) ? $arrPostParams['z-leadid'] : false;
-            zohoCrmUpdate_v2( $arrZoho_v2, $utm_source, $eSender['lead_to'], $insType );
-            }
+        if( $arrPostParams['we-help'] == "career" ){
+        smtpEmailFunction( "careers@vinove.com", "Job Application - ValueCoders", $Mailbody, "lead", $user_email, 
+        ['parvesh@vinove.com','karma@vinove.com'], [], [], $user_name );
+        header('location:thanks');
+        die;
+        }
+
+        smtpEmailFunction( $user_email, "ValueCoders - We've received your request", $autoEmailBody, "auto", $user_email, [], [], $attachmentDoc );
+        $eSender = splEmailData( $user_country );
+
+        if( isset( $eSender['mail_to'] ) ){
+        $tempEmailSubject = "Inquiry with ValueCoders [".$ticketID."]";
+        if( isset($arrPostParams['is_free_trial']) && ($arrPostParams['is_free_trial'] == "true") ){
+        $tempEmailSubject = "Request for 7-Day Trial [".$ticketID."]";    
+        }
+        if( $eSender['mail_to'] == "pa" ){
+        smtpEmailFunction( "parvesh@vinove.com", $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], ['nitin.baluni@mail.vinove.com'], [], $user_name, false );    
+        }else{
+        smtpEmailFunction( $eSender['mail_to'], $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], $bccEmails, [], $user_name, false );        
+        }
+
+        $emailBBB =  $Mailbody.$bodyBr.print_r( $_COOKIE, 1 );
+        smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Contact Us - DEV", $emailBBB, "lead", $user_email, [], [], [], $user_name );
+
+        $insType = (isset($arrPostParams['z-leadid']) && !empty($arrPostParams['z-leadid'])) ? $arrPostParams['z-leadid'] : false;
+        zohoCrmUpdate_v2( $arrZoho_v2, $utm_source, $eSender['lead_to'], $insType );
+        }
     }
 
     if( isset( $arrPostParams['is_free_trial'] ) && ($arrPostParams['is_free_trial'] == "true") ){
