@@ -35,6 +35,15 @@ if( validateSpamAttacker( $_POST['user-email'], $thisIPAddr ) === false ){
     die;
 }
 
+function _resetCookieData(array $cookieNames) {
+    foreach( $cookieNames as $cookieName ){
+        if( isset($_COOKIE[$cookieName]) ){
+            setcookie($cookieName, '', time() - 3600, '/');
+            unset($_COOKIE[$cookieName]);
+        }
+    }
+}
+
 function logSpamException( $arrPostParams, $note = '' ){ 
     $user_name      = nbHasData($arrPostParams, 'user-name');
     $user_email     = nbHasData($arrPostParams, 'user-email');
@@ -967,6 +976,7 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
         header('location:thanks?utmsource=blog');
         die;
     }
+    _resetCookieData(['utm_source','utm_medium', 'utm_campaign']);
     header('location:thanks');
     die;
 }
