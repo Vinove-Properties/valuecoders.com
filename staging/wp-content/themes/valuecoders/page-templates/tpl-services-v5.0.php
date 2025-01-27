@@ -318,7 +318,7 @@
   <div class="container">
     <div class="head-txt text-center">
       <h2>Industries We Cater To</h2>
-      <p>The cost of software development depends on various factors such as service scope, sourcing model.</p>
+      <p>Partnering with businesses in diverse sectors to unlock new avenues for growth and innovation.</p>
     </div>
     <div class="dis-flex glider-contain indcater-slider" id="induscater-glider">
       <div class="glider">
