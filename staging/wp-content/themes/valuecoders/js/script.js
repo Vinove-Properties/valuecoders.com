@@ -1547,13 +1547,15 @@ function toggleTOCMenu() {
 document.addEventListener('DOMContentLoaded', function () {
     var targetElement = document.getElementById('toc-hb');
     window.addEventListener('scroll', function () {
-        var scrollPos = window.scrollY || window.pageYOffset;
-        var targetOffset = targetElement.offsetTop;
-        if (scrollPos > targetOffset) {
-          document.body.classList.add('hb-toc');
-        }else{
-          document.body.classList.remove('hb-toc');
-        }
+        if( targetElement ){
+            var scrollPos = window.scrollY || window.pageYOffset;
+            var targetOffset = targetElement.offsetTop;
+            if (scrollPos > targetOffset) {
+              document.body.classList.add('hb-toc');
+            }else{
+              document.body.classList.remove('hb-toc');
+            }    
+        }        
     });
 });
 
