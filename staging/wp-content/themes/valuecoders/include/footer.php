@@ -44,7 +44,7 @@ function get_client_ip_user() {
             <a href="<?php echo site_url('/disclaimer'); ?>">Disclaimer</a> <span class="divider">|</span> 
             <a href="<?php echo site_url('/gdpr-compliance'); ?>">GDPR</a> 
             </span>
-        </div>
+        </div>        
         <div class="footer-middle">
 <!-- rating section -->
 <script type="text/javascript">
@@ -144,7 +144,10 @@ var data = "total_points=" + total_points + "&user_ip=" + user_ip + "&rating_pag
     <a href="https://www.linkedin.com/company/valuecoders" target="_blank"><i class="social-icon linked-in vlazy"></i></a>
     <a href="https://www.instagram.com/valuecodersofficial_/?igshid=qfk286mq0wee" target="_blank"><i class="social-icon insta vlazy"></i></a>
     <a href="https://www.youtube.com/channel/UCCnijyLczGPUGI8aBkK3pTw?sub_confirmation=1" target="_blank"><i class="social-icon you-tube vlazy"></i></a>
+    <a href="//www.dmca.com/Protection/Status.aspx?ID=9f4af2d1-a5c5-4031-903c-b6dfb2c56625" title="DMCA.com Protection Status" style="margin-left:0;margin-top: 20px;" class="dmca-badge">
+    <img src ="https://images.dmca.com/Badges/dmca-badge-w200-5x1-06.png?ID=9f4af2d1-a5c5-4031-903c-b6dfb2c56625"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
     </div>
+
     </div>
     </div>
 </footer>
