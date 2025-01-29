@@ -25,48 +25,9 @@
           line-height: 24px;
           margin: 0;
         }
-        .subs-box {
-          background: #ffad00;
-          position: relative;
-          padding: 20px 40px;
-          flex-basis: 30%;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          flex-direction: column;
-          text-align: center;
-          border-radius: 30px;
-          overflow: hidden;
-          h3 {
-            font-size: 18px;
-            line-height: 26px;
-            font-weight: 500;
-            color: $white;
-          }
-          &:before {
-            content: "";
-            background: url(../images/subs-shape01.png) no-repeat;
-            width: 75px;
-            height: 65px;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            background-size: 100%;
-          }
-          &:after {
-            content: "";
-            background: url(../images/subs-shape02.png) no-repeat;
-            width: 40px;
-            height: 65px;
-            position: absolute;
-            right: 0;
-            top: 0;
-            background-size: 100%;
-          }
-        }
+       
       }
     }
-
     .subs-box {
       background: #ffad00;
       position: relative;
@@ -79,12 +40,32 @@
       text-align: center;
       border-radius: 30px;
       overflow: hidden;
-
-      h3{  font-size: 18px;
+      h3 {
+        font-size: 18px;
         line-height: 26px;
         font-weight: 500;
-        color: $white;}
-
+        color: $white;
+      }
+      &:before {
+        content: "";
+        background: url(../images/subs-shape01.png) no-repeat;
+        width: 75px;
+        height: 65px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-size: 100%;
+      }
+      &:after {
+        content: "";
+        background: url(../images/subs-shape02.png) no-repeat;
+        width: 40px;
+        height: 65px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-size: 100%;
+      }
       .white-btn {
         background: var(--blue);
         border-color: var(--blue);

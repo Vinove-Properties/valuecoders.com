@@ -28,7 +28,6 @@
        
       }
     }
-
     .subs-box {
       background: #ffad00;
       position: relative;
@@ -66,6 +65,52 @@
         right: 0;
         top: 0;
         background-size: 100%;
+      }
+      .white-btn {
+        background: var(--blue);
+        border-color: var(--blue);
+        border-radius: 15px;
+        font-size: 14px;
+        padding: 12px 30px;
+        line-height: 1;
+        font-weight: 500;
+        &:hover {
+          background: #05164d;
+          color: $white;
+          border-color: #05164d;
+        }
+      }
+
+      .cta-wrap {
+        margin: 15px 0 0;
+
+        .btn-sec {
+          .btn {
+            background: #fff;
+            padding: 13px 80px 13px 30px;
+            font-size: 16px;
+            &.rounded {
+              .text-white {
+                color: #05164d;
+              }
+              &:before {
+                background: #05164d url(../images/white-icon.svg) 0 0 no-repeat;
+                top: 4px;
+                width: 40px;
+                height: 40px;
+                background-position: center right 12px;
+              }
+            }
+            &:hover {
+              border-color: #05164d;
+              background: #05164d;
+              opacity: 1;
+              .text-white {
+                color: #fff;
+              }
+            }
+          }
+        }
       }
     }
   }
