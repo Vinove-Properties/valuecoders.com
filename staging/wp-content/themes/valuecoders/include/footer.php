@@ -141,24 +141,24 @@
         </div>
       </div>
       <div class="flex-4 footer-rating">
-      <span class="star-outer" id="star" style="display:none">
-      <span class="star-inner star-hover" id="starthover">
-        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('one')"></i> 
-        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('two')"></i> 
-        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('three')"></i> 
-        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('four')"></i> 
-        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('five')"></i> 
-    </span>
-    <span id="rate_msg"></span>
-</span>
-    <span class="star-outer" id="rated">
-    <i class="star-icon vlazy"></i>
-    <i class="star-icon vlazy"></i>
-    <i class="star-icon vlazy"></i>
-    <i class="star-icon vlazy"></i>
-    <i class="star-icon vlazy"></i>
-    4.9 out of 5.0 by
-    </span>
+        <span class="star-outer" id="star" style="display: none;">
+        <span class="star-inner star-hover" id="starthover">
+        <i class="star-icon" onclick="star(event)" onmouseover="changerate('one')"></i> 
+        <i class="star-icon" onclick="star(event)" onmouseover="changerate('two')"></i> 
+        <i class="star-icon" onclick="star(event)" onmouseover="changerate('three')"></i> 
+        <i class="star-icon" onclick="star(event)" onmouseover="changerate('four')"></i> 
+        <i class="star-icon" onclick="star(event)" onmouseover="changerate('five')"></i> 
+        </span>
+        <span id="rate_msg"></span>
+        </span>
+        <span class="star-outer" id="rated" style="display: block;">
+        <i class="star-icon"></i>
+        <i class="star-icon"></i>
+        <i class="star-icon"></i>
+        <i class="star-icon"></i>
+        <i class="star-icon"></i>
+        4.9 out of 5.0 by
+        </span>
         <span class="client-outer">
         <a href="javascript:void(0)" onclick="ratenow()" id="ratebtn" class="rate-us">Rate Us</a> 2437 clients on over 10800+ projects
         </span>
@@ -173,66 +173,66 @@
 </footer>
 
 <script type="text/javascript">
-function changerate(starno){
-    var starthover = document.getElementById("starthover");
-    starthover.classList.remove("one");
-    starthover.classList.remove("two");
-    starthover.classList.remove("three");
-    starthover.classList.remove("four");
-    starthover.classList.remove("five");
-    starthover.classList.add(starno);
-}
-function ratenow(){
-    var x = document.getElementById("star");
-    var y = document.getElementById("rated");
-
-    if (x.style.display === "block") {
-    x.style.display = "none";
-    y.style.display = "block";
-    document.getElementById('ratebtn').innerHTML = 'Rate Us';
-    } else {
-    document.getElementById('ratebtn').innerHTML = 'Click to rate';
-
-    x.style.display = "block";
-    y.style.display = "none";
-    }
-}
-let stars = [] //array to hold stars
-function star(event) {
-  let icons = document.querySelectorAll('.star') // grab all icons
-  let idx = Array.from(icons).indexOf(event.target) // get index of selected icon
-  if (stars.includes(event.target.id)) { // if selected icon is in array of stars
-    stars.splice(idx, stars.length ) // remove that icon and all following icons fro array
-    for (let i = idx; i <= icons.length - 1; i++) { // loop thru all icons and set class and color
-      icons[i].className = "fa fa-star-o star";
-      icons[i].style.color = "black";
-    }
-  } else { // if selected icon is not in array of stars
-    stars = [] // clear array
-    for (let i = 0; i <= idx; i++) { // loop thru all icons and set class and color
-      stars.push(icons[i].id) // add icon to array of stars
-      icons[i].className = "fa fa-star star";
-      icons[i].style.color = "#60B741";
-    }
+  function changerate(starno){
+      var starthover = document.getElementById("starthover");
+      starthover.classList.remove("one");
+      starthover.classList.remove("two");
+      starthover.classList.remove("three");
+      starthover.classList.remove("four");
+      starthover.classList.remove("five");
+      starthover.classList.add(starno);
   }
-  var total_points = stars.length.toString();
-   var user_ip = '<?=get_client_ip_user()?>';
-   var rating_page_url = "<?=get_permalink()?>";
-       
-var data = "total_points=" + total_points + "&user_ip=" + user_ip + "&rating_page_url=" + rating_page_url;
-   var xhttp = new XMLHttpRequest();
-   
-   xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-       resobj = JSON.parse(this.responseText);
-        document.getElementById("rate_msg").innerHTML = resobj.data;
-       }
-     };
+  function ratenow(){
+      var x = document.getElementById("star");
+      var y = document.getElementById("rated");
+  
+      if (x.style.display === "block") {
+      x.style.display = "none";
+      y.style.display = "block";
+      document.getElementById('ratebtn').innerHTML = 'Rate Us';
+      } else {
+      document.getElementById('ratebtn').innerHTML = 'Click to rate';
+  
+      x.style.display = "block";
+      y.style.display = "none";
+      }
+  }
+  let stars = [] //array to hold stars
+  function star(event) {
+    let icons = document.querySelectorAll('.star') // grab all icons
+    let idx = Array.from(icons).indexOf(event.target) // get index of selected icon
+    if (stars.includes(event.target.id)) { // if selected icon is in array of stars
+      stars.splice(idx, stars.length ) // remove that icon and all following icons fro array
+      for (let i = idx; i <= icons.length - 1; i++) { // loop thru all icons and set class and color
+        icons[i].className = "fa fa-star-o star";
+        icons[i].style.color = "black";
+      }
+    } else { // if selected icon is not in array of stars
+      stars = [] // clear array
+      for (let i = 0; i <= idx; i++) { // loop thru all icons and set class and color
+        stars.push(icons[i].id) // add icon to array of stars
+        icons[i].className = "fa fa-star star";
+        icons[i].style.color = "#60B741";
+      }
+    }
+    var total_points = stars.length.toString();
+     var user_ip = '2a01:4f8:1c1c:aaef::1';
+     var rating_page_url = "https://www.valuecoders.com/";
+         
+  var data = "total_points=" + total_points + "&user_ip=" + user_ip + "&rating_page_url=" + rating_page_url;
+     var xhttp = new XMLHttpRequest();
      
-   xhttp.open("POST", "<?=site_url()?>/wp-admin/admin-ajax.php?action=rateus", true);
-   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-   xhttp.send(data);
- // document.getElementById("demo").innerHTML = stars.length.toString(); // set number of stars as length of array of stars
-}
+     xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+         resobj = JSON.parse(this.responseText);
+          document.getElementById("rate_msg").innerHTML = resobj.data;
+         }
+       };
+       
+     xhttp.open("POST", "https://www.valuecoders.com/wp-admin/admin-ajax.php?action=rateus", true);
+     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  
+     xhttp.send(data);
+   // document.getElementById("demo").innerHTML = stars.length.toString(); // set number of stars as length of array of stars
+  }
 </script>
