@@ -106,6 +106,9 @@ if( isset($workWith['is_enabled']) && ($workWith['is_enabled'] == "yes") ) :
 
 <?php 
 $servCol = get_field('we-serv');
+echo '<pre>';
+print_r($servCol);
+echo '</pre>';
 if( isset($servCol['is_enabled']) && ($servCol['is_enabled'] == "yes") ) :
 ?>
 <section class="service-scroller padding-t-120 padding-b-120" id="serv">
@@ -272,7 +275,11 @@ if( isset($techElm['required']) && ($techElm['required'] == "yes") ) :
     <div class="tech-row">
       <div class="tech-stack animate-slide-to-left hover:pause">
         <?php 
-        if( $techElm['stack'] )
+        if( $techElm['stack'] ){
+        echo '<ul>';
+
+        echo '</ul>';  
+        }
         ?>
         <ul>
           <li>
