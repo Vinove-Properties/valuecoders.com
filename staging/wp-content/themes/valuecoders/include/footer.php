@@ -23,22 +23,22 @@
         <ul>
           <li>
             <picture>
-              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/fotaw-01.svg" alt="Valuecoders" width="107" height="60">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/fotaw-01.svg" alt="Valuecoders" width="107" height="60">
             </picture>
           </li>
           <li>
             <picture>
-              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/fotaw-02.svg" alt="Valuecoders" width="107" height="60">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/fotaw-02.svg" alt="Valuecoders" width="107" height="60">
             </picture>
           </li>
           <li>
             <picture>
-              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/fotaw-03.svg" alt="Valuecoders" width="107" height="60">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/fotaw-03.svg" alt="Valuecoders" width="107" height="60">
             </picture>
           </li>
           <li>
             <picture>
-              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/fotaw-04.svg" alt="Valuecoders" width="107" height="60">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/fotaw-04.svg" alt="Valuecoders" width="107" height="60">
             </picture>
           </li>
         </ul>
@@ -100,12 +100,12 @@
         <div class="dis-flex">
           <a href="https://www.invoicera.com/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
             <picture>
-              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/images/home-images/inv-logo.svg" width="156" height="40" alt="Invoicera">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/images/home-images/inv-logo.svg" width="156" height="40" alt="Invoicera">
             </picture>
           </a>
           <a href="https://www.workstatus.io/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
             <picture>
-              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/images/home-images/ws-logo.svg" width="188" height="26" alt="Workstatus"> 
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/images/home-images/ws-logo.svg" width="188" height="26" alt="Workstatus"> 
             </picture>
           </a>
         </div>
@@ -115,27 +115,27 @@
         <div class="dis-flex">
           <a href="https://www.linkedin.com/company/valuecoders" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">
             <picture>
-              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/soc-01.svg" width="29" height="29" alt="linkedin">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/soc-01.svg" width="29" height="29" alt="linkedin">
             </picture>
           </a>
           <a href="https://www.facebook.com/ValueCoders" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">
             <picture>
-              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/soc-02.svg" width="29" height="29" alt="facebook">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/soc-02.svg" width="29" height="29" alt="facebook">
             </picture>
           </a>
           <a href="https://twitter.com/ValueCoders" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">
             <picture>
-              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/soc-03.svg" width="29" height="29" alt="twitter">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/soc-03.svg" width="29" height="29" alt="twitter">
             </picture>
           </a>
           <a href="https://www.instagram.com/valuecodersofficial_/?igshid=qfk286mq0wee" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">
             <picture>
-              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/soc-04.svg" width="29" height="29" alt="instagram">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/soc-04.svg" width="29" height="29" alt="instagram">
             </picture>
           </a>
           <a href="https://www.youtube.com/channel/UCCnijyLczGPUGI8aBkK3pTw?sub_confirmation=1" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">
             <picture>
-              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/soc-05.svg" width="29" height="29" alt="youtube">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/soc-05.svg" width="29" height="29" alt="youtube">
             </picture>
           </a>
         </div>
