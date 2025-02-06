@@ -100,12 +100,12 @@
         <div class="dis-flex">
           <a href="https://www.invoicera.com/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
             <picture>
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/images/home-images/inv-logo.svg" width="156" height="40" alt="Invoicera">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/inv-logo.svg" width="156" height="40" alt="Invoicera">
             </picture>
           </a>
           <a href="https://www.workstatus.io/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
             <picture>
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/images/home-images/ws-logo.svg" width="188" height="26" alt="Workstatus"> 
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/ws-logo.svg" width="188" height="26" alt="Workstatus"> 
             </picture>
           </a>
         </div>
@@ -141,7 +141,37 @@
         </div>
       </div>
       <div class="flex-4 footer-rating">
-<!-- rating section -->
+      <span class="star-outer" id="star" style="display:none">
+      <span class="star-inner star-hover" id="starthover">
+        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('one')"></i> 
+        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('two')"></i> 
+        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('three')"></i> 
+        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('four')"></i> 
+        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('five')"></i> 
+    </span>
+    <span id="rate_msg"></span>
+</span>
+    <span class="star-outer" id="rated">
+    <i class="star-icon vlazy"></i>
+    <i class="star-icon vlazy"></i>
+    <i class="star-icon vlazy"></i>
+    <i class="star-icon vlazy"></i>
+    <i class="star-icon vlazy"></i>
+    4.9 out of 5.0 by
+    </span>
+        <span class="client-outer">
+        <a href="javascript:void(0)" onclick="ratenow()" id="ratebtn" class="rate-us">Rate Us</a> 2437 clients on over 10800+ projects
+        </span>
+      </div>
+      <div class="flex-4 copyright">
+        <a href="//www.dmca.com/Protection/Status.aspx?ID=9f4af2d1-a5c5-4031-903c-b6dfb2c56625" title="DMCA.com Protection Status" style="margin-left:0;margin-top: 20px; display:block" class="dmca-badge">
+        <img src ="https://images.dmca.com/Badges/dmca-badge-w200-5x1-06.png?ID=9f4af2d1-a5c5-4031-903c-b6dfb2c56625"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">Copyright © 2004 - 2024 ValueCoders, All Rights Reserved. A Vinove Company.</div>
+</footer>
+
 <script type="text/javascript">
 function changerate(starno){
     var starthover = document.getElementById("starthover");
@@ -206,33 +236,3 @@ var data = "total_points=" + total_points + "&user_ip=" + user_ip + "&rating_pag
  // document.getElementById("demo").innerHTML = stars.length.toString(); // set number of stars as length of array of stars
 }
 </script>
-<span class="star-outer" id="star" style="display:none">
-    <span class="star-inner star-hover" id="starthover">
-        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('one')"></i> 
-        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('two')"></i> 
-        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('three')"></i> 
-        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('four')"></i> 
-        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('five')"></i> 
-    </span>
-    <span id="rate_msg"></span>
-</span>
-    <span class="star-outer" id="rated">
-    <i class="star-icon vlazy"></i>
-    <i class="star-icon vlazy"></i>
-    <i class="star-icon vlazy"></i>
-    <i class="star-icon vlazy"></i>
-    <i class="star-icon vlazy"></i>
-    4.9 out of 5.0 by
-    </span>
-        <span class="client-outer">
-        <a href="javascript:void(0)" onclick="ratenow()" id="ratebtn" class="rate-us">Rate Us</a> 2437 clients on over 10800+ projects
-        </span>
-      </div>
-      <div class="flex-4 copyright">
-        <a href="//www.dmca.com/Protection/Status.aspx?ID=9f4af2d1-a5c5-4031-903c-b6dfb2c56625" title="DMCA.com Protection Status" style="margin-left:0;margin-top: 20px; display:block" class="dmca-badge">
-        <img src ="https://images.dmca.com/Badges/dmca-badge-w200-5x1-06.png?ID=9f4af2d1-a5c5-4031-903c-b6dfb2c56625"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
-      </div>
-    </div>
-  </div>
-  <div class="footer-copyright">Copyright © 2004 - 2024 ValueCoders, All Rights Reserved. A Vinove Company.</div>
-</footer>
