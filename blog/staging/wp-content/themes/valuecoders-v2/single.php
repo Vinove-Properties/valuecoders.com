@@ -151,7 +151,7 @@
           <div class="customcta">          
           <div class="cus-cont">
           <div class="cushed"><?php echo $sbText; ?></div>
-          <!-- <div class="text"><?php echo $sbCTA; ?></div> -->
+          <!-- <div class="text"><?php //echo $sbCTA; ?></div> -->
           <div class="btn-container">
             <div class="btn-sec">
             <a href="https://www.valuecoders.com/contact" target="_blank" class="btn rounded" data-wpel-link="external" 

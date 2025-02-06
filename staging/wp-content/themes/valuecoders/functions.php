@@ -5,9 +5,11 @@ function isStaggingVersion(){
 
 if( ! defined( '_S_VERSION' ) ) {
 	if( isStaggingVersion() ){
-		define( '_S_VERSION', time() );	
+		define( '_S_VERSION', time() );
+		define( 'RES_VERSION', 'version-6.0' );	
 	}else{
-		define( '_S_VERSION', '4.01.23' );	
+		define( '_S_VERSION', '4.01.23' );
+		define( 'RES_VERSION', 'version-6.0' );	
 	}
 }
 
@@ -185,32 +187,32 @@ function valuecoders_scripts() {
 	
 	if( is_front_page() || is_home() || is_404() ){
 	//wp_enqueue_style( 'vc-index', get_stylesheet_directory_uri().'/v3.0/css/index.css', [], _S_VERSION );
-	wp_enqueue_style( 'vc-index', get_stylesheet_directory_uri().'/v4.0/css/index.css', [], _S_VERSION );
+	wp_enqueue_style( 'vc-index', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/index.css', [], _S_VERSION );
 	}
 	elseif( is_page_template( 'page-templates/template-hirepage.php' ) ){
-		wp_enqueue_style( 'vc-hirev3', get_stylesheet_directory_uri().'/v4.0/css/hirepage.min.css', [], _S_VERSION );		
+		wp_enqueue_style( 'vc-hirev3', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/hirepage.min.css', [], _S_VERSION );		
 		wp_enqueue_script( 'vc-hire-frm', get_stylesheet_directory_uri(). '/js/hire-form-validation.js', array(), 
 		_S_VERSION, true );
 	}
 	elseif( is_page_template( 'page-templates/hire-dotnet-developers.php' ) ){
-		wp_enqueue_style( 'vc-technologies', get_stylesheet_directory_uri().'/v4.0/css/technologies.min.css', [], _S_VERSION );
+		wp_enqueue_style( 'vc-technologies', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/technologies.min.css', [], _S_VERSION );
 		/*
 		wp_enqueue_script( 'vc-hire-frm', get_stylesheet_directory_uri(). '/js/hire-form-validation.js', array(), 
 		_S_VERSION, true );
 		*/
 	}
 	elseif( is_page_template( 'page-templates/template-industry.php' ) ){
-		wp_enqueue_style( 'vc-technologies', get_stylesheet_directory_uri().'/v4.0/css/industries.min.css', [], _S_VERSION );
+		wp_enqueue_style( 'vc-technologies', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/industries.min.css', [], _S_VERSION );
 	}
 	elseif(
 		is_page_template( 'page-templates/template-services.php' ) ||
 		is_page_template( 'page-templates/tpl-versus-other.php' ) ||		
 		is_page_template( 'page-templates/tpl-how-works.php' )
 	){
-		wp_enqueue_style( 'vc-services', get_stylesheet_directory_uri().'/v4.0/css/services.min.css', [], _S_VERSION );		
+		wp_enqueue_style( 'vc-services', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/services.min.css', [], _S_VERSION );		
 	}
 	elseif( is_page_template( 'page-templates/template-services-v2.php' ) ){
-		wp_enqueue_style( 'vc-service-v2', get_stylesheet_directory_uri().'/v4.0/css/service-updated.css', [], _S_VERSION );
+		wp_enqueue_style( 'vc-service-v2', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/service-updated.css', [], _S_VERSION );
 	}
 	elseif( is_page_template( 'page-templates/tpl-services-v5.0.php' ) ){
 		wp_enqueue_style( 'vc-service-v5', get_stylesheet_directory_uri().'/v5.0/css/services.min.css', [], _S_VERSION );
@@ -266,8 +268,8 @@ function valuecoders_scripts() {
 		*/
 		//wp_enqueue_style( 'vc-contact', get_stylesheet_directory_uri().'/css/contact-form-2.0.min.css' );
 
-		wp_enqueue_style( 'vc-contact', get_stylesheet_directory_uri().'/v4.0/css/contact-min.css' );
-		wp_enqueue_style( 'vc-nselect', get_stylesheet_directory_uri().'/v4.0/css/nice-select2.css' );
+		wp_enqueue_style( 'vc-contact', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/contact-min.css' );
+		wp_enqueue_style( 'vc-nselect', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/nice-select2.css' );
 		wp_enqueue_script( 'select-bx', get_stylesheet_directory_uri(). '/js/select-bx.js', array(), 
 		_S_VERSION, true );
 		wp_enqueue_script( 'vc-cfscript', get_stylesheet_directory_uri(). '/js/form-validation-v8.js', array(), 
@@ -277,11 +279,11 @@ function valuecoders_scripts() {
 		wp_enqueue_script( 'select-bx', get_stylesheet_directory_uri(). '/js/select-bx.js', array(), 
 		_S_VERSION, true );
 		wp_enqueue_script( 'vc-cfscript', get_stylesheet_directory_uri(). '/js/form-validation-v9.js', [], [], true );
-		wp_enqueue_style( 'vc-contact', get_stylesheet_directory_uri().'/v4.0/css/contact-usv9.css' );
-		wp_enqueue_style( 'vc-nselect', get_stylesheet_directory_uri().'/v4.0/css/nice-select2.css' );		
+		wp_enqueue_style( 'vc-contact', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/contact-usv9.css' );
+		wp_enqueue_style( 'vc-nselect', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/nice-select2.css' );		
 	}
 	elseif( is_page_template('page-templates/tpl-feedback.php') ){
-		wp_enqueue_style( 'vc-consult', get_stylesheet_directory_uri().'/v4.0/css/consult-page.css' );
+		wp_enqueue_style( 'vc-consult', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/consult-page.css' );
 		wp_enqueue_style( 'vc-select2', get_stylesheet_directory_uri().'/css/nice-select2.css' );
 		wp_enqueue_script( 'select-bx', get_stylesheet_directory_uri(). '/js/select-bx.js', array(), 
 		_S_VERSION, true );
@@ -296,15 +298,15 @@ function valuecoders_scripts() {
 		'page-templates/template-testimonials.php'
 		])
 	){
-		wp_enqueue_style( 'vc-company', get_stylesheet_directory_uri().'/v4.0/css/company.min.css', [], _S_VERSION );		
+		wp_enqueue_style( 'vc-company', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/company.min.css', [], _S_VERSION );		
 	}
 	elseif( is_page_template(['page-templates/tpl-inmedia.php']) ){
-		wp_enqueue_style( 'vc-company', get_stylesheet_directory_uri().'/v4.0/css/inmedia-min.css', [], _S_VERSION );		
+		wp_enqueue_style( 'vc-company', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/inmedia-min.css', [], _S_VERSION );		
 	}
 	elseif(
 		is_page_template(['page-templates/template-partners.php','page-templates/template-faq.php'])
 	){
-		wp_enqueue_style( 'vc-partners', get_stylesheet_directory_uri().'/v4.0/css/partner.min.css', [], _S_VERSION );		
+		wp_enqueue_style( 'vc-partners', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/partner.min.css', [], _S_VERSION );		
 	}
 	elseif(
 		is_page_template([
@@ -313,7 +315,7 @@ function valuecoders_scripts() {
 		'page-templates/calendly-thankyou.php'
 		]) 
 	){
-		wp_enqueue_style( 'vc-services', get_stylesheet_directory_uri().'/v4.0/css/thankyou.min.css', [], _S_VERSION );
+		wp_enqueue_style( 'vc-services', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/thankyou.min.css', [], _S_VERSION );
 	}
 	elseif( 
 		is_page_template( 'page-templates/template-terms.php' ) ||
@@ -321,27 +323,27 @@ function valuecoders_scripts() {
 		is_page_template( 'page-templates/template-policy.php' ) ||		
 		is_page_template( 'page-templates/template-gdpr.php' )
 	){
-		wp_enqueue_style( 'vc-terms', get_stylesheet_directory_uri().'/v4.0/css/policy-disclaimer.min.css', [], _S_VERSION );
+		wp_enqueue_style( 'vc-terms', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/policy-disclaimer.min.css', [], _S_VERSION );
 	}
 	elseif( is_page_template( 'page-templates/template-whyindia.php' ) ){
-		wp_enqueue_style( 'vc-partners', get_stylesheet_directory_uri().'/v4.0/css/why-india-min.css', [], _S_VERSION );
+		wp_enqueue_style( 'vc-partners', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/why-india-min.css', [], _S_VERSION );
 	}
 	elseif( is_page_template( 'page-templates/tpl-resource-listing.php' ) ){
-		wp_enqueue_style( 'vc-resources', get_stylesheet_directory_uri().'/v4.0/css/resource.min.css', [], _S_VERSION );
+		wp_enqueue_style( 'vc-resources', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/resource.min.css', [], _S_VERSION );
 	}
 	elseif( is_page_template( 'page-templates/tpl-free-trial.php' ) ){
-		wp_enqueue_style( 'vc-trial', get_stylesheet_directory_uri().'/v4.0/css/trial-days.css', [], _S_VERSION );
+		wp_enqueue_style( 'vc-trial', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/trial-days.css', [], _S_VERSION );
 	}
 	elseif( is_page_template( 'page-templates/tpl-se-process.php' ) ){
-		wp_enqueue_style( 'se-process', get_stylesheet_directory_uri().'/v4.0/css/software-services.css', [], _S_VERSION );
+		wp_enqueue_style( 'se-process', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/software-services.css', [], _S_VERSION );
 	}
 	elseif( is_single() ){
-		wp_enqueue_style( 'vc-resource-detail', get_stylesheet_directory_uri().'/v4.0/css/resource-detail.min.css', [], _S_VERSION );
+		wp_enqueue_style( 'vc-resource-detail', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/resource-detail.min.css', [], _S_VERSION );
 	}
 	
 	else{
 		if( isset( $_SERVER['REQUEST_URI'] ) && ($_SERVER['REQUEST_URI'] == '/404.php') ){
-			wp_enqueue_style( 'vc-index', get_stylesheet_directory_uri().'/v4.0/css/index.css', [], _S_VERSION );
+			wp_enqueue_style( 'vc-index', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/index.css', [], _S_VERSION );
 		}else{
 			wp_enqueue_style( 'vc-style', get_stylesheet_directory_uri().'/css/style.css' );
 			wp_enqueue_style( 'vc-style-tech', get_stylesheet_directory_uri().'/css/technologies.min.css', [], _S_VERSION);
