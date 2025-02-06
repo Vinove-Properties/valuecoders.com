@@ -1,0 +1,129 @@
+.it-services {
+  background: linear-gradient(180deg, #fff8ea 0%, #fff8ea 100%);
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .service-card {
+    background-color: #fff5e6;
+    padding: 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    transition: transform 0.3s ease;
+    border-bottom: 3px solid #ffdc94;
+
+    &:first-child {
+      border-radius: 8px 0 0 8px;
+    }
+    &:last-child {
+      border-radius: 0 8px 8px 0;
+    }
+
+    &:nth-child(odd) {
+      background: #ffe8b7;
+    }
+    &:nth-child(5) {
+      background: #fff5e6;
+    }
+    &:nth-child(6) {
+      background: #ffe8b7;
+    }
+    &:nth-child(7) {
+      background: #fff5e6;
+    }
+    &:nth-child(8) {
+      background: #ffe8b7;
+    }
+
+    &:nth-child(n + 5):nth-child(-n + 8),
+    &:nth-child(n + 13):nth-child(-n + 16),
+    &:nth-child(n + 21):nth-child(-n + 24) {
+      border-bottom: none;
+    }
+
+    .service-icon {
+      background-color: #ffffff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .service-content {
+      h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #333333;
+        margin: 0 0 8px 0;
+      }
+
+      p {
+        color: #25272e;
+        font-weight: $normal-font;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 979px) {
+  .it-services {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+      .service-card {
+        &:nth-child(3) {
+          background: #fff5e6;
+        }
+        &:nth-child(4) {
+          background: #ffe8b7;
+        }
+        &:nth-child(5) {
+          background: #ffe8b7;
+        }
+        &:nth-child(6) {
+          background: #fff5e6;
+        }
+        &:nth-child(7) {
+          background: #fff5e6;
+        }
+        &:nth-child(8) {
+          background: #ffe8b7;
+        }
+        &:nth-child(5),
+        &:nth-child(6) {
+          border-bottom: 3px solid #ffdc94;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .it-services {
+    .services-grid {
+      grid-template-columns: 1fr;
+
+      .service-card {
+        &:nth-child(odd) {
+          background: #ffe8b7;
+        }
+        &:nth-child(even) {
+          background: #fff5e6;
+        }
+        .service-content {
+          h3 {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

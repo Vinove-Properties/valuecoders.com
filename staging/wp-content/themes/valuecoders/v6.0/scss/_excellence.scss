@@ -1,0 +1,298 @@
+.client-img-section {
+  .why-ws {
+    position: relative;
+    //z-index: 9;
+    .left-box {
+      flex-basis: 45%;
+      position: relative;
+
+      .top-section {
+        padding: 0;
+        text-align: left;
+      }
+      ul {
+        margin-top: 25px;
+        padding: 0;
+
+        li {
+          margin: 0 0 10px;
+          position: relative;
+          padding-left: 25px;
+
+          &::before {
+            content: "";
+            display: inline-block;
+            background: url(../images/check-img.svg) no-repeat;
+            background-size: 100%;
+            width: 16px;
+            height: 17px;
+            top: 5px;
+            left: 0;
+            position: absolute;
+          }
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .right-box {
+      flex-basis: 52%;
+      padding-left: 20px;
+      position: relative;
+
+      .why-right {
+        .client-section {
+          background: $gradient;
+          backdrop-filter: blur(50px);
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          padding: 27px 0;
+          border-radius: 10px;
+          .client-row {
+            position: relative;
+            overflow: hidden;
+            height: 70px;
+            margin: 0 0 15px;
+            .client-stack {
+              ul {
+                display: flex;
+                min-width: 150%;
+                justify-content: space-around;
+                column-gap: 18px;
+                position: absolute;
+             
+                li {
+                  border-radius: 8px;
+                  background: #fafafa;
+                  height: 70px;
+                  min-width: 125px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  img {
+                    vertical-align: middle;
+                  }
+                  &:hover {
+                    color: $yellow;
+                  }
+                }
+              }
+            }
+
+            .hover:hover {
+              color: red;
+            }
+          }
+        }
+      }
+
+      .why-left {
+        padding-right: 20px;
+
+        .plateform {
+          padding: 20px;
+          border-radius: 10px;
+          border: 1px solid #a0a0a02e;
+          box-shadow: 0px 4px 44px 0px #041a3317;
+          background: $white;
+          min-height: 304px;
+
+          h3 {
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 500;
+          }
+          ul {
+            li {
+              font-weight: $medium_font;
+              margin: 0 0 15px;
+              padding-left: 32px;
+              position: relative;
+
+              &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 4px;
+                background: url(../images/home-images/iconex.svg) no-repeat;
+
+                width: 22px;
+                height: 22px;
+
+                background-size: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      .award-row {
+        margin: 20px 0 0;
+        ul {
+          display: flex;
+          justify-content: space-around;
+          gap: 10px;
+          flex-wrap: wrap;
+          li {
+            height: 80px;
+            min-width: 124px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            border: 1.5px solid rgba(160, 160, 160, 0.18);
+            background: #fff;
+            img {
+              vertical-align: middle;
+            }
+
+            &:hover {
+              background: #fff;
+              cursor: default;
+              border-color: $yellow;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes slide_to_left {
+  0% {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slide_to_right {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.award-animate-slide-to-left {
+  animation: slide_to_left 50s linear infinite;
+}
+
+.award-animate-slide-to-right {
+  animation: slide_to_right 50s linear infinite;
+}
+
+.hover\:pause:hover {
+  animation-play-state: paused;
+}
+
+/*Media Query Start From Here*/
+
+@media (max-width: 1440px) {
+  .client-img-section {
+    .why-ws {
+      .right-box {
+        .award-row {
+          ul {
+            li{height: 70px;
+              min-width: 114px;}
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1320px) {
+
+
+ 
+ 
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 979px) {
+
+  .client-img-section {
+    .why-ws {
+     
+      .left-box {
+        flex-basis: 100%;
+        text-align: center;
+
+        .top-section {
+          text-align: center;
+        }
+        ul {
+          margin-top: 20px;
+        }
+      }
+  
+      .right-box {
+        flex-basis:100%;
+        padding-left: 0;
+        margin-top:30px;
+        position: relative;
+
+        .dis-flex{justify-content: space-between}
+  
+        .why-left {
+          padding-right:0;
+          flex-basis: 48%;
+  
+          .plateform {
+            min-height: 310px;
+            margin:0 0 30px;
+          }
+        }
+
+        .why-right{ flex-basis: 48%;}
+  
+        .award-row {
+          margin: 20px 0 0;
+          ul {
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            li {
+              min-width: initial;
+              width:150px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+@media (max-width: 767px) {
+
+
+  .client-img-section {
+    .why-ws {
+      .right-box {
+        .why-left {
+          padding-right:0;
+          flex-basis: 100%;
+          .plateform {
+            min-height:initial;
+          }
+        }
+        .why-right{ flex-basis: 100%;}
+      }
+    }
+  }
+  
+}
+
+/*Media Query Ends Here*/

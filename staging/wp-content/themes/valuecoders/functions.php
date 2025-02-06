@@ -6,11 +6,19 @@ function isStaggingVersion(){
 if( ! defined( '_S_VERSION' ) ) {
 	if( isStaggingVersion() ){
 		define( '_S_VERSION', time() );
-		define( 'RES_VERSION', 'version-6.0' );	
+		define( 'RES_VERSION', 'v6.0' );	
 	}else{
 		define( '_S_VERSION', '4.01.23' );
-		define( 'RES_VERSION', 'version-6.0' );	
+		define( 'RES_VERSION', 'v6.0' );	
 	}
+}
+
+function _vers_six($src){
+	echo get_bloginfo('template_url').'/v6.0/'.$src;
+}
+
+function _getvers_six($src){
+	return get_bloginfo('template_url').'/v6.0/'.$src;
 }
 
 add_filter('upload_mimes', function($mime_types){
@@ -186,9 +194,11 @@ function valuecoders_scripts() {
 	}
 	
 	if( is_front_page() || is_home() || is_404() ){
-	//wp_enqueue_style( 'vc-index', get_stylesheet_directory_uri().'/v3.0/css/index.css', [], _S_VERSION );
-	wp_enqueue_style( 'vc-index', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/index.css', [], _S_VERSION );
+		wp_enqueue_style( 'vc-index', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/index.css', [], _S_VERSION );
 	}
+	elseif( is_page_template( 'page-templates/tpl-homev6.0.php' ) ){
+		wp_enqueue_style( 'vc-index', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/index.css', [], _S_VERSION );
+	}	
 	elseif( is_page_template( 'page-templates/template-hirepage.php' ) ){
 		wp_enqueue_style( 'vc-hirev3', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/hirepage.min.css', [], _S_VERSION );		
 		wp_enqueue_script( 'vc-hire-frm', get_stylesheet_directory_uri(). '/js/hire-form-validation.js', array(), 
@@ -802,6 +812,10 @@ function cvColumn_shortcode( $atts, $content = null ) {
 	return '<div class="flex-2">'.strtr( $content, $toFix ).'</div>';
 }
 
+add_shortcode( 'cmn_cta', 'cmn_cta_cb' );
+function cmn_cta_cb() {
+	return '<div class="btn-container"><a href="'.site_url('/contact').'" class="cta-button">GET STARTED</a></div>';
+}
 
 add_shortcode( 'vc_column_three', 'colum_three_scode_cb' );
 function colum_three_scode_cb( $atts, $content = null ){

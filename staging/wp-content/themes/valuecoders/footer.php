@@ -5,13 +5,12 @@ $footerOptsEn 		= isset($footerOpts['is_enabled']) ? $footerOpts['is_enabled'] :
 if( $footerOptsEn != "no" ) :
 ?>
 <section class="contact-us-section padding-t-120 padding-b-120" id="form">
-   <?php get_template_part('inc/contact','form'); ?>
+<?php get_template_part('inc/contact','form'); ?>
 </section>
 <?php 
 endif; 
 }
 ?>
-
 <?php
 //if( is_page_template( 'page-templates/template-hirepage.php' ) ) : 
 $relatedServices = get_field('rel-services');

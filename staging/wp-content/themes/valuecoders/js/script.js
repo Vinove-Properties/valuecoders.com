@@ -1568,3 +1568,55 @@ links.forEach(link => {
         link.classList.add('active');
     });
 });
+
+if (document.getElementById("industries-glider-v6")){
+    const indGlider     = document.getElementById("indGlider");    
+    const indLoader     = document.getElementById("industries-glider-v6-loader"); 
+    window.addEventListener("load", function() {
+    var gliderElement = document.querySelector(".industries-slider .glider");
+        if (gliderElement) {      
+            new Glider(gliderElement, {
+                slidesToShow: 6, 
+                slidesToScroll: 1,
+                draggable: true,
+                scrollLock: true,
+                duration: 2.25,
+                dots: ".industries-slider .dots",
+                arrows: { prev: '#industries-glider-v6 .test-prev', next: '#industries-glider-v6 .test-next' },      
+                responsive: [
+                    {breakpoint: 320, settings: { slidesToShow: 2, slidesToScroll: 1, duration: 2.25 }},
+                    {breakpoint: 767, settings: { slidesToShow: 1, slidesToScroll: 1, itemWidth: '50%', duration: 2.25 }},
+                    {breakpoint: 1024, settings: { slidesToShow: 3, slidesToScroll: 1, itemWidth: '33.33%', duration: 2.25 }},
+                    {breakpoint: 1400, settings: { slidesToShow: 6, slidesToScroll: 1, itemWidth: '16.66%', duration: 2.25 }}
+                ]
+            });
+        }
+    });
+    indLoader.style.display = 'none';
+    indGlider.style.visibility = 'visible';
+    indGlider.style.position = 'relative';  // Reset position
+}
+
+function _vcTabSelector(sectionSelector) {
+    const sections = document.querySelectorAll(sectionSelector);
+    sections.forEach((section) => {
+      const tabs        = section.querySelectorAll(".tab");
+      const contents    = section.querySelectorAll(".content");
+      const images      = section.querySelectorAll(".tab-image");
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const target = tab.getAttribute("data-target");
+          tabs.forEach((t) => t.classList.remove("active"));
+          contents.forEach((content) => content.classList.remove("active"));
+          images.forEach((image) => image.classList.remove("active"));
+
+          tab.classList.add("active");
+          section.querySelector(`#${target}`).classList.add("active");
+          section.querySelector(`#img-${target}`).classList.add("active");
+        });
+      });
+    });
+}
+document.addEventListener("DOMContentLoaded", () => {
+    _vcTabSelector(".tabs-section");
+});

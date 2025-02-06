@@ -1,0 +1,1107 @@
+@import "_default";
+@import "_glider";
+@import "_client-logo";
+@import "_glider";
+@import "_counter-column-section";
+@import "_award-section";
+@import "_three-column";
+@import "guide-topic";
+@import "_menu-v3.12";
+@import "_cta-structure";
+@import "_ctabtn-structure";
+@import "_footer-form";
+
+.hero-section {
+  background: $themeMidNight;
+  background-size: cover;
+  padding: 117px 0 80px;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: $greyBannerfont;
+  }
+
+  a {
+    text-decoration: none;
+    color: $greyBannerfont;
+  }
+
+  .margin-t-30 {
+    margin-top: 30px;
+  }
+
+  &.vc-testimonials-section {
+    .header-right-image {
+      text-align: center;
+    }
+    .flex-2 {
+      &.header-left-content {
+        padding-right: 70px;
+      }
+    }
+  }
+
+  &.for-about-section {
+    .header-right-image {
+      text-align: center;
+    }
+    .flex-2 {
+      &.header-left-content {
+        padding-right: 70px;
+      }
+    }
+  }
+  .count-box-outer {
+    margin: 40px 0 0;
+    .count-box {
+      padding-right: 50px;
+      h2 {
+        margin: 0;
+        color: $darkYellow;
+        font-weight: 700;
+      }
+    }
+  }
+  &.for-resources-banner{min-height:500px;}
+}
+
+.page-template-template-testimonials {
+  .experts-talk-first-section {
+    border-bottom: 1px solid rgba(155, 155, 155, 0.2);
+  }
+  .footer {
+    position: relative;
+    z-index: 9;
+  }
+}
+
+//Resources Section CSS Start From Here//
+
+.resource-row{
+  .flex-3{
+    .box{
+      img{border-radius: 10px 10px 0 0;
+        vertical-align: bottom;
+        height: 200px}
+    }
+  }
+}
+
+//Resources Section CSS Ends From Here//
+
+//About Section CSS Start From Here*/
+
+.our-mission {
+  .right-box {
+    .our-mission-text {
+      padding-left: 40px;
+      position: relative;
+      &::before {
+        content: url("../images/para-icon.png");
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-size: 100%;
+        width: 20px;
+        height: 20px;
+      }
+      p {
+        color: #3f3f3f;
+        line-height: 26px;
+        font-weight: 500;
+      }
+
+      .mission-person {
+        align-items: center;
+        .pesron-image {
+          margin-right: 25px;
+          img {
+            width: 99px;
+            height: 99px;
+            border-radius: 100%;
+          }
+        }
+        .pesron-info {
+          h3 {
+            font-size: 18px;
+            color: #3f3f3f;
+          }
+          p {
+            color: #656565;
+          }
+        }
+      }
+    }
+  }
+}
+
+.core-values {
+  .left-box {
+    position: relative;
+    flex-basis: 45%;
+    img {
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      margin: 0;
+      max-width: none;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .right-box {
+    padding-left: 70px;
+    flex-basis: 55%;
+    padding-right: calc(50vw - 740px);
+  }
+
+  .core-outer {
+    .flex-2 {
+      padding-right: 60px;
+      &:nth-child(2n) {
+        padding-right: 60px;
+      }
+      .box {
+        margin-top: 60px;
+        .icon-box {
+          margin: 0 0 20px;
+          display: block;
+          img{display:block;}
+        }
+        h3 {
+          border-top: 1px solid #d1d1e1;
+          padding: 20px 0 0;
+          margin: 0 0 15px;
+        }
+      }
+    }
+  }
+}
+
+.key-clients {
+  .clients-outer {
+    .left-box {
+      flex-basis: 38%;
+      .dis-flex {
+        margin: 0 0 20px;
+      }
+      h2 {
+        margin: 0;
+        a {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      a.title-link {
+        content: "";
+        width: 48px;
+        height: 48px;
+        margin-left: 50px;
+        border: 1px solid #d1d1e1;
+        background: url(../images/next-icon.png) no-repeat center;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(255, 173, 0, 0.15);
+          color: #212121;
+          border-color: #FFAD00;
+        }
+      }
+    }
+
+    .right-box {
+      max-width: 886px;
+      height: 274px;
+      background: url(../images/key-clients.svg) 0 0 no-repeat;
+      display: inline-block;
+      background-size: 100%;
+      width: 100%;
+      background-position: center;
+    }
+  }
+}
+
+.awards {
+  .clients-outer {
+    .left-box {
+      max-width: 727x;
+      height: 278px;
+      background: url(../images/award-image.svg) 0 0 no-repeat;
+      display: inline-block;
+      background-size: 100%;
+      width: 100%;
+      background-position: center;
+    }
+
+    .right-box {
+      flex-basis: 45%;
+      .dis-flex {
+        margin: 0 0 20px;
+      }
+      h2 {
+        margin: 0;
+        color: $white;
+        a {
+          color: $white;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      a.title-link {
+        content: "";
+        width: 48px;
+        height: 48px;
+        margin-left: 50px;
+        border: 1px solid #d1d1e1;
+        background: url(../images/next-icon-yellow.png) no-repeat center;
+        cursor: pointer;
+        &:hover {
+          background-color: #eeeeee;
+        }
+      }
+    }
+  }
+}
+
+.partnership {
+  .clients-outer {
+    .right-box {
+      max-width: 874px;
+      height: 118px;
+      background: url(../images/partnership-image.svg) 0 0 no-repeat;
+      display: inline-block;
+      background-size: 100%;
+      width: 100%;
+      background-position: center;
+    }
+  }
+}
+
+.valuecoders-our-team-section {
+  .dis-flex {
+    margin-top: 70px;
+  }
+
+  .flex-4 {
+    margin-top: 26px;
+    padding: 0 13px;
+  }
+
+  h3 {
+    color: $white;
+  }
+
+  h5 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 2px;
+    color: $white;
+  }
+
+  .profile-box {
+    position: relative;
+
+    img {
+      width: 100%;
+      filter: grayscale(1);
+    }
+
+    .profile-text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(29, 28, 57, 0.47);
+      backdrop-filter: blur(8.09195px);
+      padding: 14px;
+      text-align: center;
+
+      p {
+        display: none;
+        color: $white;
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 2px;
+      }
+    }
+
+    &:hover {
+      img {
+        filter: sepia(1);
+      }
+
+      .profile-text {
+        p {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+//*About Section CSS Ends Here*/
+
+//Testimonial Section CSS Start From Here*/
+
+.customer-logo-section {
+  .mob-custom-logo-img-box {
+    display: none;
+  }
+}
+
+.client-video-section {
+  &.customer-column-section {
+    .padding-t-20 {
+      padding-top: 20px;
+    }
+
+    iframe {
+      &.active {
+        height: 100%;
+        max-height: unset;
+        z-index: 1;
+      }
+    }
+
+    .yt-player {
+     height:100%;
+     height: 100%;
+     position: absolute !important;
+     top: 0;
+     left: 0;
+     z-index: 999;
+     }
+
+    .video-box {
+      position: relative;
+    }
+
+    .client-description {
+      padding: 30px 25px;
+      text-align: left;
+      box-shadow: 0 4px 35px rgba(22, 101, 216, 0.1);
+
+      &.small-column {
+        padding: 15px 20px;
+      }
+
+      span {
+        text-align: left;
+      }
+
+      .client-name {
+        color: #3f3f3f;
+        font-weight: 600;
+        margin: 0 0 10px;
+      }
+    }
+
+    .flex-3 {
+      padding-left: 10px;
+      padding-right: 10px;
+      position: relative;
+      &:nth-child(1) {
+        .flex-1 {
+          &:last-child {
+            .client-description {
+              //min-height: 356px;
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        .flex-1 {
+          &:first-child {
+            .client-description {
+              // min-height: 420px;
+            }
+          }
+
+          &:last-child {
+            .client-description {
+              // min-height: 560px;
+            }
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        .flex-1 {
+          &:last-child {
+            .client-description {
+              min-height: auto;
+            }
+          }
+
+          &:first-child {
+            .client-description {
+              //min-height: 315px;
+            }
+          }
+        }
+      }
+    }
+
+    .flex-1 {
+      margin-top: 27px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .upper-logo-box {
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .load-more-btn {
+      margin-top: 100px;
+
+      a {
+        position: relative;
+        font-size: 20px;
+        line-height: 29px;
+        color: #05164d;
+        font-weight: 500;
+        transition: all 0.4s linear 0s;
+
+        &::after {
+          content: " ";
+          background: url(../images/arrow-left.png) top center no-repeat;
+          background-size: 100%;
+          width: 11px;
+          height: 17px;
+          position: absolute;
+          top: 7px;
+          right: -20px;
+          transition: all 0.4s linear 0s;
+        }
+        &:hover {
+          text-decoration: underline;
+          &:after {
+            right: -25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//*Testimonial Section CSS Ends Here*/
+
+//*Carrier Page Start From Here*/
+
+.team-valuecoders-section{
+  img{width: 100%; display: block; margin: 0 auto;}
+}
+
+.employee-testimonial-career-section {
+  .first-box {
+    flex-basis: 66.66%;
+  }
+
+  .second-box {
+    flex-basis: 33.33%;
+  }
+
+  .first-row-last-col {
+    .content-box {
+      // padding:41px 63px 0;
+      min-height: 370px;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .client-description {
+    padding: 30px 20px;
+    text-align: center;
+    background: #f8f8f8;
+    border-radius: 10px;
+    height: 100%;
+
+    p {
+      padding: 0 63px 52px;
+      font-style: italic;
+      line-height: 140%;
+    }
+
+    span.client-name {
+      color: #000000;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+    }
+
+    span.client-quote {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 140%;
+      color: #656565;
+    }
+
+    span {
+      display: block;
+      text-align: left;
+    }
+  }
+
+  .flex-3 {
+    border-radius: 10px;
+    .client-video-box{ position: relative;}
+
+    .shadow-box {
+      height: 100%;
+     
+      iframe {
+        vertical-align: bottom;
+    background-color: #656565;
+    width: 100%;
+    border: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+      }
+    }
+  }
+
+  .flex-3,
+  .flex-2 {
+    padding: 0 12px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+
+  .content-box-outer {
+    height: 100%;
+    display: grid;
+    flex-wrap: wrap;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+
+    &:hover {
+      box-shadow: 0px 1px 10px 1px rgba(10, 10, 22, 0.2);
+      border-radius: 10px;
+    }
+  }
+
+  .content-box {
+    position: relative;
+    border-radius: 10px 10px 0 0;
+    padding: 61px 63px 50px;
+    background: #f8f8f8;
+    min-height: 781px;
+
+    &::before {
+      content: "";
+      clear: both;
+      display: block;
+      width: 21px;
+      height: 21px;
+      background: url(../images/quotes-icon.png) no-repeat;
+      position: absolute;
+      left: 39px;
+    }
+
+    p {
+      margin-top: 20px;
+      // min-height: 250px;
+    }
+  }
+
+  .cust-img-box {
+    position: absolute;
+    padding: 30px;
+    background: #f1f1f3;
+    border-radius: 0px 0px 10px 10px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  // .profile-text {
+  //   flex: 1;
+  // }
+
+  .rating {
+    width: 90px;
+    height: 13px;
+    background: url(../images/career-rating-img.png) no-repeat;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .profile {
+    margin-right: 20px;
+  }
+
+  .flex-2 {
+    .content-box {
+      min-height: 675px;
+    }
+  }
+}
+
+.keka-iframe-section {
+  background: $white;
+
+  .keka-iframe {
+    margin-top: 50px;
+  }
+
+  iframe {
+    height: 3000px;
+  }
+}
+
+//Carrier Page Ends Here*/
+@media only screen and (max-width: 1780px) {
+  .employee-testimonial-career-section {
+    .content-box {
+      min-height: 857px;
+    }
+
+    .flex-2 {
+      .content-box {
+        min-height: 730px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .core-values {
+    .right-box {
+      padding-right: calc(50vw - 690px);
+      padding-left: 60px;
+    }
+
+    .core-outer {
+      .flex-2 {
+        padding-right: 30px;
+        &:nth-child(2n) {
+          padding-right: 30px;
+        }
+        .box {
+          margin-top: 30px;
+          .icon-box {
+            margin: 0 0 15px;
+            display: block;
+          }
+          h3 {
+            padding: 15px 0 0;
+            margin: 0 0 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .employee-testimonial-career-section {
+    .content-box {
+      padding: 30px;
+      min-height: 631px;
+
+      p {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+
+    .cust-img-box {
+      h5 {
+        font-size: 15px;
+      }
+
+      h6 {
+        font-size: 13px;
+        font-weight: 500;
+      }
+    }
+
+    .flex-2 {
+      .content-box {
+        min-height: 540px;
+      }
+    }
+
+    .client-description {
+      p {
+        padding: 0 29px 36px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .core-values {
+    .right-box {
+      padding-left: 50px;
+      padding-right: calc(50vw - 630px);
+    }
+
+    .core-outer {
+      .flex-2 {
+        padding-right: 20px;
+        &:nth-child(2n) {
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+
+  .client-video-section.customer-column-section {
+    .load-more-btn {
+      margin-top: 60px;
+    }
+  }
+
+  .employee-testimonial-career-section {
+    .content-box {
+      min-height: 680px;
+    }
+
+    .flex-2 {
+      .content-box {
+        min-height: 585px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1320px) {
+  .core-values {
+    .right-box {
+      padding-left: 40px;
+      padding-right: calc(50vw - 580px);
+    }
+    .core-outer {
+      .flex-2 {
+        padding-right: 20px;
+        &:nth-child(2n) {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  .awards {
+    .clients-outer {
+      .right-box {
+        a.title-link {
+          margin-left: 35px;
+        }
+      }
+    }
+  }
+
+  .key-clients {
+    .clients-outer {
+      .left-box {
+        a.title-link {
+          margin-left: 35px;
+        }
+      }
+    }
+  }
+
+  .employee-testimonial-career-section {
+    .content-box {
+      min-height: 735px;
+    }
+
+    .flex-2 {
+      .content-box {
+        min-height: 620px;
+      }
+    }
+  }
+
+  .keka-iframe-section {
+    iframe {
+      height: 4400px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .core-values {
+    .right-box {
+      padding-right: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  .employee-testimonial-career-section {
+    .content-box {
+      p {
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+
+    .profile {
+      margin-right: 20px;
+      flex-basis: 28%;
+    }
+
+    .profile-text {
+      flex-basis: 63%;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .hero-section {
+    padding: 130px 0 50px;
+    text-align: center;
+    .for-client-logo-box {
+      justify-content: center;
+    }
+    h1 {
+      margin-bottom: 15px;
+    }
+
+    &.vc-testimonials-section {
+      .flex-2 {
+        &.header-left-content {
+          padding-right: 0;
+          margin: 0 0 20px;
+        }
+      }
+    }
+
+    &.for-about-section {
+      .flex-2 {
+        &.header-left-content {
+          padding-right: 0;
+          margin: 0 0 20px;
+        }
+      }
+    }
+    .count-box-outer {
+      margin: 10px 0 0;
+      justify-content: center;
+      .count-box {
+        padding-right: 30px;
+        margin: 20px 0 0;
+      }
+    }
+  }
+
+  .our-mission {
+    .right-box {
+      margin: 30px 0 0;
+      .our-mission-text {
+        p {
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  .core-values {
+    .left-box {flex-basis: 100%;
+      img {
+        position: initial;
+      }
+    }
+    .right-box {
+      padding: 0 20px;
+      flex-basis: 100%;
+      margin: 30px 0 0;
+    }
+    .core-outer {
+      .flex-2 {
+        padding-right: 0;
+        &:nth-child(2n) {
+          padding-right: 0;
+        }
+        .box {
+          margin-top: 25px;
+          h3 {
+            padding: 10px 0 0;
+            margin: 0 0 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .key-clients {
+    .clients-outer {
+      .left-box {
+        flex-basis: 100%;
+
+        a.title-link {
+          content: "";
+          width: 40px;
+          height: 40px;
+          background-size: 20px;
+        }
+      }
+
+      .right-box {
+        max-width: 500px;
+        height: 170px;
+      }
+    }
+  }
+
+  .awards {
+    .clients-outer {
+      .left-box {
+        max-width: 500px;
+        height: 170px;
+        order: 2;
+        margin: 20px 0 0;
+      }
+
+      .right-box {
+        flex-basis: 100%;
+        order: 1;
+
+        a.title-link {
+          width: 40px;
+          height: 40px;
+          background-size: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .client-video-section.customer-column-section {
+    .load-more-btn {
+      margin-top: 40px;
+    }
+  }
+
+  .employee-testimonial-career-section {
+    .flex-2,
+    .flex-3,
+    .first-box,
+    .second-box {
+      flex-basis: 100%;
+    }
+
+    .content-box {
+      min-height: auto;
+    }
+
+    .first-row-last-col {
+      .content-box {
+        min-height: auto;
+      }
+    }
+
+    .cust-img-box {
+      position: relative;
+    }
+
+    .flex-2 {
+      .content-box {
+        min-height: auto;
+      }
+    }
+
+    .profile {
+      margin-right: 10px;
+      flex-basis: 14%;
+    }
+
+    .profile-text {
+      flex-basis: 80%;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hero-section {
+    .count-box-outer {
+      .count-box {
+        padding: 0 10px;
+        flex-basis: 50%;
+      }
+    }
+  }
+  .customer-logo-section {
+    .custom-logo-img-box {
+      display: none;
+    }
+    .mob-custom-logo-img-box {
+      display: block;
+      text-align: center;
+      img {
+        max-width: 367px;
+        margin-top: 50px;
+        width: 100%;
+      }
+    }
+  }
+
+  .employee-testimonial-career-section {
+    .flex-2,
+    .flex-3 {
+      padding: 0px;
+    }
+
+    .first-box {
+      flex-basis: 100%;
+    }
+
+    .second-box {
+      flex-basis: 100%;
+    }
+
+    .first-row-last-col {
+      .content-box {
+        // padding: 17px 30px 20px;
+      }
+    }
+
+    .content-box {
+      padding: 17px 30px 20px;
+    }
+
+    .client-description {
+      p {
+        padding: 0 30px 38px;
+      }
+    }
+
+    .flex-3,
+    .flex-2 {
+      margin-top: 15px;
+    }
+
+    .profile {
+      display: none;
+    }
+  }
+}
