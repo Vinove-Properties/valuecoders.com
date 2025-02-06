@@ -867,12 +867,10 @@ $csrf_token = ( isset( $_SESSION['vc-csrf'] ) &&  is_array( $_SESSION['vc-csrf']
   let hasHomeaslderw = document.getElementById("footer-client-slider-bot");
   if( hasHomeaslderw ){
   window.addEventListener("load", function () {
-  
-  /*
   document.querySelector(".footer-client-slider .glider").addEventListener("glider-slide-visible", function (event){
   var glider = Glider(this);
   });
-  */
+  
   const gliderID  = new Glider(document.querySelector(".footer-client-slider .glider"), {
   slidesToShow: 1,
   slidesToScroll: 1,
