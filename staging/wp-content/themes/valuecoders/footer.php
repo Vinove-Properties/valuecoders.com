@@ -1,3 +1,4 @@
+
 <?php 
 if( isset($_SERVER['SCRIPT_FILENAME']) && (strpos($_SERVER['SCRIPT_FILENAME'], "404.php") === false ) ){
 $footerOpts 		= get_field('footer-opts');

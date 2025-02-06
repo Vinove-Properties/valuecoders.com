@@ -20,16 +20,28 @@
         </div>
       </div>
       <div class="subs-box">
-        <h3>Discover how we can 
-          help your business grow
-        </h3>
-        <div class="cta-wrap  justify-center">
-          <div class="cta-btn">
-            <div class="btn-sec">
-              <a href="<?php echo site_url('/contact'); ?>" class="btn rounded" data-wpel-link="internal" target="_blank" rel="follow"><span class="text-white">Get Started</span></a>
-            </div>
-          </div>
-        </div>
+        <ul>
+          <li>
+            <picture>
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/fotaw-01.svg" alt="Valuecoders" width="107" height="60">
+            </picture>
+          </li>
+          <li>
+            <picture>
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/fotaw-02.svg" alt="Valuecoders" width="107" height="60">
+            </picture>
+          </li>
+          <li>
+            <picture>
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/fotaw-03.svg" alt="Valuecoders" width="107" height="60">
+            </picture>
+          </li>
+          <li>
+            <picture>
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/fotaw-04.svg" alt="Valuecoders" width="107" height="60">
+            </picture>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="dis-flex footer-middle">
@@ -83,62 +95,144 @@
       </div>
     </div>
     <div class="dis-flex footer-bottom">
-      <div class="flex-3 logo-box">
+      <div class="flex-4 logo-box">
         <h3>PROUDLY BROUGHT TO YOU BY ValueCoders</h3>
         <div class="dis-flex">
           <a href="https://www.invoicera.com/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
             <picture>
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/inv-logo.svg" width="156" height="40" alt="Invoicera">
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/images/home-images/inv-logo.svg" width="156" height="40" alt="Invoicera">
             </picture>
           </a>
           <a href="https://www.workstatus.io/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
             <picture>
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/ws-logo.svg" width="188" height="26" alt="Workstatus"> 
-          </picture>
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/images/home-images/ws-logo.svg" width="188" height="26" alt="Workstatus"> 
+            </picture>
           </a>
         </div>
       </div>
-      <div class="flex-3 social-box">
+      <div class="flex-4 social-box">
         <h3>Follow Us</h3>
         <div class="dis-flex">
           <a href="https://www.linkedin.com/company/valuecoders" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">
             <picture>
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/soc-01.svg" width="29" height="29" alt="linkedin">
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/soc-01.svg" width="29" height="29" alt="linkedin">
             </picture>
           </a>
           <a href="https://www.facebook.com/ValueCoders" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">
             <picture>
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/soc-02.svg" width="29" height="29" alt="facebook">
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/soc-02.svg" width="29" height="29" alt="facebook">
             </picture>
           </a>
           <a href="https://twitter.com/ValueCoders" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">
             <picture>
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/soc-03.svg" width="29" height="29" alt="twitter">
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/soc-03.svg" width="29" height="29" alt="twitter">
             </picture>
           </a>
           <a href="https://www.instagram.com/valuecodersofficial_/?igshid=qfk286mq0wee" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">
             <picture>
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/soc-04.svg" width="29" height="29" alt="instagram">
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/soc-04.svg" width="29" height="29" alt="instagram">
             </picture>
           </a>
           <a href="https://www.youtube.com/channel/UCCnijyLczGPUGI8aBkK3pTw?sub_confirmation=1" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">
             <picture>
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/soc-05.svg" width="29" height="29" alt="youtube">
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/images/home-images/soc-05.svg" width="29" height="29" alt="youtube">
             </picture>
           </a>
         </div>
       </div>
-      <div class="flex-3 copyright">
-        <a href="https://www.valuecoders.com/" target="_blank" data-wpel-link="internal" rel="follow">
-          <picture>
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/vc-logo.svg" width="191" height="42" alt="Logo">
-          </picture>
-        </a>
-        <p>Copyright © 2004 - 2025 Valuecoders, <br>All Rights Reserved. A Vinove Company.
-        </p>
+      <div class="flex-4 footer-rating">
+<!-- rating section -->
+<script type="text/javascript">
+function changerate(starno){
+    var starthover = document.getElementById("starthover");
+    starthover.classList.remove("one");
+    starthover.classList.remove("two");
+    starthover.classList.remove("three");
+    starthover.classList.remove("four");
+    starthover.classList.remove("five");
+    starthover.classList.add(starno);
+}
+function ratenow(){
+    var x = document.getElementById("star");
+    var y = document.getElementById("rated");
+
+    if (x.style.display === "block") {
+    x.style.display = "none";
+    y.style.display = "block";
+    document.getElementById('ratebtn').innerHTML = 'Rate Us';
+    } else {
+    document.getElementById('ratebtn').innerHTML = 'Click to rate';
+
+    x.style.display = "block";
+    y.style.display = "none";
+    }
+}
+let stars = [] //array to hold stars
+function star(event) {
+  let icons = document.querySelectorAll('.star') // grab all icons
+  let idx = Array.from(icons).indexOf(event.target) // get index of selected icon
+  if (stars.includes(event.target.id)) { // if selected icon is in array of stars
+    stars.splice(idx, stars.length ) // remove that icon and all following icons fro array
+    for (let i = idx; i <= icons.length - 1; i++) { // loop thru all icons and set class and color
+      icons[i].className = "fa fa-star-o star";
+      icons[i].style.color = "black";
+    }
+  } else { // if selected icon is not in array of stars
+    stars = [] // clear array
+    for (let i = 0; i <= idx; i++) { // loop thru all icons and set class and color
+      stars.push(icons[i].id) // add icon to array of stars
+      icons[i].className = "fa fa-star star";
+      icons[i].style.color = "#60B741";
+    }
+  }
+  var total_points = stars.length.toString();
+   var user_ip = '<?=get_client_ip_user()?>';
+   var rating_page_url = "<?=get_permalink()?>";
+       
+var data = "total_points=" + total_points + "&user_ip=" + user_ip + "&rating_page_url=" + rating_page_url;
+   var xhttp = new XMLHttpRequest();
+   
+   xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+       resobj = JSON.parse(this.responseText);
+        document.getElementById("rate_msg").innerHTML = resobj.data;
+       }
+     };
+     
+   xhttp.open("POST", "<?=site_url()?>/wp-admin/admin-ajax.php?action=rateus", true);
+   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+   xhttp.send(data);
+ // document.getElementById("demo").innerHTML = stars.length.toString(); // set number of stars as length of array of stars
+}
+</script>
+<span class="star-outer" id="star" style="display:none">
+    <span class="star-inner star-hover" id="starthover">
+        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('one')"></i> 
+        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('two')"></i> 
+        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('three')"></i> 
+        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('four')"></i> 
+        <i class="star-icon vlazy" onclick="star(event)" onmouseover="changerate('five')"></i> 
+    </span>
+    <span id="rate_msg"></span>
+</span>
+    <span class="star-outer" id="rated">
+    <i class="star-icon vlazy"></i>
+    <i class="star-icon vlazy"></i>
+    <i class="star-icon vlazy"></i>
+    <i class="star-icon vlazy"></i>
+    <i class="star-icon vlazy"></i>
+    4.9 out of 5.0 by
+    </span>
+        <span class="client-outer">
+        <a href="javascript:void(0)" onclick="ratenow()" id="ratebtn" class="rate-us">Rate Us</a> 2437 clients on over 10800+ projects
+        </span>
+      </div>
+      <div class="flex-4 copyright">
         <a href="//www.dmca.com/Protection/Status.aspx?ID=9f4af2d1-a5c5-4031-903c-b6dfb2c56625" title="DMCA.com Protection Status" style="margin-left:0;margin-top: 20px; display:block" class="dmca-badge">
         <img src ="https://images.dmca.com/Badges/dmca-badge-w200-5x1-06.png?ID=9f4af2d1-a5c5-4031-903c-b6dfb2c56625"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
       </div>
     </div>
   </div>
+  <div class="footer-copyright">Copyright © 2004 - 2024 ValueCoders, All Rights Reserved. A Vinove Company.</div>
 </footer>

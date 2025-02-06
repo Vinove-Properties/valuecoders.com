@@ -805,7 +805,7 @@ function defActiveHire( $hirePage, $exCat ){
             <?php //if( $mcat === "demand-teams" ) : ?>
             <!-- Hire Menu Starts -->
             <li class="menu-item-has-children hire-menu-item">
-              <a class="mst-link" href="<?php echo $site_url; ?>hire-developers">Hire <i><img class="nor" loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/header-images/header-images/hire-icon.png"><img class="hov" loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/header-images/hire-yellow.png"></i></a> <span class="arrow-btn"></span>
+              <a class="mst-link" href="<?php echo $site_url; ?>hire-developers">Hire <i><img class="nor" loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/header-images/hire-icon.png"><img class="hov" loading="lazy" src="<?php echo $tpl_url; ?>/v6.0/header-images/hire-yellow.png"></i></a> <span class="arrow-btn"></span>
               <div class="menu-mega">
                 <div class="container">
                   <div class="dis-flex tab-menu">
