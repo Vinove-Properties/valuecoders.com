@@ -1620,3 +1620,91 @@ function _vcTabSelector(sectionSelector) {
 document.addEventListener("DOMContentLoaded", () => {
     _vcTabSelector(".tabs-section");
 });
+
+if (document.getElementById("solution-slide")) {
+window.addEventListener("load", () => {
+const gliderElement = document.querySelector(".solution-slider .glider");
+const progressBar   = document.querySelector(".solution-progress-bar");
+if (gliderElement && progressBar) {
+let glider;
+
+glider = new Glider(gliderElement, {
+slidesToShow: 5,
+slidesToScroll: 1,
+draggable: true,
+duration: 2.25,
+dots: ".dots",
+arrows: {
+  prev: ".tail-prev",
+  next: ".tail-next",
+},
+responsive: [
+  {
+    breakpoint: 1024,
+    settings: {
+      slidesToShow: 5,
+      slidesToScroll: 1,
+    },
+  },
+  {
+    breakpoint: 768,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 1,
+    },
+  },
+  {
+    breakpoint: 480,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    },
+  },
+],
+});
+
+// Update progress bar
+function updateProgress() {
+const currentSlide = glider.slide;
+const totalSlides = glider.slides.length;
+const slidesToShow = glider.opt.slidesToShow;
+const maxSlides = totalSlides - slidesToShow;
+const progress = (currentSlide / maxSlides) * 100;
+progressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+}
+
+// Initialize progress bar
+updateProgress();
+
+// Update progress bar when slides change
+gliderElement.addEventListener("glider-slide-visible", updateProgress);
+
+// Add smooth transition when slides move
+gliderElement.addEventListener("glider-refresh", () => {
+gliderElement.style.transition = "transform 0.5s ease";
+});
+
+// Handle arrow clicks
+const prevArrow = document.querySelector(".tail-prev");
+const nextArrow = document.querySelector(".tail-next");
+
+prevArrow.addEventListener("click", () => {
+setTimeout(updateProgress, 50); // Small delay to ensure glider state is updated
+});
+
+nextArrow.addEventListener("click", () => {
+setTimeout(updateProgress, 50); // Small delay to ensure glider state is updated
+});
+
+// Handle window resize
+let resizeTimer;
+window.addEventListener("resize", () => {
+clearTimeout(resizeTimer);
+resizeTimer = setTimeout(() => {
+  glider.refresh(true);
+  updateProgress();
+}, 250);
+});
+}
+});
+}

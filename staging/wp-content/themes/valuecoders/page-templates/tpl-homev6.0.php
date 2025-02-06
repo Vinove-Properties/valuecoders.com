@@ -106,9 +106,9 @@ if( isset($workWith['is_enabled']) && ($workWith['is_enabled'] == "yes") ) :
 
 <?php 
 $servCol = get_field('we-serv');
-echo '<pre>';
-print_r($servCol);
-echo '</pre>';
+// echo '<pre>';
+// print_r($servCol);
+// echo '</pre>';
 if( isset($servCol['is_enabled']) && ($servCol['is_enabled'] == "yes") ) :
 ?>
 <section class="service-scroller padding-t-120 padding-b-120" id="serv">
