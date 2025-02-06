@@ -1708,3 +1708,62 @@ resizeTimer = setTimeout(() => {
 }
 });
 }
+
+
+if (document.getElementById("success-glider")) {
+window.addEventListener("load", function () {
+var gliderElement = document.querySelector(".success-slider .glider");
+if (gliderElement) {
+  new Glider(gliderElement, {
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    draggable: true,
+    scrollLock: true,
+    duration: 2.25,
+    dots: ".success-slider .dots",
+    arrows: { 
+      prev: "#success-glider .test-prev", 
+      next: "#success-glider .test-next" 
+    },
+    responsive: [
+      // Mobile first: 320px and below
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          duration: 2.25,
+        },
+      },
+      // Tablets: 767px and below
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          duration: 2.25,
+        },
+      },
+      // Laptops: 1024px and below
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          duration: 2.25,
+        },
+      },
+      // Large screens: 1400px and below
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          duration: 2.25,
+        },
+      },
+    ],
+  });
+}
+});
+}
