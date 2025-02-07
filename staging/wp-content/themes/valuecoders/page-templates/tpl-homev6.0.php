@@ -501,6 +501,4 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
 
 
 
-
-
 <?php get_footer(); ?>
