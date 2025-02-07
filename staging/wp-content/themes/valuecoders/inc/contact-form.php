@@ -59,12 +59,14 @@ $csrf_token = ( isset( $_SESSION['vc-csrf'] ) &&  is_array( $_SESSION['vc-csrf']
         <div class="form-inner dis-flex">
           <div class="form-text-cont">
             <div class="user-input">
+            <label>Full Name</label>
               <input type="text" autocomplete="off" id="cont_name" placeholder="Full Name" class="input-field" value="" name="user-name" />
               <small>Error Message</small>
             </div>
           </div>
           <div class="form-text-cont">
             <div class="user-input">
+            <label>Email</label>
               <input type="text" autocomplete="off" id="cont_email" placeholder="Email Address" class="input-field" 
                 value="" name="user-email" />
               <small>Error Message</small>
@@ -72,18 +74,21 @@ $csrf_token = ( isset( $_SESSION['vc-csrf'] ) &&  is_array( $_SESSION['vc-csrf']
           </div>
           <div class="form-text-cont">
             <div class="user-input">
+            <label>Phone No.</label>
               <input type="text" autocomplete="off" class="input-field" id="cont_phpne" placeholder="Phone Number (Optional)" value="" name="user-phone" />
               <small>Error Message</small>
             </div>
           </div>
           <div class="form-text-cont cont_country_section">
             <div class="user-input">
+            <label>Select Country</label>
               <input class="input-field input-skype" autocomplete="off" id="cont_country" type="text" placeholder="Country" value="" name="user-country" />
               <small>Error Message</small>
             </div>
           </div>
           <div class="form-text-cont width-full">
             <div class="user-input">
+            <label>Your Requirements</label>
               <textarea class="input-field comment-input" autocomplete="off" id="user-req" placeholder="Project Brief" name="user-req"></textarea>
               <small>Error Message</small>
               <div class="drop-input attachment_brw" id="uploadcontact" >
@@ -116,7 +121,7 @@ $csrf_token = ( isset( $_SESSION['vc-csrf'] ) &&  is_array( $_SESSION['vc-csrf']
               <span class="error" id="captchaerror"></span>
             </div>
           </div>
-          <div class="btn-sec">
+          <div class="btn-container">
             <div class="user-input cta-btn checkout">
               <input type="hidden" name="Uploadedfilename" id="Uploadedfilename" value="">
               <input type="hidden" id="g-recaptcha-response-footer" name="g-recaptcha-response">
@@ -129,7 +134,7 @@ $csrf_token = ( isset( $_SESSION['vc-csrf'] ) &&  is_array( $_SESSION['vc-csrf']
               }
               ?>            
               <div class="user-input btn rounded checkout">
-                <input type="submit" id="submitButton" class="checkout-submit" 
+                <input type="submit" id="submitButton" class="cta-button" 
                   value="<?php echo (is_page_template(['page-templates/template-hirepage.php', 'page-templates/tpl-free-trial.php'])) ? 'Enquire Now' : 'Enquire Now' ?>" />
                 <!--<span class="arrow-wrap">
                   <span class="arrow primera"></span>
