@@ -24,7 +24,8 @@
   position: relative;
   display: flex;
   display: -webkit-flex;
-  background: $gradient;
+  background-color: rgba(4, 12, 23, .5);
+
 
   #background-video {
     width: 100%;
@@ -229,7 +230,7 @@
 }
 
 @media (max-width: 979px) {
-  .hero-section {
+  .hero-section {background: $gradient;
     #background-video {
       display: none;
     }

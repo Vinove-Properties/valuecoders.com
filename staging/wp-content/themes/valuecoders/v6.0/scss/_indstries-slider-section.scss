@@ -30,7 +30,7 @@
       }
 
       &.glider-slide {
-        min-width: 280px;
+        //min-width: 280px;
       }
 
       .card-bg {
@@ -281,70 +281,72 @@
 
 @media (max-width: 1024px) {
 
+    .industries-slider-section {
+      padding-left: 20px;
+      padding-right: 20px;
 
-  .industries-slider-section {padding-left:20px; padding-right:20px;
-    .top-section {
-      width:100%;
-      text-align: center;
-      margin: initial;
-      &.b-100 {
-        text-align: center;
-        margin: initial;
+      .top-section{width: 100%;
+        &.b-100{ text-align: center;
+          margin: initial;}
+      }
+  
+      .industries-slider {
+        .industry-card {
+          width: calc(50% - 20px) !important; // Subtract the total horizontal margin
+          max-width: calc(50% - 20px); // Prevent overflow
+          margin: 0 10px; // Space between cards
+  
+          &:first-child {
+            margin-left: 10px !important;
+          }
+
+          .card-content{
+            h4{line-height: 28px;}
+          }
+  
+          .card-bg {
+            height: 100%;
+          }
+        }
+  
+        .test-button {
+          top: -70px;
+          right: 60px;
+        }
       }
     }
-    .industries-slider {
-      .industry-card {
-        width: 244px !important;
-   
+
   
-        &:first-child {
-          margin-left: 0 !important;
-        }
-  
-        &.glider-slide {
-          min-width:initial !important;
-        }
-  
-        .card-bg {
-          height: 100%;
-        }
-        
-      }
-  
-      .test-button {
-        top: -70px;
-        right: 60px;
-      }
-    }
-  }
 
 }
 @media (max-width: 979px) {
 }
 
 @media (max-width: 767px) {
+  .industries-slider-section {
+    padding-left: 20px;
+    padding-right: 20px;
 
-
-  .industries-slider-section {padding-left:20px; padding-right:20px;
-    
     .industries-slider {
       .industry-card {
-        width: 100% !important;
-        &.glider-slide {
-          min-width: 335px !important;
-        }
+        width: 100vw !important;  // Ensure full width of viewport
+        max-width: 100vw;  // Prevent extra spacing
+        margin:0 5px;
+
+        &:first-child{margin-left: 4px !important;}
+
         .card-bg {
           height: 100%;
         }
       }
-  
+
       .test-button {
         position: static;
-        margin: 30px auto;;
+        margin: 30px auto;
       }
     }
   }
-
 }
+
 
 /*Media Query Ends Here*/

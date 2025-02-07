@@ -22,12 +22,10 @@
 
     .glider-slide {
       flex: 0 0 67%;
-      min-width: 0;
       transition: all 0.3s ease;
 
       &:nth-child(2n) {
         flex: 0 0 30%;
-        min-width: 0;
 
         opacity: 1;
       }
@@ -39,7 +37,7 @@
       border-radius: 10px;
       margin: 0 10px;
       width: 100% !important;
-      min-width: 0;
+      //min-width: 0;
 
       &.glider-slide {
       }
@@ -297,10 +295,9 @@
       .industry-card {
         flex: 0 0 100%;
         flex: 100%;
-        margin: 0;
-        width: 100% !important;
-        min-width: 352px !important;
-        padding: 0;
+        width: 100vw !important;  // Ensure full width of viewport
+        max-width: 100vw;  // Prevent extra spacing
+        margin:0 5px;
 
         .card-bg {
           height: 400px;
@@ -356,10 +353,10 @@
   .success-slider-section {
     .success-slider {
       .industry-card {
-        margin: 0;
-        width: 100% !important;
-        min-width: 350px !important;
-        padding: 0 5px;
+        flex: 0 0 100%;
+        flex: 100%;
+        width: 100vw !important;  // Ensure full width of viewport
+        max-width: 100vw;  // Prevent extra spacing
 
         .card-bg {
           height: 400px;
