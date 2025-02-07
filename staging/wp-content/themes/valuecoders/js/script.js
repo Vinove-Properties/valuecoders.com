@@ -1605,14 +1605,16 @@ function _vcTabSelector(sectionSelector) {
       const images      = section.querySelectorAll(".tab-image");
       tabs.forEach((tab) => {
         tab.addEventListener("click", () => {
-          const target = tab.getAttribute("data-target");
-          tabs.forEach((t) => t.classList.remove("active"));
-          contents.forEach((content) => content.classList.remove("active"));
-          images.forEach((image) => image.classList.remove("active"));
+            const target = tab.getAttribute("data-target");
+            tabs.forEach((t) => t.classList.remove("active"));
+            contents.forEach((content) => content.classList.remove("active"));
+            images.forEach((image) => image.classList.remove("active"));
 
-          tab.classList.add("active");
-          section.querySelector(`#${target}`).classList.add("active");
-          section.querySelector(`#img-${target}`).classList.add("active");
+            tab.classList.add("active");
+            section.querySelector(`#${target}`).classList.add("active");
+            if( section.querySelector(`#img-${target}`) ){
+                section.querySelector(`#img-${target}`).classList.add("active");  
+            }          
         });
       });
     });
