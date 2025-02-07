@@ -194,6 +194,79 @@
     </div>
   </div>
 </div>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "LocalBusiness",
+  "@id": "ValueCoders",
+  "url": "https://www.valuecoders.com/blog",
+  "name": "ValueCoders | On-Demand Software Development Company",
+  "description": "Leading software development company specializing in on-demand solutions.",
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "10th floor, Tower-B, UNITECH CYBER PARK, Sector 39",
+      "addressLocality": "Gurugram",
+      "addressRegion": "Haryana",
+      "postalCode": "122001",
+      "addressCountry": "India"
+    },
+    {
+      "@type": "PostalAddress",
+      "streetAddress": "11th floor, Max Square, Noida-Greater Noida Expy",
+      "addressLocality": "Noida",
+      "addressRegion": "UP",
+      "postalCode": "201304",
+      "addressCountry": "India"
+    }
+  ],
+  "telephone": "+917042020782",
+  "openingHours": ["Mo-Fr 09:00-18:00"],
+  "image": "https://www.valuecoders.com/blog/wp-content/uploads/2019/08/logo-2-1.png.webp",
+  "priceRange": "$18 - $49",
+  "areaServed": ["India"],
+  "sameAs": [
+    "https://www.facebook.com/ValueCoders",
+    "https://twitter.com/ValueCoders",
+    "https://www.instagram.com/valuecoder/",
+    "https://www.linkedin.com/company/valuecoders",
+    "https://www.youtube.com/valuecoders/"
+  ]
+}
+
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Measure and Improve Digital Marketing ROI",
+  "description": "Measuring the profitability of digital marketing campaigns is necessary for any business’s success. Here, you will learn how to calculate the ROI accurately to assess and improve the effectiveness of digital marketing campaigns.",
+  "image": "https://www.valuecoders.com/blog/wp-content/uploads/2025/01/HoDigital-Marketing-ROI_-432x225.webp",
+  "author": {
+    "@type": "Person",
+    "name": "Author Name",
+    "url": "https://www.valuecoders.com/blog/author/alan-cooper/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ValueCoders",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.valuecoders.com/blog/wp-content/uploads/2019/08/logo-2-1.png.webp"
+    }
+  },
+  "url": "https://www.valuecoders.com/blog/analytics/how-to-boost-digital-marketing-roi/",
+  "datePublished": "2025-01-14",
+  "dateModified": "2025-01-14"
+}
+</script>
+
+
+
 <?php wp_footer(); ?>
 </body>
 </html>
