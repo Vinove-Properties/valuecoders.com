@@ -475,4 +475,27 @@ if( isset($trendElm['required']) && ($trendElm['required'] == "yes") ) :
 </div>
 </div>
 </section>
+<?php 
+$faqs       = get_field('tpl-faq');
+if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
+?>
+<section class="faq-section padding-t-120 padding-b-120">
+  <div class="container">
+    <div class="top-section b-100"><?php echo $faqs['content'];  ?></div>
+    <?php
+    if( $faqs['faq'] ){
+      echo '<div class="faq-outer" itemscope itemtype="https://schema.org/FAQPage">';
+      foreach ($faqs['faq'] as $row){
+        //$faqCount++;
+        echo '<div class="faq-accordion-item-outer" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 class="faq-accordion-toggle" itemprop="name">'.$row['question'].'</h3>
+        <div class="faq-accordion-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">'.$row['answer'].'</div></div>
+        </div>';
+      }
+      echo '</div>';
+    } 
+    ?>
+  </div>
+</section>
+<?php endif; ?>
 <?php get_footer(); ?>
