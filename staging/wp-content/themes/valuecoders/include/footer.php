@@ -215,9 +215,9 @@
         icons[i].style.color = "#60B741";
       }
     }
-    var total_points = stars.length.toString();
-     var user_ip = '2a01:4f8:1c1c:aaef::1';
-     var rating_page_url = "https://www.valuecoders.com/";
+    var total_points      = stars.length.toString();
+     var user_ip          = "<?php echo vcGetUserIP(); ?>";
+     var rating_page_url  = "https://www.valuecoders.com/";
          
   var data = "total_points=" + total_points + "&user_ip=" + user_ip + "&rating_page_url=" + rating_page_url;
      var xhttp = new XMLHttpRequest();
