@@ -113,46 +113,7 @@ if( empty($rName) ){
 }
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "LocalBusiness",
-  "@id": "ValueCoders",
-  "url": "https://www.valuecoders.com/",
-  "name" : "ValueCoders - <?php echo $rName; ?>",
-  "description": "Leading software development company specializing in on-demand solutions.",
-  "address": [
-    {
-      "@type": "PostalAddress",
-      "streetAddress": "10th floor, Tower-B, UNITECH CYBER PARK, Sector 39",
-      "addressLocality": "Gurugram",
-      "addressRegion": "Haryana",
-      "postalCode": "122001",
-      "addressCountry": "India"
-    },
-    {
-      "@type": "PostalAddress",
-      "streetAddress": "11th floor, Max Square, Noida-Greater Noida Expy",
-      "addressLocality": "Noida",
-      "addressRegion": "UP",
-      "postalCode": "201304",
-      "addressCountry": "India"
-    }
-  ],
-  "telephone": "+917042020782",
-  "openingHours": ["Mo-Fr 09:00-18:00"],
-  "image": "https://www.valuecoders.com/wp-content/uploads/2022/05/IT-outsourcing-Company.jpg.webp",
-  "priceRange": "$18 - $49",
-  "areaServed": ["India"],
-  "sameAs": [
-    "https://www.facebook.com/ValueCoders",
-    "https://twitter.com/ValueCoders",
-    "https://www.instagram.com/valuecoder/",
-    "https://www.linkedin.com/company/valuecoders",
-    "https://www.youtube.com/valuecoders/"
-  ]
-}   
-</script>
+
 <script type="application/ld+json">
 {
 "@context": "http://schema.org",
