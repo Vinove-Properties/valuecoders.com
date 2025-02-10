@@ -117,7 +117,7 @@ if( isset($servCol['is_enabled']) && ($servCol['is_enabled'] == "yes") ) :
 <div class="left-panel">
 <div class="top-section"><?php echo $servCol['content']; ?></div>
 <div class="ser-button">
-  <i><img src="<?php _vers_six('images/home-images/vc-fav.svg'); ?>" width="40" height="40"></i>
+  <i><img src="<?php _vers_six('images/home-images/vc-fav.svg'); ?>" width="40" height="40" alt="valuecoders"></i>
   <?php echo $servCol['sub-content']; ?>
   <div class="btn-container"><a href="<?php echo site_url('contact'); ?>" class="cta-button yellow">GET STARTED</a></div>
 </div>
@@ -163,7 +163,7 @@ if( isset($ctaOne['required']) && ($ctaOne['required'] == "yes") ) :
     ?>
     <picture>
       <source type="image/webp" srcset="<?php _vers_six('images/home-images/cta-image.png'); ?>">
-      <img loading="lazy" src="<?php _vers_six('images/home-images/cta-image.png'); ?>"width="420" height="394">
+      <img loading="lazy" src="<?php _vers_six('images/home-images/cta-image.png'); ?>"width="420" height="394" alt="valuecoders">
     </picture>
     <?php } ?>
   </div>
@@ -254,7 +254,7 @@ if( isset($ctaTwo['required']) && ($ctaTwo['required'] == "yes") ) :
     ?>
     <picture>
         <source type="image/webp" srcset="<?php _vers_six('images/home-images/cta-image02.png'); ?>">
-        <img loading="lazy" src="<?php _vers_six('images/home-images/cta-image02.png'); ?>" width="538" height="430">
+        <img loading="lazy" src="<?php _vers_six('images/home-images/cta-image02.png'); ?>" width="538" height="430" alt="valuecoders">
       </picture>
     <?php } ?>
   </div>
