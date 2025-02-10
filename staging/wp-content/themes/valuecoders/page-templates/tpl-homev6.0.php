@@ -593,6 +593,12 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
                 </picture>
               </div>
               <div class="test-row">
+                <picture>
+                  <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/test-03.png">
+                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/images/home-images/test-03.png" alt="Valuecoders" width="290" height="328">
+                </picture>
+              </div>
+              <div class="test-row">
                 <div class="vid-wrap">
                   <div class="client-videos" id="cvbox-3">
                     <div class="client-video-box">
@@ -616,12 +622,7 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
                   </div>
                 </div>
               </div>
-              <div class="test-row">
-                <picture>
-                  <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/test-03.png">
-                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/images/home-images/test-03.png" alt="Valuecoders" width="290" height="328">
-                </picture>
-              </div>
+              
               <div class="test-row">
                 <div class="vid-wrap">
                   <div class="client-videos" id="cvbox-4">
