@@ -90,7 +90,7 @@
             $i = 0;
             foreach( $workWith['tabs'] as $elm ){ $i++;
             $active = ( $i === 1 ) ? 'active' : '';
-            $link = (isset($elm['link']) && !empty($elm['link'])) ? '<a href="'.vc_siteurl($elm['link']).'" class="is-arrow">Explore to Get the details</a>' : '';
+            $link = (isset($elm['link']) && !empty($elm['link'])) ? '<a href="'.vc_siteurl($elm['link']).'" class="is-arrow">Get Details</a>' : '';
             echo '<div class="content '.$active.'" id="welm-'.$i.'">'.$elm['content'].$link.'</div>';  
             }
             echo '</div>';
@@ -346,8 +346,7 @@
   <div class="container">
     <div class="top-section b-100">
       <h2>Success Stories</h2>
-      <p>From simple CRM to complex applications, our experts are capable of handling projects of all sizes. Here’s a glimpse into some of our previous work.
-      </p>
+      <p>From simple CRM to complex applications, our experts are capable of handling projects of all sizes. Here’s a glimpse into some of our previous work.</p>
     </div>
     <div class="dis-flex glider-contain success-slider" id="success-glider">
       <div class="glider">
