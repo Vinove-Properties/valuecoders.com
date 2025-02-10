@@ -113,17 +113,17 @@
       <div class="flex-4 social-box">
         <h3>Follow Us</h3>
         <div class="dis-flex">
-          <a href="https://www.linkedin.com/company/valuecoders" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">
+          <a href="https://www.facebook.com/ValueCoders" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">
             <picture>
               <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/soc-01.svg" width="29" height="29" alt="linkedin">
             </picture>
           </a>
-          <a href="https://www.facebook.com/ValueCoders" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">
+          <a href="https://x.com/ValueCoders" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">
             <picture>
               <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/soc-02.svg" width="29" height="29" alt="facebook">
             </picture>
           </a>
-          <a href="https://twitter.com/ValueCoders" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">
+          <a href="https://www.linkedin.com/company/valuecoders" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">
             <picture>
               <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/soc-03.svg" width="29" height="29" alt="twitter">
             </picture>
