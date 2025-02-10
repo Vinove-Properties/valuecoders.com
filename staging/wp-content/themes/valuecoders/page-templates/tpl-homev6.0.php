@@ -55,8 +55,9 @@
       <div class="bottom-card highlight">
         <h4>Trusted By</h4>
         <h2>500 <br>Companies</h2>
-        <p>all over the world</p>
-        <a href="#" class="is-arrow">View Customers</a>
+        <p>Globally</p>
+        <a href="#" class="is-arrow">See our clients
+        </a>
       </div>
       <div class="bottom-card">
         <picture><img loading="lazy" src="<?php _vers_six('images/home-images/award-02.svg'); ?>" width="285" height="170" alt="valuecoders"></picture>
@@ -345,7 +346,8 @@
   <div class="container">
     <div class="top-section b-100">
       <h2>Success Stories</h2>
-      <p>Get what you are looking for to fulfill your software development and outsourcing needs at ValueCoders.</p>
+      <p>From simple CRM to complex applications, our experts are capable of handling projects of all sizes. Here’s a glimpse into some of our previous work.
+      </p>
     </div>
     <div class="dis-flex glider-contain success-slider" id="success-glider">
       <div class="glider">
@@ -507,7 +509,7 @@
   <div class="container">
     <div class="top-section b-100">
       <h2>What Our Clients Have to Say About Us</h2>
-      <p>We are grateful for our clients’ trust in us, and we take great pride in delivering quality solutions that exceed their expectations. Here is what some of them have to say about us:
+      <p>Clients trust us, and we take great pride in delivering quality solutions that exceed their expectations.
       </p>
     </div>
     <div class="popup-section">
