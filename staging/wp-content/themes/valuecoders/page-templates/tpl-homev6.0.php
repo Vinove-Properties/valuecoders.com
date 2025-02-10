@@ -507,6 +507,18 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
           <h2>Happy Clients</h2>
           <p>We are grateful for our clients’ trust in us, and we take great pride in delivering quality solutions that exceed their expectations.
         </div>
+        <div class="popup-section">
+        <div id="yt-player-pop" class="popup-wrapper" style="display:none;">
+        <div class="popWrap">
+          <div class="popup-content">
+            <span class="closeicon" onclick="closeYT_video();">
+            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/cross-image.svg" alt="Valuecoders" 
+              width="11" height="11"></span>
+            <iframe class="yt-player" id="cmn-ytplayer" style="display:none;"></iframe>    
+          </div>
+        </div>
+      </div>
+    </div>
         <div class="client-out">
           <div class="dis-flex client-slider" id="client-slider">
             <div class="glider">
