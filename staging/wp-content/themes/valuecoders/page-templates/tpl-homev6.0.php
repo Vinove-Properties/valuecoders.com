@@ -163,7 +163,7 @@ if( isset($ctaOne['required']) && ($ctaOne['required'] == "yes") ) :
     ?>
     <picture>
       <source type="image/webp" srcset="<?php _vers_six('images/home-images/cta-image.png'); ?>">
-      <img loading="lazy" src="<?php _vers_six('images/home-images/cta-image.png'); ?>"width="420" height="394" alt="valuecoders">
+      <img loading="lazy" src="<?php _vers_six('images/home-images/cta-image.png'); ?>" width="420" height="394" alt="valuecoders">
     </picture>
     <?php } ?>
   </div>
