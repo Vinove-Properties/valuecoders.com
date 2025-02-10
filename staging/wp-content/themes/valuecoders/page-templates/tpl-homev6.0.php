@@ -29,7 +29,7 @@ get_header();
 <section class="award-section padding-t-50 padding-b-120 ">
   <div class="container">
     <div class="top-logo">
-      <div class="text"><i><img loading="lazy" src="<?php _vers_six('images/home-images/star-one.svg'); ?>" width="22" height="20"></i>
+      <div class="text"><i><img loading="lazy" src="<?php _vers_six('images/home-images/star-one.svg'); ?>" width="22" height="20" alt="star"></i>
         <strong>4.5/5</strong>based on 19,000+ reviews on
       </div>
       <div class="awlogo"><a href="#"></a><a href="#"></a><a href="#"></a></div>
@@ -41,7 +41,7 @@ get_header();
     </div>
     <div class="bottom-section">
       <div class="bottom-card">
-        <picture><img loading="lazy" src="<?php _vers_six('images/home-images/award-01.svg'); ?>" width="285" height="197"></picture>
+        <picture><img loading="lazy" src="<?php _vers_six('images/home-images/award-01.svg'); ?>" width="285" height="197" alt="valuecoders"></picture>
       </div>
       <div class="bottom-card highlight">
         <h4>Trusted By</h4>
@@ -50,7 +50,7 @@ get_header();
         <a href="#" class="is-arrow">View Customers</a>
       </div>
       <div class="bottom-card">
-        <picture><img loading="lazy" src="<?php _vers_six('images/home-images/award-02.svg'); ?>" width="285" height="170"></picture>
+        <picture><img loading="lazy" src="<?php _vers_six('images/home-images/award-02.svg'); ?>" width="285" height="170" alt="valuecoders"></picture>
       </div>
     </div>
   </div>
@@ -306,14 +306,16 @@ if( isset($trendElm['required']) && ($trendElm['required'] == "yes") ) :
     ?>
     <div class="tabs-container">
       <ul class="tabs">
-        <?php 
-        $i = 0;
-        foreach( $trendElm['tabs'] as $tab ){ $i++;
+      <?php 
+    $i = 0;
+    foreach( $trendElm['tabs'] as $tab ){ 
+        $i++;
         $active = ( $i === 1 ) ? 'active' : '';  
+        $altText = isset($tab['icon']['alt']) ? $tab['icon']['alt'] : 'Image';
         echo '<li class="tab '.$active.'" data-target="telm-'.$i.'">
-        <img src="'.$tab['icon']['url'].'">'.$tab['title'].'</li>';
-        }
-        ?>        
+        <img src="'.$tab['icon']['url'].'" alt="'.$altText.'">'.$tab['title'].'</li>';
+    }
+    ?>        
       </ul>
       <div class="tab-content">
         <?php 
