@@ -528,8 +528,8 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
               <!-- Repeat this structure for each slide -->
               <div class="test-row">
                 <picture>
-                  <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-01.png">
-                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/images/home-images/clinet-01.png" alt="Valuecoders" width="290" height="328">
+                  <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/testblue-01.png">
+                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/images/home-images/testblue-01.png" alt="Valuecoders" width="290" height="328">
                 </picture>
               </div>
               <div class="test-row">
@@ -539,8 +539,8 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
                     <a class="frame-mask" href="javascript:void(0);" 
                     onclick="playTetiVideoV4('cmn-ytplayer', 'https://www.youtube.com/embed/d78gD-wwVTg?autoplay=1?rel=0', this)">
                         <picture>
-                          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png">
-                          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png" alt="Valuecoders" width="290" height="328">
+                          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/test-01.png">
+                          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/test-01.png" alt="Valuecoders" width="290" height="328">
                         </picture>
                         <div class="playBtn">
                           <div class="playsc"><span class="playicon"></span></div>
@@ -558,8 +558,8 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
               </div>
               <div class="test-row">
                 <picture>
-                  <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-03.png">
-                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/images/home-images/clinet-03.png" alt="Valuecoders" width="290" height="328">
+                  <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/testblue-02.png">
+                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/images/home-images/testblue-02.png" alt="Valuecoders" width="290" height="328">
                 </picture>
               </div>
               <div class="test-row">
@@ -569,8 +569,8 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
                     <a class="frame-mask" href="javascript:void(0);" 
                     onclick="playTetiVideoV4('cmn-ytplayer', 'https://www.youtube.com/embed/e7nbilPZzBE?autoplay=1', this)">
                         <picture>
-                          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png">
-                          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png" alt="Valuecoders" width="290" height="328">
+                          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/test-02.png">
+                          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/test-02.png" alt="Valuecoders" width="290" height="328">
                         </picture>
                         <div class="playBtn">
                           <div class="playsc"><span class="playicon"></span></div>
@@ -599,8 +599,8 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
                     <a class="frame-mask" href="javascript:void(0);" 
                     onclick="playTetiVideoV4('cmn-ytplayer', 'https://www.youtube.com/embed/W7Bxt2Up0NQ?autoplay=1', this)">
                         <picture>
-                          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png">
-                          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png" alt="Valuecoders" width="290" height="328">
+                          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/testblue-03.png">
+                          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/testblue-03.png" alt="Valuecoders" width="290" height="328">
                         </picture>
                         <div class="playBtn">
                           <div class="playsc"><span class="playicon"></span></div>
@@ -618,8 +618,8 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
               </div>
               <div class="test-row">
                 <picture>
-                  <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-01.png">
-                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/images/home-images/clinet-01.png" alt="Valuecoders" width="290" height="328">
+                  <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/test-03.png">
+                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/images/home-images/test-03.png" alt="Valuecoders" width="290" height="328">
                 </picture>
               </div>
               <div class="test-row">
@@ -629,8 +629,8 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
                     <a class="frame-mask" href="javascript:void(0);" 
                     onclick="playTetiVideoV4('cmn-ytplayer', 'https://www.youtube.com/embed/aErqOtvMClY?autoplay=1', this)">
                         <picture>
-                          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png">
-                          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png" alt="Valuecoders" width="290" height="328">
+                          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/testblue-04.png">
+                          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/testblue-04.png" alt="Valuecoders" width="290" height="328">
                         </picture>
                         <div class="playBtn">
                           <div class="playsc"><span class="playicon"></span></div>
@@ -648,8 +648,8 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
               </div>
               <div class="test-row">
                 <picture>
-                  <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-03.png">
-                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/images/home-images/clinet-03.png" alt="Valuecoders" width="290" height="328">
+                  <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/test-04.png">
+                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/images/home-images/test-04.png" alt="Valuecoders" width="290" height="328">
                 </picture>
               </div>
               <!-- End slide structure -->
