@@ -425,8 +425,8 @@ if( isset($trendElm['required']) && ($trendElm['required'] == "yes") ) :
     <div class="card-image">
       <span class="category">AI & ML</span>
       <picture>
-        <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png">
-        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png"width="400" height="200">
+        <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png" alt="valuecoders">
+        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png"width="400" height="200" alt="valuecoders">
       </picture>
     </div>
     <div class="card-content">
@@ -442,8 +442,8 @@ if( isset($trendElm['required']) && ($trendElm['required'] == "yes") ) :
     <div class="card-image">
       <span class="category">AI & ML</span>
       <picture>
-        <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png">
-        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png"width="400" height="200">
+        <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png" alt="valuecoders">
+        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png"width="400" height="200" alt="valuecoders">
       </picture>
     </div>
     <div class="card-content">
@@ -459,8 +459,8 @@ if( isset($trendElm['required']) && ($trendElm['required'] == "yes") ) :
     <div class="card-image">
       <span class="category">AI & ML</span>
       <picture>
-        <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png">
-        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png"width="400" height="200">
+        <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png" alt="valuecoders">
+        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png"width="400" height="200" alt="valuecoders">
       </picture>
     </div>
     <div class="card-content">
