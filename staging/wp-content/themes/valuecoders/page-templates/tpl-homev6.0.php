@@ -305,18 +305,19 @@ if( isset($trendElm['required']) && ($trendElm['required'] == "yes") ) :
     if( $trendElm['tabs'] ){
     ?>
     <div class="tabs-container">
-      <ul class="tabs">
-      <?php 
+    <ul class="tabs">
+    <?php 
     $i = 0;
-    foreach( $trendElm['tabs'] as $tab ){ 
+    foreach( $trendElm['tabs'] as $tab ) { 
         $i++;
-        $active = ( $i === 1 ) ? 'active' : '';  
-        $altText = isset($tab['icon']['alt']) ? $tab['icon']['alt'] : 'Image';
+        $active = ($i === 1) ? 'active' : '';  
+        $imgUrl = !empty($tab['icon']['url']) ? $tab['icon']['url'] : 'placeholder.jpg'; // Fallback image
+
         echo '<li class="tab '.$active.'" data-target="telm-'.$i.'">
-        <img src="'.$tab['icon']['url'].'" alt="'.$altText.'">'.$tab['title'].'</li>';
+        <img src="'.$imgUrl.'" alt="valucoders"> '.$tab['title'].'</li>';
     }
     ?>        
-      </ul>
+</ul>
       <div class="tab-content">
         <?php 
         $i = 0;
