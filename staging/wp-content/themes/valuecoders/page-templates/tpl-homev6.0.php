@@ -8,8 +8,8 @@ $vcBtn 			= get_field('vc-cta', $thisPostID);
 get_header();
 ?>
 <section class="hero-section">
-<video class="row-lg vd-lazy" id="background-video" preload="yes"  loop autoplay loop muted playsinline>
-<source src="<?php _vers_six('video/home-video.mp4'); ?>" type="video/mp4" type="video/mp4">
+<video class="row-lg vd-lazy" id="background-video" loop autoplay muted playsinline>
+<source src="<?php _vers_six('video/home-video.mp4'); ?>" type="video/mp4">
 </video>
 <div class="container">
 <div class="dis-flex">
