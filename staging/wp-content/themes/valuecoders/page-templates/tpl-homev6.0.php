@@ -649,60 +649,6 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
                   <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/images/home-images/clinet-03.png" alt="Valuecoders" width="290" height="328">
                 </picture>
               </div>
-              <div class="test-row">
-                <div class="vid-wrap">
-                  <div class="client-videos" id="cvbox-1">
-                    <div class="client-video-box">
-                      <iframe class="yt-player"  id="ytiframe-1" style="display:none;"></iframe>
-                      <a class="frame-mask" href="javascript:void(0);" onclick="playTetiVideo(1, 'https://www.youtube.com/embed/aErqOtvMClY?autoplay=1', this)">
-                        <picture>
-                          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png">
-                          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png" alt="Valuecoders" width="290" height="328">
-                        </picture>
-                        <div class="playBtn">
-                          <div class="playsc"><span class="playicon"></span></div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="content-box">
-                    <p>“We have worked with ValueCoders for more than a year, and their skilled team has allowed us to scale up during certain projects.”</p>
-                    <h5>James Kelly</h5>
-                    <span class="designtn">Co-founder, James Kelly</span>
-                    <span class="star-image"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="test-row">
-                <picture>
-                  <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-03.png">
-                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/images/home-images/clinet-03.png" alt="Valuecoders" width="290" height="328">
-                </picture>
-              </div>
-              <div class="test-row">
-                <div class="vid-wrap">
-                  <div class="client-videos" id="cvbox-1">
-                    <div class="client-video-box">
-                      <iframe class="yt-player"  id="ytiframe-1" style="display:none;"></iframe>
-                      <a class="frame-mask" href="javascript:void(0);" onclick="playTetiVideo(1, 'https://www.youtube.com/embed/aErqOtvMClY?autoplay=1', this)">
-                        <picture>
-                          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png">
-                          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png" alt="Valuecoders" width="290" height="328">
-                        </picture>
-                        <div class="playBtn">
-                          <div class="playsc"><span class="playicon"></span></div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="content-box">
-                    <p>“We have worked with ValueCoders for more than a year, and their skilled team has allowed us to scale up during certain projects.”</p>
-                    <h5>James Kelly</h5>
-                    <span class="designtn">Co-founder, James Kelly</span>
-                    <span class="star-image"></span>
-                  </div>
-                </div>
-              </div>
               <!-- End slide structure -->
             </div>
             <!-- Progress Bar -->
