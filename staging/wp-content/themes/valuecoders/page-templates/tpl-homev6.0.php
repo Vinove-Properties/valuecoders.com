@@ -8,8 +8,8 @@ $vcBtn 			= get_field('vc-cta', $thisPostID);
 get_header();
 ?>
 <section class="hero-section">
-<video class="row-lg vd-lazy" id="background-video" preload="yes"  loop autoplay loop muted playsinline>
-<source src="<?php _vers_six('video/home-video.mp4'); ?>" type="video/mp4" type="video/mp4">
+<video class="row-lg vd-lazy" id="background-video" loop autoplay muted playsinline>
+<source src="<?php _vers_six('video/home-video.mp4'); ?>" type="video/mp4">
 </video>
 <div class="container">
 <div class="dis-flex">
@@ -29,7 +29,7 @@ get_header();
 <section class="award-section padding-t-50 padding-b-120 ">
   <div class="container">
     <div class="top-logo">
-      <div class="text"><i><img loading="lazy" src="<?php _vers_six('images/home-images/star-one.svg'); ?>" width="22" height="20"></i>
+      <div class="text"><i><img loading="lazy" src="<?php _vers_six('images/home-images/star-one.svg'); ?>" width="22" height="20" alt="star"></i>
         <strong>4.5/5</strong>based on 19,000+ reviews on
       </div>
       <div class="awlogo"><a href="#"></a><a href="#"></a><a href="#"></a></div>
@@ -41,7 +41,7 @@ get_header();
     </div>
     <div class="bottom-section">
       <div class="bottom-card">
-        <picture><img loading="lazy" src="<?php _vers_six('images/home-images/award-01.svg'); ?>" width="285" height="197"></picture>
+        <picture><img loading="lazy" src="<?php _vers_six('images/home-images/award-01.svg'); ?>" width="285" height="197" alt="valuecoders"></picture>
       </div>
       <div class="bottom-card highlight">
         <h4>Trusted By</h4>
@@ -50,7 +50,7 @@ get_header();
         <a href="#" class="is-arrow">View Customers</a>
       </div>
       <div class="bottom-card">
-        <picture><img loading="lazy" src="<?php _vers_six('images/home-images/award-02.svg'); ?>" width="285" height="170"></picture>
+        <picture><img loading="lazy" src="<?php _vers_six('images/home-images/award-02.svg'); ?>" width="285" height="170" alt="valuecoders"></picture>
       </div>
     </div>
   </div>
@@ -72,8 +72,8 @@ if( isset($workWith['is_enabled']) && ($workWith['is_enabled'] == "yes") ) :
       foreach( $workWith['tabs'] as $tab ){ $i++;
         $active = ( $i === 1 ) ? 'active' : '';
         echo '<li class="tab '.$active.'" data-target="welm-'.$i.'">
-        <img src="'._getvers_six('images/home-images/tabicon0'.$i.'.svg').'" class="normal">
-        <img src="'._getvers_six('images/home-images/iconhov0'.$i.'.svg').'" class="hover">
+        <img src="'._getvers_six('images/home-images/tabicon0'.$i.'.svg').'" class="normal" alt="valuecoders">
+        <img src="'._getvers_six('images/home-images/iconhov0'.$i.'.svg').'" class="hover" alt="valuecoders">
         '.$tab['title'].'</li>';  
       }
       echo '</ul>';
@@ -117,7 +117,7 @@ if( isset($servCol['is_enabled']) && ($servCol['is_enabled'] == "yes") ) :
 <div class="left-panel">
 <div class="top-section"><?php echo $servCol['content']; ?></div>
 <div class="ser-button">
-  <i><img src="<?php _vers_six('images/home-images/vc-fav.svg'); ?>" width="40" height="40"></i>
+  <i><img src="<?php _vers_six('images/home-images/vc-fav.svg'); ?>" width="40" height="40" alt="valuecoders"></i>
   <?php echo $servCol['sub-content']; ?>
   <div class="btn-container"><a href="<?php echo site_url('contact'); ?>" class="cta-button yellow">GET STARTED</a></div>
 </div>
@@ -163,7 +163,7 @@ if( isset($ctaOne['required']) && ($ctaOne['required'] == "yes") ) :
     ?>
     <picture>
       <source type="image/webp" srcset="<?php _vers_six('images/home-images/cta-image.png'); ?>">
-      <img loading="lazy" src="<?php _vers_six('images/home-images/cta-image.png'); ?>"width="420" height="394">
+      <img loading="lazy" src="<?php _vers_six('images/home-images/cta-image.png'); ?>" width="420" height="394" alt="valuecoders">
     </picture>
     <?php } ?>
   </div>
@@ -254,7 +254,7 @@ if( isset($ctaTwo['required']) && ($ctaTwo['required'] == "yes") ) :
     ?>
     <picture>
         <source type="image/webp" srcset="<?php _vers_six('images/home-images/cta-image02.png'); ?>">
-        <img loading="lazy" src="<?php _vers_six('images/home-images/cta-image02.png'); ?>" width="538" height="430">
+        <img loading="lazy" src="<?php _vers_six('images/home-images/cta-image02.png'); ?>" width="538" height="430" alt="valuecoders">
       </picture>
     <?php } ?>
   </div>
@@ -305,16 +305,19 @@ if( isset($trendElm['required']) && ($trendElm['required'] == "yes") ) :
     if( $trendElm['tabs'] ){
     ?>
     <div class="tabs-container">
-      <ul class="tabs">
-        <?php 
-        $i = 0;
-        foreach( $trendElm['tabs'] as $tab ){ $i++;
-        $active = ( $i === 1 ) ? 'active' : '';  
+    <ul class="tabs">
+    <?php 
+    $i = 0;
+    foreach( $trendElm['tabs'] as $tab ) { 
+        $i++;
+        $active = ($i === 1) ? 'active' : '';  
+        $imgUrl = !empty($tab['icon']['url']) ? $tab['icon']['url'] : 'placeholder.jpg'; // Fallback image
+
         echo '<li class="tab '.$active.'" data-target="telm-'.$i.'">
-        <img src="'.$tab['icon']['url'].'">'.$tab['title'].'</li>';
-        }
-        ?>        
-      </ul>
+        <img src="'.$imgUrl.'" alt="valucoders"> '.$tab['title'].'</li>';
+    }
+    ?>        
+</ul>
       <div class="tab-content">
         <?php 
         $i = 0;
@@ -426,7 +429,7 @@ if( isset($trendElm['required']) && ($trendElm['required'] == "yes") ) :
       <span class="category">AI & ML</span>
       <picture>
         <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png">
-        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png"width="400" height="200">
+        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png" width="400" height="200" alt="valuecoders">
       </picture>
     </div>
     <div class="card-content">
@@ -443,7 +446,7 @@ if( isset($trendElm['required']) && ($trendElm['required'] == "yes") ) :
       <span class="category">AI & ML</span>
       <picture>
         <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png">
-        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png"width="400" height="200">
+        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png" width="400" height="200" alt="valuecoders">
       </picture>
     </div>
     <div class="card-content">
@@ -460,7 +463,7 @@ if( isset($trendElm['required']) && ($trendElm['required'] == "yes") ) :
       <span class="category">AI & ML</span>
       <picture>
         <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png">
-        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png"width="400" height="200">
+        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png" width="400" height="200" alt="valuecoders">
       </picture>
     </div>
     <div class="card-content">
@@ -507,6 +510,18 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
           <h2>Happy Clients</h2>
           <p>We are grateful for our clients’ trust in us, and we take great pride in delivering quality solutions that exceed their expectations.
         </div>
+        <div class="popup-section">
+        <div id="yt-player-pop" class="popup-wrapper" style="display:none;">
+        <div class="popWrap">
+          <div class="popup-content">
+            <span class="closeicon" onclick="closeYT_video();">
+            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/cross-image.svg" alt="Valuecoders" 
+              width="11" height="11"></span>
+            <iframe class="yt-player" id="cmn-ytplayer" style="display:none;"></iframe>    
+          </div>
+        </div>
+      </div>
+    </div>
         <div class="client-out">
           <div class="dis-flex client-slider" id="client-slider">
             <div class="glider">
@@ -514,7 +529,7 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
               <div class="test-row">
                 <picture>
                   <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-01.png">
-                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-01.png" alt="Valuecoders" width="290" height="328">
+                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/images/home-images/clinet-01.png" alt="Valuecoders" width="290" height="328">
                 </picture>
               </div>
               <div class="test-row">
@@ -530,7 +545,6 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
                         <div class="playBtn">
                           <div class="playsc"><span class="playicon"></span></div>
                         </div>
-                        </a>
                       </a>
                     </div>
                   </div>
@@ -550,10 +564,10 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
               </div>
               <div class="test-row">
                 <div class="vid-wrap">
-                  <div class="client-videos" id="cvbox-1">
+                  <div class="client-videos" id="cvbox-2">
                     <div class="client-video-box">
                     <a class="frame-mask" href="javascript:void(0);" 
-                    onclick="playTetiVideoV4('cmn-ytplayer', 'https://www.youtube.com/embed/d78gD-wwVTg?autoplay=1?rel=0', this)">
+                    onclick="playTetiVideoV4('cmn-ytplayer', 'https://www.youtube.com/embed/e7nbilPZzBE?autoplay=1', this)">
                         <picture>
                           <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png">
                           <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png" alt="Valuecoders" width="290" height="328">
@@ -561,7 +575,6 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
                         <div class="playBtn">
                           <div class="playsc"><span class="playicon"></span></div>
                         </div>
-                      </a>
                       </a>
                     </div>
                   </div>
@@ -581,10 +594,10 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
               </div>
               <div class="test-row">
                 <div class="vid-wrap">
-                  <div class="client-videos" id="cvbox-1">
+                  <div class="client-videos" id="cvbox-3">
                     <div class="client-video-box">
-                      <iframe class="yt-player"  id="ytiframe-1" style="display:none;"></iframe>
-                      <a class="frame-mask" href="javascript:void(0);" onclick="playTetiVideo(1, 'https://www.youtube.com/embed/aErqOtvMClY?autoplay=1', this)">
+                    <a class="frame-mask" href="javascript:void(0);" 
+                    onclick="playTetiVideoV4('cmn-ytplayer', 'https://www.youtube.com/embed/W7Bxt2Up0NQ?autoplay=1', this)">
                         <picture>
                           <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png">
                           <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png" alt="Valuecoders" width="290" height="328">
@@ -611,10 +624,10 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
               </div>
               <div class="test-row">
                 <div class="vid-wrap">
-                  <div class="client-videos" id="cvbox-1">
+                  <div class="client-videos" id="cvbox-4">
                     <div class="client-video-box">
-                      <iframe class="yt-player"  id="ytiframe-1" style="display:none;"></iframe>
-                      <a class="frame-mask" href="javascript:void(0);" onclick="playTetiVideo(1, 'https://www.youtube.com/embed/aErqOtvMClY?autoplay=1', this)">
+                    <a class="frame-mask" href="javascript:void(0);" 
+                    onclick="playTetiVideoV4('cmn-ytplayer', 'https://www.youtube.com/embed/aErqOtvMClY?autoplay=1', this)">
                         <picture>
                           <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png">
                           <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png" alt="Valuecoders" width="290" height="328">
@@ -639,60 +652,6 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
                   <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/images/home-images/clinet-03.png" alt="Valuecoders" width="290" height="328">
                 </picture>
               </div>
-              <div class="test-row">
-                <div class="vid-wrap">
-                  <div class="client-videos" id="cvbox-1">
-                    <div class="client-video-box">
-                      <iframe class="yt-player"  id="ytiframe-1" style="display:none;"></iframe>
-                      <a class="frame-mask" href="javascript:void(0);" onclick="playTetiVideo(1, 'https://www.youtube.com/embed/aErqOtvMClY?autoplay=1', this)">
-                        <picture>
-                          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png">
-                          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png" alt="Valuecoders" width="290" height="328">
-                        </picture>
-                        <div class="playBtn">
-                          <div class="playsc"><span class="playicon"></span></div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="content-box">
-                    <p>“We have worked with ValueCoders for more than a year, and their skilled team has allowed us to scale up during certain projects.”</p>
-                    <h5>James Kelly</h5>
-                    <span class="designtn">Co-founder, James Kelly</span>
-                    <span class="star-image"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="test-row">
-                <picture>
-                  <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-03.png">
-                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-03.png" alt="Valuecoders" width="290" height="328">
-                </picture>
-              </div>
-              <div class="test-row">
-                <div class="vid-wrap">
-                  <div class="client-videos" id="cvbox-1">
-                    <div class="client-video-box">
-                      <iframe class="yt-player"  id="ytiframe-1" style="display:none;"></iframe>
-                      <a class="frame-mask" href="javascript:void(0);" onclick="playTetiVideo(1, 'https://www.youtube.com/embed/aErqOtvMClY?autoplay=1', this)">
-                        <picture>
-                          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png">
-                          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/clinet-02.png" alt="Valuecoders" width="290" height="328">
-                        </picture>
-                        <div class="playBtn">
-                          <div class="playsc"><span class="playicon"></span></div>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="content-box">
-                    <p>“We have worked with ValueCoders for more than a year, and their skilled team has allowed us to scale up during certain projects.”</p>
-                    <h5>James Kelly</h5>
-                    <span class="designtn">Co-founder, James Kelly</span>
-                    <span class="star-image"></span>
-                  </div>
-                </div>
-              </div>
               <!-- End slide structure -->
             </div>
             <!-- Progress Bar -->
@@ -710,6 +669,7 @@ if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :
         </div>
       </div>
     </section>
+
 
 
 <?php get_footer(); ?>

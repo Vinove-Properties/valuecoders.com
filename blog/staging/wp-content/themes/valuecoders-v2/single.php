@@ -7,7 +7,7 @@
     if( (isset( $topCTA['required'] ) && ($topCTA['required'] != "no"))  || (!isset( $topCTA['required']) ) ) :
     $heading  = ( isset( $topCTA['heading'] ) && !empty( $topCTA['heading'] ) ) ? $topCTA['heading'] : 'Build for Tomorrow';
     $text     = ( isset( $topCTA['text'] ) && !empty( $topCTA['text'] ) ) ? $topCTA['text'] : "Create solutions that last. Partner with ValueCoders for software solutions that set you apart.";
-
+    
     $text2     = ( isset( $topCTA['text2'] ) && !empty( $topCTA['text2'] ) ) ? $topCTA['text2'] : "Software Engineering  <span>|</span> Digital Marketing  <span>|</span> Dedicated Teams";
     ?>
   <div class="cta-section">
@@ -31,7 +31,6 @@
     </div>
   </div>
   <?php endif; ?>
-  
   <?php 
     if( is_single() ){
     global $post;  
@@ -71,6 +70,12 @@
     echo '<div class="single-post-container">
                   <div class="top-header-banner">
                       <h1>'.get_the_title().'</h1>
+                      <audio controls style="width: 300px; height: 40px; background-color: #f0f0f0; border-radius: 8px;">
+    <source src="https://file-examples.com/storage/fe91620ae767a4f0a97a5e9/2017/11/file_example_MP3_700KB.mp3" type="audio/ogg">
+    <source src="https://file-examples.com/storage/fe91620ae767a4f0a97a5e9/2017/11/file_example_MP3_700KB.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    
                       '.$btText.'
                       <div class="entery-wrap">
                       <div class="meta-wrap">
@@ -126,64 +131,57 @@
   <div class="container archive-container">
     <div class="second-row" id="stickytoc">
       <div class="buyers-guide">
-        <div class="vcb-col-left" id="vcb-col-left">          
-          
-          
-          
+        <div class="vcb-col-left" id="vcb-col-left">
           <?php if( $isTocDisable === false ) : ?>  
           <div class="table-c active" id="elm-toc">
             <h3>Table of Contents <a class="sw-hd" href="javascript:void(0);" onclick="document.getElementById('elm-toc').classList.toggle('active');">
               <span class="hide">(Hide)</span>
               <span class="show">(Show)</span>
-            </a></h3>
+              </a>
+            </h3>
             <div class="tocsec">
               <?php dynamic_sidebar('sidebar-1'); ?>
             </div>
           </div>
           <?php endif; ?>
-       
-
           <?php 
             $sbCTA = get_field('sb-cta');  
             if( (isset( $sbCTA['required'] ) && ($sbCTA['required'] != "no"))  || (!isset( $sbCTA['required']) ) ) :
             $sbText  = (isset( $sbCTA['text'] ) && !empty($sbCTA['text'])) ? $sbCTA['text'] : 'Struggling with Tech Complexity?';
             ?>
-          <div class="customcta">          
-          <div class="cus-cont">
-          <div class="cushed"><?php echo $sbText; ?></div>
-          <!-- <div class="text"><?php //echo $sbCTA; ?></div> -->
-          <div class="btn-container">
-            <div class="btn-sec">
-            <a href="https://www.valuecoders.com/contact" target="_blank" class="btn rounded" data-wpel-link="external" 
-            rel="nofollow external noopener noreferrer"><span class="text-white">Schedule A Call</span></a>
+          <div class="customcta">
+            <div class="cus-cont">
+              <div class="cushed"><?php echo $sbText; ?></div>
+              <!-- <div class="text"><?php //echo $sbCTA; ?></div> -->
+              <div class="btn-container">
+                <div class="btn-sec">
+                  <a href="https://www.valuecoders.com/contact" target="_blank" class="btn rounded" data-wpel-link="external" 
+                    rel="nofollow external noopener noreferrer"><span class="text-white">Schedule A Call</span></a>
+                </div>
+              </div>
             </div>
-          </div>
-          </div>
           </div>
           <?php endif; ?>
-          
           <?php 
-          $haspostPdf     = get_post_meta( $post->ID, 'post_pdf', true );
-          $haspostPdflink = get_post_meta( $post->ID, 'vc-post-pdf', true );
-          if( $haspostPdf || $haspostPdflink){
-          $guidename  = (!empty(get_post_meta($post->ID,'guide_name',true))) ? 
-          get_post_meta($post->ID,'guide_name',true) :  'A Complete Guide to<br> IT Outsourcing 2023';
-          echo '<div class="customcta">
-            <div class="cushed">'.$guidename.'</div>
-            <div class="btn-container">
-              <a class="white-btn" onclick="_triggerEbook();" href="javascript:void(0);">Download Now</a>
-            </div>
-          </div>';
-          }
-          ?>
-
-        <?php /* ?>
-        <div class="detail-subsbox">
-          <h3>Subscribe to our blog</h3>
-          <?php echo do_shortcode('[email-subscribers-form id="1"]'); ?>
-        </div>
-        <?php */ ?> 
-        
+            $haspostPdf     = get_post_meta( $post->ID, 'post_pdf', true );
+            $haspostPdflink = get_post_meta( $post->ID, 'vc-post-pdf', true );
+            if( $haspostPdf || $haspostPdflink){
+            $guidename  = (!empty(get_post_meta($post->ID,'guide_name',true))) ? 
+            get_post_meta($post->ID,'guide_name',true) :  'A Complete Guide to<br> IT Outsourcing 2023';
+            echo '<div class="customcta">
+              <div class="cushed">'.$guidename.'</div>
+              <div class="btn-container">
+                <a class="white-btn" onclick="_triggerEbook();" href="javascript:void(0);">Download Now</a>
+              </div>
+            </div>';
+            }
+            ?>
+          <?php /* ?>
+          <div class="detail-subsbox">
+            <h3>Subscribe to our blog</h3>
+            <?php echo do_shortcode('[email-subscribers-form id="1"]'); ?>
+          </div>
+          <?php */ ?> 
         </div>
         <div class="vcb-col-right <?php echo ( $isTocDisable === true ) ? ' no-toc-row' : ''; ?>" id="vcb-col-right">
           <article id="post-<?php echo esc_attr( get_the_ID() ); ?>" class="nv-single-post-wrap">
@@ -205,5 +203,5 @@
   </div>
 </main>
 <?php 
-get_template_part('inc/file', 'pdownload');
-get_footer();?>
+  get_template_part('inc/file', 'pdownload');
+  get_footer();?>

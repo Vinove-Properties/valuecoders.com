@@ -362,11 +362,11 @@ get_header();
           <div class="address-row dis-flex">
             <div class="address-col two-line">
               <span class="bold">Gurugram: </span>
-              <p>10th Floor, Tower-B, Unitech Cyber Park, Sector - 39, Gurugram, Haryana- 122001</p>
+              <p><a href="https://maps.app.goo.gl/XJMTG96kDodxBjo16" target="_blank">10th Floor, Tower-B, Unitech Cyber Park, Sector - 39, Gurugram, Haryana- 122001</a></p>
             </div>
             <div class="address-col two-line">
               <span class="bold">Noida: </span>
-              <p>11th Floor, Max Square, Noida-Greater Noida Expy, Sector 129, Noida, Uttar Pradesh 201304</p>
+              <p><a href="https://maps.app.goo.gl/XbifuFXus4ttWe169" target="_blank">11th Floor, Max Square, Noida-Greater Noida Expy, Sector 129, Noida, Uttar Pradesh 201304</a></p>
             </div>
           </div>
           <div class="address-row">
