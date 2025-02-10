@@ -169,7 +169,7 @@
       </div>
     </div>
   </div>
-  <div class="footer-copyright">Copyright © 2004 - 2024 ValueCoders, All Rights Reserved. A Vinove Company.</div>
+  <div class="footer-copyright">Copyright © 2004 - 2025 ValueCoders, All Rights Reserved. A Vinove Company.</div>
 </footer>
 
 <script type="text/javascript">
