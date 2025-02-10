@@ -72,8 +72,8 @@ if( isset($workWith['is_enabled']) && ($workWith['is_enabled'] == "yes") ) :
       foreach( $workWith['tabs'] as $tab ){ $i++;
         $active = ( $i === 1 ) ? 'active' : '';
         echo '<li class="tab '.$active.'" data-target="welm-'.$i.'">
-        <img src="'._getvers_six('images/home-images/tabicon0'.$i.'.svg').'" class="normal">
-        <img src="'._getvers_six('images/home-images/iconhov0'.$i.'.svg').'" class="hover">
+        <img src="'._getvers_six('images/home-images/tabicon0'.$i.'.svg').'" class="normal" alt="valuecoders">
+        <img src="'._getvers_six('images/home-images/iconhov0'.$i.'.svg').'" class="hover" alt="valuecoders">
         '.$tab['title'].'</li>';  
       }
       echo '</ul>';
