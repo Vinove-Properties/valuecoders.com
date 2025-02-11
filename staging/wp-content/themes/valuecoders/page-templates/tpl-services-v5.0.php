@@ -45,10 +45,22 @@
               }else{
               $bct = get_the_title();
               }
+              
               if( isset( $bcCategory ) && ($bcCategory == "solutions") ){
-              echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Solutions</span> '.$bct;   
-              }elseif( isset( $bcCategory ) && ($bcCategory == "industries") ){
-              echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Industries</span> '.$bct;   
+                echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Solutions</span> '.$bct;   
+              }
+              elseif( isset( $bcCategory ) && ($bcCategory == "industries") ){
+                echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Industries</span> '.$bct;   
+              }
+              elseif(!empty( $bcCategory ) && ($bcCategory === "custom")){
+                $cuTitle  = get_field('bc-custitle');
+                $cuLink   = get_field('bc-cuslink');
+                $bCat     = '<a class="no-after" href="'.vc_siteurl($cuLink).'">'.$cuTitle.'</a> ';
+                if( $cuTitle && $cuLink ){
+                  echo '<a href="'.get_bloginfo('url').'">Home</a> '.$bCat.$thispTitle;  
+                }else{
+                  echo '<a href="'.get_bloginfo('url').'">Home</a> '.$thispTitle; 
+                }
               }
               else{
               echo '<a href="'.get_bloginfo('url').'">Home</a> 
