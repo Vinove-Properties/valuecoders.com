@@ -40,12 +40,13 @@
             <?php 
               $bcCategory = get_field('bc-vcategory');
               $bcTitle    = get_field('bc-title');
-              if( $bcTitle ){
-              $bct = $bcTitle;
-              }else{
-              $bct = get_the_title();
-              }
               
+              if( $bcTitle ){
+                $bct = $bcTitle;
+              }else{
+                $bct = get_the_title();
+              }
+                            
               if( isset( $bcCategory ) && ($bcCategory == "solutions") ){
                 echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Solutions</span> '.$bct;   
               }
@@ -57,9 +58,9 @@
                 $cuLink   = get_field('bc-cuslink');
                 $bCat     = '<a class="no-after" href="'.vc_siteurl($cuLink).'">'.$cuTitle.'</a> ';
                 if( $cuTitle && $cuLink ){
-                  echo '<a href="'.get_bloginfo('url').'">Home</a> '.$bCat.$thispTitle;  
+                  echo '<a href="'.get_bloginfo('url').'">Home</a> '.$bCat.$bcTitle;  
                 }else{
-                  echo '<a href="'.get_bloginfo('url').'">Home</a> '.$thispTitle; 
+                  echo '<a href="'.get_bloginfo('url').'">Home</a> '.$bcTitle; 
                 }
               }
               else{

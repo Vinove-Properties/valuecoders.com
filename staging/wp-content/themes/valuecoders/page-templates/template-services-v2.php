@@ -46,9 +46,9 @@
               $cuLink   = get_field('bc-cuslink');
               $bCat     = '<a class="no-after" href="'.vc_siteurl($cuLink).'">'.$cuTitle.'</a> ';
               if( $cuTitle && $cuLink ){
-                echo '<a href="'.get_bloginfo('url').'">Home</a> '.$bCat.$thispTitle;  
+                echo '<a href="'.get_bloginfo('url').'">Home</a> '.$bCat.$bcTitle;  
               }else{
-                echo '<a href="'.get_bloginfo('url').'">Home</a> '.$thispTitle; 
+                echo '<a href="'.get_bloginfo('url').'">Home</a> '.$bcTitle; 
               }
             }
             else{            
