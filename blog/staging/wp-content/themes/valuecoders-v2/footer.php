@@ -159,8 +159,13 @@
             <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/vc-logo.svg" width="191" height="42" alt="Logo">
           </picture>
         </a>
-        <p>Copyright © 2004 - <?php echo date("Y"); ?> Valuecoders, <br>All Rights Reserved. A Vinove Company.
-        </p>
+        <?php
+        $copyRight = "&copy;"; 
+        if( is_user_logged_in() ){
+        $copyRight = "<a href='".get_edit_post_link()."'>&copy;</a>";
+        }
+        ?>
+        <p>Copyright <?php echo $copyRight; ?> 2004 - <?php echo date("Y"); ?> Valuecoders, <br>All Rights Reserved. A Vinove Company.</p>
       </div>
     </div>
   </div>
