@@ -8,19 +8,18 @@
           <p>From startups to big enterprises, development organizations to digital agencies, and SMEs to Governments, we cater to varied software requirements, delivering.</p>
         </div>
         <div class="btn-container">
-          <a href="#" class="cta-button yellow">GET STARTED</a>
+          <a href="<?php echo site_url('/contact-us') ?>" class="cta-button yellow">GET STARTED</a>
         </div>
       </div>
       <div class="flex-2 right-box">
         <div class="dis-flex">
           <div class="flex-2 why-left">
             <div class="plateform">
-              <h3>One Platform, Endless Efficiency</h3>
+              <h3>More Than 500 Brands Count on Us</h3>
               <ul>
-                <li>India's Top 1% Software Talent</li>
-                <li>Startups to Fortune 500</li>
-                <li>Productivity metrics</li>
-                <li>Transparent reporting</li>
+                <li>Top 1% Software Talent</li>
+                <li>97% Client Satisfaction</li>
+                <li>50+ Industry Verticals Covered</li>
               </ul>
             </div>
           </div>

@@ -774,6 +774,19 @@ function vcGetAllCats( $data ){
         while( $loop->have_posts() ) : $loop->the_post();
         global $post;
         $author_id = $post->post_author;
+
+        $authThumbnail      = get_template_directory_uri().'/assets/images/author.png';
+        $authorThumbnail    = get_field( 'auth-thumb', 'user_'.$author_id );
+        if( $authorThumbnail && isset( $authorThumbnail['url'] ) ){
+          $authThumbnail = $authorThumbnail['url'];
+        }else{  
+          $user_avtar   = get_user_meta( $author_id, 'wp_user_avatars', true );
+          if( $user_avtar ){
+            $authThumbnail = isset($user_avtar['full']) ? $user_avtar['full'] : 
+            get_bloginfo('url').'/dev-img/author-profile.png';
+          }
+        }
+        
         $data[] = array(
             'post_id'       => get_the_ID(),
             'thumbnail'     => get_the_post_thumbnail_url( get_the_ID() , 'vweb-blog' ),
@@ -782,7 +795,7 @@ function vcGetAllCats( $data ){
             'comments'      => ( get_comments_number() > 1 ) ? get_comments_number() .' comments': get_comments_number() .' comment',
             'created_at'    => get_the_date(),
             'author'        => get_the_author_meta( 'display_name' , $author_id ),
-            'author_image'  => get_the_author_meta( 'avatar' , $author_id ),
+            'author_image'  => $authThumbnail,
             'experpt'       => wp_trim_words( get_the_content(), 20 )
             //'experpt_2'       => wp_trim_words( get_the_content(), 20 )
             //'experpt'       => get_the_excerpt( get_the_ID() )

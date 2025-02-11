@@ -215,7 +215,7 @@
             foreach( $solElm['sol'] as $sol ){
             echo '<div class="flex-5">
               <div class="box-5" style="background-image:url('.$sol['image']['url'].');">
-                <h3>eLearning</h3>
+                <h3>'.$sol['title'].'</h3>
                 <div class="overlay-text">
                   <div class="content-box">'.$sol['text'].'</div>
                 </div>
