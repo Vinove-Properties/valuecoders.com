@@ -30,7 +30,7 @@
   <div class="container">
     <div class="top-logo">
       <div class="text"><i><img loading="lazy" src="<?php _vers_six('images/home-images/star-one.svg'); ?>" width="22" height="20" alt="star"></i>
-        <strong>4.5/5</strong>based on 19,000+ reviews on
+        <strong>4.5/5</strong>based on 500+ reviews on
       </div>
       <div class="awlogo"><a href="#"></a><a href="#"></a><a href="#"></a></div>
     </div>
@@ -351,17 +351,28 @@ if( isset($stories['required']) && ($stories['required'] === "yes") ) :
     <div class="top-section b-100"><?php echo $stories['content']; ?></div>
     <?php 
     if( $stories['cards'] ){
-    echo '<div class="dis-flex glider-contain success-slider" id="success-glider"><div class="glider">';
-    foreach( $stories['cards'] as $row ){
+    echo '<div class="dis-flex glider-contain success-slider" id="success-glider">
+    <div class="glider">';
+    foreach( $stories['cards'] as $row ){    
     echo '<div class="industry-card">
-          <div class="card-bg" style="background-image:url('.$row['thumb']['url'].');">
-          <span class="category">'.$row['cat'].'</span>
-          <a class="move" href="'.$row['link'].'"></a>
-          </div>
-          <div class="card-content">'.$row['content'].'</div>
-        </div>';
+    <
+
+
+
+
+
+
+
+
+    .u9ik0olp;['iuijok] class="card-bg" style="background-image:url('.$row['thumb']['url'].');">
+    <span class="category">'.$row['cat'].'</span>
+    <a class="move" href="'.$row['link'].'"></a>
+    </div>
+    <div class="card-content">'.$row['content'].'</div>
+    </div>';
+
     }
-    echo '</div>
+    echo '</div><!--//.glider -->
     <div class="test-button">
       <button aria-label="Previous" class="test-prev">«</button>
       <button aria-label="Next" class="test-next">»</button>
