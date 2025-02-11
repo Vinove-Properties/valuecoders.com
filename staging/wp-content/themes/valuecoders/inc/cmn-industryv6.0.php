@@ -78,9 +78,9 @@
       <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/dev-img/industries-v6.0/fintech.webp);"></div>
       <div class="card-content">
         <h5>FinTech</h5>
-        <p>Future Finance</p>
+        <p>Innovating Finance, Empowering Growth</p>
         <div class="hover-content">
-          <p>Next-gen doftware to revolutionize financial services.</p>
+          <p>Next-gen software to revolutionize financial services.</p>
           <a href="#" class="expand">Expand</a>
         </div>
       </div>
@@ -89,7 +89,7 @@
       <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/dev-img/industries-v6.0/education.webp);"></div>
       <div class="card-content">
         <h5>Education & eLearning</h5>
-        <p>Smart Learning, Bright Futures</p>
+        <p>Smart Learning</p>
         <div class="hover-content">
           <p>Custom eLearning solutions to meet changing industry needs.</p>
           <a href="#" class="expand">Expand</a>
@@ -100,7 +100,7 @@
       <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/dev-img/industries-v6.0/manufacturing.webp);"></div>
       <div class="card-content">
         <h5>Manufacturing</h5>
-        <p>Smarter Production, Stronger Supply Chains</p>
+        <p>Smart Production</p>
         <div class="hover-content">
           <p>Advanced software for optimizing production and supply chain.</p>
           <a href="#" class="expand">Expand</a>
