@@ -413,74 +413,56 @@
     </div>
   </div>
 </section>
-<section class="latest-insight light-background  padding-t-120 padding-b-120">
-  <div class="container">
-    <div class="top-section b-100">
+<?php 
+$loop = [];
+$response = wp_remote_get('https://www.valuecoders.com/blog/wp-json/bposts/v1/cat-posts/'.preg_replace('/\s+/', '','ai-development-company').'?var='.time());
+if(is_array( $response ) && !is_wp_error( $response )){
+  $data   = json_decode($response['body']);
+  if( count( $data ) > 1 ){
+    $loop = json_decode($response['body']); 
+  }
+} 
+if( count($loop) > 0 ) :
+echo '<section class="latest-insight light-background  padding-t-120 padding-b-120"><div class="container">';
+echo '<div class="top-section b-100">
       <div class="dis-flex items-center justify-sb  top-content">
         <div class="flex-2">
           <h2>Our latest insights.</h2>
-          <p>Get what you are looking for to fulfill your software development .</p>
+          <p>Get what you are looking for to fulfill your software development.</p>
         </div>
         <div class="flex-2 text-right">
-          <a href="#" class="is-arrow">Over 1,100 articles on technology and talent</a>
+          <a href="https://www.valuecoders.com/blog/" class="is-arrow">Over 1,100 articles on technology and talent</a>
         </div>
       </div>
-    </div>
-    <div class="insight-row">
-      <div class="card">
-        <div class="card-image">
-          <span class="category">AI & ML</span>
-          <picture>
-            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png" width="400" height="200" alt="valuecoders">
-          </picture>
-        </div>
-        <div class="card-content">
-          <h3>Red Flags in Software Outsourcing: 7 Warning Signs You Can’t Ignore</h3>
-          <p>So, you decided to outsource your software development project....</p>
-          <div class="author">
-            <img src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/author.svg" alt="Author avatar">
-            <span>by Ankita</span>
-          </div>
+    </div>';
+echo '<div class="insight-row">';
+$breakPoint = 0;
+foreach( $loop as $blogPost ){ 
+$breakPoint++;
+$authThumb = (!empty($blogPost->author_image)) ? $blogPost->author_image : get_bloginfo('template_url').'/v6.0/images/home-images/author.svg';
+echo '<div class="card">
+      <div class="card-image">
+        <span class="category">AI & ML</span>
+        <picture>
+          <source type="image/webp" srcset="'.$blogPost->thumbnail.'">
+          <img loading="lazy" src="'.$blogPost->thumbnail.'" width="400" height="200" alt="valuecoders">
+        </picture>
+      </div>
+      <div class="card-content">
+        <h3><a href="'.$blogPost->permalink.'">'.$blogPost->title.'</a></h3>
+        <p>'.$blogPost->experpt.'</p>
+        <div class="author">
+          <img src="'.$authThumb.'" alt="Author avatar">
+          <span>'.$blogPost->author.'</span>
         </div>
       </div>
-      <div class="card">
-        <div class="card-image">
-          <span class="category">AI & ML</span>
-          <picture>
-            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png" width="400" height="200" alt="valuecoders">
-          </picture>
-        </div>
-        <div class="card-content">
-          <h3>Red Flags in Software Outsourcing: 7 Warning Signs You Can’t Ignore</h3>
-          <p>So, you decided to outsource your software development project....</p>
-          <div class="author">
-            <img src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/author.svg" alt="Author avatar">
-            <span>by Ankita</span>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-image">
-          <span class="category">AI & ML</span>
-          <picture>
-            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/insight-01.png" width="400" height="200" alt="valuecoders">
-          </picture>
-        </div>
-        <div class="card-content">
-          <h3>Red Flags in Software Outsourcing: 7 Warning Signs You Can’t Ignore</h3>
-          <p>So, you decided to outsource your software development project....</p>
-          <div class="author">
-            <img src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/author.svg" alt="Author avatar">
-            <span>by Ankita</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </div>';
+if( $breakPoint === 3 ) break;    
+}
+echo '</div>';
+echo '</div></section>';
+endif;
+?>
 <?php 
   $faqs       = get_field('tpl-faq');
   if( isset($faqs['is_enabled']) && ($faqs['is_enabled'] == "yes") ) :

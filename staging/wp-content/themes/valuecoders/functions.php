@@ -668,13 +668,13 @@ $pbtm 				= "";
 
 $loop 	= [
 (object) array(
-'thumbnail' => 'https://www.valuecoders.com/blog/wp-content/uploads/2022/05/android-app-with-kotlin.jpg',
+'thumbnail' => 'https://www.valuecoders.com/blog/wp-content/uploads/2022/05/android-app-with-kotlin.jpg.webp',
 'title' => 'Guide to Android App Development: Tips, Tricks, and Strategies for Building Successful Apps',
 'permalink' => 'https://www.valuecoders.com/blog/technology-and-apps/guide-to-android-app-development-tips-tricks-and-strategies-for-building-successful-apps/',
 'experpt' => 'Android app development is booming, and it doesn’t seem to be slowing down anytime soon. With an estimated 133 million'
 ),
 (object) array(
-'thumbnail' => 'https://www.valuecoders.com/blog/wp-content/uploads/2017/02/future-of-mobile-application-development.png',
+'thumbnail' => 'https://www.valuecoders.com/blog/wp-content/uploads/2017/02/future-of-mobile-application-development.png.webp',
 'title' => 'An Overlook to the Future of Mobile Application Development',
 'permalink' => 'https://www.valuecoders.com/blog/technology-and-apps/future-of-mobile-application-development/',
 'experpt' => 'Are you a startup, an Entrepreneur, or an enterprise?  Or a mobile app developer who wants to know about the'
