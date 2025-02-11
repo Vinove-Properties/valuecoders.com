@@ -169,7 +169,16 @@
       </div>
     </div>
   </div>
-  <div class="footer-copyright">Copyright © 2004 - 2025 ValueCoders, All Rights Reserved. A Vinove Company.</div>
+  <?php
+  $copyRight = "&copy;"; 
+  if( is_user_logged_in() ){
+    $is_staging = isStaggingVersion();
+    if( $is_staging === true ){
+      $copyRight = "<a href='".get_edit_post_link()."' style='color:#8d8d8d;'>&copy;</a>";
+    }
+  }
+  ?>
+  <div class="footer-copyright">Copyright <?php echo $copyRight;?> 2004 - <?php echo date("Y"); ?> ValueCoders, All Rights Reserved. A Vinove Company.</div>
 </footer>
 
 <script type="text/javascript">
