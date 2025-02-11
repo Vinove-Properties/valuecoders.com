@@ -21,7 +21,16 @@
   }
 
   p {
-    color: $greyBannerfont;
+    line-height: 30px;
+    color: rgba(252, 252, 252, 0.87);
+    font-size: 18px;
+    font-weight: 400;
+    a {
+      color: $white;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   a {
@@ -1049,6 +1058,8 @@
         flex-basis: 50%;
       }
     }
+    p{font-size: 16px;
+      line-height: 27px;}
   }
   .customer-logo-section {
     .custom-logo-img-box {
