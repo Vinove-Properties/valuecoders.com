@@ -355,16 +355,7 @@ if( isset($stories['required']) && ($stories['required'] === "yes") ) :
     <div class="glider">';
     foreach( $stories['cards'] as $row ){    
     echo '<div class="industry-card">
-    <
-
-
-
-
-
-
-
-
-    .u9ik0olp;['iuijok] class="card-bg" style="background-image:url('.$row['thumb']['url'].');">
+    <div class="card-bg" style="background-image:url('.$row['thumb']['url'].');">
     <span class="category">'.$row['cat'].'</span>
     <a class="move" href="'.$row['link'].'"></a>
     </div>
