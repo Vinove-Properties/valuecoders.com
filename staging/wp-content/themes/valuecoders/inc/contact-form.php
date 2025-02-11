@@ -10,7 +10,7 @@ $csrf_token = ( isset( $_SESSION['vc-csrf'] ) &&  is_array( $_SESSION['vc-csrf']
         <a href="mailto:sales@valuecoders.com" target="_blank"><i><img loading="lazy" src="<?php _vers_six('images/home-images/connect-03.svg'); ?>" alt="valuecoders" width="20" height="20"></i><span>Email us</span></a>
       </div>
       <div class="award-box">
-        <p>Trusted by startups and Fortune 500 companies</p>
+        <p>Trusted by Startups and Fortune 500 companies</p>
         <div class="row-box">
           <div class="col-box dis-flex">
             <div class="icon"><img loading="lazy" src="<?php _vers_six('images/home-images/cont-01.svg'); ?>" alt="pixel" width="40" height="40"></div>

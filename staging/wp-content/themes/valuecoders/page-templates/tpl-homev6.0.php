@@ -54,7 +54,7 @@
       </div>
       <div class="bottom-card highlight">
         <h4>Trusted By</h4>
-        <h2>500 <br>Companies</h2>
+        <h2>2500 <br>Companies</h2>
         <p>Globally</p>
         <a href="#" class="is-arrow">See our clients
         </a>
@@ -298,9 +298,9 @@
 </section>
 <?php endif; ?>
 <?php 
-  $trendElm = get_field('tech-trends');
-  if( isset($trendElm['required']) && ($trendElm['required'] == "yes") ) :
-  ?>
+$trendElm = get_field('tech-trends');
+if( isset($trendElm['required']) && ($trendElm['required'] == "yes") ) :
+?>
 <section class="tabs-section techno-tabs padding-t-120 padding-b-120" id="tabs-section-2">
   <div class="container">
     <div class="top-section b-100"><?php echo $trendElm['content']; ?></div>
@@ -394,7 +394,7 @@ echo '<div class="top-section b-100">
           <p>From latest happenings in the tech world to detailed guides on how to turn your vision into an amazing product, we are here to guide you at every step.</p>
         </div>
         <div class="flex-2 text-right">
-        <a href="https://www.valuecoders.com/blog/" class="is-arrow">Over 1,100 articles on technology and talent</a>
+        <a href="https://www.valuecoders.com/blog/" class="is-arrow">Over 1000 articles on tech and talent</a>
         </div>
       </div>
     </div>';
