@@ -311,16 +311,16 @@ if( isset($trendElm['required']) && ($trendElm['required'] == "yes") ) :
       <div class="tabs-container">
         <ul class="tabs">
           <?php 
-            $i = 0;
-            foreach( $trendElm['tabs'] as $tab ) { 
-                $i++;
-                $active = ($i === 1) ? 'active' : '';  
-                $imgUrl = !empty($tab['icon']['url']) ? $tab['icon']['url'] : 'placeholder.jpg'; // Fallback image
-            
-                echo '<li class="tab '.$active.'" data-target="telm-'.$i.'">
-                <img src="'.$imgUrl.'" alt="valucoders"> '.$tab['title'].'</li>';
-            }
-            ?>        
+          $i = 0;
+          foreach( $trendElm['tabs'] as $tab ) { 
+              $i++;
+              $active   = ($i === 1) ? 'active' : '';  
+              $imgUrl   = !empty($tab['icon']['url']) ? $tab['icon']['url'] : 'placeholder.jpg';
+              $himgUrl  = !empty($tab['hicon']['url']) ? $tab['hicon']['url'] : 'placeholder.jpg';
+              echo '<li class="tab '.$active.'" data-target="telm-'.$i.'">
+              <img src="'.$imgUrl.'" class="normal" alt="'.$tab['title'].'"><img src="'.$himgUrl.'" class="hover" alt="'.$tab['title'].'"> '.$tab['title'].'</li>';
+          }
+          ?>        
         </ul>
         <div class="tab-content">
           <?php 

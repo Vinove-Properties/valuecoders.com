@@ -9,100 +9,100 @@
   <div id="industries-glider-v6-loader" class="loader">&nbsp;&nbsp;</div>
   <div id="indGlider" class="glider" style="visibility:hidden; position:absolute;">
     <div class="industry-card">
-      <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/v6.0/images/home-images/ind-01.png);"></div>
+      <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/dev-img/industries-v6.0/travel.webp);"></div>
       <div class="card-content">
-        <h5>TRAVEL & TOURISM</h5>
-        <h4>Innovate software for travel & Tourism...</h4>
+        <h5>Travel & Tourism</h5>
+        <p>Seamless Journeys</p>
         <div class="hover-content">
-          <p>Embrace the transformative power of technology with ValueCoders.</p>
+          <p>Innovative software to improve booking and customer service experience.</p>
           <a href="#" class="expand">Expand</a>
         </div>
       </div>
     </div>
     <div class="industry-card">
-      <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/v6.0/images/home-images/ind-02.png);"></div>
+      <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/dev-img/industries-v6.0/healthcare.webp);"></div>
       <div class="card-content">
-        <h5>TRAVEL & TOURISM</h5>
-        <h4>Innovate software for travel & Tourism...</h4>
+        <h5>Healthcare</h5>
+        <p>Smarter Care, Better Outcomes</p>
         <div class="hover-content">
-          <p>Embrace the transformative power of technology with ValueCoders.</p>
+          <p>Innovative software solutions to improve patient care.</p>
           <a href="#" class="expand">Expand</a>
         </div>
       </div>
     </div>
     <div class="industry-card">
-      <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/v6.0/images/home-images/ind-01.png);"></div>
+      <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/dev-img/industries-v6.0/logistic.webp);"></div>
       <div class="card-content">
-        <h5>TRAVEL & TOURISM</h5>
-        <h4>Innovate software for travel & Tourism...</h4>
+        <h5>Logistics & Transport</h5>
+        <p>Optimized Logistics</p>
         <div class="hover-content">
-          <p>Embrace the transformative power of technology with ValueCoders.</p>
+          <p>Robust & scalable solutions for logistics & transport business.</p>
           <a href="#" class="expand">Expand</a>
         </div>
       </div>
     </div>
     <div class="industry-card">
-      <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/v6.0/images/home-images/ind-01.png);"></div>
+      <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/dev-img/industries-v6.0/baking.webp);"></div>
       <div class="card-content">
-        <h5>TRAVEL & TOURISM</h5>
-        <h4>Innovate software for travel & Tourism...</h4>
+        <h5>Banking & Finance</h5>
+        <p>Secure. Reliable. Scalable</p>
         <div class="hover-content">
-          <p>Embrace the transformative power of technology with ValueCoders.</p>
+          <p>Secure software for banking and finance to ensure trust & stability.</p>
           <a href="#" class="expand">Expand</a>
         </div>
       </div>
     </div>
     <div class="industry-card">
-      <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/v6.0/images/home-images/ind-01.png);"></div>
+      <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/dev-img/industries-v6.0/media.webp);"></div>
       <div class="card-content">
-        <h5>TRAVEL & TOURISM</h5>
-        <h4>Innovate software for travel & Tourism...</h4>
+        <h5>Media & Entertainment</h5>
+        <p>Improve Engagement</p>
         <div class="hover-content">
-          <p>Embrace the transformative power of technology with ValueCoders.</p>
+          <p>Engagement-focused software to enhance content delivery.</p>
           <a href="#" class="expand">Expand</a>
         </div>
       </div>
     </div>
     <div class="industry-card">
-      <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/v6.0/images/home-images/ind-01.png);"></div>
+      <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/dev-img/industries-v6.0/retail.webp);"></div>
       <div class="card-content">
-        <h5>TRAVEL & TOURISM</h5>
-        <h4>Innovate software for travel & Tourism...</h4>
+        <h5>Retail & eCommerce</h5>
+        <p>Scalable Tech for Seamless Sales</p>
         <div class="hover-content">
-          <p>Embrace the transformative power of technology with ValueCoders.</p>
+          <p>Scalable B2B & B2C solutions for your business.</p>
           <a href="#" class="expand">Expand</a>
         </div>
       </div>
     </div>
     <div class="industry-card">
-      <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/v6.0/images/home-images/ind-01.png);"></div>
+      <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/dev-img/industries-v6.0/fintech.webp);"></div>
       <div class="card-content">
-        <h5>TRAVEL & TOURISM</h5>
-        <h4>Innovate software for travel & Tourism...</h4>
+        <h5>FinTech</h5>
+        <p>Future Finance</p>
         <div class="hover-content">
-          <p>Embrace the transformative power of technology with ValueCoders.</p>
+          <p>Next-gen doftware to revolutionize financial services.</p>
           <a href="#" class="expand">Expand</a>
         </div>
       </div>
     </div>
     <div class="industry-card">
-      <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/v6.0/images/home-images/ind-01.png);"></div>
+      <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/dev-img/industries-v6.0/education.webp);"></div>
       <div class="card-content">
-        <h5>TRAVEL & TOURISM</h5>
-        <h4>Innovate software for travel & Tourism...</h4>
+        <h5>Education & eLearning</h5>
+        <p>Smart Learning, Bright Futures</p>
         <div class="hover-content">
-          <p>Embrace the transformative power of technology with ValueCoders.</p>
+          <p>Custom eLearning solutions to meet changing industry needs.</p>
           <a href="#" class="expand">Expand</a>
         </div>
       </div>
     </div>
     <div class="industry-card">
-      <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/v6.0/images/home-images/ind-01.png);"></div>
+      <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/dev-img/industries-v6.0/manufacturing.webp);"></div>
       <div class="card-content">
-        <h5>TRAVEL & TOURISM</h5>
-        <h4>Innovate software for travel & Tourism...</h4>
+        <h5>Manufacturing</h5>
+        <p>Smarter Production, Stronger Supply Chains</p>
         <div class="hover-content">
-          <p>Embrace the transformative power of technology with ValueCoders.</p>
+          <p>Advanced software for optimizing production and supply chain.</p>
           <a href="#" class="expand">Expand</a>
         </div>
       </div>
