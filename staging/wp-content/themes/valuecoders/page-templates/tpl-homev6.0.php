@@ -354,8 +354,9 @@ if( isset($stories['required']) && ($stories['required'] === "yes") ) :
     echo '<div class="dis-flex glider-contain success-slider" id="success-glider"><div class="glider">';
     foreach( $stories['cards'] as $row ){
     echo '<div class="industry-card">
-          <div class="card-bg" style="background-image:url('.$row['thumb']['url'].');"><span class="category">'.$row['cat'].'</span>
-            <a class="move" href="'.$row['link'].'"></a>
+          <div class="card-bg" style="background-image:url('.$row['thumb']['url'].');">
+          <span class="category">'.$row['cat'].'</span>
+          <a class="move" href="'.$row['link'].'"></a>
           </div>
           <div class="card-content">'.$row['content'].'</div>
         </div>';
@@ -365,6 +366,7 @@ if( isset($stories['required']) && ($stories['required'] === "yes") ) :
       <button aria-label="Previous" class="test-prev">«</button>
       <button aria-label="Next" class="test-next">»</button>
       <div role="tablist" class="dots"></div>
+    </div>   
     </div></div>';
     }
     ?>    
