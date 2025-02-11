@@ -36,11 +36,11 @@
     </div>
     <div class="stats">
       <div class="stat">
-        <h2>450+</h2>
+        <h2>675+</h2>
         <p>Developers</p>
       </div>
       <div class="stat">
-        <h2>2500+</h2>
+        <h2>4200+</h2>
         <p>Projects Delivered</p>
       </div>
       <div class="stat">
