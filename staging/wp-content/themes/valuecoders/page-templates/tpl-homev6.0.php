@@ -341,79 +341,38 @@
     </div>
   </div>
 </section>
-<?php endif; ?>    
-<section class="success-slider-section  padding-t-120 padding-b-120">
+<?php endif;
+
+$stories = get_field('vstories');
+if( isset($stories['required']) && ($stories['required'] === "yes") ) :
+?>
+<section class="success-slider-section padding-t-120 padding-b-120">
   <div class="container">
-    <div class="top-section b-100">
-      <h2>Success Stories</h2>
-      <p>From simple CRM to complex applications, our experts are capable of handling projects of all sizes. Here’s a glimpse into some of our previous work.</p>
-    </div>
-    <div class="dis-flex glider-contain success-slider" id="success-glider">
-      <div class="glider">
-        <div class="industry-card">
-          <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/v6.0/images/home-images/success-01.png);"><span class="category">IT Consulting & Strategy</span>
-            <a class="move" href="#"></a>
+    <div class="top-section b-100"><?php echo $stories['content']; ?></div>
+    <?php 
+    if( $stories['cards'] ){
+    echo '<div class="dis-flex glider-contain success-slider" id="success-glider"><div class="glider">';
+    foreach( $stories['cards'] as $row ){
+    echo '<div class="industry-card">
+          <div class="card-bg" style="background-image:url('.$row['thumb']['url'].');"><span class="category">'.$row['cat'].'</span>
+            <a class="move" href="'.$row['link'].'"></a>
           </div>
-          <div class="card-content">
-            <h4>Innovate software for travel & Tourism...</h4>
-            <p>The client wanted to build a web portal where customers could purchase motorcycles online and dealers could access and manage their agent accounts.</p>
-          </div>
-        </div>
-        <div class="industry-card">
-          <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/v6.0/images/home-images/success-02.png);"> <span class="category">Website Development</span>
-            <a class="move" href="#"></a>
-          </div>
-          <div class="card-content">
-            <h4>Best Travel Platform</h4>
-            <p>The smart integrated platform is founded on the pillars...</p>
-          </div>
-        </div>
-        <div class="industry-card">
-          <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/v6.0/images/home-images/test-01.jpg);"><span class="category">IT Consulting & Strategy</span>
-            <a class="move" href="#"></a>
-          </div>
-          <div class="card-content">
-            <h4>Change Slider prtal</h4>
-            <p>The client wanted to build a web portal where customers could purchase motorcycles online and dealers could access and manage their agent accounts.</p>
-          </div>
-        </div>
-        <div class="industry-card">
-          <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/v6.0/images/home-images/success-02.png);"> <span class="category">Website Development</span>
-            <a class="move" href="#"></a>
-          </div>
-          <div class="card-content">
-            <h4>Travel Platform portal</h4>
-            <p>The smart integrated platform is founded on the pillars...</p>
-          </div>
-        </div>
-        <div class="industry-card">
-          <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/v6.0/images/home-images/test-01.jpg);"><span class="category">IT Notice</span>
-            <a class="move" href="#"></a>
-          </div>
-          <div class="card-content">
-            <h4>Slider prtal</h4>
-            <p>The client wanted to build a web portal where customers could purchase motorcycles online and dealers could access and manage their agent accounts.</p>
-          </div>
-        </div>
-        <div class="industry-card">
-          <div class="card-bg" style="background-image:url(<?php bloginfo('template_url'); ?>/v6.0/images/home-images/success-02.png);"> <span class="category">Website Devops</span>
-            <a class="move" href="#"></a>
-          </div>
-          <div class="card-content">
-            <h4>Platform portal</h4>
-            <p>The smart integrated platform is founded on the pillars...</p>
-          </div>
-        </div>
-      </div>
-      <div class="test-button">
-        <button aria-label="Previous" class="test-prev">«</button>
-        <button aria-label="Next" class="test-next">»</button>
-        <div role="tablist" class="dots"></div>
-      </div>
-    </div>
+          <div class="card-content">'.$row['content'].'</div>
+        </div>';
+    }
+    echo '</div>
+    <div class="test-button">
+      <button aria-label="Previous" class="test-prev">«</button>
+      <button aria-label="Next" class="test-next">»</button>
+      <div role="tablist" class="dots"></div>
+    </div></div>';
+    }
+    ?>    
   </div>
 </section>
 <?php 
+endif;
+
 $loop = [];
 $response = wp_remote_get('https://www.valuecoders.com/blog/wp-json/bposts/v1/cat-posts/'.preg_replace('/\s+/', '','ai-development-company').'?var='.time());
 if(is_array( $response ) && !is_wp_error( $response )){
@@ -427,11 +386,11 @@ echo '<section class="latest-insight light-background  padding-t-120 padding-b-1
 echo '<div class="top-section b-100">
       <div class="dis-flex items-center justify-sb  top-content">
         <div class="flex-2">
-          <h2>Our latest insights.</h2>
-          <p>Get what you are looking for to fulfill your software development.</p>
+          <h2>Featured Insights</h2>
+          <p>From latest happenings in the tech world to detailed guides on how to turn your vision into an amazing product, we are here to guide you at every step.</p>
         </div>
         <div class="flex-2 text-right">
-          <a href="https://www.valuecoders.com/blog/" class="is-arrow">Over 1,100 articles on technology and talent</a>
+        <a href="https://www.valuecoders.com/blog/" class="is-arrow">Over 1,100 articles on technology and talent</a>
         </div>
       </div>
     </div>';
