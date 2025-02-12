@@ -354,14 +354,13 @@ if( isset($stories['required']) && ($stories['required'] === "yes") ) :
     echo '<div class="dis-flex glider-contain success-slider" id="success-glider">
     <div class="glider">';
     foreach( $stories['cards'] as $row ){    
+    $cat = ( isset($row['cat']) && !empty($row['cat']) ) ? '<span class="category">'.$row['cat'].'</span>' : '';
     echo '<div class="industry-card">
     <div class="card-bg" style="background-image:url('.$row['thumb']['url'].');">
-    <span class="category">'.$row['cat'].'</span>
-    <a class="move" href="'.$row['link'].'"></a>
+    '.$cat.'<a class="move" href="'.$row['link'].'"></a>
     </div>
     <div class="card-content">'.$row['content'].'</div>
     </div>';
-
     }
     echo '</div><!--//.glider -->
     <div class="test-button">

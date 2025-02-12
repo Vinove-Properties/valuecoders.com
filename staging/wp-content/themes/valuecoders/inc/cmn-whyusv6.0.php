@@ -8,7 +8,7 @@
           <p>From startups to big enterprises, development organizations to digital agencies, and SMEs to Governments, we cater to varied software requirements, delivering.</p>
         </div>
         <div class="btn-container">
-          <a href="<?php echo site_url('/contact-us') ?>" class="cta-button yellow">GET STARTED</a>
+          <a href="<?php echo site_url('/contact') ?>" class="cta-button yellow">GET STARTED</a>
         </div>
       </div>
       <div class="flex-2 right-box">
