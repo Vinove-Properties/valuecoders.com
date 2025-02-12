@@ -293,7 +293,9 @@
         </div>
       </div>
     </div>
-    <div class="explore-sc text-center margin-t-80"><a class="explore-btn" href="">Explore all Technologies</a></div>
+    <!-- 
+    <div class="explore-sc text-center margin-t-80"><a class="explore-btn" href="">Explore all Technologies</a></div> 
+    -->
   </div>
 </section>
 <?php endif; ?>
@@ -377,6 +379,7 @@ if( isset($stories['required']) && ($stories['required'] === "yes") ) :
 endif;
 
 $loop = [];
+
 $response = wp_remote_get('https://www.valuecoders.com/blog/wp-json/bposts/v1/cat-posts/'.preg_replace('/\s+/', '','ai-development-company').'?var='.time());
 if(is_array( $response ) && !is_wp_error( $response )){
   $data   = json_decode($response['body']);
