@@ -225,7 +225,7 @@ function valuecoders_scripts() {
 		wp_enqueue_style( 'vc-service-v2', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/service-updated.css', [], _S_VERSION );
 	}
 	elseif( is_page_template( 'page-templates/tpl-services-v5.0.php' ) ){
-		wp_enqueue_style( 'vc-service-v5', get_stylesheet_directory_uri().'/v5.0/css/services.min.css', [], _S_VERSION );
+		wp_enqueue_style( 'vc-service-v5', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/services.min.css', [], _S_VERSION );
 	}
 	elseif( is_page_template( 'page-templates/template-contact.php' ) ){
 		wp_enqueue_style( 'vc-contact', get_stylesheet_directory_uri().'/css/contact-form.min.css', [], _S_VERSION );
