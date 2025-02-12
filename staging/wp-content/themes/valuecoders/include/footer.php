@@ -160,7 +160,7 @@
         4.9 out of 5.0 by
         </span>
         <span class="client-outer">
-        <a href="javascript:void(0)" onclick="ratenow()" id="ratebtn" class="rate-us">Rate Us</a> 2437 clients on over 10800+ projects
+        <a href="javascript:void(0)" onclick="ratenow()" id="ratebtn" class="rate-us">Rate Us</a> 1130 clients on 4200+ projects
         </span>
       </div>
       <div class="flex-4 copyright">

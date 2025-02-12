@@ -15,7 +15,7 @@
         <p>Seamless Journeys</p>
         <div class="hover-content">
           <p>Innovative software to improve booking and customer service experience.</p>
-          <a href="#" class="expand">Expand</a>
+          <a href="<?php echo site_url('/industries/healthcare-software-development-services'); ?>" class="expand">Expand</a>
         </div>
       </div>
     </div>
@@ -26,7 +26,7 @@
         <p>Smarter Care, Better Outcomes</p>
         <div class="hover-content">
           <p>Innovative software solutions to improve patient care.</p>
-          <a href="#" class="expand">Expand</a>
+          <a href="<?php echo site_url('/industries/healthcare-software-development-services'); ?>" class="expand">Expand</a>
         </div>
       </div>
     </div>
@@ -37,7 +37,7 @@
         <p>Optimized Logistics</p>
         <div class="hover-content">
           <p>Robust & scalable solutions for logistics & transport business.</p>
-          <a href="#" class="expand">Expand</a>
+          <a href="<?php echo site_url('/industries/logistics-transportation-software-development'); ?>" class="expand">Expand</a>
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@
         <p>Secure. Reliable. Scalable</p>
         <div class="hover-content">
           <p>Secure software for banking and finance to ensure trust & stability.</p>
-          <a href="#" class="expand">Expand</a>
+          <a href="<?php echo site_url('/industries/banking-financial-services'); ?>" class="expand">Expand</a>
         </div>
       </div>
     </div>
@@ -59,7 +59,7 @@
         <p>Improve Engagement</p>
         <div class="hover-content">
           <p>Engagement-focused software to enhance content delivery.</p>
-          <a href="#" class="expand">Expand</a>
+          <a href="<?php echo site_url('/media-software-development-services'); ?>" class="expand">Expand</a>
         </div>
       </div>
     </div>
@@ -70,7 +70,7 @@
         <p>Scalable Tech for Seamless Sales</p>
         <div class="hover-content">
           <p>Scalable B2B & B2C solutions for your business.</p>
-          <a href="#" class="expand">Expand</a>
+          <a href="<?php echo site_url('/industries/retail-ecommerce-software-development'); ?>" class="expand">Expand</a>
         </div>
       </div>
     </div>
@@ -81,7 +81,7 @@
         <p>Innovating Finance, Empowering Growth</p>
         <div class="hover-content">
           <p>Next-gen software to revolutionize financial services.</p>
-          <a href="#" class="expand">Expand</a>
+          <a href="<?php echo site_url('/industries/fintech-software-development-company'); ?>" class="expand">Expand</a>
         </div>
       </div>
     </div>
@@ -92,7 +92,7 @@
         <p>Smart Learning</p>
         <div class="hover-content">
           <p>Custom eLearning solutions to meet changing industry needs.</p>
-          <a href="#" class="expand">Expand</a>
+          <a href="<?php echo site_url('/industries/education-elearning-software-development'); ?>" class="expand">Expand</a>
         </div>
       </div>
     </div>
@@ -103,7 +103,7 @@
         <p>Smart Production</p>
         <div class="hover-content">
           <p>Advanced software for optimizing production and supply chain.</p>
-          <a href="#" class="expand">Expand</a>
+          <a href="<?php echo site_url('/industries/manufacturing-software-development'); ?>" class="expand">Expand</a>
         </div>
       </div>
     </div>
