@@ -4,20 +4,14 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <?php 
-  if( isStaggingVersion() === false ){
+    <?php 
+    if( isStaggingVersion() === false ){
     echo '<meta name="google-site-verification" content="x4jenxWHytNYoiEQI40yqtoX1fPPrGYhHxi8ahcm9FY" />';
-  }
-  ?>
+    }
+    ?>
 
-	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link rel="icon" href="<?php bloginfo('template_url'); ?>/dev-img/favicons.svg" type="image/x-icon">
-	<?php 
-	if( !wp_is_mobile() ) : 
-  ?>
-	<link rel="preload" href="<?php bloginfo('template_url'); ?>/v3.0/fonts/NotoSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="<?php bloginfo('template_url'); ?>/v3.0/fonts/NotoSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
-	<?php endif; ?>
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="icon" href="<?php bloginfo('template_url'); ?>/dev-img/favicons.svg" type="image/x-icon">
 <style>
 @media only screen and (max-width: 767px) {
 body{font-family:sans-serif;}
