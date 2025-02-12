@@ -15,7 +15,8 @@
         <p>Seamless Journeys</p>
         <div class="hover-content">
           <p>Innovative software to improve booking and customer service experience.</p>
-          <a href="<?php echo site_url('/industries/healthcare-software-development-services'); ?>" class="expand">Expand</a>
+          <a href="<?php echo site_url('/industries/travel-tourism-software-development-services'); ?>" 
+          class="expand">Expand</a>
         </div>
       </div>
     </div>
