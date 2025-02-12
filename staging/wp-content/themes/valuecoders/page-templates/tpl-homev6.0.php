@@ -524,7 +524,7 @@ endif;
                 </div>
               </div>
               <div class="content-box">
-                <p>The team at ValueCoder has provided us with exceptional services in creating this one-of-a-kind portal, and it has been a fantastic experience. I was particularly impressed by how efficiently and quickly the team always came up with creative solutions to provide us with all the functionalities within the portal we had requested.</p>
+                <p>ValueCoders provided us with exceptional services in creating a one-of-a-kind portal. Impressed with how efficient and quick the team was in coming up with creative solutions. They added all functionalities in the portal that we wanted.</p>
                 <h5>Judith Mueller</h5>
                 <span class="designtn">Executive Director, Mueller Health Foundation</span>
                 <span class="star-image"></span>
