@@ -76,7 +76,7 @@ $flexClm    = ( $hasAllClm === true ) ? 'flex-5' : 'flex-4';
         ?>
         <li class="more-spc">
           <div class="btn-sec">
-            <a href="<?php echo $gsLink; ?>" class="btn rounded"><span class="text-white">Contact Us</span></a>
+            <a href="<?php echo $gsLink; ?>" class="btn rounded"><span class="text-white">CONTACT US</span></a>
           </div>
         </li>
       </ul>
@@ -111,7 +111,7 @@ $flexClm    = ( $hasAllClm === true ) ? 'flex-5' : 'flex-4';
         ?>
         <li class="more-spc">
           <div class="btn-sec">
-            <a href="<?php echo $gsLink; ?>" class="btn rounded"><span class="text-white">Contact Us</span></a>
+            <a href="<?php echo $gsLink; ?>" class="btn rounded"><span class="text-white">CONTACT US</span></a>
           </div>
         </li>
       </ul>
@@ -146,7 +146,7 @@ $flexClm    = ( $hasAllClm === true ) ? 'flex-5' : 'flex-4';
         ?>
         <li class="more-spc">
           <div class="btn-sec">
-            <a href="<?php echo $gsLink; ?>" class="btn rounded"><span class="text-white">Contact Us</span></a>
+            <a href="<?php echo $gsLink; ?>" class="btn rounded"><span class="text-white">CONTACT US</span></a>
           </div>
         </li>
       </ul>
@@ -181,7 +181,7 @@ $flexClm    = ( $hasAllClm === true ) ? 'flex-5' : 'flex-4';
         ?>
         <li class="more-spc">
           <div class="btn-sec">
-            <a href="<?php echo $gsLink; ?>" class="btn rounded"><span class="text-white">Contact Us</span></a>
+            <a href="<?php echo $gsLink; ?>" class="btn rounded"><span class="text-white">CONTACT US</span></a>
           </div>
         </li>
       </ul>

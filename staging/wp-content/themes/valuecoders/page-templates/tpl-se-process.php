@@ -22,7 +22,7 @@ get_header();
           ?>
           <div class="btn-sec margin-t-50 ">
           <a href="<?php echo site_url('/contact'); ?>" class="btn rounded">
-          <span class="text-white">Contact Us</span>
+          <span class="text-white">CONTACT US</span>
           </a>
           </div>
         </div>
@@ -260,7 +260,7 @@ $headText   = fnextractHeadins('h2', $htContent );
       </div>
       <div class="btn-sec margin-t-50">
       <a href="<?php echo site_url('/contact'); ?>" class="btn rounded">
-      <span class="text-white">Contact Us</span>
+      <span class="text-white">CONTACT US</span>
       </a>
       </div>      
     </div>
