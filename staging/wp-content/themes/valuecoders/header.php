@@ -7,6 +7,7 @@
     <?php 
     if( isStaggingVersion() === false ){
     echo '<meta name="google-site-verification" content="x4jenxWHytNYoiEQI40yqtoX1fPPrGYhHxi8ahcm9FY" />';
+    echo "<meta name='dmca-site-verification' content='VFdhN2tJNkQ5ckFiQmU3NkZIZlJuYkwzaDZvWHBKRXdud3VjZ2x3VEgxVT01' />";
     }
     ?>
 

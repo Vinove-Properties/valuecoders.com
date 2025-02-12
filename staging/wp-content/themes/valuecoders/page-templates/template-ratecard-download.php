@@ -1407,7 +1407,7 @@ if( property_exists($json, 'country') ){
                                             <div itemprop="text">
                                             <p>Connecting with developers is important because it allows you to get feedback on your project, helps you find bugs, and also allows you to build a community around your project. It lets you keep track of changes made to your project, which is important for keeping your project up-to-date. It also allows you to get help when you need it, and it can also help you find new features or ideas for your project.</p>
                                             <p>Once you outsource your project to ValueCoders, you can easily connect with developers directly through our online platform. Our platform enables seamless communication between clients and developers so that you can start your project immediately. Our developers are highly skilled and experienced, so you can be confident that your project is in good hands.</p>
-                                            <p>Moreover, you can use other platforms, such as GitHub, Stack Overflow, etc., to connect with our developers. Whatever method you use, make sure you connect with developers interested in your project and have the skill set you need. Connect with us today to get started on your next project.
+                                            <p>Moreover, you can use other platforms, such as GitHub, Stack Overflow, etc., to connect with our developers. Whatever method you use, make sure you connect with developers interested in your project and have the skill set you need. Connect with us today to Contact Us on your next project.
 </p></div>    
                                         </div>
                                     </div>

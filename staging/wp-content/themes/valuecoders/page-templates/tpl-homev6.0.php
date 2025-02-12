@@ -127,7 +127,7 @@
         <div class="ser-button">
           <i><img src="<?php _vers_six('images/home-images/vc-fav.svg'); ?>" width="40" height="40" alt="valuecoders"></i>
           <?php echo $servCol['sub-content']; ?>
-          <div class="btn-container"><a href="<?php echo site_url('contact'); ?>" class="cta-button yellow">GET STARTED</a></div>
+          <div class="btn-container"><a href="<?php echo site_url('contact'); ?>" class="cta-button yellow">CONTACT US</a></div>
         </div>
       </div>
       <div class="right-panel">

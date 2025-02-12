@@ -1288,7 +1288,7 @@ if( $secType == 'left' ){ ?>
 	<div class="container for-pattern-img">
 		<div class="dis-flex bg-dark-theme counter-column-outer">
 			<div class="left-box">
-				<h2>Ready To Get Started?</h2>
+				<h2>Ready To Contact Us?</h2>
 				<p>Consistently recognized as one of India's best software development companies and proven success over 17+ years with thousands of customers globally, you can entrust us with your software development and outsourcing needs.</p>
 				<a class="green-btn" href="<?php echo site_url('/contact'); ?>">Contact Us <i class="arrow-icon"></i></a>
 			</div>

@@ -262,7 +262,7 @@ if( $clSection == "yes" ) :
 	<div class="container for-pattern-img">
 	<div class="dis-flex items-center  justify-sb counter-column-outer">
 	  <div class="left-box">
-	    <h2>Ready To Get Started?</h2>
+	    <h2>Ready To Contact Us?</h2>
 	    <p>Consistently recognized as one of India’s best software development companies with the proven success of over 20+ years with thousands of customers globally. You can entrust us with your software development and outsourcing needs.</p>
 	    
 	    <div class="cta-wrap margin-t-50">

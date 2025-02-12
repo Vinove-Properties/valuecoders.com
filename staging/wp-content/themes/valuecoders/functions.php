@@ -814,7 +814,7 @@ function cvColumn_shortcode( $atts, $content = null ) {
 
 add_shortcode( 'cmn_cta', 'cmn_cta_cb' );
 function cmn_cta_cb() {
-	return '<div class="btn-container"><a href="'.site_url('/contact').'" class="cta-button">GET STARTED</a></div>';
+	return '<div class="btn-container"><a href="'.site_url('/contact').'" class="cta-button">CONTACT US</a></div>';
 }
 
 add_shortcode( 'vc_column_three', 'colum_three_scode_cb' );
@@ -851,7 +851,7 @@ function guidetopic_sc_cb( $atts ) {
     $atts = shortcode_atts( array(
     'title'     => 'Empower your business with machine learning', 
     'body'      => 'Reach out to us and seize the opportunity.',
-    'cta_text'  => 'Contact Us',
+    'cta_text'  => 'CONTACT US',
     'cta_link'  => 'https://www.valuecoders.com/contact',
     ), $atts, 'bartag' );
     $div = '<div class="custom-banner">
@@ -870,7 +870,7 @@ function guidetopic_sc_cb( $atts ) {
     return $div;
 }
 /*
-[vc_bannercta title="Empower your business with machine learning" body="Reach out to us and seize the opportunity." cta_text="Contact Us"]
+[vc_bannercta title="Empower your business with machine learning" body="Reach out to us and seize the opportunity." cta_text="CONTACT US"]
 */
 
 add_shortcode( 'rp_bannercta', 'resource_post_str_cb' );
@@ -885,7 +885,7 @@ function resource_post_str_cb( $atts ) {
     $atts = shortcode_atts( array(
     'title'     => 'Revolutionize your financial services', 
     'body'      => 'Embrace the future with our Fintech solutions',
-    'cta_text'  => 'Contact Us',
+    'cta_text'  => 'CONTACT US',
     'cta_link'  => 'https://www.valuecoders.com/contact',
     ), $atts, 'bartag' );
 
@@ -906,7 +906,7 @@ function resource_post_str_cb( $atts ) {
 }
 
 /*
-[rp_bannercta title="Revolutionize your financial services" body="Embrace the future with our Fintech solutions" cta_text="Contact Us"]
+[rp_bannercta title="Revolutionize your financial services" body="Embrace the future with our Fintech solutions" cta_text="CONTACT US"]
 */
 
 //add_action('init', 'getVcBlogCategory');
@@ -1001,9 +1001,9 @@ function vc_siteurl( $url ){
 
 function vc_cta( $btn_class = "green-btn" ){
 	if( $btn_class !== "green-btn" ){
-		echo '<a class="'.$btn_class.'" href="'.site_url('/contact').'">Contact Us <i class="arrow-icon green"></i></a>';
+		echo '<a class="'.$btn_class.'" href="'.site_url('/contact').'">CONTACT US <i class="arrow-icon green"></i></a>';
 	}else{
-		echo '<a class="'.$btn_class.'" href="'.site_url('/contact').'">Contact Us <i class="arrow-icon"></i></a>';
+		echo '<a class="'.$btn_class.'" href="'.site_url('/contact').'">CONTACT US <i class="arrow-icon"></i></a>';
 	}
 }
 
@@ -1479,7 +1479,7 @@ function cmnCTA_v3( $cta_text, $is_center = true ){
 	$isCenter = ( $is_center === true ) ? " justify-center" : "";
 	echo '<div class="btn-sec margin-t-50 '.$isCenter.'">
 	<a href="'.site_url('/contact').'" class="btn rounded">
-	<span class="text-white">Contact Us</span>
+	<span class="text-white">CONTACT US</span>
 	</a>
 	</div>';
 }
@@ -1488,7 +1488,7 @@ function get_cmnCTA_v3( $cta_text, $is_center = true ){
 	$isCenter = ( $is_center === true ) ? " justify-center" : "";
 	return '<div class="btn-sec margin-t-50 '.$isCenter.'">
 	<a href="'.site_url('/contact').'" class="btn rounded">
-	<span class="text-white">Contact Us</span>
+	<span class="text-white">CONTACT US</span>
 	</a>
 	</div>';
 }
@@ -1498,7 +1498,7 @@ function hireCmn_cta(){
 	<div class="btn-div">
 	<div class="btn-sec">
 	  <a href="'.site_url('/contact/?cta=free-trial').'" class="btn rounded">
-	  <span class="text-white">Get Started Now</span>
+	  <span class="text-white">CONTACT US Now</span>
 	  </a>
 	</div>
 	<!--
@@ -1506,7 +1506,7 @@ function hireCmn_cta(){
 	  Learn How Trial Works
 	  <div class="info">
 	    <div class="info-content">
-	      <h4>What happens after you contact us? </h4>
+	      <h4>What happens after you CONTACT US? </h4>
 	      <p>Our solution experts will answer your questions in a secure online meeting.</p>
 	      <a class="kmore" href="'.site_url('/hire-developers/7-day-trial').'">Know More</a>
 	    </div>

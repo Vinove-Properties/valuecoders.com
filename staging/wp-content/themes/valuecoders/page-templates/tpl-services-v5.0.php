@@ -281,7 +281,7 @@
           <p><?php echo $grwBody; ?></p>
         </div>
         <div class="btn-sec margin-t-50">
-          <a href="<?php echo site_url('/contact'); ?>" class="btn rounded"><span class="text-white">Get Started</span></a>
+          <a href="<?php echo site_url('/contact'); ?>" class="btn rounded"><span class="text-white">Contact Us</span></a>
         </div>
       </div>
       <div class="right-sec">

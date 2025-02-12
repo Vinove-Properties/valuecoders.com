@@ -1122,14 +1122,14 @@ function defActiveHire( $hirePage, $exCat ){
             <?php //endif; ?>
             <li class="cta-wrap small-reso">
               <div class="btn-container">
-                <a href="<?php echo $site_url; ?>contact" class="cta-button">Get Started</a>
+                <a href="<?php echo $site_url; ?>contact" class="cta-button">Contact Us</a>
               </div>
             </li>
           </ul>
         </nav>
         <div class="cta-wrap large-reso">
           <div class="btn-container">
-            <a href="<?php echo $site_url; ?>contact" class="cta-button">Get Started</a>
+            <a href="<?php echo $site_url; ?>contact" class="cta-button">Contact Us</a>
           </div>
         </div>
       </div>
