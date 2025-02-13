@@ -30,7 +30,8 @@ get_header();
                 <a href="https://wa.me/918882108080" target="_blank"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-02.svg" alt="valuecoders" width="20" height="20"> </i><span>WhatsApp</span></a>
                 <a href="mailto:sales@valuecoders.com" target="_blank"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-03.svg" alt="valuecoders" width="20" height="20"></i><span>Email us</span></a>
               </div>
-              <form action="<?php bloginfo('url'); ?>/sendmail1.php" enctype="multipart/form-data" method="POST" id="contact-form-section" onsubmit="vcCmnFormValidation(); return false;">
+              <form action="<?php bloginfo('url'); ?>/sendmail1.php" enctype="multipart/form-data" method="POST" 
+              id="contact-form-section" onsubmit="vcCmnFormValidation(); return false;" accept-charset="UTF-8">
                 <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
                 <div id="vc-fstep1" class="step-one version-8">
                   <!-- <div class="step-head active">
