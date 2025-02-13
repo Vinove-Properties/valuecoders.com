@@ -73,11 +73,24 @@ function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $email
             }
         }
 
+        $body = mb_convert_encoding($body, 'UTF-8', mb_detect_encoding($body, 'UTF-8, ISO-8859-1, Windows-1252', 
+        true));
+        $body = html_entity_decode($body, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+
+        $mail->isHTML(true);
+        $mail->CharSet  = 'UTF-8';
+        $mail->Encoding = '8bit';
+        $mail->Subject  = $subject;
+        $mail->Body     = $body;
+        $mail->send();
+        return true;
+        /*
         $mail->isHTML(true);
         $mail->Subject = $subject;
         $mail->Body    = $body;    
         $mail->send();
         return true;
+        */
     }catch(Exception $e) {
         return false;
     }

@@ -3,7 +3,7 @@ $formBtn 	= ( isset($args['tpl']) && !empty( $args['tpl'] ) )  ? $args['tpl'] : 
 $hasBtnText = ( isset($args['btn-text']) && !empty( $args['btn-text'] ) )  ? $args['btn-text'] : ""; 
 ?>
 <form id="hire-sb-form" action="<?php bloginfo('url'); ?>/sendmail1.php" class="contact-form-section" 
-enctype="multipart/form-data" method="POST" onsubmit="hireFormValidation(); return false;">
+enctype="multipart/form-data" method="POST" onsubmit="hireFormValidation(); return false;" accept-charset="UTF-8">
 	<div class="form-inner dis-flex">
 		<div class="form-text-cont">
 			<div class="lbl-row">

@@ -1,5 +1,5 @@
 <form id="contact-form-section" action="https://www.valuecoders.com/v2wp/sendmail1.php" class="contact-form-section"
-    enctype="multipart/form-data" method="POST" onsubmit="return vcCmnFormValidation(false);">
+    enctype="multipart/form-data" method="POST" onsubmit="return vcCmnFormValidation(false);" accept-charset="UTF-8">
     <div class="form-inner dis-flex">
         <div class="form-text-cont">
             <div class="user-input">
