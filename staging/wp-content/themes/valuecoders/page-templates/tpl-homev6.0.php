@@ -529,7 +529,7 @@ endif;
                 </div>
               </div>
               <div class="content-box">
-                <p>ValueCoders provided us with exceptional services in creating a one-of-a-kind portal. Impressed with how efficient and quick the team was in coming up with creative solutions. They added all functionalities in the portal that we wanted.</p>
+                <p>ValueCoders provided us with exceptional services in creating a one-of-a-kind portal. Impressed with how efficient and quick the team was in coming up with ideas. They added all functionalities in the portal that we wanted.</p>
                 <h5>Judith Mueller</h5>
                 <span class="designtn">Executive Director, Mueller Health Foundation</span>
                 <span class="star-image"></span>
@@ -559,7 +559,7 @@ endif;
                 </div>
               </div>
               <div class="content-box">
-                <p>ValueCoders had great technical expertise, both in front-end and back-end development. Other project management was well organized. Account management was friendly and always available. I would give ValueCoders ten out of ten!</p>
+                <p>ValueCoders has technical expertise in front-end and back-end development. Other project management was well organized. Account management was friendly and always available. I would give ValueCoders ten out of ten!</p>
                 <h5>Kris Bruynson</h5>
                 <span class="designtn">Director, Storloft</span>
                 <span class="star-image"></span>
@@ -589,7 +589,7 @@ endif;
                 </div>
               </div>
               <div class="content-box">
-                <p>Huge thank you to ValueCoders; they have been a massive help in enabling us to start developing our project within a few weeks, so it's been great! There have been two small bumps in the road, but overall, It's been a fantastic service. I have already recommended it to one of my friends.</p>
+                <p>Huge thank you to ValueCoders, they have been a massive help in enabling us to start developing our project within a few weeks, so it's been great! I have already recommended it to one of my friends.</p>
                 <h5>Mohammed Mirza</h5>
                 <span class="designtn">Director, LOCALMASTERCHEFS LTD</span>
                 <span class="star-image"></span>
