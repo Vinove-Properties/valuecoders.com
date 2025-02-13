@@ -1498,7 +1498,7 @@ function hireCmn_cta(){
 	<div class="btn-div">
 	<div class="btn-sec">
 	  <a href="'.site_url('/contact/?cta=free-trial').'" class="btn rounded">
-	  <span class="text-white">CONTACT US Now</span>
+	  <span class="text-white">CONTACT US</span>
 	  </a>
 	</div>
 	<!--

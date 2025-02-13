@@ -499,7 +499,7 @@ endif;
                 </div>
               </div>
               <div class="content-box">
-                <p>The Project managers took a lot of time to understand our project before coming up with a contract or what they thought we needed. I had the reassurance from the start that the project managers knew what type of project I wanted and what my needs were. That is reassuring, and that's why we chose ValueCoders.</p>
+                <p>The Project managers took a lot of time to understand our project before coming up with what they thought we needed. They knew what quality & output I was expecting from start. It's reassuring, and that's why we chose ValueCoders.</p>
                 <h5>James Kelly</h5>
                 <span class="designtn">Co-founder, Miracle Choice</span>
                 <span class="star-image"></span>
