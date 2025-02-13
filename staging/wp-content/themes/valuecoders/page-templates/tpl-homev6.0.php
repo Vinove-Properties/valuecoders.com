@@ -56,8 +56,7 @@
         <h4>Trusted By</h4>
         <h2>2500 <br>Companies</h2>
         <p>Globally</p>
-        <a href="#" class="is-arrow">See our clients
-        </a>
+        <a href="<?php echo site_url('/testimonials'); ?>" class="is-arrow">See our clients</a>
       </div>
       <div class="bottom-card">
         <picture><img loading="lazy" src="<?php _vers_six('images/home-images/award-02.svg'); ?>" width="285" height="170" alt="valuecoders"></picture>

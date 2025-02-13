@@ -727,40 +727,6 @@ add_action( 'rest_api_init', function(){
     ));
 });
 
-
-/*add_action( 'init', function(){
-if( isset($_GET['act']) && $_GET['act'] )
-    $post_tag = "Workforce-Management-software";
-    $args = array( 'post_type' => 'post', 'posts_per_page' => -1, 'ignore_sticky_posts' => 1, 
-    'tax_query' => array( array('taxonomy' => 'post_tag', 'field'=> 'slug', 'terms' => "'.$post_tag.'")
-    ) );
-    
-    $loop = new WP_Query( $args );
-    $data = [];
-    if( $loop->have_posts() ){
-        while( $loop->have_posts() ) : $loop->the_post();
-        global $post;
-        $author_id = $post->post_author;
-        $data[] = array(
-            'post_id'       => get_the_ID(),
-            'thumbnail'     => get_the_post_thumbnail_url( get_the_ID() ),
-            'title'         => get_the_title( get_the_ID() ),
-            'permalink'     => get_permalink( get_the_ID() ),
-            'comments'      => ( get_comments_number() > 1 ) ? get_comments_number() .' comments': get_comments_number() .' comment',
-            'created_at'    => get_the_date(),
-            'author'        => get_the_author_meta( 'display_name' , $author_id ),
-            'author_image'  => get_the_author_meta( 'avatar' , $author_id ),
-            'experpt'       => wp_trim_words( get_the_content(), 20, '...' )
-        );
-        endwhile;
-    }
-    print_r( $data ); die;
-    wp_send_json( $data );
-    wp_reset_postdata();
-    die;
-});*/
-
-
 function vcGetAllCats( $data ){
     $tag   = $data->get_param( 'tag' );
     $post_tag = '';
