@@ -100,7 +100,9 @@
         <div class="button-section margin-t-50">
           <div class="btn-div">
             <div class="btn-sec">
-              <a class="btn rounded" href="<?php echo site_url('/contact'); ?>"><span class="text-white">Contact Us Now</span></a>
+              <a class="btn rounded" href="<?php echo site_url('/contact'); ?>">
+              <span class="text-white">CONTACT US</span>
+              </a>
             </div>            
             <!--/?cta=free-trial
             <div class="info-wrap">

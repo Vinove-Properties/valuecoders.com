@@ -293,9 +293,11 @@
         </div>
       </div>
     </div>
-    <!-- 
-    <div class="explore-sc text-center margin-t-80"><a class="explore-btn" href="">Explore all Technologies</a></div> 
-    -->
+    
+    <div class="explore-sc text-center margin-t-80">
+      <a class="explore-btn" href="<?php echo site_url('/hire-developers'); ?>">Explore all Technologies</a>
+    </div> 
+   
   </div>
 </section>
 <?php endif; ?>
