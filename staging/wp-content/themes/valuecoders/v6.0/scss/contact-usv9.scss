@@ -1452,6 +1452,9 @@
             color: rgba(5, 22, 77, 0.8);
             font-size: 14px;
             line-height: 21px;
+            a{color: rgba(5, 22, 77, 0.8);
+            &:hover{text-decoration: underline;}
+            }
           }
           &.two-line {
             flex-basis: 35%;

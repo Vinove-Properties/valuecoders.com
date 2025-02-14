@@ -66,6 +66,7 @@
           left: 0;
           right: 0;
           bottom: 0;
+          &.bg-royal-linear{background: linear-gradient(90deg, #05164D 0%, #0C33B3 100%);}
           p {
             color: $white;
           }
@@ -88,6 +89,8 @@
                   background-size: 15px;
                   background-position: center right 11px;
                 }
+
+                .text-white{line-height:initial;}
 
                 &:hover {
                   &:before {

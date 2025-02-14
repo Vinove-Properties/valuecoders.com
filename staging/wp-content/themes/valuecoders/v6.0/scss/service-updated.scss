@@ -444,7 +444,7 @@
     height: 36px;
     z-index: 9;
     opacity: 0.6;
-    top: 65%;
+    top: 90%;
     font-size: 0;
     left:0;
     transform: rotate(0);
@@ -460,7 +460,7 @@
   height: 36px;
   z-index: 9;
   left: 50px;
-  top: 65%;
+  top: 90%;
   font-size: 0;
   transform: rotate(0);
   font-size: 0;
@@ -496,13 +496,17 @@
       }
     }
   }
-  
-  
-  .tailored-tech{
-    .glider-next{top:80%;}
-    .glider-prev{top: 80%;}
-  }
 
+
+
+  .tailored-tech{
+    .tailored-out {
+      .left-section{flex-basis: 30%;}
+      .tailored-slider{flex-basis: 65%;     width: 65%;}
+    }
+    .glider-next{top:90%;}
+    .glider-prev{top: 90%;}
+  }
 
 
 }
