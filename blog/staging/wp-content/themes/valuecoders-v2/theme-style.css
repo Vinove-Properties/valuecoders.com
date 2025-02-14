@@ -8,7 +8,7 @@ body {
   background-color: #ffffff;
   color: #656565;
   position: relative;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   font-weight: normal;
   font-size: 16px;
   overflow-x: hidden;
@@ -34,58 +34,50 @@ audio, embed, img, object, video {
   height: auto;
   max-width: 100%;
 }
-@media only screen and (min-width: 768px) {
 
+
+@media only screen and (min-width: 768px) {
   @font-face {
-    font-family: "Noto Sans";
-    src: url("fonts/NotoSans-Regular.woff2") format("woff2"),
-      url("fonts/NotoSans-Regular.woff") format("woff"),
-      url("fonts/NotoSans-Regular.ttf") format("truetype");
+    font-family: "Lexend Deca";
+    src: url("fonts/LexendDeca-Regular.woff2") format("woff2"),
+      url("fonts/LexendDeca-Regular.woff") format("woff"),
+      url("fonts/LexendDeca-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
-
   @font-face {
-    font-family: "Noto Sans";
-    src: url("fonts/NotoSans-Bold.woff2") format("woff2"),
-      url("fonts/NotoSans-Bold.woff") format("woff"),
-      url("fonts/NotoSans-Bold.ttf") format("truetype");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "Noto Sans";
-    src: url("fonts/NotoSans-Medium.woff2") format("woff2"),
-      url("fonts/NotoSans-Medium.woff") format("woff"),
-      url("fonts/NotoSans-Medium.ttf") format("truetype");
+    font-family: "Lexend Deca";
+    src: url("fonts/LexendDeca-Medium.woff2") format("woff2"),
+      url("fonts/LexendDeca-Medium.woff") format("woff"),
+      url("fonts/LexendDeca-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Noto Sans";
-    src: url("fonts/NotoSans-SemiBold.woff2") format("woff2"),
-      url("fonts/NotoSans-SemiBold.woff") format("woff"),
-      url("fonts/NotoSans-SemiBold.ttf") format("truetype");
+    font-family: "Lexend Deca";
+    src: url("fonts/LexendDeca-SemiBold.woff2") format("woff2"),
+      url("fonts/LexendDeca-SemiBold.woff") format("woff"),
+      url("fonts/LexendDeca-SemiBold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Noto Sans";
-    src: url("fonts/NotoSans-Light.woff2") format("woff2"),
-      url("fonts/NotoSans-Light.woff") format("woff"),
-      url("fonts//NotoSans-Light.ttf") format("truetype");
-    font-weight: 300;
+    font-family: "Lexend Deca";
+    src: url("fonts/LexendDeca-Bold.woff2") format("woff2"),
+      url("fonts/LexendDeca-Bold.woff") format("woff"),
+      url("fonts/LexendDeca-Bold.ttf") format("truetype");
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
   }
 }
+
+
 
 
 .dis-flex {
@@ -2299,4 +2291,59 @@ line-height: 40px;}
   .blog-thumb img{height:250px;}
 }
 
+
+
+
+
+.btn-container {
+  margin-top: 30px;
+
+  .cta-button {
+    display: inline-flex;
+    padding: 14px 16px;
+    cursor: pointer;
+    position: relative;
+    background: #fff;
+    color: #05164d;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 50px;
+
+    &:after {
+      content: "";
+      background: url(./header-images/yellow-cta.svg) no-repeat;
+
+      width: 26px;
+      height: 26px;
+      background-size: 100%;
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    &:hover {
+      background-color:#ffad00;
+      color: #05164d;
+      &:after {
+        background: url(./header-images/blue-cta.svg) no-repeat;
+      }
+    }
+
+    &.yellow {
+      background: $yellow;
+      color: #05164d;
+      &:after {
+        background: url(./header-images/white-cta.svg) no-repeat;
+      }
+      &:hover {
+        background: #05164d;
+        color: #fff;
+
+        &:after {
+          background: url(./header-images/yellow-cta.svg) no-repeat;
+        }
+      }
+    }
+  }
+}
 
