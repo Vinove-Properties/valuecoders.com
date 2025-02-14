@@ -515,7 +515,7 @@
           <div class="cost-card">
             <div class="hover-content bg-royal-linear" style="display:flex;">
             <h3>Wondering how much your development project will cost?</h3>
-            <p>Jump to our free cost calculators to quickly learn the budget for your software initiative.</p>
+            <p>Our consultants will be happy to learn more about your requirement and suggest a tentative cost for the same.</p>
             <div class="btn-sec">
             <a href="'.site_url('/contact').'" class="btn rounded"><span class="text-white">Get in Touch</span></a>
             </div>
