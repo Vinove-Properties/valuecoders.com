@@ -800,7 +800,7 @@ id="vc-ibox-cards">
 
 <?php 
 if( !is_page([15820,15827]) ){
-  //getServicesPageTechnologies( $thisPostID );   
+  getServicesPageTechnologies( $thisPostID );   
 }
 ?>
 
@@ -1052,9 +1052,9 @@ if( is_page(10158) ){
 //cmnTecStackUpdated( '<h2>Our White Label Services</h2>' );
 }
   
-if( is_page(10213) ){
-cmnTecStack_V3( '<h2>Our Technologies</h2><p>Here are some software development technologies on which we have proficiency:</p>' );
-}
+// if( is_page(10213) ){
+// cmnTecStack_V3( '<h2>Our Technologies</h2><p>Here are some software development technologies on which we have proficiency:</p>' );
+// }
 ?>
 
 <?php 

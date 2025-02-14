@@ -460,7 +460,7 @@ if( count( $techno ) === 1 ){ ?>
 }
 }else{
 ?>
-<section class="tech-stacks padding-t-120 padding-b-120 <?php echo $expframeworks['sc_background']; ?> aaaa" id="serv-technology-grid">
+<section class="tech-stacks padding-t-120 padding-b-120 <?php echo $expframeworks['sc_background']; ?>" id="serv-technology-grid">
   <div class="container">
     <div class="head-txt text-center"><?php echo $expframeworks['content']; ?></div>
     <div class="dis-flex col-box-outer margin-t-50">
