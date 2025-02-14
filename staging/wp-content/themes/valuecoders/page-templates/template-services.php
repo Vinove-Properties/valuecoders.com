@@ -800,7 +800,7 @@ id="vc-ibox-cards">
 
 <?php 
 if( !is_page([15820,15827]) ){
-  getServicesPageTechnologies( $thisPostID );   
+  //getServicesPageTechnologies( $thisPostID );   
 }
 ?>
 
