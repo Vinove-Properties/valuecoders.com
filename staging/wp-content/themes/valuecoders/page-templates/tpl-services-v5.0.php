@@ -517,7 +517,7 @@
             <h3>Wondering how much your development project will cost?</h3>
             <p>Jump to our free cost calculators to quickly learn the budget for your software initiative.</p>
             <div class="btn-sec">
-            <a href="javascript:void(0);" class="btn rounded"><span class="text-white">Calculate the Cost</span></a>
+            <a href="'.site_url('/contact').'" class="btn rounded"><span class="text-white">Calculate the Cost</span></a>
             </div>
             </div>
           </div>
