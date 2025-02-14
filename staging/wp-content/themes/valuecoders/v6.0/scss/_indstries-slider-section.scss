@@ -17,7 +17,7 @@
 
     .industry-card {
       position: relative;
-      width: 280px !important;
+      width: 16.66% !important;
       height: 360px !important;
       overflow: hidden;
       border-radius: 10px;
@@ -26,7 +26,7 @@
       margin: 0 10px;
 
       &:first-child {
-        margin-left: -130px !important;
+        //margin-left: -130px !important;
       }
 
       &.glider-slide {

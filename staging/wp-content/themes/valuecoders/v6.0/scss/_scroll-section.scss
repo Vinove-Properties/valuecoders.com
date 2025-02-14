@@ -20,6 +20,8 @@
         text-align: left;
       }
 
+      h2, p{z-index: 2;    position: relative;}
+
       .ser-button {
         margin: 40px 0 0;
         background: #fafafa;
@@ -36,6 +38,10 @@
           strong {
             color: $yellow;
           }
+
+          a{
+            &:hover{text-decoration: underline;}
+          }
         }
         &:after {
           content: "";
@@ -46,6 +52,7 @@
           position: absolute;
           right: 0;
           bottom: 0;
+          z-index: 1;
         }
       }
     }
@@ -82,9 +89,8 @@
 
             a {
               color: $darkblack;
-              text-decoration: underline;
               &:hover {
-                text-decoration: none;
+                text-decoration: underline;
               }
             }
           }
@@ -119,9 +125,8 @@
 
           a {
             color: #656565;
-            text-decoration: underline;
             &:hover {
-              text-decoration: none;
+              text-decoration: underline;
             }
           }
         }
@@ -146,8 +151,8 @@
             margin: 0 auto;
             top: 15px;
             background-size: 100%;
-            width: 13px;
-            height: 13px;
+            width: 14px;
+            height: 14px;
             transform: rotate(-8deg);
             transition: all 0.3s ease-in-out;
           }
@@ -171,9 +176,8 @@
               color: $white;
               a {
                 color: $white;
-                text-decoration: underline;
                 &:hover {
-                  text-decoration: none;
+                  text-decoration: underline;
                 }
               }
             }
@@ -191,9 +195,8 @@
             }
             a {
               color: $white;
-              text-decoration: underline;
               &:hover {
-                text-decoration: none;
+                text-decoration: underline;
               }
             }
           }

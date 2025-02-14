@@ -45,16 +45,28 @@
         </div>
       </div>
       <div class="subs-box">
-        <h3>Discover how we can 
-          help your business grow
-        </h3>
-        <div class="cta-wrap  justify-center">
-          <div class="cta-btn">
-            <div class="btn-sec">
-              <a href="https://www.valuecoders.com/contact" class="btn rounded"><span class="text-white">Get Started</span></a>
-            </div>
-          </div>
-        </div>
+        <ul>
+          <li>
+            <picture>
+              <img loading="lazy" src="<?php bloginfo('template_url') ?>/images/fotaw-01.svg" alt="Valuecoders" width="107" height="60">
+            </picture>
+          </li>
+          <li>
+            <picture>
+              <img loading="lazy" src="<?php bloginfo('template_url') ?>/images/fotaw-02.svg" alt="Valuecoders" width="107" height="60">
+            </picture>
+          </li>
+          <li>
+            <picture>
+              <img loading="lazy" src="<?php bloginfo('template_url') ?>/images/fotaw-03.svg" alt="Valuecoders" width="107" height="60">
+            </picture>
+          </li>
+          <li>
+            <picture>
+              <img loading="lazy" src="<?php bloginfo('template_url') ?>/images/fotaw-04.svg" alt="Valuecoders" width="107" height="60">
+            </picture>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="dis-flex footer-middle">
@@ -108,67 +120,60 @@
       </div>
     </div>
     <div class="dis-flex footer-bottom">
-      <div class="flex-3 logo-box">
+    <div class="flex-4 logo-box">
         <h3>PROUDLY BROUGHT TO YOU BY ValueCoders</h3>
         <div class="dis-flex">
           <a href="https://www.invoicera.com/">
             <picture>
-              <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/inv-logo.svg" width="156" height="40" alt="Invoicera">
+              <img loading="lazy" src="<?php bloginfo('template_url') ?>/images/inv-logo.svg" width="156" height="40" alt="Invoicera">
             </picture>
           </a>
           <a href="https://www.workstatus.io/">
             <picture>
-            <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/ws-logo.svg" width="188" height="26" alt="Workstatus"> 
+            <img loading="lazy" src="<?php bloginfo('template_url') ?>/images/ws-logo.svg" width="188" height="26" alt="Workstatus"> 
           </picture>
           </a>
         </div>
       </div>
-      <div class="flex-3 social-box">
+      <div class="flex-4 social-box">
         <h3>Follow Us</h3>
         <div class="dis-flex">
-          <a href="https://www.linkedin.com/company/valuecoders" target="_blank">
-            <picture>
-              <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/soc-01.svg" width="29" height="29" alt="linkedin">
-            </picture>
-          </a>
           <a href="https://www.facebook.com/ValueCoders" target="_blank">
             <picture>
-              <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/soc-02.svg" width="29" height="29" alt="facebook">
+              <img loading="lazy" src="<?php bloginfo('template_url') ?>/images/soc-01.svg" width="29" height="29" alt="facebook">
             </picture>
           </a>
-          <a href="https://twitter.com/ValueCoders" target="_blank">
+          <a href="https://x.com/ValueCoders" target="_blank">
             <picture>
-              <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/soc-03.svg" width="29" height="29" alt="twitter">
+              <img loading="lazy" src="<?php bloginfo('template_url') ?>/images/soc-02.svg" width="29" height="29" alt="twitter">
+            </picture>
+          </a>
+          <a href="https://www.linkedin.com/company/valuecoders" target="_blank">
+            <picture>
+              <img loading="lazy" src="<?php bloginfo('template_url') ?>/images/soc-03.svg" width="29" height="29" alt="linkedin">
             </picture>
           </a>
           <a href="https://www.instagram.com/valuecodersofficial_/?igshid=qfk286mq0wee" target="_blank">
             <picture>
-              <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/soc-04.svg" width="29" height="29" alt="instagram">
+              <img loading="lazy" src="<?php bloginfo('template_url') ?>/images/soc-04.svg" width="29" height="29" alt="instagram">
             </picture>
           </a>
           <a href="https://www.youtube.com/channel/UCCnijyLczGPUGI8aBkK3pTw?sub_confirmation=1" target="_blank">
             <picture>
-              <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/soc-05.svg" width="29" height="29" alt="youtube">
+              <img loading="lazy" src="<?php bloginfo('template_url') ?>/images/soc-05.svg" width="29" height="29" alt="youtube">
             </picture>
           </a>
         </div>
       </div>
-      <div class="flex-3 copyright">
-        <a href="https://www.valuecoders.com/" target="_blank">
-          <picture>
-            <img loading="lazy" src="<?php bloginfo('template_url') ?>/assets/images/vc-logo.svg" width="191" height="42" alt="Logo">
-          </picture>
-        </a>
-        <?php
-        $copyRight = "&copy;"; 
-        if( is_user_logged_in() ){
-        $copyRight = "<a href='".get_edit_post_link()."'>&copy;</a>";
-        }
-        ?>
-        <p>Copyright <?php echo $copyRight; ?> 2004 - <?php echo date("Y"); ?> Valuecoders, <br>All Rights Reserved. A Vinove Company.</p>
+      <div class="flex-4 copyright">
+        <a href="//www.dmca.com/Protection/Status.aspx?ID=9f4af2d1-a5c5-4031-903c-b6dfb2c56625" target="_blank" 
+        title="DMCA.com Protection Status" style="margin-left:0;margin-top: 20px; display:block" class="dmca-badge">
+        <img src ="https://images.dmca.com/Badges/dmca-badge-w200-5x1-06.png?ID=9f4af2d1-a5c5-4031-903c-b6dfb2c56625"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
       </div>
     </div>
   </div>
+  <div class="footer-copyright">Copyright © 2004 - 2025 ValueCoders, All Rights Reserved. A Vinove Company.</div>
+
 </footer>
 <div class="blogvideo-popup">
   <div id="gen-vpopup" class="popup-wrapper" style="display:none;">

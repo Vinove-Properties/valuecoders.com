@@ -105,6 +105,7 @@
       .dis-flex {
         a {
           margin-right: 10px;
+          &:hover{opacity:0.6;}
         }
       }
     }
@@ -184,6 +185,11 @@
     }
 
     .footer-bottom{
+      .logo-box {
+        .dis-flex{
+          a{margin-right: 15px;}
+        }
+      }
       .social-box{
         .dis-flex {
           a{margin-right: 7px;}
