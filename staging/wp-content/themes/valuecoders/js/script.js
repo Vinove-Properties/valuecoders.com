@@ -1569,33 +1569,7 @@ links.forEach(link => {
     });
 });
 
-if (document.getElementById("industries-glider-v6")){
-    const indGlider     = document.getElementById("indGlider");    
-    const indLoader     = document.getElementById("industries-glider-v6-loader"); 
-    window.addEventListener("load", function() {
-    var gliderElement = document.querySelector(".industries-slider .glider");
-        if (gliderElement) {      
-            new Glider(gliderElement, {
-                slidesToShow: 6, 
-                slidesToScroll: 1,
-                draggable: true,
-                scrollLock: true,
-                duration: 2.25,
-                dots: ".industries-slider .dots",
-                arrows: { prev: '#industries-glider-v6 .test-prev', next: '#industries-glider-v6 .test-next' },      
-                responsive: [
-                    {breakpoint: 320, settings: { slidesToShow: 2, slidesToScroll: 1, duration: 2.25 }},
-                    {breakpoint: 767, settings: { slidesToShow: 1, slidesToScroll: 1, itemWidth: '50%', duration: 2.25 }},
-                    {breakpoint: 1024, settings: { slidesToShow: 3, slidesToScroll: 1, itemWidth: '33.33%', duration: 2.25 }},
-                    {breakpoint: 1400, settings: { slidesToShow: 6, slidesToScroll: 1, itemWidth: '16.66%', duration: 2.25 }}
-                ]
-            });
-        }
-    });
-    indLoader.style.display = 'none';
-    indGlider.style.visibility = 'visible';
-    indGlider.style.position = 'relative';  // Reset position
-}
+
 
 function _vcTabSelector(sectionSelector) {
     const sections = document.querySelectorAll(sectionSelector);
@@ -1823,6 +1797,42 @@ if (document.getElementById("client-slider")) {
       const progress = (currentSlide / maxSlides) * 100;
       progressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
     }
+    
+    // Initialize progress bar
+    updateProgress();
+    
+    // Update progress bar when slides change
+    gliderElement.addEventListener("glider-slide-visible", updateProgress);
+    
+    // Add smooth transition when slides move
+    gliderElement.addEventListener("glider-refresh", () => {
+      gliderElement.style.transition = "transform 0.5s ease";
+    });
+    
+    // Handle arrow clicks
+    const prevArrow = document.querySelector(".cl-prev");
+    const nextArrow = document.querySelector(".cl-next");
+    
+    prevArrow.addEventListener("click", () => {
+      setTimeout(updateProgress, 50); // Small delay to ensure glider state is updated
+    });
+    
+    nextArrow.addEventListener("click", () => {
+      setTimeout(updateProgress, 50); // Small delay to ensure glider state is updated
+    });
+    
+   // Handle window resize
+   let resizeTimer;
+   window.addEventListener("resize", () => {
+     clearTimeout(resizeTimer);
+     resizeTimer = setTimeout(() => {
+       glider.refresh(true);
+       updateProgress();
+     }, 250);
+   });
+   }
+   });
+   }
     
     // Initialize progress bar
     updateProgress();
