@@ -382,15 +382,15 @@
         }
 
         .glider-slide {
-          flex: 0 0 20%;
+          flex: 0 0 30%;
           min-width: 0;
-          max-width: 20%;
+          max-width: 3dvh;
           transition: all 0.3s ease;
 
           &:nth-child(2n) {
-            flex: 0 0 52%;
+            flex: 0 0 70%;
             min-width: 0;
-            max-width: 52%;
+            max-width: 70%;
             opacity: 1;
           }
         }
