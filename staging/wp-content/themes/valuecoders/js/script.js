@@ -1832,4 +1832,47 @@ if (document.getElementById("client-slider")) {
     });
     }
     });
+    }
+    
+    
+                                                                                                                                                                 oShow;
+      const maxSlides = totalSlides - slidesToShow;
+      const progress = (currentSlide / maxSlides) * 100;
+      progressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
+    }
+    
+    // Initialize progress bar
+    updateProgress();
+    
+    // Update progress bar when slides change
+    gliderElement.addEventListener("glider-slide-visible", updateProgress);
+    
+    // Add smooth transition when slides move
+    gliderElement.addEventListener("glider-refresh", () => {
+      gliderElement.style.transition = "transform 0.5s ease";
+    });
+    
+    // Handle arrow clicks
+    const prevArrow = document.querySelector(".cl-prev");
+    const nextArrow = document.querySelector(".cl-next");
+    
+    prevArrow.addEventListener("click", () => {
+      setTimeout(updateProgress, 50); // Small delay to ensure glider state is updated
+    });
+    
+    nextArrow.addEventListener("click", () => {
+      setTimeout(updateProgress, 50); // Small delay to ensure glider state is updated
+    });
+    
+    // Handle window resize
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        glider.refresh(true);
+        updateProgress();
+      }, 250);
+    });
+    }
+    });
     } 
