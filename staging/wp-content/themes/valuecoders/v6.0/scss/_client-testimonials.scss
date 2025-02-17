@@ -472,6 +472,22 @@
         .glider {
           gap: 10px;
         }
+
+        .glider-slide {
+          flex: 0 0 100%;
+          min-width: 0;
+          max-width: 100%;
+          transition: all 0.3s ease;
+
+          &:nth-child(2n) {
+            flex: 0 0 100%;
+            min-width: 0;
+            max-width: 100%;
+            opacity: 1;
+          }
+        }
+
+       
       }
     }
   }
