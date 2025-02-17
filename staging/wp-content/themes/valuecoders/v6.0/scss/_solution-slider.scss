@@ -18,6 +18,8 @@
       position: relative;
       width: 100%;
 
+      .glider-slide{width:100% !important;}
+
       .glider {
         display: flex;
         gap: 20px;
