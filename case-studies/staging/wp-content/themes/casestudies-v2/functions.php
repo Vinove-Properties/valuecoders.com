@@ -370,8 +370,8 @@ add_filter( 'excerpt_more', 'casestudies_excerpt_more' );
 function casestudies_scripts() {
 	wp_enqueue_style( 'casestudies-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'vc-csmenu', trailingslashit( get_stylesheet_directory_uri() ).'vc-menu.css',array(), _S_VERSION );
+	wp_enqueue_style( 'vc-footer', trailingslashit( get_stylesheet_directory_uri() ).'assets/css/footer.css',array(), _S_VERSION );
 	wp_enqueue_style( 'footer-form', trailingslashit( get_stylesheet_directory_uri() ).'footer-form.css',array(), _S_VERSION );
-	wp_enqueue_style( 'footer-style', trailingslashit( get_stylesheet_directory_uri() ).'footer-style.css',array(), _S_VERSION );
 
     wp_enqueue_script( 'bootstrap','https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', array( 'jquery' ),false,true );
 
