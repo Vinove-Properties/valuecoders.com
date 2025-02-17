@@ -382,9 +382,9 @@
         }
 
         .glider-slide {
-          flex: 0 0 30%;
+          flex: 0 0 28%;
           min-width: 0;
-          max-width: 3dvh;
+          max-width: 28%;
           transition: all 0.3s ease;
 
           &:nth-child(2n) {
