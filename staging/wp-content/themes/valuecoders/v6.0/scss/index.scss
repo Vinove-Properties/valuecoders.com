@@ -212,6 +212,13 @@
 // Media Query Start From Here
 
 @media (max-width: 1440px) {
+  .hero-section {
+    .dis-flex {
+      .left-box {
+        flex-basis: 85%;
+      }
+    }
+  }
 }
 
 @media (max-width: 1320px) {
@@ -221,7 +228,7 @@
 
     .dis-flex {
       .left-box {
-        flex-basis: 80%;
+        flex-basis: 90%;
       }
     }
   }
