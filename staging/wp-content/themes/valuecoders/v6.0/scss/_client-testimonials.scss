@@ -472,22 +472,6 @@
         .glider {
           gap: 10px;
         }
-
-        .glider-slide {
-          flex: 100%;
-         width: 100vw !important;
-        max-width: 100vw;
-          transition: all 0.3s ease;
-
-          &:nth-child(2n) {
-            flex: 100%;
-            width: 100vw !important;
-            max-width: 100vw;
-            opacity: 1;
-          }
-        }
-
-       
       }
     }
   }
