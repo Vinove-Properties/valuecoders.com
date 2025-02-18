@@ -1,14 +1,14 @@
 <?php
-  /**
-   * Displays footer widgets if assigned
-   *
-   * @package WordPress
-   * @subpackage Twenty_Seventeen
-   * @since Twenty Seventeen 1.0
-   * @version 1.0
-   */
-  
-  ?>
+/**
+* Displays footer widgets if assigned
+*
+* @package WordPress
+* @subpackage Twenty_Seventeen
+* @since Twenty Seventeen 1.0
+* @version 1.0
+*/
+$vcSiteUrl = "https://www.valuecoders.com/";
+?>
 <footer class="footer">
   <div class="container">
     <div class="dis-flex footer-top">
@@ -59,49 +59,49 @@
       <div class="flex-5">
         <h4>Company</h4>
         <ul>
-          <li><a href="<?php echo $site_url.'about'; ?>">About Us</a></li>
-          <li><a href="<?php echo $site_url.'in-media'; ?>">In Media</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'about'; ?>">About Us</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'in-media'; ?>">In Media</a></li>
           <li><a href="https://www.valuecoders.com/case-studies/">Case Studies</a></li>
           <li><a href="https://www.valuecoders.com/blog/">Our Blog</a></li>
-          <li><a href="<?php echo $site_url.'testimonials'; ?>">Testimonial & Clients</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'testimonials'; ?>">Testimonial & Clients</a></li>
         </ul>
       </div>
       <div class="flex-5">
         <h4>Our Expertise</h4>
         <ul>
-          <li><a href="<?php echo $site_url.'outsource-software-product-development-services'; ?>">Software Product Engineering</a></li>
-          <li><a href="<?php echo $site_url.'application-development'; ?>">Application Development</a></li>
-          <li><a href="<?php echo $site_url.'it-staff-augmentation-services'; ?>">Staff Augmentation</a></li>
-          <li><a href="<?php echo $site_url.'ecommerce-development-services'; ?>">eCommerce Development</a></li>
-          <li><a href="<?php echo $site_url.'cloud-services'; ?>">Cloud Services</a></li>
-          <li><a href="<?php echo $site_url.'ai'; ?>">AI & ML</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'outsource-software-product-development-services'; ?>">Software Product Engineering</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'application-development'; ?>">Application Development</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'it-staff-augmentation-services'; ?>">Staff Augmentation</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'ecommerce-development-services'; ?>">eCommerce Development</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'cloud-services'; ?>">Cloud Services</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'ai'; ?>">AI & ML</a></li>
         </ul>
       </div>
       <div class="flex-5">
         <h4>Hire Developers</h4>
         <ul>
-          <li><a href="<?php echo $site_url.'hire-developers/hire-ai-engineers'; ?>">Hire AI Engineers</a></li>
-          <li><a href="<?php echo $site_url.'hire-developers/hire-backend-developers'; ?>">Hire Backend Developers</a></li>
-          <li><a href="<?php echo $site_url.'hire-developers/hire-front-end-developers'; ?>">Hire Frontend Developers</a></li>
-          <li><a href="<?php echo $site_url.'hire-developers/hire-ecommerce-developers'; ?>">Hire eCommerce Developers</a></li>
-          <li><a href="<?php echo $site_url.'hire-developers/hire-blockchain-developers'; ?>">Hire Blockchain Developers</a></li>
-          <li><a href="<?php echo $site_url.'hire-developers/hire-mobile-app-developers'; ?>">Hire Mobile Developers</a></li>          
+          <li><a href="<?php echo $vcSiteUrl.'hire-developers/hire-ai-engineers'; ?>">Hire AI Engineers</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'hire-developers/hire-backend-developers'; ?>">Hire Backend Developers</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'hire-developers/hire-front-end-developers'; ?>">Hire Frontend Developers</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'hire-developers/hire-ecommerce-developers'; ?>">Hire eCommerce Developers</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'hire-developers/hire-blockchain-developers'; ?>">Hire Blockchain Developers</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'hire-developers/hire-mobile-app-developers'; ?>">Hire Mobile Developers</a></li>          
         </ul>
       </div>
       <div class="flex-5">
         <h4>Solutions</h4>
         <ul>
-          <li><a href="<?php echo $site_url.'offshore-software-development-center-india'; ?>">Offshore Development Center</a></li>
-          <li><a href="<?php echo $site_url.'offshore-software-development-services-company'; ?>">Offshore Software Development</a></li>
-          <li><a href="<?php echo $site_url.'nearshore-software-development-services'; ?>">Nearshore Software Development</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'offshore-software-development-center-india'; ?>">Offshore Development Center</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'offshore-software-development-services-company'; ?>">Offshore Software Development</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'nearshore-software-development-services'; ?>">Nearshore Software Development</a></li>
         </ul>
       </div>
       <div class="flex-5">
         <h4>Clients We Serve</h4>
         <ul>
-          <li><a href="<?php echo $site_url.'startup-product-development'; ?>">For Startups</a></li>
-          <li><a href="<?php echo $site_url.'enterprise-software-development-services'; ?>">For Enterprises</a></li>
-          <li><a href="<?php echo $site_url.'agencies-software-development-services'; ?>">For Agencies</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'startup-product-development'; ?>">For Startups</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'enterprise-software-development-services'; ?>">For Enterprises</a></li>
+          <li><a href="<?php echo $vcSiteUrl.'agencies-software-development-services'; ?>">For Agencies</a></li>
         </ul>
       </div>
     </div>
