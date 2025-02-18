@@ -44,9 +44,9 @@ function defActiveHire( $hirePage, $exCat ){
       <div class="header-item-left">
         <a href="<?php bloginfo('url'); ?>" class="brand">
           <div class="large">
-            <img class="light" loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/logo-light.svg" 
+            <img class="light" loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/logo-valuecosers.svg" 
               alt="Valuecoders" width="400" height="88">
-            <img class="dark" loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/logo-dark.svg" 
+            <img class="dark" loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/logo-valucoders-light.svg" 
               alt="Valuecoders" width="400" height="88">
           </div>
           <div class="small">
