@@ -28,16 +28,16 @@
     <div class="dis-flex footer-top">
       <div class="count-sec">
         <div class="count-col">
-          <h5>24,859,684+</h5>
-          <p>LEADS DRIVEN FOR CLIENTS</p>
+          <h5>$5B+</h5>
+          <p>BUSINESS VALUE CREATED</p>
         </div>
         <div class="count-col">
-          <h5>$6,021,182,299+</h5>
-          <p>REVENUE DRIVEN FOR CLIENTS</p>
+          <h5>99.9%</h5>
+          <p>SERVER UPTIME FOR MANAGED IT</p>
         </div>
         <div class="count-col">
-          <h5>3,212,407</h5>
-          <p>HOURS OF EXPERTISE</p>
+          <h5>1,000,000+</h5>
+          <p>HOURS OF DEVELOPMENT EXPERTISE</p>
         </div>
         <div class="count-col">
           <h5>675+</h5>

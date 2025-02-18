@@ -52,7 +52,7 @@
 
         &:nth-child(2) {
           &:after {
-            width: 28px;
+            width: 24px;
             height: 24px;
             background: url(../images/home-images/awlogo-02.svg) no-repeat;
             background-size: 100%;
@@ -166,6 +166,15 @@
 // Media Query Start From Here
 
 @media (max-width: 1440px) {
+  .award-section {
+    .stats {
+      max-width: 90%;
+    }
+    .bottom-section {
+      gap: 10px;
+      max-width: 90%;
+    }
+  }
 }
 
 @media (max-width: 1320px) {

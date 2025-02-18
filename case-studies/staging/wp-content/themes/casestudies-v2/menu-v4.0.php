@@ -39,11 +39,13 @@ function defActiveHire( $hirePage, $exCat ){
   }
 }
 ?>
+
+
 <header class="header-two">
   <div class="container">
     <div class="wrapper">
-      <div class="header-item-left">
-        <a href="<?php echo $site_url; ?>" class="brand">
+    <div class="header-item-left">
+        <a href="<?php bloginfo('url'); ?>" class="brand">
           <div class="large">
             <img class="light" loading="lazy" src="<?php echo $tpl_url; ?>/header-images/logo-light.svg" 
               alt="Valuecoders" width="400" height="88">
@@ -91,10 +93,10 @@ function defActiveHire( $hirePage, $exCat ){
                             <a href="<?php echo $site_url; ?>cloud-services">Cloud Services</a>
                           </li>
                           <li class="tab-link <?php echo isActiveMenu("data-science", $mcat); ?>">
-                            <a href="<?php echo $site_url; ?>data-engineering">Data Engineering</a>
+                            <a href="<?php echo $site_url; ?>data-engineering">Data Solutions</a>
                           </li>
                           <li class="tab-link <?php echo isActiveMenu("ai-ml", $mcat); ?>">
-                            <a href="<?php echo $site_url; ?>ai">Artificial Intelligence</a>
+                            <a href="<?php echo $site_url; ?>ai">AI & ML Solutions</a>
                           </li>
                         </ul>
                       </div>
@@ -107,6 +109,18 @@ function defActiveHire( $hirePage, $exCat ){
                               <span class="ser-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-service">
+                            <div class="flex-4">
+                                <span class="head">Consulting</span>
+                                <a href="<?php echo $site_url; ?>software-consulting"><span class="title">Software Consulting</span>
+                                Expert advice on tech</a>
+                                <a href="<?php echo $site_url; ?>it-strategy-consulting-firms"><span class="title">IT Consulting</span>
+                                Expert IT solutions, delivered</a>
+                                <a href="<?php echo $site_url; ?>agile-consulting"><span class="title">Agile Consulting</span>
+                                Agile expertise, faster results</a>
+                                <a href="<?php echo $site_url; ?>crm-consulting"><span class="title">CRM Consulting</span>
+                                Optimizing customer relations</a>
+                                <a href="<?php echo $site_url; ?>software-consulting" class="view-more">View More</a>
+                              </div>
                               <div class="flex-4">
                                 <span class="head">Development</span>
                                 <a href="<?php echo $site_url; ?>custom-software-development-services-company"><span class="title">Custom Software</span>
@@ -119,18 +133,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 Transform ideas into powerful apps</a>
                                 <a href="<?php echo $site_url; ?>software-development-services-company" class="view-more">View More</a>
                               </div>
-                              <div class="flex-4">
-                                <span class="head">Consulting</span>
-                                <a href="<?php echo $site_url; ?>software-consulting"><span class="title">Software Consulting</span>
-                                Expert advice on tech</a>
-                                <a href="<?php echo $site_url; ?>it-strategy-consulting-firms"><span class="title">IT Consulting</span>
-                                Expert IT solutions, delivered</a>
-                                <a href="<?php echo $site_url; ?>agile-consulting"><span class="title">Agile Consulting</span>
-                                Agile expertise, faster results</a>
-                                <a href="<?php echo $site_url; ?>crm-consulting"><span class="title">CRM Consulting</span>
-                                Optimizing customer relations</a>
-                                <a href="<?php echo $site_url; ?>software-consulting" class="view-more">View More</a>
-                              </div>
+                             
                               <div class="flex-4">
                                 <span class="head">Maintenance & Support</span>
                                 <!--<a href="<?php echo $site_url; ?>"><span class="title">Software Maintenance</span>
@@ -256,10 +259,10 @@ function defActiveHire( $hirePage, $exCat ){
                                 Your store, our success strategy</a>
                                 <a href="<?php echo $site_url; ?>ecommerce-web-design"><span class="title">eCommerce Web Design</span>
                                 Designing conversion pathways</a>
-                                <a href="<?php echo $site_url; ?>ecommerce/maintenance-support"><span class="title">eCommerce Maintenance & Support</span>
-                                Elevate every eExperience</a>
                                 <a href="<?php echo $site_url; ?>ecommerce/implementation-services"><span class="title">eCommerce Implementation</span>
                                 Bring digital storefronts to life</a>
+                                <a href="<?php echo $site_url; ?>ecommerce/maintenance-support"><span class="title">eCommerce Maintenance & Support</span>
+                                Elevate every eExperience</a>
                               </div>
                               <div class="flex-2">
                                 <span class="head">TECHNOLOGY</span>
@@ -332,7 +335,7 @@ function defActiveHire( $hirePage, $exCat ){
                         </div>
                         <div class="tab-content <?php echo isActiveMenu("devops", $mcat); ?>">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>cloud-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/serv-06.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Services</span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>cloud-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/menu-icon_cloudservices.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Services</span>
                               Seamless, secure, superior cloud services</a><span class="ser-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-service">
@@ -375,36 +378,21 @@ function defActiveHire( $hirePage, $exCat ){
                         </div>
                         <div class="tab-content <?php echo isActiveMenu("data-science", $mcat); ?>">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>data-engineering"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Data Engineering</span>
-                              Accelerate growth with data science</a> <span class="ser-arrow-btn"></span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>data-engineering"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Data Solutions</span>Turn data into success</a> <span class="ser-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-service">
                               <div class="flex-2">
-                                <span class="head">Business Intelligence (BI)</span>
-                                <a href="<?php echo $site_url; ?>business-intelligence-consulting-services"><span class="title">BI Consulting</span>
-                                Guiding success with BI insights</a>
-                                <a href="<?php echo $site_url; ?>bi-implementation"><span class="title">BI Implementation</span>
-                                Implementing BI, driving growth</a>
-                                <a href="<?php echo $site_url; ?>microsoft-power-bi-development-services-company"><span class="title">Microsoft Power BI</span>
-                                Powering decisions with Microsoft BI</a>
-                                <a href="<?php echo $site_url; ?>data-engineering/bi-reporting-dashboard"><span class="title">BI Reporting & Dashboard</span>
-                                Visualizing success with BI</a>
-                                <a href="<?php echo $site_url; ?>data-engineering/business-intelligence" class="view-more">View More</a>
+                                <a href="<?php echo $site_url; ?>data-engineering"><span class="title">Data Engineering 
+                                </span>Create scalable data systems</a>
+                                <a href="<?php echo $site_url; ?>data-engineering/data-science-consulting-services"><span class="title">Data Science</span>Innovate with data science</a>
+                                <a href="<?php echo $site_url; ?>data-analytics"><span class="title">Data Analytics</span>
+                                Turn data into strategies</a>                                
                               </div>
                               <div class="flex-2">
-                                <span class="head">DATA SCIENCE & ANALYTICS</span>
-                                <a href="<?php echo $site_url; ?>data-engineering/data-science-consulting-services"><span class="title">Data Science Consulting</span>
-                                Transforming data into insights</a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-data-scientists"><span class="title">Hire Expert Data Scientists</span>
-                                Hire brilliance, harness data power
-                                </a>
-                                <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><span class="title">Big Data Solutions</span>
-                                Harnessing power of big data
-                                </a>
-                                <a href="<?php echo $site_url; ?>data-engineering/data-analytics-consulting-services"><span class="title">Data Analytics Consulting</span>
-                                Transforming data into action
-                                </a>
-                                <a href="<?php echo $site_url; ?>data-analytics" class="view-more">View More</a>
+                                <a href="<?php echo $site_url; ?>data-engineering/business-intelligence"><span class="title">Business Intelligence (BI)</span>Drive success with BI insights</a>
+                                <a href="<?php echo $site_url; ?>data-engineering/data-visualization-services"><span class="title">Data Visualization and Dashboarding </span>Visualize data, drive clarity</a>
+                                <a href="<?php echo $site_url; ?>big-data-application-development-services-company"><span class="title">Big Data</span>Big data, smarter solutions</a>
+                                
                               </div>
                             </div>
                           </div>
@@ -424,16 +412,15 @@ function defActiveHire( $hirePage, $exCat ){
                         </div>
                         <div class="tab-content <?php echo isActiveMenu("ai-ml", $mcat); ?>">
                           <div class="four-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>ai"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Artificial Intelligence</span>
-                              Drive technological innovation</a> <span class="ser-arrow-btn"></span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>ai"><img loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/menu-icon_aiml.svg" class="menuicon" alt="menuicon"><span class="title">AI & ML Solutions</span>Drive technological innovation</a> <span class="ser-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-service">
                               <div class="flex-4">
                                 <span class="head">Artificial Intelligence</span>
-                                <a href="<?php echo $site_url; ?>ai/application-development-company"><span class="title">AI Development</span>
-                                Advancing intelligent solutions</a>
                                 <a href="<?php echo $site_url; ?>ai/consulting-services-company"><span class="title">AI Consulting</span>
                                 Navigating AI's future</a>
+                                <a href="<?php echo $site_url; ?>ai/application-development-company"><span class="title">AI Development</span>
+                                Advancing intelligent solutions</a>
                                 <a href="<?php echo $site_url; ?>chatbot-development-company"><span class="title">AI Chatbot Development</span>
                                 Future-ready chatbots </a>
                                 <a href="<?php echo $site_url; ?>ai/mobile-app-development"><span class="title">AI-Powered App Development</span>
@@ -442,24 +429,24 @@ function defActiveHire( $hirePage, $exCat ){
                               </div>
                               <div class="flex-4">
                                 <span class="head">ML & Advanced Analytics</span>
+                                <a href="<?php echo $site_url; ?>machine-learning/mlops-consulting-services"><span class="title">MLOps Consulting</span>
+                                ML operations optimized </a>
                                 <a href="<?php echo $site_url; ?>machine-learning/development"><span class="title">ML Development</span>
                                 Harnessing data power</a>
                                 <a href="<?php echo $site_url; ?>machine-learning/computer-vision-software-development"><span class="title">Computer Vision Solutions</span>
                                 Transforming visual data</a>
-                                <a href="<?php echo $site_url; ?>machine-learning/mlops-consulting-services"><span class="title">MLOps Consulting</span>
-                                ML operations optimized </a>
                                 <a href="<?php echo $site_url; ?>machine-learning/rpa-development-services-company"><span class="title">RPA Services</span>
                                 Efficient RPA automation</a>
                                 <a href="<?php echo $site_url; ?>machine-learning" class="view-more">View More</a>
                               </div>
                               <div class="flex-4">
                                 <span class="head">Generative AI</span>
+                                <a href="<?php echo $site_url; ?>ai/generative-ai-consulting-company"><span class="title">Generative AI Consulting</span>
+                                Guided generative growth </a>
                                 <a href="<?php echo $site_url; ?>ai/generative-ai-development"><span class="title">Generative AI Development</span>
                                 Creating AI possibilities</a>
                                 <a href="<?php echo $site_url; ?>ai/generative-ai-integration-service"><span class="title">Generative AI Integration</span>
                                 Elevate with generative AI</a>
-                                <a href="<?php echo $site_url; ?>ai/generative-ai-consulting-company"><span class="title">Generative AI Consultings</span>
-                                Guided generative growth </a>
                                 <a href="<?php echo $site_url; ?>ai/stable-diffusion-development-services"><span class="title">Stable Diffusion Development</span>
                                 Stable AI, peak performance</a>
                                 <a href="<?php echo $site_url; ?>ai/generative-ai-services" class="view-more">View More</a>
@@ -486,308 +473,7 @@ function defActiveHire( $hirePage, $exCat ){
               </div>
             </li>
             <!-- //Services Menu Ends -->
-            <?php //if( $mcat === "demand-teams" ) : ?>
-            <!-- Hire Menu Starts -->
-            <li class="menu-item-has-children">
-              <a class="mst-link" href="<?php echo $site_url; ?>hire-developers">Hire</a> <span class="arrow-btn"></span>
-              <div class="menu-mega">
-                <div class="container">
-                  <div class="dis-flex tab-menu">
-                    <div id="mnu-hire" class="dis-flex tab-contents">
-                      <div class="left-tabs">
-                        <ul class="tab-nav">
-                          <li class="tab-link <?php echo defActiveHire($hireElm, $mcat); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-backend-developers">Backend</a></li>
-                          <li class="tab-link <?php echo isActiveMenu("frontend", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-front-end-developers">Frontend</a></li>
-                          <li class="tab-link <?php echo isActiveMenu([$hireElm,$mcat] ,"ai-ml"); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers">AI/ML</a></li>
-                          <li class="tab-link <?php echo isActiveMenu("dm", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire/digital-marketing-experts">Digital Marketing</a></li>
-                          <li class="tab-link <?php echo isActiveMenu("mobile", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-mobile-app-developers">Mobile</a></li>
-                          <li class="tab-link <?php echo isActiveMenu("full-stack", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-full-stack-developers">Full Stack</a></li>
-                          <li class="tab-link <?php echo isActiveMenu("devops", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-devops-developers">DevOps</a></li>
-                          <li class="tab-link <?php echo isActiveMenu("cms", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-cms-developers">CMS</a></li>
-                          <li class="tab-link <?php echo isActiveMenu("ecom", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-ecommerce-developers">eCommerce</a></li>
-                          <li class="tab-link <?php echo isActiveMenu("bc", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-blockchain-developers">Blockchain</a></li>
-                          <li class="tab-link <?php echo isActiveMenu("lc", $hireElm); ?>"><a href="<?php echo $site_url; ?>services/low-code-no-code">Low - Code</a></li>
-                        </ul>
-                      </div>
-                      <div class="right-tabs hire-tabs">
-                        <div class="tab-content <?php echo defActiveHire($hireElm, $mcat); ?>">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-backend-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-01.svg" 
-                                class="menuicon" alt="menuicon"><span class="title">Backend</span>Build robust backend</a>
-                                <span class="hr-arrow-btn"></span>
-                            </div>
-                            <div class="dis-flex menu-column hr-submenu">
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-dotnet-developers"><span class="title">.NET</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-c-developers"><span class="title">C/C++</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-c-sharp-developers"><span class="title">C#</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-django-developers"><span class="title">Django</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-firebase-developers"><span class="title">Firebase</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-golang-web-developers"><span class="title">Golang</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-graphql-developers"><span class="title">GraphQL</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-nodejs-developers"><span class="title">Node</span></a>
-                              </div>
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-php-developers"><span class="title">PHP</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-python-developers"><span class="title">Python</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-ror-developers"><span class="title">Ruby on Rails</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-symfony-developers"><span class="title">Symfony</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-assembly-developers"><span class="title">Assembly</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-java-developers"><span class="title">Java</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-laravel-developers"><span class="title">Laravel</span></a>
-                              </div>
-                            </div>
-                          </div>
-                          
-                        </div>
-                        <div class="tab-content <?php echo isActiveMenu("frontend", $hireElm); ?>">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-front-end-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-02.svg" 
-                                class="menuicon" alt="menuicon"><span class="title">Frontend</span>Improve your frontend design</a>
-                                <span class="hr-arrow-btn"></span>
-                            </div>
-                            <div class="dis-flex menu-column hr-submenu">
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-angularjs-developers" title="Angular"><span class="title">Angular</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-html-developers" title="HTML/CSS"><span class="title">HTML/CSS</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-javascript-developers" title="JavaScript"><span class="title">JavaScript</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-power-bi-developer-consultants" title="PowerBI"><span class="title">PowerBI</span></a>
-                              </div>
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-reactjs-developers" title="React"><span class="title">React</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-typescript-developers" title="TypeScript"><span class="title">TypeScript</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-vuejs-developers" title="Vue.JS"><span class="title">Vue.JS</span></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-
-                         <div class="tab-content <?php echo isActiveMenu([$hireElm,$mcat] ,"ai-ml"); ?>">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-03.svg" 
-                                class="menuicon" alt="menuicon"><span class="title">AI/ML</span>Transform with AI/ML experts</a>
-                                <span class="hr-arrow-btn"></span>
-                            </div>
-                            <div class="dis-flex menu-column hr-submenu">
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers" title="Chatbot"><span class="title">AI Engineers</span>
-                                </a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-llm-engineers" title="LLM"><span class="title">LLM Engineers</span>
-                                </a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-gpt-expert" title="GPT Experts"><span class="title">GPT Experts</span>
-                                </a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-data-scientists" title="Data Scientists"><span class="title">Data Scientists</span>
-                                </a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-ml-engineers" title="ML Engineers"><span class="title">ML Engineers</span>
-                                </a>
-                              </div>
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-chatbot-developers" title="Chatbot"><span class="title">Chatbot</span>
-                                </a>
-                                <a href="<?php echo $site_url; ?>hire-developers/dialogflow-developers" title="Dialogflow"><span class="title">Dialogflow</span>
-                                </a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-tensorflow-developers" title="Tensorflow"><span class="title">TensorFlow</span>
-                                </a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-rpa-developers" title="RPA"><span class="title">RPA</span>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                         
-                        </div>
-
-                         <div class="tab-content <?php echo isActiveMenu("dm", $hireElm); ?>">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire/digital-marketing-experts">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-04.svg" 
-                                class="menuicon" alt="menuicon"><span class="title">Digital Marketing</span>Boost your brand digitally</a>
-                                <span class="hr-arrow-btn"></span>
-                            </div>
-                            <div class="dis-flex menu-column hr-submenu">
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire/seo-experts" title="SEO"><span class="title">SEO</span></a>
-                                <a href="<?php echo $site_url; ?>hire/ppc-experts" title="PPC"><span class="title">PPC</span></a>
-                                <a href="<?php echo $site_url; ?>hire/smo-experts" title="SMO"><span class="title">SMO</span></a>
-                                <a href="<?php echo $site_url; ?>hire/content-writers" title="Content Writer"><span class="title">Content Writer</span></a>
-                              </div>
-                              <div class="flex-2">                                
-                              </div>
-                            </div>
-                          </div>
-                         
-                        </div>
-
-                        <div class="tab-content <?php echo isActiveMenu("mobile", $hireElm); ?>">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-mobile-app-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-05.svg" 
-                                class="menuicon" alt="menuicon"><span class="title">Mobile</span>Hire skilled mobile developers</a>
-                                <span class="hr-arrow-btn"></span>
-                            </div>
-                            <div class="dis-flex menu-column hr-submenu">
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-android-developers" title="Android"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-flutter-developers" title="Flutter"><span class="title">Flutter</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-ionic-developers" title="Ionic"><span class="title">Ionic</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-ios-developers" title="IOS"><span class="title">iOS</span></a>
-                              </div>
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-kotlin-developers" title="Kotlin"><span class="title">Kotlin</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-react-native-developers" title="React Native"><span class="title">React Native</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-swift-developers" title="Swift"><span class="title">Swift</span></a>
-                              </div>
-                            </div>
-                          </div>
-                          
-                        </div>
-
-                         <div class="tab-content <?php echo isActiveMenu("full-stack", $hireElm); ?>">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-full-stack-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-06.svg" 
-                                class="menuicon" alt="menuicon"><span class="title">Full Stack</span>Fullstack developers for hire</a>
-                                <span class="hr-arrow-btn"></span>
-                            </div>
-                            <div class="dis-flex menu-column hr-submenu">
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-mean-stack-developers" title="MEAN"><span class="title">MEAN</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-mern-stack-developers" title="MERN"><span class="title">MERN</span></a>
-                              </div>
-                              <div class="flex-2">                                
-                              </div>
-                            </div>
-                          </div>
-                          
-                        </div>
-
-                        <div class="tab-content <?php echo isActiveMenu("devops", $hireElm); ?>">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-devops-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-07.svg" 
-                                class="menuicon" alt="menuicon"><span class="title">DevOps</span>Streamline with DevOps pros</a>
-                                <span class="hr-arrow-btn"></span>
-                            </div>
-                            <div class="dis-flex menu-column hr-submenu">
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-azure-developers" title="Azure"><span class="title">Azure</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-aws-developers" title="AWS"><span class="title">AWS</span></a>
-                              </div>
-                              <div class="flex-2">                                
-                              </div>
-                            </div>
-                          </div>
-                          
-                        </div>
-
-                        <div class="tab-content <?php echo isActiveMenu("cms", $hireElm); ?>">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-cms-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-08.svg" 
-                                class="menuicon" alt="menuicon"><span class="title">CMS</span>Build powerful CMS solutions</a>
-                                <span class="hr-arrow-btn"></span>
-                            </div>
-                            <div class="dis-flex menu-column hr-submenu">
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-drupal-developers" title="Drupal"><span class="title">Drupal</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-kentico-developers" title="kentico"><span class="title">Kentico</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-sitecore-developers" title="Sitecore"><span class="title">Sitecore</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-sitefinity-developers" title="Sitefinity"><span class="title">Sitefinity</span></a>
-                              </div>
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-umbraco-developers" title="Umbraco"><span class="title">Umbraco</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-wordpress-developers" title="Wordpress"><span class="title">Wordpress</span></a>
-                              </div>
-                            </div>
-                          </div>
-                         
-                        </div>
-                        
-                        <div class="tab-content <?php echo isActiveMenu("ecom", $hireElm); ?>">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-ecommerce-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-09.svg" 
-                                class="menuicon" alt="menuicon"><span class="title">eCommerce</span>Expert eCommerce developers for hire</a>
-                                <span class="hr-arrow-btn"></span>
-                            </div>
-                            <div class="dis-flex menu-column hr-submenu">
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-magento-developers" title="Magento"><span class="title">Magento</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-shopify-developers" title="Shopify"><span class="title">Shopify</span></a>
-                              </div>
-                              <div class="flex-2">                                
-                              </div>
-                            </div>
-                          </div>
-                          
-                        </div>
-
-                        <div class="tab-content <?php echo isActiveMenu("bc", $hireElm); ?>">
-                          <div class="three-column mob-hide">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-blockchain-developers">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-10.svg" 
-                                class="menuicon" alt="menuicon"><span class="title">Blockchain</span>Unlock blockchain potential</a>
-                                <span class="hr-arrow-btn"></span>
-                            </div>
-                            <div class="dis-flex menu-column hr-submenu">
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-ethereum-developer" title="Ethereum"><span class="title">Ethereum</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-smartcontract-developers" title="Smart Contract"><span class="title">Smart Contract</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-solidity-developers" title="Solidity"><span class="title">Solidity</span></a>
-                              </div>
-                              <div class="flex-2">                                
-                              </div>
-                            </div>
-                          </div>
-                         
-                        </div>                       
-                        <div class="tab-content <?php echo isActiveMenu("lc", $hireElm); ?>">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>services/low-code-no-code">
-                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-11.svg" 
-                                class="menuicon" alt="menuicon"><span class="title">Low - Code</span>Hire low-code experts</a>
-                                <span class="hr-arrow-btn"></span>
-                            </div>
-                            <div class="dis-flex menu-column hr-submenu">
-                              <div class="flex-2">                                
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-appian-developers" title="Appian"><span class="title">Appian</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-outsystems-developers" title="Outsystems"><span class="title">Outsystems</span></a>
-                                <a href="<?php echo $site_url; ?>hire-developers/hire-mendix-developers" title="Mendix"><span class="title">Mendix</span></a>
-                                <a href="<?php echo $site_url; ?>pega-development-services" title="Pega"><span class="title">Pega</span></a>
-                              </div>
-                              <div class="flex-2">                                
-                              </div>
-                            </div>
-                          </div>
-                         
-                        </div>
-                         <div class="tab-content other-menu mob-hide">
-                            <div class="tab-title">
-                              <a href="<?php echo $site_url; ?>hire-developers">
-                              <span class="title">Hire Dedicated Developers</span>Build faster with on-demand team
-                              </a>
-                              <span class="hr-arrow-btn"></span>
-                            </div>
-                            <div class="flex-1 menu-column hr-submenu">
-                            <a href="<?php echo $site_url; ?>it-staff-augmentation-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">Staff Augmentation</span>Access top technical resources on-demand</a>
-
-                            <a href="<?php echo $site_url; ?>hire-developers/hire-software-developers-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">Hire Software Developers</span>Work with skilled & dedicated developers</a>
-
-                            <a href="<?php echo $site_url; ?>dedicated-development-teams"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">Dedicated Software Teams</span>Hire Dedicated Developers</a>
-                            </div>
-                            <a href="<?php echo $site_url; ?>hire-developers" class="view-more">View More</a>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <!-- //Hire Menu Ends -->
-            <?php //endif; ?>
+      
             <li class="menu-item-has-children">
               <a class="mst-link" href="javascript:void(0);">Who We Serve</a> <span class="arrow-btn"></span>
               <div class="menu-mega">
@@ -804,34 +490,28 @@ function defActiveHire( $hirePage, $exCat ){
                       <div class="right-tabs">
                         <div class="tab-content is-active">
                           <div class="three-column">
-                            <div class="tab-title"><a href="javascript:void(0);"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/ind-03.svg" class="menuicon" alt="menuicon"><span class="title">Software Startups & Product Companies</span>Your vision, our expertise</a>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>outsource-software-product-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/ind-03.svg" class="menuicon" alt="menuicon"><span class="title">Software Startups & Product Companies</span>Your vision, our expertise</a>
                             </div>
                             <div class="dis-flex menu-column">                              
                               <div class="flex-2">
-                                <span class="head">Product</span>
-                                <a href="<?php echo $site_url; ?>outsource-software-product-development-services"><span class="title">Software Product Development</span>
-                                Innovate with expert developers</a>
-                                <!-- <a href="<?php //echo $site_url; ?>"><span class="title">SaaS Consulting</span>
-                                SaaS success starts here</a> -->
-                                <a href="<?php echo $site_url; ?>saas-consulting-development-services"><span class="title">SaaS Development</span>
-                                Build scalable SaaS products</a>
-                                <a href="<?php echo $site_url; ?>mvp-app-development-company"><span class="title">MVP Development</span>
-                                Launch your MVP faster</a>
-                                <a href="<?php echo $site_url; ?>product-ui-ux-design"><span class="title">Product UI/UX Design</span>
-                                Designs that captivate users</a>
+                              <a href="<?php echo $site_url; ?>startup-consulting-services"><span class="title">Product Consulting</span>
+                              Guidance for startup success</a>
+                              <a href="<?php echo $site_url; ?>discovery-phase-process"><span class="title">Product Discovery Phase</span>
+                              Refine ideas into solutions</a>
+                              <a href="<?php echo $site_url; ?>product-ui-ux-design"><span class="title">Product UI/UX Design</span>
+                              Designs that captivate users</a>
+                              <a href="<?php echo $site_url; ?>mvp-app-development-company"><span class="title">MVP Development</span>
+                              Launch your MVP faster</a>
                               </div>
-
                               <div class="flex-2">
-                                <span class="head">Startups</span>
-                                <a href="<?php echo $site_url; ?>startup-consulting-services"><span class="title">Startup Consulting</span>
-                                Guidance for startup success</a>
-                                <a href="<?php echo $site_url; ?>discovery-phase-process"><span class="title">Product Discovery Phase</span>
-                                Refine ideas into solutions</a>
-                                <a href="<?php echo $site_url; ?>startup-product-development"><span class="title">Startup Product Development</span>
-                                Develop your startup vision</a>
+                              <a href="<?php echo $site_url; ?>saas-consulting-development-services"><span class="title">SaaS Development</span>
+                                Build scalable SaaS products</a>
+                              <a href="<?php echo $site_url; ?>outsource-software-product-development-services"><span class="title">Software Product Development</span>
+                              Outsource development needs to experts</a>
+                                <a href="<?php echo $site_url; ?>startup-product-development"><span class="title">Product Development for Startups</span>
+                                Launch your startup idea with expert guidance</a>
                                 <a href="<?php echo $site_url; ?>cto-as-a-service"><span class="title">CTO as a Service</span>
-                                Strategic tech leadership</a>
-                                <!--<a href="<?php echo $site_url; ?>"><span class="title">How to Hire Startup Developers</span>Testing experts for every stage  </a>-->
+                                Grow faster with strategic tech leadership</a>
                               </div>
 
                             </div>
@@ -863,7 +543,7 @@ function defActiveHire( $hirePage, $exCat ){
                                   <a href="<?php echo $site_url; ?>"><span class="title">Lending</span>
                                   Validate your idea and ensure</a>
                                   -->
-                                <a href="<?php echo $site_url; ?>industries/banking-financial-services"><span class="title">Banking</span>
+                                <a href="<?php echo $site_url; ?>banking"><span class="title">Banking</span>
                                 Banking on innovation</a>
                                 <a href="<?php echo $site_url; ?>insurance"><span class="title">Insurance</span>
                                 Secure insurance solutions</a>
@@ -989,16 +669,16 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>flutter-app-development-company"><span class="title">Flutter</span></a>
                                 <a href="<?php echo $site_url; ?>angular-js-development-company-india"><span class="title">Angular</span></a>
                                 <a href="<?php echo $site_url; ?>android-app-development-company-india"><span class="title">Android</span></a>
-                                <a href="<?php echo $site_url; ?>ios-application-development-company-india"><span class="title">iOs / iPhone</span></a>
+                                <a href="<?php echo $site_url; ?>ios-application-development-company-india"><span class="title">iOS / iPhone</span></a>
                                 <a href="<?php echo $site_url; ?>react-js-development-services-company"><span class="title">React</span></a>                                
                               </div>
                               <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>top-laravel-development-services-company-india"><span class="title">Lavavel</span></a>
+                                <a href="<?php echo $site_url; ?>top-laravel-development-services-company-india"><span class="title">Laravel</span></a>
                                 <a href="<?php echo $site_url; ?>net-maui-app-development"><span class="title">.NET MAUI</span></a>
                                 <a href="<?php echo $site_url; ?>node-js-development-company-india"><span class="title">Node</span></a>
                                 <a href="<?php echo $site_url; ?>best-react-native-development-services-company-india"><span class="title">React Native</span></a>
                                 <a href="<?php echo $site_url; ?>php-development-services-company"><span class="title">PHP</span></a>
-                                <a href="<?php echo $site_url; ?>top-wordpress-development-services-company-india"><span class="title">Wordpress</span></a>
+                                <a href="<?php echo $site_url; ?>top-wordpress-development-services-company-india"><span class="title">WordPress</span></a>
                                 <a href="<?php echo $site_url; ?>strapi-development-services"><span class="title">Strapi</span></a>
                                 <a href="<?php echo $site_url; ?>top-drupal-development-services-company-india"><span class="title">Drupal</span></a>  
                               </div>
@@ -1032,18 +712,18 @@ function defActiveHire( $hirePage, $exCat ){
               <a class="mst-link" href="<?php echo $site_url; ?>resources">Resources</a><span class="arrow-btn"></span>
               <div class="menu-mega small-menu">
               <a href="<?php echo $site_url; ?>hire-developers/hire-software-developers-india">
-              <img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/res-01.svg" class="menuicon" alt="menuicon">Hire Indian Developers </a>
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/res-01.svg" class="menuicon" alt="menuicon">Hire Indian Developers </a>
               <a href="<?php echo $site_url; ?>it-outsourcing-services">
-              <img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/res-01.svg" class="menuicon" alt="menuicon">IT Outsourcing</a>
+              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/res-02.svg" class="menuicon" alt="menuicon">IT Outsourcing</a>
               <a href="<?php echo $site_url; ?>how-it-works">
-                <img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/res-01.svg" class="menuicon" 
+                <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/res-03.svg" class="menuicon" 
                 alt="menuicon">How It Works</a>
               <a href="<?php echo $site_url; ?>benefits-of-hiring-remote-developers">
-                <img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/res-01.svg" class="menuicon" alt="menuicon">Hiring Remote Developers</a>
-              <a href="<?php echo $site_url; ?>why-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/res-01.svg" class="menuicon" alt="menuicon">Software Development in India</a>
-              <a href="<?php echo $site_url; ?>faq"><img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/res-01.svg" class="menuicon" alt="menuicon">FAQs</a>
+                <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/res-04.svg" class="menuicon" alt="menuicon">Hiring Remote Developers</a>
+              <a href="<?php echo $site_url; ?>why-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/res-05.svg" class="menuicon" alt="menuicon">Software Development in India</a>
+              <a href="<?php echo $site_url; ?>faq"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/res-06.svg" class="menuicon" alt="menuicon">FAQs</a>
               <a href="<?php echo $site_url; ?>ratecard">
-                <img loading="lazy" src="<?php echo $tpl_url; ?>/menu-images/res-07.svg" class="menuicon" alt="menuicon">Ratecard</a>
+                <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/res-07.svg" class="menuicon" alt="menuicon">Ratecard</a>
               </div>
             </li>
             <?php endif; ?>
@@ -1097,7 +777,7 @@ function defActiveHire( $hirePage, $exCat ){
                               <div class="flex-4">
                                 <a href="<?php echo $site_url; ?>document-management-services"><span class="title">Document Management</span>
                                 Digitize documents seamlessly</a>
-                                <a href="<?php echo $site_url; ?>rpa-development-services-company">
+                                <a href="<?php echo $site_url; ?>machine-learning/rpa-development-services-company">
                                 <span class="title">Robotic Process Automation</span>
                                 Automate, Simplify, Excel</a>
                               </div>
@@ -1125,16 +805,334 @@ function defActiveHire( $hirePage, $exCat ){
                 <a href="https://www.valuecoders.com/blog/" target="_blank"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/comp-05.svg" class="menuicon" alt="menuicon">Blog</a>
               </div>
             </li>
+            <?php //if( $mcat === "demand-teams" ) : ?>
+            <!-- Hire Menu Starts -->
+            <li class="menu-item-has-children hire-menu-item">
+              <a class="mst-link" href="<?php echo $site_url; ?>hire-developers">Hire <i><img class="nor" loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-icon.png" alt="hire"><img class="hov" loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-yellow.png" alt="hire"></i></a> <span class="arrow-btn"></span>
+              <div class="menu-mega">
+                <div class="container">
+                  <div class="dis-flex tab-menu">
+                    <div id="mnu-hire" class="dis-flex tab-contents">
+                      <div class="left-tabs">
+                        <ul class="tab-nav">
+                          <li class="tab-link <?php echo defActiveHire($hireElm, $mcat); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-backend-developers">Backend</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("frontend", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-front-end-developers">Frontend</a></li>
+                          <li class="tab-link <?php echo isActiveMenu([$hireElm,$mcat] ,"ai-ml"); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers">AI/ML</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("data-sol", $hireElm); ?>"><a href="<?php echo $site_url; ?>">Data Solutions</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("mobile", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-mobile-app-developers">Mobile</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("full-stack", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-full-stack-developers">Full Stack</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("devops", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-devops-developers">DevOps</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("cms", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-cms-developers">CMS</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("ecom", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-ecommerce-developers">eCommerce</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("dm", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire/digital-marketing-experts">Digital Marketing</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("bc", $hireElm); ?>"><a href="<?php echo $site_url; ?>hire-developers/hire-blockchain-developers">Blockchain</a></li>
+                          <li class="tab-link <?php echo isActiveMenu("lc", $hireElm); ?>"><a href="<?php echo $site_url; ?>services/low-code-no-code">Low - Code</a></li>
+                        </ul>
+                      </div>
+                      <div class="right-tabs hire-tabs">
+                        <div class="tab-content <?php echo defActiveHire($hireElm, $mcat); ?>">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-backend-developers">
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-01.svg" 
+                                class="menuicon" alt="menuicon"><span class="title">Backend</span>Build robust backend</a>
+                                <span class="hr-arrow-btn"></span>
+                            </div>
+                            <div class="dis-flex menu-column hr-submenu">
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-dotnet-developers"><span class="title">.NET</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-c-developers"><span class="title">C/C++</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-c-sharp-developers"><span class="title">C#</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-django-developers"><span class="title">Django</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-firebase-developers"><span class="title">Firebase</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-golang-web-developers"><span class="title">Golang</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-graphql-developers"><span class="title">GraphQL</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-nodejs-developers"><span class="title">Node</span></a>
+                              </div>
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-php-developers"><span class="title">PHP</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-python-developers"><span class="title">Python</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-ror-developers"><span class="title">Ruby on Rails</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-symfony-developers"><span class="title">Symfony</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-assembly-developers"><span class="title">Assembly</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-java-developers"><span class="title">Java</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-laravel-developers"><span class="title">Laravel</span></a>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                        <div class="tab-content <?php echo isActiveMenu("frontend", $hireElm); ?>">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-front-end-developers">
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-02.svg" 
+                                class="menuicon" alt="menuicon"><span class="title">Frontend</span>Improve your frontend design</a>
+                                <span class="hr-arrow-btn"></span>
+                            </div>
+                            <div class="dis-flex menu-column hr-submenu">
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-angularjs-developers" title="Angular"><span class="title">Angular</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-html-developers" title="HTML/CSS"><span class="title">HTML/CSS</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-javascript-developers" title="JavaScript"><span class="title">JavaScript</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-power-bi-developer-consultants" title="PowerBI"><span class="title">PowerBI</span></a>
+                              </div>
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-reactjs-developers" title="React"><span class="title">React</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-typescript-developers" title="TypeScript"><span class="title">TypeScript</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-vuejs-developers" title="Vue.JS"><span class="title">Vue.JS</span></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+                         <div class="tab-content <?php echo isActiveMenu([$hireElm,$mcat] ,"ai-ml"); ?>">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers">
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-03.svg" 
+                                class="menuicon" alt="menuicon"><span class="title">AI/ML</span>Transform with AI/ML experts</a>
+                                <span class="hr-arrow-btn"></span>
+                            </div>
+                            <div class="dis-flex menu-column hr-submenu">
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-ai-engineers" title="Chatbot"><span class="title">AI Engineers</span>
+                                </a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-llm-engineers" title="LLM"><span class="title">LLM Engineers</span>
+                                </a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-gpt-expert" title="GPT Experts"><span class="title">GPT Experts</span>
+                                </a>
+                                
+                              </div>
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-chatbot-developers" title="Chatbot"><span class="title">Chatbot</span>
+                                </a>
+                                <a href="<?php echo $site_url; ?>hire-developers/dialogflow-developers" title="Dialogflow"><span class="title">Dialogflow</span>
+                                </a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-rpa-developers" title="RPA"><span class="title">RPA</span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                         
+                        </div>
+
+                        <div class="tab-content <?php echo isActiveMenu("data-sol", $hireElm); ?>">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>">
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/data-sol.svg" 
+                                class="menuicon" alt="menuicon">
+                                <span class="title">Data Solutions</span>Hire experts to unlock data's potential</a>
+                                <span class="hr-arrow-btn"></span>
+                            </div>
+                            <div class="dis-flex menu-column hr-submenu">
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-data-scientists" title="Android"><span class="title">Data Scientists
+                                </span></a>
+                                <a href="<?php echo $site_url; ?>hire/data-engineers" title="Flutter"><span class="title">Data Engineers
+                                </span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-ml-engineers" title="Ionic"><span class="title">ML Engineers</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-tensorflow-developers" title="IOS"><span class="title">TensorFlow</span></a>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+
+                        <div class="tab-content <?php echo isActiveMenu("mobile", $hireElm); ?>">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-mobile-app-developers">
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-05.svg" 
+                                class="menuicon" alt="menuicon"><span class="title">Mobile</span>Hire skilled mobile developers</a>
+                                <span class="hr-arrow-btn"></span>
+                            </div>
+                            <div class="dis-flex menu-column hr-submenu">
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-android-developers" title="Android"><span class="title">Android</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-flutter-developers" title="Flutter"><span class="title">Flutter</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-ionic-developers" title="Ionic"><span class="title">Ionic</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-ios-developers" title="IOS"><span class="title">iOS</span></a>
+                              </div>
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-kotlin-developers" title="Kotlin"><span class="title">Kotlin</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-react-native-developers" title="React Native"><span class="title">React Native</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-swift-developers" title="Swift"><span class="title">Swift</span></a>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+
+                         <div class="tab-content <?php echo isActiveMenu("full-stack", $hireElm); ?>">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-full-stack-developers">
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-06.svg" 
+                                class="menuicon" alt="menuicon"><span class="title">Full Stack</span>Fullstack developers for hire</a>
+                                <span class="hr-arrow-btn"></span>
+                            </div>
+                            <div class="dis-flex menu-column hr-submenu">
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-mean-stack-developers" title="MEAN"><span class="title">MEAN</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-mern-stack-developers" title="MERN"><span class="title">MERN</span></a>
+                              </div>
+                              <div class="flex-2">                                
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+
+                        <div class="tab-content <?php echo isActiveMenu("devops", $hireElm); ?>">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-devops-developers">
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-07.svg" 
+                                class="menuicon" alt="menuicon"><span class="title">DevOps</span>Streamline with DevOps pros</a>
+                                <span class="hr-arrow-btn"></span>
+                            </div>
+                            <div class="dis-flex menu-column hr-submenu">
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-azure-developers" title="Azure"><span class="title">Azure</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-aws-developers" title="AWS"><span class="title">AWS</span></a>
+                              </div>
+                              <div class="flex-2">                                
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+
+                        <div class="tab-content <?php echo isActiveMenu("cms", $hireElm); ?>">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-cms-developers">
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-08.svg" 
+                                class="menuicon" alt="menuicon"><span class="title">CMS</span>Build powerful CMS solutions</a>
+                                <span class="hr-arrow-btn"></span>
+                            </div>
+                            <div class="dis-flex menu-column hr-submenu">
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-drupal-developers" title="Drupal"><span class="title">Drupal</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-kentico-developers" title="kentico"><span class="title">Kentico</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-sitecore-developers" title="Sitecore"><span class="title">Sitecore</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-sitefinity-developers" title="Sitefinity"><span class="title">Sitefinity</span></a>
+                              </div>
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-umbraco-developers" title="Umbraco"><span class="title">Umbraco</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-wordpress-developers" title="Wordpress"><span class="title">Wordpress</span></a>
+                              </div>
+                            </div>
+                          </div>
+                         
+                        </div>
+                        
+                        <div class="tab-content <?php echo isActiveMenu("ecom", $hireElm); ?>">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-ecommerce-developers">
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-09.svg" 
+                                class="menuicon" alt="menuicon"><span class="title">eCommerce</span>Expert eCommerce developers for hire</a>
+                                <span class="hr-arrow-btn"></span>
+                            </div>
+                            <div class="dis-flex menu-column hr-submenu">
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-magento-developers" title="Magento"><span class="title">Magento</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-shopify-developers" title="Shopify"><span class="title">Shopify</span></a>
+                              </div>
+                              <div class="flex-2">                                
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                        <div class="tab-content <?php echo isActiveMenu("dm", $hireElm); ?>">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire/digital-marketing-experts">
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-04.svg" 
+                                class="menuicon" alt="menuicon"><span class="title">Digital Marketing</span>Boost your brand digitally</a>
+                                <span class="hr-arrow-btn"></span>
+                            </div>
+                            <div class="dis-flex menu-column hr-submenu">
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire/seo-experts" title="SEO"><span class="title">SEO Experts</span></a>
+                                <a href="<?php echo $site_url; ?>hire/ppc-experts" title="PPC"><span class="title">PPC Experts</span></a>
+                                <a href="<?php echo $site_url; ?>hire/smo-experts" title="SMO"><span class="title">SMO Experts</span></a>
+                                <a href="<?php echo $site_url; ?>hire/content-writers" title="Content Writer"><span class="title">Content Writer</span></a>
+                              </div>
+                              <div class="flex-2">                                
+                              </div>
+                            </div>
+                          </div>
+                         
+                        </div>
+                        <div class="tab-content <?php echo isActiveMenu("bc", $hireElm); ?>">
+                          <div class="three-column mob-hide">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>hire-developers/hire-blockchain-developers">
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-10.svg" 
+                                class="menuicon" alt="menuicon"><span class="title">Blockchain</span>Unlock blockchain potential</a>
+                                <span class="hr-arrow-btn"></span>
+                            </div>
+                            <div class="dis-flex menu-column hr-submenu">
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-ethereum-developer" title="Ethereum"><span class="title">Ethereum</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-smartcontract-developers" title="Smart Contract"><span class="title">Smart Contract</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-solidity-developers" title="Solidity"><span class="title">Solidity</span></a>
+                              </div>
+                              <div class="flex-2">                                
+                              </div>
+                            </div>
+                          </div>
+                         
+                        </div>  
+                        <div class="tab-content <?php echo isActiveMenu("lc", $hireElm); ?>">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>services/low-code-no-code">
+                              <img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/hire-11.svg" 
+                                class="menuicon" alt="menuicon"><span class="title">Low - Code</span>Hire low-code experts</a>
+                                <span class="hr-arrow-btn"></span>
+                            </div>
+                            <div class="dis-flex menu-column hr-submenu">
+                              <div class="flex-2">                                
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-appian-developers" title="Appian"><span class="title">Appian</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-outsystems-developers" title="Outsystems"><span class="title">Outsystems</span></a>
+                                <a href="<?php echo $site_url; ?>hire-developers/hire-mendix-developers" title="Mendix"><span class="title">Mendix</span></a>
+                                <a href="<?php echo $site_url; ?>pega-development-services" title="Pega"><span class="title">Pega</span></a>
+                              </div>
+                              <div class="flex-2">                                
+                              </div>
+                            </div>
+                          </div>
+                         
+                        </div>
+                         <div class="tab-content other-menu mob-hide">
+                            <div class="tab-title">
+                              <a href="<?php echo $site_url; ?>hire-developers">
+                              <span class="title">Hire Dedicated Developers</span>Build faster with on-demand team
+                              </a>
+                              <span class="hr-arrow-btn"></span>
+                            </div>
+                            <div class="flex-1 menu-column hr-submenu">
+                            <a href="<?php echo $site_url; ?>it-staff-augmentation-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/dhire-01.svg" class="menuicon" alt="menuicon"><span class="title">Staff Augmentation</span>Access top technical resources on-demand</a>
+
+                            <a href="<?php echo $site_url; ?>hire-developers/hire-software-developers-india"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/dhire-02.svg" class="menuicon" alt="menuicon"><span class="title">Hire Software Developers</span>Work with skilled & dedicated developers</a>
+
+                            <a href="<?php echo $site_url; ?>dedicated-development-teams"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/dhire-03.svg" class="menuicon" alt="menuicon"><span class="title">Dedicated Software Teams</span>Hire Dedicated Developers</a>
+                            </div>
+                            <a href="<?php echo $site_url; ?>hire-developers" class="view-more">View More</a>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- //Hire Menu Ends -->
+            <?php //endif; ?>
             <li class="cta-wrap small-reso">
-              <div class="btn-sec">
-                <a href="<?php echo $site_url; ?>contact" class="btn rounded"><span class="text-white">Get Started</span></a>
+              <div class="btn-container">
+                <a href="<?php echo $site_url; ?>contact" class="cta-button">Contact Us</a>
               </div>
             </li>
           </ul>
         </nav>
         <div class="cta-wrap large-reso">
-          <div class="btn-sec">
-            <a href="<?php echo $site_url; ?>contact" class="btn rounded"><span class="text-white">Get Started</span></a>
+          <div class="btn-container">
+            <a href="<?php echo $site_url; ?>contact" class="cta-button">Contact Us</a>
           </div>
         </div>
       </div>

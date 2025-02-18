@@ -382,15 +382,15 @@
         }
 
         .glider-slide {
-          flex: 0 0 20%;
+          flex: 0 0 28%;
           min-width: 0;
-          max-width: 20%;
+          max-width: 28%;
           transition: all 0.3s ease;
 
           &:nth-child(2n) {
-            flex: 0 0 52%;
+            flex: 0 0 72%;
             min-width: 0;
-            max-width: 52%;
+            max-width: 72%;
             opacity: 1;
           }
         }
@@ -438,7 +438,7 @@
     .popup-section {
       .popup-wrapper {
         .popup-content {
-          max-width: 800px;
+          max-width: 90%;
           width: 100%;
           padding: 0;
 

@@ -20,6 +20,8 @@
       overflow: hidden;
     }
 
+
+
     .glider-slide {
       flex: 0 0 67%;
       transition: all 0.3s ease;
@@ -368,6 +370,7 @@
 
           .move {
             bottom: 40px;
+            right:15px;
           }
         }
 

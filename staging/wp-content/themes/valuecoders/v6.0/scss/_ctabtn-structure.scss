@@ -17,6 +17,7 @@
     border-radius: 50px;
     transition: all 0.3s ease;
     cursor: pointer;
+    line-height: 26px;
     &::before {
       transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       transition: all 0.3s ease;
@@ -67,6 +68,7 @@
   .btn-sec {
     .btn {
       padding: 14px 70px 14px 20px;
+      line-height: 24px;
       &::before {
         top: 3px;
         right: 3px;
@@ -96,6 +98,7 @@
     .btn {
       font-size: 16px;
       padding: 13px 70px 12px 25px;
+      line-height: 1.5;
       &::before {
         top: 3px;
         right: 3px;

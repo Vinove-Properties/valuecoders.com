@@ -11,7 +11,9 @@
  * @since Twenty Seventeen 1.0
  * @version 1.2
  */
-get_template_part( 'template-parts/footer/wpinstance-form', 'custom' );
+
+// get_template_part( 'template-parts/footer/wpinstance-form', 'custom' );
+
 get_template_part( 'template-parts/footer/footer', 'custom' );
 ?>
 <?php wp_footer(); ?>

@@ -30,7 +30,7 @@
   <div class="container">
     <div class="top-logo">
       <div class="text"><i><img loading="lazy" src="<?php _vers_six('images/home-images/star-one.svg'); ?>" width="22" height="20" alt="star"></i>
-        <strong>4.5/5</strong>based on 500+ reviews on
+        <strong>4.5/5</strong>based on 1200+ reviews on
       </div>
       <div class="awlogo"><a href="#"></a><a href="#"></a><a href="#"></a></div>
     </div>
