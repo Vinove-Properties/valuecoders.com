@@ -15,7 +15,7 @@
       <div class="colLeft">
         <div class="ct-head"><?php echo $heading; ?></div>
         <p><?php echo $text; ?></p>
-        <!-- <p><strong><?php echo $text2; ?></strong></p> -->
+        <!-- <p><strong><?php //echo $text2; ?></strong></p> -->
       </div>
       <div class="colMid">
         <picture>
@@ -69,13 +69,7 @@
     //<li class="posted-on">Published <span class="dt">'.get_the_time('F j, Y').'</span></li>
     echo '<div class="single-post-container">
                   <div class="top-header-banner">
-                      <h1>'.get_the_title().'</h1>
-                      <audio controls style="width: 300px; height: 40px; background-color: #f0f0f0; border-radius: 8px;">
-    <source src="https://file-examples.com/storage/fe91620ae767a4f0a97a5e9/2017/11/file_example_MP3_700KB.mp3" type="audio/ogg">
-    <source src="https://file-examples.com/storage/fe91620ae767a4f0a97a5e9/2017/11/file_example_MP3_700KB.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-    </audio>
-    
+                      <h1>'.get_the_title().'</h1>  
                       '.$btText.'
                       <div class="entery-wrap">
                       <div class="meta-wrap">
@@ -203,5 +197,6 @@
   </div>
 </main>
 <?php 
-  get_template_part('inc/file', 'pdownload');
-  get_footer();?>
+get_template_part('inc/file', 'pdownload');
+get_footer(); 
+?>

@@ -45,8 +45,8 @@ if(!empty($pdf)){
 <div class="rightnew">
 <div class="left-img">
 <picture>
-<source type="image/webp" srcset="https://www.valuecoders.com/blog/wp-content/uploads/2022/08/pop_img-new.webp">
-<img loading="lazy" src="https://www.valuecoders.com/blog/wp-content/uploads/2022/08/pop_img-new.png.webp" alt="Valuecoders" width="245" height="472">
+<source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/dev-img/ebook-pop.webp">
+<img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/ebook-pop.webp" alt="Valuecoders" width="245" height="472">
 </picture>
 </div>
 <div class="right-img">

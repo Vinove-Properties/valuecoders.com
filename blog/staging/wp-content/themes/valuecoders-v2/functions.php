@@ -914,6 +914,7 @@ function wpdocs_bartag_func( $atts ) {
     'body'      => 'Get free consultation and let us know your project idea to turn it into an amazing digital product.',
     'cta_text'  => 'Talk To Our Experts',
     'cta_link'  => 'https://www.valuecoders.com/contact',
+    'ebook'     => false
     ), $atts, 'bartag' );
     $div = '<div class="cust-secton1 padd-all margin-40">
     <div class="dis-flex">
@@ -922,9 +923,15 @@ function wpdocs_bartag_func( $atts ) {
     <p>'.$atts['body'].'</p>
     </div>
     <div class="colrit">
-    <div class="text-center btn-container">
-    <a href="'.$atts['cta_link'].'" class="banner-btn" data-wpel-link="external" target="_self">'.$atts['cta_text'].'<i class="cusarrow-icon"></i></a>
-    </div>
+    <div class="text-center btn-container">';
+    if( $atts['ebook'] !== false ){
+    $div .= '<a href="javascript:void(0);" onclick="_triggerEbook();" class="banner-btn" target="_self">'.$atts['cta_text'].'<i class="cusarrow-icon"></i></a>';   
+    }else{
+    $div .= '<a href="'.$atts['cta_link'].'" class="banner-btn" data-wpel-link="external" target="_self">'.$atts['cta_text'].'<i class="cusarrow-icon"></i></a>';
+    }
+    
+
+    $div .= '</div>
     </div>
     </div>
     </div>';
