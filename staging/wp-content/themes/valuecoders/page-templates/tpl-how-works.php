@@ -351,7 +351,7 @@ if( $faqEnable == "yes" ) :
 ?>
 <section class="faq-section padding-t-150 padding-b-150 <?php echo $faqs['sc_background']; ?>">
 	<div class="container">
-		<div class="head-txt text-center"><?php echo $faqs['content']; ?></div>
+		<div class="top-section b-100"><?php echo $faqs['content']; ?></div>
 		<?php 
 		if( $faqs['faq'] ){
 			echo '<div class="faq-outer" itemscope itemtype="https://schema.org/FAQPage">';

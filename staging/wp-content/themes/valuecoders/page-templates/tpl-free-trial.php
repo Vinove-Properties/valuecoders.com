@@ -140,7 +140,7 @@ if( $faqEnable == "yes" ) :
 ?>
 <section class="faq-section padding-t-120 padding-b-120">
 	<div class="container">
-		<div class="head-txt text-center">
+		<div class="top-section b-100">
 			<?php echo $faqs['content']; ?>				
 		</div>
 		<?php 

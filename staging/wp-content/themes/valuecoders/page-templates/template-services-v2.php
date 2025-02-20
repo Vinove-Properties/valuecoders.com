@@ -746,7 +746,7 @@ endif;
   ?>
 <section class="faq-section padding-t-120 padding-b-120 bg-dark-theme" data-nosnippet>
   <div class="container">
-    <div class="head-txt text-center"><?php echo $faqs['content']; ?></div>
+    <div class="top-section b-100"><?php echo $faqs['content']; ?></div>
     <?php 
       if( $faqs['faq'] ){
       	echo '<div class="faq-outer" itemscope itemtype="https://schema.org/FAQPage">';
