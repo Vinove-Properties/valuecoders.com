@@ -478,7 +478,7 @@ endif;
           <div class="test-row">
             <picture>
               <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/testblue-01.png">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/images/home-images/testblue-01.png" alt="Valuecoders" width="290" height="328">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/testblue-01.png" alt="Valuecoders" width="290" height="328">
             </picture>
           </div>
           <div class="test-row">
@@ -508,7 +508,7 @@ endif;
           <div class="test-row">
             <picture>
               <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/testblue-02.png">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/images/home-images/testblue-02.png" alt="Valuecoders" width="290" height="328">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/testblue-02.png" alt="Valuecoders" width="290" height="328">
             </picture>
           </div>
           <div class="test-row">
@@ -538,7 +538,7 @@ endif;
           <div class="test-row">
             <picture>
               <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/test-03.png">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/images/home-images/test-03.png" alt="Valuecoders" width="290" height="328">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/test-03.png" alt="Valuecoders" width="290" height="328">
             </picture>
           </div>
           <div class="test-row">
@@ -568,7 +568,7 @@ endif;
           <div class="test-row">
             <picture>
               <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/test-04.png">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/images/home-images/test-04.png" alt="Valuecoders" width="290" height="328">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/test-04.png" alt="Valuecoders" width="290" height="328">
             </picture>
           </div>
           <div class="test-row">
