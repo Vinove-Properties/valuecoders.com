@@ -1,0 +1,352 @@
+.industries-slider-section {
+  overflow: hidden;
+  background: #f4f4f4;
+
+  .top-section {
+    width: 60%;
+    text-align: left;
+    margin: initial;
+    &.b-100 {
+      text-align: left;
+      margin: initial;
+    }
+  }
+  .industries-slider {
+    position: relative;
+    width: 100%;
+
+    .industry-card {
+      position: relative;
+      width: 16.66% !important;
+      height: 360px !important;
+      overflow: hidden;
+      border-radius: 10px;
+      background: linear-gradient(180deg, #070344 20.6%, #070099 63.21%);
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin: 0 10px;
+
+      &:first-child {
+        //margin-left: -130px !important;
+      }
+
+      &.glider-slide {
+        //min-width: 280px;
+      }
+
+      .card-bg {
+        position: absolute;
+        top: 0; // Start off-screen
+        left: 0;
+        width: 100%;
+        height: 360px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: top 0.6s ease-in-out;
+        z-index: 1;
+
+        // Slide in on hover
+        .industry-card:hover & {
+          top: 0; // Slide into view
+        }
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            180deg,
+            rgba(7, 0, 153, 0) 10.6%,
+            #070344 63.21%
+          );
+
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 1;
+          transform: rotate(180deg);
+        }
+      }
+
+      &:hover {
+        .card-bg {
+          top: 100%;
+          &:before {
+            top: 0;
+          }
+        }
+      }
+
+      .card-content {
+        position: relative;
+        z-index: 2; // Ensure content stays above background
+        padding: 20px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        color: $white;
+        z-index: 2;
+
+        h5 {
+          font-size: 16px;
+          margin-bottom: 15px;
+          text-transform: uppercase;
+          font-weight: $normal-font;
+        }
+
+        h4 {
+          font-size: 18px;
+          font-weight: $medium-font;
+          color: $white;
+          margin: 0 0 10px;
+        }
+
+        p {
+          color: rgba(255, 255, 255, 0.8);
+        }
+
+        .expand {
+          text-align: right;
+          font-size: 18px;
+          color: $white;
+          text-decoration: underline;
+          right: 0;
+          margin: 50px 0 0;
+          position: absolute;
+          text-decoration: underline;
+
+          &:after {
+            content: "";
+            background: url(../images/home-images/white-arrow.svg) no-repeat
+              center;
+            width: 11px;
+            display: inline-block;
+            height: 11px;
+            margin-left: 8px;
+            vertical-align: middle;
+            background-size: 100%;
+            transition: all 0.3s ease-in-out;
+          }
+
+          &:hover {
+            &:after {
+              margin-left: 15px;
+            }
+          }
+        }
+
+        .hover-content {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.3s ease, transform 0.3s ease;
+
+          p {
+            margin-bottom: 10px;
+            font-weight: normal;
+          }
+        }
+
+        // Show hover content on hover
+      }
+
+      &:hover {
+        .card-content {
+          &:before {
+            transform: rotate(0deg);
+          }
+          .hover-content {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
+
+      &:nth-child(2n) {
+        background: $white;
+        .card-bg {
+          top: auto;
+          bottom: 0;
+          height: 220px;
+          left: 0;
+          transition: left 0.6s ease-in-out;
+          &:before {
+            display: none;
+          }
+        }
+
+        .card-content {
+          h5 {
+            color: #110302;
+          }
+          h4 {
+            color: #110302;
+          }
+          p {
+            color: #5e6373;
+          }
+          .expand {
+            color: #110302;
+            &:after {
+              background: url(../images/home-images/barrow.svg) no-repeat center;
+              background-size: 100%;
+            }
+          }
+          .hover-content {
+            transform: translateX(2%);
+          }
+        }
+
+        &:hover {
+          .card-bg {
+            left: -100%;
+          }
+        }
+      }
+    }
+
+    .test-button {
+      position: absolute;
+      top: -105px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      right: 100px;
+
+      .glider-dots {
+        align-items: center;
+        .glider-dot {
+          display: inline-block;
+          background: $navy-blue;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          margin: 0 2px;
+          display: none;
+          &.active {
+            background: $navy-blue;
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+
+      .test-prev,
+      .test-next {
+        background-color: transparent;
+        border: 2px solid rgba(5, 22, 77, 0.7);
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 16px;
+        background: url(../images/home-images/blue-arrow.svg) no-repeat center;
+        width: 36px;
+        height: 36px;
+        top: auto;
+        font-size: 0;
+        right: 43px;
+        opacity: 1;
+        left: auto;
+        transform: rotate(0);
+        font-size: 0;
+        position: absolute;
+
+        &:hover {
+          background-color: $white;
+          border-color: $white;
+        }
+
+        &.test-next {
+          background: url(../images/home-images/blue-arrow.svg) no-repeat center;
+          right: 0;
+          transform: rotate(180deg);
+
+          &:hover {
+            background-color: $white;
+            border-color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*Media Query Start From Here*/
+
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1330px) {
+}
+
+@media (max-width: 1024px) {
+
+    .industries-slider-section {
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .top-section{width: 100%;
+        &.b-100{ text-align: center;
+          margin: initial;}
+      }
+  
+      .industries-slider {
+        .industry-card {
+          width: calc(50% - 20px) !important; // Subtract the total horizontal margin
+          max-width: calc(50% - 20px); // Prevent overflow
+          margin: 0 10px; // Space between cards
+  
+          &:first-child {
+            margin-left: 10px !important;
+          }
+
+          .card-content{
+            h4{line-height: 28px;}
+          }
+  
+          .card-bg {
+            height: 100%;
+          }
+        }
+  
+        .test-button {
+          top: -70px;
+          right: 60px;
+        }
+      }
+    }
+
+  
+
+}
+@media (max-width: 979px) {
+}
+
+@media (max-width: 767px) {
+  .industries-slider-section {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .industries-slider {
+      .industry-card {
+        width: 100vw !important;  // Ensure full width of viewport
+        max-width: 100vw;  // Prevent extra spacing
+        margin:0 5px;
+
+        &:first-child{margin-left: 4px !important;}
+
+        .card-bg {
+          height: 100%;
+        }
+      }
+
+      .test-button {
+        position: static;
+        margin: 30px auto;
+      }
+    }
+  }
+}
+
+
+/*Media Query Ends Here*/

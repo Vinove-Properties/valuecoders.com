@@ -1,0 +1,319 @@
+.process-work {
+  background: linear-gradient(to left, #fbfbfb 50%, #211f47 50%);
+  position: relative;
+  .head-txt {
+    text-align: left;
+    margin: 0 0 50px;
+  }
+
+  .col-left {
+    .head-txt {
+      margin: 0 0 100px;
+      h2 {
+        color: $white;
+      }
+      p {
+        color: $white;
+      }
+    }
+  }
+
+  .col-right {
+    padding-left: 50px;
+    .head-txt {
+      h2 {
+        color: rgba(5, 22, 77, 1);
+      }
+      p {
+        color: #3f3f3f;
+      }
+    }
+  }
+  .process-step {
+    position: relative;
+
+    .step-sec {
+      margin: 0 0 20px;
+      position: relative;
+      justify-content: right;
+      .step-wrap {
+        display: flex;
+        flex-basis: 60%;
+        align-items: center;
+        .step-icon {
+          flex-basis: 115px;
+          text-align: left;
+          position: relative;
+
+          img {
+            margin: 0;
+            z-index: 9;
+            background: #fdfaf2;
+          }
+          &:before {
+            content: "";
+            background: url(../images/hire-shape.png) no-repeat center;
+            width: 45px;
+            position: absolute;
+            bottom: -72px;
+            left: 43px;
+            background-size: 100%;
+            height: 100%;
+            transform: rotate(127deg);
+          }
+        }
+        .step-desc {
+          flex-basis: calc(100% - 115px);
+          .step-no {
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #ffad00;
+            margin: 0 0 8px;
+            line-height: initial;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            padding: 4px 8px 2px;
+            background: #fff;
+          }
+          h4 {
+            margin: 10px 0 10px;
+            color: #3f3f3f;
+            font-size: 20px;
+          }
+          p {
+            font-size: 14px;
+            line-height: 24px;
+          }
+          ul {
+            li {
+              position: relative;
+              font-size: 14px;
+              padding-left: 15px;
+              color: #666;
+              margin: 0 0 5px;
+              line-height: 180%;
+              list-style: none;
+              &:before {
+                content: "";
+                width: 5px;
+                height: 5px;
+                background-color: #656565;
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+                top: 9px;
+              }
+            }
+          }
+        }
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+
+      &:nth-child(2n) {
+        justify-content: left;
+        .step-wrap {
+          flex-direction: row-reverse;
+          .step-icon {
+            text-align: right;
+            &:before {
+              width: 42px;
+              bottom: -75px;
+              left: 26px;
+              transform: none;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        .step-wrap {
+          .step-icon {
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  &:after {
+    content: "";
+    background: url(../images/point-icon.png) 0 0 no-repeat;
+    background-size: 100%;
+    width: 112px;
+    height: 112px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 1760px) {
+}
+
+@media only screen and (max-width: 1440px) {
+  .process-work {
+    .process-step {
+      .step-sec {
+        .step-wrap {
+          .step-icon {
+            &:before {
+              content: "";
+              background: url(../images/hire-shape.png) no-repeat center;
+              width: 57px;
+              bottom: -69px;
+              left: 27px;
+              transform: rotate(142deg);
+            }
+          }
+        }
+
+        &:nth-child(2n) {
+          .step-wrap {
+            .step-icon {
+              &:before {
+                width: 36px;
+                bottom: -70px;
+                left: 42px;
+                transform: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    &:after {
+      content: "";
+      width: 90px;
+      height: 90px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  .process-work {
+    .head-txt {
+      p {
+        br {
+          display: none;
+        }
+      }
+    }
+
+    .col-left {
+      .head-txt {
+        margin: 0 0 80px;
+      }
+    }
+
+    .process-step {
+      .step-sec {
+        .step-wrap {
+          flex-basis: 60%;
+          .step-icon {
+            flex-basis: 85px;
+            img {
+              width: 65px;
+            }
+            &:before {
+              content: "";
+              display: none;
+            }
+          }
+          .step-desc {
+            flex-basis: calc(100% - 85px);
+
+            h4 {
+              font-size: 18px;
+            }
+            p {
+              line-height: 22px;
+            }
+          }
+        }
+      }
+    }
+    &:after {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .process-work {
+    background: $white;
+    .head-txt {
+      text-align: left;
+      margin: 0 0 30px;
+    }
+
+    .col-left {
+      background: #211f47;
+      padding: 40px 20px;
+      text-align: center;
+      .head-txt {
+        text-align: center;
+        margin: 0 0 30px;
+      }
+      .image-wrap {
+        text-align: center;
+      }
+    }
+
+    .col-right {
+      padding: 40px 20px;
+      margin: 30px 0 0;
+      background: rgba(253, 250, 242, 1);
+    }
+    .process-step {
+      position: relative;
+
+      .step-sec {
+        margin: 0 0 30px;
+        position: relative;
+        .step-wrap {
+          flex-basis: 100%;
+          align-items: flex-start;
+          .step-icon {
+            flex-basis: 80px;
+
+            img {
+              width: 55px;
+            }
+          }
+          .step-desc {
+            flex-basis: calc(100% - 80px);
+
+            h4 {
+              font-size: 18px;
+            }
+            ul {
+              li {
+                line-height: 22px;
+              }
+            }
+          }
+        }
+
+        &:nth-child(2n) {
+          .step-wrap {
+            flex-direction: unset;
+            .step-icon {
+              text-align: left;
+            }
+          }
+        }
+      }
+      &:before {
+        left: 27px;
+      }
+    }
+  }
+}

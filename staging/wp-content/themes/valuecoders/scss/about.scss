@@ -1,0 +1,3286 @@
+@import "_default";
+@import "_glider";
+@import "guide-topic";
+@import "_menu-v3.12";
+@import "_cta-structure";
+@import "_ctabtn-structure";
+@import "_footer-form";
+
+.hero-section {
+  background: #1D1C39;
+  background-size: cover;
+
+  
+
+  h1 {
+    margin-bottom: 10px;
+    color: $white;
+    font-size: 64px;
+    line-height: 87px;
+  }
+
+  p {
+    margin-top: 20px;
+    color: $greyBannerfont;
+  }
+
+  a {
+    text-decoration: none;
+    color: $greyBannerfont;
+  }
+ 
+}
+
+
+
+
+
+
+
+.for-about-section {
+  .header-left-content {
+    width: 50%;
+  }
+
+  .header-right-image {
+    width: 50%;
+    padding-left: 91px;
+    margin-top: 10px;
+    img{
+      width: 37%;
+      position: absolute;
+      bottom: 11%;
+    }
+  }
+
+  .for-client-logo-box {
+    margin-bottom: 43px;
+  }
+}
+
+.about-mission-vision-section {
+  .left-side-img {
+    width: 39%;
+    // margin-right: 141px;
+    position: relative;
+
+    .ceoname {
+      h6 {
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+
+      p {
+        font-size: 14px;
+        color: #B0B0BA;
+        text-align: left;
+        padding-left: 36px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 25px;
+          height: 2px;
+          background: #B0B0BA;
+          left: 33px;
+          bottom: 27px;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+  }
+
+  .right-side-content {
+    width: 61%;
+    padding-left: 192px;
+
+    .content {
+      h3 {
+        font-size: 30px;
+        line-height: 41px;
+        padding-top: 11px;
+      }
+
+      p {
+        margin-top: 15px;
+        font-size: 18px;
+        line-height: 29px;
+      }
+
+      &.vision-content {
+        margin-top: 45px;
+
+        &::before {
+          content: url(../images/vision-img.png);
+        }
+      }
+
+      &.mission-content {
+        padding-top: 70px;
+
+        &::before {
+          content: url(../images/mision-img.png);
+        }
+      }
+    }
+  }
+}
+
+.proud-existence-section {
+  padding-bottom: 90px;
+}
+
+.some-amazing-company-section {
+  .see-our-clients-lnk {
+    margin-top: 78px;
+
+    a {
+      position: relative;
+
+      &::after {
+        content: " ";
+        background: url(../images/arrow-amazing-icon.png) top center no-repeat;
+        background-size: 100%;
+        width: 11px;
+        height: 17px;
+        position: absolute;
+        top: 5px;
+        right: -18px;
+      }
+    }
+  }
+
+  .mob-proud-existance-img {
+    display: none;
+  }
+}
+
+.about-award-recog-section {
+  .about-award-partnership-outer {
+    .award-logo-part-img {
+      max-width: 727px;
+      height: 242px;
+      background: url(../images/about-awards-recog-img.svg) 0 0 no-repeat;
+      display: inline-block;
+      // margin: 0 7px;
+      background-size: 100%;
+      width: 100%;
+      background-position: center;
+
+    }
+
+    .partnership-logo-part-img {
+      max-width: 727px;
+      height: 242px;
+      background: url(../images/about-partnership-img.svg) 0 0 no-repeat;
+      display: inline-block;
+      // margin: 0 7px;
+      background-size: 100%;
+      width: 100%;
+      background-position: center;
+
+    }
+
+    .flex-2 {
+      &:nth-child(3) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .award-box {
+      .flex-2 {
+        &:nth-child(2) {
+          background: #F7F7F7;
+          padding: 40px;
+        }
+      }
+    }
+
+    .dis-flex {
+      align-items: center;
+      margin-top: 100px;
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .award-box {
+      .flex-2 {
+        &:first-child {
+          padding-right: 48px;
+        }
+      }
+    }
+
+    .partnership-box {
+      .flex-2 {
+        &:first-child {
+          padding-left: 48px;
+        }
+      }
+    }
+  }
+
+}
+
+
+// ----about css ends here----
+
+// ----in media css starts here------
+.for-media-banner-section {
+  .media-img-box {
+    margin-top: 97px;
+  }
+}
+
+.award-partner-section {
+  padding-top: 86px;
+}
+
+// ----in media css ends here----
+
+.three-column-media-section {
+  .flex-3 {
+    padding: 0 13px;
+    margin-top: 27px;
+
+    &:nth-child(1) {
+      .media-box {
+        background: #DCEFFF;
+      }
+    }
+
+    &:nth-child(2) {
+      .media-box {
+        background: #F0F0F0;
+      }
+    }
+
+    &:nth-child(3) {
+      .media-box {
+        background: #ECFEFF;
+      }
+    }
+
+    &:nth-child(4) {
+      .media-box {
+        background: rgba(255, 53, 5, 0.11);
+      }
+    }
+
+    &:nth-child(5) {
+      .media-box {
+        background: #EFFFE2;
+      }
+    }
+
+    &:nth-child(6) {
+      .media-box {
+        background: #EAEAEB;
+      }
+    }
+
+    &:nth-child(7) {
+      .media-box {
+        background: #F1F1F1;
+      }
+    }
+
+    &:nth-child(8) {
+      .media-box {
+        background: #F1F7FF;
+      }
+    }
+
+    &:nth-child(9) {
+      .media-box {
+        background: #E9F7FF;
+      }
+    }
+
+    &:nth-child(10) {
+      .media-box {
+        background: rgba(239, 65, 54, 0.11);
+      }
+    }
+
+    &:nth-child(11) {
+      .media-box {
+        background: #FFF1F0;
+      }
+    }
+
+    &:nth-child(12) {
+      .media-box {
+        background: #FFF8F1;
+      }
+    }
+  }
+
+
+
+  .media-box {
+    height: 100%;
+    padding: 36px 57px 40px 40px;
+
+    .content-box {
+      .dis-flex {
+        align-items: center;
+      }
+    }
+
+    .text-date-box {
+      margin-top: 25px;
+    }
+
+    p {
+      margin-top: 35px;
+      font-size: 18px;
+      line-height: 32px;
+      min-height: 120px;
+    }
+
+    .date {
+      font-size: 14px;
+      border-left: 1px #656565 solid;
+      padding-left: 10px;
+      margin-left: 10px;
+    }
+
+    .logo-name {
+      font-weight: 600;
+    }
+  }
+}
+
+// ---testimonial start here----
+
+
+// ----testimonial end here----
+
+.icon-with-img-section {
+  .right-box {
+    padding-left: 30px;
+  }
+
+  .icon {
+    width: 59px;
+    height: 59px;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .icon-txt {
+    font-size: 18px;
+    flex: 1;
+  }
+
+  .hire-php-icon {
+    .icon {
+      background: url(../images/hire-php-sprite-2.png) -5px 4px no-repeat;
+    }
+
+    .icon2 {
+      background-position: -70px 4px;
+    }
+
+    .icon3 {
+      background-position: -142px 4px;
+    }
+
+    .icon4 {
+      background-position: -213px 4px;
+    }
+
+    .icon5 {
+      background-position: -283px 2px;
+    }
+
+    .icon6 {
+      background-position: -356px 4px;
+    }
+
+    .icon7 {
+      background-position: -424px 2px;
+    }
+
+    .icon8 {
+      background-position: -495px 4px;
+    }
+  }
+
+  .icon-box-outer {
+    margin-top: 30px;
+  }
+}
+
+.valuecoders-in-media-section {
+  text-align: center;
+}
+
+.client-video-section {
+  &.customer-column-section {
+    .padding-t-20 {
+      padding-top: 20px;
+    }
+
+    iframe {
+      border: 0;
+      border: 0;
+      height: auto;
+      vertical-align: bottom;
+      width: 100%;
+      max-height: 350px;
+      &.active {
+        height: 100%;
+        max-height: unset;
+        z-index: 1;
+      }
+    }
+  
+    .yt-player {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -9;
+    }
+
+    .video-box{position: relative;}
+
+    .client-description {
+      padding: 40px 42px;
+
+      &.small-column {
+        padding: 15px 20px;
+      }
+
+      // .client-quote {
+      //   min-height: 50px;
+      // }
+
+      p {
+        color: #212121;
+        font-size: 18px;
+        line-height: 32px;
+        margin-bottom: 30px;
+      }
+
+      span {
+        text-align: left;
+      }
+
+      .client-name {
+        color: #212121;
+      }
+    }
+
+    .flex-3 {
+      padding-left: 10px;
+      padding-right: 10px;position: relative;
+      &:nth-child(1) {
+        .flex-1 {
+             &:last-child {
+            .client-description {
+              min-height: 356px;
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        .flex-1 {
+          &:first-child {
+            .client-description {
+              min-height: 448px;
+            }
+          }
+
+          &:last-child {
+            .client-description {
+              min-height: 630px;
+            }
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        .flex-1 {
+          &:last-child {
+            .client-description {
+              min-height: auto;
+            }
+          }
+
+          &:first-child {
+            .client-description {
+              min-height: 371px;
+            }
+          }
+        }
+      }
+    }
+
+    .flex-1 {
+      margin-top: 27px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .upper-logo-box {
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .load-more-btn {
+      margin-top: 100px;
+
+      a {
+        position: relative;
+        font-size: 20px;
+        line-height: 27px;
+
+        &::after {
+          content: " ";
+          background: url(../images/arrow-amazing-icon.png) top center no-repeat;
+          background-size: 100%;
+          width: 11px;
+          height: 17px;
+          position: absolute;
+          top: 5px;
+          right: -18px;
+        }
+      }
+    }
+  }
+
+}
+
+/******logo***********/
+
+
+.customer-logo-section {
+  .mob-custom-logo-img-box {
+    display: none;
+  }
+}
+
+.customer-testimonial-section {
+
+  .flex-3,
+  .flex-2 {
+    padding: 0 12px;
+    margin-top: 25px;
+  }
+
+  .content-box-outer {
+    height: 100%;
+    display: grid;
+    flex-wrap: wrap;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 0px 1px 10px 1px rgba(10, 10, 22, 0.2);
+      border-radius: 10px;
+
+      .content-box {
+        &::before {
+          background-position: -240px -130px;
+        }
+      }
+    }
+  }
+
+  .content-box {
+    position: relative;
+    background: rgba(222, 222, 222, 0.25);
+    border-radius: 10px 10px 0 0;
+    padding: 40px;
+
+    &::before {
+      content: "";
+      clear: both;
+      display: block;
+      width: 35px;
+      height: 35px;
+      background: url(../images/testimonials-sprite.png) -140px -130px no-repeat;
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 20px;
+      min-height: 250px;
+    }
+  }
+
+  .cust-img-box {
+    position: relative;
+    padding: 40px;
+    background: rgba(206, 206, 206, 0.44);
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .profile-text {
+    flex: 1;
+  }
+
+  .rating {
+    width: 90px;
+    height: 13px;
+    background: url(../images/testimonials-sprite.png) -10px -140px no-repeat;
+    display: block;
+    margin-top: 8px;
+  }
+
+  .profile {
+    width: 76px;
+    height: 75px;
+    background: url(../images/testimonials-sprite.png) 0 0 no-repeat;
+    display: none;
+    margin-right: 20px;
+  }
+
+  .profile1 {
+    background-position: -408px -14px;
+  }
+
+  .profile2 {
+    background-position: -10px -14px;
+  }
+
+  .profile3 {
+    background-position: -212px -14px;
+  }
+
+  .profile4 {
+    background-position: -112px -14px;
+  }
+
+  .profile5 {
+    background-position: -309px -14px;
+  }
+
+  .load-btn {
+    background: $green;
+    color: $white;
+    padding: 20px 55px;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+
+    &:hover {
+      background: $darkYellow;
+    }
+  }
+
+  .load-more {
+    display: none;
+  }
+}
+
+.employee-testimonial-career-section {
+
+  .first-box {
+    flex-basis: 66.66%;
+  }
+
+  .second-box {
+    flex-basis: 33.33%;
+  }
+
+  .first-row-last-col {
+    .content-box {
+      // padding:41px 63px 0;
+      min-height: 327px;
+
+      &::before {
+        display: none;
+      }
+
+    }
+  }
+
+  .client-description {
+    padding: 30px 0;
+    text-align: center;
+    background: #F6F6F6;
+    border-radius: 10px;
+    height: 100%;
+
+    p {
+      padding: 0 63px 52px;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+    }
+
+    span.client-name {
+      color: #000000;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+    }
+
+    span.client-quote {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 140%;
+      color: #656565;
+    }
+
+    span {
+      display: block;
+      text-align: left;
+    }
+  }
+
+  .flex-3 {
+    border-radius: 10px;
+
+    .shadow-box {
+      height: 100%;
+
+      iframe {
+        vertical-align: bottom;
+        border: 0;
+        outline: 0;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+      }
+    }
+  }
+
+
+  .flex-3,
+  .flex-2 {
+    padding: 0 12px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+
+  .content-box-outer {
+    height: 100%;
+    display: grid;
+    flex-wrap: wrap;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+
+    &:hover {
+      box-shadow: 0px 1px 10px 1px rgba(10, 10, 22, 0.20);
+      border-radius: 10px;
+    }
+  }
+
+  .content-box {
+    position: relative;
+    border-radius: 10px 10px 0 0;
+    padding: 61px 63px 50px;
+    background: #F6F6F6;
+    min-height: 781px;
+
+    &::before {
+      content: "";
+      clear: both;
+      display: block;
+      width: 21px;
+      height: 21px;
+      background: url(../images/quotes-icon.png) no-repeat;
+      position: absolute;
+      left: 39px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 20px;
+      // min-height: 250px;
+    }
+  }
+
+  .cust-img-box {
+    position: absolute;
+    padding: 30px;
+    background: #F1F1F3;
+    border-radius: 0px 0px 10px 10px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  // .profile-text {
+  //   flex: 1;
+  // }
+
+  .rating {
+    width: 90px;
+    height: 13px;
+    background: url(../images/career-rating-img.png) no-repeat;
+    display: block;
+    margin-top: 10px;
+  }
+
+  .profile {
+    margin-right: 20px;
+
+  }
+
+  .flex-2 {
+    .content-box {
+      min-height: 675px;
+    }
+  }
+}
+
+.team-valuecoders-section {
+  img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
+.four-column-with-icon-section {
+
+  .col-box-outer {
+    margin-top: 80px;
+  }
+
+  .flex-4 {
+    padding: 0 10px;
+  }
+
+  .icon {
+    display: block;
+    width: 69px;
+    height: 70px;
+    margin: 0 auto;
+  }
+
+  .icon1 {
+    background: url(../images/core-val-icon1.png) 0 0 no-repeat;
+  }
+
+  .icon2 {
+    background: url(../images/core-val-icon2.png) 0 0 no-repeat;
+  }
+
+  .icon3 {
+    background: url(../images/core-val-icon3.png) 0 0 no-repeat;
+  }
+
+  .icon4 {
+    background: url(../images/core-val-icon4.png) 0 0 no-repeat;
+  }
+
+  h3 {
+    margin-top: 40px;
+    font-size: 30px;
+  }
+
+
+  p {
+    margin-top: 20px;
+  }
+}
+
+.client-img-section {
+  p {
+    margin-top: 20px;
+  }
+
+  ul {
+    margin-top: 35px;
+
+    li {
+      padding-left: 40px;
+      margin-top: 24px;
+    }
+  }
+
+  .left-box {
+    padding-right: 160px;
+  }
+
+  .right-box {
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.valuecoders-our-team-section {
+  .dis-flex {
+    margin-top: 70px;
+  }
+
+  .flex-4 {
+    margin-top: 27px;
+    padding: 0 10px;
+  }
+
+  h3 {
+    color: $white;
+  }
+
+  h5 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 2px;
+    color: $white;
+  }
+
+  .profile-box {
+    position: relative;
+
+    img {
+      width: 100%;
+      filter: grayscale(1);
+    }
+
+    .profile-text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(29, 28, 57, 0.47);
+      backdrop-filter: blur(8.09195px);
+      padding: 14px;
+      text-align: center;
+
+      p {
+        display: none;
+        color: $white;
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 2px;
+      }
+    }
+
+    &:hover {
+      img {
+        filter: sepia(1);
+      }
+
+      .profile-text {
+        p {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.faq-section {
+  &.faq-for-company {
+    .faq-outer {
+      margin-top: 0;
+    }
+
+    .flex-2 {
+      border: 1px solid #3a3c56;
+      border-radius: 10px;
+      padding: 45px 40px;
+      margin-top: 80px;
+      flex-basis: calc(50% - 40px);
+      height: 100%;
+
+      &:first-child,
+      &:nth-child(2) {
+        margin-top: 0;
+      }
+
+      &:nth-child(2n) {
+        margin-left: 40px;
+      }
+
+      &:nth-child(2n - 1) {
+        margin-right: 40px;
+      }
+    }
+
+    .faq-accordion-item-outer {
+      margin-top: 0;
+    }
+
+    .faq-accordion-content {
+      padding-left: 0;
+      padding-right: 40px;
+    }
+
+    .faq-accordion-toggle {
+      padding-left: 0;
+
+      &::before,
+      &::after {
+        background: #60b741;
+      }
+
+      &::before {
+        left: auto;
+        right: 0;
+      }
+
+      &::after {
+        left: auto;
+        right: 8px;
+      }
+    }
+  }
+}
+
+.three-column-icon-section {
+  .col-box-outer {
+    margin-top: 75px;
+    justify-content: center;
+  }
+
+  h3 {
+    a {
+      color: $white;
+    }
+  }
+
+  .has-anchor {
+    a {
+      display: block;
+      height: 100%;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        box-shadow: 0 0 10px #949494;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .box {
+    padding: 60px 50px;
+    height: 100%;
+
+    h3 {
+      margin: 30px 0 20px;
+    }
+
+    p {
+      font-size: 18px;
+
+      a {
+        text-decoration: underline;
+        display: inline-block;
+      }
+    }
+  }
+
+  .box-3 {
+    padding-right: 26px;
+    margin-top: 26px;
+
+    &:nth-child(3n) {
+      padding-right: 0;
+    }
+  }
+
+  ul {
+    margin-top: 40px;
+  }
+
+  // change class for icons
+  .icon-box {
+    width: 85px;
+    height: 56px;
+    display: block;
+  }
+
+  .php-usage-sprite {
+    .icon-box {
+      background: url(../images/php-usage-sprite.png) 0 0 no-repeat;
+    }
+
+    .icon2 {
+      background-position: -85px 0;
+    }
+
+    .icon3 {
+      background-position: -170px 0;
+    }
+
+    .icon4 {
+      background-position: -254px 0;
+    }
+
+    .icon5 {
+      background-position: -341px 0;
+    }
+
+    .icon6 {
+      background-position: -424px 0;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &.with-border-box {
+    img {
+      border-radius: 10px 10px 0 0;
+      vertical-align: bottom;
+    }
+
+    .col-box-outer {
+      justify-content: flex-start;
+      margin-top: 0;
+    }
+
+    .content-box {
+      padding: 40px;
+
+      h3 {
+        margin-top: 0;
+      }
+    }
+
+    .box-3 {
+      padding: 10px;
+      margin-top: 0;
+    }
+
+    .box {
+      border: 1px solid #302f51;
+      border-radius: 10px;
+      padding: 0;
+      transition: all 0.3s ease-in-out;
+
+      p {
+        font-weight: 500;
+      }
+
+      &:hover {
+        .learn-more {
+          color: $green;
+
+          .round-arrow-icon {
+            background-position: -39px 0;
+          }
+        }
+      }
+    }
+
+    .learn-more {
+      margin-top: 25px;
+    }
+  }
+}
+
+.valuecoders-img-section {
+  .left-box {
+    padding-right: 70px;
+  }
+
+  .right-box {
+    padding-left: 70px;
+
+    p {
+      margin-top: 20px;
+      font-size: 18px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    ul {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        flex-basis: 50%;
+        list-style-type: none;
+        margin-top: 20px;
+        padding: 0 20px 0 30px;
+        position: relative;
+
+        &::before {
+          content: "";
+          clear: both;
+          display: inline-block;
+          background-color: $darkYellow;
+          border-radius: 50%;
+          position: absolute;
+          height: 11px;
+          width: 11px;
+          top: 8px;
+          left: 4px;
+        }
+
+        &::after {
+          content: "";
+          display: inline-block;
+          border: 1px $darkYellow solid;
+          border-radius: 50%;
+          width: 17px;
+          height: 17px;
+          position: absolute;
+          top: 4px;
+          left: 0;
+        }
+      }
+    }
+
+    .dot-icon {
+      position: absolute;
+      top: 8px;
+      left: 0;
+    }
+  }
+
+  .icon-box-outer {
+    position: relative;
+    padding: 20px 0;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      clear: both;
+      display: block;
+      background: url(../images/sample-vector-shape.png) -181px 0 no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 58px;
+      height: 130px;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      clear: both;
+      display: block;
+      background: url(../images/sample-vector-shape.png) -181px 0 no-repeat;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 58px;
+      height: 130px;
+      z-index: -1;
+    }
+  }
+
+  .icon-box {
+    padding: 20px 50px;
+    background: #181732;
+    box-shadow: 0px 4px 30px rgba(189, 183, 183, 0.03);
+    border-radius: 16px;
+    text-align: center;
+    margin: 0 16px;
+    flex-basis: calc(33.33% - 32px);
+    font-size: 16px;
+
+    .icon {
+      display: block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      text-align: center;
+      margin: 0 auto 10px;
+
+      &.icon1 {
+        background: #006eff url("../images/address-vector-sprite.png") -195px 10px no-repeat;
+      }
+
+      &.icon2 {
+        background: #ff6b6b url("../images/address-vector-sprite.png") -247px 12px no-repeat;
+      }
+
+      &.icon3 {
+        background: #ff8900 url("../images/address-vector-sprite.png") -297px 11px no-repeat;
+      }
+    }
+  }
+}
+
+.technologies-right-logo-section {
+  .tech-box-outer {
+    margin-top: 40px;
+  }
+
+  .left-box {
+    flex-basis: 25%;
+    margin-top: 60px;
+    padding-right: 40px;
+  }
+
+  .right-box {
+    flex-basis: 75%;
+    text-align: center;
+
+    &:not(.no-border) {
+      border-top: 1px dashed rgba(196, 196, 196, 0.5);
+      margin-bottom: 20px;
+    }
+  }
+
+  .tech-box {
+    flex-basis: 20%;
+    padding: 0 10px;
+    margin-top: 60px;
+
+    .tech-txt {
+      margin-top: 20px;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .img-tech-logo {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tech-logo {
+    display: block;
+    background: url(../images/dot-net-technoloies-sprite.png) 20px 0 no-repeat;
+    width: 130px;
+    height: 62px;
+    margin: 0 auto 10px;
+
+    &.logo1 {
+      background-position: 20px 0;
+    }
+
+    &.logo2 {
+      background-position: -214px 0;
+    }
+
+    &.logo3 {
+      background-position: -464px 0;
+    }
+
+    &.logo4 {
+      background-position: -704px 0;
+    }
+
+    &.logo5 {
+      background-position: -960px 0;
+    }
+
+    &.logo6 {
+      background-position: 20px -91px;
+    }
+
+    &.logo7 {
+      background-position: -214px -91px;
+    }
+
+    &.logo8 {
+      background-position: -464px -91px;
+    }
+
+    &.logo9 {
+      background-position: -704px -91px;
+    }
+
+    &.logo10 {
+      background-position: -960px -91px;
+    }
+
+    &.logo11 {
+      background-position: 20px -216px;
+    }
+
+    &.logo12 {
+      background-position: -214px -216px;
+    }
+
+    &.logo13 {
+      background-position: -464px -216px;
+    }
+
+    &.logo14 {
+      background-position: -704px -216px;
+    }
+
+    &.logo15 {
+      background-position: -960px -216px;
+    }
+
+    &.logo16 {
+      background-position: 20px -340px;
+    }
+
+    &.logo17 {
+      background-position: -214px -340px;
+    }
+
+    &.logo18 {
+      background-position: -464px -340px;
+    }
+
+    &.logo19 {
+      background-position: -704px -340px;
+    }
+  }
+
+  .for-max-six-icon {
+    .tech-box {
+      flex-basis: 16.66%;
+    }
+  }
+}
+
+.two-column-right-box-section {
+  p {
+    margin-top: 20px;
+  }
+
+  img {
+    margin-top: 38px;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .head-txt {
+    padding-right: 11%;
+  }
+
+  .left-box {
+    padding-right: 150px;
+  }
+
+  .right-box {
+    padding-left: 20px;
+  }
+
+  .box {
+    // border: 1px solid #3A3C56;
+    border-radius: 10px;
+    padding: 50px 50px 36px;
+    margin-top: 20px;
+    display: block;
+    text-decoration: none;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    h3 {
+      span {
+        opacity: 0.4;
+      }
+    }
+
+    li {
+      position: relative;
+      list-style-type: none;
+      padding-left: 25px;
+      margin-top: 10px;
+
+      &:before {
+        content: "";
+        clear: both;
+        display: block;
+        background: #ffb81d url(../images/button-icons-sprite.png) 3px 4px no-repeat;
+        width: 17px;
+        height: 17px;
+        position: absolute;
+        top: 3px;
+        left: 0;
+        border-radius: 50px;
+      }
+    }
+  }
+
+  &.bg-dark-theme {
+    .box {
+      background: rgba(255, 255, 255, 0.2);
+
+      &:hover {
+        background: #fff;
+      }
+    }
+  }
+
+  .learn-more {
+    margin-top: 20px;
+  }
+}
+
+.keka-iframe-section {
+  background: $white;
+
+  h2 {
+    color: $headDay;
+  }
+
+  .keka-iframe {
+    margin-top: 50px;
+  }
+
+  iframe {
+    height: 3000px;
+  }
+}
+
+.img-two-column-list-section {
+  &.for-full-list li {
+    flex-basis: 100%;
+  }
+}
+
+.why-india-timeline-section {
+  .timeline-outer {
+    position: relative;
+    margin-top: 140px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: calc(100% - 190px);
+      width: 0px;
+      border-left: 0.4px dashed #c4c4c4;
+      top: 90px;
+      left: 28%;
+      transform: translateX(-50%);
+    }
+
+    ul {
+      list-style-type: none;
+
+      li {
+        position: relative;
+        width: 72%;
+        text-align: left;
+        margin-left: auto;
+        counter-increment: step-counter;
+        margin-top: 20px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          height: 18px;
+          width: 18px;
+          background-color: #999999;
+          border-radius: 50%;
+          top: 50%;
+          left: -9px;
+          transform: translateY(-50%);
+        }
+
+        &::after {
+          content: "0" counter(step-counter) " ";
+          position: absolute;
+          top: 50%;
+          left: -164px;
+          transform: translateY(-50%);
+          background: url(../images/timeline-left-vector.png) top center no-repeat;
+          background-size: contain;
+          width: 123px;
+          height: 77px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .content-box {
+          margin-left: 80px;
+          background-color: $themeDarkNight;
+          position: relative;
+          border-radius: 20px;
+          padding: 36px 8%;
+          max-width: 800px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -35px;
+            background: url(../images/timeline-bg-left.png) top center no-repeat;
+            background-size: 100%;
+            width: 36px;
+            height: 157px;
+            transform: translateY(-50%);
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #242341;
+            border-radius: 0 10px 10px 0;
+            width: 20px;
+            height: 100%;
+          }
+
+          h3,
+          p {
+            position: relative;
+            z-index: 1;
+          }
+
+          p {
+            margin-top: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// media
+@media only screen and (max-width: 1780px) {
+
+  .customer-testimonial-section {
+    .content-box {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .two-column-right-box-section {
+    .left-box {
+      padding-right: 40px;
+    }
+  }
+
+  .employee-testimonial-career-section {
+    .content-box {
+      min-height: 857px;
+    }
+
+    .flex-2 {
+      .content-box {
+        min-height: 730px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1720px) {
+
+  .client-video-section {
+    &.customer-column-section {
+      
+      .flex-3 {
+        &:nth-child(1) {
+          .flex-1 {
+            &:last-child {
+              .client-description {
+                min-height: 414px;
+              }
+
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          .flex-1 {
+            &:last-child {
+              .client-description {
+                min-height: 680px;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .hero-section {
+    h1 {
+      font-size: 42px;
+      line-height: 54px;
+    }
+  }
+
+  .award-partner-section {
+    .logo-box {
+      img {
+        max-width: 140px;
+        max-height: 90px;
+        width: auto;
+      }
+    }
+  }
+
+  .why-india-timeline-section {
+    .timeline-outer {
+      margin-top: 80px;
+
+      ul {
+        li {
+          &::after {
+            width: 93px;
+            height: 47px;
+            left: -124px;
+          }
+
+          .content-box {
+            max-width: 650px;
+
+            p {
+              margin-top: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .hero-section {
+
+    &.for-faq-banner,
+    &.for-partner-banner,
+    &.for-media-banner {
+      min-height: 550px;
+    }
+
+    .count-box-outer {
+      .count-box-big {
+        font-size: 38px;
+        line-height: 50px;
+      }
+
+      .count-box-small {
+        font-size: 16px;
+      }
+    }
+  }
+
+
+  .three-column-media-section {
+    .col-box-outer {
+      margin-top: 50px;
+    }
+
+    .media-box {
+      p {
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  .client-video-section {
+    &.customer-column-section {
+      .client-description {
+        .client-name {
+          font-size: 18px;
+        }
+
+        .client-quote {
+          font-size: 14px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 28px;
+        }
+      }
+
+      .flex-3 {
+        &:nth-child(1) {
+          .flex-1 {
+            &:last-child {
+              .client-description {
+                min-height: 384px;
+              }
+
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          .flex-1 {
+            &:last-child {
+              .client-description {
+                min-height: 686px;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .icon-with-img-section {
+    .icon-txt {
+      font-size: 16px;
+    }
+  }
+
+  .customer-testimonial-section {
+
+    .flex-3,
+    .flex-2 {
+      padding: 0 8px;
+    }
+
+    .cust-img-box {
+      padding: 30px;
+    }
+
+    .content-box {
+      padding: 30px;
+
+      p {
+        min-height: 220px;
+      }
+    }
+
+    .flex-2 {
+      .content-box {
+        p {
+          min-height: 200px;
+        }
+      }
+    }
+
+    .load-btn {
+      padding: 15px 35px;
+    }
+  }
+
+
+  .four-column-with-icon-section {
+    h3 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  .faq-section {
+    &.faq-for-company {
+      .flex-2 {
+        padding: 35px 30px;
+        margin-top: 40px;
+        flex-basis: calc(50% - 20px);
+
+        &:nth-child(2n) {
+          margin-left: 20px;
+        }
+
+        &:nth-child(2n - 1) {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+  .three-column-icon-section {
+    .col-box-outer {
+      margin-top: 50px;
+    }
+
+    .box {
+      padding: 40px 30px;
+
+      h3 {
+        margin: 20px 0 10px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    ul {
+      li {
+        font-size: 16px;
+      }
+    }
+
+    &.with-border-box {
+      .content-box {
+        padding: 30px 20px;
+      }
+    }
+  }
+
+  .valuecoders-img-section {
+    .right-box {
+      padding-left: 20px;
+
+      ul {
+        li {
+          &::before {
+            height: 9px;
+            width: 9px;
+          }
+
+          &::after {
+            height: 15px;
+            width: 15px;
+          }
+        }
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .icon-box {
+      padding: 20px 20px;
+    }
+  }
+
+  .two-column-right-box-section {
+    .box {
+      padding: 40px 40px 36px;
+      margin-top: 15px;
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .employee-testimonial-career-section {
+    .content-box {
+      padding: 30px;
+      min-height: 631px;
+
+      p {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+
+    .cust-img-box {
+      h5 {
+        font-size: 15px;
+      }
+
+      h6 {
+        font-size: 13px;
+        font-weight: 500;
+      }
+    }
+
+    .flex-2 {
+      .content-box {
+        min-height: 540px;
+      }
+    }
+
+    .client-description {
+      p {
+        padding: 0 29px 36px;
+      }
+    }
+  }
+
+  .about-mission-vision-section {
+    .right-side-content {
+      padding-left: 105px;
+
+      .content {
+        p {
+          margin-top: 10px;
+          font-size: 16px;
+          line-height: 27px;
+        }
+
+        &.vision-content {
+          margin-top: 34px;
+        }
+
+        &.mission-content {
+          padding-top: 39px;
+        }
+
+        h3 {
+          font-size: 22px;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+
+  .about-award-recog-section {
+    .about-award-partnership-outer {
+      .dis-flex {
+        margin-top: 70px;
+      }
+    }
+  }
+
+  .three-column-media-section {
+    .flex-3 {
+      padding: 0 10px;
+      margin-top: 20px;
+    }
+  }
+
+  .valuecoders-our-team-section {
+    h5 {
+      font-size: 12px;
+    }
+
+    .profile-box {
+      .profile-text {
+        padding: 7px;
+
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .why-india-timeline-section {
+    .timeline-outer {
+      ul {
+        li {
+          .content-box p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .hero-section {
+    h1 {
+      font-size: 38px;
+      line-height: 46px;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+
+    .count-box-outer {
+      .count-box-big {
+        font-size: 36px;
+      }
+
+      .count-box-small {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    &.for-about-section {
+      padding: 100px 0 80px;
+    }
+    &.for-resources-banner {
+      min-height: 400px;
+    }
+  }
+
+  .four-column-with-icon-section {
+    .col-box-outer {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .client-img-section {
+    .tick-icon-list {
+      li {
+        padding-left: 30px;
+        margin-top: 12px;
+      }
+    }
+  }
+
+  .valuecoders-img-section {
+    .icon-box {
+      padding: 20px 20px;
+      margin: 0 10px;
+      flex-basis: calc(33.33% - 20px);
+    }
+
+    .right-box {
+      ul {
+        li {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .two-column-right-box-section {
+    .box {
+      padding: 30px;
+    }
+  }
+
+  .employee-testimonial-career-section {
+    .content-box {
+      min-height: 680px;
+    }
+
+    .flex-2 {
+      .content-box {
+        min-height: 585px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1320px) {
+  .hero-section {
+    h1 {
+      font-size: 34px;
+      line-height: 40px;
+    }
+
+    &.for-media-banner {
+      .container {
+        max-width: 1000px;
+      }
+    }
+
+    .for-about-section {
+      padding: 140px 0 93px;
+    }
+  }
+
+  .keka-iframe-section {
+    iframe {
+      height: 4400px;
+    }
+  }
+
+  .award-partner-section {
+    .flex-5 {
+      padding: 5px;
+    }
+
+    .logo-box {
+      min-height: 130px;
+
+      img {
+        max-width: 110px;
+        max-height: 70px;
+      }
+    }
+  }
+
+  .customer-testimonial-section {
+
+    .cust-img-box,
+    .content-box {
+      padding: 20px;
+    }
+
+    .profile {
+      margin-right: 10px;
+    }
+  }
+
+  .employee-testimonial-career-section {
+    .content-box {
+      min-height: 735px;
+    }
+
+    .flex-2 {
+      .content-box {
+        min-height: 620px;
+      }
+    }
+  }
+
+  .about-award-recog-section {
+    .about-award-partnership-outer {
+      .award-box {
+        .flex-2:nth-child(2) {
+          padding: 10px 40px;
+        }
+      }
+    }
+  }
+
+  .client-video-section {
+    &.customer-column-section {
+      .client-description {
+        padding: 19px 25px;
+
+        p {
+          margin-bottom: 18px;
+          font-size: 14px;
+          line-height: 26px;
+        }
+      }
+
+      .flex-3 {
+        &:nth-child(2) {
+          .flex-1 {
+            &:last-child {
+              .client-description {
+                min-height: auto;
+              }
+            }
+          }
+        }
+        &:nth-child(1) {
+          .flex-1 {
+            &:last-child {
+              .client-description {
+                min-height: 300px;
+              }
+            }
+          }
+        }
+        &:nth-child(3) {
+          .flex-1 {
+            &:first-child {
+              .client-description {
+                min-height: 299px;
+              }
+            }
+
+            &:last-child {
+              .client-description {
+                min-height: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .hero-section {
+    .count-box-outer {
+      margin-top: 50px;
+    }
+
+    &.for-faq-banner,
+    &.for-partner-banner,
+    &.for-media-banner,
+    &.for-resources-banner {
+      min-height: 350px;
+    }
+  }
+
+  .icon-with-img-section {
+    .icon-txt {
+      font-size: 14px;
+      flex-basis: 70%;
+      padding-left: 10px;
+    }
+
+    .icon {
+      max-width: 59px;
+      flex-basis: 30%;
+      margin-right: 0;
+    }
+  }
+
+  .customer-testimonial-section {
+    .flex-3 {
+      flex-basis: 50%;
+    }
+
+    .content-box {
+      p {
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  .three-column-icon-section {
+    .box-3 {
+      padding-right: 15px;
+      margin-top: 20px;
+
+      &:nth-child(3n) {
+        padding-right: 15px;
+      }
+    }
+  }
+
+  .client-img-section {
+    ul {
+      margin-top: 20px;
+    }
+  }
+
+  .valuecoders-img-section {
+    .right-box {
+      padding-left: 0;
+    }
+  }
+
+  .employee-testimonial-career-section {
+    .content-box {
+      p {
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+
+    .profile {
+      margin-right: 20px;
+      flex-basis: 28%;
+    }
+
+    .profile-text {
+      flex-basis: 63%;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .hero-section {
+    h1 {
+      font-size: 32px;
+      line-height: 42px;
+    }
+
+    .count-box-outer {
+      margin-top: 30px;
+
+      .count-box-big {
+        font-size: 28px;
+      }
+    }
+  }
+  .for-about-section {
+        .header-right-image {
+     
+      img{
+        width: 100%;
+        position: unset;
+        bottom: auto;
+      }
+    }
+  }
+
+  .client-video-section {
+    &.customer-column-section {
+      iframe {
+        height: 420px;
+      }
+    }
+  }
+
+  .icon-with-img-section {
+    .icon-box-outer {
+      .flex-2 {
+        flex-basis: 33.33%;
+      }
+    }
+
+    .right-box {
+      text-align: center;
+      margin-top: 40px;
+      padding-left: 0;
+    }
+  }
+
+  .customer-testimonial-section {
+    .flex-3 {
+      flex-basis: 100%;
+    }
+
+    .content-box {
+      p {
+        min-height: auto;
+      }
+    }
+
+    .flex-2 {
+      .content-box {
+        p {
+          min-height: auto;
+        }
+      }
+    }
+  }
+
+  .four-column-with-icon-section {
+    .col-box-outer {
+      margin-top: 30px;
+
+      p {
+        line-height: 24px;
+      }
+    }
+
+    .flex-4 {
+      flex-basis: 50%;
+      margin-top: 30px;
+    }
+  }
+
+  .client-img-section {
+    .left-box {
+      padding-right: 0;
+      text-align: center;
+      order: 2;
+      margin-top: 40px;
+    }
+
+    .right-box {
+      order: 1;
+    }
+  }
+
+  .valuecoders-our-team-section {
+    .flex-4 {
+      margin-top: 20px;
+      flex-basis: 50%;
+    }
+  }
+
+  .faq-section {
+    &.faq-for-company {
+      .flex-2 {
+        flex-basis: 100%;
+        margin-top: 30px;
+
+        &:nth-child(2) {
+          margin-top: 30px;
+        }
+
+        &:nth-child(2n) {
+          margin-left: 0;
+        }
+
+        &:nth-child(2n - 1) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .three-column-icon-section {
+    .col-box-outer {
+      margin-top: 30px;
+    }
+
+    .flex-2 {
+      flex-basis: 50%;
+    }
+  }
+
+  .valuecoders-img-section {
+    .right-box {
+      margin-top: 40px;
+    }
+
+    .left-box {
+      padding-right: 0;
+      text-align: center;
+    }
+
+    img {
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  .technologies-right-logo-section {
+    .left-box {
+      flex-basis: 100%;
+      text-align: center;
+      padding-right: 0;
+    }
+
+    .right-box {
+      flex-basis: 100%;
+      justify-content: center;
+
+      &:not(.no-border) {
+        border-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .two-column-right-box-section {
+    .right-box {
+      padding-left: 0;
+      margin-top: 40px;
+    }
+  }
+
+  .employee-testimonial-career-section {
+
+    .flex-2,
+    .flex-3,
+    .first-box,
+    .second-box {
+      flex-basis: 100%;
+    }
+
+    .content-box {
+      min-height: auto;
+    }
+
+    .first-row-last-col {
+      .content-box {
+        min-height: auto;
+      }
+    }
+
+    .cust-img-box {
+      position: relative;
+    }
+
+    .flex-2 {
+      .content-box {
+        min-height: auto;
+      }
+    }
+
+    .profile {
+      margin-right: 10px;
+      flex-basis: 14%;
+    }
+
+    .profile-text {
+      flex-basis: 80%;
+    }
+  }
+
+  .for-about-section {
+    .header-left-content {
+      width: 100%;
+    }
+
+    .header-right-image {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+
+  .about-mission-vision-section {
+    .left-side-img {
+      width: 100%;
+    }
+
+    .right-side-content {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+
+  .about-award-recog-section {
+    .about-award-partnership-outer {
+      .award-logo-part-img {
+        height: 292px;
+      }
+
+      .award-box {
+        .flex-2 {
+          &:first-child {
+            padding-right: 0;
+          }
+
+          &:nth-child(2) {
+            margin-top: 20px;
+          }
+        }
+      }
+
+      .partnership-box {
+        .flex-2 {
+          &:first-child {
+            padding-left: 0;
+          }
+
+          &:nth-child(2) {
+            margin-top: 20px;
+          }
+
+        }
+      }
+    }
+  }
+
+  .for-media-banner-section {
+    .media-img-box {
+      margin-top: 64px;
+    }
+  }
+
+  .customer-logo-section {
+    .flex3inner {
+      margin-top: 40px;
+    }
+
+    .innerflex {
+      .flex-3 {
+        padding-bottom: 0;
+        padding-top: 0;
+      }
+    }
+  }
+
+  .vc-testimonials-section {
+    .header-right-image {
+      margin-top: 54px;
+      text-align: center;
+    }
+    .flex-2{
+      &.header-left-content{
+        padding-right: 0px;
+      }
+    }
+  }
+
+  .client-video-section {
+    &.customer-column-section {
+      .flex-1 {
+        &:first-child {
+          margin-top: 18px;
+        }
+      }
+
+      .client-description {
+        padding: 19px 25px;
+
+        p {
+          margin-bottom: 18px;
+          font-size: 14px;
+          line-height: 26px;
+        }
+      }
+
+      .flex-3 {
+        &:nth-child(2) {
+          .flex-1 {
+            &:last-child,&:first-child {
+              .client-description {
+                min-height: auto;
+              }
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          .flex-1 {
+            &:first-child {
+              .client-description {
+                min-height: auto;
+              }
+            }
+
+            &:last-child {
+              .client-description {
+                min-height: 0;
+              }
+            }
+          }
+        }
+
+        &:last-child {
+          .flex-1 {
+            &:first-child {
+              .client-description {
+                height: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .about-award-recog-section {
+    .about-award-partnership-outer {
+      .dis-flex {
+        margin-top: 42px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hero-section {
+    h1 {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  .award-partner-section {
+    .flex-5 {
+      padding: 2px;
+      flex-basis: 50%;
+    }
+
+    .logo-box {
+      min-height: 90px;
+
+      img {
+        max-width: 100px;
+        max-height: 60px;
+      }
+    }
+  }
+
+  .why-india-timeline-section {
+    .timeline-outer {
+      margin-top: 40px;
+
+      &::before {
+        left: 6px;
+      }
+
+      ul {
+        li {
+          width: 100%;
+
+          &::before {
+            height: 30px;
+            width: 30px;
+          }
+
+          &::after {
+            width: 53px;
+            height: 22px;
+            left: -21px;
+            color: #181732;
+            font-size: 14px;
+            top: 51%;
+            background: none;
+          }
+
+          .content-box {
+            margin-left: 50px;
+            padding: 20px 18px;
+
+            p {
+              font-size: 14px;
+              margin-top: 10px;
+            }
+
+            &::before {
+              left: -14px;
+              width: 16px;
+              height: 67px;
+            }
+
+            &::after {
+              width: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .hero-section {
+
+    &.for-faq-banner,
+    &.for-partner-banner,
+    &.for-media-banner,
+    &.for-resources-banner {
+      min-height: auto;
+    }
+
+    .flex-4 {
+      flex-basis: 50%;
+    }
+
+    .count-box-outer {
+      margin-top: 10px;
+
+      .count-box-big {
+        font-size: 22px;
+        line-height: 28px;
+      }
+
+      .count-box-small {
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      .count-box {
+        margin-top: 20px;
+      }
+    }
+
+    &.for-media-banner {
+      .count-box-outer {
+        margin-top: 10px;
+      }
+
+      .left-box {
+        flex-basis: 100%;
+        padding-right: 0;
+      }
+
+      .right-box {
+        display: none;
+      }
+    }
+  }
+
+  .three-column-media-section {
+    .col-box-outer {
+      margin-top: 10px;
+    }
+
+    .media-box {
+      padding: 36px;
+
+      p {
+        margin-top: 12px;
+        font-size: 14px;
+        line-height: 22px;
+        min-height: auto;
+      }
+
+      .date {
+        font-size: 13px;
+      }
+    }
+  }
+
+
+  .icon-with-img-section {
+    .icon-box-outer {
+      .flex-2 {
+        flex-basis: 50%;
+      }
+    }
+
+    .icon-box-outer {
+      margin-top: 10px;
+    }
+
+    .dis-flex {
+      justify-content: center;
+    }
+
+    .icon-txt {
+      text-align: center;
+      margin-top: 10px;
+      flex-basis: 100%;
+    }
+
+    .icon {
+      flex-basis: 100%;
+    }
+  }
+
+  .client-video-section {
+    &.customer-column-section {
+      iframe {
+        height: 240px;
+      }
+
+      .flex-3 {
+        &:first-child {
+
+          .flex-1 {
+            &:last-child {
+              .client-description {
+                height: auto;
+              }
+            }
+          }
+
+        }
+
+        &:last-child {
+          .flex-1 {
+            &:last-child {
+              .client-description {
+                height: auto;
+              }
+            }
+
+            &:first-child {
+              .client-description {
+                height: auto;
+              }
+            }
+          }
+
+        }
+
+      }
+
+      .client-description {
+        padding: 25px 31px;
+        min-height: auto;
+      }
+    }
+
+  }
+
+  .customer-testimonial-section {
+
+    .flex-3,
+    .flex-2 {
+      margin-top: 15px;
+      padding: 0;
+    }
+
+    .content-box,
+    .cust-img-box {
+      padding: 20px 10px;
+    }
+
+    .content-box p {
+      margin-top: 10px;
+    }
+
+    h5 {
+      font-size: 16px;
+    }
+
+    h6 {
+      font-size: 12px;
+    }
+
+    .load-btn {
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+  }
+
+  .four-column-with-icon-section {
+    .flex-4 {
+      flex-basis: 100%;
+    }
+
+    h3 {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .col-box-outer {
+      margin-top: 10px;
+
+      p {
+        font-size: 14px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .client-img-section {
+    p {
+      margin-top: 15px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .valuecoders-in-media-section {
+    .margin-t-60 {
+      margin-top: 10px;
+    }
+  }
+
+  .valuecoders-our-team-section {
+    .dis-flex {
+      margin-top: 10px;
+    }
+
+    .flex-4 {
+      flex-basis: 100%;
+    }
+  }
+
+  .faq-section {
+    &.faq-for-company {
+      .faq-accordion-content {
+        padding-right: 20px;
+      }
+
+      .faq-accordion-toggle {
+        padding-right: 20px;
+
+        &::after {
+          right: 5px;
+        }
+      }
+
+      .flex-2 {
+        padding: 20px 15px;
+      }
+    }
+  }
+
+  .three-column-icon-section {
+    .box {
+      padding: 30px 20px;
+
+      h3 {
+        margin: 10px 0 5px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .box-3 {
+      padding-right: 0;
+
+      &:nth-child(3n) {
+        padding-right: 0;
+      }
+    }
+
+    ul {
+      margin-top: 20px;
+
+      li {
+        font-size: 14px;
+      }
+    }
+
+    .flex-2 {
+      flex-basis: 100%;
+    }
+
+    &.with-border-box {
+      .content-box {
+        padding: 20px 15px;
+      }
+
+      .box-3 {
+        padding: 10px 0;
+      }
+    }
+  }
+
+  .valuecoders-img-section {
+    p {
+      text-align: center;
+    }
+
+    .left-box {
+      picture {
+        display: none;
+      }
+    }
+
+    .right-box {
+      margin-top: 0;
+
+      ul {
+        li {
+          flex-basis: 100%;
+          margin-top: 15px;
+          padding-left: 25px;
+
+          &::before {
+            height: 7px;
+            width: 7px;
+          }
+
+          &::after {
+            height: 13px;
+            width: 13px;
+          }
+        }
+      }
+
+      .dot-icon {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-right: 10px;
+      }
+    }
+
+    .margin-t-100 {
+      margin-top: 20px;
+    }
+
+    .icon-box {
+      margin: 10px auto;
+      flex-basis: 100%;
+      max-width: 200px;
+    }
+  }
+
+  .technologies-right-logo-section {
+    .left-box {
+      margin-top: 0;
+    }
+
+    .tech-box {
+      margin-top: 40px;
+      flex-basis: 50%;
+
+      .tech-txt {
+        margin-top: 10px;
+      }
+    }
+
+    .img-tech-logo {
+      height: auto;
+    }
+
+    .for-max-six-icon {
+      .tech-box {
+        flex-basis: 33.33%;
+      }
+    }
+  }
+
+  .two-column-right-box-section {
+    .left-box {
+      padding-right: 0;
+    }
+
+    .box {
+      padding: 20px;
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .employee-testimonial-career-section {
+
+    .flex-2,
+    .flex-3 {
+      padding: 0px;
+    }
+
+    .first-box {
+      flex-basis: 100%;
+    }
+
+    .second-box {
+      flex-basis: 100%;
+    }
+
+    .first-row-last-col {
+      .content-box {
+        // padding: 17px 30px 20px;
+
+      }
+    }
+
+    .content-box {
+      padding: 17px 30px 20px;
+
+    }
+
+    .client-description {
+      p {
+        padding: 0 30px 38px;
+      }
+    }
+
+    .flex-3,
+    .flex-2 {
+      margin-top: 15px;
+    }
+
+    .profile {
+      display: none;
+    }
+  }
+
+  .about-award-recog-section {
+    .about-award-partnership-outer {
+      .award-logo-part-img {
+        height: 207px;
+        max-width: unset;
+      }
+    }
+  }
+
+  .customer-logo-section {
+    .custom-logo-img-box {
+      display: none;
+    }
+
+    .mob-custom-logo-img-box {
+      display: block;
+      text-align: center;
+
+      img {
+        max-width: 367px;
+        margin-top: 50px;
+        width: 100%;
+      }
+    }
+  }
+
+  .some-amazing-company-section {
+    .mob-proud-existance-img {
+      display: block;
+    }
+
+    .proud-existance-img {
+      display: none;
+    }
+    .see-our-clients-lnk{
+      margin-top: 42px;
+      a{
+        &:after{
+          top: 0px;
+        }
+      }
+    }
+  }
+
+  .proud-existence-section {
+    padding-bottom: 44px;
+  }
+}

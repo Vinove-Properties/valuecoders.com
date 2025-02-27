@@ -1,0 +1,351 @@
+.tabs-section {
+  background: linear-gradient(180deg, #fff8ea 0%, #fff8ea 100%);
+
+  .tab-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .tabs-container {
+    flex-basis: 45%;
+
+    .tabs {
+      list-style: none;
+      padding: 0;
+      margin: 40px 0 0;
+      display: flex;
+      background: #fff;
+      box-shadow: 20px 30px 50px 0px #0000000d;
+      border: 1px solid #dbdbdb;
+      max-width: 500px;
+      justify-content: space-between;
+      padding: 15px;
+      border-radius: 10px;
+      gap: 20px;
+
+      .tab {
+        border: none;
+        padding: 10px;
+        font-size: $font-18;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: background 0.3s;
+        color: $darkblack;
+        display: flex;
+        flex-wrap: wrap;
+        img {
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+
+        .normal {
+          display: inline-block;
+        }
+        .hover {
+          display: none;
+        }
+
+        &.active,
+        &:hover {
+          background: $gradient;
+          color: $white;
+          .hover {
+            display: inline-block;
+          }
+          .normal {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .tab-content {
+      margin: 40px 0 0;
+      .content {
+        display: none;
+
+        h3 {
+          margin: 10px 0;
+        }
+
+        p {
+          font-weight: 500;
+        }
+
+        ul {
+          margin: 40px 0 0;
+          display: flex;
+          flex-wrap: wrap;
+          li {
+            flex-basis: 48%;
+            margin-bottom: 10px;
+            font-weight: $medium-font;
+            padding-left: 30px;
+            position: relative;
+            &:before {
+              content: "";
+              background: url(../images/home-images/listing.svg) no-repeat
+                center;
+              width: 20px;
+              height: 20px;
+              background-size: 100%;
+              position: absolute;
+              left: 0;
+              top: 4px;
+            }
+            a {
+              color: #656565;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .image-container {
+    flex-basis: 40%;
+    text-align: right;
+
+    .tab-image {
+      display: none;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  &.techno-tabs {
+    background: $white;
+
+    .tabs-container {
+      flex-basis: 100%;
+
+      .tabs {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        border: 0;
+        border-bottom: 3px solid #dde5;
+
+        .tab {
+          border: none;
+          padding: 10px;
+          font-size: $font-18;
+          cursor: pointer;
+          border-radius: 10px;
+          transition: background 0.3s;
+          color: $darkblack;
+          display: flex;
+          flex-wrap: wrap;
+          position: relative;
+          margin: 0 0 15px;
+          align-items: center;
+
+          &.active,
+          &:hover {
+            background: #edf1ff;
+            color: #05164d;
+            &:after {
+              content: "";
+              background: $gradient;
+              width: 100%;
+              height: 3px;
+              position: absolute;
+              left: 0;
+              bottom: -17px;
+            }
+          }
+        }
+      }
+
+      .tab-content {
+        .content {
+          .dis-flex {
+            justify-content: space-between;
+          }
+          .img-div {
+            flex-basis: 40%;
+          }
+          .content-div {
+            flex-basis: 50%;
+            ul {
+              margin: 20px 0 0;
+              li {
+                flex-basis: 100%;
+                &:last-child {
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Query Start From Here
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1320px) {
+  .tabs-section {
+    .tabs-container {
+      flex-basis: 50%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .tabs-section {
+    .tabs-container {
+      .tab-content {
+        .content {
+          ul {
+            margin: 25px 0 0;
+            li {
+              flex-basis: 100%;
+            }
+          }
+        }
+      }
+    }
+    &.techno-tabs {
+      .tabs-container {
+        .tabs {
+          .tab {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 979px) {
+}
+
+@media (max-width: 767px) {
+  .tabs-section {
+    .tab-flex {
+      flex-wrap: wrap;
+    }
+
+    .tabs-container {
+      flex-basis: 100%;
+
+      .tabs {
+        margin: 30px 0 0;
+        gap: 10px;
+        width: 100%;
+
+        .tab {
+          font-size: $font-16;
+          img {
+            display: block;
+            margin: 0 0 2px;
+          }
+        }
+      }
+
+      .tab-content {
+        margin: 30px 0 0;
+        .content {
+          h3 {
+            margin: 10px 0;
+          }
+
+          ul {
+            margin: 20px 0 0;
+            li {
+              padding-left: 27px;
+              position: relative;
+              &:before {
+                top: 3px;
+                width: 18px;
+                height: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .image-container {
+      flex-basis: 100%;
+      text-align: center;
+      display: none;
+    }
+
+    &.techno-tabs {
+      .tabs-container {
+        flex-basis: 100%;
+
+        .tabs {
+          flex-wrap: wrap;
+          border-bottom: 3px solid #dde5;
+          margin: 0;
+          justify-content: space-between;
+          .tab {
+            font-size: 15px;
+            flex-basis: 48%;
+            display: flex;
+            align-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin: 0;
+            text-align: center;
+
+            &.active,
+            &:hover {
+              &:after {
+                bottom: 0;
+              }
+            }
+          }
+        }
+
+        .tab-content {
+          .content {
+            .dis-flex {
+              justify-content: space-between;
+              flex-wrap: wrap;
+            }
+            .img-div {
+              flex-basis: 100%;
+            }
+            .content-div {
+              flex-basis: 100%;
+              margin: 10px 0 0;
+              ul {
+                margin: 20px 0 0;
+                li {
+                  flex-basis: 100%;
+                  &:last-child {
+                    margin: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

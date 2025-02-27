@@ -1,0 +1,230 @@
+.service-tab {
+  background: $white;
+  .service-tabs-section {
+    .tab-row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .tab-nav {
+      list-style-type: none;
+      flex-basis: 100%;
+      width: 100%;
+      position: relative;
+
+      .tabs-slider {
+        position: relative;
+      }
+
+      .tab-scroll {
+        width:100%;
+        border-bottom: 1px solid #e2e2e2;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 0 50px;
+        padding: 0;
+
+        .tablist {
+          padding: 0;
+          margin: 0 70px 0 0;
+
+          a {
+            height: 100%;
+            font-size: 20px;
+            color: rgba(65, 65, 65, 0.8);
+            font-weight: 500;
+            padding: 0 5px 12px;
+            position: relative;
+            display: inline-block;
+            &:after {
+              content: "";
+              width: 100%;
+              height: 2px;
+              background: transparent;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+            }
+          }
+          &:hover {
+            a {
+              color: $yellow;
+              &:after {
+                background: $yellow;
+              }
+            }
+          }
+        }
+        .tablist.active {
+          a {
+            color: $yellow;
+            &:after {
+              background: $yellow;
+            }
+          }
+        }
+      }
+      .is-arrow {
+        margin-left: 10px;
+      }
+    }
+    .bcontents {
+      flex-basis: 100%;
+      .tab-contents {
+        display: none;
+        text-align: center;
+
+        .dis-flex {
+          align-items: center;
+          justify-content: space-between;
+          .content-box {
+            flex-basis: 65%;
+            text-align: left;
+            h3 {
+              margin: 0 0 15px;
+            }
+            p {
+              margin: 0 0 20px;
+            }
+            ul {
+              margin: 0 0 20px;
+              li {
+                margin-bottom: 10px;
+                padding-left: 30px;
+                position: relative;
+                &:before {
+                  content: "";
+                  background: url(../images/check.png) no-repeat center;
+                  width: 18px;
+                  height: 18px;
+                  position: absolute;
+                  left: 0;
+                  top: 2px;
+                }
+              }
+            }
+            .know-more-link{margin:40px 0 0;
+              a{color:#05164D; text-decoration: underline;
+              &:after{content: "";
+                background: url(../images/know-more.png) top center no-repeat;
+                position: relative;
+                width: 11px;
+                height: 10px;
+                background-size: 100%;
+                top: 0;
+                left: 6px;
+                display: inline-block;
+                transition: all 0.3s ease-in-out;}
+
+                &:hover{text-decoration: none;
+                  &:after{left: 14px;}
+                }
+              }
+            }
+          }
+
+          .image-box {
+            flex-basis:30%;
+          }
+        }
+      }
+      .tab-contents.active {
+        display: block;
+      }
+    }
+    
+  }
+ 
+}
+
+
+
+
+
+@media (max-width: 1440px) {
+  
+}
+
+@media (max-width: 1380px) {
+}
+
+@media (max-width: 1024px) {
+
+  .service-tab{
+    .service-tabs-section{
+      .tab-nav{
+        .tab-scroll{
+          .tablist {margin: 0 8px 10px 0;
+          a{padding: 0 5px 8px; font-size: 18px;}
+          }
+        }
+      }
+    }
+  } 
+ 
+}
+
+@media (max-width: 979px) {
+ 
+}
+
+@media (max-width: 767px) {
+  .service-tab {
+    background: #fff;
+    .service-tabs-section {
+      .tab-nav {
+        list-style-type: none;
+        flex-basis: 100%;
+        width: 100%;
+        position: relative;
+
+
+        .tab-scroll {margin:0 0 30px;
+          .tablist {
+            a {
+              font-size: 16px;
+              line-height: 26px;
+              padding: 0 5px 5px;
+              margin:0 0 5px;
+              text-align: center;
+            }
+          }
+        }
+        .is-arrow {
+          margin-left: 10px;
+        }
+      }
+      .bcontents {
+        .tab-contents {
+          .dis-flex {
+            .content-box {order:1;
+              flex-basis: 100%;
+              h3 {
+                margin: 0 0 10px;
+              }
+              p {
+                margin: 0 0 15px;
+              }
+              ul {
+                margin: 0 0 15px;
+              }
+              .know-more-link{margin:20px 0 0;}
+            }
+
+            .image-box {
+              flex-basis: 100%;
+              margin:30px 0 0;
+              order:2;
+            }
+          }
+        }
+      }
+    }
+    
+  }
+
+}
+
+@media (max-width: 479px) {
+}

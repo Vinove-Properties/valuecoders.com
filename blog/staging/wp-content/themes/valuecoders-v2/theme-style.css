@@ -1135,7 +1135,7 @@ text-transform: capitalize;
     font-size: 30px;
 }
 .pop-up-section h2 {
-    font-family: noto_sansmedium,sans-serif;
+  font-family: "Lexend Deca";
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -1144,7 +1144,7 @@ text-transform: capitalize;
     margin-bottom: 0;
 }
 .pop-up-section p {
-  font-family: noto_sansmedium,sans-serif;
+  font-family: "Lexend Deca";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -1209,7 +1209,7 @@ form#vc-lead-form {
   margin-top: -22px;
 }
 .right-img p {
-  font-family: noto_sansmedium,sans-serif;
+  font-family: "Lexend Deca";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -1229,7 +1229,7 @@ form#vc-lead-form {
   background: 0 0;
   margin-top: 10px;
   padding: 20px;
-  font-family: noto_sansmedium,sans-serif;
+  font-family: "Lexend Deca";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -1239,7 +1239,7 @@ form#vc-lead-form {
 .right-img input[type=button] {
   margin-top: 30px;
   border: unset;
-  font-family: noto_sansmedium,sans-serif;
+  font-family: "Lexend Deca";
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -1344,7 +1344,7 @@ small{
 #comments textarea {
   height: 153px;
   border: 1px solid #46456d;
-  font-family: noto_sansmedium,sans-serif;
+  font-family: "Lexend Deca";
   border-radius: 5px;
   resize: none;
   color: rgba(255,255,255,.4);

@@ -1,0 +1,232 @@
+.tailored-tech {
+  .tailored-out {
+    justify-content: space-between;
+    position: relative;
+
+    .left-section {
+      flex-basis: 28%;
+      padding: 50px 0;
+    }
+    .tailored-slider {
+      flex-basis: 70%;
+      width: 70%;
+
+      .flex-3 {
+        padding-right: 10px;
+        margin-top: 20px;
+        padding-left: 10px;
+        .box-3 {
+          height: 100%;
+          border-radius: 15px;
+          padding: 20px;
+          transition: all 0.3s ease-in-out;
+          position: relative;
+          background-size: cover;
+          background-repeat: no-repeat;
+          min-height: 366px;
+          cursor: pointer;
+          .icon {
+            display: block;
+            margin: 0 0 15px;
+          }
+          p {
+            margin: 0 0 20px;
+            color: $white;
+          }
+
+          h3 {
+            margin: 0 0 15px;
+            color: $white;
+            position: relative;
+            &:after {
+              content: "";
+              background: url(../images/talicon-02.png) top center no-repeat;
+              position: absolute;
+              width: 18px;
+              height: 11px;
+              background-size: 100%;
+              top: 12px;
+              right: 0;
+              display: inline-block;
+              transition: all 0.3s ease-in-out;
+            }
+            a {
+              color: $white;
+              position: relative;
+            }
+          }
+
+          ul {
+            margin: 0 0 20px;
+
+            li {
+              margin-bottom: 10px;
+              padding-left: 20px;
+              position: relative;
+
+              &:before {
+                content: "";
+                width: 9px;
+                height: 9px;
+                background: #016be3;
+                position: absolute;
+                left: 0;
+                border-radius: 50%;
+                top: 8px;
+              }
+            }
+          }
+          .overlay-text {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: 0.5s ease;
+            border-radius: 15px;
+            background-color: $white;
+            padding: 20px;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            h3 {
+              color: #3f3f3f;
+              &:after {
+                display: none;
+              }
+            }
+            .over-img {
+              position: relative;
+              &:after {
+                content: "";
+                background: url(../images/talicon-01.png) top center no-repeat;
+                position: absolute;
+                width: 18px;
+                height: 11px;
+                background-size: 100%;
+                top: 12px;
+                right: 0;
+                display: inline-block;
+                transition: all 0.3s ease-in-out;
+              }
+            }
+            .icon {
+              width: auto;
+              position: relative;
+            }
+
+            p {
+              color: $contentDay;
+            }
+          }
+          &:hover {
+            .overlay-text {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  .glider {
+    width: 100% !important;
+  }
+
+  .glider-prev {
+    background: url(../images/tail-prev.svg) no-repeat center;
+    width: 36px;
+    height: 36px;
+    z-index: 9;
+    //opacity: 0.6;
+    top: 90%;
+    font-size: 0;
+    left: 0;
+    transform: rotate(0);
+    font-size: 0;
+    border-radius: 100%;
+    position: absolute;
+    transform: rotate(180deg);
+  }
+
+  .glider-next {
+    background: url(../images/tail-prev.svg) no-repeat center;
+    width: 36px;
+    height: 36px;
+    z-index: 9;
+    left: 50px;
+    top: 90%;
+    font-size: 0;
+    transform: rotate(0);
+    font-size: 0;
+    border-radius: 100%;
+    position: absolute;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .tailored-tech{
+    .tailored-out {
+      .left-section{flex-basis: 30%;}
+      .tailored-slider{flex-basis: 65%;     width: 65%;}
+    }
+    .glider-next{top:90%;}
+    .glider-prev{top: 90%;}
+  }
+
+}
+
+@media only screen and (max-width: 991px) {
+  .tailored-tech {
+    .tailored-out {
+      flex-wrap: wrap;
+      padding-bottom: 80px;
+
+      .left-section {
+        flex-basis: 100%;
+        padding: 0;
+        text-align: center;
+      }
+      .tailored-slider {
+        flex-basis: 100%;
+        margin: 20px 0 0;
+        width: 100%;
+
+        .flex-3 {
+          padding-right: 5px;
+          margin-top: 15px;
+          padding-left: 5px;
+          .box-3 {
+            border-radius: 10px;
+            min-height: 300px;
+            padding: 30px;
+            p {
+              margin: 0 0 15px;
+            }
+            .overlay-text {
+              border-radius: 10px;
+              padding: 30px;
+            }
+          }
+        }
+      }
+    }
+
+    .glider-prev {
+      bottom: 10px;
+      top: auto;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+
+    .glider-next {
+      bottom: 10px;
+      top: auto;
+      left: 100px;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+}
