@@ -98,12 +98,12 @@
       <div class="flex-4 logo-box">
         <h3>PROUDLY BROUGHT TO YOU BY ValueCoders</h3>
         <div class="dis-flex">
-          <a href="https://www.invoicera.com/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
+          <a href="https://www.invoicera.com/" target="_blank" rel="follow">
             <picture>
               <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/inv-logo.svg" width="156" height="40" alt="Invoicera">
             </picture>
           </a>
-          <a href="https://www.workstatus.io/" data-wpel-link="external" target="_blank" rel="nofollow external noopener noreferrer">
+          <a href="https://www.workstatus.io/" target="_blank" rel="follow">
             <picture>
               <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/ws-logo.svg" width="188" height="26" alt="Workstatus"> 
             </picture>
