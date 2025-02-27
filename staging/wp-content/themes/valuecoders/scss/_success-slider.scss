@@ -1,0 +1,409 @@
+.success-slider-section {
+  overflow: hidden;
+  background: $gradient;
+
+  .top-section {
+    h2 {
+      color: $white;
+    }
+    p {
+      color: #bdb7b7;
+    }
+  }
+  .success-slider {
+    position: relative;
+    width: 100%;
+
+    .glider {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .glider-slide {
+      flex: 0 0 67%;
+      transition: all 0.3s ease;
+
+      &:nth-child(2n) {
+        flex: 0 0 30%;
+
+        opacity: 1;
+      }
+    }
+
+    .industry-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      margin: 0 10px;
+      width: 100% !important;
+      //min-width: 0;
+
+      &.glider-slide {
+      }
+
+      .card-bg {
+        position: absolute;
+        top: 0; // Start off-screen
+        left: 0;
+        width: 100%;
+        height: 423px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: top 0.6s ease-in-out;
+        z-index: 1;
+        border-radius: 10px;
+
+        .category {
+          position: absolute;
+          top: 30px;
+          left: 30px;
+          background: rgba(255, 255, 255, 0.1);
+          line-height: initial;
+          color: #fff;
+          padding: 4px 10px;
+          font-weight: 500;
+          border-radius: 5px;
+          font-size: 12px;
+          text-transform: uppercase;
+        }
+
+        .move {
+          width: 31px;
+          height: 36px;
+          border: 2px solid $white;
+          border-radius: 14px;
+          position: absolute;
+          bottom: 30px;
+          right: 30px;
+          transition: all 0.3s ease-in-out;
+
+          &:after {
+            content: "";
+            background: url(../images/home-images/move.svg) no-repeat;
+            position: absolute;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            top: 10px;
+            background-size: 100%;
+            width: 10px;
+            height: 10px;
+            transform: rotate(-8deg);
+            transition: all 0.3s ease-in-out;
+          }
+
+          &:hover {
+            width: 31px;
+            height: 31px;
+            border-radius: 14px;
+            &:after {
+              transform: rotate(0deg);
+              top: 8px;
+            }
+          }
+        }
+      }
+
+      .card-content {
+        position: relative;
+        z-index: 2; // Ensure content stays above background
+        padding: 30px;
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: $white;
+        z-index: 2;
+
+        h5 {
+          font-size: 16px;
+          margin-bottom: 15px;
+          text-transform: uppercase;
+          font-weight: $normal-font;
+        }
+
+        h4 {
+          font-size: 24px;
+          color: $white;
+          margin: 0 0 15px;
+          a {
+            color: $white;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        p {
+          color: rgba(224, 224, 224, 1);
+          font-weight: $normal-font;
+        }
+
+        .expand {
+          text-align: right;
+          font-size: 18px;
+          color: $white;
+          text-decoration: underline;
+          right: 0;
+          margin: 50px 0 0;
+          position: absolute;
+          text-decoration: underline;
+
+          &:after {
+            content: "";
+            background: url(../images/home-images/white-arrow.svg) no-repeat
+              center;
+            width: 11px;
+            display: inline-block;
+            height: 11px;
+            margin-left: 8px;
+            vertical-align: middle;
+            background-size: 100%;
+            transition: all 0.3s ease-in-out;
+          }
+
+          &:hover {
+            &:after {
+              margin-left: 15px;
+            }
+          }
+        }
+
+        // Show hover content on hover
+      }
+
+      &:nth-child(2n) {
+        .card-bg {
+          position: relative;
+          height: 294px;
+        }
+
+        .card-content {
+          margin: 25px 0 0;
+          padding: 0;
+          width: 70%;
+          height: initial;
+          p {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .test-button {
+      position: absolute;
+      bottom: 55px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      right: 0;
+
+      .glider-dots {
+        align-items: center;
+        .glider-dot {
+          display: inline-block;
+          background: $navy-blue;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          margin: 0 2px;
+          display: none;
+          &.active {
+            background: $navy-blue;
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+
+      .test-prev,
+      .test-next {
+        background-color: transparent;
+        border: 2px solid #ffffff80;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 16px;
+        background: url(../images/home-images/white-arrowsd.svg) no-repeat
+          center;
+        width: 36px;
+        height: 36px;
+        top: auto;
+        font-size: 0;
+        right: 43px;
+        opacity: 1;
+        left: auto;
+        transform: rotate(0);
+        font-size: 0;
+        position: absolute;
+
+        &:hover {
+          background: url(../images/home-images/blue-arrow.svg) no-repeat center;
+          background-color: $white;
+          border-color: $white;
+        }
+
+        &.test-next {
+          background: url(../images/home-images/white-arrowsd.svg) no-repeat
+            center;
+          right: 0;
+          transform: rotate(180deg);
+
+          &:hover {
+            background: url(../images/home-images/blue-arrow.svg) no-repeat
+              center;
+            background-color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.glider-slide {
+  opacity: 1 !important;
+}
+
+.card-content {
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/*Media Query Start From Here*/
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1280px) {
+}
+
+@media (max-width: 1024px) {
+  .success-slider-section {
+    .success-slider {
+      .glider-slide {
+        flex: 0 0 100%;
+        flex: 100%;
+        width: 100%;
+
+        &:nth-child(2n) {
+          flex: 0 0 100%;
+          flex: 100%;
+          width: 100%;
+        }
+      }
+
+      .industry-card {
+        flex: 0 0 100%;
+        flex: 100%;
+        width: 100vw !important;  // Ensure full width of viewport
+        max-width: 100vw;  // Prevent extra spacing
+        margin:0 5px;
+
+        .card-bg {
+          height: 400px;
+
+          .category {
+            top: 20px;
+            left: 20px;
+          }
+
+          .move {
+            bottom: 40px;
+          }
+        }
+
+        .card-content {
+          padding: 20px;
+          width: 90%;
+
+          h5 {
+            font-size: 16px;
+            margin-bottom: 15px;
+          }
+
+          h4 {
+            font-size: 20px;
+            line-height: 30px;
+            margin: 0 0 10px;
+          }
+
+          // Show hover content on hover
+        }
+        &:nth-child(2n) {
+          .card-content {
+            margin: 15px 0 0;
+            padding: 0;
+            width: 100%;
+          }
+        }
+      }
+
+      .test-button {
+        margin: 20px 0 0;
+        position: static;
+        padding: 0 0 30px;
+      }
+    }
+  }
+}
+@media (max-width: 979px) {
+}
+
+@media (max-width: 767px) {
+  .success-slider-section {
+    .success-slider {
+      .industry-card {
+        flex: 0 0 100%;
+        flex: 100%;
+        width: 100vw !important;  // Ensure full width of viewport
+        max-width: 100vw;  // Prevent extra spacing
+
+        .card-bg {
+          height: 400px;
+
+          .category {
+            top: 20px;
+            left: 20px;
+          }
+
+          .move {
+            bottom: 40px;
+          }
+        }
+
+        .card-content {
+          padding: 20px;
+          width: 90%;
+
+          h5 {
+            font-size: 16px;
+            margin-bottom: 15px;
+          }
+
+          h4 {
+            font-size: 20px;
+            line-height: 30px;
+            margin: 0 0 10px;
+          }
+
+          // Show hover content on hover
+        }
+        &:nth-child(2n) {
+          .card-content {
+            margin: 15px 0 0;
+            padding: 0;
+            width: 100%;
+          }
+        }
+      }
+
+      .test-button {
+        margin: 20px 0 0;
+        position: static;
+        padding: 0 0 30px;
+      }
+    }
+  }
+}
+
+/*Media Query Ends Here*/

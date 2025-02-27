@@ -1,0 +1,135 @@
+.latest-insight {
+  .top-section {
+    &.b-100 {
+      text-align: left;
+    }
+  }
+  .text-right {
+    .is-arrow {
+      text-align: right;
+    }
+  }
+
+  .insight-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    .card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      background: transparent;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+
+    // Image section
+    .card-image {
+      position: relative;
+      width: 100%;
+      height: 220px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .category {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        line-height: initial;
+
+        color: #fff;
+        padding: 4px 10px;
+        font-weight: $medium-font;
+        border-radius: 5px;
+        font-size: 12px;
+      }
+    }
+
+    // Content section
+    .card-content {
+      margin: 20px 0 0;
+      h3 {
+        font-size: 20px;
+        line-height: 34px;
+
+        a {
+          color: #110302;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    // Author section
+    .author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+
+      span {
+        color: rgba(94, 99, 115, 1);
+        font-size: 14px;
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+// Media Query Start From Here
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1320px) {
+}
+
+@media (max-width: 1024px) {
+  .latest-insight {
+    .insight-row {
+      .card-content {
+        h3 {
+          font-size: 20px;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 979px) {
+}
+
+@media (max-width: 767px) {
+  .latest-insight {
+    .top-section {
+      &.b-100 {
+        text-align: center;
+      }
+    }
+    .text-right {
+      .is-arrow {
+        text-align: center;
+      }
+    }
+
+    .insight-row {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+    }
+  }
+}
