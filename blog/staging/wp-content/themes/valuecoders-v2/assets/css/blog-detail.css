@@ -279,3 +279,7 @@ button.newsletter{width: 28px; height: 28px;}
 }
 
 /*Media Query Ends Here*/
+
+#auth-hd-profile.active{display: block !important;}
+.authpro-ico.active{transform: rotateX(180deg);}
+.col-authpro-ico .authpro-ico{position: relative;top: 5px;}

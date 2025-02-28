@@ -78,7 +78,15 @@
                       </div>
                       <ul class="entry-meta">
     <li class="meta author vcard">
-    <span class="author-name fn">Written by '.get_the_author_posts_link().'</span>
+    <span class="author-name fn">
+    Written by '.get_the_author_posts_link().'
+    <span class="authpro" style="display: block; text-align: left; color: #cccccc;">'.get_field('pro-title', 'user_'.$author_id).'     
+    <span class="col-authpro-ico">
+    <img onclick="this.classList.toggle(\'active\');document.getElementById(\'auth-hd-profile\').classList.toggle(\'active\')" loading="lazy" class="authpro-ico" src="'.get_bloginfo('template_url').'/dev-img/down-icon.png">
+    </span>
+    </span>
+    </span>
+
     </li>    
     </ul>
     </div>
@@ -96,7 +104,9 @@
     </div>
     </div>
     </div></div>';
-    echo '</div>'.$takeText.'</div>';
+    echo '</div>';
+    echo '<div id="auth-hd-profile" style="margin-top:20px; display:none;">'.get_field('auth-excerpt', 'user_'.$author_id).'</div>';
+    echo $takeText.'</div>';
     }else{ 
     } 
     ?>
