@@ -313,7 +313,10 @@ add_filter( 'the_content', function( $content ){
         $authThumb  = getAuthProfieThumbnail($author_id);
         $authSec    = '<section class="author-container">
         <div class="author-image"><img src="'.$authThumb.'" alt="Author"></div>
-        <div class="author-description">'.get_field( 'author_description', 'user_'.$author_id ).'</div>
+        <div class="author-description">
+        <h4 style="margin:0;">'.get_the_author_meta('display_name', $author_id).'</h4>
+        <small>'.get_the_author_meta('pro-title', $author_id).'</small>
+        '.get_field( 'author_description', 'user_'.$author_id ).'</div>
         </section>';
         if( $hasBanner ){
             $bannerLink  = get_post_meta( $thisPost, 'banner_link', true );
