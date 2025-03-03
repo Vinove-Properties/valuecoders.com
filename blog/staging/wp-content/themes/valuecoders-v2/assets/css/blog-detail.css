@@ -283,6 +283,7 @@ button.newsletter{width: 28px; height: 28px;}
 #auth-hd-profile.active{display: block !important;}
 .authpro-ico.active{transform: rotateX(180deg);}
 .col-authpro-ico .authpro-ico{position: relative;top: 5px;}
+.col-authpro-ico img:hover{cursor: pointer;}
 
 .author-container{display: flex ; align-items: flex-start; gap: 1rem; margin: auto; padding-top: 50px; border-top: 1px solid #656565; margin-top: 50px;}
 .author-image img{ width: 50px; height: 50px; border-radius: 50%; margin: 0 !important;}
