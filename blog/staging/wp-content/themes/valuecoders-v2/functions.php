@@ -286,22 +286,40 @@ add_filter('get_the_archive_title', function ($title) {
     return $title;
 });
 
+function getAuthProfieThumbnail( $author_id ){
+    $authThumbnail    = get_bloginfo('url').'/assets/images/author.png';
+    $authorThumbnail  = get_field( 'auth-thumb', 'user_'.$author_id );
+    if( $authorThumbnail && isset( $authorThumbnail['url'] ) ){
+      $authThumbnail = $authorThumbnail['url'];
+    }else{  
+      $user_avtar   = get_user_meta( $author_id, 'wp_user_avatars', true );
+      if( $user_avtar ){
+        $authThumbnail = isset( $user_avtar['full'] ) ? $user_avtar['full'] : get_bloginfo('url').'/dev-img/author-profile.png';
+      }
+    }
+    return $authThumbnail;
+}
 
 
 /*Previous Function.php*/
 add_filter( 'the_content', function( $content ){
     if( is_singular() ){
         global $post;
-        $postContent = '';
+        //$postContent = '';
         $thisPost   = $post->ID;
+        $author_id  = $post->post_author; 
         $hasBanner  = get_post_meta( $thisPost, 'post_banner_image', true );
         $hasPdf     = get_post_meta( $thisPost, 'post_pdf', true );
+        $authThumb  = getAuthProfieThumbnail($author_id);
+        $postContent = '<section class="author-container">
+        <div class="author-image"><img src="'.$authThumb.'" alt="Author"></div>
+        <div class="author-description">'.get_field( 'author_description', 'user_'.$author_id ).'</div>
+        </section>';
         if( $hasBanner ){
             $bannerLink  = get_post_meta( $thisPost, 'banner_link', true );
             $postBanner = '<div class="post-banner-row">';
             $postBanner .= '<a href="'.$bannerLink.'"><img src="'.wp_get_attachment_url( $hasBanner ).'"></a>';
-            $postBanner .= '</div>';
-            
+            $postBanner .= '</div>';            
             $postContent .= $postBanner;
         }
         return $content.$postContent;
