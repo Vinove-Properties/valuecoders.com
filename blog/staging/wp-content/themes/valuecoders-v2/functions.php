@@ -305,13 +305,13 @@ function getAuthProfieThumbnail( $author_id ){
 add_filter( 'the_content', function( $content ){
     if( is_singular() ){
         global $post;
-        //$postContent = '';
+        $postContent = '';
         $thisPost   = $post->ID;
         $author_id  = $post->post_author; 
         $hasBanner  = get_post_meta( $thisPost, 'post_banner_image', true );
         $hasPdf     = get_post_meta( $thisPost, 'post_pdf', true );
         $authThumb  = getAuthProfieThumbnail($author_id);
-        $postContent = '<section class="author-container">
+        $authSec    = '<section class="author-container">
         <div class="author-image"><img src="'.$authThumb.'" alt="Author"></div>
         <div class="author-description">'.get_field( 'author_description', 'user_'.$author_id ).'</div>
         </section>';
@@ -322,7 +322,7 @@ add_filter( 'the_content', function( $content ){
             $postBanner .= '</div>';            
             $postContent .= $postBanner;
         }
-        return $content.$postContent;
+        return $content.$authSec.$postContent;
     }
     return $content;
 });    
