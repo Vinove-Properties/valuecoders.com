@@ -315,7 +315,7 @@ add_filter( 'the_content', function( $content ){
         <div class="author-image"><img src="'.$authThumb.'" alt="Author"></div>
         <div class="author-description">
         <div style="margin-bottom:20px;">
-        <h4 style="margin:0;">'.get_the_author_meta('display_name', $author_id).'</h4>
+        <h4 style="margin:0;">'.get_the_author_posts_link().'</h4>
         <small>'.get_the_author_meta('pro-title', $author_id).'</small>
         </div>
         '.get_field( 'author_description', 'user_'.$author_id ).'</div>
