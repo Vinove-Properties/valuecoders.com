@@ -1031,17 +1031,21 @@ die;
 });
 */
 
-add_action( 'phpmailer_init', 'ws_smtp_phpemailer' );
-function ws_smtp_phpemailer( $phpmailer ){
-    $phpmailer->isSMTP();  
-    $phpmailer->Host          = 'smtp.gmail.com';
-    $phpmailer->SMTPSecure    = 'tsl';
-    $phpmailer->Port          = 587;
-    $phpmailer->SMTPAuth      = true;
-    $phpmailer->Username      = 'do-not-reply@valuecoders.com';
-    $phpmailer->Password      = 'pdtnweysvgovhemg';
-    $phpmailer->From          = "do-not-reply@valuecoders.com";
-    $phpmailer->FromName      = "ValueCoders";
+if( isset($_SERVER['HTTP_HOST']) && ( $_SERVER['HTTP_HOST']  !== "localhost" ) ){
+    require_once '/home/valuecoders-com/public_html/envloader.php';
+    loadEnv();
+    add_action( 'phpmailer_init', 'ws_smtp_phpemailer' );
+    function ws_smtp_phpemailer( $phpmailer ){
+        $phpmailer->isSMTP();
+        $phpmailer->Host         = getenv('SMTP_HOST');
+        $phpmailer->SMTPSecure   = getenv('SMTP_SECURE');
+        $phpmailer->Port         = getenv('SMTP_PORT');
+        $phpmailer->SMTPAuth     = getenv('SMTP_AUTH');
+        $phpmailer->Username     = getenv('SMTP_USERNAME');
+        $phpmailer->Password     = getenv('SMTP_PASSWORD');
+        $phpmailer->From         = "do-not-reply@valuecoders.com";
+        $phpmailer->FromName     = "ValueCoders";
+    }    
 }
 
 add_action('wp_ajax_pxl-ebook-download', 'ebook_ajax_cb');
