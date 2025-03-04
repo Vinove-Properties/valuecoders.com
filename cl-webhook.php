@@ -378,9 +378,9 @@ if( isset( $json['event'] ) && $json['event'] == "invitee.created" ){
     */
 
     /*Zoho CRM Code Starts Here*/
-    $CLIENT_ID      = '1000.BMJ414JAF95SXHD4YKRK0FJ3JC57VH';
-    $CLIENT_SECRET  = 'e9a796ffde50de7a3198d63f134196d125bae343d0';
-    $REFRESH_TOKEN  = '1000.b4d2d568df487f80bc73675a27101c45.d7cc4b483d0157d16f672e86dc354d62';
+    $CLIENT_ID      = getenv('ZOHO_CLIENT_ID');
+    $CLIENT_SECRET  = getenv('ZOHO_CLIENT_SECRET');
+    $REFRESH_TOKEN  = getenv('ZOHO_REFRESH_TOKEN');
     $owner_id       = 668293911;
     $postData       = 'refresh_token='.$REFRESH_TOKEN.'&client_id='.$CLIENT_ID.'&client_secret='.$CLIENT_SECRET.'&grant_type='.'refresh_token';
     $curl = curl_init();
@@ -408,6 +408,7 @@ if( isset( $json['event'] ) && $json['event'] == "invitee.created" ){
     'Email'         => $json['payload']['email'],
     'Country'       => $country,
     //'Country1'      => $country,
+    'Property'      => 'ValueCoders',
     'Phone'         => $phone,
     'Lead_Source'   => "Calendly Direct",
     'Lead_Status'   => "Not Contacted Yet",
@@ -462,8 +463,9 @@ if( isset( $json['event'] ) && $json['event'] == "invitee.created" ){
                 'Last_Name'         => (!empty($lastName)) ? $lastName : "NA",
                 'Company'           => "",
                 'Lead_Status'       => "Not Contacted Yet",
-                //'Lead_Source'       => "",
-                'Is_Duplicate'      => "Yes",
+                //'Lead_Source'     => "",
+                'Property'          => 'ValueCoders',
+		'Is_Duplicate'      => "Yes",
                 'Calendly_Booked'   => "Yes",
                 'SQL'               => "Yes",
                 'Phone'             => $phone,
