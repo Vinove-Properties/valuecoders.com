@@ -1,7 +1,9 @@
 <?php
+require_once __DIR__ . '/envloader.php';
+loadEnv();
+
 $data = file_get_contents('php://input');
 $json = json_decode($data, true);
-
 function globalCountryListAry( $dcode ){
     $country_list = array(
         array("name" => "Afghanistan","code" => "AF","phone" => 93),
