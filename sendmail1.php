@@ -1,11 +1,11 @@
 <?php
-//ini_set('display_errors', 1);
-//ini_set('display_startup_errors', 1);
-//error_reporting(E_ALL);
-if( ($_SERVER['REQUEST_METHOD'] == 'GET') && realpath(__FILE__) == realpath( $_SERVER['SCRIPT_FILENAME'] ) ){
-    header( 'HTTP/1.0 403 Forbidden', TRUE, 403 );
-    die("HEY BOAT.. Go Away");
-}
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+// if( ($_SERVER['REQUEST_METHOD'] == 'GET') && realpath(__FILE__) == realpath( $_SERVER['SCRIPT_FILENAME'] ) ){
+//     header( 'HTTP/1.0 403 Forbidden', TRUE, 403 );
+//     die("HEY BOAT.. Go Away");
+// }
 
 require 'countries-array.php';
 require 'vc-config.php';
@@ -33,15 +33,6 @@ if( in_array($thisIPAddr, $spamIpAddr) ){
 if( validateSpamAttacker( $_POST['user-email'], $thisIPAddr ) === false ){
     header( 'location:thanks?spam-attacker=block' );
     die;
-}
-
-function _resetCookieData(array $cookieNames) {
-    foreach( $cookieNames as $cookieName ){
-        if( isset($_COOKIE[$cookieName]) ){
-            setcookie($cookieName, '', time() - 3600, '/');
-            unset($_COOKIE[$cookieName]);
-        }
-    }
 }
 
 function logSpamException( $arrPostParams, $note = '' ){ 
@@ -176,10 +167,6 @@ if( $isAjay === false ){
         die;
     }
 }
-define('CLIENT_ID','1000.BMJ414JAF95SXHD4YKRK0FJ3JC57VH');
-define('CLIENT_SECRET','e9a796ffde50de7a3198d63f134196d125bae343d0');
-define('ACESS_TOKEN','1000.cae698c21d5f8adc4f5f8e1ae60a3c39.6008000ac10c5df23ebf773f63194b81');
-define('REFRESH_TOKEN','1000.b4d2d568df487f80bc73675a27101c45.d7cc4b483d0157d16f672e86dc354d62');
 
 $arrEmail = array('parvesh@vinove.com', 'akhil@valuecoders.com');
 $deny_ips = array( '146.185.253.167', '146.185.253.165' );
@@ -242,209 +229,12 @@ function getSpamEmailsListings( $jsonFile ){
     return $data;
 }
 
-
-
-
-
 ob_start();
 session_start();
-
 if( isset( $_SESSION["queryString"] ) && !empty( $_SESSION["queryString"] ) ){ 
     $varRefererURL = $_SESSION["queryString"];     //$_SERVER[HTTP_REFERER];
 }else{
     $varRefererURL = $_SERVER['HTTP_REFERER'];
-}
-/*
-$spamReferer    = ['so5ni.com'];
-if( $varRefererURL ){
-    foreach( $spamReferer as $spam ){
-        if( strpos( $varRefererURL, $spam ) || (strpos( $varRefererURL, $spam ) === 0) ){
-            header( 'location:thanks.php' );
-            die;
-        }
-    }
-}
-*/
-
-/*
-//Temp Remove #1
-$htFields = hiddenBoatField('list');
-foreach( $_POST as $key => $fields ){
-    if( in_array( $key, $htFields ) && ($_POST[$key] != "") ){
-        header('location:thanks.php');
-        die;
-    }
-}
-*/
-
-$varIPAdd = get_client_ip_user(); 
-//$varIPAdd = $_SERVER['REMOTE_ADDR'];
-$varBrowserInfo = $_SERVER['HTTP_USER_AGENT'];
-$varDateAdded = date('Y-m-d H:i:s');
-
-//zohocrm api v2 update --23-Dec-2019
-function zohoCrmUpdate_v2( $argArrData, $leadSource='', $owner_id = 658520861, $is_update = false ){
-    $lead_id        = 0;
-    $varEmail       = $argArrData['Email'];
-    $varLastName    = $argArrData['Last Name'];
-    $varFirstName   = $argArrData['First Name'];
-    $varPhoneNo     = $argArrData['Phone'];
-    $varLeadStatus  = $argArrData['Lead Status'];
-    $varLeadSource  = $argArrData['Lead Source'];
-
-    $varUTMSource   = $argArrData['UTM Source'];
-    $varUTMMedium   = $argArrData['UTM Medium'];
-
-    $varProperty    = $argArrData['Property'];
-    $varIPAddress   = $argArrData['IP Address'];
-    $varDescription = $argArrData['Description'];
-
-    $user_country   = $argArrData['Country'];
-    $varURL         = $argArrData['URL'];
-    $varUploadedFiles = $argArrData['File Uploaded'];
-    $varRequirements = $argArrData['Requirements'];
-    $varRefURL       = $argArrData['refurl'];
-    $postData = 'refresh_token='. REFRESH_TOKEN.'&client_id='.CLIENT_ID.'&client_secret='.CLIENT_SECRET.'&grant_type='.'refresh_token';
-    $curl           = curl_init();
-
-    curl_setopt_array($curl, array(
-        CURLOPT_URL => "https://accounts.zoho.com/oauth/v2/token",//US DC .com, IN DC .in
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => "",
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 30,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => "POST",
-        CURLOPT_POSTFIELDS => $postData,
-
-    ));
-    $response = curl_exec($curl);
-    $arrRefreshTokResponse =json_decode($response,true);
-    $varAccessToken = $arrRefreshTokResponse['access_token'];
-    $err = curl_error($curl);    
-    curl_close( $curl );
-    if(!$err){
-        $zo_requirement = "";
-        
-        if( $varURL ){
-        $zo_requirement .= "Url: ".$varURL;
-        }
-        
-        if( $varUploadedFiles ){
-        $zo_requirement .= " File Uploaded: ".$varUploadedFiles;    
-        }
-
-        if( $varRequirements ){
-        $zo_requirement .= " Requirements: ".$varRequirements;
-        }
-
-        $zoho_data = array(
-        'First_Name'    => $varFirstName,
-        'Last_Name'     => $varLastName,
-        'Email'         => $varEmail,
-        'Country1'      => $user_country,
-        'Phone'         => $varPhoneNo,
-        'Lead_Source'   => $varLeadSource,
-        'Lead_Status'   => $varLeadStatus,
-        'Owner'         => $owner_id,
-        'Description'   => $zo_requirement,
-        'Sales_Qualified_Lead' => "Yes",
-        'Is_Duplicate'  => "No",
-        'UTM_Source'    => $varUTMSource,
-        'UTM_Medium'    => $varUTMMedium,
-        'Property'      => $varProperty,
-        'IP_Address1'   => $varIPAddress,
-        'Ref_Url'       => $varRefURL
-        );
-        
-        if( $is_update !== false  ){
-            $zoho_data['id'] = $is_update;
-        }
-
-        $curl   = curl_init();        
-        $sJSON  = json_encode( $zoho_data );
-        $sJSON  = str_replace('{','[{',$sJSON);
-        $sJSON  = str_replace('}','}]',$sJSON);
-        $postLeadData = '{"data":' . $sJSON . '}';
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://www.zohoapis.com/crm/v2/Leads",//US DC .com, IN DC .in
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => "",
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 30,
-            CURLOPT_HTTP_VERSION    => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST   => ($is_update !== false) ? "PUT" : "POST",
-            CURLOPT_POSTFIELDS      => $postLeadData,
-            CURLOPT_HTTPHEADER      => array(
-                "authorization: Zoho-oauthtoken $varAccessToken",
-                "cache-control: no-cache",
-                "content-type: application/json"
-            ),
-        ));
-
-        $response  = curl_exec($curl);
-        $err       = curl_error($curl);
-        curl_close($curl);
-        if( !$err ){
-            $body1          = '';
-            $crmException   = $response;
-            $response       = json_decode( $response );
-            
-            $rspCode    = ['DUPLICATE_DATA', 'SUCCESS'];
-            $statusCode = (isset($response->data[0]) && !empty($response->data[0]->code)) ? $response->data[0]->code : '';
-            
-            if( !empty( $statusCode ) && !in_array($statusCode, $rspCode) ){
-            $user_name = $varFirstName.' '.$varLastName;
-            smtpEmailFunction( "web@vinove.com", "Zoho CRM error - ValueCoders", $crmException, "lead", 
-            $varEmail, [], [], [], $user_name );
-            }
-
-            //Duplicate Lead Check.. 09.02.2023 NITIN BALUNI
-            if( isset( $response->data[0] ) &&  ($response->data[0]->code == "DUPLICATE_DATA") ) :
-                $lead_id = ( isset( $response->data[0] ) ) ? $response->data[0]->details->id : 0;
-                if( $lead_id !== 0 ){
-                    $zoho_data = array(
-                    'id'                    => $lead_id,
-                    'Lead_Status'           => "Not Contacted Yet",
-                    'Owner'                 => 720093253,
-                    'Sales_Qualified_Lead'  => "Yes",
-                    'Is_Duplicate'          => "Yes"
-                    );
-
-                    $curl   = curl_init();        
-                    $sJSON  = json_encode( $zoho_data );
-                    $sJSON  = str_replace('{','[{',$sJSON);
-                    $sJSON  = str_replace('}','}]',$sJSON);
-                    $postLeadData = '{"data":' . $sJSON . '}';
-                    curl_setopt_array($curl, array(
-                    CURLOPT_URL => "https://www.zohoapis.com/crm/v2/Leads",
-                    CURLOPT_RETURNTRANSFER => true,
-                    CURLOPT_ENCODING => "",
-                    CURLOPT_MAXREDIRS => 10,
-                    CURLOPT_TIMEOUT => 30,
-                    CURLOPT_HTTP_VERSION    => CURL_HTTP_VERSION_1_1,
-                    CURLOPT_CUSTOMREQUEST   => "PUT",
-                    CURLOPT_POSTFIELDS      => $postLeadData,
-                    CURLOPT_HTTPHEADER      => array(
-                    "authorization: Zoho-oauthtoken $varAccessToken",
-                    "cache-control: no-cache",
-                    "content-type: application/json"
-                    ),
-                    ));
-
-                    $response  = curl_exec($curl);
-                    curl_close( $curl );
-                    $response   = json_decode( $response );
-                    if( $is_update === false ){
-                        dupLeadNote( $varAccessToken, $lead_id, $varRequirements );
-                    }                    
-                    return $lead_id;
-                }           
-            endif;
-            $lead_id = ( isset( $response->data[0] ) ) ? $response->data[0]->details->id : 0;            
-        }
-    }
-    return $lead_id;
 }
 
 function checkSpamEmail($email) {
@@ -505,25 +295,6 @@ if( $isAjay === true ){
     } else{
         $lead_source = "Website";
     }
-
-    /*
-    $parts = explode(" ", $ajxData['name']);
-    if(count($parts) > 1) {
-        $firstn = array_pop($parts);
-        $lastn = implode(" ", $parts);
-    }
-    else
-    {
-        $firstn = "";
-        $lastn = $user_name;
-    }
-
-    if( empty( $lastn ) ){
-        $lastn = $user_name;
-    }
-    */
-
-    //$ajxData['name']
 
     $partName   = vcGetName( $ajxData['name'] );
     $firstn     = $partName[0];
@@ -803,11 +574,8 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
         $lead_source = "Website";
     }
 
-    $getUTM_source  = (isset($_COOKIE['utm_source']) && !empty($_COOKIE['utm_source'])) ? $_COOKIE['utm_source'] : '';
-    $getUTM_medium  = (isset($_COOKIE['utm_medium']) && !empty($_COOKIE['utm_medium'])) ? $_COOKIE['utm_medium'] : '';
-    $getUTM_camp    = (isset($_COOKIE['utm_campaign']) && !empty($_COOKIE['utm_campaign'])) ? 
-    $_COOKIE['utm_campaign'] : '';
-    
+    $getUTM_source = (isset($_COOKIE['utm_source']) && !empty($_COOKIE['utm_source'])) ? $_COOKIE['utm_source'] : '';
+    $getUTM_medium = (isset($_COOKIE['utm_medium']) && !empty($_COOKIE['utm_medium'])) ? $_COOKIE['utm_medium'] : '';
 
     /*
     gglads =  Advertisement: Google
@@ -874,93 +642,64 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
     storeLeadsData( $sampledata );
     //die;
 
-    if(!$isSpam){
-        $varRefererURL = isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : "";    
-        if (isset($_SERVER['HTTP_REFERER']) && !empty($_SERVER['HTTP_REFERER'])){
-            $referer_url    = $_SERVER['HTTP_REFERER'];
-            $parsed_url     = parse_url($referer_url);
-
-            $query_params = [];
-            if(isset($parsed_url['query'])){
-                parse_str($parsed_url['query'], $query_params);
-            }
-            if(!empty($getUTM_source)) {
-                $query_params['utm_source'] = $getUTM_source;
-            }
-            if(!empty($getUTM_medium)) {
-                $query_params['utm_medium'] = $getUTM_medium;
-            }
-            if(!empty($getUTM_camp)) {
-                $query_params['utm_campaign'] = $getUTM_camp;
-            }    
-            $new_query_string   = http_build_query($query_params);    
-            $varRefererURL      = $parsed_url['scheme'] . '://' . $parsed_url['host'];
-            if (isset($parsed_url['path'])) {
-                $varRefererURL .= $parsed_url['path'];
-            }
-            if (!empty($new_query_string)) {
-                $varRefererURL .= '?' . $new_query_string;
-            }
-            if (isset($parsed_url['fragment'])) {
-                $varRefererURL .= '#' . $parsed_url['fragment'];
-            }
-        } 
+    if(!$isSpam) {
+        $varRefererURL = isset( $_SERVER['HTTP_REFERER'] ) ? $_SERVER['HTTP_REFERER'] : "";
         //$result = checkCaptcha($token);
         //if($result) {
-        $varDesc = "File Uploaded :" . $uploaded_file_path . " Requirements: " . $requirement;
+            $varDesc = "File Uploaded :" . $uploaded_file_path . " Requirements: " . $requirement;
 
-        $arrZoho_v2 = array(
-        'Email'         => $user_email,
-        'First Name'    => $firstn,
-        'Last Name'     => $lastn,
-        'Phone'         => $user_phone,
-        //'Phone'       => $zoho_user_phone,
-        'Country'       => $user_country,
-        'Lead Status'   => 'Not Contacted Yet',
-        'Lead Source'   => $inSource,
-        'UTM Source'    => $inSource,
-        'UTM Medium'    => $getUTM_medium,
-        'Property'      => 'ValueCoders',
-        'IP Address'    => $ip_addr,
-        'Description'   => $varDesc,
-        'URL'           => $customUrlLink,
-        'File Uploaded' => $uploaded_file_path,
-        'Requirements'  => $requirement,
-        'refurl'        => $varRefererURL
-        );
+            $arrZoho_v2 = array(
+            'Email'         => $user_email,
+            'First Name'    => $firstn,
+            'Last Name'     => $lastn,
+            'Phone'         => $user_phone,
+            //'Phone'       => $zoho_user_phone,
+            'Country'       => $user_country,
+            'Lead Status'   => 'Not Contacted Yet',
+            'Lead Source'   => $inSource,
+            'UTM Source'    => $inSource,
+            'UTM Medium'    => $getUTM_medium,
+            'Property'      => 'ValueCoders',
+            'IP Address'    => $ip_addr,
+            'Description'   => $varDesc,
+            'URL'           => $customUrlLink,
+            'File Uploaded' => $uploaded_file_path,
+            'Requirements'  => $requirement,
+            'refurl'        => $varRefererURL
+            );
 
-        $attachmentDoc = [];
-        if( isset( $_POST['nda'] ) ){
-        $attachmentDoc = ['/home/valuecoders-com/public_html/download-pdf/ValueCoders-NDA.pdf'];    
-        }
+            $attachmentDoc = [];
+            if( isset( $_POST['nda'] ) ){
+            $attachmentDoc = ['/home/valuecoders-com/public_html/download-pdf/ValueCoders-NDA.pdf'];    
+            }
 
-        if( $arrPostParams['we-help'] == "career" ){
-        smtpEmailFunction( "careers@vinove.com", "Job Application - ValueCoders", $Mailbody, "lead", $user_email, 
-        ['parvesh@vinove.com','karma@vinove.com'], [], [], $user_name );
-        header('location:thanks');
-        die;
-        }
-
-        smtpEmailFunction( $user_email, "ValueCoders - We've received your request", $autoEmailBody, "auto", $user_email, [], [], $attachmentDoc );
-        $eSender = splEmailData( $user_country );
-
-        if( isset( $eSender['mail_to'] ) ){
-        $tempEmailSubject = "Inquiry with ValueCoders [".$ticketID."]";
-        if( isset($arrPostParams['is_free_trial']) && ($arrPostParams['is_free_trial'] == "true") ){
-        $tempEmailSubject = "Request for 7-Day Trial [".$ticketID."]";    
-        }
-        if( $eSender['mail_to'] == "pa" ){
-        smtpEmailFunction( "parvesh@vinove.com", $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], ['nitin.baluni@mail.vinove.com'], [], $user_name, false );    
-        }else{
-        smtpEmailFunction( $eSender['mail_to'], $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], $bccEmails, [], $user_name, false );        
-        }
-
-        $emailBBB =  $Mailbody.$bodyBr.print_r( $_COOKIE, 1 );
-        smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Contact Us - DEV", $emailBBB, "lead", $user_email, [], [], [], $user_name );
-
-        $insType = (isset($arrPostParams['z-leadid']) && !empty($arrPostParams['z-leadid'])) ? $arrPostParams['z-leadid'] : false;
-        zohoCrmUpdate_v2( $arrZoho_v2, $utm_source, $eSender['lead_to'], $insType );
-        }
+            if( $arrPostParams['we-help'] == "career" ){
+            smtpEmailFunction( "careers@vinove.com", "Job Application - ValueCoders", $Mailbody, "lead", $user_email, 
+            ['parvesh@vinove.com','karma@vinove.com'], [], [], $user_name );
+            header('location:thanks');
+            die;
+            }
+            
+            smtpEmailFunction( $user_email, "ValueCoders - We've received your request", $autoEmailBody, "auto", $user_email, [], [], $attachmentDoc );
+            $eSender = splEmailData( $user_country );
+            
+            if( isset( $eSender['mail_to'] ) ){
+            $tempEmailSubject = "Inquiry with ValueCoders [".$ticketID."]";
+            if( isset($arrPostParams['is_free_trial']) && ($arrPostParams['is_free_trial'] == "true") ){
+            $tempEmailSubject = "Request for 7-Day Trial [".$ticketID."]";    
+            }
+            if( $eSender['mail_to'] == "pa" ){
+            smtpEmailFunction( "parvesh@vinove.com", $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], [], [], $user_name, false );    
+            }else{
+            smtpEmailFunction( $eSender['mail_to'], $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], $bccEmails, [], $user_name, false );        
+            }
+            
+            $emailBBB =  $Mailbody.$bodyBr.print_r( $_COOKIE, 1 );
+            //smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Contact Us - DEV", $emailBBB, "lead", $user_email, [], [], [], $user_name );
+            
+            $insType = (isset($arrPostParams['z-leadid']) && !empty($arrPostParams['z-leadid'])) ? $arrPostParams['z-leadid'] : false;
+            zohoCrmUpdate_v2( $arrZoho_v2, $utm_source, $eSender['lead_to'], $insType );
+            }
     }
 
     if( isset( $arrPostParams['is_free_trial'] ) && ($arrPostParams['is_free_trial'] == "true") ){
@@ -976,7 +715,6 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
         header('location:thanks?utmsource=blog');
         die;
     }
-    _resetCookieData(['utm_source','utm_medium', 'utm_campaign']);
     header('location:thanks');
     die;
 }
