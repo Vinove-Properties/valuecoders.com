@@ -37,7 +37,7 @@ function valuecoders_pingback_header() {
 add_action( 'wp_head', 'valuecoders_pingback_header' );
 
 //__new menu__//
-add_action("admin_menu", "addMenu");
+//add_action("admin_menu", "addMenu");
 function addMenu() {
     //add_menu_page("Web Spam Leads", "Spam Leads", "manage_options", "web-leads", "webleadsfunc", null, 6);
     add_menu_page("Web Spam Leads", "Spam Leads", "manage_options", "vc-spam-leads", "vcSpamLeads_cb", 'dashicons-dismiss', 99);
