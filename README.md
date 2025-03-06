@@ -1,65 +1,121 @@
-# WordPress Project with Lead Forms & Zoho CRM Integration
-
 ## Overview
 This project is a WordPress-based website that includes lead forms for capturing user inquiries and integrates with Zoho CRM to manage and automate lead processing.
+
+## Github Repo
+https://github.com/Vinove-Properties/valuecoders.com
 
 ## Features
 - **Lead Forms**: Custom-built lead generation forms for capturing user data.
 - **Zoho CRM Integration**: Automatic lead submission to Zoho CRM for efficient management.
-- **SEO Optimized**: Optimized for search engines to improve discoverability.
-- **Responsive Design**: Mobile-friendly UI/UX.
-- **WordPress Block Editor Compatibility**: Supports modern WordPress block-based themes.
+- **Calendly Integration**: Added webhook for calendly leads into ZOHO CRM
+- **ACF Bases Wordpress Theme**: Sections & fields managed with the help of Advanced Custom Field Plugin
 
 ## Technology Stack
 - **CMS**: WordPress
-- **Forms**: Contact Form 7 / Gravity Forms / Custom Forms (Modify as per your setup)
-- **Zoho CRM Integration**: Zoho API / Zoho CRM Plugin
-- **Hosting**: Any WordPress-compatible hosting (e.g., Bluehost, SiteGround, AWS, etc.)
+- **Forms**: Custom Forms (Modify as per your setup)
+- **Zoho CRM Integration**: Zoho API / Zoho CRM VESRION 2.0
 
 ## Installation & Setup
 1. **Install WordPress**:
    - Download and install WordPress from [WordPress.org](https://wordpress.org/).
    - Set up your database and configure `wp-config.php`.
-2. **Install Required Plugins**:
-   - Contact Form 7 / Gravity Forms / Custom Form Plugin
-   - Zoho CRM Plugin or Custom API Integration Plugin
-3. **Configure Zoho CRM Integration**:
-   - Get API credentials from Zoho CRM.
-   - Set up the Zoho CRM plugin or integrate via custom API calls.
-4. **Set Up Lead Forms**:
-   - Create and configure forms to collect user information.
-   - Map form fields to Zoho CRM fields.
-5. **Test the Integration**:
-   - Submit a test lead and verify if it reaches Zoho CRM.
+2. Required Plugins   
+   ✅ Advanced Custom Fields PRO – Custom fields for managing theme content.
+   ✅ Better Search Replace – Database updates and search-replace operations.
+   ✅ Classic Editor – Restores classic WordPress editor.
+   ✅ Custom Permalinks – Customizes permalink structures.
+   ✅ Disable XML-RPC – Blocks XML-RPC attacks.
+   ✅ Duplicate Page – Enables easy duplication of pages/posts.
+   ✅ Limit Login Attempts Reloaded – Prevents brute-force login attacks.
+   ✅ Lock User Account – Enhances security by locking inactive accounts.
+   ✅ Login No Captcha reCAPTCHA – Google reCAPTCHA for login security.
+   ✅ Prevent Direct Access – Restricts access to private files.
+   ✅ Redirection – Manages URL redirects.
+   ✅ Rename wp-login.php – Custom login URL for security.
+   ✅ Wordfence Security – Firewall & malware protection.
+   ✅ WP Rocket – Performance optimization & caching.
+   ✅ Yoast SEO – On-page SEO optimization.
 
-## Zoho CRM API Integration (If Using Custom API)
-- Obtain **Zoho API credentials** (Client ID, Client Secret, Redirect URL, and Auth Token).
-- Implement OAuth 2.0 authentication.
-- Use the Zoho CRM API to send lead data from WordPress.
-- Example API Request:
-  ```bash
-  curl -X POST "https://www.zohoapis.com/crm/v2/Leads" \
-       -H "Authorization: Zoho-oauthtoken YOUR_ACCESS_TOKEN" \
-       -H "Content-Type: application/json" \
-       -d '{"data": [{"Company": "Example Company", "Last_Name": "Doe", "Email": "john@example.com"}]}'
-  ```
+3. **Zoho CRM Integration**:
+   Integration & API details are documented in the internal Google Sheet. Ensure you follow these steps for CRM setup:
+   - Generate Zoho CRM API credentials.
+   - Configure authentication tokens in the integration files.
+   - Map lead form fields to Zoho CRM lead fields.
+   - Test API requests using Postman before deploying.
+   https://docs.google.com/spreadsheets/d/1PcExtjjd9MiDgM8m8eyRpix8eIx-mHOQUQPRJgnWe-c/edit?gid=1985896880#gid=1985896880
 
-## Troubleshooting
-- **Zoho CRM Leads Not Updating?**
-  - Check API credentials and refresh tokens.
-  - Verify field mappings in the integration settings.
-- **Forms Not Submitting Data?**
-  - Check plugin settings and form configurations.
-  - Inspect JavaScript console for errors.
 
-## Future Enhancements
-- Implement webhook-based real-time lead updates.
-- Add email notifications on lead submissions.
-- Enhance spam protection with CAPTCHA.
+4. **Lead Forms Setup**:
+   Custom Scripts for Lead Handling
+   All the script files is located on root ( public_html ) directory.
+   sendmail1.php : Manages form submissions & sends email notifications.
+   vc-config.php : Stores database connection, email settings, and helper functions.
+   vc-mailto.php : Handles lead distribution based on geography & sends notifications.
+   
 
-## License
-This project is licensed under the [MIT License](LICENSE).
+5. **Calendly CRM Integration**
+   Email notifications for Calendly leads are handled directly by Calendly.
+   CRM integration is managed via a separate webhook:
+   Webhook URL: https://www.valuecoders.com/cl-webhook.php
+   Script File: cl-webhook.php (Located in the root directory)
 
-## Contact
-For support or inquiries, contact [your-email@example.com](mailto:your-email@example.com).
+### Database Schema for Lead Storage
+   The system maintains separate tables for legitimate leads, spam leads, and blocked emails.
 
+   Table : wp_webleads store all the legit lead data
+   ```sql
+   -- Contact form submissions
+   CREATE TABLE `wp_webleads` (
+   `id` bigint PRIMARY KEY AUTOINCREMENT,
+   `name` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+   `email` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+   `phone` varchar(50) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+   `country` varchar(50) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+   `message` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
+   `attachments` longtext COLLATE utf8mb4_unicode_520_ci,
+   `IP` varchar(200) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+   `source` longtext COLLATE utf8mb4_unicode_520_ci,
+   `created_at` datetime NOT NULL
+   )
+
+   Table : spam_leads store all the spam lead data
+   ```sql
+   -- Spam lead submissions
+   CREATE TABLE `spam_leads` (
+   `ID` bigint PRIMARY KEY AUTOINCREMENT,
+   `data` longtext NOT NULL,
+   `email` varchar(200) DEFAULT NULL,
+   `ip` varchar(255) DEFAULT NULL,
+   `created_at` datetime NOT NULL
+   )
+
+   Table : spam_attack store all the Block Emails which comes under the spam email attack in 10 emails with same email & IP Address.
+   ```sql
+   CREATE TABLE `spam_attack` (
+   `id` bigint PRIMARY KEY AUTOINCREMENT,
+   `email` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+   `ip` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+   `created_at` datetime NOT NULL
+   )
+
+   ***Visitor Tracking (ipinfo_logs)***
+   Tracks visitor IP addresses and geolocation data using the IPINFO API.
+   ```sql
+   CREATE TABLE `spam_attack` (
+   `id` bigint PRIMARY KEY AUTOINCREMENT,
+   `email` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+   `ip` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+   `created_at` datetime NOT NULL
+   )
+
+### Wordpress theme updates
+*** Updated Font Faces (CSS v6.0) ***
+LexendDeca-Regular
+LexendDeca-Medium
+LexendDeca-SemiBold
+LexendDeca-Bold
+
+Performance Optimization:
+- Minify CSS/JS using WP Rocket.
+- Use Lazy Loading for images & videos.
+- Optimize database using WP-Optimize.
