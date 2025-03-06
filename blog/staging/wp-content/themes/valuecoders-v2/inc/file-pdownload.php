@@ -1,14 +1,23 @@
 <?php 
 global $post;
-//$guidename = get_post_meta($post->ID,'guide_name',true); 
+//$guidename = get_post_meta($post->ID,'guide_name',true);
 $guidename  = (!empty(get_post_meta($post->ID,'guide_name',true))) ? get_post_meta($post->ID,'guide_name',true) :  get_the_title($post->ID);
+$pdfTagLine   = get_post_meta($post->ID,'pdf-dwtagline',true);
 ?>
 <div class="modal <?php if(isset($_GET['ep-action']) && !empty($_GET['ep-action'])){ echo 'show-modal epaction'; } ?>">
 <section class="pop-up-section">
 <span class="close-button">×</span>
 <div class="container" id="formid">
-<h2>Download Your FREE e-Guide NOW!</h2>
-<p>Discover What, Why & How of "<?php echo $guidename;?>" with this FREE e-Guide!</p>
+	<div style="text-align: center;">	
+	<h2>Download Your FREE e-Guide NOW!</h2>
+	<?php 
+	if( $pdfTagLine ){
+		echo '<p>'.$pdfTagLine.'</p>';
+	}else{
+		echo '<p>Discover What, Why & How of "'.$guidename.'" with this FREE e-Guide!</p>';
+	}
+	?>
+	</div>
 <div class="left-right-box">
 <div class="afterverify">
 <?php 

@@ -1,5 +1,8 @@
-<?php get_header(); ?>
-<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+<?php 
+get_header();
+global $post;  
+$author_id    = $post->post_author; 
+$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
 <section class="banner-section">
   <div class="container">
   <?php 
@@ -30,11 +33,7 @@
       </div>
     </div>
   </div>
-  <?php endif; ?>
-  <?php 
-    if( is_single() ){
-    global $post;  
-    $author_id    = $post->post_author; 
+  <?php endif;
     $commentCount = ( get_comments_number($post->ID) > 1 ) ? get_comments_number($post->ID).' Comments' : get_comments_number($post->ID).' Comment';
     $authThumbnail    = get_template_directory_uri().'/assets/images/author.png';
     $authorThumbnail  = get_field( 'auth-thumb', 'user_'.$author_id );
@@ -56,14 +55,6 @@
       $takeText = '<div class="row-key-takeaway">'.$keyAway['content'].'</div>';  
       }  
     }
-    /*$takeText = '<div class="row-key-takeaway">
-    <p>Create your ideal web application with this comprehensive step-by-step guide, providing a strategic and successful development process. It includes:</p>
-    <ul>
-      <li>Meaning and Benefits of Web Application</li>
-      <li>Types of Web Application</li>
-      <li>Detailed Plan for Starting the Development</li>
-    </ul>
-    </div>';*/  
     echo '<div class="top-header-section">';
     get_template_part('inc/search', 'popup');
     //<li class="posted-on">Published <span class="dt">'.get_the_time('F j, Y').'</span></li>
@@ -105,20 +96,9 @@
     </div></div>';
     echo '</div>';
     echo '<div id="auth-hd-profile" style="margin-top:20px; display:none;">'.get_field('auth-excerpt', 'user_'.$author_id).'</div>';
-    echo $takeText.'</div>';
-    }else{ 
-    } 
+    echo $takeText.'</div>'; 
     ?>
 </section>
-<?php /* ?>
-<div class="detail-image">
-  <div class="container">
-    <div class="detail-thumb">
-      <?php the_post_thumbnail( 'single-post-thumbnail' ); ?>
-    </div>
-  </div>
-</div>
-<?php */ ?>
 <main id="primary" class="site-main  detail-page">
   <?php
     global $post;
@@ -158,18 +138,18 @@
               <!-- <div class="text"><?php //echo $sbCTA; ?></div> -->
               <div class="btn-container">
                 <div class="btn-sec">
-                  <a href="https://www.valuecoders.com/contact" target="_blank" class="btn rounded" data-wpel-link="external" 
-                    rel="nofollow external noopener noreferrer"><span class="text-white">Schedule A Call</span></a>
+                  <a href="https://www.valuecoders.com/contact" target="_blank" class="btn rounded" 
+                  data-wpel-link="external" rel="nofollow external noopener noreferrer"><span class="text-white">Schedule A Call</span></a>
                 </div>
               </div>
             </div>
           </div>
-          <?php endif; ?>
           <?php 
+          endif;          
             $haspostPdf     = get_post_meta( $post->ID, 'post_pdf', true );
             $haspostPdflink = get_post_meta( $post->ID, 'vc-post-pdf', true );
             if( $haspostPdf || $haspostPdflink){
-            $guidename  = (!empty(get_post_meta($post->ID,'guide_name',true))) ? 
+            $guidename      = (!empty(get_post_meta($post->ID,'guide_name',true))) ? 
             get_post_meta($post->ID,'guide_name',true) :  'A Complete Guide to<br> IT Outsourcing 2023';
             echo '<div class="customcta">
               <div class="cushed">'.$guidename.'</div>
