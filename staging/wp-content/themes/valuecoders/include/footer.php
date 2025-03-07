@@ -179,7 +179,21 @@
     }
   }
   ?>
-  <div class="footer-copyright">Copyright <?php echo $copyRight;?> 2004 - <?php echo date("Y"); ?> ValueCoders, All Rights Reserved. A Vinove Company.</div>
+  <div class="footer-copyright">
+  <div class="container">
+  <div class="copyrigh-cont">  
+    <div class="cright">Copyright <?php echo $copyRight;?> 2004 - <?php echo date("Y"); ?> ValueCoders, All Rights Reserved. A Vinove Company.</div>
+    <div class="cright-links">
+    <ul>
+      <li><a href="<?php echo site_url('/privacy-policy'); ?>">Privacy Policy</a></li>
+      <li style="margin:0 10px;"><a href="<?php echo site_url('/disclaimer'); ?>">Disclaimer</a></li>
+      <li><a href="<?php echo site_url('/terms-of-service'); ?>">Terms of services</a></li>
+    </ul>  
+    </div> 
+  </div>
+  </div>
+  </div>
+
 </footer>
 
 <script type="text/javascript">

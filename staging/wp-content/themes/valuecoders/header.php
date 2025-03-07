@@ -68,6 +68,18 @@ a.ws-dotted:hover{text-decoration: none !important; color: #656565;}
 .client-img-section .right-box .award-sc .award-row .award-col p{display:none;}
 #cf-requirement textarea::placeholder{white-space: pre-line;}
 .tailored-tech .tailored-out .tailored-slider .flex-3 .box-3{cursor: inherit !important;}
+
+.copyrigh-cont{display: flex; padding: 15px 0;}
+.copyrigh-cont .cright{flex-basis: 50%; text-align: left;}
+.copyrigh-cont .cright-links{flex-basis: 50%;  text-align: right;}
+.copyrigh-cont .cright-links ul li{display: inline-block;}
+.copyrigh-cont .cright-links a{color: #8d8d8d;}
+.copyrigh-cont .cright-links a:hover{color: #b9b9b9;}
+@media (max-width: 767px) {
+.copyrigh-cont{flex-wrap: wrap;}    
+.copyrigh-cont .cright{margin-bottom:10px; line-height: 22px;}
+.copyrigh-cont .cright, .copyrigh-cont .cright-links{flex-basis: 100%; text-align: center;}
+}
 </style>
 <?php wp_head(); ?>
 
