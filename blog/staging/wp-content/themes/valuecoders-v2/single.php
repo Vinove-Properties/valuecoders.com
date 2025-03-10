@@ -131,11 +131,13 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'singl
             $sbCTA = get_field('sb-cta');  
             if( (isset( $sbCTA['required'] ) && ($sbCTA['required'] != "no"))  || (!isset( $sbCTA['required']) ) ) :
             $sbText  = (isset( $sbCTA['text'] ) && !empty($sbCTA['text'])) ? $sbCTA['text'] : 'Struggling with Tech Complexity?';
+            $sbPointers = (isset( $sbCTA['pointers'] ) && !empty($sbCTA['pointers'])) ? 
+            '<div class="text">'.$sbCTA['pointers'].'</div>' : '';
             ?>
           <div class="customcta">
             <div class="cus-cont">
               <div class="cushed"><?php echo $sbText; ?></div>
-              <!-- <div class="text"><?php //echo $sbCTA; ?></div> -->
+              <?php echo $sbPointers; ?>              
               <div class="btn-container">
                 <div class="btn-sec">
                   <a href="https://www.valuecoders.com/contact" target="_blank" class="btn rounded" 

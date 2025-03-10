@@ -147,7 +147,7 @@
         <i class="star-icon" onclick="star(event)" onmouseover="changerate('two')"></i> 
         <i class="star-icon" onclick="star(event)" onmouseover="changerate('three')"></i> 
         <i class="star-icon" onclick="star(event)" onmouseover="changerate('four')"></i> 
-        <i class="star-icon" onclick="star(event)" onmouseover="changerate('five')"></i> 
+        <i class="star-icon" onclick="star(event)" onmouseover="changerate('five')"></i>
         </span>
         <span id="rate_msg"></span>
         </span>
