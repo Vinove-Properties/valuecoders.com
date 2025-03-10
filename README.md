@@ -133,7 +133,7 @@ https://github.com/Vinove-Properties/valuecoders.git
 We have developed two versions of the HTML structure, located in: /valuecoders
 
 Current Active Version
-We are currently using Version 2.0, which can be found at: /valuecoders/version-6.0 
+We are currently using Version 6.0, which can be found at: /valuecoders/version-6.0 
 
 Project Styling & Assets
 
