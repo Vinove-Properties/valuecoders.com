@@ -127,6 +127,9 @@ Performance Optimization:
 
 ### HTML Project Structure
 
+## Github Repo
+https://github.com/Vinove-Properties/valuecoders.git
+
 We have developed two versions of the HTML structure, located in: /valuecoders
 
 Current Active Version
