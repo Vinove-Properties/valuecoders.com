@@ -119,3 +119,53 @@ Performance Optimization:
 - Minify CSS/JS using WP Rocket.
 - Use Lazy Loading for images & videos.
 - Optimize database using WP-Optimize.
+
+
+
+
+
+
+### HTML Project Structure
+
+## Github Repo
+https://github.com/Vinove-Properties/valuecoders.git
+
+We have developed two versions of the HTML structure, located in: /valuecoders
+
+Current Active Version
+We are currently using Version 6.0, which can be found at: /valuecoders/version-6.0 
+
+Project Styling & Assets
+
+This project is styled using SCSS (a CSS preprocessor) and follows a structured asset management approach. All related files are stored in: /valuecoders/version-6.0
+
+Directory Breakdown:
+
+├── version-6.0
+├── ├── css (Compiled CSS files)
+├── ├── fonts  (Using "Lexend Deca" (sans-serif) in 400, 500, 600, 700 weights)
+├── ├── header-images (Header-related images)
+├── ├── images (General images used in the project)
+├── ├── include (All Include Files)
+├── ├── js (JavaScript files)
+├── ├── menu-images (Menu-related images)
+├── ├── scss (Source SCSS files for styling)
+
+
+
+SCSS Folder Structure
+
+SCSS Folder Structure & Management
+In the SCSS folder, we have separated styles for different sections into individual SCSS files for better organization. Instead of manually importing each file, we manage styles using a centralized _default.scss file.
+
+/valuecoders/version-6.0/scss
+├── 📄 _default.scss (Includes all SCSS files using @import "_default"; to centralize imports)
+├── 📄 _menu-v3.12.scss (Header section styling)
+├── 📄 _intent-popup (Popup section which will show after 30 seconds of page load)
+├── 📄 _button-section.scss (Button styles for the project)
+├── 📄 _footer-form.scss (Form elements styling)
+
+
+With this approach, _default.scss acts as a single point of inclusion, allowing us to maintain modularity and streamline SCSS file management
+
+The SCSS and CSS folders are kept separate within: /valuecoders/version-6.0. For compiling SCSS into CSS, we use the Koala App.
