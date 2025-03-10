@@ -195,7 +195,7 @@ function defActiveHire( $hirePage, $exCat ){
                               Update your applications</a>
                               <a href="<?php echo $site_url; ?>ott-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">OTT App Development</span>
                               Monetize your content</a>
-                              <a href="<?php echo $site_url; ?>application-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
+                              <a href="<?php echo $site_url; ?>application-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintenance & Support</span>
                               Comprehensive support solutions</a>
                               <a href="<?php echo $site_url; ?>cloud-application-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Application Development</span>
                               Cloud-based software solutions</a>
