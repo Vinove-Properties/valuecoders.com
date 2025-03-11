@@ -3,6 +3,8 @@ function isStaggingVersion(){
 	return ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'staging' ) !== false) )  ?  true : false;
 }
 
+add_filter('xmlrpc_enabled', '__return_false');
+
 if( ! defined( '_S_VERSION' ) ) {
 	if( isStaggingVersion() ){
 		define( '_S_VERSION', time() );
