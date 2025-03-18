@@ -23,8 +23,9 @@ $catBlockTwo  = get_field('row-c2', 'option');
       </ul>
     </div>
     <div class="top-content">
-      <h1>Join Community of Tech Innovators</h1>
-      <p>Become part of a thriving community of IT professionals, software engineers, and tech enthusiasts.</p>
+      <h1>Software Innovation Starts Here</h1>
+      <p>Tap into the power of our top 1% software engineers and 675+ digital transformation experts.<br>Get insights to drive your business forward in today’s competitive landscape.
+</p>
     </div>
     <div class="search-blogs">
       <div class="ser-left"><span class="ftin">Featured In</span> <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/vc-featured-logos.svg" alt="Valuecoders">
@@ -125,7 +126,8 @@ $catBlockTwo  = get_field('row-c2', 'option');
       <div class="blog-posts-list three-columns">
         <?php 
         if( $videoBlock['videos'] ){
-          foreach( $videoBlock['videos'] as $video ){
+          $i = 0;
+          foreach( $videoBlock['videos'] as $video ){$i++;
           $viidThumb = ( $video['thumb'] ) ? $video['thumb']['url'] : 
           get_bloginfo('template_url').'/dev-img/default-image.jpg';
           echo '<div class="blog-post-col medium-size">
@@ -141,6 +143,9 @@ $catBlockTwo  = get_field('row-c2', 'option');
             <div class="title two-line"><a href="javascript:void(0);" class="igl_link" onclick="_playYTmedia(\''.$video['link'].'\')">'.$video['title'].'</a></div>
           </div>
           </div>';
+          if( $i == 3 ){ 
+            echo '</div><!--//.blog-posts-list three-columns--><div class="blog-posts-list three-columns">';
+          }
           }
         }
         ?>        
