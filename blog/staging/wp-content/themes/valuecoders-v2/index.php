@@ -101,7 +101,7 @@ $catBlockTwo  = get_field('row-c2', 'option');
           <img loading="lazy"  src="<?php bloginfo('template_url'); ?>/assets/images/home-custom.svg" alt="valuecoders" width="214" height="176">
         </picture>
         <div class="cus-cont">
-          <div class="cushed">Elevate Projects with Top Management Tools</div>
+          <div class="cushed">Manage teams and projects efficiently with Workstatus.</div>
           <div class="btn-container">
             <a target="_blank" class="white-btn blue pxl-ext" 
             href="https://www.workstatus.io/?free-trial" data-wpel-link="internal" rel="follow noopener">Start Free Trial</a>

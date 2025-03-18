@@ -32,8 +32,8 @@
           <p>BUSINESS VALUE CREATED</p>
         </div>
         <div class="count-col">
-          <h5>99.9%</h5>
-          <p>SERVER UPTIME FOR MANAGED IT</p>
+          <h5>10K+</h5>
+          <p>SOLUTIONS DEPLOYED</p>
         </div>
         <div class="count-col">
           <h5>1,000,000+</h5>
