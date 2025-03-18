@@ -755,9 +755,9 @@
   <div class="tab-row">
     <nav id="hiring-models" class="tab-nav">
       <div class="tab-scroll">
-        <div class="tablist active" data-tab="#tab01"><a href="#tab01">Fixed Price Model</a></div>
-        <div class="tablist" data-tab="#tab02"><a href="#tab02">Dedicated Hiring Model</a></div>
-        <div class="tablist" data-tab="#tab03"><a href="#tab03">Time & Material Model</a></div>
+        <div class="tablist active" data-tab="#tab01"><a href="javascript:void(0);">Fixed Price Model</a></div>
+        <div class="tablist" data-tab="#tab02"><a href="javascript:void(0);">Dedicated Hiring Model</a></div>
+        <div class="tablist" data-tab="#tab03"><a href="javascript:void(0);">Time & Material Model</a></div>
       </div>
     </nav>
     <div class="bcontents">
