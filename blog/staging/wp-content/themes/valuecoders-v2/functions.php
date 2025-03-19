@@ -170,7 +170,7 @@ function valuecoders_scripts() {
         'admin_ajax'  => admin_url('admin-ajax.php')
        ]
       );
-      wp_enqueue_style( 'pxl-ebook', get_stylesheet_directory_uri() . '/assets/css/pxl-ebook.css', array(), time() );  
+      //wp_enqueue_style( 'pxl-ebook', get_stylesheet_directory_uri() . '/assets/css/pxl-ebook.css', array(), time() );  
     }   
 
 	wp_enqueue_style( 'valuecoders-style', get_stylesheet_uri(), array(), _S_VERSION );
