@@ -331,7 +331,7 @@ get_header();
           <div class="flex-wrap">
             <div class="dis-flex phone-box">
               <div class="country"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/vflag-02.svg" alt="valuecoders" width="25" height="25">USA</div>
-              <div class="phone"><a href="tel:+1 628-600-5055">+1 628-600-5055</a>
+              <div class="phone"><a href="tel:+1 628 600 5055">+1 628 600 5055</a>
               </div>
             </div>
           </div>
