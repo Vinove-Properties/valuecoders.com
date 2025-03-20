@@ -383,55 +383,6 @@ if( $disOne === false ) :
 ?>
 
 
-<section class="tabs-section technologies-tabs padding-t-120 padding-b-120" id="tabs-section-3">
-      <div class="container">
-        <div class="top-section b-100">
-          <h2>Technologies We Hold Expertise In</h2>
-          <p>We use the most advanced technologies to deliver world-class solutions and the varied demands of clients in the minimum possible time.</p>
-        </div>
-        <div class="tab-flex">
-          <div class="tabs-container">
-            <ul class="tabs">
-              <li class="tab active" data-target="tech01">Trending</li>
-              <li class="tab" data-target="tech02">Platforms</li>
-              <li class="tab" data-target="tech03">Programming</li>
-            </ul>
-            <div class="tab-content">
-              <div class="content active" id="tech01">
-                <div class="dis-flex">
-                  <div class="flex-1 content-div">
-                    <div class="cont-col"><a href="#">CSS</a></div>
-                    <div class="cont-col">HTML</div>
-                    <div class="cont-col">Javascript</div>
-                    <div class="cont-col">Angular</div>
-                  </div>
-                </div>
-              </div>
-              <div class="content" id="tech02">
-                <div class="dis-flex">
-                  <div class="flex-1 content-div">
-                    <div class="cont-col"><a href="#">Test CSS</a></div>
-                     <div class="cont-col">HTML</div>
-                    <div class="cont-col">Javascript</div>
-                    <div class="cont-col">Angular</div>
-                  </div>
-                </div>
-              </div>
-              <div class="content" id="tech03">
-                <div class="dis-flex">
-                  <div class="flex-1 content-div">
-                  <div class="cont-col"><a href="#">Test CSS</a></div>
-                     <div class="cont-col">HTML</div>
-                    <div class="cont-col">Javascript</div>
-                    <div class="cont-col">Angular</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
 
 
@@ -609,6 +560,58 @@ $headText   = fnextractHeadins('h2', $htContent );
   </div>
 </section>
 <?php endif; ?>
+
+
+
+<section class="tabs-section technologies-tabs padding-t-120 padding-b-120" id="tabs-section-3">
+      <div class="container">
+        <div class="top-section b-100">
+          <h2>Technologies We Hold Expertise In</h2>
+          <p>We use the most advanced technologies to deliver world-class solutions and the varied demands of clients in the minimum possible time.</p>
+        </div>
+        <div class="tab-flex">
+          <div class="tabs-container">
+            <ul class="tabs">
+              <li class="tab active" data-target="tech01">Trending</li>
+              <li class="tab" data-target="tech02">Platforms</li>
+              <li class="tab" data-target="tech03">Programming</li>
+            </ul>
+            <div class="tab-content">
+              <div class="content active" id="tech01">
+                <div class="dis-flex">
+                  <div class="flex-1 content-div">
+                    <div class="cont-col"><a href="#">CSS</a></div>
+                    <div class="cont-col">HTML</div>
+                    <div class="cont-col">Javascript</div>
+                    <div class="cont-col">Angular</div>
+                  </div>
+                </div>
+              </div>
+              <div class="content" id="tech02">
+                <div class="dis-flex">
+                  <div class="flex-1 content-div">
+                    <div class="cont-col"><a href="#">Test CSS</a></div>
+                     <div class="cont-col">HTML</div>
+                    <div class="cont-col">Javascript</div>
+                    <div class="cont-col">Angular</div>
+                  </div>
+                </div>
+              </div>
+              <div class="content" id="tech03">
+                <div class="dis-flex">
+                  <div class="flex-1 content-div">
+                  <div class="cont-col"><a href="#">Test CSS</a></div>
+                     <div class="cont-col">HTML</div>
+                    <div class="cont-col">Javascript</div>
+                    <div class="cont-col">Angular</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 <?php 
 $codeSec = get_field('cq-accord'); 
