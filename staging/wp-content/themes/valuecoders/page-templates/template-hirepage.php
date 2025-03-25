@@ -328,10 +328,16 @@ if( $disOne === false ) :
   }
   }
   ?>
+
+
+
+
+
 <?php 
   if( is_page('hire-developers') ) :
   $tsection = get_field('tech-competency');
-  ?>
+  /*
+?>
 <section class="technology-tab-section  padding-t-120 padding-b-120 bg-light">
   <div class="container">
     <div id="head-hptechnology" class="head-txt text-center is-active"><?php echo $tsection['content']; ?></div>
@@ -345,7 +351,6 @@ if( $disOne === false ) :
         <a href="javascript:void(0);" id="hprole" onclick="swapTabTechnology('hprole', 'hptechnology')" class="tab-link">By Role</a>
       </div>
       <div id="content-hptechnology" class="tab-content is-active">
-        <!-- <div id="tech-stack-bx" class="tech-stack-updated-section for-tech-icons"></div> -->		
         <div class="tech-stacks">
           <?php 
             $techStacks = get_field('tech_stacks_cards', 265);
@@ -369,100 +374,22 @@ if( $disOne === false ) :
             ?>	
         </div>
       </div>
-      <div id="content-hprole" class="tab-content">
-        <div class="three-column-icon-section">
-          <div class="dis-flex col-box-outer">
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire IT Consultants</h3>
-                <p>Hire IT consultants and engineers who help you overcome technical challenges and streamline project workflow better.</p>
-                <a class="box-anchor" href="<?php echo site_url('/software-consulting'); ?>"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire Web App Developers</h3>
-                <p>Hire software developers from us who proficient in building powerful, scalable, and secure web apps for your business.</p>
-                <a class="box-anchor" href="<?php echo site_url('/hire-developers/hire-web-app-developers'); ?>"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire App Developers</h3>
-                <p>Hire Indian programmers from ValueCoders and build tailored native and hybrid mobile applications for your niche.</p>
-                <a class="box-anchor" href="<?php echo site_url('/hire-developers/hire-app-developers'); ?>"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire BI Consultants</h3>
-                <p>Hire an expert who can help analyze your business data to get valuable insights and display outputs on dashboards.</p>
-                <a class="box-anchor" href="<?php echo site_url('/hire-developers/hire-power-bi-developer-consultants'); ?>"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire Cloud Developers</h3>
-                <p>Hire programmers online from us and build secure, scalable, and interactive cloud-based web and mobile applications.</p>
-                <a class="box-anchor" href="<?php echo site_url('/hire-developers/hire-devops-developers'); ?>"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire Maintenance Engineers</h3>
-                <p>Our offshore software developers in India help you fully support and maintain your current software and keep it up to date.</p>
-                <a class="box-anchor" href="<?php echo site_url('/application-maintenance'); ?>"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire Big Data Experts</h3>
-                <p>Hire a programmer who can use the latest technologies like Hadoop, Power BI, etc., to analyze & extract helpful information to develop different types of business solutions.</p>
-                <a class="box-anchor" href="<?php echo site_url('/big-data-application-development-services-company'); ?>"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire AI/ML Experts</h3>
-                <p>Hire Indian developers to build AI-based software solutions and data-driven products for your business.</p>
-                <a class="box-anchor" href="<?php echo site_url('/hire-developers/hire-machine-learning-experts'); ?>"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire AR/VR Expert</h3>
-                <p>Hire software developers from ValueCoders and build AR/VR apps to enhance customer experience.</p>
-                <a class="box-anchor" href="<?php echo site_url('/hire-developers/hire-augmented-reality-developers'); ?>"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire API Developers</h3>
-                <p>Hire Indian software developers from ValueCoders. Our experts are skilled in building secure and scalable APIs for your web and mobile applications.</p>
-                <a class="box-anchor" href="<?php echo site_url('/hire-developers/hire-api-developers'); ?>"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire eCommerce Developers</h3>
-                <p>Hire eCommerce developers from us who have expertise in eCommerce technologies like Magento, Opencart, Shopify, etc.</p>
-                <a class="box-anchor" href="<?php echo site_url('/hire-developers/hire-ecommerce-developers'); ?>"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire CMS Developers</h3>
-                <p>Hire software developers and programmers from us and get advanced and real-time web applications built on CMS platforms like WordPress, Drupal, etc.</p>
-                <a class="box-anchor" href="<?php echo site_url('/hire-developers/hire-cms-developers'); ?>"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
-<?php endif; ?>	
+<?php 
+  */
+  endif; 
+?>
+
+
+
+
+
+
+
+
+
 <?php  
   $expframeworks = get_field('php_frame_work_section');
   if( $expframeworks ) :
@@ -634,6 +561,9 @@ $headText   = fnextractHeadins('h2', $htContent );
 </section>
 <?php endif; ?>
 
+
+
+
 <?php 
 $codeSec = get_field('cq-accord'); 
 if( isset( $codeSec['is_enable'] ) && ($codeSec['is_enable'] != "hide") ){
@@ -745,6 +675,60 @@ if( isset( $codeSec['tpl-content'] ) && ($codeSec['tpl-content'] == "no") ){
 endif; 
 }
 ?>
+
+
+
+
+<section class="tabs-section technologies-tabs padding-t-120 padding-b-120" id="tabs-section-3">
+      <div class="container">
+        <div class="top-section b-100">
+          <h2>Technologies We Hold Expertise In</h2>
+          <p>We use the most advanced technologies to deliver world-class solutions and the varied demands of clients in the minimum possible time.</p>
+        </div>
+        <div class="tab-flex">
+          <div class="tabs-container">
+            <ul class="tabs">
+              <li class="tab active" data-target="tech01">Trending</li>
+              <li class="tab" data-target="tech02">Platforms</li>
+              <li class="tab" data-target="tech03">Programming</li>
+            </ul>
+            <div class="tab-content">
+              <div class="content active" id="tech01">
+                <div class="dis-flex">
+                  <div class="flex-1 content-div">
+                    <div class="cont-col"><a href="#">CSS</a></div>
+                    <div class="cont-col">HTML</div>
+                    <div class="cont-col">Javascript</div>
+                    <div class="cont-col">Angular</div>
+                  </div>
+                </div>
+              </div>
+              <div class="content" id="tech02">
+                <div class="dis-flex">
+                  <div class="flex-1 content-div">
+                    <div class="cont-col"><a href="#">Test CSS</a></div>
+                     <div class="cont-col">HTML</div>
+                    <div class="cont-col">Javascript</div>
+                    <div class="cont-col">Angular</div>
+                  </div>
+                </div>
+              </div>
+              <div class="content" id="tech03">
+                <div class="dis-flex">
+                  <div class="flex-1 content-div">
+                  <div class="cont-col"><a href="#">Test CSS</a></div>
+                     <div class="cont-col">HTML</div>
+                    <div class="cont-col">Javascript</div>
+                    <div class="cont-col">Angular</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
 <?php  
   $whyChoos = get_field('why-choose');
