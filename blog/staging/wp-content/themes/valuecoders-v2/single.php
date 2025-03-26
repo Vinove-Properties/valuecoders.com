@@ -126,8 +126,22 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'singl
               <?php dynamic_sidebar('sidebar-1'); ?>
             </div>
           </div>
-          <?php endif; ?>
           <?php 
+          endif;
+
+          $haspostPdf     = get_post_meta( $post->ID, 'post_pdf', true );
+          $haspostPdflink = get_post_meta( $post->ID, 'vc-post-pdf', true );
+          if( $haspostPdf || $haspostPdflink){
+          $guidename      = (!empty(get_post_meta($post->ID,'guide_name',true))) ? 
+          get_post_meta($post->ID,'guide_name',true) :  'A Complete Guide to<br> IT Outsourcing 2023';
+          echo '<div class="customcta">
+          <div class="cushed">'.$guidename.'</div>
+          <div class="btn-container">
+          <a class="white-btn" onclick="_triggerEbook();" href="javascript:void(0);">Download Now</a>
+          </div>
+          </div>';
+          }
+
           $sbCTA = get_field('sb-cta');  
           if( (isset( $sbCTA['required'] ) && ($sbCTA['required'] != "no"))  || (!isset( $sbCTA['required']) ) ) :
           $sbText  = (isset( $sbCTA['text'] ) && !empty($sbCTA['text'])) ? $sbCTA['text'] : 'Struggling with Tech Complexity?';
@@ -152,18 +166,7 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'singl
           </div>
           <?php 
           endif;          
-            $haspostPdf     = get_post_meta( $post->ID, 'post_pdf', true );
-            $haspostPdflink = get_post_meta( $post->ID, 'vc-post-pdf', true );
-            if( $haspostPdf || $haspostPdflink){
-            $guidename      = (!empty(get_post_meta($post->ID,'guide_name',true))) ? 
-            get_post_meta($post->ID,'guide_name',true) :  'A Complete Guide to<br> IT Outsourcing 2023';
-            echo '<div class="customcta">
-              <div class="cushed">'.$guidename.'</div>
-              <div class="btn-container">
-                <a class="white-btn" onclick="_triggerEbook();" href="javascript:void(0);">Download Now</a>
-              </div>
-            </div>';
-            }
+            
             ?>
           <?php /* ?>
           <div class="detail-subsbox">

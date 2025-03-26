@@ -88,7 +88,7 @@ function ValidationEvent(e){
         let countryname = document.getElementById('country').value;
        // let pdflink = document.getElementById('pdflink').value;
         let postid = document.getElementById('postid').value;
-        let thisBtn = document.getElementById('pxldebtn');
+        let thisBtn = document.getElementById('ebook-btn');
         thisBtn.value = "Please wait...";
         thisBtn.disabled = true;
         let posttitle = document.getElementById('posttitle').value;
@@ -391,7 +391,7 @@ function _eBookDownload(e){
             return false;
         }
         
-        let thisBtn         = document.getElementById('pxldebtn');
+        let thisBtn         = document.getElementById('ebook-btn');
         thisBtn.value       = "Please wait...";
         var formData    = new FormData(e);
         var obj         = {};
