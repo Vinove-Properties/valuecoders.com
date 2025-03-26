@@ -442,7 +442,7 @@ class="modal <?php echo (isset($_GET['ep-action']) && ($_GET['ep-action'] == "sh
               </div>
               <input type="hidden" value="" name="pd-elink" id="pdf-elink">
               <input type="hidden" value="" name="posttitle" id="input-etitle">              
-              <input type="submit" id="pxldebtn" name="submit-me" value="Download Our e-Guide">
+              <input type="submit" id="ebook-btn" name="submit-me" value="Download Our e-Guide">
               <p id="errResp" style="padding:20px 10px;background:#fff;color:#f21010;margin-top:20px;display: none;"></p>
             </form>
           </div>
