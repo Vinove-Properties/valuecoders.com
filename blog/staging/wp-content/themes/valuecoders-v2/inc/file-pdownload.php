@@ -60,32 +60,32 @@ if(!empty($pdf)){
 	</div>
 	<div class="right-img">
 		<form method="post" onsubmit="return _eBookDownload( this );" id="vc-lead-form" class="orderform">
-		<p>Fill out the form below to download the e-Guide now.</p>
-		<div class="">
-		<input type="text" maxlength="50" name="firstName" id="first_name" placeholder="Enter your full name"
-		class="input-field" onkeypress="return ValidateName(event,'lblError_firstname','firstName');" value="">
-		<small class="error-msg-section" id="lblError_firstname"></small>
-		</div>
-		<div class="">
-		<input type="email" placeholder="Enter your Email Address" maxlength="50" id="txtEmail" 
-		class="input-field" value="" name="email">
-		<small class="error-msg-section" id="lblError_email"></small>
-		</div>
-		<div class="country-fld">
-		<input type="text" placeholder="Enter your Country"
-		maxlength="25" class="input-field" value="" name="country" id="country" 
-		onkeypress="return ValidateName(event,'lblError_country','country');">
-		<small class="error-msg-section" id="lblError_country"></small>
-		</div>
-		<div class="">
-		<input type="tel" placeholder="Enter your Phone Number" class="input-field" value="" name="phone" 
-		id="phone_no" maxlength="20">
-		<small class="error-msg-section" id="lblError_phone"></small>
-		</div>
-		<input type="hidden" value="<?php echo $post->ID;?>" name="postid" id="postid">
-		<input type="hidden" value="<?php echo $post->post_name;?>" name="posttitle" id="posttitle">
-		<input type="submit" id="ebook-btn" name="submit-me" value="Download Our e-Guide">
-		<p id="errResp" style="padding:20px 10px;background:#fff;color:#f21010;margin-top:20px;display: none;"></p>
+			<p>Fill out the form below to download the e-Guide now.</p>
+			<div class="">
+				<input type="text" maxlength="50" name="firstName" id="first_name" placeholder="Enter your full name" class="input-field" onkeypress="return ValidateName(event,'lblError_firstname','firstName');" value="">
+				<small class="error-msg-section" id="lblError_firstname"></small>
+			</div>
+
+			<div class="">
+				<input type="email" placeholder="Enter your Email Address" maxlength="50" id="txtEmail"  class="input-field" value="" name="email">
+				<small class="error-msg-section" id="lblError_email"></small>
+			</div>
+
+			<div class="country-fld">
+				<input type="text" placeholder="Enter your Country" maxlength="25" class="input-field" value="" name="country" id="country" 
+				onkeypress="return ValidateName(event,'lblError_country','country');">
+				<small class="error-msg-section" id="lblError_country"></small>
+			</div>
+
+			<div class="">
+				<input type="tel" placeholder="Enter your Phone Number" class="input-field" value="" name="phone" id="phone_no" maxlength="20">
+				<small class="error-msg-section" id="lblError_phone"></small>
+			</div>
+			<input type="hidden" value="<?php echo $post->ID;?>" name="postid" id="postid">
+			<input type="hidden" value="<?php echo $post->post_name;?>" name="posttitle" id="posttitle">
+			<input type="hidden" value="post" name="guide-type">
+			<input type="submit" id="ebook-btn" name="submit-me" value="Download Our e-Guide">
+			<p id="errResp" style="padding:20px 10px;background:#fff;color:#f21010;margin-top:20px;display: none;"></p>
 		</form>
 	</div>
 </div>

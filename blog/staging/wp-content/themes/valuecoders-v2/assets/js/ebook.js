@@ -29,11 +29,9 @@ if( imgtrigger !== null ){
 function _triggerEbook(){
     toggleModal();
 }
-
 //trigger.addEventListener("click", toggleModal);
 //imgtrigger.addEventListener("click", toggleModal);
 //imgtrigger1.addEventListener("click", toggleModal);
-
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
 

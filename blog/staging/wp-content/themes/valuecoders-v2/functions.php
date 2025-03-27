@@ -1233,6 +1233,8 @@ add_action('wp_ajax_nopriv__ebookRequest', '_ebookReqHandlerCB');
 function _ebookReqHandlerCB(){
     $jsonData = file_get_contents('php://input');
     $data     = json_decode($jsonData, true);
+    $gtype    = ( isset($data['guide-type']) && ($data['guide-type'] == "post") ) ?  true : false;
+
     $name     = _elmCheck( $data, 'firstName' );
     $email    = _elmCheck( $data, 'email' );
     $country  = _elmCheck( $data, 'country' );
@@ -1253,7 +1255,13 @@ function _ebookReqHandlerCB(){
     "hashcode"  => $hash,
     "formdate"  => date("Y/m/d H:i:s")
     ]);
-    $dwnLink = get_bloginfo('url').'/?ep-action=show&email='.$email.'&hash='.$hash;    
+
+    $link = get_bloginfo('url');    
+    if( $gtype ){
+        $postid     = _elmCheck( $data, 'postid' );
+        $link       = get_permalink($postid);
+    }
+    $dwnLink = add_query_arg(array('ep-action' => 'show', 'email' => $email, 'hash' => $hash), $link);
     $subject = 'Email Verification';
     $message = '<html><body>';
     $message .= '<p>Hi '.$name.',</p>';
@@ -1268,6 +1276,8 @@ function _ebookReqHandlerCB(){
     marketing@valuecoders.com<br>
     </p>';
     $message .= '</body></html>';
+
+    echo $message; die;
 
     $headers    = array('Content-Type: text/html; charset=UTF-8');
     $mail       = wp_mail( $email, $subject, $message, $headers );
