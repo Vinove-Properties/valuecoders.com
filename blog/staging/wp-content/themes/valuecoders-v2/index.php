@@ -409,10 +409,9 @@ class="modal <?php echo (isset($_GET['ep-action']) && ($_GET['ep-action'] == "sh
         <div class="rightnew">
           <div class="left-img">
             <picture>
-              <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/dev-img/home-custom.svg">
-              <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/dev-img/home-custom.svg">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/home-custom.svg" alt="valuecoders" 
-              width="215" height="176">
+              <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/dev-img/VC-Download-Now-Woman.png">
+              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/VC-Download-Now-Woman.png" 
+              alt="valuecoders" width="215" height="176">
             </picture>
           </div>
           <div class="right-img">

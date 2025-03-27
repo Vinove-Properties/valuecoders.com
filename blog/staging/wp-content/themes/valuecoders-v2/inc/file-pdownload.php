@@ -54,9 +54,10 @@ if(!empty($pdf)){
 <div class="rightnew">
 	<div class="left-img">
 		<picture>
-		<source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/dev-img/ebook-pop.webp">
-		<img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/ebook-pop.webp" alt="Valuecoders" width="245" height="472">
-		</picture>
+          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/dev-img/VC-Download-Now-man.png">
+          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/VC-Download-Now-man.png" 
+          alt="valuecoders" width="215" height="176">
+        </picture>
 	</div>
 	<div class="right-img">
 		<p id="responce" style="color:#fff;"></p>
