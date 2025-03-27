@@ -91,7 +91,7 @@
           <li>'.$li.'</li>
           <li>IP Rights & NDA (Non-disclosure Agreement) protection</li>
           <li>Flexible contracts, transparent pricing</li>
-          <li>Free Trial, Zero Overheads, Quick Setup</li>
+          <li>7-day risk-free trial, zero overheads, quick setup</li>
           </ul>';  
           }  
           
@@ -267,7 +267,7 @@ endif;
 $disOne = (isset($dmCTA['dis-1']) && ($dmCTA['dis-1'] == "yes")) ? true : false;
 if( $disOne === false ) :
 ?>
-<section class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70">
+<section id="cta-dis-1" class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70">
   <div class="container">
     <div class="head-txt text-center">
       <?php 
@@ -334,9 +334,9 @@ if( $disOne === false ) :
 
 
 <?php 
-  if( is_page('hire-developers') ) :
-  $tsection = get_field('tech-competency');
-  /*
+/*
+if( is_page('hire-developers') ) :
+$tsection = get_field('tech-competency');  
 ?>
 <section class="technology-tab-section  padding-t-120 padding-b-120 bg-light">
   <div class="container">
@@ -378,8 +378,8 @@ if( $disOne === false ) :
   </div>
 </section>
 <?php 
-  */
-  endif; 
+endif; 
+*/
 ?>
 
 
@@ -504,11 +504,61 @@ if( $disOne === false ) :
   ?>
 <!--Technology / Framework Section Ends Here-->
 
+<section class="tabs-section technologies-tabs padding-t-120 padding-b-120" id="tabs-section-3">
+<div class="container">
+<div class="top-section b-100">
+  <h2>Technologies We Hold Expertise In</h2>
+  <p>We use the most advanced technologies to deliver world-class solutions and the varied demands of clients in the minimum possible time.</p>
+</div>
+<div class="tab-flex">
+  <div class="tabs-container">
+    <ul class="tabs">
+      <li class="tab active" data-target="tech01">Trending</li>
+      <li class="tab" data-target="tech02">Platforms</li>
+      <li class="tab" data-target="tech03">Programming</li>
+    </ul>
+    <div class="tab-content">
+      <div class="content active" id="tech01">
+        <div class="dis-flex">
+          <div class="flex-1 content-div">
+            <div class="cont-col"><a href="#">CSS</a></div>
+            <div class="cont-col">HTML</div>
+            <div class="cont-col">Javascript</div>
+            <div class="cont-col">Angular</div>
+          </div>
+        </div>
+      </div>
+      <div class="content" id="tech02">
+        <div class="dis-flex">
+          <div class="flex-1 content-div">
+            <div class="cont-col"><a href="#">Test CSS</a></div>
+             <div class="cont-col">HTML</div>
+            <div class="cont-col">Javascript</div>
+            <div class="cont-col">Angular</div>
+          </div>
+        </div>
+      </div>
+      <div class="content" id="tech03">
+        <div class="dis-flex">
+          <div class="flex-1 content-div">
+          <div class="cont-col"><a href="#">Test CSS</a></div>
+             <div class="cont-col">HTML</div>
+            <div class="cont-col">Javascript</div>
+            <div class="cont-col">Angular</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
 <?php 
 $disTwo = (isset($dmCTA['dis-2']) && ($dmCTA['dis-2'] == "yes")) ? true : false;
 if( $disTwo === false ) :
 ?>
-<section class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70">
+<section id="cta-dis-2" class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70">
   <div class="container">
     <div class="head-txt text-center">
       <?php       
@@ -522,7 +572,8 @@ if( $disTwo === false ) :
       ?>            
     </div>
     <?php
-      $ctaTxt_two = (isset($vcBtn['link-two']) && !empty($vcBtn['link-two'])) ? $vcBtn['link-two'] : "Talk To Our Experts";
+      $ctaTxt_two = (isset($vcBtn['link-two']) && !empty($vcBtn['link-two'])) ? $vcBtn['link-two'] : 
+      "Talk To Our Experts";
       //cmnCTA_v3( $ctaTxt_two ); 
       echo hireCmn_cta();
       ?>
@@ -675,60 +726,6 @@ if( isset( $codeSec['tpl-content'] ) && ($codeSec['tpl-content'] == "no") ){
 endif; 
 }
 ?>
-
-
-
-
-<section class="tabs-section technologies-tabs padding-t-120 padding-b-120" id="tabs-section-3">
-      <div class="container">
-        <div class="top-section b-100">
-          <h2>Technologies We Hold Expertise In</h2>
-          <p>We use the most advanced technologies to deliver world-class solutions and the varied demands of clients in the minimum possible time.</p>
-        </div>
-        <div class="tab-flex">
-          <div class="tabs-container">
-            <ul class="tabs">
-              <li class="tab active" data-target="tech01">Trending</li>
-              <li class="tab" data-target="tech02">Platforms</li>
-              <li class="tab" data-target="tech03">Programming</li>
-            </ul>
-            <div class="tab-content">
-              <div class="content active" id="tech01">
-                <div class="dis-flex">
-                  <div class="flex-1 content-div">
-                    <div class="cont-col"><a href="#">CSS</a></div>
-                    <div class="cont-col">HTML</div>
-                    <div class="cont-col">Javascript</div>
-                    <div class="cont-col">Angular</div>
-                  </div>
-                </div>
-              </div>
-              <div class="content" id="tech02">
-                <div class="dis-flex">
-                  <div class="flex-1 content-div">
-                    <div class="cont-col"><a href="#">Test CSS</a></div>
-                     <div class="cont-col">HTML</div>
-                    <div class="cont-col">Javascript</div>
-                    <div class="cont-col">Angular</div>
-                  </div>
-                </div>
-              </div>
-              <div class="content" id="tech03">
-                <div class="dis-flex">
-                  <div class="flex-1 content-div">
-                  <div class="cont-col"><a href="#">Test CSS</a></div>
-                     <div class="cont-col">HTML</div>
-                    <div class="cont-col">Javascript</div>
-                    <div class="cont-col">Angular</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
 
 <?php  
   $whyChoos = get_field('why-choose');

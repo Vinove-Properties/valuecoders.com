@@ -2,19 +2,15 @@
   <div class="container">
     <div class="head-txt text-center">
       <h2>Why Hire Developers From ValueCoders?</h2>
-      <p>If you aspire to accelerate business growth using cutting-edge software, our Indian software programmers and developers can transform your vision into reality. Hire a software programmer from us and get tailored solutions that grow your business by improving overall ROI, enhancing productivity, and slashing operational costs.</p>
+      <p>Accelerate your product development with elite developers from one of India’s most trusted software engineering partners. Our remote developers don’t just code - they align with your business goals, integrate seamlessly with your teams, and start delivering value from day one.</p>
     </div>
     <div class="dis-flex  col-box-outer">
       <div class="row-box dis-flex justify-sb items-center">
         <div class="flex-2">
-          <h3>High quality/cost ratio</h3>
+          <h3>Engineering Excellence, At Scale</h3>
           <ul>
-            <li><strong>Hire Silicon Valley caliber at half the cost</strong>
-              Hire the top 1% of 1.5 million+ developers from 150+ countries who have applied to ValueCoders.
-            </li>
-            <li><strong>100+ skills available</strong>
-              Hire React, Node, Python, Angular, Swift, React Native, Android, Java, Rails, Golang, DevOps, ML, Data Engineers, and more.
-            </li>
+            <li>Hire pre-vetted developers from the top 1% of a global talent pool, rigorously tested on technical depth, communication, and product ownership.</li>
+            <li>Over 100+ skills available including: React, Python, DevOps, Data Engineering, Node.js, ML, Go, Swift, and more.</li>
           </ul>
         </div>
         <div class="flex-2">
@@ -29,14 +25,10 @@
       </div>
       <div class="row-box  dis-flex justify-sb items-center">
         <div class="flex-2">
-          <h3>Rigorous Vetting</h3>
+          <h3>Rigorous Vetting Beyond Just Coding</h3>
           <ul>
-            <li><strong>5+ hours of tests and interviews</strong>
-              More rigorous than Silicon Valley job interviews. We test for 100+ skills, data structures, algorithms, systems design, software specializations &amp; frameworks.
-            </li>
-            <li><strong>Seniority tests</strong>
-              We select excellent communicators who can proactively take ownership of business and product objectives without micromanagement.
-            </li>
+            <li>5+ hours of assessments on DSA, system design, frameworks, and soft skills</li>
+            <li>Seniority tests to ensure proactive problem solvers - not just coders. Only client-ready engineers get through</li>
           </ul>
         </div>
         <div class="flex-2">
@@ -51,17 +43,10 @@
       </div>
       <div class="row-box dis-flex justify-sb items-center">
         <div class="flex-2">
-          <h3>Effective collaboration</h3>
+          <h3>Full Transparency & Productivity Insights</h3>
           <ul>
-            <li><strong>Daily updates</strong>
-              ValueCoders Workspace gives you even more visibility into your remote developer’s work with automatic time tracking &amp; virtual daily stand-ups.
-            </li>
-            <li><strong>Easy to manage</strong>
-              High visibility makes Turing developers easy to manage and ensures that they constantly work on what’s most valuable to you.
-            </li>
-            <li><strong>Match your timezone</strong>
-              Our developers match your time zone and overlap a minimum of 4 hours with your workday.
-            </li>
+            <li>Powered by Workstatus™, our developers log proof-of-work timesheets, track task-level progress, and join daily standups.</li>
+            <li>Our developers match your time zone and overlap a minimum of 4 hours with your workday.</li>
           </ul>
         </div>
         <div class="flex-2">
