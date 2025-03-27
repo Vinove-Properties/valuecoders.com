@@ -4,7 +4,7 @@ global $post;
 $guidename  = (!empty(get_post_meta($post->ID,'guide_name',true))) ? get_post_meta($post->ID,'guide_name',true) :  get_the_title($post->ID);
 $pdfTagLine   = get_post_meta($post->ID,'pdf-dwtagline',true);
 ?>
-<div class="modal show-modal epaction<?php if(isset($_GET['ep-action']) && !empty($_GET['ep-action'])){ echo 'show-modal epaction'; } ?>">
+<div class="modal <?php if(isset($_GET['ep-action']) && !empty($_GET['ep-action'])){ echo 'show-modal epaction'; } ?>">
 <section class="pop-up-section">
 <span class="close-button">×</span>
 <div class="container" id="formid">

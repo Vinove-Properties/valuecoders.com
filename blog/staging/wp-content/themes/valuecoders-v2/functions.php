@@ -1277,8 +1277,6 @@ function _ebookReqHandlerCB(){
     </p>';
     $message .= '</body></html>';
 
-    echo $message; die;
-
     $headers    = array('Content-Type: text/html; charset=UTF-8');
     $mail       = wp_mail( $email, $subject, $message, $headers );
     if( $mail ){
