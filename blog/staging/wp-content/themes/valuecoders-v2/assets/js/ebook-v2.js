@@ -393,9 +393,10 @@ function _eBookDownload(e){
         
         let thisBtn         = document.getElementById('ebook-btn');
         thisBtn.value       = "Please wait...";
-        var formData    = new FormData(e);
-        var obj         = {};
-        formData.forEach((value, key) => obj[key] = value); 
+        var formData        = new FormData(e);
+        var obj             = {};
+        formData.forEach((value, key) => obj[key] = value);
+
         fetch( pxlObj.admin_ajax+"?action=_ebookRequest", {
             method: 'POST',
             headers: {'Accept': 'application/json', 'Content-Type': 'application/json'},
@@ -403,7 +404,7 @@ function _eBookDownload(e){
         })
         .then(response => response.json())
         .then(data => {
-            if( data.success === true ){                
+            if( data.success === true ){          
                 thisBtn.disabled    = true;
                 document.getElementById('elm-eForm').style.display = 'none';
                 var response = data.message;

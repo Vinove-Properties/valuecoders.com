@@ -59,7 +59,8 @@ if(!empty($pdf)){
 		</picture>
 	</div>
 	<div class="right-img">
-		<form method="post" onsubmit="return _eBookDownload( this );" id="vc-lead-form" class="orderform">
+		<p id="responce" style="color:#fff;"></p>
+		<form method="post" onsubmit="return _eBookDownload( this );" id="elm-eForm" class="orderform">
 			<p>Fill out the form below to download the e-Guide now.</p>
 			<div class="">
 				<input type="text" maxlength="50" name="firstName" id="first_name" placeholder="Enter your full name" class="input-field" onkeypress="return ValidateName(event,'lblError_firstname','firstName');" value="">
