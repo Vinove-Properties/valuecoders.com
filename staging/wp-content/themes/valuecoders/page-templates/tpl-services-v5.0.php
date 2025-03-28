@@ -470,6 +470,9 @@
     </div>
   </div>
 </section>
+
+<?php echo getCmnTechExperties(); ?>
+
 <?php
   if( isset($techStacks['is_enabled']) && ($techStacks['is_enabled'] == "yes") ) :
   ?>
