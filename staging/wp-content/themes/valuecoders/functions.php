@@ -1838,7 +1838,7 @@ if( isset($techs['required']) && ($techs['required'] == "yes") ){
 	$elm .= '<div class="top-section b-100">'.$techs['content'].'</div>';
 	if(isset($techs['tech-block']) && is_array($techs['tech-block']) && (count($techs['tech-block']) > 0) ){
 	$elm .= '<div class="tab-flex"><div class="tabs-container">';
-	$elm .= '<ul>';
+	$elm .= '<ul class="tabs">';
 		$i = 0;
 		foreach($techs['tech-block'] as $tab){ $i++;
 		$isActive = ( $i === 1 ) ? 'active' : '';  
