@@ -496,6 +496,7 @@ endif;
 <!--Technology / Framework Section Ends Here-->
 <?php 
 $techs = get_field('tech-experties');
+if( isset($techs['required']) && ($techs['required'] == "yes") ) :
 ?>
 <section class="tabs-section technologies-tabs padding-t-120 padding-b-120" id="tabs-section-3">
 <div class="container">
@@ -532,6 +533,7 @@ if(isset($techs['tech-block']) && is_array($techs['tech-block']) && (count($tech
 <?php endif; ?>
 </div>
 </section>
+<?php endif; ?>
 
 <?php 
 $disTwo = (isset($dmCTA['dis-2']) && ($dmCTA['dis-2'] == "yes")) ? true : false;
