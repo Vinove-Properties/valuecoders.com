@@ -512,7 +512,7 @@ if(isset($techs['tech-block']) && (count($techs['tech-block']) > 0) :
       $i = 0;
       foreach($techs['tech-block'] as $tab){ $i++;
       $isActive = ( $i === 1 ) ? 'active' : '';  
-      echo '<li class="tab '.$isActive.'" data-target="tech-exp'.$1.'">'.$tab['title'].'</li>';
+      echo '<li class="tab '.$isActive.'" data-target="tech-exp'.$i.'">'.$tab['title'].'</li>';
       }
       ?>
     </ul>
@@ -521,7 +521,7 @@ if(isset($techs['tech-block']) && (count($techs['tech-block']) > 0) :
       $i = 0;
       foreach($techs['tech-block'] as $tab){ $i++;
       $isActive = ( $i === 1 ) ? 'active' : '';   
-      echo '<div class="content '.$isActive.'" id="tech-exp'.$1.'">
+      echo '<div class="content '.$isActive.'" id="tech-exp'.$i.'">
       <div class="dis-flex"><div class="flex-1 content-div">'.$tab['listing'].'</div></div>
       </div>';
       } 
