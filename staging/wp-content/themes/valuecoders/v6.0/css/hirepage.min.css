@@ -2959,41 +2959,48 @@ body.page-template-template-testimonials .client-video-section iframe,
       padding: 50px;
       border-radius: 0 20px 20px 0; }
       .tabs-section.technologies-tabs .tab-content .content-div {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px; }
-        .tabs-section.technologies-tabs .tab-content .content-div .cont-col {
-          flex-basis: 49%;
+        width: 100%; }
+        .tabs-section.technologies-tabs .tab-content .content-div ul {
+          width: 100%;
           display: flex;
-          align-items: center;
-          background: #FFF6E3;
-          border: 2px solid transparent;
-          border-radius: 10px;
-          color: #05164d;
-          padding: 15px;
-          position: relative;
-          overflow: hidden;
-          min-height: 63px; }
-          .tabs-section.technologies-tabs .tab-content .content-div .cont-col i {
-            width: 36px;
-            margin-right: 10px; }
-            .tabs-section.technologies-tabs .tab-content .content-div .cont-col i img {
-              width: 100%;
-              vertical-align: middle; }
-          .tabs-section.technologies-tabs .tab-content .content-div .cont-col a {
-            width: 100%;
-            height: 100%;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin: 0; }
+          .tabs-section.technologies-tabs .tab-content .content-div ul li {
+            flex-basis: 49%;
             display: flex;
             align-items: center;
-            position: absolute;
-            left: 0;
-            top: 0;
+            background: #FFF6E3;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            color: #05164d;
             padding: 15px;
-            border-radius: 10px; }
-            .tabs-section.technologies-tabs .tab-content .content-div .cont-col a:hover {
-              border: 2px solid #FFAD00;
-              background: #fff; }
+            position: relative;
+            overflow: hidden;
+            min-height: 63px; }
+            .tabs-section.technologies-tabs .tab-content .content-div ul li:before {
+              display: none; }
+            .tabs-section.technologies-tabs .tab-content .content-div ul li i {
+              width: 36px;
+              margin-right: 10px; }
+              .tabs-section.technologies-tabs .tab-content .content-div ul li i img {
+                width: 100%;
+                vertical-align: middle; }
+            .tabs-section.technologies-tabs .tab-content .content-div ul li a {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              position: absolute;
+              left: 0;
+              top: 0;
+              padding: 15px;
+              border-radius: 10px;
+              color: #05164d; }
+              .tabs-section.technologies-tabs .tab-content .content-div ul li a:hover {
+                border: 2px solid #FFAD00;
+                background: #fff;
+                text-decoration: none; }
     .tabs-section.technologies-tabs:after {
       content: '';
       background: url(../images/home-images/tech-bg.png) no-repeat center;
@@ -3008,7 +3015,7 @@ body.page-template-template-testimonials .client-video-section iframe,
 @media (max-width: 1320px) {
   .tabs-section .tabs-container {
     flex-basis: 50%; }
-  .tabs-section.technologies-tabs .tab-content .content-div .cont-col {
+  .tabs-section.technologies-tabs .tab-content .content-div ul li {
     flex-basis: 48%;
     min-height: 60px; }
   .tabs-section.technologies-tabs:after {
@@ -3030,7 +3037,7 @@ body.page-template-template-testimonials .client-video-section iframe,
         right: 15px; }
   .tabs-section.technologies-tabs .tab-content {
     padding: 20px; }
-    .tabs-section.technologies-tabs .tab-content .content-div .cont-col {
+    .tabs-section.technologies-tabs .tab-content .content-div ul li {
       flex-basis: 100%;
       min-height: 60px; }
   .tabs-section.technologies-tabs:after {
@@ -3115,12 +3122,12 @@ body.page-template-template-testimonials .client-video-section iframe,
       padding: 30px;
       border-radius: 0 0 15px 15px;
       margin: 0; }
-      .tabs-section.technologies-tabs .tab-content .content-div {
+      .tabs-section.technologies-tabs .tab-content .content-div ul {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         gap: 10px; }
-        .tabs-section.technologies-tabs .tab-content .content-div .cont-col {
+        .tabs-section.technologies-tabs .tab-content .content-div ul li {
           flex-basis: 100%;
           min-height: 60px; }
     .tabs-section.technologies-tabs:after {
