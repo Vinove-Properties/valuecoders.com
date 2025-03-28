@@ -503,7 +503,7 @@ $techs = get_field('tech-experties');
   <?php echo (isset($techs['content']) && !empty($techs['content'])) ? $techs['content'] : ''; ?>  
 </div>
 <?php 
-if(isset($techs['tech-block']) && (count($techs['tech-block']) > 0) ) :   
+if(isset($techs['tech-block']) && is_array($techs['tech-block']) && (count($techs['tech-block']) > 0) ) :   
 ?>
 <div class="tab-flex">
   <div class="tabs-container">    
