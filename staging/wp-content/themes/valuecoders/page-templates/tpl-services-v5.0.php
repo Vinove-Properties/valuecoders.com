@@ -471,7 +471,12 @@
   </div>
 </section>
 
-<?php echo getCmnTechExperties(); ?>
+<?php 
+$showTE = get_field('show-te');
+if( $showTE === "yes" ){
+  echo getCmnTechExperties();   
+}
+?>
 
 <?php
   if( isset($techStacks['is_enabled']) && ($techStacks['is_enabled'] == "yes") ) :
