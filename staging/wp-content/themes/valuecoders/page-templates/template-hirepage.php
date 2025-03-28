@@ -381,15 +381,6 @@ $tsection = get_field('tech-competency');
 endif; 
 */
 ?>
-
-
-
-
-
-
-
-
-
 <?php  
   $expframeworks = get_field('php_frame_work_section');
   if( $expframeworks ) :
@@ -503,54 +494,42 @@ endif;
   endif; 
   ?>
 <!--Technology / Framework Section Ends Here-->
-
+<?php 
+$techs = get_field('tech-experties');
+?>
 <section class="tabs-section technologies-tabs padding-t-120 padding-b-120" id="tabs-section-3">
 <div class="container">
 <div class="top-section b-100">
-  <h2>Technologies We Hold Expertise In</h2>
-  <p>We use the most advanced technologies to deliver world-class solutions and the varied demands of clients in the minimum possible time.</p>
+  <?php echo (isset($techs['content']) && !empty($techs['content'])) ? $techs['content'] : ''; ?>  
 </div>
+<?php 
+if(isset($techs['tech-block']) && (count($techs['tech-block']) > 0) :   
+?>
 <div class="tab-flex">
-  <div class="tabs-container">
+  <div class="tabs-container">    
     <ul class="tabs">
-      <li class="tab active" data-target="tech01">Trending</li>
-      <li class="tab" data-target="tech02">Platforms</li>
-      <li class="tab" data-target="tech03">Programming</li>
+      <?php 
+      $i = 0;
+      foreach($techs['tech-block'] as $tab){ $i++;
+      $isActive = ( $i === 1 ) ? 'active' : '';  
+      echo '<li class="tab '.$isActive.'" data-target="tech-exp'.$1.'">'.$tab['title'].'</li>';
+      }
+      ?>
     </ul>
     <div class="tab-content">
-      <div class="content active" id="tech01">
-        <div class="dis-flex">
-          <div class="flex-1 content-div">
-            <div class="cont-col"><a href="#">CSS</a></div>
-            <div class="cont-col">HTML</div>
-            <div class="cont-col">Javascript</div>
-            <div class="cont-col">Angular</div>
-          </div>
-        </div>
-      </div>
-      <div class="content" id="tech02">
-        <div class="dis-flex">
-          <div class="flex-1 content-div">
-            <div class="cont-col"><a href="#">Test CSS</a></div>
-             <div class="cont-col">HTML</div>
-            <div class="cont-col">Javascript</div>
-            <div class="cont-col">Angular</div>
-          </div>
-        </div>
-      </div>
-      <div class="content" id="tech03">
-        <div class="dis-flex">
-          <div class="flex-1 content-div">
-          <div class="cont-col"><a href="#">Test CSS</a></div>
-             <div class="cont-col">HTML</div>
-            <div class="cont-col">Javascript</div>
-            <div class="cont-col">Angular</div>
-          </div>
-        </div>
-      </div>
+      <?php 
+      $i = 0;
+      foreach($techs['tech-block'] as $tab){ $i++;
+      $isActive = ( $i === 1 ) ? 'active' : '';   
+      echo '<div class="content '.$isActive.'" id="tech-exp'.$1.'">
+      <div class="dis-flex"><div class="flex-1 content-div">'.$tab['listing'].'</div></div>
+      </div>';
+      } 
+      ?>
     </div>
   </div>
 </div>
+<?php endif; ?>
 </div>
 </section>
 
