@@ -1828,3 +1828,36 @@ add_filter('wp_get_attachment_image_attributes', function($attr, $attachment, $s
 	}
 	return $attr;
 }, 10, 3);
+
+function getCmnTechExperties(){
+$techs = get_field('tech-experties', 8024);
+$elm = '';
+if( isset($techs['required']) && ($techs['required'] == "yes") ){
+	$elm .= '<section class="tabs-section technologies-tabs padding-t-120 padding-b-120" id="tabs-section-3">';
+	$elm .= '<div class="container">';
+	$elm .= '<div class="top-section b-100">'.$techs['content'].'</div>';
+	if(isset($techs['tech-block']) && is_array($techs['tech-block']) && (count($techs['tech-block']) > 0) ){
+	$elm .= '<div class="tab-flex"><div class="tabs-container">';
+	$elm .= '<ul>';
+		$i = 0;
+		foreach($techs['tech-block'] as $tab){ $i++;
+		$isActive = ( $i === 1 ) ? 'active' : '';  
+		$elm .= '<li class="tab '.$isActive.'" data-target="tech-exp'.$i.'">'.$tab['title'].'</li>';
+		}
+	$elm .= '</ul>';	
+	$elm .= '<div class="tab-content">';	
+	$i = 0;
+	  foreach($techs['tech-block'] as $tab){ $i++;
+	  $isActive = ( $i === 1 ) ? 'active' : '';   
+	  $elm .= '<div class="content '.$isActive.'" id="tech-exp'.$i.'">
+	  <div class="dis-flex"><div class="flex-1 content-div">'.$tab['listing'].'</div></div>
+	  </div>';
+	  }
+	$elm .= '</div>';	
+
+	$elm .= '</div></div>';
+	}
+	$elm .= '</div>';
+	$elm .= '</section>';
+}
+}

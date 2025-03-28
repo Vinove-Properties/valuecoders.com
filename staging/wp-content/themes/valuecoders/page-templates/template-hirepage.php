@@ -494,46 +494,7 @@ endif;
   endif; 
   ?>
 <!--Technology / Framework Section Ends Here-->
-<?php 
-$techs = get_field('tech-experties');
-if( isset($techs['required']) && ($techs['required'] == "yes") ) :
-?>
-<section class="tabs-section technologies-tabs padding-t-120 padding-b-120" id="tabs-section-3">
-<div class="container">
-<div class="top-section b-100">
-  <?php echo (isset($techs['content']) && !empty($techs['content'])) ? $techs['content'] : ''; ?>  
-</div>
-<?php 
-if(isset($techs['tech-block']) && is_array($techs['tech-block']) && (count($techs['tech-block']) > 0) ) :   
-?>
-<div class="tab-flex">
-  <div class="tabs-container">    
-    <ul class="tabs">
-      <?php 
-      $i = 0;
-      foreach($techs['tech-block'] as $tab){ $i++;
-      $isActive = ( $i === 1 ) ? 'active' : '';  
-      echo '<li class="tab '.$isActive.'" data-target="tech-exp'.$i.'">'.$tab['title'].'</li>';
-      }
-      ?>
-    </ul>
-    <div class="tab-content">
-      <?php 
-      $i = 0;
-      foreach($techs['tech-block'] as $tab){ $i++;
-      $isActive = ( $i === 1 ) ? 'active' : '';   
-      echo '<div class="content '.$isActive.'" id="tech-exp'.$i.'">
-      <div class="dis-flex"><div class="flex-1 content-div">'.$tab['listing'].'</div></div>
-      </div>';
-      } 
-      ?>
-    </div>
-  </div>
-</div>
-<?php endif; ?>
-</div>
-</section>
-<?php endif; ?>
+<?php echo getCmnTechExperties(); ?>
 
 <?php 
 $disTwo = (isset($dmCTA['dis-2']) && ($dmCTA['dis-2'] == "yes")) ? true : false;
