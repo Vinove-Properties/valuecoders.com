@@ -1860,4 +1860,5 @@ if( isset($techs['required']) && ($techs['required'] == "yes") ){
 	$elm .= '</div>';
 	$elm .= '</section>';
 }
+return $elm;
 }
