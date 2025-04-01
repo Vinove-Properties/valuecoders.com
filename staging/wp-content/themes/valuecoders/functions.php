@@ -690,15 +690,14 @@ if( $tagSlug !== false ){
 $reapUrl = 'https://www.valuecoders.com/blog/wp-json/bposts/v1/cat-posts/'.preg_replace('/\s+/', '',$tagSlug).'?var='.time();
 
 //echo '<h5>'.$reapUrl.'</h5><br>';
-$response 			= wp_remote_get( $reapUrl );
+$response = wp_remote_get( $reapUrl );
 if(is_array( $response ) && !is_wp_error( $response )){
 	$data 	= json_decode($response['body']);
-	if( count( $data ) > 1 ){
+	if( is_array( $data ) && (count( $data ) > 1) ){
 		$loop	= json_decode($response['body']);	
 	}
 }	
 }
-
 ?>
 <section class="full-width-two-column padding-b-150">
 <?php 
