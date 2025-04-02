@@ -494,7 +494,12 @@ endif;
   endif; 
   ?>
 <!--Technology / Framework Section Ends Here-->
-<?php echo getCmnTechExperties(); ?>
+<?php 
+$showCmnTech = get_field('cmn-texpert');
+if( $showCmnTech && ($showCmnTech == "yes") ){
+echo getCmnTechExperties();   
+}
+?>
 
 <?php 
 $disTwo = (isset($dmCTA['dis-2']) && ($dmCTA['dis-2'] == "yes")) ? true : false;
