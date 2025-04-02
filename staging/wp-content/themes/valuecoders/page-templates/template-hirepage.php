@@ -673,103 +673,29 @@ if( isset( $codeSec['tpl-content'] ) && ($codeSec['tpl-content'] == "no") ){
 endif; 
 }
 ?>
+<?php 
+$byRole = get_field('te-byrole');
+if( isset($byRole['required']) &&  $byRole['required'] == "yes" ) :
+?>
 <section class="padding-t-120 padding-b-120">
-<div class="container">
-<div class="head-txt text-center"><h2>By Role Tile Content Here</h2>
-<p>ValueCoders is dedicated to engineering optimal technology solutions that augment overall gains for our global clients. We have a strong team of software programmers experienced in diverse technology sets ranging from mobility, web development, Blockchain, AI, and more, fulfilling all your development needs. Take a look at the core technologies our developers hold comprehensive expertise in.</p>
-</div>
-<div class="tab-content is-active">
-        <div class="three-column-icon-section">
-          <div class="dis-flex col-box-outer">
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire IT Consultants</h3>
-                <p>Hire IT consultants and engineers who help you overcome technical challenges and streamline project workflow better.</p>
-                <a class="box-anchor" href="https://www.valuecoders.com/software-consulting"></a>
+  <div class="container">
+    <div class="head-txt text-center"><?php echo $byRole['content']; ?></div>
+    <?php 
+    if( $byRole['cards'] ){
+      echo '<div class="three-column-icon-section"><div class="dis-flex col-box-outer">';
+      foreach( $byRole['cards'] as $card ){
+      echo '<div class="flex-3 box-3 has-anchor">
+              <div class="box">'.$card['content'].'            
+                <a class="box-anchor" href="'.vc_siteurl($card['link']).'"></a>
               </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire Web App Developers</h3>
-                <p>Hire software developers from us who proficient in building powerful, scalable, and secure web apps for your business.</p>
-                <a class="box-anchor" href="https://www.valuecoders.com/hire-developers/hire-web-app-developers"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire App Developers</h3>
-                <p>Hire Indian programmers from ValueCoders and build tailored native and hybrid mobile applications for your niche.</p>
-                <a class="box-anchor" href="https://www.valuecoders.com/hire-developers/hire-app-developers"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire BI Consultants</h3>
-                <p>Hire an expert who can help analyze your business data to get valuable insights and display outputs on dashboards.</p>
-                <a class="box-anchor" href="https://www.valuecoders.com/hire-developers/hire-power-bi-developer-consultants"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire Cloud Developers</h3>
-                <p>Hire programmers online from us and build secure, scalable, and interactive cloud-based web and mobile applications.</p>
-                <a class="box-anchor" href="https://www.valuecoders.com/hire-developers/hire-devops-developers"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire Maintenance Engineers</h3>
-                <p>Our offshore software developers in India help you fully support and maintain your current software and keep it up to date.</p>
-                <a class="box-anchor" href="https://www.valuecoders.com/application-maintenance"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire Big Data Experts</h3>
-                <p>Hire a programmer who can use the latest technologies like Hadoop, Power BI, etc., to analyze &amp; extract helpful information to develop different types of business solutions.</p>
-                <a class="box-anchor" href="https://www.valuecoders.com/big-data-application-development-services-company"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire AI/ML Experts</h3>
-                <p>Hire Indian developers to build AI-based software solutions and data-driven products for your business.</p>
-                <a class="box-anchor" href="https://www.valuecoders.com/hire-developers/hire-machine-learning-experts"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire AR/VR Expert</h3>
-                <p>Hire software developers from ValueCoders and build AR/VR apps to enhance customer experience.</p>
-                <a class="box-anchor" href="https://www.valuecoders.com/hire-developers/hire-augmented-reality-developers"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire API Developers</h3>
-                <p>Hire Indian software developers from ValueCoders. Our experts are skilled in building secure and scalable APIs for your web and mobile applications.</p>
-                <a class="box-anchor" href="https://www.valuecoders.com/hire-developers/hire-api-developers"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire eCommerce Developers</h3>
-                <p>Hire eCommerce developers from us who have expertise in eCommerce technologies like Magento, Opencart, Shopify, etc.</p>
-                <a class="box-anchor" href="https://www.valuecoders.com/hire-developers/hire-ecommerce-developers"></a>
-              </div>
-            </div>
-            <div class="flex-3 box-3 has-anchor">
-              <div class="box">
-                <h3>Hire CMS Developers</h3>
-                <p>Hire software developers and programmers from us and get advanced and real-time web applications built on CMS platforms like WordPress, Drupal, etc.</p>
-                <a class="box-anchor" href="https://www.valuecoders.com/hire-developers/hire-cms-developers"></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>  
+            </div>';  
+      }
+      echo '</div></div>';
+    }
+    ?>
+  </div>  
 </section>  
+<?php endif;  ?>
 
 <?php  
 $whyChoos = get_field('why-choose');
