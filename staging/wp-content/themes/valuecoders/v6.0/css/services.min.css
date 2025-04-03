@@ -5787,6 +5787,209 @@ body.page-template-template-testimonials .client-video-section iframe,
     background: none !important; }
   .full-width-two-column .content-box {
     border-top: 1px solid #3a3c56; } }
+.development-process p {
+  color: #ffffff !important;
+  line-height: 26px;
+  margin: 15px 0 0; }
+.development-process .app-dprocess {
+  background: #212150;
+  padding: 50px 30px 40px;
+  position: relative; }
+  .development-process .app-dprocess:after {
+    content: "";
+    background: linear-gradient(180deg, #ffcf66 0%, #e19b01 100%);
+    width: 95%;
+    height: 4px;
+    position: absolute;
+    left: 31px;
+    top: 163px; }
+  .development-process .app-dprocess:before {
+    content: "";
+    content: "";
+    width: 25%;
+    height: 1px;
+    border-bottom: 1px dashed #ffffff;
+    bottom: 0;
+    position: absolute;
+    top: 163px;
+    right: 0; }
+  .development-process .app-dprocess .process-item {
+    flex-basis: 16.66%;
+    padding-right: 30px;
+    position: relative;
+    counter-increment: myCounter; }
+    .development-process .app-dprocess .process-item .pro-title {
+      position: relative;
+      margin: 0 0 8px; }
+    .development-process .app-dprocess .process-item .nocount {
+      font-size: 14px;
+      font-weight: 900;
+      color: #fff;
+      opacity: 0.5;
+      margin: 0 0 10px; }
+      .development-process .app-dprocess .process-item .nocount:before {
+        content: counter(myCounter);
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        position: absolute;
+        left: 34px; }
+    .development-process .app-dprocess .process-item h3 {
+      color: #ffffff;
+      font-size: 16px;
+      line-height: 22px;
+      min-height: 70px; }
+    .development-process .app-dprocess .process-item p {
+      font-size: 14px;
+      line-height: 160%; }
+    .development-process .app-dprocess .process-item .process-circle {
+      background: linear-gradient(180deg, #ffcf66 0%, #e19b01 100%);
+      width: 16px;
+      height: 16px;
+      border-radius: 100%;
+      z-index: 99;
+      position: relative; }
+    .development-process .app-dprocess .process-item:first-child .pro-title:before {
+      content: "";
+      width: 25%;
+      height: 1px;
+      border-bottom: 1px dashed #ffffff;
+      bottom: 0;
+      position: absolute;
+      top: 113px;
+      left: -29px; }
+    .development-process .app-dprocess .process-item:last-child {
+      padding: 0; }
+.development-process.how-process .app-dprocess .process-item {
+  flex-basis: 20%; }
+
+.four-step-with-icon-section {
+  counter-reset: step; }
+  .four-step-with-icon-section.bg-light-theme .icon-box::after {
+    background: #ffffff; }
+  .four-step-with-icon-section h3 {
+    margin-top: 25px; }
+  .four-step-with-icon-section .icon-box {
+    padding: 0 25px 70px;
+    position: relative; }
+    .four-step-with-icon-section .icon-box p {
+      margin-top: 10px; }
+    .four-step-with-icon-section .icon-box::before {
+      content: "";
+      clear: both;
+      display: block;
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      bottom: 15px;
+      left: 25px;
+      border-radius: 0;
+      border: 0;
+      background-color: rgba(110, 109, 134, 0.5); }
+    .four-step-with-icon-section .icon-box::after {
+      counter-increment: step;
+      content: "Step " counter(step);
+      position: absolute;
+      bottom: 0;
+      left: 25px;
+      font-size: 18px;
+      color: rgba(110, 109, 134, 0.5);
+      border: 0.5px solid rgba(110, 109, 134, 0.7);
+      background: #fff;
+      border-radius: 5px;
+      padding: 8px 20px;
+      display: block; }
+    .four-step-with-icon-section .icon-box:last-child::before {
+      display: none; }
+  .four-step-with-icon-section .icon {
+    width: 85px;
+    height: 56px;
+    display: block; }
+  .four-step-with-icon-section .hiring-step-sprite .icon {
+    background: url(../images/our-hiring-process-sprite-icons2.png) 0 0 no-repeat; }
+    .four-step-with-icon-section .hiring-step-sprite .icon.icon1 {
+      background-position: -10px -10px; }
+    .four-step-with-icon-section .hiring-step-sprite .icon.icon2 {
+      background-position: -10px -150px; }
+    .four-step-with-icon-section .hiring-step-sprite .icon.icon3 {
+      background-position: -10px -224px; }
+    .four-step-with-icon-section .hiring-step-sprite .icon.icon4 {
+      background-position: -10px -74px; }
+    .four-step-with-icon-section .hiring-step-sprite .icon.icon5 {
+      background-position: -10px -222px; }
+    .four-step-with-icon-section .hiring-step-sprite .icon.icon6 {
+      background-position: -933px -110px;
+      margin: auto;
+      text-align: center; }
+
+@media only screen and (max-width: 1600px) {
+  .four-step-with-icon-section .icon-box {
+    padding: 0 20px 60px; }
+    .four-step-with-icon-section .icon-box::after {
+      font-size: 14px;
+      padding: 6px 18px;
+      left: 20px; } }
+@media only screen and (max-width: 1200px) {
+  .development-process p {
+    line-height: 24px;
+    margin: 10px 0 0; }
+  .development-process .app-dprocess {
+    padding: 30px 25px; }
+    .development-process .app-dprocess:after {
+      display: none; }
+    .development-process .app-dprocess:before {
+      display: none; }
+    .development-process .app-dprocess .process-item {
+      flex-basis: 100%;
+      padding-right: 0;
+      margin: 0 0 20px; }
+      .development-process .app-dprocess .process-item h3 {
+        min-height: initial;
+        margin: 0 0 5px; }
+      .development-process .app-dprocess .process-item .pro-title {
+        margin: 0;
+        position: relative; }
+        .development-process .app-dprocess .process-item .pro-title:after {
+          content: "";
+          background: linear-gradient(180deg, #ffcf66 0%, #e19b01 100%);
+          width: 100%;
+          height: 4px;
+          position: absolute;
+          left: 2px;
+          bottom: -15px; }
+      .development-process .app-dprocess .process-item .nocount {
+        margin: 0 0 5px; }
+      .development-process .app-dprocess .process-item:first-child .pro-title:before {
+        display: none; }
+  .development-process.how-process .app-dprocess .process-item {
+    flex-basis: 100%; } }
+@media only screen and (max-width: 991px) {
+  .four-step-with-icon-section h3 {
+    margin-top: 10px; }
+  .four-step-with-icon-section .icon-box {
+    flex-basis: 50%;
+    margin-top: 40px;
+    padding: 0 20px 50px; }
+    .four-step-with-icon-section .icon-box:nth-child(2n)::before {
+      display: none; } }
+@media only screen and (max-width: 767px) {
+  .four-step-with-icon-section .icon-box {
+    flex-basis: 100%;
+    margin-top: 30px;
+    padding: 0;
+    text-align: center; }
+    .four-step-with-icon-section .icon-box::before, .four-step-with-icon-section .icon-box::after {
+      display: none; }
+  .four-step-with-icon-section .hiring-step-sprite .icon {
+    width: 150px;
+    margin: 0 auto; }
+    .four-step-with-icon-section .hiring-step-sprite .icon.icon1 {
+      background-position: 35px -6px; }
+    .four-step-with-icon-section .hiring-step-sprite .icon.icon2 {
+      background-position: 35px -74px; }
+    .four-step-with-icon-section .hiring-step-sprite .icon.icon4 {
+      background-position: 22px -149px; }
+    .four-step-with-icon-section .hiring-step-sprite .icon.icon5 {
+      background-position: 40px -223px; } }
 .tab-scroll-section ::-webkit-scrollbar {
   width: 6px;
   height: 78px;
