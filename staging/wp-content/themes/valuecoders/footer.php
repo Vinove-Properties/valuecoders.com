@@ -201,6 +201,7 @@ if( empty($rName) ){
    }
    }
 </script>
+<?php /* ?>
 <script>
 window.addEventListener("load", function(){
 silktideCookieBannerManager.updateCookieBannerConfig({
@@ -273,5 +274,6 @@ silktideCookieBannerManager.updateCookieBannerConfig({
 });
 });
 </script>
+<?php */ ?>
 </body>
 </html>
