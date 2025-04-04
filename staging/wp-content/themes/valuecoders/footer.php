@@ -202,6 +202,7 @@ if( empty($rName) ){
    }
 </script>
 <script>
+window.addEventListener("load", function(){
 silktideCookieBannerManager.updateCookieBannerConfig({
   background: {
     showBackground: false
@@ -266,9 +267,10 @@ silktideCookieBannerManager.updateCookieBannerConfig({
       title: "Customize your cookie preferences",
       description: "<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>",
       creditLinkText: " ",
-      creditLinkAccessibleLabel: "Get this banner for free"
+      creditLinkAccessibleLabel: " "
     }
   }
+});
 });
 </script>
 </body>
