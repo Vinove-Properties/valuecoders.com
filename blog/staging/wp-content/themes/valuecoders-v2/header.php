@@ -90,7 +90,8 @@
           global $wp;
           $current_url = home_url( add_query_arg( array(), $wp->request ) );
             //echo '<pre>'.$current_url.'</pre>';
-          $vcategory = get_terms( ['taxonomy'=>'category', 'hide_empty' => true, 'orderby' => 'name', 'order' => 'ASC' ] );
+          $vcategory = get_terms( ['taxonomy'=>'category', 'hide_empty' => true, 'orderby' => 'name', 'order' => 'ASC', 
+          'exclude' => [] ] );
           if( $vcategory ){
            echo '<div class="cat-list">';
            foreach( $vcategory as $term ){

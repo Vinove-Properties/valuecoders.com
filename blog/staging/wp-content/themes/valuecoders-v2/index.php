@@ -12,7 +12,6 @@ $catBlockTwo  = get_field('row-c2', 'option');
   <div class="mobile-active"><span class="blogtog" href="javascript:void(0)">Blog Home</span></div>
     <div class="blog-cat hidden" id="blog-cat">
       <ul>
-        <li class="active mobhide"><a href="<?php echo site_url(); ?>">Blog Home</a></li>
         <li><a href="<?php echo get_category_link(4784); ?>">AI & ML</a></li>
         <li><a href="<?php echo get_category_link(4459); ?>">Analytics</a></li>
         <li><a href="<?php echo get_category_link(5265); ?>">Cloud Services</a></li>

@@ -352,18 +352,19 @@ function valuecoders_scripts() {
 	elseif( is_single() ){
 		wp_enqueue_style( 'vc-resource-detail', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/resource-detail.min.css', [], _S_VERSION );
 	}
-	
+	elseif( is_page_template( 'page-templates/tpl-costcalculators.php' ) ){
+	wp_enqueue_style( 'se-process', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/company.min.css', [], _S_VERSION );
+	}
 	else{
 		if( isset( $_SERVER['REQUEST_URI'] ) && ($_SERVER['REQUEST_URI'] == '/404.php') ){
 			wp_enqueue_style( 'vc-index', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/index.css', [], _S_VERSION );
 		}else{
-			wp_enqueue_style( 'vc-style', get_stylesheet_directory_uri().'/css/style.css' );
-			wp_enqueue_style( 'vc-style-tech', get_stylesheet_directory_uri().'/css/technologies.min.css', [], _S_VERSION);
-			wp_enqueue_style( 'vc-menu', get_stylesheet_directory_uri().'/css/menu.css', [], _S_VERSION );
-			wp_enqueue_style( 'ws-glider', get_stylesheet_directory_uri().'/css/glider.min.css', [], _S_VERSION );	
+		//wp_enqueue_style( 'vc-style', get_stylesheet_directory_uri().'/css/style.css' );
+		// wp_enqueue_style( 'vc-style-tech', get_stylesheet_directory_uri().'/css/technologies.min.css', [], _S_VERSION);
+		// wp_enqueue_style( 'vc-menu', get_stylesheet_directory_uri().'/css/menu.css', [], _S_VERSION );
+		// wp_enqueue_style( 'ws-glider', get_stylesheet_directory_uri().'/css/glider.min.css', [], _S_VERSION );	
 		}		
 	}	
-	
 	if( is_page_template('page-templates/template-services.php') ){
 		if( is_page('13435') ){
 		wp_enqueue_script( 'vc-hire-frm', get_stylesheet_directory_uri(). '/js/hire-form-validation.js', array(), 
