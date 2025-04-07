@@ -15,211 +15,33 @@ get_header();
 </section>
 <section class="vc-cost-calc" style="padding:40px 0;">
 <div class="container">
-    <form id="calculatorForm">
-    <div class="steps-navigation" id="stepsNav"></div>
-    <div class="form-file" id="stepsNav">
-    	
-    </div>    	
-    </form>
-    <div class="button-group">
-        <button type="button" id="prevBtn" onclick="changeStep(-1)" class="hidden">Back</button>
-        <button type="button" id="nextBtn" onclick="changeStep(1)">Next</button>
-        <button type="submit" id="submitBtn" class="hidden">Finish</button>
-    </div>
+    <form>            
+        <div class="steps-navigation" id="stepsNav"></div>      
+        <div  id="calculatorForm"></div>
+        <div class="step last-step" id="stepFinal">
+        <h3>Your Contact Data</h3>                
+        <label>Full Name:
+            <input type="text" id="fullName" required>
+            <span class="error-msg" id="fullNameError">Please fill in the required fields.</span>
+        </label>                
+        <label>Company Name:
+            <input type="text" id="companyName" required>
+            <span class="error-msg" id="companyNameError">Please fill in the required fields.</span>
+        </label>                
+        <label>Work Email:
+            <input type="email" id="workEmail" required>
+            <span class="error-msg" id="workEmailError">Please fill in the required fields.</span>
+        </label>                
+        <label>Phone Number:<input type="text" id="phoneNumber"></label>
+        </div>
+        <div class="button-group">
+            <button type="button" id="prevBtn" onclick="changeStep(-1)" class="hidden">Back</button>
+            <button type="button" id="nextBtn" onclick="changeStep(1)">Next</button>
+            <button type="submit" id="submitBtn" class="hidden">Finish</button>
+        </div>
+    </form>    
 </div>
 </section>
-<script>
-document.addEventListener("DOMContentLoaded",function (){
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://localhost/VC-calculator/data-analytics-bi-calculator.json", true);
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            var formData = JSON.parse(xhr.responseText);
-            console.log(formData);
-            populateForm(formData);
-        }
-    };
-    xhr.send();
-});	
-// try{
-//     //const response = await fetch("http://localhost:3000/0");
-//     const response = await fetch("http://localhost/VC-calculator/data-analytics-bi-calculator.json");    
-//     const formData = await response.json();
-//     populateForm(formData);
-// } catch (error) {
-//     console.error("Error fetching JSON data:", error);
-// }
-
-
-function populateForm(formData) {
-const formContainer = document.getElementById("calculatorForm");
-let stepIndex = 1;
-
-Object.keys(formData).forEach((key) => {
-    const stepData = formData[key];
-    const stepDiv = document.createElement("div");
-    stepDiv.classList.add("step", stepData["dom-class"]);
-    if (stepIndex === 1) stepDiv.classList.add("active");
-    stepDiv.id = `step${stepIndex}`;
-
-    stepData.questions.forEach((question, qIndex) => {
-        const questionContainer = document.createElement("div");
-        questionContainer.classList.add("question-container");
-        questionContainer.setAttribute("data-required", question.isRequired);
-
-        const questionTitle = document.createElement("h4");
-        questionTitle.classList.add("question-name");
-        questionTitle.textContent = question.title;
-        questionContainer.appendChild(questionTitle);
-
-        const optionsContainer = document.createElement("div");
-        optionsContainer.classList.add("dom-class-column");
-
-        question.options.forEach(option => {
-            const label = document.createElement("label");
-            const inputName = `${key}_question${qIndex}`;
-            if (option.include === "textarea" && (!option.type || !option.name)) {
-                label.innerHTML = `
-                <div class="textarea-row">
-                    <textarea class="input-textarea" name="${inputName}_other" placeholder="Please specify..."></textarea>
-                </div>
-                `;
-            } else if (option.type === "checkbox" && option.include === "textarea") {
-                label.innerHTML = `
-                <div class="checkbox-textarea-row">
-                    <input type="checkbox" name="${inputName}" value="Other"> 
-                    <textarea class="input-textarea" name="${inputName}_other" placeholder="${option.name} (Please specify)"></textarea>
-                </div>`;
-            } else if (option.type === "radio" && option.include === "textarea") { 
-                label.innerHTML = `<div class="radio-textarea-row">
-                    <input type="radio" name="${inputName}" value="Other"> 
-                    <textarea class="input-textarea" name="${inputName}_other" placeholder="${option.name} (Please specify)"></textarea><div>
-                `;
-            } else if (option.type === "checkbox") {
-                label.innerHTML = `
-                <div class="textarea-row">
-                    <input type="checkbox" name="${inputName}" value="${option.name}">${option.name}
-                </div>
-                `;
-            } else if (option.type === "inputtext") {
-                label.innerHTML = `
-                <div class="input-text-row">
-                    <input type="text" name="${inputName}_input" placeholder="Enter your response...">
-                    </div>
-                `;
-            } else {
-                label.innerHTML = `
-                 <div class="radio-row">
-                    <input type="radio" name="${inputName}" value="${option.name}">${option.name}
-                    </div>
-                `;
-            }
-            optionsContainer.appendChild(label);
-        });
-
-        questionContainer.appendChild(optionsContainer);
-        const errorMsg = document.createElement("span");
-        errorMsg.classList.add("error-msg");
-        errorMsg.textContent = "Please fill in the required fields.";
-        questionContainer.appendChild(errorMsg);
-
-        stepDiv.appendChild(questionContainer);
-    });
-
-    formContainer.appendChild(stepDiv);
-    stepIndex++;
-});
-
-updateNavigation();
-}
-
-let currentStep = 1;
-
-function updateNavigation() {
-const stepsNav = document.getElementById('stepsNav');
-stepsNav.innerHTML = '';
-const steps = document.querySelectorAll('.step');
-
-steps.forEach((_, index) => {
-    const stepNav = document.createElement('div');
-    stepNav.innerText = `${index + 1}`;
-    stepNav.classList.toggle('active', index + 1 === currentStep);
-
-    if (index + 1 < currentStep) {
-        stepNav.classList.add('clickable');
-        stepNav.addEventListener("click", () => goToStep(index + 1));
-    }
-
-    stepsNav.appendChild(stepNav);
-});
-
-document.getElementById('prevBtn').classList.toggle('hidden', currentStep === 1);
-document.getElementById('nextBtn').classList.toggle('hidden', currentStep === steps.length);
-document.getElementById('submitBtn').classList.toggle('hidden', currentStep !== steps.length);
-}
-function goToStep(step) {
-const steps = document.querySelectorAll('.step');
-steps[currentStep - 1].classList.remove('active');
-currentStep = step;
-steps[currentStep - 1].classList.add('active');
-updateNavigation();
-}
-
-function validateStep(step) {
-const stepElement = document.getElementById(`step${step}`);
-const questions = stepElement.querySelectorAll('.question-container');
-let isValid = true;
-
-questions.forEach((question) => {
-    const isRequired = question.getAttribute('data-required') === "yes";
-    const inputs = question.querySelectorAll('input, textarea');
-    let questionValid = !isRequired;
-
-    inputs.forEach(input => {
-        if ((input.type === "radio" || input.type === "checkbox") && input.checked) {
-            questionValid = true;
-        } else if ((input.type === "text" || input.tagName.toLowerCase() === "textarea") && input.value.trim()) {
-            questionValid = true;
-        }
-
-        input.addEventListener("input", () => {
-            question.querySelector(".error-msg").style.opacity = "0";
-        });
-
-        if (input.type === "radio" || input.type === "checkbox") {
-            input.addEventListener("change", () => {
-                question.querySelector(".error-msg").style.opacity = "0";
-            });
-        }
-    });
-
-    if (isRequired && !questionValid) {
-        question.querySelector(".error-msg").style.opacity = "1";
-        isValid = false;
-    }
-});
-
-return isValid;
-}
-
-function changeStep(direction) {
-if (direction === 1 && !validateStep(currentStep)) {
-    return;
-}
-
-document.querySelectorAll('.step')[currentStep - 1].classList.remove('active');
-currentStep += direction;
-document.querySelectorAll('.step')[currentStep - 1].classList.add('active');
-
-updateNavigation();
-}
-
-document.getElementById("submitBtn").addEventListener("click", function (event) {
-if (!validateStep(currentStep)) {
-    event.preventDefault();
-}
-});
-</script>
 <style type="text/css">
 .hidden { display: none; }
 .step { display: none; }

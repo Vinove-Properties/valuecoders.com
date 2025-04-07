@@ -352,12 +352,13 @@ function valuecoders_scripts() {
 	elseif( is_single() ){
 		wp_enqueue_style( 'vc-resource-detail', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/resource-detail.min.css', [], _S_VERSION );
 	}
-	elseif( is_page_template( 'page-templates/tpl-costcalculators.php' ) ){
-	wp_enqueue_style( 'se-process', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/company.min.css', [], _S_VERSION );
+	elseif( is_page_template('page-templates/tpl-costcalculators.php') ){
+	wp_enqueue_style('cost-calc', get_bloginfo('template_url').'/'.RES_VERSION.'/css/company.min.css', [], _S_VERSION);
+	wp_enqueue_script('cost-calc', get_bloginfo('template_url'). '/js/cost-calculator.min.js', [], _S_VERSION, true );
 	}
 	else{
 		if( isset( $_SERVER['REQUEST_URI'] ) && ($_SERVER['REQUEST_URI'] == '/404.php') ){
-			wp_enqueue_style( 'vc-index', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/index.css', [], _S_VERSION );
+		wp_enqueue_style( 'vc-index', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/index.css', [], _S_VERSION );
 		}else{
 		//wp_enqueue_style( 'vc-style', get_stylesheet_directory_uri().'/css/style.css' );
 		// wp_enqueue_style( 'vc-style-tech', get_stylesheet_directory_uri().'/css/technologies.min.css', [], _S_VERSION);
@@ -367,10 +368,9 @@ function valuecoders_scripts() {
 	}	
 	if( is_page_template('page-templates/template-services.php') ){
 		if( is_page('13435') ){
-		wp_enqueue_script( 'vc-hire-frm', get_stylesheet_directory_uri(). '/js/hire-form-validation.js', array(), 
-		_S_VERSION, true );		
+		wp_enqueue_script('vc-hire-frm', get_stylesheet_directory_uri(). '/js/hire-form-validation.js', array(), 
+		_S_VERSION, true);
 		}
-		
 	}
 	/*
 	wp_enqueue_style('silktide-consent', get_bloginfo('template_url').'/silktide-consent-manager.css', [], _S_VERSION);
