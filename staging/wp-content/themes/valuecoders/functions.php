@@ -1830,11 +1830,15 @@ add_filter('wp_get_attachment_image_attributes', function($attr, $attachment, $s
 	if(isset($attr['height']) && $attr['height'] === 'auto'){
 		unset($attr['height']);
 	}
-	if (!empty($attr['sizes']) && strpos($attr['sizes'], 'auto') !== false) {
-        $attr['sizes'] = preg_replace('/\s*auto,\s*/', '', $attr['sizes']);
-    }
 	return $attr;
 }, 10, 3);
+
+add_action('template_redirect', function(){
+	ob_start('fixIMAGE_size_ob');
+});
+function fixIMAGE_size_ob($html) {
+	return preg_replace('/sizes=["\']\s*auto,\s*/i', 'sizes="', $html);
+}
 
 
 function getCmnTechExperties(){
