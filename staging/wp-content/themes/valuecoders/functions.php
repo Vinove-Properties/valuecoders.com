@@ -1837,7 +1837,11 @@ add_action('template_redirect', function(){
 	ob_start('fixIMAGE_size_ob');
 });
 function fixIMAGE_size_ob($html) {
-	return preg_replace('/sizes=["\']\s*auto,\s*/i', 'sizes="', $html);
+	 return preg_replace(
+        ['/\s*frameborder=["\']?\d["\']?/i','/sizes=["\']\s*auto,\s*/i'],
+        ['', 'sizes="'],
+        $html
+    );
 }
 
 
