@@ -246,37 +246,7 @@
     "https://www.youtube.com/valuecoders/"
   ]
 }
-
 </script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "How to Measure and Improve Digital Marketing ROI",
-  "description": "Measuring the profitability of digital marketing campaigns is necessary for any business’s success. Here, you will learn how to calculate the ROI accurately to assess and improve the effectiveness of digital marketing campaigns.",
-  "image": "https://www.valuecoders.com/blog/wp-content/uploads/2025/01/HoDigital-Marketing-ROI_-432x225.webp",
-  "author": {
-    "@type": "Person",
-    "name": "Author Name",
-    "url": "https://www.valuecoders.com/blog/author/alan-cooper/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "ValueCoders",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.valuecoders.com/blog/wp-content/uploads/2019/08/logo-2-1.png.webp"
-    }
-  },
-  "url": "https://www.valuecoders.com/blog/analytics/how-to-boost-digital-marketing-roi/",
-  "datePublished": "2025-01-14",
-  "dateModified": "2025-01-14"
-}
-</script>
-
-
-
 <?php wp_footer(); ?>
 </body>
 </html>
