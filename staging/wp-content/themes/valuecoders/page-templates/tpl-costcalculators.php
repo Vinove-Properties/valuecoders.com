@@ -6,7 +6,7 @@ global $post;
 $thisPostID = $post->ID;
 get_header();
 ?>
-<section class="hero-section" style="min-height: calc(80vh - 120px); padding: 117px 0 40px;">
+<section class="hero-section" style="min-height: calc(60vh - 120px); padding: 117px 0 40px;">
   <div class="container">
     <?php while( have_posts() ) : the_post(); ?>
 	<?php the_content(); ?>
@@ -15,30 +15,31 @@ get_header();
 </section>
 <section class="vc-cost-calc" style="padding:40px 0;">
 <div class="container">
-    <form>            
+    <form id="cost-calc-form">            
         <div class="steps-navigation" id="stepsNav"></div>      
-        <div  id="calculatorForm"></div>
+        <div id="calculatorForm"></div>
         <div class="step last-step" id="stepFinal">
         <h3>Your Contact Data</h3>                
         <label>Full Name:
-            <input type="text" id="fullName" required>
-            <span class="error-msg" id="fullNameError">Please fill in the required fields.</span>
+        <input type="text" name="uname" id="fullName" value="Jhon Doe" required>
+        <span class="error-msg" id="fullNameError">Please fill in the required fields.</span>
         </label>                
         <label>Company Name:
-            <input type="text" id="companyName" required>
-            <span class="error-msg" id="companyNameError">Please fill in the required fields.</span>
+        <input type="text" name="company" id="companyName" value="Valuecoders" required>
+        <span class="error-msg" id="companyNameError">Please fill in the required fields.</span>
         </label>                
         <label>Work Email:
-            <input type="email" id="workEmail" required>
-            <span class="error-msg" id="workEmailError">Please fill in the required fields.</span>
+        <input type="email" name="email" id="workEmail" value="jhon.doe@yopmail.com" required>
+        <span class="error-msg" id="workEmailError">Please fill in the required fields.</span>
         </label>                
-        <label>Phone Number:<input type="text" id="phoneNumber"></label>
+        <label>Phone Number:<input type="text" name="phone"  value="0000000000" id="phoneNumber"></label>
         </div>
         <div class="button-group">
             <button type="button" id="prevBtn" onclick="changeStep(-1)" class="hidden">Back</button>
             <button type="button" id="nextBtn" onclick="changeStep(1)">Next</button>
             <button type="submit" id="submitBtn" class="hidden">Finish</button>
         </div>
+        <div id="sub-outpur"></div>
     </form>    
 </div>
 </section>

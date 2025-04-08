@@ -352,9 +352,18 @@ function valuecoders_scripts() {
 	elseif( is_single() ){
 		wp_enqueue_style( 'vc-resource-detail', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/resource-detail.min.css', [], _S_VERSION );
 	}
-	elseif( is_page_template('page-templates/tpl-costcalculators.php') ){
+	elseif(is_page_template('page-templates/tpl-costcalculators.php') ){
 	wp_enqueue_style('cost-calc', get_bloginfo('template_url').'/'.RES_VERSION.'/css/company.min.css', [], _S_VERSION);
 	wp_enqueue_script('cost-calc', get_bloginfo('template_url'). '/js/cost-calculator.min.js', [], _S_VERSION, true );
+	wp_localize_script('cost-calc', 'calcObj', 
+		[
+			'tpl_url' 		=> get_bloginfo( 'template_url' ),
+			'web_url' 		=> get_bloginfo( 'url' ),
+			'admin_ajax' 	=> admin_url( 'admin-ajax.php' ),
+			'page_tpl' 	 	=> basename( get_page_template() ),
+			'is_mobile' 	=> ( wp_is_mobile() ) ? "true" : "false"
+		] 
+	);
 	}
 	else{
 		if( isset( $_SERVER['REQUEST_URI'] ) && ($_SERVER['REQUEST_URI'] == '/404.php') ){
@@ -1877,4 +1886,53 @@ if( isset($techs['required']) && ($techs['required'] == "yes") ){
 	$elm .= '</section>';
 }
 return $elm;
+}
+
+
+add_action('wp_ajax_handlecosting', '_calcReqHandlerCB');
+add_action('wp_ajax_nopriv_handlecosting', '_calcReqHandlerCB');
+function _calcReqHandlerCB(){
+	$jString 	= file_get_contents(__DIR__ . '/json-fields/data-analytics-bi-calculator-formatted.json'); 
+	$jsonFl  	= json_decode($jString, true);
+
+	$input 		= file_get_contents( "php://input" );
+	$data 		= json_decode( $input, true );
+	$title_ar = [];
+	if( $data ){
+		foreach($data as $key => $value) { 
+			$index = explode("_question", $key);
+			
+			if( (strpos($index[1], "other") === false) && (strpos($index[0], "key-") !== false) ){
+				$indKey = str_replace(['_input', '_other'], '', $index[1]);
+				$qst = $jsonFl[$index[0]]['questions'][$indKey]['title'];
+				
+				if( $value === "Other"){
+				$title_ar[$qst] = $data[$key.'_other'];
+				}else{					
+					if( is_array($value) ){					
+						$optStr = implode(', ', $value);
+						if( in_array("Other", $value) ){
+						$inKey 	= str_replace( "Other", $data[$key.'_other'], $optStr);	
+						$title_ar[$qst] = $inKey;	
+						}else{
+						$title_ar[$qst] = $optStr;		
+						}
+					}else{
+						$title_ar[$qst] = $value;		
+					}				
+				}				
+			}			
+		}
+	}
+	//print_r($data);
+	$markup = '<strong>Name : </strong>'.($data['uname']) ??$data['uname'];
+	$markup .= '<br><strong>Company : </strong>'.($data['company']) ??$data['company'];
+	$markup .= '<br><strong>Email : </strong>'.($data['email']) ??$data['email'];
+	$markup .= '<br><strong>Phone : </strong>'.($data['phone']) ??$data['phone'];
+
+	foreach($title_ar as $key => $value) {
+	$markup .= '<br><strong>'.$key.' : </strong>'.$value.'<br>';
+	}
+	wp_send_json([ 'file_data' => $jsonFl, 'form_input' => $data, 'form_data' => $title_ar, 'markup' => $markup]);
+	die;
 }

@@ -1,0 +1,573 @@
+{
+    "key-1": {
+        "column": "1",
+        "questions": [
+            {
+                "title": "*What is your industry?",
+                "options": [
+                    {
+                        "name": "Healthcare",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Banking",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Insurance",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Lending",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Investment",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Manufacturing",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Energy and utilities",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Professional services",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Telecommunications",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Retail and wholesale",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Education",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Real estate",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Media and entertainment",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Travel and hospitality",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Transportation",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Information technologies",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Multi-industry",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Other",
+                        "type": "radio",
+                        "include": "textarea"
+                    }
+                ],
+                "isRequired": "yes"
+            }
+        ],
+        "dom-class": "col-1-2"
+    },
+    "key-2": {
+        "column": "1",
+        "questions": [
+            {
+                "title": "*What kind of intelligence and analytics do you need to cover?",
+                "options": [
+                    {
+                        "name": "Enterprise analytics (company-wide analytics and forecasting)",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Operational analytics (process optimization, detecting bottlenecks)",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Customer analytics",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Financial analytics",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Brand & product analytics",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Sales & marketing analytics",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Supply chain analytics",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Transportation & logistics analytics",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Production analytics (incl. OEE, predictive maintenance)",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Asset analytics",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "HR intelligence",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Other",
+                        "type": "checkbox",
+                        "include": "textarea"
+                    }
+                ],
+                "isRequired": "yes"
+            }
+        ],
+        "dom-class": "col-1-2"
+    },
+    "key-3": {
+        "column": "2",
+        "questions": [
+            {
+                "title": "*What is your current data volume?",
+                "options": [
+                    {
+                        "name": "<1 TB",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "1-4 TB",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "4-32 TB",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "32-256 TB",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "256 TB - 2 PB",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": ">2 PB",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Not sure",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Other",
+                        "type": "radio",
+                        "include": "textarea"
+                    }
+                ],
+                "isRequired": "yes"
+            },
+            {
+                "title": "What data volume growth do you expect during the next 12 months?",
+                "options": [
+                    {
+                        "name": "<10%",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "10%-50%",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "50%-100%",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "100%-200%",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": ">200%",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Not sure",
+                        "type": "radio",
+                        "include": ""
+                    }
+                ],
+                "isRequired": "no"
+            }
+
+        ],
+        "dom-class": "col-2-1"
+    },
+    "key-4": {
+        "column": "2",
+        "questions": [
+            {
+                "title": "Please specify the approximate number of users for your solution.",
+                "options": [
+                    {
+                        "name": "",
+                        "type": "inputtext",
+                        "include": ""
+                    }
+                ],
+                "isRequired": "no"
+            },
+            {
+                "title": "What is the share of users who will use your solution daily? ",
+                "options": [
+                    {
+                        "name": "No one",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "<20%",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "20%-50%",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "50%-80%",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": ">80%",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Not sure",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Other",
+                        "type": "checkbox",
+                        "include": "textarea"
+                    }
+                ],
+                "isRequired": "no"
+            }
+        ],
+        "dom-class": "col-1-2-1"
+    },
+    "key-5": {
+        "column": "2",
+        "questions": [
+            {
+                "title": "*Please specify the data sources for your solution.",
+                "options": [
+                    {
+                        "name": "ERP",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "CRM",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "SCM",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "EHR",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Ecommerce platform",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Inventory management system",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Financial and accounting software",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "HR software",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "IoT devices and sensors",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "External sources (e.g., weather data, competitor prices, market data, social media)",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Other",
+                        "type": "checkbox",
+                        "include": "textarea"
+                    }
+                ],
+                "isRequired": "yes"
+            }
+        ],
+        "dom-class": "col-1-2"
+    },
+    "key-6": {
+        "column": "2",
+        "questions": [
+            {
+                "title": "*How promptly should changes in source data be reflected in your solution?",
+                "options": [
+                    {
+                        "name": ">24 h",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "4–24 h",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "1–4 h",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "15 min – 1 h",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "5–15 min",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "1–5 min",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "1–60 sec",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "<1 sec",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Not sure",
+                        "type": "checkbox",
+                        "include": ""
+                    }
+                ],
+                "isRequired": "yes"
+            },
+            {
+                "title": "*Do you have any preferences for the environment?",
+                "options": [
+                    {
+                        "name": "On-premises",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Cloud",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Hybrid (cloud and on-premises)",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Not sure",
+                        "type": "checkbox",
+                        "include": ""
+                    }
+                ],
+                "isRequired": "yes"
+            },
+            {
+                "title": "*Do you have any tech stack preferences, incl. cloud platforms?",
+                "options": [
+                    {
+                        "name": "No",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Yes",
+                        "type": "checkbox",
+                        "include": "textarea"
+                    }
+                ],
+                "isRequired": "yes"
+            }
+        ],
+        "dom-class": "col-2-1"
+    },
+    "key-7": {
+        "column": "2",
+        "questions": [
+            {
+                "title": "*Do BI & analytics insights need to be fed into any other software?",
+                "options": [
+                    {
+                        "name": "No",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Yes",
+                        "type": "radio",
+                        "include": "textarea"
+                    }
+                ],
+                "isRequired": "yes"
+            },
+            {
+                "title": "*Do you already have a legacy BI & analytics solution you want to migrate data from?",
+                "options": [
+                    {
+                        "name": "No",
+                        "type": "radio",
+                        "include": ""
+                    },
+                    {
+                        "name": "Yes",
+                        "type": "radio",
+                        "include": "textarea"
+                    }
+                ],
+                "isRequired": "yes"
+            },
+            {
+                "title": "*Are there any compliance requirements for your BI solution? Check all that apply.",
+                "options": [
+                    {
+                        "name": "None",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "HIPAA",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "PCI DSS",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "GLBA",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "AML/KYC",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "GDPR",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "SOC1/SOC2",
+                        "type": "checkbox",
+                        "include": ""
+                    },
+                    {
+                        "name": "Other",
+                        "type": "checkbox",
+                        "include": "textarea"
+                    }
+                ],
+                "isRequired": "yes"
+            }
+        ],
+        "dom-class": "col-2-1-2"
+    }
+}
