@@ -353,6 +353,8 @@ function valuecoders_scripts() {
 		wp_enqueue_style( 'vc-resource-detail', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/resource-detail.min.css', [], _S_VERSION );
 	}
 	elseif(is_page_template('page-templates/tpl-costcalculators.php') ){
+	$json 		= get_post_meta(get_the_ID(), 'calc-json', true);
+	$formJson 	= json_decode($json, true);	
 	wp_enqueue_style('cost-calc', get_bloginfo('template_url').'/'.RES_VERSION.'/css/company.min.css', [], _S_VERSION);
 	wp_enqueue_script('cost-calc', get_bloginfo('template_url'). '/js/cost-calculator.min.js', [], _S_VERSION, true );
 	wp_localize_script('cost-calc', 'calcObj', 
@@ -360,8 +362,7 @@ function valuecoders_scripts() {
 			'tpl_url' 		=> get_bloginfo( 'template_url' ),
 			'web_url' 		=> get_bloginfo( 'url' ),
 			'admin_ajax' 	=> admin_url( 'admin-ajax.php' ),
-			'page_tpl' 	 	=> basename( get_page_template() ),
-			'is_mobile' 	=> ( wp_is_mobile() ) ? "true" : "false"
+			'json_data' 	=> $formJson
 		] 
 	);
 	}
@@ -1892,11 +1893,14 @@ return $elm;
 add_action('wp_ajax_handlecosting', '_calcReqHandlerCB');
 add_action('wp_ajax_nopriv_handlecosting', '_calcReqHandlerCB');
 function _calcReqHandlerCB(){
-	$jString 	= file_get_contents(__DIR__ . '/json-fields/data-analytics-bi-calculator-formatted.json'); 
-	$jsonFl  	= json_decode($jString, true);
-
+	// $jString 	= file_get_contents(__DIR__ . '/json-fields/data-analytics-bi-calculator-formatted.json'); 
+	// $jsonFl  	= json_decode($jString, true);
 	$input 		= file_get_contents( "php://input" );
 	$data 		= json_decode( $input, true );
+	
+	$json 		= get_post_meta($data['post_id'], 'calc-json', true);
+	$jsonFl  	= json_decode($json, true);
+
 	$title_ar = [];
 	if( $data ){
 		foreach($data as $key => $value) { 
@@ -1905,7 +1909,7 @@ function _calcReqHandlerCB(){
 			if( (strpos($index[1], "other") === false) && (strpos($index[0], "key-") !== false) ){
 				$indKey = str_replace(['_input', '_other'], '', $index[1]);
 				$qst = $jsonFl[$index[0]]['questions'][$indKey]['title'];
-				
+
 				if( $value === "Other"){
 				$title_ar[$qst] = $data[$key.'_other'];
 				}else{					
@@ -1936,3 +1940,17 @@ function _calcReqHandlerCB(){
 	wp_send_json([ 'file_data' => $jsonFl, 'form_input' => $data, 'form_data' => $title_ar, 'markup' => $markup]);
 	die;
 }
+
+add_filter('acf/validate_value/name=calc-json', function($valid, $value, $field, $input_name) {
+    if (!empty($value)) {
+        $value = html_entity_decode(trim($value));
+        if (is_string($value)) {
+            $value = stripslashes($value);
+        }
+        json_decode($value);
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            $valid = 'Invalid JSON: ' . json_last_error_msg();
+        }
+    }
+    return $valid;
+}, 10, 4);

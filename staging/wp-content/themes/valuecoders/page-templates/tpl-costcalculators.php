@@ -37,6 +37,7 @@ get_header();
         <div class="button-group">
             <button type="button" id="prevBtn" onclick="changeStep(-1)" class="hidden">Back</button>
             <button type="button" id="nextBtn" onclick="changeStep(1)">Next</button>
+            <input type="hidden" name="post_id" value="<?php echo get_the_ID(); ?>">
             <button type="submit" id="submitBtn" class="hidden">Finish</button>
         </div>
         <div id="sub-outpur"></div>
