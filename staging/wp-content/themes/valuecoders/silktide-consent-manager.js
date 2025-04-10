@@ -179,25 +179,27 @@ class SilktideCookieBanner {
     this.hideBackdrop();
     this.toggleModal(false);
     this.showCookieIcon();
-
-    this.config.cookieTypes.forEach((type) => {
-      // Set localStorage and run accept/reject callbacks
-      if (type.required == true) {
-        localStorage.setItem(`silktideCookieChoice_${type.id}${this.getBannerSuffix()}`, 'true');
-        if (typeof type.onAccept === 'function') { type.onAccept() }
-      } else {
-        localStorage.setItem(
-          `silktideCookieChoice_${type.id}${this.getBannerSuffix()}`,
-          accepted.toString(),
-        );
-
-        if (accepted) {
-          if (typeof type.onAccept === 'function') { type.onAccept(); }
+    if( this.config.cookieTypes ){
+      this.config.cookieTypes.forEach((type) => {
+        // Set localStorage and run accept/reject callbacks
+        if (type.required == true) {
+          localStorage.setItem(`silktideCookieChoice_${type.id}${this.getBannerSuffix()}`, 'true');
+          if (typeof type.onAccept === 'function') { type.onAccept() }
         } else {
-          if (typeof type.onReject === 'function') { type.onReject(); }
+          localStorage.setItem(
+            `silktideCookieChoice_${type.id}${this.getBannerSuffix()}`,
+            accepted.toString(),
+          );
+
+          if (accepted) {
+            if (typeof type.onAccept === 'function') { type.onAccept(); }
+          } else {
+            if (typeof type.onReject === 'function') { type.onReject(); }
+          }
         }
-      }
-    });
+      });  
+    }
+    
 
     // Trigger optional onAcceptAll/onRejectAll callbacks
     if (accepted && typeof this.config.onAcceptAll === 'function') {
@@ -223,12 +225,15 @@ class SilktideCookieBanner {
     if (!this.config.cookieTypes) return;
 
     const acceptedCookies = this.getAcceptedCookies();
+    if( this.config.cookieTypes ){
     this.config.cookieTypes.forEach((type) => {
       if (type.required) return; // we run required cookies separately in loadRequiredCookies
       if (acceptedCookies[type.id] && typeof type.onAccept === 'function') {
         if (typeof type.onAccept === 'function') { type.onAccept(); }
       }
-    });
+    });  
+    }
+    
   }
 
   runRejectedCookieCallbacks() {
