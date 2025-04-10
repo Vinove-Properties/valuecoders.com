@@ -382,10 +382,10 @@ function valuecoders_scripts() {
 		_S_VERSION, true);
 		}
 	}
-	/*
+	
 	wp_enqueue_style('silktide-consent', get_bloginfo('template_url').'/silktide-consent-manager.css', [], _S_VERSION);
 	wp_enqueue_script('silktide-consent', get_bloginfo('template_url'). '/silktide-consent-manager.js', [], _S_VERSION, true);
-	*/
+	
 }
 
 add_filter( 'style_loader_tag',  'vc_preload_filter', 10, 2 );

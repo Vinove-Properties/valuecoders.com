@@ -245,7 +245,11 @@ class SilktideCookieBanner {
   /**
    * Run through all of the cookie callbacks based on the current localStorage values
    */
-  runStoredCookiePreferenceCallbacks() {
+  runStoredCookiePreferenceCallbacks(){
+    
+    if( this.config.cookieTypes ){
+    console.log("cookieTypes >> ");
+    console.log(this.config.cookieTypes);
     this.config.cookieTypes.forEach((type) => {
       const accepted =
         localStorage.getItem(`silktideCookieChoice_${type.id}${this.getBannerSuffix()}`) === 'true';
@@ -255,7 +259,8 @@ class SilktideCookieBanner {
       } else {
         if (typeof type.onReject === 'function') { type.onReject(); }
       }
-    });
+    });  
+    }    
   }
 
   loadRequiredCookies() {
@@ -465,7 +470,6 @@ class SilktideCookieBanner {
       <footer>
         ${acceptAllButton}
         ${rejectNonEssentialButton}
-        ${creditLink}
       </footer>
     `;
 

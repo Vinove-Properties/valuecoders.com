@@ -84,7 +84,7 @@ a.ws-dotted:hover{text-decoration: none !important; color: #656565;}
 <?php wp_head(); ?>
 
 <?php 
-if( isStaggingVersion() === false ) : 
+//if( isStaggingVersion() === false ) : 
 
 if( is_page_template(['page-templates/template-landing-thankyou.php','page-templates/calendly-thankyou.php'])){ ?>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -102,7 +102,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
 </script>
 <?php } ?>
 
-<?php endif; ?>
+<?php //endif; ?>
 
 <script>
 function loadReCapJS(){
