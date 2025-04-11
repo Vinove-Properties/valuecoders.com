@@ -37,6 +37,9 @@
       #elm-toc .sw-hd span.hide,
       #elm-toc.active .sw-hd span.show,
       #elm-toc .tocsec{display:none;}
+      @media (min-width: 1024px) and (max-width: 1440px) {
+      #blog-cat ul li:last-child{margin-top: 10px;}
+      }
     </style>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
