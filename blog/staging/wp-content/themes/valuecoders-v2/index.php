@@ -13,14 +13,13 @@ $catBlockTwo  = get_field('row-c2', 'option');
     <div class="blog-cat hidden" id="blog-cat">
       <ul>
         <li><a href="<?php echo get_category_link(4784); ?>">AI & ML</a></li>
-        <li><a href="<?php echo get_category_link(4459); ?>">Analytics</a></li>
         <li><a href="<?php echo get_category_link(5265); ?>">Cloud Services</a></li>
         <li><a href="<?php echo get_category_link(4733); ?>">Data Engineering</a></li>
         <li><a href="<?php echo get_category_link(1481); ?>">Ecommerce</a></li>
         <li><a href="<?php echo get_category_link(4456); ?>">Software Engineering</a></li>
         <li><a href="<?php echo get_category_link(4458); ?>">Solutions</a></li>        
-        <li class="ls-2"><a href="<?php echo get_category_link(4457); ?>">Industries</a></li>
-        <li class="ls-2"><a href="<?php echo get_category_link(4460); ?>">On Demand Teams</a></li>
+        <li><a href="<?php echo get_category_link(4457); ?>">Industries</a></li>
+        <li><a href="<?php echo get_category_link(4460); ?>">On Demand Teams</a></li>
       </ul>
     </div>
     <div class="top-content">
