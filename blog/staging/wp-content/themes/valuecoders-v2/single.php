@@ -159,7 +159,7 @@ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'singl
               <div class="btn-container">
                 <div class="btn-sec">
                   <a href="https://www.valuecoders.com/contact" target="_blank" class="btn rounded" 
-                  data-wpel-link="external" rel="nofollow external noopener noreferrer"><span class="text-white">Schedule A Call</span></a>
+                  data-wpel-link="external" rel="nofollow external noopener noreferrer"><span class="text-white">Book Free Consultation</span></a>
                 </div>
               </div>
             </div>
