@@ -211,11 +211,10 @@ height: 80px;resize: none;}
 
 .question-container{width: 100%;}
 
-.last-step label{border: 0; margin: 0 0 10px; padding: 0;} 
-.step.active{display: flex;
-  flex-wrap: wrap;
-   justify-content: space-between ;}
 
+.step.active{display: flex; flex-wrap: wrap; justify-content: space-between ;}
+
+.last-step label{border: 0; margin: 0 0 10px; padding: 0;} 
 
 
 
