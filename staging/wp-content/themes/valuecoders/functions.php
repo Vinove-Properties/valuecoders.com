@@ -356,6 +356,7 @@ function valuecoders_scripts() {
 	$json 		= get_post_meta(get_the_ID(), 'calc-json', true);
 	$formJson 	= json_decode($json, true);	
 	wp_enqueue_style('cost-calc', get_bloginfo('template_url').'/'.RES_VERSION.'/css/company.min.css', [], _S_VERSION);
+	wp_enqueue_style('cost-style', get_bloginfo('template_url').'/cost-style.css', [], _S_VERSION);
 	wp_enqueue_script('cost-calc', get_bloginfo('template_url'). '/js/cost-calculator.min.js', [], _S_VERSION, true );
 	wp_localize_script('cost-calc', 'calcObj', 
 		[
