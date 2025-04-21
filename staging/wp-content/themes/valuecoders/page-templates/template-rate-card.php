@@ -20,6 +20,8 @@ require_once get_template_directory() .'/common/inc/config.inc.php';
     <meta name="keywords"
     content="Staff Augmentation, Staff Augmentation Services, Staff Augmentation Companies, Staff Augmentation Consulting" />
     <meta property="og:title" content="Rate Card - @ValueCoders" />
+    <link rel="icon" href="<?php bloginfo('template_url'); ?>/dev-img/favicons.svg" type="image/x-icon">
+
     <link rel="preload stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/rate-card.min.css" defer />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <?php //require_once get_template_directory() .'/include/header-files.php'; ?>
@@ -1097,12 +1099,10 @@ require_once get_template_directory() .'/common/inc/config.inc.php';
                         <div class="faq-section">
                             <h2>Add Ons</h2>
 
-                            <div class="faq-outer" itemscope itemtype="https://schema.org/FAQPage">
-                                <div class="faq-accordion-item-outer active" itemscope itemprop="mainEntity"
-                                    itemtype="https://schema.org/Question">
-                                    <h3 class="faq-accordion-toggle" itemprop="name">Timezone</h3>
-                                    <div class="faq-accordion-content" itemscope itemprop="acceptedAnswer"
-                                        itemtype="https://schema.org/Answer">
+                            <div class="faq-outer">
+                                <div class="faq-accordion-item-outer active">
+                                    <h3 class="faq-accordion-toggle">Timezone</h3>
+                                    <div class="faq-accordion-content">
                                         <div class="dis-flex justify-sb ">
                                             <p>IST Full Shift (100% working in local timezone)</p>
                                             <p>No additional cost</p>
@@ -1119,11 +1119,9 @@ require_once get_template_directory() .'/common/inc/config.inc.php';
                                         
                                     </div>
                                 </div>
-                                <div class="faq-accordion-item-outer" itemscope itemprop="mainEntity"
-                                    itemtype="https://schema.org/Question">
-                                    <h3 class="faq-accordion-toggle" itemprop="name">Team Discount</h3>
-                                    <div class="faq-accordion-content" itemscope itemprop="acceptedAnswer"
-                                        itemtype="https://schema.org/Answer">
+                                <div class="faq-accordion-item-outer">
+                                    <h3 class="faq-accordion-toggle">Team Discount</h3>
+                                    <div class="faq-accordion-content">
                                         <div class="dis-flex justify-sb ">
                                             <p>3-10 members</p>
                                             <p>2.5% off</p>
@@ -1142,11 +1140,9 @@ require_once get_template_directory() .'/common/inc/config.inc.php';
                                         </div>
                                     </div>
                                 </div>
-                                <div class="faq-accordion-item-outer" itemscope itemprop="mainEntity"
-                                    itemtype="https://schema.org/Question">
-                                    <h3 class="faq-accordion-toggle" itemprop="name">Advance Payment Discount</h3>
-                                    <div class="faq-accordion-content" itemscope itemprop="acceptedAnswer"
-                                        itemtype="https://schema.org/Answer">
+                                <div class="faq-accordion-item-outer">
+                                    <h3 class="faq-accordion-toggle">Advance Payment Discount</h3>
+                                    <div class="faq-accordion-content">
                                         <div class="dis-flex justify-sb ">
                                             <p>Quarterly payments</p>
                                             <p>2.5% off</p>
@@ -1161,13 +1157,8 @@ require_once get_template_directory() .'/common/inc/config.inc.php';
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
-
-
-
                         </div>
-
                     </section>
                     <section class="tab-content" id="ValueCoders">
                         <h2>ValueCoders vs Others</h2>
@@ -1959,7 +1950,11 @@ require_once get_template_directory() .'/common/inc/config.inc.php';
         </div>
     </div>
    
-<!--<script src='<?php echo get_template_directory_uri(); ?>/js/ratecard-download-form.js'></script>-->
+<?php 
+/*
+<script src='<?php echo get_template_directory_uri(); ?>/js/ratecard-download-form.js'></script>
+*/
+?>
 <script src='<?php echo get_template_directory_uri(); ?>/js/rate-card.js'></script>
 <style type="text/css">
     
