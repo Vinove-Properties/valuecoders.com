@@ -190,7 +190,8 @@ function valuecoders_scripts() {
 			'web_url' 		=> get_bloginfo( 'url' ),
 			'admin_ajax' 	=> admin_url( 'admin-ajax.php' ),
 			'page_tpl' 	 	=> basename( get_page_template() ),
-			'is_mobile' 	=> ( wp_is_mobile() ) ? "true" : "false"
+			'is_mobile' 	=> ( wp_is_mobile() ) ? "true" : "false",
+			'_env' 			=> ( isStaggingVersion() ) ? 'staging' : 'production'
 		) 
 	);
 	}
@@ -384,8 +385,38 @@ function valuecoders_scripts() {
 		}
 	}
 	
-	wp_enqueue_style('silktide-consent', get_bloginfo('template_url').'/silktide-consent-manager.css', [], _S_VERSION);
-	wp_enqueue_script('silktide-consent', get_bloginfo('template_url'). '/silktide-consent-manager.js', [], _S_VERSION, true);
+	wp_enqueue_script('cookie-consent', get_bloginfo('template_url').'/cookie-consent/silktide-consent-manager.js', array(), _S_VERSION, true );
+	wp_enqueue_style('cookie-consent', get_bloginfo('template_url').'/cookie-consent/silktide-consent-manager.css', [], _S_VERSION);
+	$inline_script = <<<JS
+	(function(){
+	silktideCookieBannerManager.updateCookieBannerConfig({
+	  background:{showBackground: true},
+	  cookieIcon:{position: "bottomLeft"},	 
+	  text: {
+	    banner: {
+	      description: "<p>We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic. <a href=\"https://www.valuecoders.com/privacy-policy\" target=\"_blank\">Cookie Policy.</a></p>",
+	      acceptAllButtonText: "Accept all",
+	      acceptAllButtonAccessibleLabel: "Accept all cookies",
+	      rejectNonEssentialButtonText: "Reject non-essential",
+	      rejectNonEssentialButtonAccessibleLabel: "Reject non-essential",
+	      preferencesButtonText: "Preferences",
+	      preferencesButtonAccessibleLabel: "Toggle preferences"
+	    },
+	    preferences: {
+	      title: "Customize your cookie preferences",
+	      description: "<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>",
+	      creditLinkText: "",
+	      creditLinkAccessibleLabel: ""
+	    }
+	  },
+	  position: {
+	    banner: "bottomLeft"
+	  }
+	});
+	silktideCookieBannerManager.initCookieBanner();
+	});
+	JS;
+	wp_add_inline_script('cookie-consent', $inline_script);	
 	
 }
 

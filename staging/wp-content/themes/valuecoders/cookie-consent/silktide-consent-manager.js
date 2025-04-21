@@ -1,5 +1,5 @@
 // Silktide Consent Manager - https://silktide.com/consent-manager/  
-
+//console.log( vcObj );
 class SilktideCookieBanner {
   constructor(config) {
     this.config = config; // Save config to the instance
@@ -9,7 +9,52 @@ class SilktideCookieBanner {
     this.modal = null;
     this.cookieIcon = null;
     this.backdrop = null;
-
+    this.config.cookieTypes = [
+    {
+      id: "necessary",
+      name: "Necessary",
+      description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
+      required: true,
+      onAccept: function(){
+        console.log('Add logic for the required Necessary here');
+      }
+    },
+    {
+      id: "analytical",
+      name: "Analytical",
+      description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
+      required: false,
+      onAccept: function(){
+        if( vcObj.hasOwnProperty('_env') && (vcObj._env == "production") && (typeof gtag === 'function') ){
+          gtag('consent', 'update', {analytics_storage: 'granted'});
+          dataLayer.push({'event': 'consent_accepted_analytical'});  
+        }
+        
+      },
+      onReject: function(){
+        if( vcObj.hasOwnProperty('_env') && (vcObj._env == "production") && (typeof gtag === 'function') ){
+          gtag('consent','update',{analytics_storage:'denied'});
+        }
+      }
+    },
+    {
+      id: "advertising",
+      name: "Advertising",
+      description: "<p>These cookies provide extra features and personalization to improve your experience. They may be set by us or by partners whose services we use.</p>",
+      required: false,
+      onAccept: function() {
+        if( vcObj.hasOwnProperty('_env') && (vcObj._env == "production") && (typeof gtag === 'function') ){
+        gtag('consent', 'update', {ad_storage: 'granted',ad_user_data: 'granted',ad_personalization: 'granted'});
+        dataLayer.push({'event': 'consent_accepted_advertising'});
+        }
+      },
+      onReject: function() {
+        if( vcObj.hasOwnProperty('_env') && (vcObj._env == "production") && (typeof gtag === 'function') ){
+          gtag('consent', 'update', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
+        }
+      }
+    }
+  ];
     this.createWrapper();
 
     if (this.shouldShowBackdrop()) {
@@ -253,8 +298,8 @@ class SilktideCookieBanner {
   runStoredCookiePreferenceCallbacks(){
     
     if( this.config.cookieTypes ){
-    console.log("cookieTypes >> ");
-    console.log(this.config.cookieTypes);
+    //console.log("cookieTypes >> ");
+    //console.log(this.config.cookieTypes);
     this.config.cookieTypes.forEach((type) => {
       const accepted =
         localStorage.getItem(`silktideCookieChoice_${type.id}${this.getBannerSuffix()}`) === 'true';
@@ -268,7 +313,7 @@ class SilktideCookieBanner {
     }    
   }
 
-  loadRequiredCookies() {
+  loadRequiredCookies() { 
     if (!this.config.cookieTypes) return;
     this.config.cookieTypes.forEach((cookie) => {
       if (cookie.required && typeof cookie.onAccept === 'function') {
@@ -282,8 +327,8 @@ class SilktideCookieBanner {
   // ----------------------------------------------------------------
   getBannerContent() {
     const bannerDescription =
-      this.config.text?.banner?.description ||
-      `We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic.`;
+    this.config.text?.banner?.description ||
+    `<h3>This website uses cookies</h3><p>This website uses cookies to improve user experience. <a href=\"https://www.valuecoders.com/privacy-policy\" target=\"_blank\">Read More</a><p>`;
 
     // Accept button
     const acceptAllButtonText = this.config.text?.banner?.acceptAllButtonText || 'Accept all';
@@ -431,7 +476,7 @@ class SilktideCookieBanner {
 
     const modalContent = `
       <header>
-        <h1>${preferencesTitle}</h1>                    
+        <h2>${preferencesTitle}</h2>
         ${closeModalButton}
       </header>
       ${preferencesDescription}

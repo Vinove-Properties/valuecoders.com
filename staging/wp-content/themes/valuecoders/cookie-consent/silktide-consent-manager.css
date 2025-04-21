@@ -12,7 +12,6 @@
 #silktide-wrapper {
               --focus: 0 0 0 2px #ffffff, 0 0 0 4px #000000, 0 0 0 6px #ffffff;
               --boxShadow: -5px 5px 10px 0px #00000012, 0px 0px 50px 0px #0000001a;
-              --fontFamily: Helvetica Neue, Segoe UI, Arial, sans-serif;
               --primaryColor: #533BE2;
               --backgroundColor: #FFFFFF;
               --textColor: #4B494B;
@@ -274,12 +273,13 @@
   gap: 16px;
 }
 
-#silktide-modal h1 {
+#silktide-modal h2 {
   font-family: var(--fontFamily);
   color: var(--textColor);
   font-size: 24px;
   font-weight: 500;
   margin: 0px;
+  line-height: 1.4;
 }
 
 #silktide-modal .modal-close {
@@ -388,11 +388,11 @@
 
 #silktide-modal .switch__dot {
   position: absolute;
-  top: 2px;
-  left: 2px;
+  top: 5px;
+  left: 5px;
   display: block;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   background: var(--backgroundColor);
   border-radius: 50%;
   transition: left 150ms ease-out;
@@ -405,7 +405,7 @@
   font-weight: 500;
   color: var(--backgroundColor);
   position: absolute;
-  top: 7px;
+  top: 3px;
   right: 8px;
   transition: right 150ms ease-out, opacity 150ms ease-out;
 }
@@ -424,7 +424,7 @@
 }
 
 #silktide-modal .switch input:checked ~ .switch__dot {
-  left: calc(100% - 32px);
+  left: calc(100% - 30px);
 }
 
 #silktide-modal .switch input:checked ~ .switch__off {
@@ -453,12 +453,12 @@
   margin-top: 24px;
 }
 
-@media (min-width: 600px) {
+
   #silktide-modal footer {
     flex-direction: row;
     align-items: center;
   }
-}
+
 
 #silktide-modal footer a {
   margin-left: auto;
@@ -562,4 +562,25 @@
     opacity: 1;
     transform: translate(0px, 0px);
   }
+}
+
+@media (max-width: 767px) {
+#silktide-modal .switch__off, #silktide-modal .switch__on{top:5px;}
+}
+
+
+@media (max-width: 767px) {
+#silktide-modal{padding:20px;}
+#silktide-modal section{margin-top: 20px; overflow-y: scroll; height: 90px;}
+#silktide-modal p{font-size: 14px; line-height: 22px;}
+#silktide-modal fieldset{margin: 0px 0px 20px;} 
+#silktide-modal footer{gap:10px; margin-top: 15px;}
+#silktide-modal footer{flex-direction: row;}      
+
+}
+
+@media (max-width: 479px) {
+
+  #silktide-modal section{overflow-y: auto; height: initial;}
+  #silktide-modal footer{flex-direction: column;}
 }
