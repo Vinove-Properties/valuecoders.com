@@ -249,8 +249,10 @@ $teamImageWebp	= $teamVc['image-webp'];
 		<div class="head-txt text-center">
 			<h2>Let’s Work Together!</h2>
 		</div>
-		<div class="keka-iframe">
-			<iframe src="https://vinove.kekahire.com/api/embedjobs/efdbfe8f-0c89-43a7-b197-ff60d832994a"></iframe>
+		<div class="keka-iframe" style="text-align: center;">
+            <div class="btn-container">
+                <a href="https://vinove.keka.com/careers" target="_blank" class="cta-button yellow">View Open Positions</a>
+            </div>			
 		</div>
 	</div>
 </section>
