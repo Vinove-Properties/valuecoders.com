@@ -120,7 +120,7 @@ get_header();
               <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v3.0/images/core-icon02.png" alt="valuecoders" width="55" height="46">
             </picture>
             <h3>Leadership</h3>
-            <p>Set trends for your peers and the industry in general to follow.</p>
+            <p>Lead by example, drive innovation, and create positive change across teams.</p>
           </div>
         </div>
       </div>
@@ -128,7 +128,7 @@ get_header();
   </div>
 </section>
 
-<section class="proud-existence-section  padding-t-120 padding-b-120">
+<section class="proud-existence-section padding-t-120 padding-b-120">
 	<div class="container">
 	<div class="dis-flex top-content">
 	  <div class="flex-2">
@@ -140,7 +140,8 @@ get_header();
 	  </div>
 	</div>
 	<div class="proud-existance-img margin-t-100 text-center">
-	  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/about-proud-exist-img.png" alt="about-exp-img" width="1340" height="403">
+	  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/about-proud-exist-img.png" alt="about-exp-img" 
+	  width="1340" height="403">
 	</div>
 	</div>
 </section>
