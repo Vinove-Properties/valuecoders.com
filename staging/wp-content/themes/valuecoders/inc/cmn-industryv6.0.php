@@ -60,7 +60,7 @@
         <p>Improve Engagement</p>
         <div class="hover-content">
           <p>Engagement-focused software to enhance content delivery.</p>
-          <a href="<?php echo site_url('/media-software-development-services'); ?>" class="expand">Expand</a>
+          <a href="<?php echo site_url('/industries/media-software-development-services'); ?>" class="expand">Expand</a>
         </div>
       </div>
     </div>
