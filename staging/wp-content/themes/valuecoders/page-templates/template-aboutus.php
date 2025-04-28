@@ -404,46 +404,73 @@ if( $teamImage && $teamImageWebp ) {
 </section>
 <?php endif; ?>
 
-<?php 
-$testimonailsContent 	= get_field( 'testimonial-content', 'option' );
-$testimonailsList 		= get_field( 'testimonials', 'option' );
-?>
 <section class="client-video-section bg-light padding-t-120 padding-b-120">
 	<div class="container">
 		<div class="head-txt text-center">
-			<?php echo $testimonailsContent; ?>
-		</div>
-		<?php if( $testimonailsList ) : ?>
+		<h2>What Our Clients Have to Say About Us</h2>
+		<p>We are grateful for our clients’ trust in us, and we take great pride in delivering quality solutions that exceed their expectations. Here is what some of them have to say about us:</p>
+		</div>		
 		<div class="glider-contain client-testimonial-slider">
 			<div class="glider">
-				<?php foreach( $testimonailsList as $row ) : ?>
 				<div class="client-videos shadow-box">
-					<div class="client-video-box">
-						<iframe width="483" height="312" src="<?php echo $row['yt-video']; ?>"
-							srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}a{display:flex;align-items:center;justify-content:center;}.iframe-bg{background:url(<?php echo $row['client_thumbnail']; ?>) top center no-repeat;background-size:cover;width:100%;height:100%;}</style><a href=<?php echo $row['yt-video']; ?>g><span class='iframe-bg'></span></a>"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-							title="Testimonial Image"></iframe>
-					</div>
 					<div class="client-description bg-white">
-						<?php 
-						if( $row['client-fd'] ){
-							echo '<p>'.$row['client-fd'].'</p>';
-						}else{
-							echo '<p>"We have worked with ValueCoders for more than a year, and their skilled team has allowed us to scale up during certain projects."</p>';
-						}
-						?>						
+						<p>The Project managers took a lot of time to understand project. They knew what quality & output we expected. It's reassuring, and that's why we chose ValueCoders.</p>
 						<i class="star-rating"></i>
-						<h3><?php echo $row['client-name']; ?></h3>
-            <span class="detail"><?php echo $row['Comment']; ?></span>
+						<h3>James Kelly</h3>
+            <span class="detail">Co-founder, Miracle Choice</span>
+					</div>
+				</div>				
+
+				<div class="client-videos shadow-box">
+					<div class="client-description bg-white">
+						<p>ValueCoders has technical expertise in front-end and back-end development. Account management was friendly and always available. I would give ValueCoders ten out of ten!</p>
+						<i class="star-rating"></i>
+						<h3>Kris</h3>
+            <span class="detail">Director, Storloft</span>
 					</div>
 				</div>
-				<?php endforeach; ?>
+
+				<div class="client-videos shadow-box">
+					<div class="client-description bg-white">
+						<p>Huge thank you to ValueCoders, they have been a massive help in enabling us to start developing our project within a few weeks. I have already recommended it to one of my friends.</p>
+						<i class="star-rating"></i>
+						<h3>Mirza</h3>
+            <span class="detail">Director, LOCALMASTERCHEFS LTD</span>
+					</div>
+				</div>
+
+				<div class="client-videos shadow-box">
+					<div class="client-description bg-white">
+						<p>We got an awesome product! I would highly recommend ValueCoders to anyone for their professional attitude & customer care. Hope success to them!</p>
+						<i class="star-rating"></i>
+						<h3>Savarni</h3>
+            <span class="detail">Founder- sbspco.com</span>
+					</div>
+				</div>
+				
+				<div class="client-videos shadow-box">
+					<div class="client-description bg-white">
+						<p>ValueCoders provided us with exceptional services in creating a one-of-a-kind portal. Impressed with how efficient and quick the team was in coming up with ideas.</p>
+						<i class="star-rating"></i>
+						<h3>Judith</h3>
+            <span class="detail">Executive Director, Mueller Health Foundation</span>
+					</div>
+				</div>
+
+				<div class="client-videos shadow-box">
+					<div class="client-description bg-white">
+						<p>We outsourced our website development to ValueCoders, and we are super happy with their services. Highly recommend them.</p>
+						<i class="star-rating"></i>
+						<h3>Jame Thompson</h3>
+            <span class="detail">edinstitute.com.au</span>
+					</div>
+				</div>
+
 			</div>
 			<button aria-label="Previous" class="glider-prev vlazy"></button>
 			<button aria-label="Next" class="glider-next vlazy"></button>
 			<div role="tablist" class="dots"></div>
 		</div>
-		<?php endif; ?>
 	</div>
 </section>
 <?php get_footer(); ?>
