@@ -425,7 +425,7 @@ if( $teamImage && $teamImageWebp ) {
 					<div class="client-description bg-white">
 						<p>ValueCoders has technical expertise in front-end and back-end development. Account management was friendly and always available. I would give ValueCoders ten out of ten!</p>
 						<i class="star-rating"></i>
-						<h3>Kris</h3>
+						<h3>Kris Bruynson</h3>
             <span class="detail">Director, Storloft</span>
 					</div>
 				</div>
@@ -434,7 +434,7 @@ if( $teamImage && $teamImageWebp ) {
 					<div class="client-description bg-white">
 						<p>Huge thank you to ValueCoders, they have been a massive help in enabling us to start developing our project within a few weeks. I have already recommended it to one of my friends.</p>
 						<i class="star-rating"></i>
-						<h3>Mirza</h3>
+						<h3>Mohammed Mirza</h3>
             <span class="detail">Director, LOCALMASTERCHEFS LTD</span>
 					</div>
 				</div>
@@ -443,7 +443,7 @@ if( $teamImage && $teamImageWebp ) {
 					<div class="client-description bg-white">
 						<p>We got an awesome product! I would highly recommend ValueCoders to anyone for their professional attitude & customer care. Hope success to them!</p>
 						<i class="star-rating"></i>
-						<h3>Savarni</h3>
+						<h3>Mr. Savarni</h3>
             <span class="detail">Founder- sbspco.com</span>
 					</div>
 				</div>
@@ -452,7 +452,7 @@ if( $teamImage && $teamImageWebp ) {
 					<div class="client-description bg-white">
 						<p>ValueCoders provided us with exceptional services in creating a one-of-a-kind portal. Impressed with how efficient and quick the team was in coming up with ideas.</p>
 						<i class="star-rating"></i>
-						<h3>Judith</h3>
+						<h3>Judith Mueller</h3>
             <span class="detail">Executive Director, Mueller Health Foundation</span>
 					</div>
 				</div>
