@@ -1986,3 +1986,18 @@ add_filter('acf/validate_value/name=calc-json', function($valid, $value, $field,
     }
     return $valid;
 }, 10, 4);
+
+function ensureParagraphTag($string) {
+    // Check if string already contains a <p> tag
+    if (stripos($string, '<p>') === false) {
+        return '<p>' . $string . '</p>';
+    }
+    return $string;
+}
+
+function hasPGTag($string) {
+    if (stripos($string, '<p>') === false) {
+        return '<p>' . $string . '</p>';
+    }
+    return $string;
+}
