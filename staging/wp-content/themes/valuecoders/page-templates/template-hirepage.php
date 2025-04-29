@@ -313,9 +313,8 @@ if( $disOne === false ) :
         	foreach( $whyChoos['options'] as $row ){
         		$vcHasAnchor = vcHasAnchor($row['title'], $row['text']);
         		echo '<div class="flex-3 box-3'.$vcHasAnchor.'">
-        		<div class="box bg-blue-opacity-light">
-        		<h3>'.$row['title'].'</h3>
-        		<p>'.$row['text'].'</p>';
+        		<div class="box bg-blue-opacity-light"><h3>'.$row['title'].'</h3>';            
+            echo hasPGTag( $row['text'] ); 
         		echo ( $vcHasAnchor !== false ) ? '<span class="box-link">'.$row['title'].'</span>' : '';
         		echo '</div></div>';
         	}
