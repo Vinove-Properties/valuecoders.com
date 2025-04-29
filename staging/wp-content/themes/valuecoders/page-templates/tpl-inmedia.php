@@ -155,7 +155,15 @@
       </div>
 
     
-      
+      <div class="flex-5">
+        <div class="box">
+          <picture>
+            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw11.webp">
+            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw11.png">
+            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw11.png" alt="Valuecoders" width="78" height="106"> 
+          </picture>
+        </div>
+      </div>
 
 
       <div class="flex-5">
@@ -178,15 +186,7 @@
       </div>
      
     
-      <div class="flex-5">
-        <div class="box">
-          <picture>
-            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw11.webp">
-            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw11.png">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw11.png" alt="Valuecoders" width="78" height="106"> 
-          </picture>
-        </div>
-      </div>
+      
       <div class="flex-5">
         <div class="box">
           <picture>
