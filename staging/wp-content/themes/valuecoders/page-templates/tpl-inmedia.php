@@ -32,25 +32,7 @@
     </div>
     <div class="dis-flex award-img-box margin-t-80">
 
-    <div class="flex-5">
-        <div class="box">
-          <picture>
-            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-awnew-01.png">
-            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw01.png">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw01.png" alt="Valuecoders" width="100" height="90"> 
-          </picture>
-        </div>
-      </div>
 
-      <div class="flex-5">
-        <div class="box">
-          <picture>
-            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-awnew-02.png">
-            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw02.png">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw02.png" alt="Valuecoders" width="100" height="90"> 
-          </picture>
-        </div>
-      </div>
 
 
       <div class="flex-5">
@@ -74,9 +56,73 @@
       <div class="flex-5">
         <div class="box">
           <picture>
+            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw05.webp">
+            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw05.png">
+            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw05.png" alt="Valuecoders" width="104" height="104"> 
+          </picture>
+        </div>
+      </div>
+      <div class="flex-5">
+        <div class="box">
+          <picture>
+            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-awnew-01.png">
+            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw01.png">
+            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw01.png" alt="Valuecoders" width="100" height="90"> 
+          </picture>
+        </div>
+      </div>
+      <div class="flex-5">
+        <div class="box">
+          <picture>
+            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw24.webp">
+            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw24.png">
+            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw24.png" alt="Valuecoders" width="138" height="100"> 
+          </picture>
+        </div>
+      </div>
+      <div class="flex-5">
+        <div class="box">
+          <picture>
             <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-awnew-03.png">
             <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw03.png">
             <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw03.png" alt="Valuecoders" width="100" height="90"> 
+          </picture>
+        </div>
+      </div>
+      <div class="flex-5">
+        <div class="box">
+          <picture>
+            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw09.webp">
+            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw09.png">
+            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw09.png" alt="Valuecoders" width="211" height="33"> 
+          </picture>
+        </div>
+      </div>
+      <div class="flex-5">
+        <div class="box">
+          <picture>
+            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-awnew-02.png">
+            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw02.png">
+            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw02.png" alt="Valuecoders" width="100" height="90"> 
+          </picture>
+        </div>
+      </div>
+
+      <div class="flex-5">
+        <div class="box">
+          <picture>
+            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw10.webp">
+            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw10.png">
+            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw10.png" alt="Valuecoders" width="142" height="59"> 
+          </picture>
+        </div>
+      </div>
+      <div class="flex-5">
+        <div class="box">
+          <picture>
+            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-awnew-04.png">
+            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw04.png">
+            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw04.png" alt="Valuecoders" width="100" height="90"> 
           </picture>
         </div>
       </div>
@@ -92,6 +138,15 @@
       <div class="flex-5">
         <div class="box">
           <picture>
+            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw06.webp">
+            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw06.png">
+            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw06.png" alt="Valuecoders" width="103" height="102"> 
+          </picture>
+        </div>
+      </div>
+      <div class="flex-5">
+        <div class="box">
+          <picture>
             <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw04.webp">
             <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw04.png">
             <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw04.png" alt="Valuecoders" width="106" height="104"> 
@@ -99,33 +154,9 @@
         </div>
       </div>
 
-      <div class="flex-5">
-        <div class="box">
-          <picture>
-            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-awnew-04.png">
-            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw04.png">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw04.png" alt="Valuecoders" width="100" height="90"> 
-          </picture>
-        </div>
-      </div>
-      <div class="flex-5">
-        <div class="box">
-          <picture>
-            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw05.webp">
-            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw05.png">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw05.png" alt="Valuecoders" width="104" height="104"> 
-          </picture>
-        </div>
-      </div>
-      <div class="flex-5">
-        <div class="box">
-          <picture>
-            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw06.webp">
-            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw06.png">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw06.png" alt="Valuecoders" width="103" height="102"> 
-          </picture>
-        </div>
-      </div>
+    
+      
+
 
       <div class="flex-5">
         <div class="box">
@@ -145,24 +176,8 @@
           </picture>
         </div>
       </div>
-      <div class="flex-5">
-        <div class="box">
-          <picture>
-            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw09.webp">
-            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw09.png">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw09.png" alt="Valuecoders" width="211" height="33"> 
-          </picture>
-        </div>
-      </div>
-      <div class="flex-5">
-        <div class="box">
-          <picture>
-            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw10.webp">
-            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw10.png">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw10.png" alt="Valuecoders" width="142" height="59"> 
-          </picture>
-        </div>
-      </div>
+     
+    
       <div class="flex-5">
         <div class="box">
           <picture>
@@ -220,12 +235,22 @@
       <div class="flex-5">
         <div class="box">
           <picture>
+            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw20.webp">
+            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw20.png">
+            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw20png" alt="Valuecoders" width="119" height="87"> 
+          </picture>
+        </div>
+      </div>
+      <div class="flex-5">
+        <div class="box">
+          <picture>
             <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw17.webp">
             <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw17.png">
             <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw17.png" alt="Valuecoders" width="76" height="110"> 
           </picture>
         </div>
       </div>
+   
       <div class="flex-5">
         <div class="box">
           <picture>
@@ -254,15 +279,7 @@
         </div>
       </div>
 
-      <div class="flex-5">
-        <div class="box">
-          <picture>
-            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw20.webp">
-            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw20.png">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw20png" alt="Valuecoders" width="119" height="87"> 
-          </picture>
-        </div>
-      </div>
+     
 
       <div class="flex-5">
         <div class="box">
@@ -284,15 +301,7 @@
         </div>
       </div>
 
-      <div class="flex-5">
-        <div class="box">
-          <picture>
-            <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw24.webp">
-            <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw24.png">
-            <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/inm-aw24.png" alt="Valuecoders" width="138" height="100"> 
-          </picture>
-        </div>
-      </div>
+    
 
     </div>
   </div>
