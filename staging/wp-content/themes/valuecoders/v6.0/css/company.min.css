@@ -1536,8 +1536,8 @@ textarea {
     line-height: 50px; }
 
   h2 {
-    font-size: 30px;
-    line-height: 35px; }
+    font-size: 28px;
+    line-height: 37px; }
 
   h3 {
     font-size: 20px;
@@ -1657,6 +1657,10 @@ textarea {
   .faq-section .faq-accordion-content p {
     font-size: 14px;
     margin-top: 10px; }
+  .faq-section .faq-accordion-content ul li:before {
+    top: 7px; }
+  .faq-section .faq-accordion-content ol li:before {
+    top: 7px; }
   .faq-section .faq-accordion-toggle {
     font-size: 18px;
     line-height: 28px;
@@ -2409,6 +2413,9 @@ body.page-template-template-testimonials .client-video-section iframe,
   .client-img-section .right-box {
     flex-basis: 100%;
     margin: 40px 0 0; } }
+@media only screen and (max-width: 767px) {
+  .client-img-section .left-box ul li:before {
+    top: 4px; } }
 .three-column-icon-section .top-content .flex-2:first-child {
   padding-right: 130px; }
 .three-column-icon-section .top-content h2 {
