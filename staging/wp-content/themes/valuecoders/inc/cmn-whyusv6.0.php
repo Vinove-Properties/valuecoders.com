@@ -171,7 +171,7 @@
             <li>
               <a href="#" target="_blank">
                 <picture>
-                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/google-partner.png" alt="valuecoders" width="100" height="60">
+                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/google-partner.png" alt="valuecoders" width="80" height="50">
                 </picture>
               </a>
             </li>
