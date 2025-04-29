@@ -960,7 +960,7 @@ textarea {
         border-radius: 50%;
         position: absolute;
         left: 0;
-        top: 7px; }
+        top: 10px; }
 .faq-section .no-list-type ul {
   list-style-type: none;
   padding-left: 0; }
@@ -4174,7 +4174,7 @@ body.page-template-template-testimonials .client-video-section iframe,
           width: 12px;
           height: 13px;
           position: absolute;
-          top: 4px;
+          top: 8px;
           left: 0; }
         .client-img-section .left-box ul li:last-child {
           margin: 0; }
@@ -5405,7 +5405,7 @@ body.page-template-template-testimonials .client-video-section iframe,
               height: 18px;
               position: absolute;
               left: 0;
-              top: 2px; }
+              top: 5px; }
       .hire-model-tab .hire-tabs-section .bcontents .tab-contents .dis-flex .image-box {
         flex-basis: 48%; }
   .hire-model-tab .hire-tabs-section .bcontents .tab-contents.active {
