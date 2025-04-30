@@ -178,7 +178,7 @@
             <li>
               <a href="#" target="_blank">
                 <picture>
-                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/aw-01.svg" alt="valuecoders" width="92" height="50">
+                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/aw-01.svg" alt="valuecoders" width="70" height="50">
                 </picture>
               </a>
             </li>
