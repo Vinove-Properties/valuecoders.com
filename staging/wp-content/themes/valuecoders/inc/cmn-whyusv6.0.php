@@ -178,6 +178,13 @@
             <li>
               <a href="#" target="_blank">
                 <picture>
+                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/aw-01.svg" alt="valuecoders" width="92" height="50">
+                </picture>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <picture>
                   <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/aw-02.svg" alt="valuecoders" width="92" height="35">
                 </picture>
               </a>
@@ -196,13 +203,7 @@
                 </picture>
               </a>
             </li>
-            <li>
-              <a href="#" target="_blank">
-                <picture>
-                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/aw-05.svg" alt="valuecoders" width="35" height="58">
-                </picture>
-              </a>
-            </li>
+            
           </ul>
         </div>
       </div>
