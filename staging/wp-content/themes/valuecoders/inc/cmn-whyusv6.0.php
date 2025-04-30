@@ -190,14 +190,14 @@
               </a>
             </li>
             <li>
-              <a href="https://www.goodfirms.co/company/valuecoders" target="_blank">
+              <a href="https://clutch.co/profile/valuecoders#highlights" target="_blank">
                 <picture>
                   <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/aw-03.svg" alt="valuecoders" width="66" height="45">
                 </picture>
               </a>
             </li>
             <li>
-              <a href="https://clutch.co/profile/valuecoders#highlights" target="_blank">
+              <a href="https://www.goodfirms.co/company/valuecoders" target="_blank">
                 <picture>
                   <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/aw-04.svg" alt="valuecoders" width="100" height="15">
                 </picture>
