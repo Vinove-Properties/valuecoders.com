@@ -169,7 +169,7 @@
         <div class="award-row">
           <ul>
             <li>
-              <a href="#" target="_blank">
+              <a href="https://www.google.com/partners/agency?id=2087999102" target="_blank">
                 <picture>
                   <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/google-partner.png" alt="valuecoders" width="80" height="50">
                 </picture>
