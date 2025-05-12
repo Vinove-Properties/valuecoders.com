@@ -1222,7 +1222,9 @@ function _vcTabSelector(sectionSelector) {
 }
 document.addEventListener("DOMContentLoaded", () => {
     _vcTabSelector(".tabs-section");
+     _vcTabSelector(".tab-with-slide");
 });
+
 
 if (document.getElementById("solution-slide")) {
 window.addEventListener("load", () => {
@@ -1460,5 +1462,86 @@ if (document.getElementById("client-slider")) {
     }
     });
     } 
-    
 
+
+    //Industry Page Script Added from here*//
+
+
+      
+      window.addEventListener("load", function () {
+      var tabSliderSection = document.getElementById("ind-tabslider");
+      
+      if (tabSliderSection) {
+      var gliderElement = tabSliderSection.querySelector(".tabs-slider .glider");
+      
+      if (gliderElement) {
+      gliderElement.addEventListener("glider-slide-visible", function (event) {
+        var glider = Glider(this);
+        // Optional: Do something when a slide becomes visible
+      });
+      
+      window._ = new Glider(gliderElement, {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        draggable: true,
+        scrollLock: false,
+        dots: tabSliderSection.querySelector(".tabs-slider .dots"),
+        arrows: {
+          prev: tabSliderSection.querySelector(".glider-prev"),
+          next: tabSliderSection.querySelector(".glider-next")
+        },
+        responsive: [
+          {
+            // For desktops
+            breakpoint: 1400,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          },
+          {
+            // For tablets (2 tabs)
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            // For mobile (1 tab)
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+      }
+      }
+      });
+
+
+               
+document.addEventListener("DOMContentLoaded", function () {
+  const dataDrivingSection = document.querySelector(".data-driving");
+
+  if (dataDrivingSection) {
+    const accordionItems = dataDrivingSection.querySelectorAll(".home-accordion-item");
+    const contentPanels = dataDrivingSection.querySelectorAll(".acr-panel");
+
+    accordionItems.forEach((item, index) => {
+      item.addEventListener("click", function () {
+        // Remove active class from all accordion items and panels
+        accordionItems.forEach(i => i.classList.remove("active"));
+        contentPanels.forEach(p => p.classList.remove("active"));
+
+        // Add active class to clicked item and matching panel
+        this.classList.add("active");
+        if (contentPanels[index]) {
+          contentPanels[index].classList.add("active");
+        }
+      });
+    });
+  }
+});

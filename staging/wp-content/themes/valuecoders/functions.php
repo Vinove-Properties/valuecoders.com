@@ -217,6 +217,12 @@ function valuecoders_scripts() {
 	elseif( is_page_template( 'page-templates/template-industry.php' ) ){
 		wp_enqueue_style( 'vc-technologies', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/industries.min.css', [], _S_VERSION );
 	}
+
+	elseif( is_page_template( 'page-templates/template-industry-v6.php' ) ){
+		wp_enqueue_style( 'vc-technologies', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/industries.min.css', [], _S_VERSION );
+		wp_enqueue_style( 'vc-industry', get_stylesheet_directory_uri().'/'.RES_VERSION.'/css/industries-page.css', [], _S_VERSION );
+		
+	}
 	elseif(
 		is_page_template( 'page-templates/template-services.php' ) ||
 		is_page_template( 'page-templates/tpl-versus-other.php' ) ||		
@@ -863,6 +869,11 @@ function cvColumn_shortcode( $atts, $content = null ) {
 add_shortcode( 'cmn_cta', 'cmn_cta_cb' );
 function cmn_cta_cb() {
 	return '<div class="btn-container"><a href="'.site_url('/contact').'" class="cta-button">CONTACT US</a></div>';
+}
+
+add_shortcode( 'cmn_indcta', 'cmn_cta_ind' );
+function cmn_cta_ind() {
+	return '<div class="btn-container"><a href="'.site_url('/contact').'" class="cta-button">REQUEST A FREE COUNSLTATION</a></div>';
 }
 
 add_shortcode( 'vc_column_three', 'colum_three_scode_cb' );
