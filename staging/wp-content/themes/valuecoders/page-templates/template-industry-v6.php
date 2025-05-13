@@ -1,48 +1,40 @@
 <?php
-  /* 
-  Template Name: Industry Page V6.0 Template
-  */
-  global $post;
-  $thisPostID = $post->ID;
-  get_header();
-  $bannerImage = get_field("tb-image");
-  $bannerStyle = "";
-  if ($bannerImage) {
-      $banImage = getVcWebpSrcURL($bannerImage);
-      $bannerStyle = ' style="background-image:url(' . $banImage . ');"';
-  }
-  
-  $bcTitle = get_field("bc-title");
-  $bcCategory = get_field("bc-vcategory");
-  $bCat = $bcCategory === "services" ? "Services" : "Industries";
-  if ($bcTitle) {
-      $bct = $bcTitle;
-  } else {
-      $bct = get_the_title();
-  }
-  
-  if ($bcCategory === "custom") {
-      //bc-custitle //bc-cuslink
-      $cuTitle = get_field("bc-custitle");
-      $cuLink = get_field("bc-cuslink");
-      $bCat =
-          '<a class="no-after" href="' .
-          vc_siteurl($cuLink) .
-          '">' .
-          $cuTitle .
-          "</a>";
-  }
-  
-  $vcBtn = get_field("vc-cta", $thisPostID);
-  ?>
+/* 
+Template Name: Industry Page V6.0 Template
+*/
+global $post;
+$thisPostID = $post->ID;
+get_header();
+$bannerImage = get_field("tb-image");
+$bannerStyle = "";
+if( $bannerImage ){
+  $banImage = getVcWebpSrcURL($bannerImage);
+  $bannerStyle = ' style="background-image:url(' . $banImage . ');"';
+}
+
+$bcTitle = get_field("bc-title");
+$bcCategory = get_field("bc-vcategory");
+$bCat = $bcCategory === "services" ? "Services" : "Industries";
+if( $bcTitle ){
+    $bct = $bcTitle;
+}else{
+    $bct = get_the_title();
+}
+
+if( $bcCategory === "custom" ){
+    $cuTitle = get_field("bc-custitle");
+    $cuLink = get_field("bc-cuslink");
+    $bCat ='<a class="no-after" href="'.vc_siteurl($cuLink).'">' .$cuTitle ."</a>";
+}
+
+$vcBtn = get_field("vc-cta", $thisPostID);
+?>
 <section class="hero-section vlazy" style="background-image:url(<?php echo $bannerStyle; ?>);">
   <div class="container">
     <div class="dis-flex">
       <div class="left-box">
         <div class="breadcrumbs">
-          <a href="<?php bloginfo(
-            "url"
-            ); ?>">Home</a> <span><?php echo $bCat; ?></span> <?php echo $bct; ?>
+        <a href="<?php bloginfo("url"); ?>">Home</a> <span><?php echo $bCat; ?></span> <?php echo $bct; ?>
         </div>
         <?php the_content(); ?>
       </div>
@@ -52,143 +44,51 @@
 </section>
 <?php get_template_part("inc/cmn", "startups"); ?>
 <?php get_template_part("inc/scale", "business"); ?>
-<section class="tab-with-slide padding-t-120 padding-b-120" id="ind-tabslider">
-  <div class="container">
-    <div class="top-section b-100">
-      <h2>Solutions We Deliver</h2>
-      <p>We specialize in creating secure and user-friendly healthcare infrastructure, connecting the back office to  the physician’s office. Explore our healthcare application development services:</p>
+
+<?php 
+$sdTab   = get_field('tab_section'); 
+if( isset($sdTab['is_enabled']) && $sdTab['is_enabled'] === "yes" ) :
+if( isset($sdTab['tab-display']) && $sdTab['tab-display'] == "horizontal" ){
+echo '<section class="tab-with-slide padding-t-120 padding-b-120" id="ind-tabslider">';
+echo '<div class="container">';
+echo '<div class="top-section b-100">'.$sdTab['content'].'</div>';
+if(  )
+
+echo '</div>';
+echo '</section>';  
+}
+?>
+<div class="tabs-container">
+<div class="tabs tabs-slider">
+  <div class="tab-scroll glider-contain">
+    <div class="glider" id="glider">
+      <div class="tab active" data-target="sol1">Healthcare Organization Management</div>
     </div>
-    <div class="tabs-container">
-      <div class="tabs tabs-slider">
-        <div class="tab-scroll glider-contain">
-          <div class="glider" id="glider">
-            <div class="tab active" data-target="sol1">Healthcare Organization Management</div>
-            <div class="tab" data-target="sol2">Telemedicine Software Solutions</div>
-            <div  class="tab" data-target="sol3">Clinical & Health Management</div>
-            <div  class="tab" data-target="sol4">Healthcare Organization Management</div>
-            <div  class="tab" data-target="sol5">Clinical & Health Management</div>
-          </div>
-          <div role="tablist" class="dots glider-dots"><button data-index="0" aria-label="Page 1" role="tab" class="glider-dot active"></button><button data-index="1" aria-label="Page 2" role="tab" class="glider-dot "></button></div>
-          <div class="prev-next-btn">
-            <button class="glider-prev" aria-disabled="false">
-            </button>
-            <button class="glider-next" aria-disabled="false">
-            </button>
-          </div>
-        </div>
+    <div role="tablist" class="dots glider-dots">
+    <button data-index="0" aria-label="Page 1" role="tab" class="glider-dot active"></button>
+    <button data-index="1" aria-label="Page 2" role="tab" class="glider-dot "></button></div>
+    <div class="prev-next-btn">
+    <button class="glider-prev" aria-disabled="false"></button>
+    <button class="glider-next" aria-disabled="false"></button>
+    </div>
+  </div>
+</div>
+<div class="tab-content">
+  <div class="content active" id="sol1">
+    <div class="dis-flex">
+      <div class="flex-2 img-div">
+        <picture>
       </div>
-      <div class="tab-content">
-        <div class="content active" id="sol1">
-          <div class="dis-flex">
-            <div class="flex-2 img-div">
-              <picture>
-                <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/industry-images/sol-01.png">
-                <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/industry-images/sol-01.png"width="403" height="346">
-              </picture>
-            </div>
-            <div class="flex-2 content-div">
-              <h3>Healthcare Organization Management Software</h3>
-              <p>Streamline operations and enhance efficiency with tailored management solutions for healthcare organizations.</p>
-              <ul>
-                <li>Medical inventory software</li>
-                <li>Medical inventory software</li>
-                <li>Medical inventory software</li>
-                <li>Medical inventory software</li>
-                <li>Medical inventory software</li>
-              </ul>
-              <a href="#" class="is-arrow">Learn More</a>
-            </div>
-          </div>
-        </div>
-        <div class="content" id="sol2">
-          <div class="dis-flex">
-            <div class="flex-2 img-div">
-              <picture>
-                <source type="image/webp" srcset="images/home-images/technology-01.png">
-                <img loading="lazy" src="images/home-images/technology-01.png"width="484" height="282">
-              </picture>
-            </div>
-            <div class="flex-2 content-div">
-              <h3>Clinical & Health Management</h3>
-              <p>Telemedicine Software Solutions</p>
-              <ul>
-                <li>MVP & SaaS Development</li>
-                <li>CTO as a Service </li>
-                <li>Data Analytics & DevOps</li>
-                <li>Technology Consulting</li>
-              </ul>
-              <a href="#" class="is-arrow">Find Out More</a>
-            </div>
-          </div>
-        </div>
-        <div class="content" id="sol3">
-          <div class="dis-flex">
-            <div class="flex-2 img-div">
-              <picture>
-                <source type="image/webp" srcset="images/home-images/technology-01.png">
-                <img loading="lazy" src="images/home-images/technology-01.png"width="484" height="282">
-              </picture>
-            </div>
-            <div class="flex-2 content-div">
-              <h3>Computer Vision</h3>
-              <p>Our design team creates user-centric experiences that captivate audiences.</p>
-              <ul>
-                <li>MVP & SaaS Development</li>
-                <li>CTO as a Service </li>
-                <li>Data Analytics & DevOps</li>
-                <li>Technology Consulting</li>
-              </ul>
-              <a href="#" class="is-arrow">Find Out More</a>
-            </div>
-          </div>
-        </div>
-        <div class="content" id="sol4">
-          <div class="dis-flex">
-            <div class="flex-2 img-div">
-              <picture>
-                <source type="image/webp" srcset="images/home-images/technology-01.png">
-                <img loading="lazy" src="images/home-images/technology-01.png"width="484" height="282">
-              </picture>
-            </div>
-            <div class="flex-2 content-div">
-              <h3>Internet of Things</h3>
-              <p>Our design team creates user-centric experiences that captivate audiences.</p>
-              <ul>
-                <li>MVP & SaaS Development</li>
-                <li>CTO as a Service </li>
-                <li>Data Analytics & DevOps</li>
-                <li>Technology Consulting</li>
-              </ul>
-              <a href="#" class="is-arrow">Find Out More</a>
-            </div>
-          </div>
-        </div>
-        <div class="content" id="sol5">
-          <div class="dis-flex">
-            <div class="flex-2 img-div">
-              <picture>
-                <source type="image/webp" srcset="images/home-images/technology-01.png">
-                <img loading="lazy" src="images/home-images/technology-01.png"width="484" height="282">
-              </picture>
-            </div>
-            <div class="flex-2 content-div">
-              <h3>Mixed Reality</h3>
-              <p>Our design team creates user-centric experiences that captivate audiences.</p>
-              <ul>
-                <li>MVP & SaaS Development</li>
-                <li>CTO as a Service </li>
-                <li>Data Analytics & DevOps</li>
-                <li>Technology Consulting</li>
-              </ul>
-              <a href="#" class="is-arrow">Find Out More</a>
-            </div>
-          </div>
-        </div>
+      <div class="flex-2 content-div">
+        #content
+        <a href="#" class="is-arrow">Learn More</a>
       </div>
     </div>
   </div>
-  </div>
-</section>
+</div>
+</div>
+<?php endif; ?>
+
 <section class="data-drivetab padding-t-120 padding-b-120" id="solution-tab">
   <div class="container">
     <div class="top-section b-100">
@@ -336,9 +236,7 @@
             <div class="box-3">
               <h3>Modular Microservices-Based Solutions</h3>
               <p>Whether you’re just starting out or transitioning from another platform, we can build the perfect solution for you.</p>
-              <ul>
-                <li>Test  </li>
-              </ul>
+              <ul><li>Test</li></ul>
               <a href="#" class="is-arrow">Learn More</a>
             </div>
           </div>
@@ -869,10 +767,12 @@
       		if( $faqCount <= 3 ){
       			$isActive = "active";
       		}
-      		echo '<div class="faq-accordion-item-outer '.$isActive.'" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      			<h3 class="faq-accordion-toggle" itemprop="name">'.$row['title'].'</h3>
-      			<div class="faq-accordion-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">'.$row['text'].'</div></div>
-      		</div>';
+          echo '<div class="faq-accordion-item-outer '.$isActive.'" itemscope itemprop="mainEntity" 
+          itemtype="https://schema.org/Question">
+          <h3 class="faq-accordion-toggle" itemprop="name">'.$row['title'].'</h3>
+          <div class="faq-accordion-content" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">'.$row['text'].'</div></div>
+          </div>';
       	}
       	echo '</div>';
       } 

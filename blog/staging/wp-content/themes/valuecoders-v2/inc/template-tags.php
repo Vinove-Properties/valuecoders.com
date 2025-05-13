@@ -135,19 +135,19 @@ if ( ! function_exists( 'valuecoders_post_thumbnail' ) ) :
 		</div><!-- .post-thumbnail -->
 		<?php 
 		else : 
-		$post_id = get_the_ID();
-		$thePostImage = get_the_post_thumbnail( $post_id, 'vweb-blog', array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) );	
+		$post_id 		= get_the_ID();
+		$thePostImage 	= get_the_post_thumbnail( $post_id, 'vweb-blog', 
+		array( 'alt' => the_title_attribute( array( 'echo' => false ) ) ) );	
 		
-		if( function_exists('get_field') ){
+		if( function_exists('get_field') && !$thePostImage ){
 			$listThubnail = get_field( 'pl-thumbnail', $post_id );
 			if( $listThubnail && is_array( $listThubnail ) ){
-				//print_r($listThubnail); die;
 				if( isset( $listThubnail['sizes']['plist-thumbnail'] ) &&  !empty( $listThubnail['sizes']['plist-thumbnail'] ) ){
-				$thePostImage = '<img loading="lazy" src="'.$listThubnail['sizes']['plist-thumbnail'].'" 
+				$thePostImage = '<img class="akkad" loading="lazy" src="'.$listThubnail['sizes']['plist-thumbnail'].'" 
 				alt="'.$listThubnail['title'].'" width="'.$listThubnail['sizes']['plist-thumbnail-width'].'" 
 				height="'.$listThubnail['sizes']['plist-thumbnail-height'].'">';	
 				}else{
-				$thePostImage = '<img loading="lazy" src="'.$listThubnail['url'].'" alt="'.$listThubnail['title'].'" width="'.$listThubnail['width'].'" height="'.$listThubnail['height'].'">';	
+				$thePostImage = '<img class="bakkad" loading="lazy" src="'.$listThubnail['url'].'" alt="'.$listThubnail['title'].'" width="'.$listThubnail['width'].'" height="'.$listThubnail['height'].'">';	
 				}				
 			}
 		}

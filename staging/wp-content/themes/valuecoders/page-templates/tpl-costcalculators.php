@@ -17,13 +17,10 @@ get_header();
   <div class="container">
     <div class="cost-wrap">
     <div class="cost-left">
-      <div class="head-text">
-        <h2>Estimate The Cost of Telecom Software Development </h2>
-        <p>Answer a few simple questions about the IT consulting support you need. We will analyze your needs and provide a tailored cost estimation for your case.</p>
-      </div>
+      <div class="head-text"><?php the_field('calc-content'); ?></div>
       <div class="img-wrap">
-        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/cost-image.svg" alt="valuecoders" 
-        width="384" height="325">
+        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/cost-image.svg" 
+        alt="valuecoders" width="384" height="325">
       </div>
     </div>
     <div class="cost-right">
