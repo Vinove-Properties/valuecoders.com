@@ -520,7 +520,7 @@
       <div class="container">
         <div class="top-section b-100">
           <h2>We Have Expertise In</h2>
-          <p>Backed by 675+ digital experts, PixelCrayons is committed to deliver scalable, robust, and advanced solutions that meet specific needs of clients.</p>
+          <p>Backed by 675+ digital experts, Valucoders is committed to deliver scalable, robust, and advanced solutions that meet specific needs of clients.</p>
         </div>
         <div class="tab-flex">
           <div class="tabs-container">
@@ -590,44 +590,44 @@
                 <div class="dis-flex">
                   <div class="flex-1 content-div">
                     <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/dot-net-core-developers">
+                      <a href="#">
                         <i>
                           <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/biggd-01.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/biggd-01.svg" alt="biggd-01" width="0" height="0">
+                            <source type="image/svg+xml" srcset="images/industry-images/tech-01.svg">
+                            <img loading="lazy" src="images/industry-images/tech-01.svg" alt="biggd-01" width="0" height="0">
                           </picture>
                         </i>
                         .NET Core
                       </a>
                     </div>
                     <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/django-developers">
+                      <a href="#">
                         <i>
                           <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/biggd-02.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/biggd-02.svg" alt="biggd-02" width="0" height="0">
+                            <source type="image/svg+xml" srcset="images/industry-images/tech-01.svg">
+                            <img loading="lazy" src="images/industry-images/tech-01.svg" alt="biggd-02" width="0" height="0">
                           </picture>
                         </i>
                         Django
                       </a>
                     </div>
                     <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/mean-stack-developers">
+                      <a href="#">
                         <i>
                           <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/biggd-03.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/biggd-03.svg" alt="biggd-03" width="0" height="0">
+                            <source type="image/svg+xml" srcset="images/industry-images/tech-01.svg">
+                            <img loading="lazy" src="images/industry-images/tech-01.svg" alt="biggd-03" width="0" height="0">
                           </picture>
                         </i>
                         MEAN
                       </a>
                     </div>
                     <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/mern-developers">
+                      <a href="#">
                         <i>
                           <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/biggd-04.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/biggd-04.svg" alt="biggd-04" width="0" height="0">
+                            <source type="image/svg+xml" srcset="images/industry-images/tech-01.svg">
+                            <img loading="lazy" src="images/industry-images/tech-01.svg" alt="biggd-04" width="0" height="0">
                           </picture>
                         </i>
                         MERN
@@ -640,302 +640,25 @@
                 <div class="dis-flex">
                   <div class="flex-1 content-div">
                     <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/dot-net-developers">
+                      <a href="#">
                         <i>
                           <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/bk-01.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/bk-01.svg" alt="bk-01" width="0" height="0">
+                            <source type="image/svg+xml" srcset="images/industry-images/tech-01.svg">
+                            <img loading="lazy" src="images/industry-images/tech-01.svg" alt="bk-01" width="0" height="0">
                           </picture>
                         </i>
                         .NET
                       </a>
                     </div>
                     <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/python-developers">
+                      <a href="#">
                         <i>
                           <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/bk-02.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/bk-02.svg" alt="bk-02" width="0" height="0">
+                            <source type="image/svg+xml" srcset="images/industry-images/tech-01.svg">
+                            <img loading="lazy" src="images/industry-images/tech-01.svg" alt="bk-02" width="0" height="0">
                           </picture>
                         </i>
                         Python
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/blockchain-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/bk-03.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/bk-03.svg" alt="bk-03" width="0" height="0">
-                          </picture>
-                        </i>
-                        Blockchain
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/golang-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/bk-04.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/bk-04.svg" alt="bk-04" width="0" height="0">
-                          </picture>
-                        </i>
-                        Golang
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/java-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/bk-05.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/bk-05.svg" alt="bk-05" width="0" height="0">
-                          </picture>
-                        </i>
-                        Java
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/laravel-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/bk-06.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/bk-06.svg" alt="bk-06" width="0" height="0">
-                          </picture>
-                        </i>
-                        Laravel
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/next-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/bk-07.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/bk-07.svg" alt="bk-07" width="0" height="0">
-                          </picture>
-                        </i>
-                        Next
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/angular-js-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/bk-08.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/bk-08.svg" alt="bk-08" width="0" height="0">
-                          </picture>
-                        </i>
-                        Angular
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/typescript-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/bk-09.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/bk-09.svg" alt="bk-09" width="0" height="0">
-                          </picture>
-                        </i>
-                        TypeScript
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="content " id="telm-4">
-                <div class="dis-flex">
-                  <div class="flex-1 content-div">
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/magento-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/ecom-01.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/ecom-01.svg" alt="ecom-01" width="0" height="0">
-                          </picture>
-                        </i>
-                        Adobe Commerce
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/opencart-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/ecom-02.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/ecom-02.svg" alt="ecom-02" width="0" height="0">
-                          </picture>
-                        </i>
-                        Opencart
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/woocommerce-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/ecom-03.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/ecom-03.svg" alt="ecom-03" width="0" height="0">
-                          </picture>
-                        </i>
-                        WooCommerce
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/drupal-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/ecom-04.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/ecom-04.svg" alt="ecom-04" width="0" height="0">
-                          </picture>
-                        </i>
-                        Drupal
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/wordpress-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/ecom-05.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/ecom-05.svg" alt="ecom-05" width="0" height="0">
-                          </picture>
-                        </i>
-                        WordPress
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/services/strapi-development">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/ecom-06.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/ecom-06.svg" alt="ecom-06" width="0" height="0">
-                          </picture>
-                        </i>
-                        Strapi
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/shopify-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/ecom-07.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/ecom-07.svg" alt="ecom-07" width="0" height="0">
-                          </picture>
-                        </i>
-                        Shopify
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="content " id="telm-5">
-                <div class="dis-flex">
-                  <div class="flex-1 content-div">
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/android-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/mo-01.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/mo-01.svg" alt="mo-01" width="0" height="0">
-                          </picture>
-                        </i>
-                        Android
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/flutter-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/mo-02.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/mo-02.svg" alt="mo-02" width="0" height="0">
-                          </picture>
-                        </i>
-                        Flutter
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/iphone-app-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/mo-03.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/mo-03.svg" alt="mo-03" width="0" height="0">
-                          </picture>
-                        </i>
-                        iOS
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/kotlin-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/mo-04.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/mo-04.svg" alt="mo-04" width="0" height="0">
-                          </picture>
-                        </i>
-                        Kotlin
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/react-native-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/mo-05.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/mo-05.svg" alt="mo-05" width="0" height="0">
-                          </picture>
-                        </i>
-                        React Native
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="content " id="telm-6">
-                <div class="dis-flex">
-                  <div class="flex-1 content-div">
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/azure-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/aws.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/aws.svg" alt="aws" width="0" height="0">
-                          </picture>
-                        </i>
-                        Azure
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/aws-developers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/azure.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/azure.svg" alt="azure" width="0" height="0">
-                          </picture>
-                        </i>
-                        AWS
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="content " id="telm-7">
-                <div class="dis-flex">
-                  <div class="flex-1 content-div">
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/automation-testers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/automation.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/automation.svg" alt="automation" width="0" height="0">
-                          </picture>
-                        </i>
-                        Automation QA
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="https://www.pixelcrayons.com/staging/hire/manual-testers">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/manual.svg">
-                            <img loading="lazy" src="https://www.pixelcrayons.com/staging/wp-content/uploads/2025/02/manual.svg" alt="manual" width="0" height="0">
-                          </picture>
-                        </i>
-                        Manual QA
                       </a>
                     </div>
                   </div>
