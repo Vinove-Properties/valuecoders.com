@@ -350,19 +350,19 @@ if( isset($expertiseElm['required']) && ($expertiseElm['required'] == "yes") ) :
         <div class="tab-flex">
           <div class="tabs-container">
             <ul class="tabs">
-              <li class="tab active" data-target="ai"><img src="<?php bloginfo('template_url'); ?>/images/home-images/tech-icon.svg">Artificial Intelligence</li>
-              <li class="tab" data-target="blockc"><img src="<?php bloginfo('template_url'); ?>/images/home-images/tech-icon.svg">Blockchain</li>
-              <li class="tab" data-target="cvision"><img src="<?php bloginfo('template_url'); ?>/images/home-images/tech-icon.svg">Computer Vision</li>
-              <li class="tab" data-target="iot"><img src="<?php bloginfo('template_url'); ?>/images/home-images/tech-icon.svg">Internet of Things</li>
-              <li class="tab" data-target="mixedr"><img src="<?php bloginfo('template_url'); ?>/images/home-images/tech-icon.svg">Mixed Reality</li>
+              <li class="tab active" data-target="ai"><img src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/tech-icon.svg">Artificial Intelligence</li>
+              <li class="tab" data-target="blockc"><img src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/tech-icon.svg">Blockchain</li>
+              <li class="tab" data-target="cvision"><img src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/tech-icon.svg">Computer Vision</li>
+              <li class="tab" data-target="iot"><img src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/tech-icon.svg">Internet of Things</li>
+              <li class="tab" data-target="mixedr"><img src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/tech-icon.svg">Mixed Reality</li>
             </ul>
             <div class="tab-content">
               <div class="content active" id="ai">
                 <div class="dis-flex">
                   <div class="flex-2 img-div">
                     <picture>
-                      <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png">
-                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png" width="484" height="282">
+                      <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/technology-01.png">
+                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/technology-01.png" width="484" height="282">
                     </picture>
                   </div>
                   <div class="flex-2 content-div">
@@ -382,8 +382,8 @@ if( isset($expertiseElm['required']) && ($expertiseElm['required'] == "yes") ) :
                 <div class="dis-flex">
                   <div class="flex-2 img-div">
                     <picture>
-                      <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png">
-                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png" width="484" height="282">
+                      <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/technology-01.png">
+                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/technology-01.png" width="484" height="282">
                     </picture>
                   </div>
                   <div class="flex-2 content-div">
@@ -403,8 +403,8 @@ if( isset($expertiseElm['required']) && ($expertiseElm['required'] == "yes") ) :
                 <div class="dis-flex">
                   <div class="flex-2 img-div">
                     <picture>
-                      <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png">
-                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png" width="484" height="282">
+                      <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/technology-01.png">
+                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/technology-01.png" width="484" height="282">
                     </picture>
                   </div>
                   <div class="flex-2 content-div">
@@ -424,8 +424,8 @@ if( isset($expertiseElm['required']) && ($expertiseElm['required'] == "yes") ) :
                 <div class="dis-flex">
                   <div class="flex-2 img-div">
                     <picture>
-                      <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png">
-                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png" width="484" height="282">
+                      <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/technology-01.png">
+                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/technology-01.png" width="484" height="282">
                     </picture>
                   </div>
                   <div class="flex-2 content-div">
@@ -445,8 +445,8 @@ if( isset($expertiseElm['required']) && ($expertiseElm['required'] == "yes") ) :
                 <div class="dis-flex">
                   <div class="flex-2 img-div">
                     <picture>
-                      <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png">
-                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png" width="484" height="282">
+                      <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/technology-01.png">
+                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/technology-01.png" width="484" height="282">
                     </picture>
                   </div>
                   <div class="flex-2 content-div">
