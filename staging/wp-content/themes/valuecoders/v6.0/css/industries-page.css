@@ -2998,6 +2998,8 @@ body.page-template-template-testimonials .client-video-section iframe,
               position: absolute;
               left: 0;
               top: 4px; }
+            .tab-with-slide .tabs-container .tab-content .content .dis-flex .content-div ul li a:hover {
+              text-decoration: underline; }
         .tab-with-slide .tabs-container .tab-content .content .dis-flex .content-div .is-arrow {
           margin: 30px 0 0; }
 
