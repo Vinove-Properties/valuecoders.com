@@ -3383,8 +3383,8 @@ body.page-template-template-testimonials .client-video-section iframe,
               font-size: 0;
               background-size: 100%; }
           .tabs-section.technologies-tabs .tabs-container .tabs .tab:hover {
-            background: #ffffff;
-            color: #05164d; }
+            background: #05164d;
+            color: #ffffff; }
     .tabs-section.technologies-tabs .tab-content {
       margin: 0;
       width: 65%;
