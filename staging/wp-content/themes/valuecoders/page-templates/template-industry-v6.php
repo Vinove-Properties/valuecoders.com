@@ -338,6 +338,138 @@ if( isset($expertiseElm['required']) && ($expertiseElm['required'] == "yes") ) :
   </div>
 </section>
 <?php endif; ?>
+
+
+
+<section class="tabs-section techno-tabs padding-t-120 padding-b-120" id="tabs-section-2">
+      <div class="container">
+        <div class="top-section b-100">
+          <h2>Driving Innovation with Next-gen Tools</h2>
+          <p>Our team can assist you in transforming your business with the latest tech capabilities to stay ahead of the curve.</p>
+        </div>
+        <div class="tab-flex">
+          <div class="tabs-container">
+            <ul class="tabs">
+              <li class="tab active" data-target="ai"><img src="<?php bloginfo('template_url'); ?>/images/home-images/tech-icon.svg">Artificial Intelligence</li>
+              <li class="tab" data-target="blockc"><img src="<?php bloginfo('template_url'); ?>/images/home-images/tech-icon.svg">Blockchain</li>
+              <li class="tab" data-target="cvision"><img src="<?php bloginfo('template_url'); ?>/images/home-images/tech-icon.svg">Computer Vision</li>
+              <li class="tab" data-target="iot"><img src="<?php bloginfo('template_url'); ?>/images/home-images/tech-icon.svg">Internet of Things</li>
+              <li class="tab" data-target="mixedr"><img src="<?php bloginfo('template_url'); ?>/images/home-images/tech-icon.svg">Mixed Reality</li>
+            </ul>
+            <div class="tab-content">
+              <div class="content active" id="ai">
+                <div class="dis-flex">
+                  <div class="flex-2 img-div">
+                    <picture>
+                      <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png">
+                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png" width="484" height="282">
+                    </picture>
+                  </div>
+                  <div class="flex-2 content-div">
+                    <h3>Design Services</h3>
+                    <p>Our design team creates user-centric experiences that captivate audiences.</p>
+                    <ul>
+                      <li>MVP &amp; SaaS Development</li>
+                      <li>CTO as a Service </li>
+                      <li>Data Analytics &amp; DevOps</li>
+                      <li>Technology Consulting</li>
+                    </ul>
+                    <a href="#" class="is-arrow">Find Out More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="content" id="blockc">
+                <div class="dis-flex">
+                  <div class="flex-2 img-div">
+                    <picture>
+                      <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png">
+                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png" width="484" height="282">
+                    </picture>
+                  </div>
+                  <div class="flex-2 content-div">
+                    <h3>Blockchain</h3>
+                    <p>Our design team creates user-centric experiences that captivate audiences.</p>
+                    <ul>
+                      <li>MVP &amp; SaaS Development</li>
+                      <li>CTO as a Service </li>
+                      <li>Data Analytics &amp; DevOps</li>
+                      <li>Technology Consulting</li>
+                    </ul>
+                    <a href="#" class="is-arrow">Find Out More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="content" id="cvision">
+                <div class="dis-flex">
+                  <div class="flex-2 img-div">
+                    <picture>
+                      <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png">
+                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png" width="484" height="282">
+                    </picture>
+                  </div>
+                  <div class="flex-2 content-div">
+                    <h3>Computer Vision</h3>
+                    <p>Our design team creates user-centric experiences that captivate audiences.</p>
+                    <ul>
+                      <li>MVP &amp; SaaS Development</li>
+                      <li>CTO as a Service </li>
+                      <li>Data Analytics &amp; DevOps</li>
+                      <li>Technology Consulting</li>
+                    </ul>
+                    <a href="#" class="is-arrow">Find Out More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="content" id="iot">
+                <div class="dis-flex">
+                  <div class="flex-2 img-div">
+                    <picture>
+                      <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png">
+                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png" width="484" height="282">
+                    </picture>
+                  </div>
+                  <div class="flex-2 content-div">
+                    <h3>Internet of Things</h3>
+                    <p>Our design team creates user-centric experiences that captivate audiences.</p>
+                    <ul>
+                      <li>MVP &amp; SaaS Development</li>
+                      <li>CTO as a Service </li>
+                      <li>Data Analytics &amp; DevOps</li>
+                      <li>Technology Consulting</li>
+                    </ul>
+                    <a href="#" class="is-arrow">Find Out More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="content" id="mixedr">
+                <div class="dis-flex">
+                  <div class="flex-2 img-div">
+                    <picture>
+                      <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png">
+                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/images/home-images/technology-01.png" width="484" height="282">
+                    </picture>
+                  </div>
+                  <div class="flex-2 content-div">
+                    <h3>Mixed Reality</h3>
+                    <p>Our design team creates user-centric experiences that captivate audiences.</p>
+                    <ul>
+                      <li>MVP &amp; SaaS Development</li>
+                      <li>CTO as a Service </li>
+                      <li>Data Analytics &amp; DevOps</li>
+                      <li>Technology Consulting</li>
+                    </ul>
+                    <a href="#" class="is-arrow">Find Out More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
 <section class="hire-model-tab  padding-t-120 padding-b-120" id="hire-model">
   <div class="container">
     <div class="heading text-center">
