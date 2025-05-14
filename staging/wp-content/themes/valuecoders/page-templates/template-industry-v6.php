@@ -470,7 +470,7 @@ if( isset($expertiseElm['required']) && ($expertiseElm['required'] == "yes") ) :
 
 
 
-<section class="hire-model-tab  padding-t-120 padding-b-120" id="hire-model">
+<section class="hire-model-tab  padding-t-60 padding-b-120" id="hire-model">
   <div class="container">
     <div class="heading text-center">
       <h2>Our Custom Hiring Models</h2>
