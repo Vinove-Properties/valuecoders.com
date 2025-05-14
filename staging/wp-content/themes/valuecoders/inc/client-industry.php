@@ -1,18 +1,19 @@
+<?php 
+$content = (isset($args['content']) && !empty($args['content'])) ? $args['content'] : '<h2>valuecoders: Experts in eCommerce Consulting</h2>
+<p>Elevate your online business with valuecoders’ expert eCommerce consulting services, where innovation meets success.</p>
+<p>Our eCommerce consultants, selected from India’s top talent pool, comprise skilled developers, analysts, and project managers dedicated to delivering seamless, secure, and cost-effective solutions.</p>
+<ul>
+<li>20+ years of industry expertise</li>
+<li>Tailored consulting solutions</li>
+<li>Implementation of robust security measures</li>
+<li>Minimized downtime during consulting processes</li>
+</ul>';
+?>
 <section class="client-img-section padding-t-120 padding-b-120">
       <div class="container">
         <div class="dis-flex justify-sb items-center">
           <div class="flex-2 left-box">
-            <div class="heading">
-              <h2>valuecoders: Experts in eCommerce Consulting</h2>
-              <p>Elevate your online business with valuecoders’ expert eCommerce consulting services, where innovation meets success.</p>
-              <p>Our eCommerce consultants, selected from India’s top talent pool, comprise skilled developers, analysts, and project managers dedicated to delivering seamless, secure, and cost-effective solutions.</p>
-              <ul>
-                <li>20+ years of industry expertise</li>
-                <li>Tailored consulting solutions</li>
-                <li>Implementation of robust security measures</li>
-                <li>Minimized downtime during consulting processes</li>
-              </ul>
-            </div>
+            <div class="heading"><?php echo $content; ?></div>
           </div>
           <div class="flex-2 right-box">
             <div class="client-section">

@@ -8,8 +8,8 @@ get_header();
 $bannerImage = get_field("tb-image");
 $bannerStyle = "";
 if( $bannerImage ){
-  $banImage = getVcWebpSrcURL($bannerImage);
-  $bannerStyle = ' style="background-image:url(' . $banImage . ');"';
+  $banImage     = getVcWebpSrcURL( $bannerImage );
+  $bannerStyle  = ' style="background-image:url(' . $banImage . ');"';
 }
 
 $bcTitle = get_field("bc-title");
@@ -49,152 +49,76 @@ $vcBtn = get_field("vc-cta", $thisPostID);
 $sdTab   = get_field('tab_section'); 
 if( isset($sdTab['is_enabled']) && $sdTab['is_enabled'] === "yes" ) :
 if( isset($sdTab['tab-display']) && $sdTab['tab-display'] == "horizontal" ){
-echo '<section class="tab-with-slide padding-t-120 padding-b-120" id="ind-tabslider">';
-echo '<div class="container">';
-echo '<div class="top-section b-100">'.$sdTab['content'].'</div>';
-if(  )
+  echo '<section class="tab-with-slide padding-t-120 padding-b-120" id="ind-tabslider"><div class="container">';
+  echo '<div class="top-section b-100">'.$sdTab['content'].'</div>';
 
-echo '</div>';
-echo '</section>';  
-}
-?>
-<div class="tabs-container">
-<div class="tabs tabs-slider">
-  <div class="tab-scroll glider-contain">
-    <div class="glider" id="glider">
-      <div class="tab active" data-target="sol1">Healthcare Organization Management</div>
-    </div>
-    <div role="tablist" class="dots glider-dots">
+  if( isset($sdTab['tab-loop']) && $sdTab['tab-loop'] ){
+    echo '<div class="tab-flex"><div class="tabs-container">';
+    echo '<div class="tabs tabs-slider"><div class="tab-scroll glider-contain">';
+    echo '<div class="glider" id="glider">';
+    $i = 0;
+    foreach( $sdTab['tab-loop'] as $tab ){ 
+    $i++;
+    $isActive = ( $i === 1 )  ? 'active' : '';
+    echo '<div class="tab '.$isActive.'" data-target="sol'.$i.'">'.$tab['title'].'</div>';
+    }  
+    echo '</div>';
+    echo '<div role="tablist" class="dots glider-dots">
     <button data-index="0" aria-label="Page 1" role="tab" class="glider-dot active"></button>
-    <button data-index="1" aria-label="Page 2" role="tab" class="glider-dot "></button></div>
+    <button data-index="1" aria-label="Page 2" role="tab" class="glider-dot "></button></div>  
     <div class="prev-next-btn">
-    <button class="glider-prev" aria-disabled="false"></button>
-    <button class="glider-next" aria-disabled="false"></button>
+    <button class="glider-prev" aria-disabled="false"></button><button class="glider-next" aria-disabled="false"></button>
     </div>
-  </div>
-</div>
-<div class="tab-content">
-  <div class="content active" id="sol1">
-    <div class="dis-flex">
-      <div class="flex-2 img-div">
-        <picture>
-      </div>
-      <div class="flex-2 content-div">
-        #content
-        <a href="#" class="is-arrow">Learn More</a>
-      </div>
     </div>
-  </div>
-</div>
-</div>
-<?php endif; ?>
+    </div>
 
-<section class="data-drivetab padding-t-120 padding-b-120" id="solution-tab">
-  <div class="container">
-    <div class="top-section b-100">
-      <h2>Solutions We Deliver</h2>
-      <p>We specialize in creating secure and user-friendly healthcare infrastructure, connecting the back office to  the physician’s office. Explore our healthcare application development services:</p>
+    <div class="tab-content">';
+    $i = 0;
+    foreach( $sdTab['tab-loop'] as $tab ){ 
+    $i++;
+    $isActive = ( $i === 1 )  ? 'active' : '';
+    echo '<div class="content '.$isActive.'" id="sol'.$i.'">
+    <div class="dis-flex">
+      <div class="flex-2 img-div">'.vc_pictureElm($tab['image']).'</div>
+      <div class="flex-2 content-div">'.$tab['content'].'<a href="#" class="is-arrow">Learn More</a></div>
     </div>
-    <div class="data-driving">
-      <div class="left-panel">
-        <div class="accordion">
-          <div class="home-accordion-item">
-            <h3 class="home-accordion-title"><i class="normal"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/industry-images/tab-01.svg" alt="Invoicera" width="26" height="26"></i>
-              <i class="hover"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/industry-images/tab-01.svg" alt="Invoicera" width="26" height="26"></i>Online Invoicing
-            </h3>
-          </div>
-          <div class="home-accordion-item">
-            <h3 class="home-accordion-title"><i class="normal"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/industry-images/tab-01.svg" alt="Invoicera" width="26" height="26"></i>
-              <i class="hover"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/industry-images/tab-01.svg" alt="Invoicera" width="26" height="26"></i>Financial Management
-            </h3>
-          </div>
-          <div class="home-accordion-item">
-            <h3 class="home-accordion-title"><i class="normal"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/industry-images/tab-01.svg" alt="Invoicera" width="26" height="26"></i>
-              <i class="hover"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/industry-images/tab-01.svg" alt="Invoicera" width="26" height="26"></i>Business Operations
-            </h3>
-          </div>
-          <div class="home-accordion-item">
-            <h3 class="home-accordion-title"><i class="normal"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/industry-images/tab-01.svg" alt="Invoicera" width="26" height="26"></i>
-              <i class="hover"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/industry-images/tab-01.svg" alt="Invoicera" width="26" height="26"></i>Customization &amp; Integration
-            </h3>
-          </div>
-          <div class="home-accordion-item active">
-            <h3 class="home-accordion-title"><i class="normal"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/industry-images/tab-01.svg" alt="Invoicera" width="26" height="26"></i>
-              <i class="hover"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/industry-images/tab-01.svg" alt="Invoicera" width="26" height="26"></i>Client &amp; Vendor Management
-            </h3>
-          </div>
-        </div>
-        <a href="#" class="is-arrow">Explore all Features</a>
-      </div>
-      <div class="right-panel">
-        <div class="acr-panel" id="acr-panel-1">
-          <h3><a href="#">Online Invoicing</a></h3>
-          <p>Effortlessly create, send, and manage professional invoices online. Streamline your invoicing process today.</p>
-          <ul>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-          </ul>
-          <a href="#" class="is-arrow">Explore all Features</a>    
-        </div>
-        <div class="acr-panel" id="acr-panel-2">
-          <h3><a href="#">Financial Management</a></h3>
-          <p>Gain a clearer picture of your business's financial health with tools for expense tracking, project budgeting, and insightful reporting.</p>
-          <ul>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-          </ul>
-          <a href="#" class="is-arrow">Explore all Features</a>       
-        </div>
-        <div class="acr-panel" id="acr-panel-3">
-          <h3><a href="#">Business Operations</a></h3>
-          <p>Enhance operational efficiency by centralizing multiple businesses, online payments, and projects.</p>
-          <ul>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-          </ul>
-          <a href="#" class="is-arrow">Explore all Features</a>       
-        </div>
-        <div class="acr-panel" id="acr-panel-4">
-          <h3><a href="#">Customization &amp; Integration</a></h3>
-          <p>Customize invoice templates, automate workflows, and seamlessly integrate with popular payment gateways, accounting software, and CRM systems.</p>
-          <ul>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-          </ul>
-          <a href="#" class="is-arrow">Explore all Features</a>        
-        </div>
-        <div class="acr-panel active" id="acr-panel-5">
-          <h3>Client &amp; Vendor Management</h3>
-          <p>Keep organized records and build strong relationships with the client portal. Track interactions and streamline communication.</p>
-          <ul>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-            <li>Medical inventory software</li>
-          </ul>
-          <a href="#" class="is-arrow">Explore all Features</a>         
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </div>';
+    }  
+    echo '</div>';
+    echo '</div></div><!--//tabs-container-->';  
+  }
+  echo '</div><!--//container--></section>';  
+}else{
+  echo '<section class="data-drivetab padding-t-120 padding-b-120" id="solution-tab"><div class="container">';
+  echo '<div class="top-section b-100">'.$sdTab['content'].'</div>';
+  echo '<div class="data-driving">';
+  echo '<div class="left-panel"><div class="accordion">';
+  $i = 0;
+  foreach( $sdTab['tab-loop'] as $tab ){ 
+  $i++;
+  $isActive = ( $i === 1 )  ? 'active' : '';
+  echo '<div class="home-accordion-item '.$isActive.'"><h3 class="home-accordion-title">'.$tab['title'].'</h3></div>';
+  }
+  echo '</div><a href="#" class="is-arrow">Explore all Features</a></div>';
+
+  echo '<div class="right-panel">';
+  $i = 0;
+  foreach( $sdTab['tab-loop'] as $tab ){ 
+  $i++;
+  $isActive = ( $i === 1 )  ? 'active' : '';
+  echo '<div class="acr-panel '.$isActive.'" id="acr-panel-'.$i.'">'.$tab['content'].'<a href="#" class="is-arrow">Explore all Features</a></div>';
+  }
+  echo '</div>';
+  echo '</div><!--//.data-driving-->';
+  echo '</div></section>';
+}
+endif; 
+
+?>
 <?php 
-  $ctaOne = get_field('blockcta-1');
-  if( isset($ctaOne['required']) && ($ctaOne['required'] == "yes") ) :
-  ?>
+$ctaOne = get_field('blockcta-1');
+if( isset($ctaOne['required']) && ($ctaOne['required'] == "yes") ) :
+?>
 <section class="cta-section">
   <div class="container">
     <div class="cta-wrap">
@@ -217,168 +141,74 @@ echo '</section>';
   </div>
 </section>
 <?php endif; ?>
-<section class="services-three-column-section padding-t-120 padding-b-120">
-  <div class="container">
-    <div class="top-section b-100">
-      <h2>Empowering Healthcare Navigation with Digital Solutions</h2>
-      <p>Businesses often struggle to integrate effective digital solutions while facing the complexities of the healthcare sector. As a leading healthcare software development company, ValueCoders specializes in developing medical web apps and solutions that address these challenges.</p>
-    </div>
-    <div class="dis-flex justify-sb twobox">
-      <div class="flex-2 img-box">
-        <picture>
-          <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/industry-images/service-image.png.webp">
-          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/industry-images.png.webp" alt="service-image" width="429" height="628">
-        </picture>
-      </div>
-      <div class="flex-2 content-box">
-        <div class="dis-flex threebox">
-          <div class="flex-2 has-anchor">
-            <div class="box-3">
-              <h3>Modular Microservices-Based Solutions</h3>
-              <p>Whether you’re just starting out or transitioning from another platform, we can build the perfect solution for you.</p>
-              <ul><li>Test</li></ul>
-              <a href="#" class="is-arrow">Learn More</a>
-            </div>
-          </div>
-          <div class="flex-2 has-anchor">
-            <div class="box-3">
-              <h3>Market Entry Consultation</h3>
-              <p>From measuring market size to competitors’ analysis to identifying growth opportunities, we do it all for you.</p>
-              <a href="#" class="is-arrow">Learn More</a>
-            </div>
-          </div>
-          <div class="flex-2 has-anchor">
-            <div class="box-3">
-              <h3>Technology Consultation</h3>
-              <p>We help you recognize your business and technology requirements, assess growth perspectives, and calculate the implementation cost and time.</p>
-            </div>
-          </div>
-          <div class="flex-2 has-anchor">
-            <div class="box-3">
-              <h3>Operational Consultation</h3>
-              <p>We will review and strengthen your supply chain, production, order management and supply, data management, and analytics.</p>
-            </div>
-          </div>
-          <div class="flex-2 has-anchor">
-            <div class="box-3">
-              <h3>Business Consultation</h3>
-              <p>Let us review your business strategy, technology aspects, mobile presence, and more to create an action plan that positively impacts the bottom line.</p>
-            </div>
-          </div>
-          <div class="flex-2 has-anchor">
-            <div class="box-3">
-              <h3>Platform-based eCommerce Solutions</h3>
-              <p>We design and develop beautiful, highly customized, and scalable websites using <a href="https://www.valuecoders.com/services/ecommerce/magento-development">Adobe Commerce (Magento) platform</a>.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="service-scroller padding-t-120 padding-b-120" id="serv">
-  <div class="container">
-    <div class="service-wrap">
-      <div class="left-panel">
+<?php
+$solGrid = get_field('solutions');
+if( isset($solGrid['is_enabled']) && ($solGrid['is_enabled'] == "yes") ) :
+  if( isset($solGrid['type']) &&  ($solGrid['type'] === "grid") ){
+    echo '<section class="services-three-column-section padding-t-120 padding-b-120"><div class="container">';
+    echo '<div class="top-section b-100">'.$solGrid['content'].'</div>';
+    echo '<div class="dis-flex justify-sb twobox">';
+    echo '<div class="flex-2 img-box">
+    <picture>
+    <source type="image/webp" srcset="'.get_bloginfo('template_url').'/v6.0/images/industry-images/service-image.png.webp">
+    <img loading="lazy" src="'.get_bloginfo('template_url').'/v6.0/images/industry-images.png.webp" alt="service-image" width="429" height="628">
+    </picture>
+    </div>';
+    echo '<div class="flex-2 content-box"><div class="dis-flex threebox">';
+    if( $solGrid['loop'] ){
+      foreach( $solGrid['loop'] as $row ){
+      echo '<div class="flex-2 has-anchor">
+      <div class="box-3">
+      <h3>'.$row['title'].'</h3>
+      <p>'.$row['text'].'</p>
+      <a href="#" class="is-arrow">Learn More</a>
+      </div></div>';    
+      }
+    }
+    echo '</div></div>';
+    echo '</div>';
+    echo '</div></section>';
+  }else{
+    echo '<section class="service-scroller padding-t-120 padding-b-120" id="serv"><div class="container"><div class="service-wrap">';
+    echo '<div class="left-panel">
         <div class="top-section">
           <h6>What we serve</h6>
           <h2>Software Development & Engineering Services</h2>
           <p>Driven by the top 1% of software engineering talent in India, we deliver robust, scalable.</p>
         </div>
         <div class="ser-button">
-          <i><img src="images/home-images/vc-fav.svg" width="40" height="40"></i>
+          <i><img src="'.get_bloginfo('template_url').'/images/home-images/vc-fav.svg" width="40" height="40"></i>
           <h2>Fuel your <strong>Digital-First</strong> Idea</h2>
           <p>With 1600+ Transformation Experts</p>
-          <div class="btn-container">
-            <a href="#" class="cta-button yellow">
-            GET STARTED
-            </a>
-          </div>
+          <div class="btn-container"><a href="#" class="cta-button yellow">GET STARTED</a></div>
         </div>
-      </div>
-      <div class="right-panel">
-        <div class="content-box">
-          <div class="img-sec">
-            <picture>
-              <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/sericon-01.png">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/sericon-01.png"width="40" height="40">
-            </picture>
-          </div>
-          <div class="text-box">
-            <h3>Software Product Engineering</h3>
-            <p>We offer end-to-end software outsourcing services from initial consulting to development & deployment.</p>
-            <ul>
-              <li>MVP Development</li>
-              <li>Digital Transformation</li>
-              <li>SaaS Development</li>
-              <li>Application Modernization</li>
-            </ul>
-          </div>
-          <a class="move" href="#"></a>
-        </div>
-        <div class="content-box">
-          <div class="img-sec">
-            <picture>
-              <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/sericon-02.png">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/sericon-02.png"width="40" height="40">
-            </picture>
-          </div>
-          <div class="text-box">
-            <h3>Software Product Engineering</h3>
-            <p>We offer end-to-end software outsourcing services from initial consulting to development & deployment.</p>
-            <ul>
-              <li>MVP Development</li>
-              <li>Digital Transformation</li>
-              <li>SaaS Development</li>
-              <li>Application Modernization</li>
-            </ul>
-          </div>
-          <a class="move" href="#"></a>
-        </div>
-        <div class="content-box">
-          <div class="img-sec">
-            <picture>
-              <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/sericon-01.png">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/sericon-01.png"width="40" height="40">
-            </picture>
-          </div>
-          <div class="text-box">
-            <h3>Software Product Engineering</h3>
-            <p>We offer end-to-end software outsourcing services from initial consulting to development & deployment.</p>
-            <ul>
-              <li>MVP Development</li>
-              <li>Digital Transformation</li>
-              <li>SaaS Development</li>
-              <li>Application Modernization</li>
-            </ul>
-          </div>
-          <a class="move" href="#"></a>
-        </div>
-        <div class="content-box">
-          <div class="img-sec">
-            <picture>
-              <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/sericon-02.png">
-              <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/home-images/sericon-02.png"width="40" height="40">
-            </picture>
-          </div>
-          <div class="text-box">
-            <h3>Software Product Engineering</h3>
-            <p>We offer end-to-end software outsourcing services from initial consulting to development & deployment.</p>
-            <ul>
-              <li>MVP Development</li>
-              <li>Digital Transformation</li>
-              <li>SaaS Development</li>
-              <li>Application Modernization</li>
-            </ul>
-          </div>
-          <a class="move" href="#"></a>
-        </div>
-      </div>
-      <!--//.right-panel-->
-    </div>
-  </div>
-</section>
-<?php get_template_part('inc/client', 'industry'); ?>
+      </div><!--//.left-panel-->';
+
+      if( $solGrid['rows'] ){
+      echo '<div class="right-panel">';
+      foreach( $solGrid['rows'] as $row ){
+      //echo '<pre>'; print_r($row); echo '</pre>';  
+      $icon = ( isset($row['icon']) && is_array($row['icon']) ) ? vc_pictureElm( $row['icon'] ) : '';
+      $link = ( isset($row['link']) && !empty($row['link']) ) ? '<a class="move" href="'.vc_siteurl($row['link']).'"></a>' : '';
+      echo '<div class="content-box">
+      <div class="img-sec">'.$icon.'</div>
+      <div class="text-box">'.$row['content'].'</div>
+      '.$link.'
+      </div>';
+      }
+      echo '</div>';
+      }
+    echo '</div></div></section>';
+  }
+endif;  
+?>
+<?php 
+$ind_wvc = get_field('ind-wvc');
+if( isset( $ind_wvc['required'] ) && ($ind_wvc['required'] === "yes") ){
+  get_template_part('inc/client', 'industry', ['content' => $ind_wvc['content']]);   
+}
+?>
+
 <?php 
   $ctaTwo = get_field('blockcta-2');
   if( isset($ctaTwo['required']) && ($ctaTwo['required'] == "yes") ) :
@@ -413,162 +243,55 @@ echo '</section>';
 </section>
 <?php endif; ?>
 
-
- <section class="tabs-section technologies-tabs padding-t-120 padding-b-120" id="tabs-section-3">
-      <div class="container">
-        <div class="top-section b-100">
-          <h2>We Have Expertise In</h2>
-          <p>Backed by 675+ digital experts, Valucoders is committed to deliver scalable, robust, and advanced solutions that meet specific needs of clients.</p>
-        </div>
-        <div class="tab-flex">
-          <div class="tabs-container">
-            <ul class="tabs">
-              <li class="tab active" data-target="telm-1">
-                <img src="images/industry-images/tech-01.svg" class="normal" alt="Digital Marketing">
-                <img src="images/industry-images/tech-01.svg" class="hover" alt="Digital Marketing"> Digital Marketing
-              </li>
-              <li class="tab " data-target="telm-2">
-                <img src="images/industry-images/tech-01.svg" class="normal" alt="Full Stack &amp; Frameworks">
-                <img src="images/industry-images/tech-01.svg" class="hover" alt="Full Stack &amp; Frameworks"> Full Stack &amp; Frameworks
-              </li>
-              <li class="tab " data-target="telm-3">
-            </ul>
-            <div class="tab-content">
-              <div class="content active" id="telm-1">
-                <div class="dis-flex">
-                  <div class="flex-1 content-div">
-                    <div class="cont-col">
-                      <a href="#">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="images/industry-images/tech-01.svg">
-                            <img loading="lazy" src="images/industry-images/tech-01.svg" alt="Content Writer" width="0" height="0">
-                          </picture>
-                        </i>
-                        Content Writer
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="#">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="images/industry-images/tech-01.svg">
-                            <img loading="lazy" src="images/industry-images/tech-01.svg" alt="PPC Expert" width="0" height="0">
-                          </picture>
-                        </i>
-                        PPC Experts
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="#">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="images/industry-images/tech-01.svg">
-                            <img loading="lazy" src="images/industry-images/tech-01.svg" alt="PPC Expert" width="0" height="0">
-                          </picture>
-                        </i>
-                        PPC Experts
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="#">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="images/industry-images/tech-01.svg">
-                            <img loading="lazy" src="images/industry-images/tech-01.svg" alt="PPC Expert" width="0" height="0">
-                          </picture>
-                        </i>
-                        PPC Experts
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="content " id="telm-2">
-                <div class="dis-flex">
-                  <div class="flex-1 content-div">
-                    <div class="cont-col">
-                      <a href="#">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="images/industry-images/tech-01.svg">
-                            <img loading="lazy" src="images/industry-images/tech-01.svg" alt="biggd-01" width="0" height="0">
-                          </picture>
-                        </i>
-                        .NET Core
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="#">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="images/industry-images/tech-01.svg">
-                            <img loading="lazy" src="images/industry-images/tech-01.svg" alt="biggd-02" width="0" height="0">
-                          </picture>
-                        </i>
-                        Django
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="#">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="images/industry-images/tech-01.svg">
-                            <img loading="lazy" src="images/industry-images/tech-01.svg" alt="biggd-03" width="0" height="0">
-                          </picture>
-                        </i>
-                        MEAN
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="#">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="images/industry-images/tech-01.svg">
-                            <img loading="lazy" src="images/industry-images/tech-01.svg" alt="biggd-04" width="0" height="0">
-                          </picture>
-                        </i>
-                        MERN
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="content " id="telm-3">
-                <div class="dis-flex">
-                  <div class="flex-1 content-div">
-                    <div class="cont-col">
-                      <a href="#">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="images/industry-images/tech-01.svg">
-                            <img loading="lazy" src="images/industry-images/tech-01.svg" alt="bk-01" width="0" height="0">
-                          </picture>
-                        </i>
-                        .NET
-                      </a>
-                    </div>
-                    <div class="cont-col">
-                      <a href="#">
-                        <i>
-                          <picture>
-                            <source type="image/svg+xml" srcset="images/industry-images/tech-01.svg">
-                            <img loading="lazy" src="images/industry-images/tech-01.svg" alt="bk-02" width="0" height="0">
-                          </picture>
-                        </i>
-                        Python
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+<?php 
+$expertiseElm = get_field('tech-expertise');
+if( isset($expertiseElm['required']) && ($expertiseElm['required'] == "yes") ) :
+?>
+<section class="tabs-section technologies-tabs padding-t-120 padding-b-120" id="tabs-section-3">
+  <div class="container">
+    <div class="top-section b-100"><?php echo $expertiseElm['content']; ?></div>
+    <div class="tab-flex">
+      <?php 
+        if( $expertiseElm['tabs'] ){
+      ?>
+      <div class="tabs-container">
+        <ul class="tabs">
+          <?php  
+            $i = 0;
+            foreach( $expertiseElm['tabs'] as $tab ) { 
+                $i++;
+                $active   = ($i === 1) ? 'active' : '';  
+                $imgUrl   = !empty($tab['icon']['url']) ? '<img src="'.$tab['icon']['url'].'" class="normal" alt="'.$tab['title'].'">' : '';
+                $himgUrl  = !empty($tab['hicon']['url']) ? '<img src="'.$tab['hicon']['url'].'" class="hover" alt="'.$tab['title'].'">' : '';
+                echo '<li class="tab '.$active.'" data-target="telm-'.$i.'">
+                '.$imgUrl.$himgUrl.' '.$tab['title'].'</li>';
+            }
+          ?>        
+        </ul>
+        <div class="tab-content">
+          <?php 
+            $i = 0;
+            foreach( $expertiseElm['tabs'] as $tab ){ 
+              $i++;
+              $active = ( $i === 1 ) ? 'active' : '';  
+              echo '<div class="content '.$active.'" id="telm-'.$i.'"><div class="dis-flex"><div class="flex-1 content-div">';
+                if( $tab['inner'] ){
+                  foreach($tab['inner'] as $row ){
+                    echo '<div class="cont-col">
+                    <a href="'.vc_siteurl($row['link']).'"><i>'.vc_pictureElm($row['icon']).'</i>'.$row['title'].'</a>
+                    </div>';
+                  }  
+                }                
+                echo '</div></div></div>';
+            } 
+          ?>
         </div>
       </div>
-    </section>
-
-
+      <?php } ?>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
 
 <?php 
   $trendElm = get_field('tech-trends');
