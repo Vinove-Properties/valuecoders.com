@@ -167,7 +167,7 @@ if( isset($solGrid['is_enabled']) && ($solGrid['is_enabled'] == "yes") ) :
     }
     echo '</div></div>';
     echo '</div>';
-    echo '</div></section>';
+    echo '</div></section>';    
   }else{
     echo '<section class="service-scroller padding-t-120 padding-b-120" id="serv"><div class="container"><div class="service-wrap">';
     echo '<div class="left-panel">
