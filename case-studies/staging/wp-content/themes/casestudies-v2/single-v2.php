@@ -11,18 +11,18 @@ foreach($term_list as $term_single) {
 $technology_list .= '<li class="'.$term_single->slug.'" title="'.$term_single->name.'">'.$term_single->name.'</li>';
 }
 $technology_list .='</ul>';
-$bg_css = 'background-image: url("'.get_bloginfo('template_url').'/dev-img/cs-default-banner.jpg")';
+$bannerThumb = get_field('banner-thumb');
+if($bannerThumb){
+$bg_css = 'background-image: url("'.$bannerThumb['url'].'")';
+}else{
+$bg_css = 'background-image: url("'.get_bloginfo('template_url').'/dev-img/cs-default-banner.jpg")';	
+}
 ?>
 <section class="hero-section vlazy" style='<?php echo $bg_css; ?>'>
-<div class="container">
-  <h1><?php the_title(); ?></h1>
-  <p>ValueCoders designed a user-friendly Figma prototype for an event management company's website and mobile app, incorporating intuitive navigation, appealing layouts, and essential features like vendor search, booking, payment gateways, and user accounts.</p>
-  <div class="tech-use">
-  	<p></p>
-    <span>Technology Used:</span>
-    <?php echo $technology_list; ?>
-  </div>
-</div>
+	<div class="container">
+	  <?php echo get_field('banner-txt'); ?>
+	  <div class="tech-use"><span>Technology Used:</span><?php echo $technology_list; ?></div>
+	</div>
 </section>
 <section class="case-section padding-t-120 padding-b-120">
 	<div class="container">
