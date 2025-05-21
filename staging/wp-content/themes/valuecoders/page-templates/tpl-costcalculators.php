@@ -24,7 +24,17 @@ get_header();
       </div>
     </div>
     <div class="cost-right">
-    <form id="cost-calc-form">
+    <div class="sub-response" style="display:block;">
+      <h2>Thank you for contacting us.</h2>
+      <p>Our team will analyze the requirements and get back to you with the cost estimate, shortly!</p>
+      <p>Do you want to learn more about ValueCoders?</p>
+      <ul>
+        <li>4200+ projects successfully implemented: <a href="https://www.valuecoders.com/case-studies/">check out our portfolio</a></li>
+        <li>2500+ happy clients: see what they have to <a href=" https://www.valuecoders.com/testimonials">say about us</a></li>
+        <li>Managing a community of 10000+ tech enthusiasts and learners: <a href=" https://www.valuecoders.com/blog">check our blog</a></li> 
+      </ul>
+    </div>  
+    <form id="cost-calc-form" style="display:block;">
     <div class="steps-navigation" id="stepsNav"></div>
     <div id="calculatorForm"></div>
     <div class="step last-step" id="stepFinal">

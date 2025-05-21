@@ -8,65 +8,22 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	return;
 }
 require get_parent_theme_file_path( '/inc/ajax-request.php' );
+
 function casestudies_setup() {
 	load_theme_textdomain( 'casestudies' );
 	add_theme_support( 'title-tag' );
-
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-	 */
 	add_theme_support( 'post-thumbnails' );
-
 	//add_image_size( 'casestudies-featured-image', 2000, 1200, true );
-
 	//add_image_size( 'casestudies-thumbnail-avatar', 100, 100, true );
-
 	// Set the default content width.
 	$GLOBALS['content_width'] = 525;
-
-	// This theme uses wp_nav_menu() in two locations.
-	register_nav_menus(
-		array(
+	register_nav_menus(array(
 			'top'    => __( 'Top Menu', 'casestudies' ),
 			'social' => __( 'Social Links Menu', 'casestudies' ),
 		)
 	);
-
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support(
-		'html5',
-		array(
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-			'script',
-			'style',
-		)
-	);
-
-	/*
-	 * Enable support for Post Formats.
-	 *
-	 * See: https://wordpress.org/support/article/post-formats/
-	 */
-	add_theme_support(
-		'post-formats',
-		array(
-			'aside',
-			'image',
-			'video',
-			'quote',
-			'link',
-			'gallery',
-			'audio',
-		)
-	);
+	add_theme_support( 'html5', array( 'comment-form', 'comment-list', 'gallery', 'caption', 'script', 'style') );
+	add_theme_support( 'post-formats',['aside','image','video','quote','link','gallery','audio'] );
 
 	// Add theme support for Custom Logo.
 	add_theme_support(
@@ -334,6 +291,18 @@ function casestudies_widgets_init() {
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
+		)
+	);
+
+	register_sidebar(
+		array(
+			'name'          => __( 'Table of content', 'casestudies' ),
+			'id'            => 'toc-sidebar',
+			'description'   => __( 'Add widgets here to appear in your footer.', 'casestudies' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		)
 	);
 }
