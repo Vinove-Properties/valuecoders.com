@@ -333,11 +333,10 @@ function casestudies_scripts(){
 
 	$template = get_page_template_slug( $post->ID );
 	if( $template = "single-v2.php" ){
-		wp_enqueue_style( 'footer-form', trailingslashit(get_stylesheet_directory_uri()).'single-style-v2.css',['casestudies-style'], _S_VERSION );	
+		wp_enqueue_style( 'footer-form', trailingslashit(get_stylesheet_directory_uri()).'single-style-v2.css',
+		['casestudies-style'], _S_VERSION );
 	}
 
-
-	// Theme stylesheet.
 	//wp_enqueue_script( 'modernizr-custom', get_stylesheet_uri() .'/assets/js/modernizr-custom.js', array( 'modernizr-custom' ),false,true );
 
 	//
