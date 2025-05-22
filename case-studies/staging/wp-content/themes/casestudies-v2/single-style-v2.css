@@ -1,0 +1,232 @@
+/*Single Page Styling CSS Starts From here*/
+
+.post-template-single-v2 {
+
+
+  .left-bar #ezw_tco-2 .ez-toc-title {
+    font-size: 20px;
+    color: rgba(33, 33, 33, 1);
+    font-weight: 300;
+    margin-right: 20px;
+    text-transform: uppercase;
+  }
+
+  .bor-line {
+    padding-right: 0;
+  }
+
+  .left-bar .tocsec {
+    margin-right: -6px;
+  }
+
+  .share .searchBtn {
+    margin-right: 20px;
+  }
+
+  .left-bar div.ez-toc-widget-container ul.ez-toc-list {
+    padding: 0;
+  }
+
+  .left-bar #ezw_tco-2 .ez-toc-widget-container ul.ez-toc-list li {
+    border-right: 6px solid transparent;
+    padding-right: 20px;
+  }
+
+
+  .left-bar #ezw_tco-2 .ez-toc-widget-container ul.ez-toc-list li a {
+    text-decoration: none;
+    padding: 8px 30px;
+    color: rgba(101, 101, 101, 1);
+    border-radius: 5px;
+    font-weight: 500;
+    display: block;
+    position: relative;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .left-bar #ezw_tco-2 .ez-toc-widget-container ul.ez-toc-list li.active a,
+  .left-bar #ezw_tco-2 .ez-toc-widget-container ul.ez-toc-list li:hover a {
+    color: #212121;
+  }
+
+  .left-bar #ezw_tco-2 .ez-toc-widget-container ul.ez-toc-list li.active {
+    background: transparent;
+    border-color: rgba(255, 173, 0, 1);
+  }
+
+  .left-bar #ezw_tco-2 .ez-toc-widget-container ul.ez-toc-list li:hover {
+    border-color: rgba(255, 173, 0, 1);
+  }
+
+
+  .left-bar .ez-toc-widget-container li.active>a {
+    color: #212121;
+    font-weight: 500;
+    background: rgba(255, 173, 0, 0.15);
+    position: relative;
+    display: block;
+  }
+
+
+  .left-bar .ez-toc-widget-container ul.ez-toc-list li::before {
+    display: none;
+  }
+
+
+  .right-bar {
+
+    h2 {
+      font-size: 30px;
+
+      color: rgba(5, 22, 77, 1);
+      line-height: 1.5;
+      position: relative;
+      margin: 50px 0 20px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+
+    }
+
+
+    h3 {
+      margin: 0 0 20px;
+    }
+
+    blockquote {
+      font-style: italic;
+      color: #555;
+      border-left: 4px solid #FFAF00;
+      margin: 2rem 0;
+      padding: 1rem 1.5rem;
+      background-color: #FFF9ED;
+      position: relative;
+      quotes: "“""”""‘""’";
+
+      &::before {
+        content: open-quote;
+        font-size: 2.5rem;
+        line-height: 0;
+        margin-right: 0.25rem;
+        color: #FFAF00;
+        vertical-align: -0.4em;
+      }
+
+      cite {
+        display: block;
+        margin-top: 0.5rem;
+        font-size: 0.875rem;
+        color: #444;
+        font-style: normal;
+
+        &::before {
+          content: "— ";
+        }
+      }
+    }
+
+
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #444;
+      margin: 1rem 0;
+    }
+
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 2rem 0;
+      border-radius: 8px;
+      display: block;
+    }
+
+
+    table {
+      position: relative;
+      z-index: 9;
+      border: 1px solid color #BDB7B7;
+      margin: 20px 0 0;
+    }
+
+    table td,
+    th {
+      border: 1px solid #BDB7B7;
+      padding: 15px 20px;
+      line-height: 24px;
+    }
+
+    table tr:nth-child(even) {
+      background-color: #f2f2f21a;
+    }
+
+    table th {
+      padding: 15px 20px;
+      text-align: left;
+      background: #181732;
+      color: #fff;
+    }
+
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    ol {
+      list-style-type: decimal;
+      padding: 0;
+      margin: 0;
+    }
+
+
+    .highlight {
+      background-color: #ffffcc;
+      padding: 0.5rem;
+      border-left: 4px solid #ffcc00;
+      margin: 1rem 0;
+    }
+  }
+
+
+}
+
+
+/*Single Page Styling CSS Ends here*/
+
+
+@media (max-width: 991px) {
+  .post-template-single-v2 {
+    .left-bar #ezw_tco-2 .ez-toc-title {
+      font-size: 18px;
+    }
+
+    .left-bar #ezw_tco-2 .ez-toc-widget-container ul.ez-toc-list li {
+      padding-right: 0;
+      border-right: none;
+    }
+
+    .left-bar #ezw_tco-2 .ez-toc-widget-container ul.ez-toc-list li a {
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+  }
+
+
+}
+
+@media (max-width: 767px) {
+  .post-template-single-v2 {
+    .right-bar h2 {
+      font-size: 22px;
+      margin: 0 0 15px;
+      margin: 40px 0 15px;
+    }
+  }
+
+
+}
