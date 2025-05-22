@@ -214,6 +214,7 @@
 @media (max-width: 767px) {
   .post-template-single-v2 {
     .share .searchBtn{margin-right:0;}
+     .right-bar{margin:0;}
     .right-bar h2 {
       font-size: 22px;
       margin: 0 0 15px;
