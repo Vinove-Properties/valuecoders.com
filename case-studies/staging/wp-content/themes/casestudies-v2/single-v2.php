@@ -29,6 +29,7 @@ $bg_css = 'background-image: url("'.get_bloginfo('template_url').'/dev-img/cs-de
 		<div class="case-wrap" id="case-study">
 			<div class="case-sticky">
 				<div class="left-bar" id="case-question">
+			 
 		        <div class="bor-line">
 		          	<div class="tocsec"><?php dynamic_sidebar('toc-sidebar'); ?></div>
 		          <div class="share">
