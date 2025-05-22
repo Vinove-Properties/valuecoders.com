@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( '_S_VERSION' ) ) {
-	define( '_S_VERSION', '1.9.0' );
+	define( '_S_VERSION', '05.2.25' );
 }
 
 if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
@@ -34,26 +34,6 @@ function casestudies_setup() {
 			'flex-width' => true,
 		)
 	);
-
-	// Add theme support for selective refresh for widgets.
-	//add_theme_support( 'customize-selective-refresh-widgets' );
-
-	/*
-	 * This theme styles the visual editor to resemble the theme style,
-	 * specifically font, colors, and column width.
-	  */
-	//add_editor_style( array( 'assets/css/editor-style.css', casestudies_fonts_url() ) );
-
-	// Load regular editor styles into the new block-based editor.
-	//add_theme_support( 'editor-styles' );
-
-	// Load default block styles.
-	//add_theme_support( 'wp-block-styles' );
-
-	// Add support for responsive embeds.
-	//add_theme_support( 'responsive-embeds' );
-
-	// Define and register starter content to showcase the theme on new sites.
 	$starter_content = array(
 		'widgets'     => array(
 			// Place three core-defined widgets in the sidebar area.
@@ -336,21 +316,25 @@ add_filter( 'excerpt_more', 'casestudies_excerpt_more' );
 /**
  * Enqueues scripts and styles.
  */
-function casestudies_scripts() {
+function casestudies_scripts(){
+	global $post;
 	wp_enqueue_style( 'casestudies-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'vc-csmenu', trailingslashit( get_stylesheet_directory_uri() ).'vc-menu.css',array(), _S_VERSION );
 	wp_enqueue_style( 'vc-footer', trailingslashit( get_stylesheet_directory_uri() ).'assets/css/footer.css',array(), _S_VERSION );
-	wp_enqueue_style( 'footer-form', trailingslashit( get_stylesheet_directory_uri() ).'footer-form.css',array(), _S_VERSION );
+	
+	//wp_enqueue_style( 'footer-form', trailingslashit( get_stylesheet_directory_uri() ).'footer-form.css',array(), _S_VERSION );
 
     wp_enqueue_script( 'bootstrap','https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', array( 'jquery' ),false,true );
-
-
     wp_register_script('modernizr-custom', get_template_directory_uri() . '/assets/js/modernizr-custom.js', array('jquery'),'1.1', true);
     wp_enqueue_script('menu-v4', get_template_directory_uri() . '/js/menu-v4.js', [],'1.1', true);
 
     wp_localize_script( 'jquery', 'my_ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
-
 	wp_enqueue_script('modernizr-custom');
+
+	$template = get_page_template_slug( $post->ID );
+	if( $template = "single-v2.php" ){
+		wp_enqueue_style( 'footer-form', trailingslashit(get_stylesheet_directory_uri()).'single-style-v2.css',['casestudies-style'], _S_VERSION );	
+	}
 
 
 	// Theme stylesheet.
