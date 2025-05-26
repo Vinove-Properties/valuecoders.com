@@ -19,12 +19,11 @@ get_header();
     <div class="cost-left">
       <div class="head-text"><?php the_field('calc-content'); ?></div>
       <div class="img-wrap">
-        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/cost-image.svg" 
-        alt="valuecoders" width="384" height="325">
+        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/cost-image.svg" alt="valuecoders" width="384" height="325">
       </div>
     </div>
     <div class="cost-right">
-    <div class="sub-response" style="display:block;">
+    <div id="elm-thanku" class="sub-response" style="display:none;">
       <h2>Thank you for contacting us.</h2>
       <p>Our team will analyze the requirements and get back to you with the cost estimate, shortly!</p>
       <p>Do you want to learn more about ValueCoders?</p>
@@ -40,34 +39,45 @@ get_header();
     <div class="step last-step" id="stepFinal">
     <h3>Your Contact Data</h3>
     <div class="submit-form">
-    <div class="user-input">
+      <div class="user-input">
+        <label>
+          <span class="fname">Full Name *</span>
+          <input type="text" name="uname" id="cl-name" value="" data-err="Please Fill Name">
+          <small class="error-message"></small>
+        </label>
+      </div>
 
-    <label><span class="fname">Full Name *</span>
-    <input type="text" name="uname" id="fullName" value="Jhon Doe" required>
-    <span class="error-msg" id="fullNameError">Please fill in the required fields.</span>
-    </label>
+      <div class="user-input">
+        <label>
+          <span class="fname">Company Name *</span>
+          <input type="text" name="company" id="cl-company" value="">
+          <small class="error-message"></small>
+        </label>  
+      </div>              
 
-    </div>
-
-    <div class="user-input">
-    <label><span class="fname">Company Name *</span>
-    <input type="text" name="company" id="companyName" value="Valuecoders" required>
-    <span class="error-msg" id="companyNameError">Please fill in the required fields.</span>
-    </label>  
-    </div>              
-
-    <div class="user-input">
-    <label><span class="fname">Work Email *</span>
-    <input type="email" name="email" id="workEmail" value="jhon.doe@yopmail.com" required>
-    <span class="error-msg" id="workEmailError">Please fill in the required fields.</span>
-    </label>  
-    </div>           
-    <div class="user-input">   
-    <label><span class="fname">Phone Number:</span>
-    <input type="text" name="phone"  value="0000000000" id="phoneNumber">
-    </label>
-    </div>
-
+      <div class="user-input">
+        <label>
+          <span class="fname">Work Email *</span>
+          <input type="email" name="email" id="cl-email" value="" data-err="Please Fill Email">
+          <small class="error-message"></small>
+        </label>  
+      </div>           
+      
+      <div class="user-input">   
+        <label>
+          <span class="fname">Phone Number (Optional):</span>
+          <input type="text" name="phone" value="" id="cl-phone">
+          <small class="error-message"></small>
+        </label>
+      </div>
+      <div class="user-input group-com">
+        <div class="row">   
+          <div class="labl">Preferred way of communication:</div>
+          <label><input type="radio" name="communication" value="Any" checked>Any</label>
+          <label><input type="radio" name="communication" value="Email">Email</label>
+          <label><input type="radio" name="communication" value="Phone">Phone</label>
+        </div>
+      </div>
     </div>
     </div>
     <div class="button-group">
@@ -75,9 +85,9 @@ get_header();
     <button type="button" id="nextBtn" onclick="changeStep(1)">Next</button>
     <input type="hidden" name="post_id" value="<?php echo get_the_ID(); ?>">
     <button type="submit" id="submitBtn" class="hidden">Finish</button>
-    </div>
-    <div id="sub-outpur"></div>
+    </div>    
     </form>
+    <div id="sub-outpur"></div>
     </div>
     </div>
   </div>

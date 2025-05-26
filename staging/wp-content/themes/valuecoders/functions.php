@@ -3,6 +3,31 @@ function isStaggingVersion(){
 	return ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'staging' ) !== false) )  ?  true : false;
 }
 
+if( isset($_SERVER['HTTP_HOST']) && ( $_SERVER['HTTP_HOST']  !== "localhost" ) ){
+    require_once '/home/valuecoders-com/public_html/envloader.php';
+    loadEnv();
+    add_action( 'phpmailer_init', function( $phpmailer ){
+        $phpmailer->isSMTP();
+        $phpmailer->Host         = getenv('SMTP_HOST');
+        $phpmailer->SMTPSecure   = getenv('SMTP_SECURE');
+        $phpmailer->Port         = getenv('SMTP_PORT');
+        $phpmailer->SMTPAuth     = getenv('SMTP_AUTH');
+        $phpmailer->Username     = getenv('SMTP_USERNAME');
+        $phpmailer->Password     = getenv('SMTP_PASSWORD');
+        $phpmailer->From          = "do-not-reply@valuecoders.com";
+        $phpmailer->FromName      = "ValueCoders";
+    });    
+    define('CRM_DB_USER', getenv('CRM_DB_USER'));
+    define('CRM_DB_PASSWORD', getenv('CRM_DB_PASS'));
+    define('CRM_DB', getenv('CRM_DB_NAME'));
+    define('CRM_HOST', getenv('CRM_DB_HOST'));
+}else{
+	define('CRM_DB_USER', 'phpmyadmin');
+    define('CRM_DB_PASSWORD', 'root');
+    define('CRM_DB', 'crm.valuecoders');
+    define('CRM_HOST', 'localhost');
+}
+
 add_filter('xmlrpc_enabled', '__return_false');
 
 if( ! defined( '_S_VERSION' ) ) {
@@ -1675,9 +1700,6 @@ if( is_page_template( 'page-templates/template-industry.php' ) ){
 
 });
 
-
-
-
 add_action( 'wp_print_scripts', 'wra_filter_scripts', 100000 );
 add_action( 'wp_print_footer_scripts', 'wra_filter_scripts', 100000 );
 function wra_filter_scripts(){
@@ -1811,55 +1833,10 @@ function _hasliCheckMoreTwo($string) {
     return false;
 }
 
-/*
-function update_image_metadata_to_webp_correctly(){
-    set_time_limit(0);
-    global $wpdb;
-    $attachments = $wpdb->get_results("SELECT post_id, meta_value FROM {$wpdb->postmeta} WHERE meta_key = '_wp_attachment_metadata' AND (meta_value LIKE '%.png%' OR meta_value LIKE '%.jpg%')");    
-    foreach ($attachments as $attachment) {
-        $meta = maybe_unserialize($attachment->meta_value);
-        if (is_array($meta) && isset($meta['file'])) {
-            if (strpos($meta['file'], '.webp') === false) {
-                $meta['file'] = str_replace(['.png', '.jpg'], ['.png.webp', '.jpg.webp'], $meta['file']);
-            }
-        }
-        if (isset($meta['sizes']) && is_array($meta['sizes'])) {
-            foreach ($meta['sizes'] as $size => $data) {
-                if (isset($data['file'])) {
-                    if (strpos($data['file'], '.webp') === false) {
-                        $meta['sizes'][$size]['file'] = str_replace(['.png', '.jpg', '.jpeg'], ['.png.webp', '.jpg.webp', '.jpeg.webp'], $data['file']);
-                    }
-                }
-            }
-        }        
-        $wpdb->update(
-        $wpdb->postmeta,
-        ['meta_value' => maybe_serialize($meta)],
-        ['post_id' => $attachment->post_id, 'meta_key' => '_wp_attachment_metadata']
-        );
-    }
-    echo "All attachment metadata updated to use WebP paths!";
-}
-
-add_action('init', function(){
-	if( isset( $_GET['generate_webpmeta'] ) && ($_GET['generate_webpmeta'] == "bingooooo") ){
-	update_image_metadata_to_webp_correctly(); die;		
-	}
-});
-*/
-function dbConnection(){
-	if( isset( $_SERVER['HTTP_HOST'] ) && ($_SERVER['HTTP_HOST'] == "localhost") ){
-	$spdb = new wpdb('phpmyadmin','root','pixelcrayons-p2wp', 'localhost');
-	}else{
-	$spdb = new wpdb('pixelcrayons-com-crm-prod-db-user','s3BTNF070AwS7p8','pixelcrayons-com-crm-prod-db', 'localhost');
-	}
-	return $spdb;
-}
-
 add_action('init', function(){
 	if( isset($_GET['spam-unlock']) && (!empty($_GET['spam-unlock'])) ){
 		$email 	= base64_decode( $_GET['spam-unlock'] ); 
-		$spdb 	= new wpdb('valuecoders-com-crm-prod-db-user','5CxYSHEaVglFgCA','valuecoders-com-crm-prod-db', 'localhost');
+		$spdb 	= new wpdb( CRM_DB_USER, CRM_DB_PASSWORD, CRM_DB, CRM_HOST );
 		$receivedUid = $_GET['uid'];
 		list($timestamp, $randomPart) = explode('_', $receivedUid);
 		if( is_numeric($timestamp) && is_numeric($randomPart) ){
@@ -1931,7 +1908,19 @@ if( isset($techs['required']) && ($techs['required'] == "yes") ){
 }
 return $elm;
 }
-
+/*
+CREATE TABLE calculator_leads (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  company VARCHAR(255),
+  phone VARCHAR(50),
+  communication VARCHAR(20),
+  ip_address VARCHAR(100),
+  form_data LONGTEXT,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+*/
 
 add_action('wp_ajax_handlecosting', '_calcReqHandlerCB');
 add_action('wp_ajax_nopriv_handlecosting', '_calcReqHandlerCB');
@@ -1971,16 +1960,37 @@ function _calcReqHandlerCB(){
 			}			
 		}
 	}
-	//print_r($data);
+
 	$markup = '<strong>Name : </strong>'.($data['uname']) ??$data['uname'];
 	$markup .= '<br><strong>Company : </strong>'.($data['company']) ??$data['company'];
 	$markup .= '<br><strong>Email : </strong>'.($data['email']) ??$data['email'];
 	$markup .= '<br><strong>Phone : </strong>'.($data['phone']) ??$data['phone'];
-
+	$markup .= '<br><strong>Preferred way of communication : </strong>'.($data['communication']) ??$data['communication'];
+	$elmForms = "";
 	foreach($title_ar as $key => $value) {
-	$markup .= '<br><strong>'.$key.' : </strong>'.$value.'<br>';
+		$markup .= '<br><strong>'.$key.' : </strong>'.$value.'<br>';
+		$elmForms .= '<strong>'.$key.' : </strong>'.$value.'<br>';
 	}
-	wp_send_json([ 'file_data' => $jsonFl, 'form_input' => $data, 'form_data' => $title_ar, 'markup' => $markup]);
+	global $wpdb;
+	$crmDB 			= new wpdb(CRM_DB_USER, CRM_DB_PASSWORD, CRM_DB,CRM_HOST);
+
+	$name           = sanitize_text_field($data['uname'] ?? '');
+	$email          = sanitize_email($data['email'] ?? '');
+	$company        = sanitize_text_field($data['company'] ?? '');
+	$phone          = sanitize_text_field($data['phone'] ?? '');
+	$communication  = sanitize_text_field($data['communication'] ?? '');
+	$ip_address     = $_SERVER['REMOTE_ADDR'] ?? '';
+	
+	$serialized_form_data = maybe_serialize($elmForms);
+
+	$query = $wpdb->prepare( "INSERT INTO calculator_leads (name, email, company, phone, communication, ip_address, form_data, created_at) 
+	VALUES (%s, %s, %s, %s, %s, %s, %s, NOW())", $name, $email, $company, $phone, $communication, $ip_address, $serialized_form_data );
+	$result = $crmDB->query($query);	
+	if( $result !== false ){
+		wp_send_json(['file_data' => $jsonFl, 'form_input' => $data, 'form_data' => $title_ar, 'markup' => $markup]);
+	}else{
+		wp_send_json(['file_data' => $jsonFl, 'form_input' => $data, 'form_data' => $title_ar, 'markup' => $markup]);
+	}
 	die;
 }
 
