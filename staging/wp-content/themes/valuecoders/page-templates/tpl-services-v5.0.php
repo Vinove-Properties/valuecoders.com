@@ -255,7 +255,7 @@
   $whContent        =  $vcProfile['top-content']; 
   $profileContent   = $vcProfile['content']; 
   if( isset($vcProfile['st-pointers']) && ($vcProfile['st-pointers'] === "yes") ){
-  $whContent = $profileContent;
+  $whContent .= $profileContent;
   }else{
     $proText          = vCodeRemoveUlTags( $profileContent );
     $whContent .=  $proText;
