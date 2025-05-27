@@ -6,11 +6,11 @@ global $post;
 $thisPostID = $post->ID;
 get_header();
 ?>
-<section class="cost-banner">
+<section class="cost-banner" style="padding-top:20px;">
   <div class="container">
-    <?php while( have_posts() ) : the_post(); ?>
+    <?php /*while( have_posts() ) : the_post(); ?>
     <?php the_content(); ?>
-    <?php endwhile; ?>
+    <?php endwhile; */ ?>
   </div>
 </section>
 <section class="vc-cost-calc">
