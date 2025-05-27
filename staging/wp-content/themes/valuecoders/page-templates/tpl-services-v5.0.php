@@ -254,18 +254,21 @@
   if( isset( $vcProfile['is_enable'] ) && ($vcProfile['is_enable'] == "yes") ) {   
   $whContent        =  $vcProfile['top-content']; 
   $profileContent   = $vcProfile['content']; 
-  $proText          = vCodeRemoveUlTags( $profileContent );
-  $whContent .=  $proText;
-  $whContent .=  '<ul>
-  <li>India\'s Top 1% Software Talent</li>
-  <li>Trusted by Startups to Fortune 500</li>
-  <li>Idea to Deployment, We Handle All</li>
-  <li>Time-Zone Friendly: Global Presence</li>
-  <li>Top-tier Data Security Protocols</li>
-  <li>On-time Delivery, No Surprises</li>
-  '.$vcProfile['add-pointers'].'
-  </ul>';
-  
+  if( isset($vcProfile['st-pointers']) && ($vcProfile['st-pointers'] === "yes") ){
+  $whContent = $profileContent;
+  }else{
+    $proText          = vCodeRemoveUlTags( $profileContent );
+    $whContent .=  $proText;
+    $whContent .=  '<ul>
+    <li>India\'s Top 1% Software Talent......</li>
+    <li>Trusted by Startups to Fortune 500</li>
+    <li>Idea to Deployment, We Handle All</li>
+    <li>Time-Zone Friendly: Global Presence</li>
+    <li>Top-tier Data Security Protocols</li>
+    <li>On-time Delivery, No Surprises</li>
+    '.$vcProfile['add-pointers'].'
+    </ul>';  
+  }
   get_template_part( 'include/why', 'hirev5.0', ['content' => $whContent] );   
   } 
   
