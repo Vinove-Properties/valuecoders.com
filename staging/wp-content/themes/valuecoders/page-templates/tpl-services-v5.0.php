@@ -260,7 +260,7 @@
     $proText          = vCodeRemoveUlTags( $profileContent );
     $whContent .=  $proText;
     $whContent .=  '<ul>
-    <li>India\'s Top 1% Software Talent......</li>
+    <li>India\'s Top 1% Software Talent</li>
     <li>Trusted by Startups to Fortune 500</li>
     <li>Idea to Deployment, We Handle All</li>
     <li>Time-Zone Friendly: Global Presence</li>
