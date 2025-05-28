@@ -202,55 +202,55 @@ $htContent 	  = $specifications['content'];
 $content 	    = $specifications['content'];
 $sectionType 	= (isset($specifications['specifications']) && (count($specifications['specifications']) > 6)) ? 'accordian' : 'tab';
 
-if( isset( $specifications['sec-type'] ) && ($specifications['sec-type'] !== "null") ){
-  $sectionType = ( $specifications['sec-type'] === "tab" ) ? 'tab' : 'accordian';
-}
+// if( isset( $specifications['sec-type'] ) && ($specifications['sec-type'] !== "null") ){
+//   $sectionType = ( $specifications['sec-type'] === "tab" ) ? 'tab' : 'accordian';
+// }
 
-$spec = ( $specifications['specifications'] ) ? $specifications['specifications'] : false;
-if( $sectionType == "tab" ){
-?>
-<section class="service-tab padding-t-120 padding-b-120" id="v3-tech-spec">
-  <div class="container">
-    <div class="heading text-center">
-      <?php echo $content; ?>
-    </div>
-    <div class="service-tabs-section margin-t-80">
-      <div class="tab-row">
-        <?php 
-          if( $spec ){
-          echo '<nav id="service-tabs" class="tab-nav"><div class="tab-scroll">';
-          $tc = 0;
-          foreach( $spec as $row ){ $tc++;
-            $active = ( $tc === 1 ) ? ' active' : '';
-            echo '<div class="tablist '.$active.'" data-tab="#tab0'.$tc.'"><a href="#tab0'.$tc.'">
-                '.$row['title'].'</a>
-              </div>';
-          }
-          echo '</nav></div>';  
+// $spec = ( $specifications['specifications'] ) ? $specifications['specifications'] : false;
+// if( $sectionType == "tab" ){
+// ?>
+// <section class="service-tab padding-t-120 padding-b-120" id="v3-tech-spec">
+//   <div class="container">
+//     <div class="heading text-center">
+//       <?php echo $content; ?>
+//     </div>
+//     <div class="service-tabs-section margin-t-80">
+//       <div class="tab-row">
+//         <?php 
+//           if( $spec ){
+//           echo '<nav id="service-tabs" class="tab-nav"><div class="tab-scroll">';
+//           $tc = 0;
+//           foreach( $spec as $row ){ $tc++;
+//             $active = ( $tc === 1 ) ? ' active' : '';
+//             echo '<div class="tablist '.$active.'" data-tab="#tab0'.$tc.'"><a href="#tab0'.$tc.'">
+//                 '.$row['title'].'</a>
+//               </div>';
+//           }
+//           echo '</nav></div>';  
           
-          echo '<div class="bcontents">';
-          $tc = 0;
-          foreach( $spec as $row ){ $tc++;
-          $active = ( $tc === 1 ) ? ' active' : '';
-          $picture = ( $row['image'] ) ? vc_pictureElm( $row['image'], $row['title'] ) : '';
-          $link = ( $row['link'] ) ? '<div class="know-more-link"><a href="'.vc_siteurl($row['link']).'">Know More</a></div>' : '';
-          echo '<div id="tab0'.$tc.'" class="tab-contents '.$active.'">
-              <div class="dis-flex">
-                <div class="image-box">'.$picture.'</div>
-                <div class="content-box">'.$row['content'].$link.'</div>
-              </div>
-            </div>';
+//           echo '<div class="bcontents">';
+//           $tc = 0;
+//           foreach( $spec as $row ){ $tc++;
+//           $active = ( $tc === 1 ) ? ' active' : '';
+//           $picture = ( $row['image'] ) ? vc_pictureElm( $row['image'], $row['title'] ) : '';
+//           $link = ( $row['link'] ) ? '<div class="know-more-link"><a href="'.vc_siteurl($row['link']).'">Know More</a></div>' : '';
+//           echo '<div id="tab0'.$tc.'" class="tab-contents '.$active.'">
+//               <div class="dis-flex">
+//                 <div class="image-box">'.$picture.'</div>
+//                 <div class="content-box">'.$row['content'].$link.'</div>
+//               </div>
+//             </div>';
           
-          }
-          echo '</div>';
-          }
-          ?>
-      </div>
-    </div>
-  </div>
-</section>
-<?php 
-}else{ 
+//           }
+//           echo '</div>';
+//           }
+//           ?>
+//       </div>
+//     </div>
+//   </div>
+// </section>
+// <?php 
+// }else{ 
   echo '<section class="tools-developer tech-stack-list padding-t-120 padding-b-120">';
   echo '<div class="container">';
   echo '<div class="heading text-center">'.$specifications['content'].'</div>';  
@@ -282,7 +282,7 @@ if( $sectionType == "tab" ){
   echo '</div>';
   echo '</section>';
 }
-}
+//}
 ?>
 <?php 
   $eOneHeading  = (isset($vcBtn['title-one']) && !empty($vcBtn['title-one'])) ? $vcBtn['title-one'] : "Let's Discuss Your Project";
