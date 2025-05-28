@@ -631,8 +631,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>blockchain-development-company"><span class="title">Blockchain</span></a>
                                 <a href="<?php echo $site_url; ?>iot-development-company"><span class="title">Internet of Things</span></a>
                                 <a href="<?php echo $site_url; ?>serverless-development"><span class="title">Serverless</span></a>
-                                <a href="<?php echo $site_url; ?>ott-development"><span class="title">OTT</span></a>
-                                <a href="<?php echo $site_url; ?>servicenow-development"><span class="title">Servicenow</span></a>
+                                <a href="<?php echo $site_url; ?>ott-development"><span class="title">OTT</span></a>                                
                               </div>
 
                               <div class="flex-4 margin-0">
@@ -642,6 +641,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>sharepoint-application-development-services-company"><span class="title">SharePoint</span></a>
                                 <a href="<?php echo $site_url; ?>odoo-development-services"><span class="title">Odoo</span></a>
                                 <a href="<?php echo $site_url; ?>microsoft-power-bi-development-services-company"><span class="title">Microsoft Power BI</span></a>
+                                <a href="<?php echo $site_url; ?>servicenow-development"><span class="title">Servicenow</span></a>
                               </div>
                               <div class="flex-4">    
                                 <span class="head opacity-0">Platforms</span>                             
