@@ -795,7 +795,7 @@ $ltImage 		= $clientele['image-lt'];
 $ltImageWebp	= $clientele['image-lt-webp'];
 $customClass 	= ( isset( $clientele['custom_class'] ) ) ? $clientele['custom_class'] : "";
 ?>
-<section class="global-companies padding-t-120 padding-b-120 <?php echo $clientele['sc_background']; ?>">
+<section class="global-companies padding-t-120 padding-b-120">
 	<div class="container">
 		<div class="dis-flex justify-sb items-center">
 		  <div class="flex-2 image-box">
