@@ -632,6 +632,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>iot-development-company"><span class="title">Internet of Things</span></a>
                                 <a href="<?php echo $site_url; ?>serverless-development"><span class="title">Serverless</span></a>
                                 <a href="<?php echo $site_url; ?>ott-development"><span class="title">OTT</span></a>
+                                <a href="<?php echo $site_url; ?>servicenow-development"><span class="title">Servicenow</span></a>
                               </div>
 
                               <div class="flex-4 margin-0">
@@ -853,6 +854,8 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-assembly-developers"><span class="title">Assembly</span></a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-java-developers"><span class="title">Java</span></a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-laravel-developers"><span class="title">Laravel</span></a>
+                                <a href="<?php echo $site_url; ?>hire/strapi-developers"><span class="title">Strapi</span></a>
+                                
                               </div>
                             </div>
                           </div>
@@ -876,6 +879,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-reactjs-developers" title="React"><span class="title">React</span></a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-typescript-developers" title="TypeScript"><span class="title">TypeScript</span></a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-vuejs-developers" title="Vue.JS"><span class="title">Vue.JS</span></a>
+                                <a href="<?php echo $site_url; ?>hire/net-maui-developers" title=".NET MAUI"><span class="title">.NET MAUI</span></a>
                               </div>
                             </div>
                           </div>
@@ -928,6 +932,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 </span></a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-ml-engineers" title="Ionic"><span class="title">ML Engineers</span></a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-tensorflow-developers" title="IOS"><span class="title">TensorFlow</span></a>
+                                <a href="<?php echo $site_url; ?>hire/tableau-developers" title="Tableau"><span class="title">Tableau</span></a>
                               </div>
                             </div>
                           </div>
@@ -1089,6 +1094,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-outsystems-developers" title="Outsystems"><span class="title">Outsystems</span></a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-mendix-developers" title="Mendix"><span class="title">Mendix</span></a>
                                 <a href="<?php echo $site_url; ?>pega-development-services" title="Pega"><span class="title">Pega</span></a>
+                                <a href="<?php echo $site_url; ?>hire/servicenow-developers" title="Servicenow"><span class="title">ServiceNow</span></a>
                               </div>
                               <div class="flex-2">                                
                               </div>

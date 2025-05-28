@@ -1075,17 +1075,12 @@ $ctaWhite = ( isset($dmCTA['style']) && $dmCTA['style'] == "light-white" ) ? "bg
     <div class="dis-flex col-box-outer margin-t-100">
       <div class="flex-4 table-list">
         <ul>
-          <li class="  title clr-white ">Factor          
-          </li>
+          <li class="  title clr-white ">Factor</li>
           <li class="  ">Time to get right developers</li>
           <li class="  ">Time to start a project</li>
           <li class="  ">Recurring cost of training</li>
-          <li class="  ">
-            Time to scale size of the team          
-          </li>
-          <li class="  ">
-            Pricing (weekly average)          
-          </li>
+          <li class="  ">Time to scale size of the team</li>
+          <li class="  ">Pricing (weekly average)</li>
           <li class="  ">
             Project failure risk          
           </li>
