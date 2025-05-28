@@ -787,7 +787,7 @@ endif; ?>
 
 <?php 
 $clientele = get_field( 'vc-clients' );
-if( $clientele['is_enabled'] == 'yes' ) :
+if( isset( $clientele['is_enabled'] ) && ($clientele['is_enabled'] == 'yes') ) :
 $dtImage 		= $clientele['image'];
 $dtImageWebp	= $clientele['image-webp'];
 
@@ -796,21 +796,18 @@ $ltImageWebp	= $clientele['image-lt-webp'];
 $customClass 	= ( isset( $clientele['custom_class'] ) ) ? $clientele['custom_class'] : "";
 ?>
 <section class="global-companies padding-t-120 padding-b-120 <?php echo $clientele['sc_background']; ?>">
-<div class="container">
-<div class="dis-flex justify-sb items-center">
-  <div class="flex-2 image-box">
-    <picture>
-      <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v3.0/images/global-companies.png">
-      <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v3.0/images/global-companies.png">
-      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v3.0/images/global-companies.png" width="861" height="455" alt="valuecoders">
-    </picture>
-  </div>
-  <div class="flex-2 content-box">
-  <?php echo $clientele['content']; ?>
-  </div>
-
-</div>
-</div>
+	<div class="container">
+		<div class="dis-flex justify-sb items-center">
+		  <div class="flex-2 image-box">
+		    <picture>
+		      <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v3.0/images/global-companies.png">
+		      <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v3.0/images/global-companies.png">
+		      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v3.0/images/global-companies.png" width="861" height="455" alt="valuecoders">
+		    </picture>
+		  </div>
+		  <div class="flex-2 content-box"><?php echo $clientele['content']; ?></div>
+		</div>
+	</div>
 </section>
 <?php endif; ?>
 
