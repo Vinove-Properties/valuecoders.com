@@ -1051,8 +1051,9 @@ $ctaWhite = ( isset($dmCTA['style']) && $dmCTA['style'] == "light-white" ) ? "bg
       <h2><?php echo $tablesectitle; ?></h2>
       <p><?php echo $tablesecdes; ?></p>
     </div>
-    <!--
-      <?php if( have_rows('table_section_comparative_analysis') ): ?>
+      <?php 
+      /*
+      if( have_rows('table_section_comparative_analysis') ): ?>
       <div class="dis-flex col-box-outer margin-t-100">
         <?php 
         $a = 1; 
@@ -1070,22 +1071,15 @@ $ctaWhite = ( isset($dmCTA['style']) && $dmCTA['style'] == "light-white" ) ? "bg
         </div>
         <?php $a++; endwhile; ?>
       </div>
-      <?php endif; ?>-->
+      <?php endif; */ ?>
     <div class="dis-flex col-box-outer margin-t-100">
       <div class="flex-4 table-list">
         <ul>
-          <li class="  title clr-white ">
-            Factor          
+          <li class="  title clr-white ">Factor          
           </li>
-          <li class="  ">
-            Time to get right developers          
-          </li>
-          <li class="  ">
-            Time to start a project          
-          </li>
-          <li class="  ">
-            Recurring cost of training &amp; benefits          
-          </li>
+          <li class="  ">Time to get right developers</li>
+          <li class="  ">Time to start a project</li>
+          <li class="  ">Recurring cost of training</li>
           <li class="  ">
             Time to scale size of the team          
           </li>
