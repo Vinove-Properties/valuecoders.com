@@ -67,6 +67,8 @@ input[type=email],input[type=text],textarea{width:100%;padding:8px;margin-top:5p
 .user-input.group-com .labl{margin-right:8px;white-space:nowrap}
 .user-input.group-com label{display:flex;align-items:center;gap:4px;cursor:pointer}
 
+.last-step .submit-form .user-input.group-com input[type=radio]{height: 0; opacity: 0; position: absolute; width: 0;}
+.last-step .submit-form .user-input.group-com label.active{background:#fff6e5;}
 
 @media (max-width:979px){
 	.cost-left{flex-basis:100%;display:flex;flex-wrap:wrap;justify-content:space-between}
