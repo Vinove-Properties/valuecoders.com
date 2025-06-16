@@ -72,6 +72,10 @@ input[type=email],input[type=text],textarea{width:100%;padding:8px;margin-top:5p
 .user-input.group-com label.active{background:#fff6e5; }
 .user-input.group-com input[type=radio]:checked{background:#fff6e5; }
 
+
+
+.error-message{color:red;}
+
 @media (max-width:979px){
 	.cost-left{flex-basis:100%;display:flex;flex-wrap:wrap;justify-content:space-between}
 	.cost-left .head-text{flex-basis:65%}
