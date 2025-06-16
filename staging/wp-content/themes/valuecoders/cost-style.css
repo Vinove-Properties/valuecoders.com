@@ -59,12 +59,12 @@ input[type=email],input[type=text],textarea{width:100%;padding:8px;margin-top:5p
 .last-step label:hover{background:0 0}
 .last-step input[type=text],input[type=email],textarea{padding:0 15px;height:45px}
 .last-step .fname{display:block;margin:0 0 5px;line-height:1.2}
-.last-step div{width:100%;}
+
 
 /*#step1.step.active{display:none}#step5.step{display:block}*/
 
 .user-input.group-com{flex-basis:100% !important}
-.user-input.group-com .row{display:flex;align-items:center;gap:1rem;padding:10px;border:1px solid #ccc;border-radius:8px;background-color:#f9f9f9}
+.user-input.group-com .row{display:flex;align-items:center;gap:1rem;padding:10px; flex-wrap: wrap;  border:1px solid #ccc;border-radius:8px;background-color:#f9f9f9}
 .user-input.group-com .labl{margin-right:8px;white-space:nowrap}
 .user-input.group-com label{display:flex;align-items:center;gap:4px;cursor:pointer}
 
