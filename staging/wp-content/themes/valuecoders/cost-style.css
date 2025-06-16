@@ -59,6 +59,7 @@ input[type=email],input[type=text],textarea{width:100%;padding:8px;margin-top:5p
 .last-step label:hover{background:0 0}
 .last-step input[type=text],input[type=email],textarea{padding:0 15px;height:45px}
 .last-step .fname{display:block;margin:0 0 5px;line-height:1.2}
+.last-step div{width:100%;}
 
 /*#step1.step.active{display:none}#step5.step{display:block}*/
 
