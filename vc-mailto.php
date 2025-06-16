@@ -371,7 +371,7 @@ $array_anz = ['Australia', 'New Zealand'];
             'region'    => 'uk',
             'lead_to'   => $zoho_id['akhil'],
             'mail_to'   => 'akhil@valuecoders.com',
-            'mail_cc'   => ['neha.raina@valuecoders.com']
+            'mail_cc'   => ['neha.raina@valuecoders.com', 'sanjiv@valuecoders.com']
         );
     }
     /*
@@ -398,7 +398,7 @@ $array_anz = ['Australia', 'New Zealand'];
             'region'    => 'usa', 
             'lead_to'   => $zoho_id['akhil'],
             'mail_to'   => 'akhil@valuecoders.com',
-            'mail_cc'   => ['neha.raina@valuecoders.com'] 
+            'mail_cc'   => ['neha.raina@valuecoders.com', 'sanjiv@valuecoders.com'] 
         );
     }
     
@@ -407,7 +407,7 @@ $array_anz = ['Australia', 'New Zealand'];
             'region'    => 'india', 
             'lead_to'   => $zoho_id['akhil'], 
             'mail_to'   => 'akhil@valuecoders.com', 
-            'mail_cc'   => ['neha.raina@valuecoders.com'] 
+            'mail_cc'   => ['neha.raina@valuecoders.com', 'sanjiv@valuecoders.com'] 
         );
     }
     else{
