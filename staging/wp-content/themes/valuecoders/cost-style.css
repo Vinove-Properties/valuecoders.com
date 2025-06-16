@@ -69,7 +69,7 @@ input[type=email],input[type=text],textarea{width:100%;padding:8px;margin-top:5p
 
 .user-input.group-com input[type=radio]{height: 0; opacity: 0; position: absolute; width: 0;}
 .user-input.group-com label{padding:4px 10px;  margin: 0; border: 1px solid #ccc;}
-.user-input.group-com label.active{background:#fff6e5; }
+.user-input.group-com label.active{background: #ffad00;}
 .user-input.group-com input[type=radio]:checked{background:#fff6e5; }
 
 
