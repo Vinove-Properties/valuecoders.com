@@ -104,4 +104,5 @@ input[type=email],input[type=text],textarea{width:100%;padding:8px;margin-top:5p
 	.last-step .submit-form .user-input{flex-basis:100%}
 	.last-step input[type=text],input[type=email],textarea{padding:0 12px;height:40px}
 	.col-1-2-1 .question-container:nth-child(2) .dom-class-column{column-count: 1;}
+	.user-input.group-com .row{flex-wrap: wrap;}
 }
