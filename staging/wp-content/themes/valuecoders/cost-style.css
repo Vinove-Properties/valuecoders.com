@@ -74,7 +74,7 @@ input[type=email],input[type=text],textarea{width:100%;padding:8px;margin-top:5p
 .user-input.group-com input[type=radio]:checked{background:#fff6e5; }
 
 .steps-navigation .clickable{position: relative;}
-.steps-navigation .clickable:after{content:''; width:300px; height:1px; background:yellow; position: absolute; right:0; top:0;}
+.steps-navigation .clickable:after{ content: ''; width: 150px; height: 1px; background: #ffad00; position: absolute; right: -150px; top: 7px;}
 
 .error-message{color:red;}
 
