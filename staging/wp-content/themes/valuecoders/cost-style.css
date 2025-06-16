@@ -73,8 +73,7 @@ input[type=email],input[type=text],textarea{width:100%;padding:8px;margin-top:5p
 .user-input.group-com label.active{background: #ffeac1;}
 .user-input.group-com input[type=radio]:checked{background:#fff6e5; }
 
-.steps-navigation .clickable{position: relative;}
-.steps-navigation .clickable:after{ content: ''; width: 145px; height: 1px; background: #ffad00; position: absolute; right: -145px; top: 7px;}
+
 
 .error-message{color:red;}
 
