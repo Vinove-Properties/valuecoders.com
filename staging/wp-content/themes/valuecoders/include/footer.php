@@ -52,7 +52,7 @@
           <li><a href="<?php echo site_url('/in-media'); ?>" data-wpel-link="internal" target="_blank" rel="follow">In Media</a></li>
           <li><a href="https://www.valuecoders.com/case-studies/" data-wpel-link="internal" target="_blank" rel="follow">Case Studies</a></li>
           <li><a href="https://www.valuecoders.com/blog/" data-wpel-link="internal" target="_blank" rel="follow">Our Blog</a></li>
-          <li><a href="<?php echo site_url('/testimonials'); ?>" data-wpel-link="internal" target="_blank" rel="follow">Testimonial &amp; Clients</a></li>
+          <li><a href="<?php echo site_url('/testimonials'); ?>" data-wpel-link="internal" target="_blank" rel="follow">Clients &amp; Testimonials</a></li>
         </ul>
       </div>
       <div class="flex-5">
