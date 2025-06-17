@@ -74,7 +74,7 @@
           <li><a href="<?php echo site_url('/hire-developers/hire-front-end-developers'); ?>" data-wpel-link="internal" target="_blank" rel="follow">Hire Frontend Developers</a></li>
           <li><a href="<?php echo site_url('/hire-developers/hire-ecommerce-developers'); ?>" data-wpel-link="internal" target="_blank" rel="follow">Hire eCommerce Developers</a></li>
           <li><a href="<?php echo site_url('/hire-developers/hire-blockchain-developers'); ?>" data-wpel-link="internal" target="_blank" rel="follow">Hire Blockchain Developers</a></li>
-          <li><a href="<?php echo site_url('/hire-developers/hire-mobile-app-developers'); ?>" data-wpel-link="internal" target="_blank" rel="follow">Hire Mobile Developers</a></li>          
+          <li><a href="<?php echo site_url('/hire-developers/hire-mobile-app-developers'); ?>" data-wpel-link="internal" target="_blank" rel="follow">Hire Mobile App Developers</a></li>          
         </ul>
       </div>
       <div class="flex-5">
