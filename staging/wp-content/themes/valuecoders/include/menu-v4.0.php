@@ -26,7 +26,7 @@ function isActiveMenu( $menu, $cat ){
 }
 
 function defActiveMenu( $cat = "master" ){
-  $catList = ['app-development', 'demand-teams', 'ecommerce', 'qa-testing', 'devops', 'data-science', 'ai-ml', 'digital-m'];
+  $catList = ['app-development', 'demand-teams', 'ecommerce', 'qa-testing', 'devops', 'data-science', 'ai-ml', 'dm'];
   return ( !in_array( $cat, $catList ) ) ? "is-active" : '';
 }
 
@@ -468,7 +468,7 @@ function defActiveHire( $hirePage, $exCat ){
                             </div>
                           </div>
                         </div>
-                        <div class="tab-content <?php echo isActiveMenu("digital-m", $mcat); ?>">
+                        <div class="tab-content <?php echo isActiveMenu("dm", $mcat); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>digital-marketing-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Digital Marketing Services </span>No text added</a> <span class="ser-arrow-btn"></span>
                             </div>
