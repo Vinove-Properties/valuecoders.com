@@ -96,7 +96,7 @@ function defActiveHire( $hirePage, $exCat ){
                             <a href="<?php echo $site_url; ?>ai">AI & ML Solutions</a>
                           </li>
                           <li class="tab-link <?php echo isActiveMenu("digital-m", $mcat); ?>">
-                            <a href="<?php echo $site_url; ?>digital-marketing-services">Digital Marketing Services s</a>
+                            <a href="<?php echo $site_url; ?>digital-marketing-services">Digital Marketing Services</a>
                           </li>
                         </ul>
                       </div>
