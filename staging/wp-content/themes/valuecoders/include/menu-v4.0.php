@@ -96,7 +96,7 @@ function defActiveHire( $hirePage, $exCat ){
                             <a href="<?php echo $site_url; ?>ai">AI & ML Solutions</a>
                           </li>
                           <li class="tab-link <?php echo isActiveMenu("digital-m", $mcat); ?>">
-                            <a href="<?php echo $site_url; ?>digital-marketing-services">Digital Marketing Services</a>
+                            <a href="<?php echo $site_url; ?>digital-marketing-services">Digital Marketing Services s</a>
                           </li>
                         </ul>
                       </div>
@@ -142,7 +142,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 Effortless app maintenance</a>
                                 <a href="<?php echo $site_url; ?>application-modernization"><span class="title">Application Modernization</span>
                                 Update your applications</a>
-                              <a href="<?php echo $site_url; ?>digital-marketing-services"><span class="title">Digital Marketing Service</span>
+                              <a href="<?php echo $site_url; ?>digital-marketing-services"><span class="title">Digital Marketing Services </span>
                                No text added</a>
                                 <!--<a href="<?php echo $site_url; ?>" class="view-more">View More</a>-->
                               </div>
@@ -272,7 +272,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 Create top-quality eCommerce services</a>
                                 <a href="<?php echo $site_url; ?>top-wordpress-development-services-company-india"><span class="title">WooCommerce</span>
                                 Make eCommerce site more responsive</a>
-                                 <a href="<?php echo $site_url; ?>digital-marketing-services"><span class="title">Digital Marketing Service</span>
+                                 <a href="<?php echo $site_url; ?>digital-marketing-services"><span class="title">Digital Marketing Services </span>
                                No text added</a>
                                 <!--<a href="<?php echo $site_url; ?>"><span class="title">OpenCart</span>
                                   Drive technological innovation</a>-->
@@ -470,7 +470,7 @@ function defActiveHire( $hirePage, $exCat ){
                         </div>
                         <div class="tab-content <?php echo isActiveMenu("digital-m", $mcat); ?>">
                           <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>digital-marketing-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Digital Marketing Service</span>No text added</a> <span class="ser-arrow-btn"></span>
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>digital-marketing-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Digital Marketing Services </span>No text added</a> <span class="ser-arrow-btn"></span>
                             </div>
                             <div class="dis-flex menu-column sub-service">
                               <div class="flex-2">
@@ -536,7 +536,7 @@ function defActiveHire( $hirePage, $exCat ){
                               Designs that captivate users</a>
                               <a href="<?php echo $site_url; ?>mvp-app-development-company"><span class="title">MVP Development</span>
                               Launch your MVP faster</a>
-                               <a href="<?php echo $site_url; ?>digital-marketing-services"><span class="title">Digital Marketing Service</span>
+                               <a href="<?php echo $site_url; ?>digital-marketing-services"><span class="title">Digital Marketing Services </span>
                                No text added</a>
                               </div>
                               <div class="flex-2">
