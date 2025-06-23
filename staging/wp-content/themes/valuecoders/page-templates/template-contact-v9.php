@@ -1,10 +1,10 @@
 <?php
-/*
-Template Name: Contact Page - V9 Template
-*/ 
-$queryLink = vcGetThisPageUrl();
-get_header();
-?>
+  /*
+  Template Name: Contact Page - V9 Template
+  */ 
+  $queryLink = vcGetThisPageUrl();
+  get_header();
+  ?>
 <div class="contact-wrap">
   <section class="contact-us-section full-width-form padding-b-150">
     <div class="container">
@@ -12,11 +12,11 @@ get_header();
         <div class="form-left">
           <div class="bg-voilet">
             <div style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-  <iframe src="https://calendly.com/valuecoders/consult" 
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
-          frameborder="0">
-  </iframe>
-</div>
+              <iframe src="https://calendly.com/valuecoders/consult" 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
+                frameborder="0">
+              </iframe>
+            </div>
           </div>
         </div>
         <!-- .form-left -->
@@ -45,7 +45,6 @@ get_header();
               </div>
             </div>
           </div>
-         
           <div class="client-section">
             <div class="client-row">
               <div class="client-stack">
@@ -72,7 +71,7 @@ get_header();
                   </li>
                   <li>
                     <picture>
-                    <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-cl05.svg" alt="Valuecoders" width="86" height="28">
+                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-cl05.svg" alt="Valuecoders" width="86" height="28">
                     </picture>
                   </li>
                   <li>
@@ -85,7 +84,6 @@ get_header();
                       <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-cl07.svg" alt="Valuecoders" width="76" height="17">
                     </picture>
                   </li>
-                  
                   <li>
                     <picture>
                       <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-cl08.svg" alt="Valuecoders" width="77" height="19">
@@ -108,7 +106,7 @@ get_header();
                   </li>
                   <li>
                     <picture>
-                    <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-cl12.svg" alt="Valuecoders" width="67" height="25">
+                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-cl12.svg" alt="Valuecoders" width="67" height="25">
                     </picture>
                   </li>
                   <li>
@@ -118,7 +116,7 @@ get_header();
                   </li>
                   <li>
                     <picture>
-                    <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-cl144.svg" alt="Valuecoders" width="82" height="20">
+                      <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-cl144.svg" alt="Valuecoders" width="82" height="20">
                     </picture>
                   </li>
                   <li>
@@ -126,9 +124,7 @@ get_header();
                       <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cont-cl15.svg" alt="Valuecoders" width="85" height="22">
                     </picture>
                   </li>
-              
                 </ul>
-
               </div>
             </div>
             <!--<div class="client-row">
@@ -176,10 +172,8 @@ get_header();
                   </li>
                 </ul>
               </div>
-            </div>-->
-            
+              </div>-->
           </div>
-          
         </div>
       </div>
       <!-- dis-flex form-outer -->	
@@ -222,7 +216,6 @@ get_header();
               <div class="country"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/vflag-04.svg" 
                 alt="valuecoders" width="25" height="25">UAE</div>
               <div class="phone"><a href="https://wa.me/971544954255">+971 544954255 <span>(WhatsApp)</span></a>
-
               </div>
             </div>
           </div>
@@ -269,5 +262,3 @@ get_header();
   </section>
 </div>
 <?php get_footer(); ?>
-
-
