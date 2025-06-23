@@ -190,12 +190,14 @@ function pxlCardThumbnail() {
 	if( function_exists('get_field') ){
 		$listThubnail = get_field( 'pl-thumbnail', $post_id );
 		if( $listThubnail && is_array( $listThubnail ) ){
+		$thumbAlt = (isset($listThubnail['alt']) && !empty($listThubnail['alt'])) ? $listThubnail['alt'] : 
+		$listThubnail['title'];
 			if( isset( $listThubnail['sizes']['plist-thumbnail'] ) &&  !empty( $listThubnail['sizes']['plist-thumbnail'] ) ){
 			$thePostImage = '<img loading="lazy" src="'.$listThubnail['sizes']['plist-thumbnail'].'" 
-			alt="'.$listThubnail['title'].'" width="'.$listThubnail['sizes']['plist-thumbnail-width'].'" 
+			alt="'.$thumbAlt.'" width="'.$listThubnail['sizes']['plist-thumbnail-width'].'" 
 			height="'.$listThubnail['sizes']['plist-thumbnail-height'].'">';	
 			}else{
-			$thePostImage = '<img loading="lazy" src="'.$listThubnail['url'].'" alt="'.$listThubnail['title'].'" width="'.$listThubnail['width'].'" height="'.$listThubnail['height'].'">';	
+			$thePostImage = '<img loading="lazy" src="'.$listThubnail['url'].'" alt="'.$thumbAlt.'" width="'.$listThubnail['width'].'" height="'.$listThubnail['height'].'">';	
 			}				
 		}
 	}
