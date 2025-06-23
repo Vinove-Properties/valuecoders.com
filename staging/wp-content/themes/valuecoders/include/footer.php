@@ -83,6 +83,7 @@
           <li><a href="<?php echo site_url('/offshore-software-development-center-india'); ?>" data-wpel-link="internal" target="_blank" rel="follow">Offshore Development Center</a></li>
           <li><a href="<?php echo site_url('/offshore-software-development-services-company'); ?>" data-wpel-link="internal" target="_blank" rel="follow">Offshore Software Development</a></li>
           <li><a href="<?php echo site_url('/nearshore-software-development-services'); ?>" data-wpel-link="internal" target="_blank" rel="follow">Nearshore Software Development</a></li>
+          <li><a href="<?php echo site_url('/digital-marketing-services'); ?>" data-wpel-link="internal" target="_blank" rel="follow">Digital Marketing Services</a></li>
         </ul>
       </div>
       <div class="flex-5">
