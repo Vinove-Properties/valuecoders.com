@@ -106,3 +106,39 @@ input[type=email],input[type=text],textarea{width:100%;padding:8px;margin-top:5p
 	.col-1-2-1 .question-container:nth-child(2) .dom-class-column{column-count: 1;}
 	.user-input.group-com .row{flex-wrap: wrap;}
 }
+
+.steps-navigation {
+  display: flex;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.steps-navigation::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  background-color: #007bff; /* Progress color */
+  z-index: 0;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.steps-navigation > div {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+  background: #f0f0f0;
+  border-radius: 4px;
+  margin: 0 2px;
+  color: #000;
+}
+
+.steps-navigation > div.active,
+.steps-navigation > div.clickable {
+  background: #007bff;
+  color: #fff;
+}
