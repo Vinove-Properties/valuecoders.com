@@ -11,11 +11,136 @@
       <div class="dis-flex form-outer">
         <div class="form-left">
           <div class="bg-voilet">
-            <div style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://calendly.com/valuecoders/consult" 
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
-                frameborder="0">
-              </iframe>
+            <div class="form-box-outer right-box">
+              <div class="lf-top">
+                <div class="head-txt">
+                  <div class="logo-box"><a href="<?php bloginfo('url'); ?>"></a></div>
+                  <div class="head-box">
+                    <h1>Get In Touch</h1>
+                    <p>Our team will get back to you within 8 business hours or less.</p>
+                  </div>
+                </div>
+                <div class="lf-right">
+                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/cnbnr-02.svg" alt="pixel" width="104" height="92">
+                  <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/lf-02.svg" alt="pixel" width="97" height="95">
+                </div>
+              </div>
+              <div class="soc-box dis-flex items-center">                
+                <a href="javascript:void(0)"; onclick="consultCTA_cb();"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-01.svg" alt="valuecoders" width="20" height="20"></i><span>Book A Call</span></a>
+                <a href="https://wa.me/918882108080" target="_blank"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-02.svg" alt="valuecoders" width="20" height="20"> </i><span>WhatsApp</span></a>
+                <a href="mailto:sales@valuecoders.com" target="_blank"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-03.svg" alt="valuecoders" width="20" height="20"></i><span>Email us</span></a>
+              </div>
+              <form action="<?php bloginfo('url'); ?>/sendmail1.php" enctype="multipart/form-data" method="POST" 
+              id="contact-form-section" onsubmit="vcCmnFormValidation(); return false;" accept-charset="UTF-8">
+                <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+                <div id="vc-fstep1" class="step-one version-8">
+                  <!-- <div class="step-head active">
+                    <div><h2 id="uinfo">Your Information</h2>
+                    <span>(Step 1 of 2)</span></div>
+                    <span class="req-block">Required Fields*</span>
+                    </div>	 -->
+                  <div class="form-inner dis-flex">
+                    <div class="form-text-cont">
+                      <div class="lbl-row">
+                        <label for="cont_name">Full Name *</label>								
+                      </div>
+                      <div class="user-input">
+                        <input type="text" id="cont_name" placeholder="Enter your full name" class="input-field" value="" maxlength="50" name="user-name" />
+                        <small>Error Message</small>
+                      </div>
+                    </div>
+                    <div class="form-text-cont">
+                      <div class="lbl-row">
+                        <label for="cont_email">Email Address *</label>
+                      </div>
+                      <div class="user-input">
+                        <input type="text" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}$" class="input-field" value="" maxlength="50" name="user-email" id="cont_email" placeholder="Enter your email address" />
+                        <small>Error Message</small>
+                      </div>
+                    </div>
+                    <div class="form-text-cont">
+                      <div class="lbl-row">
+                        <label for="cont_country">Country *</label>
+                      </div>
+                      <div class="user-input">
+                        <input type="text" class="input-field" id="cont_country" value="" name="user-country" maxlength="50" autocomplete="off" 
+                          placeholder="Select your country">
+                        <small>Error Message</small>
+                      </div>
+                    </div>
+                    <div class="form-text-cont">
+                      <div class="lbl-row">
+                        <label for="cont_phpne">Phone Number (Optional)</label>
+                      </div>
+                      <div class="user-input">
+                        <input id="cont_phpne" type="tel" maxlength="30" name="user-phone" class="input-field flg-input" 
+                          placeholder="Enter your phone number">
+                        <small>Error Message</small>
+                      </div>
+                    </div>
+                    <div class="form-text-cont step-one-select">
+                      <div class="user-input">
+                        <label for="select-wehelp">Select your service*</label>
+                        <select class="wide selectize" name="we-help" id="select-wehelp" style="display:none;">
+                          <option value="">Select</option>
+                          <option value="Software Development" title="For custom software development and fixed cost projects.">Software Development</option>
+                          <option value="Team Extension" title="Augment your team with expert software engineers.">Team Extension (Staff Augmentation)</option>
+                          <option value="Dedicated Software Team" title="Dedicated autonomous software teams comprising of multiple skills.">Dedicated Software Team</option>
+                          <option value="Other Technology Needs" title="Any other world-class technology solution that you may need.">Other Technology Needs</option>
+                          <option value="career" title="Join the team of experts & work in ValueCoders.">Looking for a Job/Careers</option>
+                          <option value="None of the above" title="Connect with our business consultant to discuss your requirements.">None of the Above</option>
+                        </select>
+                        <small>Error Message</small>
+                      </div>
+                    </div>
+                    <div class="form-text-cont width-full">
+                      <div class="lbl-row-new">
+                        <label id="lbl-requirement">
+                          <div class="info-wrap">
+                            How can we help?*
+                            <!-- <div class="info-tip">
+                              <div class="info-content">
+                                <p>How Can We Help with software Development?
+                                </p>
+                                <p>How to help with team Extension?</p>
+                                <p>Help wit hiring Dedicated Software Team?</p>
+                              </div>
+                              </div> -->
+                          </div>
+                        </label>
+                      </div>
+                      <div id="cf-requirement" class="user-input">
+                        <textarea class="input-field comment-input" id="user-req" placeholder="" 
+                          name="user-req"></textarea>
+                        <small>Error Message</small>
+                        <div class="drop-input attachment_brw" id="uploadcontact">
+                          <div id="dropcontact"></div>
+                        </div>
+                        <div id="drop-area">
+                          <input type="file" name="files[]" id="fileElem" multiple accept="image/*,application/pdf,.psd,.zip,.docx,.xlsx,.xls,.txt" onchange="handleFiles(this.files)">
+                          <button class="button" id="browse-btn" type="button" 
+                            onclick="document.getElementById('fileElem').click()">BROWSE | DROP FILES HERE</button>
+                          <input type="hidden" name="up-counter" id="uplcounter" value="0">
+                          <progress style="display:none;" id="progress-bar" max=100 value=0></progress>			
+                        </div>
+                      </div>
+                      <div id="gloader" class="gal-loader">
+                        <div class="loader"></div>
+                        <div id="gallery"></div>
+                      </div>
+                      <p id="file-type-error"></p>
+                    </div>
+                    <div class="user-input checkout">
+                      <input type="hidden" name="Uploadedfilename" id="Uploadedfilename" value="">
+                      <input type="hidden" name="frmqueryString" value="<?php the_permalink(); ?>">
+                      <input type="hidden" name="page_url" value="<?php echo $queryLink; ?>">
+                      <input type="hidden" name="vform-type" value="contact">
+                      <input type="hidden" id="e-ticket-id" name="e-ticket-id" value="">
+                      <input type="submit" id="submitButton" class="checkout-submit  nxt-btn" value="Send Your Query" />
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
