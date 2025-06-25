@@ -11,6 +11,22 @@
       <div class="dis-flex form-outer">
         <div class="form-left">
           <div class="bg-voilet">
+            <?php 
+            if(isset($_GET['cta']) && $_GET['cta'] == 'calendly') {
+              $qString = '';
+              $query_params = $_GET;
+              unset($query_params['cta']);
+              if (!empty($query_params)) {
+                $qString = '?' . http_build_query($query_params);
+              }
+            echo '<div style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
+            <iframe src="https://calendly.com/valuecoders/consult'.$qString.'" 
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
+              frameborder="0">
+            </iframe>
+            </div>';  
+            }else{ 
+            ?>
             <div class="form-box-outer right-box">
               <div class="lf-top">
                 <div class="head-txt">
@@ -142,6 +158,7 @@
                 </div>
               </form>
             </div>
+            <?php } ?>
           </div>
         </div>
         <!-- .form-left -->

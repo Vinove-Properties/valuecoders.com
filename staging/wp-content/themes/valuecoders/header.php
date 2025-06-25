@@ -203,7 +203,9 @@ function _generateUtmLink(baseUrl, utmParams) {
 }
 
 function consultCTA_cb(){
-  window.open( _generateUtmLink( 'https://calendly.com/valuecoders/consult', utmParams ), '_blank' );
+  //console.log(_generateUtmLink( '<?php echo site_url('contact?cta=calendly'); ?>', utmParams) );
+  //window.open( _generateUtmLink( 'https://calendly.com/valuecoders/consult', utmParams ), '_blank' );
+  window.location.href = _generateUtmLink( '<?php echo site_url('contact?cta=calendly'); ?>', utmParams);
 }
 </script>
 <?php if( is_home() || is_front_page() ) : ?>
