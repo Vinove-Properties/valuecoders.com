@@ -27,7 +27,7 @@ function isActiveMenu( $menu, $cat ){
 }
 
 function defActiveMenu( $cat = "master" ){
-  $catList = ['app-development', 'demand-teams', 'ecommerce', 'qa-testing', 'devops', 'data-science', 'ai-ml'];
+  $catList = ['app-development', 'demand-teams', 'ecommerce', 'qa-testing', 'devops', 'data-science', 'ai-ml', 'dm'];
   return ( !in_array( $cat, $catList ) ) ? "is-active" : '';
 }
 
@@ -39,12 +39,11 @@ function defActiveHire( $hirePage, $exCat ){
   }
 }
 ?>
-
 <header class="header-two">
   <div class="container">
     <div class="wrapper">
-    <div class="header-item-left">
-        <a href="<?php bloginfo('url'); ?>" class="brand">
+      <div class="header-item-left">
+       <a href="<?php bloginfo('url'); ?>" class="brand">
           <div class="large">
             <img class="light" loading="lazy" src="<?php echo $tpl_url; ?>/header-images/logo-light.svg" 
               alt="Valuecoders" width="400" height="88">
@@ -97,6 +96,9 @@ function defActiveHire( $hirePage, $exCat ){
                           <li class="tab-link <?php echo isActiveMenu("ai-ml", $mcat); ?>">
                             <a href="<?php echo $site_url; ?>ai">AI & ML Solutions</a>
                           </li>
+                          <li class="tab-link <?php echo isActiveMenu("dm", $mcat); ?>">
+                            <a href="<?php echo $site_url; ?>digital-marketing-services">Digital Marketing Services</a>
+                          </li>
                         </ul>
                       </div>
                       <div class="right-tabs">
@@ -141,8 +143,8 @@ function defActiveHire( $hirePage, $exCat ){
                                 Effortless app maintenance</a>
                                 <a href="<?php echo $site_url; ?>application-modernization"><span class="title">Application Modernization</span>
                                 Update your applications</a>
-                                <!--<a href="<?php echo $site_url; ?>"><span class="title">Code Review</span>
-                                  Consult experts for big data</a>-->
+                              <a href="<?php echo $site_url; ?>digital-marketing-services"><span class="title">Digital Marketing Services </span>
+                               Drive growth with smarter campaigns</a>
                                 <!--<a href="<?php echo $site_url; ?>" class="view-more">View More</a>-->
                               </div>
                               <div class="flex-4">
@@ -197,7 +199,7 @@ function defActiveHire( $hirePage, $exCat ){
                               Update your applications</a>
                               <a href="<?php echo $site_url; ?>ott-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">OTT App Development</span>
                               Monetize your content</a>
-                              <a href="<?php echo $site_url; ?>application-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintainance & Support</span>
+                              <a href="<?php echo $site_url; ?>application-maintenance"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">App Maintenance & Support</span>
                               Comprehensive support solutions</a>
                               <a href="<?php echo $site_url; ?>cloud-application-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-04.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Application Development</span>
                               Cloud-based software solutions</a>
@@ -271,6 +273,8 @@ function defActiveHire( $hirePage, $exCat ){
                                 Create top-quality eCommerce services</a>
                                 <a href="<?php echo $site_url; ?>top-wordpress-development-services-company-india"><span class="title">WooCommerce</span>
                                 Make eCommerce site more responsive</a>
+                                 <a href="<?php echo $site_url; ?>digital-marketing-services"><span class="title">Digital Marketing Services </span>
+                               Data-driven marketing for online stores</a>
                                 <!--<a href="<?php echo $site_url; ?>"><span class="title">OpenCart</span>
                                   Drive technological innovation</a>-->
                               </div>
@@ -465,6 +469,38 @@ function defActiveHire( $hirePage, $exCat ){
                             </div>
                           </div>
                         </div>
+                        <div class="tab-content <?php echo isActiveMenu("dm", $mcat); ?>">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>digital-marketing-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Digital Marketing Services </span>Full-funnel strategies that scale</a> <span class="ser-arrow-btn"></span>
+                            </div>
+                            <div class="dis-flex menu-column sub-service">
+                              <div class="flex-2">
+                                <a href="<?php echo $site_url; ?>digital-marketing-services/lead-generation"><span class="title">Lead Generation
+                                </span>More leads. Better pipelines.</a>
+                                <a href="<?php echo $site_url; ?>digital-marketing-services/demand-generation"><span class="title">Demand Generation</span>Create interest. Capture demand.</a>
+                                <a href="<?php echo $site_url; ?>digital-marketing-services/marketing-automation"><span class="title">Marketing Automation</span>
+                              Workflows that work on autopilot</a>                                
+                              </div>
+                              <div class="flex-2">
+                                <a href="<?php echo $site_url; ?>digital-marketing-services/revenue-growth"><span class="title">Revenue Growth Marketing Services </span> Turn traffic into predictable revenue</a>
+                                <a href="<?php echo $site_url; ?>digital-marketing-services/growth-marketing"><span class="title">Growth Marketing </span> Test. Learn. Scale faster.</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="other-menu mob-hide">
+                            <div class="tab-title"><a href="javascript:void(0);"><span class="title">Client Type</span>
+                              Tailored solutions for all businesses</a><span class="ser-arrow-btn"></span>
+                            </div>
+                            <div class="flex-1 menu-column sub-service">
+                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              Custom software for business goals</a>
+                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              End-to-end automation solutions</a>
+                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              Expand with white-label services</a>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -501,6 +537,8 @@ function defActiveHire( $hirePage, $exCat ){
                               Designs that captivate users</a>
                               <a href="<?php echo $site_url; ?>mvp-app-development-company"><span class="title">MVP Development</span>
                               Launch your MVP faster</a>
+                               <a href="<?php echo $site_url; ?>digital-marketing-services"><span class="title">Digital Marketing Services </span>
+                               Tailored strategies for every stage</a>
                               </div>
                               <div class="flex-2">
                               <a href="<?php echo $site_url; ?>saas-consulting-development-services"><span class="title">SaaS Development</span>
@@ -633,7 +671,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>blockchain-development-company"><span class="title">Blockchain</span></a>
                                 <a href="<?php echo $site_url; ?>iot-development-company"><span class="title">Internet of Things</span></a>
                                 <a href="<?php echo $site_url; ?>serverless-development"><span class="title">Serverless</span></a>
-                                <a href="<?php echo $site_url; ?>ott-development"><span class="title">OTT</span></a>
+                                <a href="<?php echo $site_url; ?>ott-development"><span class="title">OTT</span></a>                                
                               </div>
 
                               <div class="flex-4 margin-0">
@@ -643,6 +681,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>sharepoint-application-development-services-company"><span class="title">SharePoint</span></a>
                                 <a href="<?php echo $site_url; ?>odoo-development-services"><span class="title">Odoo</span></a>
                                 <a href="<?php echo $site_url; ?>microsoft-power-bi-development-services-company"><span class="title">Microsoft Power BI</span></a>
+                                <a href="<?php echo $site_url; ?>servicenow-development"><span class="title">Servicenow</span></a>
                               </div>
                               <div class="flex-4">    
                                 <span class="head opacity-0">Platforms</span>                             
@@ -855,6 +894,8 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-assembly-developers"><span class="title">Assembly</span></a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-java-developers"><span class="title">Java</span></a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-laravel-developers"><span class="title">Laravel</span></a>
+                                <a href="<?php echo $site_url; ?>hire/strapi-developers"><span class="title">Strapi</span></a>
+                                
                               </div>
                             </div>
                           </div>
@@ -878,6 +919,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-reactjs-developers" title="React"><span class="title">React</span></a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-typescript-developers" title="TypeScript"><span class="title">TypeScript</span></a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-vuejs-developers" title="Vue.JS"><span class="title">Vue.JS</span></a>
+                                <a href="<?php echo $site_url; ?>hire/net-maui-developers" title=".NET MAUI"><span class="title">.NET MAUI</span></a>
                               </div>
                             </div>
                           </div>
@@ -930,6 +972,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 </span></a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-ml-engineers" title="Ionic"><span class="title">ML Engineers</span></a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-tensorflow-developers" title="IOS"><span class="title">TensorFlow</span></a>
+                                <a href="<?php echo $site_url; ?>hire/tableau-developers" title="Tableau"><span class="title">Tableau</span></a>
                               </div>
                             </div>
                           </div>
@@ -1091,6 +1134,7 @@ function defActiveHire( $hirePage, $exCat ){
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-outsystems-developers" title="Outsystems"><span class="title">Outsystems</span></a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-mendix-developers" title="Mendix"><span class="title">Mendix</span></a>
                                 <a href="<?php echo $site_url; ?>pega-development-services" title="Pega"><span class="title">Pega</span></a>
+                                <a href="<?php echo $site_url; ?>hire/servicenow-developers" title="Servicenow"><span class="title">ServiceNow</span></a>
                               </div>
                               <div class="flex-2">                                
                               </div>
@@ -1138,5 +1182,3 @@ function defActiveHire( $hirePage, $exCat ){
     </div>
   </div>
 </header>
-
-
