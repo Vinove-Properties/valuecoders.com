@@ -19,10 +19,11 @@ function splEmailData( $is_country ){
     'neha'      => 720093253,
     'pa'        => 668293911,
     'vishakha'  => 848601215,
-    'gaurav'    => 837690544
+    'gaurav'    => 837690544,
+    'priyanka'  => 869560646
     ];
 
-$array_other = ['Congo, the Democratic Republic of the', 'CuraÃƒÂ§ao'];
+$array_other = ['Congo, the Democratic Republic of the', 'CuraÃƒÆ’Ã‚Â§ao'];
 
 $array_africa = [
 'Angola',
@@ -32,7 +33,7 @@ $array_africa = [
 'Botswana',
 'Central African Republic',
 'Congo',
-'CÃƒÂ´te d\'Ivoire',
+'CÃƒÆ’Ã‚Â´te d\'Ivoire',
 'Cameroon',
 'Cabo Verde',
 'Djibouti',
@@ -99,7 +100,7 @@ $array_me = [
 ];
 
 $array_europe = [
-    "Ãƒâ€¦land Islands",
+    "ÃƒÆ’Ã¢â‚¬Â¦land Islands",
     "Albania",
     "Andorra",
     "Antarctica",
@@ -154,10 +155,10 @@ $array_europe = [
     "Norway",
     "Poland",
     "Portugal",
-    "RÃƒÂ©union",
+    "RÃƒÆ’Ã‚Â©union",
     "Romania",
     "Russian Federation",
-    "Saint BarthÃƒÂ©lemy",
+    "Saint BarthÃƒÆ’Ã‚Â©lemy",
     "Saint Helena, Ascension and Tristan da Cunha",
     "Saint Pierre and Miquelon",
     "San Marino",
@@ -215,7 +216,7 @@ $array_latin_america = [
     "Colombia",
     "Costa Rica",
     "Cuba",
-    "CuraÃƒÂ§ao",
+    "CuraÃƒÆ’Ã‚Â§ao",
     "Dominica",
     "Dominican Republic",
     "Ecuador",
@@ -313,33 +314,35 @@ $array_apac = [
 'Kyrgyzstan',
 'Turkmenistan',
 'Palestine',
+'Australia', 
+'New Zealand'
 ];
 $array_anz = ['Australia', 'New Zealand'];
     $consoleArray = [];
     if( checkInArray( $is_country, $array_other ) ){
         $consoleArray = array( 
         'region'    => 'other',
-        'lead_to'   => $zoho_id['sanjiv'], 
-        'mail_to'   => 'sanjiv@valuecoders.com', 
-        'mail_cc'   => ['neha.raina@valuecoders.com']
+        'lead_to'   => $zoho_id['priyanka'], 
+        'mail_to'   => 'priyanka.tamta@valuecoders.com', 
+        'mail_cc'   => ['sanjiv@valuecoders.com']
         );
     }
     
     elseif( checkInArray( $is_country, $array_africa ) ){
         $consoleArray = array( 
             'region'    => 'africa', 
-            'lead_to'   => $zoho_id['sanjiv'], 
-            'mail_to'   => 'sanjiv@valuecoders.com', 
-            'mail_cc'   => ['neha.raina@valuecoders.com']
+            'lead_to'   => $zoho_id['priyanka'], 
+            'mail_to'   => 'priyanka.tamta@valuecoders.com', 
+            'mail_cc'   => ['sanjiv@valuecoders.com']
         );
     }
     
     elseif( checkInArray( $is_country, $array_me ) ){
         $consoleArray = array( 
             'region'    => 'middle-east', 
-            'lead_to'   => $zoho_id['sanjiv'], 
-            'mail_to'   => 'sanjiv@valuecoders.com', 
-            'mail_cc'   => ['neha.raina@valuecoders.com']
+            'lead_to'   => $zoho_id['priyanka'], 
+            'mail_to'   => 'priyanka.tamta@valuecoders.com', 
+            'mail_cc'   => ['sanjiv@valuecoders.com']
         );
     }
 
@@ -348,31 +351,31 @@ $array_anz = ['Australia', 'New Zealand'];
         'region'    => 'europe', 
         'lead_to'   => $zoho_id['sanjiv'], 
         'mail_to'   => 'sanjiv@valuecoders.com', 
-        'mail_cc'   => ['neha.raina@valuecoders.com']
+        'mail_cc'   => []
         );
     }
     elseif( checkInArray( $is_country, $array_apac ) ){
         $consoleArray = array(
             'region'    => 'apac',
-            'lead_to'   => $zoho_id['sanjiv'], 
-            'mail_to'   => 'sanjiv@valuecoders.com', 
-            'mail_cc'   => ['neha.raina@valuecoders.com']
+            'lead_to'   => $zoho_id['priyanka'], 
+            'mail_to'   => 'priyanka.tamta@valuecoders.com', 
+            'mail_cc'   => ['sanjiv@valuecoders.com']
         );
     }
-    elseif( checkInArray( $is_country, $array_anz ) ){
-        $consoleArray = array(
-            'region'    => 'anz',
-            'lead_to'   => $zoho_id['sanjiv'], 
-            'mail_to'   => 'sanjiv@valuecoders.com',
-            'mail_cc'   => ['neha.raina@valuecoders.com']
-        );
-    }
+    // elseif( checkInArray( $is_country, $array_anz ) ){
+    //     $consoleArray = array(
+    //         'region'    => 'anz',
+    //         'lead_to'   => $zoho_id['sanjiv'], 
+    //         'mail_to'   => 'sanjiv@valuecoders.com', 
+    //         'mail_cc'   => []
+    //     );
+    // }
     elseif( checkInArray( $is_country, $array_uk ) ){
         $consoleArray = array(
             'region'    => 'uk',
             'lead_to'   => $zoho_id['sanjiv'], 
             'mail_to'   => 'sanjiv@valuecoders.com', 
-            'mail_cc'   => ['neha.raina@valuecoders.com']
+            'mail_cc'   => []
         );
     }
     /*
@@ -390,7 +393,7 @@ $array_anz = ['Australia', 'New Zealand'];
             'region'    => 'usa', 
             'lead_to'   => $zoho_id['sanjiv'], 
             'mail_to'   => 'sanjiv@valuecoders.com', 
-            'mail_cc'   => ['neha.raina@valuecoders.com']
+            'mail_cc'   => []
         );
     }
 
@@ -399,24 +402,24 @@ $array_anz = ['Australia', 'New Zealand'];
             'region'    => 'usa', 
             'lead_to'   => $zoho_id['sanjiv'], 
             'mail_to'   => 'sanjiv@valuecoders.com', 
-            'mail_cc'   => ['neha.raina@valuecoders.com']
+            'mail_cc'   => []
         );
     }
     
     elseif( strtolower($is_country) == 'india' ){
         $consoleArray = array( 
             'region'    => 'india', 
-            'lead_to'   => $zoho_id['akhil'], 
-            'mail_to'   => 'akhil@valuecoders.com.', 
-            'mail_cc'   => ['neha.raina@valuecoders.com', 'sanjiv@valuecoders.com']
+            'lead_to'   => $zoho_id['priyanka'], 
+            'mail_to'   => 'priyanka.tamta@valuecoders.com', 
+            'mail_cc'   => ['sanjiv@valuecoders.com']
         );
     }
     else{
          $consoleArray = array(
             'region'    => 'na',
-            'lead_to'   => $zoho_id['sanjiv'], 
-            'mail_to'   => 'sanjiv@valuecoders.com', 
-            'mail_cc'   => ['neha.raina@valuecoders.com']
+            'lead_to'   => $zoho_id['priyanka'], 
+            'mail_to'   => 'priyanka.tamta@valuecoders.com', 
+            'mail_cc'   => ['sanjiv@valuecoders.com']
         );
     }
     return $consoleArray;
