@@ -94,6 +94,7 @@ $vcSiteUrl = "https://www.valuecoders.com/";
           <li><a href="<?php echo $vcSiteUrl.'offshore-software-development-center-india'; ?>">Offshore Development Center</a></li>
           <li><a href="<?php echo $vcSiteUrl.'offshore-software-development-services-company'; ?>">Offshore Software Development</a></li>
           <li><a href="<?php echo $vcSiteUrl.'nearshore-software-development-services'; ?>">Nearshore Software Development</a></li>
+           <li><a href="<?php echo $vcSiteUrl.'digital-marketing-services'; ?>">Digital Marketing Services</a></li>
         </ul>
       </div>
       <div class="flex-5">
