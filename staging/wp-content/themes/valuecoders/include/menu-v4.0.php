@@ -86,14 +86,14 @@
                           <li class="tab-link <?php echo isActiveMenu("data-science", $mcat); ?>">
                             <a href="<?php echo $site_url; ?>data-engineering">Data Solutions</a>
                           </li>
+                            <li class="tab-link <?php echo isActiveMenu("devops", $mcat); ?>">
+                            <a href="<?php echo $site_url; ?>cloud-services">Cloud Services</a>
+                          </li>
                           <li class="tab-link <?php echo isActiveMenu("ecommerce", $mcat); ?>">
                             <a href="<?php echo $site_url; ?>ecommerce-development-services">eCommerce</a>
                           </li>
                           <li class="tab-link <?php echo isActiveMenu("qa-testing", $mcat); ?>">
                             <a href="<?php echo $site_url; ?>software-quality-assurance-testing-services">QA & Testing</a>
-                          </li>
-                          <li class="tab-link <?php echo isActiveMenu("devops", $mcat); ?>">
-                            <a href="<?php echo $site_url; ?>cloud-services">Cloud Services</a>
                           </li>
                            <li class="tab-link <?php echo isActiveMenu("dm", $mcat); ?>">
                             <a href="<?php echo $site_url; ?>digital-marketing-services">Digital Marketing Services</a>
@@ -335,6 +335,46 @@
                             </div>
                           </div>
                         </div>
+                         <div class="tab-content <?php echo isActiveMenu("devops", $mcat); ?>">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>cloud-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/menu-icon_cloudservices.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Services</span>
+                              Seamless, secure, superior cloud services</a><span class="ser-arrow-btn"></span>
+                            </div>
+                            <div class="dis-flex menu-column sub-service">
+                              <div class="flex-2">
+                                <a href="<?php echo $site_url; ?>cloud-services/strategy-consulting"><span class="title">Cloud Strategy & Consulting</span>
+                                Strategic cloud guidance</a>
+                                <a href="<?php echo $site_url; ?>cloud-services/devops-automation"><span class="title">DevOps as a Service</span>
+                                Effortless DevOps integration</a>
+                                <a href="<?php echo $site_url; ?>cloud-services/cloud-managed-services"><span class="title">24x7 Managed Services</span>
+                                Round-the-clock seamless service</a>
+                              </div>
+                              <div class="flex-2">
+                                <a href="<?php echo $site_url; ?>cloud-services/cloud-finops-service"><span class="title">Cloud FinOps Services</span>
+                                Cloud savings made simple</a>
+                                <a href="<?php echo $site_url; ?>cloud-services/cloud-migration"><span class="title">Cloud Migration</span>
+                                Seamless, swift cloud transition
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="other-menu mob-hide">
+                            <div class="tab-title"><a href="javascript:void(0);"><span class="title">Technologies</span>
+                              Innovating the future </a><span class="ser-arrow-btn"></span>
+                            </div>
+                            <div class="flex-1 menu-column sub-service">
+                              <a href="<?php echo $site_url; ?>cloud-services/amazon-cloud"><img loading="lazy" 
+                                src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon6.svg" width="40" class="menuicon" 
+                                alt="menuicon"><span class="title">Amazon AWS</span>Build, scale, innovate on AWS</a>
+                              <a href="<?php echo $site_url; ?>cloud-services/azure-cloud"><img loading="lazy" 
+                                src="<?php echo $tpl_url; ?>/menu-images/devops-02.svg" class="menuicon" 
+                                alt="menuicon"><span class="title">Azure</span>Infinite possibilities, one cloud</a>
+                              <a href="<?php echo $site_url; ?>cloud-services/google-cloud"><img loading="lazy" 
+                                src="<?php echo $tpl_url; ?>/menu-images/gcloud.svg" class="menuicon" 
+                                alt="menuicon"><span class="title">Google Cloud</span>Explore limitless potential with Google</a>
+                            </div>
+                          </div>
+                        </div>
                         <div class="tab-content <?php echo isActiveMenu("ecommerce", $mcat); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>ecommerce-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-04.svg" class="menuicon" alt="menuicon"><span class="title">eCommerce</span>
@@ -420,46 +460,6 @@
                               End-to-end automation solutions</a>
                               <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
                               Expand with white-label services</a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tab-content <?php echo isActiveMenu("devops", $mcat); ?>">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>cloud-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/dev-img/menu-icon_cloudservices.svg" class="menuicon" alt="menuicon"><span class="title">Cloud Services</span>
-                              Seamless, secure, superior cloud services</a><span class="ser-arrow-btn"></span>
-                            </div>
-                            <div class="dis-flex menu-column sub-service">
-                              <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>cloud-services/strategy-consulting"><span class="title">Cloud Strategy & Consulting</span>
-                                Strategic cloud guidance</a>
-                                <a href="<?php echo $site_url; ?>cloud-services/devops-automation"><span class="title">DevOps as a Service</span>
-                                Effortless DevOps integration</a>
-                                <a href="<?php echo $site_url; ?>cloud-services/cloud-managed-services"><span class="title">24x7 Managed Services</span>
-                                Round-the-clock seamless service</a>
-                              </div>
-                              <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>cloud-services/cloud-finops-service"><span class="title">Cloud FinOps Services</span>
-                                Cloud savings made simple</a>
-                                <a href="<?php echo $site_url; ?>cloud-services/cloud-migration"><span class="title">Cloud Migration</span>
-                                Seamless, swift cloud transition
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="other-menu mob-hide">
-                            <div class="tab-title"><a href="javascript:void(0);"><span class="title">Technologies</span>
-                              Innovating the future </a><span class="ser-arrow-btn"></span>
-                            </div>
-                            <div class="flex-1 menu-column sub-service">
-                              <a href="<?php echo $site_url; ?>cloud-services/amazon-cloud"><img loading="lazy" 
-                                src="<?php echo $tpl_url; ?>/menu-images/devop-analyt-icon6.svg" width="40" class="menuicon" 
-                                alt="menuicon"><span class="title">Amazon AWS</span>Build, scale, innovate on AWS</a>
-                              <a href="<?php echo $site_url; ?>cloud-services/azure-cloud"><img loading="lazy" 
-                                src="<?php echo $tpl_url; ?>/menu-images/devops-02.svg" class="menuicon" 
-                                alt="menuicon"><span class="title">Azure</span>Infinite possibilities, one cloud</a>
-                              <a href="<?php echo $site_url; ?>cloud-services/google-cloud"><img loading="lazy" 
-                                src="<?php echo $tpl_url; ?>/menu-images/gcloud.svg" class="menuicon" 
-                                alt="menuicon"><span class="title">Google Cloud</span>Explore limitless potential with Google</a>
                             </div>
                           </div>
                         </div>
