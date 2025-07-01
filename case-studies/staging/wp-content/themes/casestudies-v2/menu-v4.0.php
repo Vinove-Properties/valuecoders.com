@@ -931,6 +931,8 @@ function defActiveHire( $hirePage, $exCat ){
                                 </a>
                                 <a href="<?php echo $site_url; ?>hire-developers/hire-gpt-expert" title="GPT Experts"><span class="title">GPT Experts</span>
                                 </a>
+                                <a href="<?php echo $site_url; ?>hire/ai-agent" title="Hire AI Agent"><span class="title">Hire AI Agent</span>
+                                </a>
                                 
                               </div>
                               <div class="flex-2">                                
