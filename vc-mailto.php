@@ -96,7 +96,8 @@ $array_me = [
 'Saudi Arabia',
 'Iraq',
 'Yemen',
-'Syrian Arab Republic'
+'Syrian Arab Republic',
+"Turkey"
 ];
 
 $array_europe = [
@@ -168,8 +169,7 @@ $array_europe = [
     "Slovenia",
     "Spain",
     "Sweden",
-    "Switzerland",
-    "Turkey",
+    "Switzerland",    
     "Ukraine",
     "Wallis and Futuna",
     "Western Sahara"
@@ -424,5 +424,5 @@ $array_anz = ['Australia', 'New Zealand'];
     }
     return $consoleArray;
 }
-// $datacheck = splEmailData('South Africa');
+// $datacheck = splEmailData('Turkey');
 // print_r( $datacheck );
