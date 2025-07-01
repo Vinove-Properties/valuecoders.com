@@ -83,9 +83,6 @@
                           <li class="tab-link <?php echo isActiveMenu("demand-teams", $mcat); ?>">
                             <a href="<?php echo $site_url; ?>dedicated-development-teams">Dedicated Software Teams</a>
                           </li>
-                          <li class="tab-link <?php echo isActiveMenu("dm", $mcat); ?>">
-                            <a href="<?php echo $site_url; ?>digital-marketing-services">Digital Marketing Services</a>
-                          </li>
                           <li class="tab-link <?php echo isActiveMenu("data-science", $mcat); ?>">
                             <a href="<?php echo $site_url; ?>data-engineering">Data Solutions</a>
                           </li>
@@ -97,6 +94,9 @@
                           </li>
                           <li class="tab-link <?php echo isActiveMenu("devops", $mcat); ?>">
                             <a href="<?php echo $site_url; ?>cloud-services">Cloud Services</a>
+                          </li>
+                           <li class="tab-link <?php echo isActiveMenu("dm", $mcat); ?>">
+                            <a href="<?php echo $site_url; ?>digital-marketing-services">Digital Marketing Services</a>
                           </li>
                         </ul>
                       </div>
@@ -302,39 +302,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="tab-content <?php echo isActiveMenu("dm", $mcat); ?>">
-                          <div class="three-column">
-                            <div class="tab-title"><a href="<?php echo $site_url; ?>digital-marketing-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Digital Marketing Services </span>Full-funnel strategies that scale</a> <span class="ser-arrow-btn"></span>
-                            </div>
-                            <div class="dis-flex menu-column sub-service">
-                              <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>digital-marketing-services/lead-generation"><span class="title">Lead Generation
-                                </span>More leads. Better pipelines.</a>
-                                <a href="<?php echo $site_url; ?>digital-marketing-services/demand-generation"><span class="title">Demand Generation</span>Create interest. Capture demand.</a>
-                                <a href="<?php echo $site_url; ?>digital-marketing-services/marketing-automation"><span class="title">Marketing Automation</span>
-                                Workflows that work on autopilot</a>                                
-                              </div>
-                              <div class="flex-2">
-                                <a href="<?php echo $site_url; ?>digital-marketing-services/revenue-growth"><span class="title">Revenue Growth Marketing Services </span> Turn traffic into predictable revenue</a>
-                                <a href="<?php echo $site_url; ?>digital-marketing-services/growth-marketing"><span class="title">Growth Marketing </span> Test. Learn. Scale faster.</a>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="other-menu mob-hide">
-                            <div class="tab-title"><a href="javascript:void(0);"><span class="title">Client Type</span>
-                              Tailored solutions for all businesses</a><span class="ser-arrow-btn"></span>
-                            </div>
-                            <div class="flex-1 menu-column sub-service">
-                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
-                              Custom software for business goals</a>
-                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
-                              End-to-end automation solutions</a>
-                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
-                              Expand with white-label services</a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="tab-content <?php echo isActiveMenu("data-science", $mcat); ?>">
+                         <div class="tab-content <?php echo isActiveMenu("data-science", $mcat); ?>">
                           <div class="three-column">
                             <div class="tab-title"><a href="<?php echo $site_url; ?>data-engineering"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Data Solutions</span>Turn data into success</a> <span class="ser-arrow-btn"></span>
                             </div>
@@ -492,6 +460,38 @@
                               <a href="<?php echo $site_url; ?>cloud-services/google-cloud"><img loading="lazy" 
                                 src="<?php echo $tpl_url; ?>/menu-images/gcloud.svg" class="menuicon" 
                                 alt="menuicon"><span class="title">Google Cloud</span>Explore limitless potential with Google</a>
+                            </div>
+                          </div>
+                        </div>
+                          <div class="tab-content <?php echo isActiveMenu("dm", $mcat); ?>">
+                          <div class="three-column">
+                            <div class="tab-title"><a href="<?php echo $site_url; ?>digital-marketing-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/serv-07.svg" class="menuicon" alt="menuicon"><span class="title">Digital Marketing Services </span>Full-funnel strategies that scale</a> <span class="ser-arrow-btn"></span>
+                            </div>
+                            <div class="dis-flex menu-column sub-service">
+                              <div class="flex-2">
+                                <a href="<?php echo $site_url; ?>digital-marketing-services/lead-generation"><span class="title">Lead Generation
+                                </span>More leads. Better pipelines.</a>
+                                <a href="<?php echo $site_url; ?>digital-marketing-services/demand-generation"><span class="title">Demand Generation</span>Create interest. Capture demand.</a>
+                                <a href="<?php echo $site_url; ?>digital-marketing-services/marketing-automation"><span class="title">Marketing Automation</span>
+                                Workflows that work on autopilot</a>                                
+                              </div>
+                              <div class="flex-2">
+                                <a href="<?php echo $site_url; ?>digital-marketing-services/revenue-growth"><span class="title">Revenue Growth Marketing Services </span> Turn traffic into predictable revenue</a>
+                                <a href="<?php echo $site_url; ?>digital-marketing-services/growth-marketing"><span class="title">Growth Marketing </span> Test. Learn. Scale faster.</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="other-menu mob-hide">
+                            <div class="tab-title"><a href="javascript:void(0);"><span class="title">Client Type</span>
+                              Tailored solutions for all businesses</a><span class="ser-arrow-btn"></span>
+                            </div>
+                            <div class="flex-1 menu-column sub-service">
+                              <a href="<?php echo $site_url; ?>startup-product-development"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-01.svg" class="menuicon" alt="menuicon"><span class="title">For Startups</span>
+                              Custom software for business goals</a>
+                              <a href="<?php echo $site_url; ?>enterprise-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-02.svg" class="menuicon" alt="menuicon"><span class="title">For Enterprises</span>
+                              End-to-end automation solutions</a>
+                              <a href="<?php echo $site_url; ?>agencies-software-development-services"><img loading="lazy" src="<?php echo $tpl_url; ?>/v4.0/header-images/os-03.svg" class="menuicon" alt="menuicon"><span class="title">For Agencies</span>
+                              Expand with white-label services</a>
                             </div>
                           </div>
                         </div>
