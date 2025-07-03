@@ -533,11 +533,11 @@ if( $showTE === "yes" ){
         </div>
         </div>';
       }
+      $bcCardText = (isset($devCost['bc-elm']) && !empty($devCost['bc-elm'])) ? $devCost['bc-elm'] : '<h3>Wondering how much your development project will cost?</h3><p>Our consultants will be happy to learn more about your requirement and suggest a tentative cost for the same.</p>';
       echo '<div class="flex-3 col-box">
           <div class="cost-card">
             <div class="hover-content bg-royal-linear" style="display:flex;">
-            <h3>Wondering how much your development project will cost?</h3>
-            <p>Our consultants will be happy to learn more about your requirement and suggest a tentative cost for the same.</p>
+            '.$bcCardText.'
             <div class="btn-sec">
             <a href="'.site_url('/contact').'" class="btn rounded"><span class="text-white">Get in Touch</span></a>
             </div>
