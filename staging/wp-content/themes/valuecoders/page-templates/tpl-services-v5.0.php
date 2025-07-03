@@ -97,13 +97,18 @@
         ];
         $randKey  = array_rand($randReviews);
         $pickTest = $randReviews[$randKey];
+        $psReview = get_field('review-section');
+        if( isset($psReview['required']) && ($psReview['required'] === "yes") ){
+          $pickTest['img']  = (isset($psReview['review_thumb']['url']) && !empty($psReview['review_thumb']['url'])) ? 
+          $psReview['review_thumb']['url'] : $template_assets.'images/author-02.webp';
+          $pickTest['text'] = $psReview['review-text'];
+          $randKey          = $psReview['name'];
+        }
         ?>
         <div class="right-box">
           <div class="card-box">
             <div class="card-top">
-              <picture>
-                <img loading="lazy" src="<?php echo $pickTest['img']; ?>" width="129" height="129" alt="valuecoders">
-              </picture>
+              <picture><img loading="lazy" src="<?php echo $pickTest['img']; ?>" width="129" height="129" alt="valuecoders"></picture>
               <p><?php echo $pickTest['text']; ?></p>
               <p style="font-weight:bold;">- <?php echo $randKey; ?></p>
             </div>
