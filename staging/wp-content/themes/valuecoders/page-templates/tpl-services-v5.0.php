@@ -98,9 +98,9 @@
         $randKey  = array_rand($randReviews);
         $pickTest = $randReviews[$randKey];
         $psReview = get_field('review-section');
-        if( isset($psReview['required']) && ($psReview['required'] === "yes") ){
-          $pickTest['img']  = (isset($psReview['review_thumb']['url']) && !empty($psReview['review_thumb']['url'])) ? 
-          $psReview['review_thumb']['url'] : $template_assets.'images/author-02.webp';
+        if( isset($psReview['required']) && ($psReview['required'] === "yes") ){ 
+          $pickTest['img']  = (isset($psReview['review_thumb']) && !empty($psReview['review_thumb'])) ? 
+          $psReview['review_thumb'] : $template_assets.'images/author-02.webp';
           $pickTest['text'] = $psReview['review-text'];
           $randKey          = $psReview['name'];
         }
@@ -335,6 +335,11 @@
     </div>
   </div>
 </section>
+
+<?php 
+$showInds = get_field('show-inds');
+if( $showInds !== "no" ) :
+?>
 <section class="indcater-section padding-t-120 padding-b-120">
   <div class="container">
     <div class="head-txt text-center">
@@ -478,8 +483,9 @@
     </div>
   </div>
 </section>
-
 <?php 
+endif;
+
 $showTE = get_field('show-te');
 if( $showTE === "yes" ){
   echo getCmnTechExperties();   
