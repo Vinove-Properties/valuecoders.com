@@ -1150,7 +1150,7 @@ $flexGrid 	= (isset($serv_opts['grid_column']) && !empty($serv_opts['grid_column
 
 <?php  
 $vcProfile = get_field('vc-profile');
-if( isset($vcProfilep['is_enable']) && ($vcProfilep['is_enable'] == "yes") ) { 
+if( isset($vcProfile['is_enable']) && ($vcProfile['is_enable'] == "yes") ) { 
 $whContent        =  $vcProfile['top-content']; 
 $profileContent   = $vcProfile['content']; 
 if( isset($vcProfile['st-pointers']) && ($vcProfile['st-pointers'] === "yes") ){
