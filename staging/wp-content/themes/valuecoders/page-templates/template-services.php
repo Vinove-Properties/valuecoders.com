@@ -97,29 +97,6 @@ $headText 	= fnextractHeadins('h2', $htContent );
 $ctoSection = get_field('cto-services-col');
 if( isset( $ctoSection['is_enabled'] ) && ($ctoSection['is_enabled'] == "yes") ) :
 ?>
-<!-- 
-<section class="three-column-icon-section bg-light-theme padding-t-120 padding-b-120" id="cto-services-col">
-<div class="container">
-  <div class="head-txt text-center">
-    <?php echo $ctoSection['content-top']; ?>
-  </div>
-  <div class="dis-flex col-box-outer cto-service">
-    <div class="flex-2 box-3">
-      <div class="box bg-blue-opacity-light">
-        <div class="headtext"><?php echo $ctoSection['title-left']; ?></div>
-        <div class="inner-text"><?php echo $ctoSection['content-left']; ?></div>
-      </div>
-    </div>
-    <div class="flex-2 box-3">
-      <div class="box bg-blue-opacity-light">
-        <div class="headtext"><?php echo $ctoSection['title-right']; ?></div>
-        <div class="inner-text"><?php echo $ctoSection['content-right']; ?></div>
-      </div>
-    </div>
-  </div>
-</div>
-</section> 
--->
 <section class="cto-services padding-t-120 padding-b-120">
       <div class="container">
         <div class="dis-flex top-content">
@@ -268,16 +245,6 @@ if( $benefits['is_enabled'] == "yes" ) :
     </div>
   </div>
 </section>
-<!--
-<section id="v3-benefits" class="column-list-section <?php echo $benefits['sc_background']; ?> padding-t-120 padding-t-120" data-nosnippet>
-<div class="container">
-<div class="head-txt text-center">
-<?php echo $benefits['heading']; ?>
-</div>
-<div class="tick-icon-list"><?php echo $benefits['content']; ?><div>
-</div>
-</section> 
--->
 <?php endif; ?>
 
 <?php  	
@@ -1183,25 +1150,27 @@ $flexGrid 	= (isset($serv_opts['grid_column']) && !empty($serv_opts['grid_column
 
 <?php  
 $vcProfile = get_field('vc-profile');
-if( $vcProfile ) :
-$vcProfileEnable = $vcProfile['is_enable'];
-if( $vcProfileEnable == "yes" ) { 
-
+if( isset($vcProfilep['is_enable']) && ($vcProfilep['is_enable'] == "yes") ) { 
 $whContent        =  $vcProfile['top-content']; 
 $profileContent   = $vcProfile['content']; 
-$proText          = vCodeRemoveUlTags( $profileContent );
-$whContent .=  $proText;
-$whContent .=  '<ul>
-<li>India\'s Top 1% Software Talent</li>
-<li>Trusted by Startups to Fortune 500</li>
-<li>Idea to Deployment, We Handle All</li>
-<li>Time-Zone Friendly: Global Presence</li>
-<li>Top-tier Data Security Protocols</li>
-<li>On-time Delivery, No Surprises</li>
-'.$vcProfile['add-pointers'].'
-</ul>';
-get_template_part( 'include/why', 'hirev4.0', ['content' => $whContent] );   
-} endif; ?>
+if( isset($vcProfile['st-pointers']) && ($vcProfile['st-pointers'] === "yes") ){
+  $whContent .= $profileContent;
+}else{
+    $proText          = vCodeRemoveUlTags( $profileContent );
+    $whContent .=  $proText;
+    $whContent .=  '<ul>
+    <li>India\'s Top 1% Software Talent</li>
+    <li>Trusted by Startups to Fortune 500</li>
+    <li>Idea to Deployment, We Handle All</li>
+    <li>Time-Zone Friendly: Global Presence</li>
+    <li>Top-tier Data Security Protocols</li>
+    <li>On-time Delivery, No Surprises</li>
+    '.$vcProfile['add-pointers'].'
+    </ul>';
+  }
+  get_template_part( 'include/why', 'hirev4.0', ['content' => $whContent] );   
+} 
+?>
 
 <?php
 $whyhire = get_field('vprofile-icons');
