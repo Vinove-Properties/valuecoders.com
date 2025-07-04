@@ -43,12 +43,14 @@ $bannerImageSrc = getVcWebpSrcURL( $cmnBanner );
 			?>
 			</div>
       <div class="dis-flex">
+        <div class="left-box" style="flex-basis: 100%;">
         	<?php 
         	while( have_posts() ) : the_post();
         		the_content();
         	endwhile;	
-        	cmnCTA_v3('Book a Free Consultation', false); 
-          ?>          
+        	?>
+          <?php cmnCTA_v3('Book a Free Consultation', false); ?>          
+        </div>
       </div>
     </div>
   </div>
