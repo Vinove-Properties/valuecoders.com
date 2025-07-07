@@ -34,11 +34,22 @@ $bannerImageSrc = getVcWebpSrcURL( $cmnBanner );
 			if( isset( $bcCategory ) && ($bcCategory == "solutions") ){
 			echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Solutions</span> '.$bct;		
 			}elseif( isset( $bcCategory ) && ($bcCategory == "industries") ){
-      echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Industries</span> '.$bct;   
-      }
-      else{
+      		echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Industries</span> '.$bct;   
+      		}
+			elseif(!empty( $bcCategory ) && ($bcCategory === "custom")){
+				$cuTitle  = get_field('bc-custitle');
+				$cuLink   = get_field('bc-cuslink');
+				$cuLink   = (!empty($cuLink)) ? vc_siteurl($cuLink) : 'javascript:void(0);';
+				$bCat     = '<a class="no-after" href="'.$cuLink.'">'.$cuTitle.'</a> ';
+				if( $cuTitle && $cuLink ){
+				echo '<a href="'.get_bloginfo('url').'">Home</a> '.$bCat.$bcTitle;  
+				}else{
+				echo '<a href="'.get_bloginfo('url').'">Home</a> '.$bcTitle; 
+				}
+			}
+      		else{
 			echo '<a href="'.get_bloginfo('url').'">Home</a> 
-      <a href="'.site_url('/software-development-services-company').'">Services</a> '.$bct;
+      		<a href="'.site_url('/software-development-services-company').'">Services</a> '.$bct;
 			}
 			?>
 			</div>
