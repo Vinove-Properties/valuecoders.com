@@ -312,8 +312,8 @@ table  th {padding:15px 20px; text-align: left; background: #181732; color: #fff
 
 /*Case Detail section start from here*/
 
-.hero-section{padding: 180px 0 110px; display:flex; flex-wrap:wrap; background-size:cover;
-background-repeat:no-repeat; text-align:center; min-height:550px;}
+.hero-section{padding: 180px 0 110px; display:flex; flex-wrap:wrap; background-size:cover;  
+background-repeat:no-repeat; text-align:center; min-height:550px; background-position: center;}
 .hero-section h1{margin:0 0 20px;}
 .hero-section p{color:#FFFFFF; padding: 0 10%;}
 .press-glider{text-align: center;}
@@ -845,7 +845,7 @@ background: none !important;}
    .rightcustom:before{content:''; background: url(assets/img/shape-2.png) no-repeat; width:74px; height:83px; left:0; bottom:0;
     position: absolute;}
   .rightcustom .hdtitle{display:block !important; color:#fff; font-weight: 600; font-size: 24px; line-height: 38px;}
-  .rightcustom .btn-container{margin:30px 0 0; position: relative; z-index: 999;}
+  .rightcustom .btn-container{margin:30px 0 0; position: relative; z-index: 9;}
 
 
 
