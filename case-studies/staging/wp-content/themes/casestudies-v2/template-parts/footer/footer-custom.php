@@ -159,6 +159,13 @@ $vcSiteUrl = "https://www.valuecoders.com/";
       </div>
     </div>
   </div>
-  <div class="footer-copyright">Copyright © 2004 - 2025 ValueCoders, All Rights Reserved. A Vinove Company.</div>
-
+  <div class="footer-copyright">
+    <?php
+    $copyRight = "&copy;"; 
+    if( is_user_logged_in() && ( isBetaVersion() === true ) ){
+    $copyRight = "<a href='".get_edit_post_link()."'>&copy;</a>";
+    }
+    ?>
+    Copyright <?php echo $copyRight; ?> 2004 - <?php echo date("Y"); ?> ValueCoders, All Rights Reserved. A Vinove Company.
+  </div>
 </footer>
