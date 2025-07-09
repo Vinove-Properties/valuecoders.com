@@ -478,7 +478,7 @@
                               <div class="flex-2">
                                 <a href="<?php echo $site_url; ?>digital-marketing-services/revenue-growth"><span class="title">Revenue Growth Marketing Services </span> Turn traffic into predictable revenue</a>
                                 <a href="<?php echo $site_url; ?>digital-marketing-services/growth-marketing"><span class="title">Growth Marketing </span> Test. Learn. Scale faster.</a>
-                                <a href="<?php echo $site_url; ?>digital-marketing-services/saas"><span class="title">Saas Marketing Services  </span> Required One Line text</a>
+                                <a href="<?php echo $site_url; ?>digital-marketing-services/saas"><span class="title">Saas Marketing Services </span> Required One Line Text</a>
                               </div>
                             </div>
                           </div>
