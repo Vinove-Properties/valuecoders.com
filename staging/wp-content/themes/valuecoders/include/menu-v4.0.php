@@ -401,7 +401,7 @@
                                 <a href="<?php echo $site_url; ?>top-wordpress-development-services-company-india"><span class="title">WooCommerce</span>
                                 Make eCommerce site more responsive</a>
                                 <a href="<?php echo $site_url; ?>digital-marketing-services/ecommerce"><span class="title">eCommerce Marketing & Solutions</span>
-                                One liner Text required</a>
+                                Drive eCommerce revenue</a>
                                 <!--<a href="<?php echo $site_url; ?>"><span class="title">OpenCart</span>
                                   Drive technological innovation</a>-->
                               </div>
