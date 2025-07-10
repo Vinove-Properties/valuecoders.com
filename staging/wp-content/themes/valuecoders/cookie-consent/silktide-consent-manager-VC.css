@@ -1,26 +1,36 @@
+/* 
+  Silktide Consent Manager - https://silktide.com/consent-manager/  
 
+  Styles are at risked of being overridden by styles coming from the site the consent manager is used on.
+  To help prevent this, global wrapper elements are prefixed with "#silktide-"
+*/
+
+/* --------------------------------
+  Global Styles - These elements exist in the main DOM and styling is limited to positioning and animation
+-------------------------------- */
+/* Wrapper (Global) */
 #silktide-wrapper {
---focus: 0 0 0 2px #ffffff, 0 0 0 4px #000000, 0 0 0 6px #ffffff;
---boxShadow: -5px 5px 10px 0px #00000012, 0px 0px 50px 0px #0000001a;
---primaryColor: #b5b3b1;
---backgroundColor: #FFFFFF;
---textColor: #4B494B;
---backdropBackgroundColor: #00000033;
---backdropBackgroundBlur: 0px;
---cookieIconColor: #adaaa8;
---cookieIconBackgroundColor: #FFFFFF;
-position: fixed;
-bottom: 0;
-right: 0;
-width: 100%;
-height: 100%;
-z-index: 99999;
-pointer-events: none;
-border: 0px;
-display: flex;
-justify-content: center;
-align-items: center
-}
+              --focus: 0 0 0 2px #ffffff, 0 0 0 4px #000000, 0 0 0 6px #ffffff;
+              --boxShadow: -5px 5px 10px 0px #00000012, 0px 0px 50px 0px #0000001a;
+              --primaryColor: #533BE2;
+              --backgroundColor: #FFFFFF;
+              --textColor: #4B494B;
+              --backdropBackgroundColor: #00000033;
+              --backdropBackgroundBlur: 0px;
+              --cookieIconColor: #533BE2;
+              --cookieIconBackgroundColor: #FFFFFF;
+              position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  pointer-events: none;
+  border: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center
+            }
 
 /* Backdrop (Global) */
 #silktide-backdrop-global {
@@ -295,8 +305,6 @@ align-items: center
   overflow-y: auto;
   margin-top: 32px;
   padding-right: 7px; /* Prevents scrollbar from appearing over the switches */
-  padding-top:0 !important;
-  padding-bottom:0 !important;
 }
 
 #silktide-modal section::-webkit-scrollbar {
@@ -355,7 +363,6 @@ align-items: center
   height: 34px;
   width: 74px;
   cursor: pointer;
-  line-height: 30px;
 }
 
 #silktide-modal .switch:focus-within {
@@ -465,19 +472,16 @@ align-items: center
   left: 10px;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   padding: 0px;
   border: none;
   background-color: var(--cookieIconColor);
-  background-color: #e5e5e5;
   cursor: pointer;
+  box-shadow: 0px 0px 6px 0px #0000001a;
   pointer-events: auto;
   animation: silktide-fadeIn 0.3s ease-in-out forwards;
-}
-#silktide-cookie-icon:hover{
- background-color: rgba(173, 170, 168, 1);
 }
 
 #silktide-cookie-icon.bottomRight {
@@ -571,8 +575,7 @@ align-items: center
 #silktide-modal p{font-size: 14px; line-height: 22px;}
 #silktide-modal fieldset{margin: 0px 0px 20px;} 
 #silktide-modal footer{gap:10px; margin-top: 15px;}
-#silktide-modal footer{flex-direction: row;}  
-#silktide-modal .switch{line-height: 26px;}    
+#silktide-modal footer{flex-direction: row;}      
 
 }
 
