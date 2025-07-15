@@ -60,6 +60,16 @@ function get_client_ip_user() {
     return $ip;
 }
 
+function validateZohoPhone($phone) {
+    $phone = trim($phone);
+    $phone = str_replace([' ', '-', '(', ')'], '', $phone);
+    if (preg_match('/^\+?[0-9]{5,20}$/', $phone)) {
+        return $phone;
+    }
+    return null;
+}
+
+
 function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $emailCC = [], $emailBCC = [], $attachments = [], 
     $cname = null, $spam = false ){
 
@@ -163,30 +173,35 @@ function zohoCrmUpdate_v2( $argArrData, $leadSource='', $owner_id = 658520861, $
     $err = curl_error($curl);    
     curl_close( $curl );
     if(!$err){
-        $zo_requirement = "";
-        
-        if( $varURL ){
-        $zo_requirement .= "Url: ".$varURL;
-        }
-        
-        if( $varUploadedFiles ){
-        $zo_requirement .= " File Uploaded: ".$varUploadedFiles;    
+        $zo_requirement = [];
+        if (!empty($varURL)) {
+            $zo_requirement[] = "URL: " . $varURL;
         }
 
-        if( $varRequirements ){
-        $zo_requirement .= " Requirements: ".$varRequirements;
+        if (!empty($varUploadedFiles)) {
+            $zo_requirement[] = "File Uploaded: " . $varUploadedFiles;
         }
+
+        if (!empty($varRequirements)) {
+            $zo_requirement[] = "Requirements: " . $varRequirements;
+        }
+
+        if (!empty($varPhoneNo)) {
+            $zo_requirement[] = "Phone Number: " . $varPhoneNo;
+        }
+        $zo_requirement_string = implode("\n", $zo_requirement);
+        $zo_requirement_string = trim($zo_requirement_string);
 
         $zoho_data = array(
         'First_Name'    => $varFirstName,
         'Last_Name'     => $varLastName,
         'Email'         => $varEmail,
         'Country1'      => $user_country,
-        'Phone'         => $varPhoneNo,
+        'Phone'         => validateZohoPhone( $varPhoneNo ),
         'Lead_Source'   => $varLeadSource,
         'Lead_Status'   => $varLeadStatus,
         'Owner'         => $owner_id,
-        'Description'   => $zo_requirement,
+        'Description'   => $zo_requirement_string,
         'Sales_Qualified_Lead' => "Yes",
         'Is_Duplicate'  => "No",
         'UTM_Source'    => $varUTMSource,
@@ -275,7 +290,7 @@ function zohoCrmUpdate_v2( $argArrData, $leadSource='', $owner_id = 658520861, $
                     curl_close( $curl );
                     $response   = json_decode( $response );
                     if( $is_update === false ){
-                        dupLeadNote( $varAccessToken, $lead_id, $varRequirements );
+                        dupLeadNote( $varAccessToken, $lead_id, $zo_requirement_string );
                     }                    
                     return $lead_id;
                 }           
