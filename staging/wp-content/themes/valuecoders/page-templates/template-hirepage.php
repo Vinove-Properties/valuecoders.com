@@ -291,13 +291,13 @@ if( $disOne === false ) :
 <?php endif; ?>
 
 <?php 
-  if( !is_page('hire-developers') ){
+if ( !is_page('hire-developers') ) {
   $whyChoos = get_field('why-choose');
-  if( isset( $whyChoos['is_enable'] ) && ($whyChoos['is_enable'] == "yes") ){
-  $htContent 	= $whyChoos['content'];
-  $headText 	= fnextractHeadins('h2', $htContent );
-  ?>
-<section class="three-column-icon-section padding-t-120 padding-b-120 <?php echo $whyChoos['sc_background']; ?>" id="acf-why-choose">
+  if ( isset($whyChoos['is_enable']) && $whyChoos['is_enable'] == "yes" ) {
+    $htContent = $whyChoos['content'];
+    $headText = fnextractHeadins('h2', $htContent);
+?>
+<section class="three-column-icon-section padding-t-120 padding-b-120 <?php echo esc_attr($whyChoos['sc_background']); ?>" id="acf-why-choose">
   <div class="container">
     <div class="dis-flex top-content">
       <div class="flex-2">
@@ -307,26 +307,34 @@ if( $disOne === false ) :
         <?php echo preg_replace("/<h([1-2]{1})>.*?<\/h\\1>/si", '', $htContent); ?>
       </div>
     </div>
+
     <div class="dis-flex col-box-outer margin-t-50">
       <?php 
-        if( $whyChoos['options'] ){
-        	foreach( $whyChoos['options'] as $row ){
-        		$vcHasAnchor = vcHasAnchor($row['title'], $row['text']);
-        		echo '<div class="flex-3 box-3'.$vcHasAnchor.'">
-        		<div class="box bg-blue-opacity-light"><h3>'.$row['title'].'</h3>';            
-            echo hasPGTag( $row['text'] ); 
-        		echo ( $vcHasAnchor !== false ) ? '<span class="box-link">'.$row['title'].'</span>' : '';
-        		echo '</div></div>';
-        	}
-        } 
-        ?>
+      if ( !empty($whyChoos['options']) ) {
+        foreach ( $whyChoos['options'] as $row ) {
+          $vcHasAnchor = vcHasAnchor($row['title'], $row['text']);
+          ?>
+          <div class="flex-3 box-3<?php echo $vcHasAnchor; ?>">
+            <div class="box bg-blue-opacity-light">
+              <h3><?php echo $row['title']; ?></h3>
+              <?php echo hasPGTag($row['text']); ?>
+              <?php if ( $vcHasAnchor !== false ) { ?>
+                <span class="box-link"><?php echo $row['title']; ?></span>
+              <?php } ?>
+            </div>
+          </div>
+          <?php
+        }
+      }
+      ?>
     </div>
   </div>
 </section>
 <?php 
   }
-  }
-  ?>
+}
+?>
+
 
 
 
