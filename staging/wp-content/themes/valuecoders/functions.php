@@ -2025,29 +2025,21 @@ function hasPGTag($string) {
 
 function wrapNonHtmlTextWithP($string) {
     $string = trim($string);
-
-    // Split content by block-level elements
     $pattern = '/(<(?:ul|ol|div|table|section|article|aside|nav|header|footer|figure|blockquote|pre|form|p)[^>]*>.*?<\/\s*\w+>)/is';
 
-    // Split while preserving tags
     $parts = preg_split($pattern, $string, -1, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
-
     $result = '';
-
     foreach ($parts as $part) {
         $trimmed = trim($part);
-        if ($trimmed === '') {
+        if ($trimmed === '' || $trimmed === "\n" || $trimmed === "\r") {
             continue;
         }
-
-        // If it's an HTML block, leave as-is
         if (preg_match('/^<\s*\w+[^>]*>.*<\/\s*\w+>$/is', $trimmed)) {
             $result .= $trimmed;
         } else {
-            // Otherwise wrap in <p>
+            // Otherwise wrap it in <p>
             $result .= '<p>' . $trimmed . '</p>';
         }
     }
-
     return $result;
 }
