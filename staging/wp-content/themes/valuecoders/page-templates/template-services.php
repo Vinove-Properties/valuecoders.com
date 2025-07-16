@@ -337,9 +337,7 @@ if( $sectionType == "grid" ){
         $hasAnchor = (isset($row['link']) && !empty($row['link'])) ? 'has-link' : '';
         echo '<div class="accordionItem'.$isActive.'">
         <h3 class="accordion-toggle '.$hasAnchor.'"><span>'.$row['title'].'</span>'.$title.'</h3>
-        <div class="accordion-content">
-        <p>'.$row['text'].'</p>
-        </div>
+        <div class="accordion-content">'.wrapNonHtmlTextWithP($row['text']).'</div>
         </div>';    
       }
     }
