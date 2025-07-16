@@ -318,7 +318,7 @@ if ( !is_page('hire-developers') ) {
             <div class="box bg-blue-opacity-light">
               <h3><?php echo $row['title']; ?></h3>
               <?php 
-              echo hasPGTag($row['text']); 
+              echo wrapNonHtmlTextWithP($row['text']); 
               //echo $row['text']; 
               ?>
               <?php if ( $vcHasAnchor !== false ) { ?>

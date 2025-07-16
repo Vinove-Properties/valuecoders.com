@@ -2022,3 +2022,21 @@ function hasPGTag($string) {
     }
     return $string;
 }
+
+function wrapNonHtmlTextWithP($string) {
+    $string = trim($string);
+    $parts = preg_split('/(<[^>]+>.*?<\/[^>]+>)/s', $string, -1, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
+    $result = '';
+    foreach ($parts as $part) {
+        if (preg_match('/^<[^>]+>.*<\/[^>]+>$/s', $part)) {
+            $result .= $part;
+        }else{
+            $trimmed = trim($part);
+            if ($trimmed !== '') {
+                $result .= '<p>' . $trimmed . '</p>';
+            }
+        }
+    }
+
+    return $result;
+}
