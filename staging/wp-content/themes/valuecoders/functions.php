@@ -2026,34 +2026,28 @@ function hasPGTag($string) {
 function wrapNonHtmlTextWithP($string) {
     $string = trim($string);
 
-    // Define block-level tags that should not be wrapped
-    $blockTags = ['address', 'article', 'aside', 'blockquote', 'canvas', 'dd', 'div', 'dl', 'dt',
-                  'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1','h2','h3','h4','h5','h6',
-                  'header', 'hr', 'li', 'main', 'nav', 'noscript', 'ol', 'p', 'pre', 'section', 'table', 'tfoot', 'ul', 'video'];
+    // Split content by block-level elements
+    $pattern = '/(<(?:ul|ol|div|table|section|article|aside|nav|header|footer|figure|blockquote|pre|form|p)[^>]*>.*?<\/\s*\w+>)/is';
 
-    // Pattern to detect HTML block-level tags
-    $blockPattern = '/<\s*(' . implode('|', $blockTags) . ')\b[^>]*>/i';
-
-    // Split by double line breaks or tags
-    $parts = preg_split("/(\r?\n){2,}/", $string);
+    // Split while preserving tags
+    $parts = preg_split($pattern, $string, -1, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
 
     $result = '';
 
     foreach ($parts as $part) {
         $trimmed = trim($part);
-
         if ($trimmed === '') {
             continue;
         }
 
-        // If the part starts with a block-level tag, do not wrap
-        if (preg_match($blockPattern, $trimmed)) {
+        // If it's an HTML block, leave as-is
+        if (preg_match('/^<\s*\w+[^>]*>.*<\/\s*\w+>$/is', $trimmed)) {
             $result .= $trimmed;
         } else {
+            // Otherwise wrap in <p>
             $result .= '<p>' . $trimmed . '</p>';
         }
     }
 
     return $result;
 }
-
