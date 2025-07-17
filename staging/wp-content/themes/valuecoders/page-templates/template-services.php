@@ -292,11 +292,9 @@ if( $sectionType == "grid" ){
       $hasAnchor = ' has-vlink';
       }
 			//$isActive = ( $i == 1 ) ? " active" : "";
-			echo '<div class="'.$flexGrid.' box-3'.$hasAnchor.'"><div class="box">
-			<h3>'.$row['title'].'</h3>
-			<p>'.$row['text'].'</p>
-			'.$boxLink.'
-			</div></div>';		
+			echo '<div class="'.$flexGrid.' box-3'.$hasAnchor.'">
+      <div class="box"><h3>'.$row['title'].'</h3>'.wrapNonHtmlTextWithP( $row['text'] ).$boxLink.'</div>
+      </div>';		
 			}
 			}
 			?>          
