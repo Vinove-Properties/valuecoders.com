@@ -2043,3 +2043,49 @@ function wrapNonHtmlTextWithP($string) {
     }
     return $result;
 }
+
+function str_hasAnchorTag( $string ){
+    return preg_match('/<a\s[^>]*href=["\']?[^"\'>]+["\']?[^>]*>/i', $string) === 1;
+}
+
+function vcGetCustomBC( $postid, $defcat = "services", $title = false ){
+	$bcCategory = get_field('bc-vcategory', $postid);
+	$bcTitle    = get_field('bc-title', $postid);	
+	if( $bcTitle ){
+	$bct = $bcTitle;
+	}else{
+	$bct = get_the_title($postid);
+	}
+	if( $title !== false ){
+		$bct = $title;
+	}
+
+	if( $bcCategory === "multiple" ){
+		echo '<a href="'.get_bloginfo('url').'">Home</a>'.get_field('bmh-fld', $postid).' '.$bct;   
+	}else{
+		if( isset( $bcCategory ) && ($bcCategory == "solutions") ){
+			echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Solutions</span> '.$bct;   
+		}
+		elseif( isset( $bcCategory ) && ($bcCategory == "industries") ){
+			echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Industries</span> '.$bct;   
+		}
+		elseif(!empty( $bcCategory ) && ($bcCategory === "custom")){
+			$cuTitle  = get_field('bc-custitle', $postid);
+			$cuLink   = get_field('bc-cuslink', $postid);
+			$bCat     = '<a class="no-after" href="'.vc_siteurl($cuLink).'">'.$cuTitle.'</a> ';
+			if( $cuTitle && $cuLink ){
+			  echo '<a href="'.get_bloginfo('url').'">Home</a> '.$bCat.$bcTitle;  
+			}else{
+			  echo '<a href="'.get_bloginfo('url').'">Home</a> '.$bcTitle; 
+			}
+		}else{
+			$midBC = "";
+			if( $defcat === "services" ){
+				$midBC = '<a href="'.site_url('/software-development-services-company').'">Services</a>';
+			}elseif( !empty($defcat) ){
+				$midBC = (str_hasAnchorTag($defcat)) ? $defcat : '<span>'.$defcat.'</span>';
+			}
+			echo '<a href="'.get_bloginfo('url').'">Home</a> '.$midBC.' '.$bct;
+		}	
+	}
+}

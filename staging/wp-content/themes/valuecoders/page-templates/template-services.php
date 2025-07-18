@@ -21,38 +21,7 @@ $bannerImageSrc = getVcWebpSrcURL( $cmnBanner );
 <section class="hero-section vlazy" style="background-image:url(<?php echo $bannerImageSrc; ?>);">
   <div class="container">
     <div class="content-wrap">
-			<div class="breadcrumbs">
-			<?php 
-			$bcCategory = get_field('bc-vcategory');
-			$bcTitle 		= get_field('bc-title');
-			if( $bcTitle ){
-			$bct = $bcTitle;
-			}else{
-			$bct = get_the_title();
-			}
-
-			if( isset( $bcCategory ) && ($bcCategory == "solutions") ){
-			echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Solutions</span> '.$bct;		
-			}elseif( isset( $bcCategory ) && ($bcCategory == "industries") ){
-      		echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Industries</span> '.$bct;   
-      		}
-			elseif(!empty( $bcCategory ) && ($bcCategory === "custom")){
-				$cuTitle  = get_field('bc-custitle');
-				$cuLink   = get_field('bc-cuslink');
-				$cuLink   = (!empty($cuLink)) ? vc_siteurl($cuLink) : 'javascript:void(0);';
-				$bCat     = '<a class="no-after" href="'.$cuLink.'">'.$cuTitle.'</a> ';
-				if( $cuTitle && $cuLink ){
-				echo '<a href="'.get_bloginfo('url').'">Home</a> '.$bCat.$bcTitle;  
-				}else{
-				echo '<a href="'.get_bloginfo('url').'">Home</a> '.$bcTitle; 
-				}
-			}
-      		else{
-			echo '<a href="'.get_bloginfo('url').'">Home</a> 
-      		<a href="'.site_url('/software-development-services-company').'">Services</a> '.$bct;
-			}
-			?>
-			</div>
+      <div class="breadcrumbs"><?php vcGetCustomBC( $thisPostID ); ?></div>
       <div class="dis-flex">
         <div class="left-box" style="flex-basis: 100%;">
         	<?php 

@@ -36,39 +36,7 @@
     <div class="content-wrap">
       <div class="dis-flex justify-sb">
         <div class="left-box">
-          <div class="breadcrumbs">
-            <?php 
-              $bcCategory = get_field('bc-vcategory');
-              $bcTitle    = get_field('bc-title');
-              
-              if( $bcTitle ){
-                $bct = $bcTitle;
-              }else{
-                $bct = get_the_title();
-              }
-                            
-              if( isset( $bcCategory ) && ($bcCategory == "solutions") ){
-                echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Solutions</span> '.$bct;   
-              }
-              elseif( isset( $bcCategory ) && ($bcCategory == "industries") ){
-                echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Industries</span> '.$bct;   
-              }
-              elseif(!empty( $bcCategory ) && ($bcCategory === "custom")){
-                $cuTitle  = get_field('bc-custitle');
-                $cuLink   = get_field('bc-cuslink');
-                $bCat     = '<a class="no-after" href="'.vc_siteurl($cuLink).'">'.$cuTitle.'</a> ';
-                if( $cuTitle && $cuLink ){
-                  echo '<a href="'.get_bloginfo('url').'">Home</a> '.$bCat.$bcTitle;  
-                }else{
-                  echo '<a href="'.get_bloginfo('url').'">Home</a> '.$bcTitle; 
-                }
-              }
-              else{
-              echo '<a href="'.get_bloginfo('url').'">Home</a> 
-              <a href="'.site_url('/software-development-services-company').'">Services</a> '.$bct;
-              }
-              ?>
-          </div>
+          <div class="breadcrumbs"><?php vcGetCustomBC( $thisPostID ); ?></div>
           <?php the_content(); ?>
           <div class="btn-sec margin-t-50 ">
             <a href="<?php echo site_url('/contact'); ?>" class="btn rounded">

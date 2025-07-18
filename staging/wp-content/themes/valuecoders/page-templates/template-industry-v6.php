@@ -12,9 +12,9 @@ if( $bannerImage ){
   $bannerStyle  = ' style="background-image:url(' . $banImage . ');"';
 }
 
-$bcTitle = get_field("bc-title");
+$bcTitle    = get_field("bc-title");
 $bcCategory = get_field("bc-vcategory");
-$bCat = $bcCategory === "services" ? "Services" : "Industries";
+$bCat       = ($bcCategory === "services") ? "Services" : "Industries";
 if( $bcTitle ){
     $bct = $bcTitle;
 }else{
@@ -22,9 +22,9 @@ if( $bcTitle ){
 }
 
 if( $bcCategory === "custom" ){
-    $cuTitle = get_field("bc-custitle");
-    $cuLink = get_field("bc-cuslink");
-    $bCat ='<a class="no-after" href="'.vc_siteurl($cuLink).'">' .$cuTitle ."</a>";
+    $cuTitle  = get_field("bc-custitle");
+    $cuLink   = get_field("bc-cuslink");
+    $bCat     ='<a class="no-after" href="'.vc_siteurl($cuLink).'">' .$cuTitle ."</a>";
 }
 
 $vcBtn = get_field("vc-cta", $thisPostID);

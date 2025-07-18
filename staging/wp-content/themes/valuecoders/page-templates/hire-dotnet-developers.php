@@ -17,16 +17,7 @@ if( is_array( $cmnBanner ) ){
   <div class="container">
     <div class="content-wrap">
 			<div class="breadcrumbs">
-			<?php 
-			$bcTitle = get_field('bc-title');
-			if( $bcTitle ){
-			$bct = $bcTitle;
-			}		
-			else{
-			$bct = get_the_title();	
-			} 
-			echo '<a href="'.get_bloginfo('url').'">Home</a> <span>Technology</span> '.$bct; 
-			?>
+			<?php vcGetCustomBC($thisPostID, "Technology"); ?>
 			</div>
       <div class="dis-flex">
         <div class="left-box">

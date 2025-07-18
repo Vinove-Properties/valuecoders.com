@@ -22,33 +22,15 @@
     <div class="breadcrumbs">
       <?php 
       $hasTechnology  = get_field('vc-technology',$thisPostID);
-      $thispTitle 	  = ($hasTechnology && !empty($hasTechnology)) ? $hasTechnology :  get_the_title();
+      $thispTitle     = ($hasTechnology && !empty($hasTechnology)) ? $hasTechnology :  get_the_title();
       $bcTitle        = get_field( 'bc-title', $thisPostID );
       if( $bcTitle ){
       $thispTitle = $bcTitle;
       }
-
       if( is_page('hire-developers') ){
       echo '<a href="'.get_bloginfo('url').'">Home</a> Hire Software Developers';
       }else{
-        $bcCategory   = get_field('bc-vcategory');
-        if( !empty( $bcCategory ) && ($bcCategory === "custom") ){
-          $cuTitle  = get_field('bc-custitle');
-          $cuLink   = get_field('bc-cuslink');
-          $bCat     = '<a class="no-after" href="'.vc_siteurl($cuLink).'">'.$cuTitle.'</a> ';
-          if( $cuTitle && $cuLink ){
-            echo '<a href="'.get_bloginfo('url').'">Home</a> '.$bCat.$thispTitle;  
-          }else{
-            echo '<a href="'.get_bloginfo('url').'">Home</a> '.$thispTitle; 
-          }
-        }else{
-          $seoBC        = get_field('seo-breadcrumb');
-          echo '<a href="'.get_bloginfo('url').'">Home</a> ';
-          if( $seoBC != "yes" ){
-          echo '<a href="'.site_url('/hire-developers').'">Hire Software Developers</a> ';  
-          }  
-          echo $thispTitle; 
-        } 
+      vcGetCustomBC($thisPostID, '<a href="'.site_url('/hire-developers').'">Hire Software Developers</a>', $thispTitle);   
       }
       ?>
     </div>

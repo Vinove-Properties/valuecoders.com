@@ -12,29 +12,13 @@ if( $bannerImage ){
 	$bannerStyle 	= ' style="background-image:url('.$banImage.');"';
 }
 
-$bcTitle 			= get_field('bc-title');
-$bcCategory 	= get_field('bc-vcategory');
-$bCat 				= ( $bcCategory === "services" ) ? "Services" : "Industries";
-if( $bcTitle ){
-	$bct = $bcTitle;
-}else{
-	$bct = get_the_title();	
-}
-
-if( $bcCategory === "custom" ){
-	//bc-custitle //bc-cuslink
-	$cuTitle 	= get_field('bc-custitle');
-	$cuLink 	= get_field('bc-cuslink');
-	$bCat 		= '<a class="no-after" href="'.vc_siteurl($cuLink).'">'.$cuTitle.'</a>';
-}
-
 $vcBtn = get_field('vc-cta', $thisPostID);
 ?>
 <section class="hero-img-section vlazy" <?php echo $bannerStyle; ?>>
 	<div class="container">
 		<div class="content-wrap">
 		<div class="breadcrumbs">
-			<a href="<?php bloginfo('url'); ?>">Home</a> <span><?php echo $bCat; ?></span> <?php echo $bct; ?>
+			<?php vcGetCustomBC( $thisPostID, 'Industries' ); ?>
 		</div>	
 			<h1><?php the_title(); ?></h1>
 		</div>
