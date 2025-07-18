@@ -5,7 +5,7 @@
   global $post;
   $thisPostID = $post->ID;
   $vcBtn 			= get_field('vc-cta', $thisPostID);
-  
+
   $specifications   = get_field('tech-spec');
   $sfRow            = get_field('sf-type');
   $vcProfile        = get_field('vc-profile');
@@ -247,6 +247,8 @@
   
   $grwTitle = (isset($vcBtn['title-3']) && !empty($vcBtn['title-3'])) ? $vcBtn['title-3'] : "Unlock Your Growth Potential!";
   $grwBody  = (isset($vcBtn['text-3']) && !empty($vcBtn['text-3'])) ? $vcBtn['text-3'] : "Let's break down complex IT issues into actionable solutions you can understand.";
+  $grwLink  = (isset($vcBtn['link-3']) && !empty($vcBtn['link-3'])) ? $vcBtn['link-3'] : "Contact Us";
+
   ?>
 <section class="counter-column-section bg-blue-linear padding-t-70 padding-b-70" id="unlock-growth-cta">
   <div class="container">
@@ -257,7 +259,9 @@
           <p><?php echo $grwBody; ?></p>
         </div>
         <div class="btn-sec margin-t-50">
-          <a href="<?php echo site_url('/contact'); ?>" class="btn rounded"><span class="text-white">CONTACT US</span></a>
+          <a href="<?php echo site_url('/contact'); ?>" class="btn rounded">
+            <span class="text-white"><?php echo $grwLink; ?></span>
+          </a>
         </div>
       </div>
       <div class="right-sec">
