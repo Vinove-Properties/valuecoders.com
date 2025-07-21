@@ -43,7 +43,9 @@
               </div>
               <div class="soc-box dis-flex items-center">                
                 <a href="javascript:void(0)"; onclick="consultCTA_cb();"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-01.svg" alt="valuecoders" width="20" height="20"></i><span>Book A Call</span></a>
+                <?php /* ?>
                 <a href="https://wa.me/918882108080" target="_blank"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-02.svg" alt="valuecoders" width="20" height="20"> </i><span>WhatsApp</span></a>
+                <?php */ ?>
                 <a href="mailto:sales@valuecoders.com" target="_blank"><i><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/soc-03.svg" alt="valuecoders" width="20" height="20"></i><span>Email us</span></a>
               </div>
               <form action="<?php bloginfo('url'); ?>/sendmail1.php" enctype="multipart/form-data" method="POST" 
