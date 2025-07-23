@@ -149,12 +149,7 @@ input[type=email],input[type=text],textarea{width:100%;padding:8px;margin-top:5p
   transition: width 0.3s ease;
 }
 
-
-
-
-
-
-
+.col-1-1 .dom-class-column label{padding-left: 20px;}
 
 
 
