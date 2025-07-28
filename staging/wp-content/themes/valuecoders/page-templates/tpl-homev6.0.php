@@ -384,12 +384,12 @@ $loop = [];
 $response = wp_remote_get('https://www.valuecoders.com/blog/wp-json/bposts/v1/cat-posts/'.preg_replace('/\s+/', '','ai-development-company').'?var='.time());
 if(is_array( $response ) && !is_wp_error( $response )){
   $data   = json_decode($response['body']);
-  if( count( $data ) > 1 ){
+  if( is_array($data) && (count( $data ) > 1) ){
     $loop = json_decode($response['body']); 
   }
 } 
 if( count($loop) > 0 ) :
-echo '<section class="latest-insight light-background  padding-t-120 padding-b-120"><div class="container">';
+echo '<section class="latest-insight light-background padding-t-120 padding-b-120"><div class="container">';
 echo '<div class="top-section b-100">
       <div class="dis-flex items-center justify-sb  top-content">
         <div class="flex-2">

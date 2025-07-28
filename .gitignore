@@ -6,6 +6,7 @@ l/wp-config.php
 blog/wp-config.php
 case-studies/wp-config.php
 
+__data/*
 data/*
 uploads/*
 wp-content/*
