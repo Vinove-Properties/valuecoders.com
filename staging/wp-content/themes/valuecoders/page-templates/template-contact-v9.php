@@ -346,9 +346,7 @@
           <div class="flex-wrap">
             <div class="dis-flex phone-box">
               <div class="country"><img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/vflag-02.svg" alt="valuecoders" width="25" height="25">USA</div>
-              <div class="phone">
-                <?php /*<a href="tel:+1 628 600 5055">+1 628 600 5055</a> //temp hold pankaj 30.07 */ ?>
-                <a href="tel:+16289003009">+1 628 9003009</a>
+              <div class="phone"><a href="tel:+1 628 600 5055">+1 628 600 5055</a>
               </div>
             </div>
           </div>
