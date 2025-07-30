@@ -750,7 +750,7 @@ add_action( 'rest_api_init', function(){
     ));
 });
 
-function vcGetAllCats( $data ){
+function vcGetAllCats( $data ){ die;
     $tag   = $data->get_param( 'tag' );
     $post_tag = '';
     if( isset( $tag ) && !empty( $tag ) ){
