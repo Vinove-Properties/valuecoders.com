@@ -187,10 +187,11 @@ if(is_page('hire-developers')){
         if( $specifications['specifications'] ){
         	foreach( $specifications['specifications'] as $row ){
         		$vcHasAnchor = vcHasAnchor($row['title'], $row['text']);
+            $rowText = vcHasHTML( $row['text'] ) ? $row['text'] : '<p>'.$row['text'].'</p>';
         		echo '<div class="flex-3 box-3'.vcHasAnchor($row['title'], $row['text']).'">
         		<div class="box bg-blue-opacity-light">
-        		<h3>'.$row['title'].'</h3>
-        		<p>'.$row['text'].'</p>';
+        		<h3>'.$row['title'].'</h3>'.$rowText;
+            
         		echo ( $vcHasAnchor !== false ) ? '<span class="box-link">'.$row['title'].'</span>' : '';
         		echo '</div></div>';
         	}

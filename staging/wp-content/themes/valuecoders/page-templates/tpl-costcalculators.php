@@ -19,7 +19,7 @@ get_header();
     <div class="cost-left">
       <div class="head-text"><?php the_field('calc-content'); ?></div>
       <div class="img-wrap">
-        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v6.0/images/cost-image.svg" alt="valuecoders" width="384" height="325">
+        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/cost-image-3.png" alt="valuecoders" width="384" height="325">
       </div>
     </div>
     <div class="cost-right">
