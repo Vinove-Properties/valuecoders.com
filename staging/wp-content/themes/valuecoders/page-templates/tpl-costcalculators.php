@@ -19,7 +19,10 @@ get_header();
     <div class="cost-left">
       <div class="head-text"><?php the_field('calc-content'); ?></div>
       <div class="img-wrap">
-        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/cost-image-3.png" alt="valuecoders" width="384" height="325">
+        <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/dev-img/cost-calculator-3.webp">
+        <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/dev-img/cost-calculator-3.png">
+        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/dev-img/cost-calculator-3.png" alt="valuecoders" 
+        width="384" height="325">
       </div>
     </div>
     <div class="cost-right">
@@ -73,7 +76,7 @@ get_header();
       <div class="user-input group-com">
         <div class="row">   
           <div class="labl">Preferred way of communication:</div>
-          <label><input type="radio" name="communication" value="Any" checked>Any</label>
+          <label class="active"><input type="radio" name="communication" value="Any" checked>Any</label>
           <label><input type="radio" name="communication" value="Email">Email</label>
           <label><input type="radio" name="communication" value="Phone">Phone</label>
         </div>

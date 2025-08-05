@@ -1922,11 +1922,20 @@ CREATE TABLE calculator_leads (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 */
 
+function vcGetName($name) {
+    $name = trim($name);
+    $last_name = (strpos($name, ' ') === false) ? '' : preg_replace('#.*\s([\w-]*)$#', '$1', $name);
+    $first_name = trim( preg_replace('#'.preg_quote($last_name,'#').'#', '', $name ) );
+    return array($first_name, $last_name);
+}
+
 add_action('wp_ajax_handlecosting', '_calcReqHandlerCB');
 add_action('wp_ajax_nopriv_handlecosting', '_calcReqHandlerCB');
 function _calcReqHandlerCB(){
 	// $jString 	= file_get_contents(__DIR__ . '/json-fields/data-analytics-bi-calculator-formatted.json'); 
 	// $jsonFl  	= json_decode($jString, true);
+	require_once ABSPATH . 'vc-config.php';
+	
 	$input 		= file_get_contents( "php://input" );
 	$data 		= json_decode( $input, true );
 	
@@ -1967,9 +1976,12 @@ function _calcReqHandlerCB(){
 	$markup .= '<br><strong>Phone : </strong>'.($data['phone']) ??$data['phone'];
 	$markup .= '<br><strong>Preferred way of communication : </strong>'.($data['communication']) ??$data['communication'];
 	$elmForms = "";
+	$crmRq = '';
+	$costing_req = '<br><br><strong>Costing Request : </strong>';
 	foreach($title_ar as $key => $value) {
-		$markup .= '<br><strong>'.$key.' : </strong>'.$value.'<br>';
-		$elmForms .= '<strong>'.$key.' : </strong>'.$value.'<br>';
+		$costing_req 	.= '<br><strong>'.$key.' : </strong>'.$value;
+		$crmRq 			.= $key.' : '.$value."\n";
+		$elmForms 		.= '<strong>'.$key.' : </strong>'.$value.'<br>';
 	}
 	global $wpdb;
 	$crmDB 			= new wpdb(CRM_DB_USER, CRM_DB_PASSWORD, CRM_DB,CRM_HOST);
@@ -1979,17 +1991,70 @@ function _calcReqHandlerCB(){
 	$company        = sanitize_text_field($data['company'] ?? '');
 	$phone          = sanitize_text_field($data['phone'] ?? '');
 	$communication  = sanitize_text_field($data['communication'] ?? '');
-	$ip_address     = $_SERVER['REMOTE_ADDR'] ?? '';
+	$ip_address     = get_client_ip_user();
 	
-	$serialized_form_data = maybe_serialize($elmForms);
+	$serialized_form_data = maybe_serialize( $elmForms );
+	smtpEmailFunction( "nitin.baluni@mail.vinove.com", "Inquiry with ValueCoders - Cost Calculator", $markup.$costing_req, "lead", 
+	$email, [], [], [], $name, false );
+	
+	$getUTM_source = (isset($_COOKIE['utm_source']) && !empty($_COOKIE['utm_source'])) ? $_COOKIE['utm_source'] : '';
+    $getUTM_medium = (isset($_COOKIE['utm_medium']) && !empty($_COOKIE['utm_medium'])) ? $_COOKIE['utm_medium'] : '';
+
+	$inSource = "";
+    if( $getUTM_source == "gglads" ){
+        $inSource = "Advertisement: Google";
+    }elseif( $getUTM_source == "bingads" ){
+        $inSource = "Advertisement: Bing";
+    }elseif( $getUTM_source == "facebookpaid" ){
+        $inSource = "Advertisement: FaceBook";
+    }elseif( $getUTM_source == "quorapaid" ){
+        $inSource = "Advertisement: Quora";
+    }elseif( $getUTM_source == "linkedinads" ){
+        $inSource = "Advertisement: LinkedIN";
+    }elseif( $getUTM_source == "adroll" ){
+        $inSource = "Advertisement: Adroll";
+    }else{
+        $inSource = "Website";
+    }
+
+	$partName   = vcGetName( $name );
+    $firstn     = $partName[0];
+    $lastn      = ( !empty($partName[1]) ) ? $partName[1] : 'N/A';
+
+	$arrZoho_v2 = array(
+	'Email'         => $email,
+	'First Name'    => $firstn,
+	'Last Name'     => $lastn,
+	'Phone'         => $phone,
+	'Country'       => "",
+	'Lead Status'   => 'Not Contacted Yet',
+	'Lead Source'   => $inSource,
+	'UTM Source'    => $inSource,
+	'UTM Medium'    => $getUTM_medium,
+	'Property'      => 'ValueCoders',
+	'IP Address'    => $ip_address,
+	'Description'   => $markup,
+	'URL'           => get_permalink($data['post_id']),
+	'Requirements'  => $crmRq,
+	'refurl'        => get_permalink($data['post_id'])
+	);
+	
+	zohoCrmUpdate_v2($arrZoho_v2, $inSource, 869560646, false);
 
 	$query = $wpdb->prepare( "INSERT INTO calculator_leads (name, email, company, phone, communication, ip_address, form_data, created_at) 
 	VALUES (%s, %s, %s, %s, %s, %s, %s, NOW())", $name, $email, $company, $phone, $communication, $ip_address, $serialized_form_data );
-	$result = $crmDB->query($query);	
+	$result = $crmDB->query($query);
 	if( $result !== false ){
-		wp_send_json(['file_data' => $jsonFl, 'form_input' => $data, 'form_data' => $title_ar, 'markup' => $markup]);
+	wp_send_json([
+		'file_data' => $jsonFl, 
+		'form_input' => $data, 
+		'form_data' => $title_ar, 
+		'markup' => $markup, 
+		'crm_rq' => $crmRq,
+		'zoho_data' => $arrZoho_v2
+	]);
 	}else{
-		wp_send_json(['file_data' => $jsonFl, 'form_input' => $data, 'form_data' => $title_ar, 'markup' => $markup]);
+	wp_send_json(['file_data' => $jsonFl, 'form_input' => $data, 'form_data' => $title_ar, 'markup' => $markup]);
 	}
 	die;
 }

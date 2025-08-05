@@ -38,17 +38,17 @@ function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $email
         }  
         $mail->isSMTP();
 
-        $mail->Host         = "smtp.gmail.com"; // SMTP server
+        $mail->Host         = "smtp.postmarkapp.com"; // SMTP server
         $mail->SMTPSecure   = 'tsl';
         $mail->Port         = 587;
         $mail->SMTPAuth     = true;
-        $mail->Username     = 'do-not-reply@valuecoders.com';
-        $mail->Password     = 'pdtnweysvgovhemg';
+        $mail->Username     = '7e3493f7-087c-42fe-b165-1d0f4890fecc';
+        $mail->Password     = '7e3493f7-087c-42fe-b165-1d0f4890fecc';
 
         if( $type == "lead" ){
-            $mail->setFrom( $userEmail, $cname );
+            $mail->setFrom( "do-not-reply@valuecoders.com", $cname );
         }else{
-            $mail->setFrom( "sales@valuecoders.com", 'ValueCoders');
+            $mail->setFrom( "do-not-reply@valuecoders.com", 'ValueCoders');
         }
         $mail->addAddress($emailTo);
         if( $emailCC ){
@@ -64,7 +64,7 @@ function smtpEmailFunction( $emailTo, $subject, $body, $type, $userEmail, $email
         if( $type == "lead" ){
             $mail->addReplyTo( $userEmail );
         }else{
-            $mail->addReplyTo( 'sales@valuecoders.com' );
+            $mail->addReplyTo( 'do-not-reply@valuecoders.com' );
         }
         
         if( $attachments ){
