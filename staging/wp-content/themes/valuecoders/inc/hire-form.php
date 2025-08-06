@@ -93,10 +93,10 @@
                 <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
                 <input type="hidden" name="frmqueryString" value="">
                 <input type="hidden" name="page_url" value="<?php the_permalink(); ?>">
-                <input type="hidden" name="is_free_trial" value="true">
+                <input type="hidden" name="is_free_trial" value="false">
                 <button type="submit" id="hire-submitButton" class="checkout-submit" value="Hire Experts">
                 Hire Experts</button>
-				<a href="javascript:void(0);" onclick="consultCTA_cb();" target="_self" class="req">
+				        <a href="javascript:void(0);" onclick="consultCTA_cb();" target="_self" class="req">
                 Book A Call</a>
               </div>
             </div>
