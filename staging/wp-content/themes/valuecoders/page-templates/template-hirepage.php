@@ -8,31 +8,31 @@
   $vcBtn    = get_field('vc-cta', $thisPostID);
   $dmCTA    = get_field('dm-hcta');
   $hasDMCta = (isset($dmCTA['required']) && ($dmCTA['required'] === "yes")) ? true : false;
-
+  
   if( $bcCategory === "custom" ){
   //bc-custitle //bc-cuslink
   $cuTitle  = get_field('bc-custitle');
   $cuLink   = get_field('bc-cuslink');
   $bCat     = '<a class="no-after" href="'.vc_siteurl($cuLink).'">'.$cuTitle.'</a>';
-}
-
+  }
+  
   ?>
 <section class="second-level-section vlazy" style="background-image:url(<?php bloginfo('template_url'); ?>/v4.0/images/hire-banner.webp);">
   <div class="container">
     <div class="breadcrumbs">
       <?php 
-      $hasTechnology  = get_field('vc-technology',$thisPostID);
-      $thispTitle     = ($hasTechnology && !empty($hasTechnology)) ? $hasTechnology :  get_the_title();
-      $bcTitle        = get_field( 'bc-title', $thisPostID );
-      if( $bcTitle ){
-      $thispTitle = $bcTitle;
-      }
-      if( is_page('hire-developers') ){
-      echo '<a href="'.get_bloginfo('url').'">Home</a> Hire Software Developers';
-      }else{
-      vcGetCustomBC($thisPostID, '<a href="'.site_url('/hire-developers').'">Hire Software Developers</a>', $thispTitle);   
-      }
-      ?>
+        $hasTechnology  = get_field('vc-technology',$thisPostID);
+        $thispTitle     = ($hasTechnology && !empty($hasTechnology)) ? $hasTechnology :  get_the_title();
+        $bcTitle        = get_field( 'bc-title', $thisPostID );
+        if( $bcTitle ){
+        $thispTitle = $bcTitle;
+        }
+        if( is_page('hire-developers') ){
+        echo '<a href="'.get_bloginfo('url').'">Home</a> Hire Software Developers';
+        }else{
+        vcGetCustomBC($thisPostID, '<a href="'.site_url('/hire-developers').'">Hire Software Developers</a>', $thispTitle);   
+        }
+        ?>
     </div>
     <?php 
       $headingTxt = get_field( 'htop-area' ); 
@@ -41,22 +41,22 @@
     <div class="dis-flex justify-sb">
       <div class="left-box flex-2">
         <?php 
-        $bdgLogoType = get_field('bdglogo');
-        if( $bdgLogoType == "yes" ){
-        echo '<div class="three-logo dis-flex">
-        <div class="logo-box logo1"></div>
-        <div class="logo-box logo2"></div>
-        <div class="logo-box logo3"></div>
-        </div>';          
-        }else{
-        echo '<div class="for-client-logo-box dis-flex">
-        <div class="logo-box logo1"></div>
-        <div class="logo-box logo2"></div>
-        <div class="logo-box logo3"></div>
-        <div class="logo-box logo4"></div>
-        </div>';
-        }
-        ?>
+          $bdgLogoType = get_field('bdglogo');
+          if( $bdgLogoType == "yes" ){
+          echo '<div class="three-logo dis-flex">
+          <div class="logo-box logo1"></div>
+          <div class="logo-box logo2"></div>
+          <div class="logo-box logo3"></div>
+          </div>';          
+          }else{
+          echo '<div class="for-client-logo-box dis-flex">
+          <div class="logo-box logo1"></div>
+          <div class="logo-box logo2"></div>
+          <div class="logo-box logo3"></div>
+          <div class="logo-box logo4"></div>
+          </div>';
+          }
+          ?>
         <h1><?php echo $headingTxt['top-heading']; ?></h1>
         <h2><?php echo $headingTxt['second-heading']; ?></h2>
         <?php 
@@ -79,47 +79,48 @@
           
           endwhile;
           ?>
+        <?php /* ?>
         <div class="button-section margin-t-50">
           <div class="btn-div">
             <div class="btn-sec">
               <a class="btn rounded" href="<?php echo site_url('/contact'); ?>">
               <span class="text-white">CONTACT US</span>
               </a>
-            </div>            
+            </div>
             <!--/?cta=free-trial
-            <div class="info-wrap">
-              Free Trial, Zero Overheads, Quick Setup
-              <div class="info">
-                <div class="info-content">
-                  <h4>What happens after you contact us? </h4>
-                  <p>Our solution experts will answer your questions in a secure online meeting.</p>
-                  <a class="kmore" href="https://www.valuecoders.com/hire-developers/7-day-trial">Know More</a>
+              <div class="info-wrap">
+                Free Trial, Zero Overheads, Quick Setup
+                <div class="info">
+                  <div class="info-content">
+                    <h4>What happens after you contact us? </h4>
+                    <p>Our solution experts will answer your questions in a secure online meeting.</p>
+                    <a class="kmore" href="https://www.valuecoders.com/hire-developers/7-day-trial">Know More</a>
+                  </div>
                 </div>
               </div>
-            </div>
-             -->
+              -->
           </div>
-          
           <span class="devide">OR</span>
           <div class="free-con">
-          <a href="javascript:void(0);" onclick="consultCTA_cb();" target="_self">Book A Call</a>
-          </div> 
+            <a href="javascript:void(0);" onclick="consultCTA_cb();" target="_self">Book A Call</a>
+          </div>
         </div>
+        <?php */ ?>
       </div>
       <div class="flex-2 header-form">
         <?php 
-        get_template_part('inc/hire', 'form');
-        /*$conImage = get_field('banner_image');
-        if( $conImage && is_array($conImage) ){
-        echo vc_pictureElm( $conImage, 'ValueCoders', 'soft-img' );
-        }else{          
-        $ranpool  = ['hire-banner01','hire-banner02','hire-banner03','hire-banner04','hire-banner05'];
-        $bImg = $ranpool[array_rand($ranpool)];
-        ?>
+          get_template_part('inc/hire', 'form');
+          /*$conImage = get_field('banner_image');
+          if( $conImage && is_array($conImage) ){
+          echo vc_pictureElm( $conImage, 'ValueCoders', 'soft-img' );
+          }else{          
+          $ranpool  = ['hire-banner01','hire-banner02','hire-banner03','hire-banner04','hire-banner05'];
+          $bImg = $ranpool[array_rand($ranpool)];
+          ?>
         <picture>
-        <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/<?php echo $bImg; ?>.webp">
-        <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/<?php echo $bImg; ?>.png">
-        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/<?php echo $bImg; ?>.png" alt="Valuecoders" width="689" height="477"> 
+          <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/<?php echo $bImg; ?>.webp">
+          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/<?php echo $bImg; ?>.png">
+          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/<?php echo $bImg; ?>.png" alt="Valuecoders" width="689" height="477"> 
         </picture>
         <?php } */ ?>
       </div>
@@ -155,11 +156,10 @@
 </div>
 <?php //vcTrustedStartups(); ?>
 <?php 
-if(is_page('hire-developers')){
-	get_template_part('include/why','hire3.0');
-} 
-?>
-
+  if(is_page('hire-developers')){
+  	get_template_part('include/why','hire3.0');
+  } 
+  ?>
 <?php  
   $specifications = get_field('tech-spec');
   if( $specifications ) :
@@ -173,7 +173,7 @@ if(is_page('hire-developers')){
   if( isset( $specifications['sec-layout'] ) && ($specifications['sec-layout'] == "grid") ){
   $sectionType = 'grid';
   }
-
+  
   if( $sectionType === 'grid' ){ 
   ?>
 <section id="acf-tech-spec-grid" class="three-column-icon-section padding-t-120 padding-b-120 <?php echo $specifications['sc_background']; ?>">
@@ -241,27 +241,26 @@ if(is_page('hire-developers')){
   </div>
 </section>
 <?php 
-}
-}
-endif;
-?>
-
+  }
+  }
+  endif;
+  ?>
 <?php 
-$disOne = (isset($dmCTA['dis-1']) && ($dmCTA['dis-1'] == "yes")) ? true : false;
-if( $disOne === false ) :
-?>
+  $disOne = (isset($dmCTA['dis-1']) && ($dmCTA['dis-1'] == "yes")) ? true : false;
+  if( $disOne === false ) :
+  ?>
 <section id="cta-dis-1" class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70">
   <div class="container">
     <div class="head-txt text-center">
       <?php 
-      if( isset($dmCTA['required']) && ($dmCTA['required'] == "yes") ){
-      echo '<h2>'.$dmCTA['title-one'].'</h2>';
-      echo '<p>'.$dmCTA['body-one'].'</p>';
-      }else{
-      echo '<h2>Try Before, Commit Later</h2>';
-      echo '<p>Start your 7-day trial today and discover the perfect fit for your project needs.</p>';
-      }
-      ?>      
+        if( isset($dmCTA['required']) && ($dmCTA['required'] == "yes") ){
+        echo '<h2>'.$dmCTA['title-one'].'</h2>';
+        echo '<p>'.$dmCTA['body-one'].'</p>';
+        }else{
+        echo '<h2>Try Before, Commit Later</h2>';
+        echo '<p>Start your 7-day trial today and discover the perfect fit for your project needs.</p>';
+        }
+        ?>      
     </div>
     <?php
       $ctaTxt_one = (isset($vcBtn['link-one']) && !empty($vcBtn['link-one'])) ? $vcBtn['link-one'] : 
@@ -272,14 +271,13 @@ if( $disOne === false ) :
   </div>
 </section>
 <?php endif; ?>
-
 <?php 
-if ( !is_page('hire-developers') ) {
-  $whyChoos = get_field('why-choose');
-  if ( isset($whyChoos['is_enable']) && $whyChoos['is_enable'] == "yes" ) {
-    $htContent = $whyChoos['content'];
-    $headText = fnextractHeadins('h2', $htContent);
-?>
+  if ( !is_page('hire-developers') ) {
+    $whyChoos = get_field('why-choose');
+    if ( isset($whyChoos['is_enable']) && $whyChoos['is_enable'] == "yes" ) {
+      $htContent = $whyChoos['content'];
+      $headText = fnextractHeadins('h2', $htContent);
+  ?>
 <section class="three-column-icon-section padding-t-120 padding-b-120 <?php echo esc_attr($whyChoos['sc_background']); ?>" id="acf-why-choose">
   <div class="container">
     <div class="dis-flex top-content">
@@ -290,47 +288,40 @@ if ( !is_page('hire-developers') ) {
         <?php echo preg_replace("/<h([1-2]{1})>.*?<\/h\\1>/si", '', $htContent); ?>
       </div>
     </div>
-
     <div class="dis-flex col-box-outer margin-t-50">
       <?php 
-      if ( !empty($whyChoos['options']) ) {
-        foreach ( $whyChoos['options'] as $row ) {
-          $vcHasAnchor = vcHasAnchor($row['title'], $row['text']);
-          ?>
-          <div class="flex-3 box-3<?php echo $vcHasAnchor; ?>">
-            <div class="box bg-blue-opacity-light">
-              <h3><?php echo $row['title']; ?></h3>
-              <?php 
-              echo wrapNonHtmlTextWithP($row['text']); 
-              //echo $row['text']; 
-              ?>
-              <?php if ( $vcHasAnchor !== false ) { ?>
-                <span class="box-link"><?php echo $row['title']; ?></span>
-              <?php } ?>
-            </div>
-          </div>
-          <?php
+        if ( !empty($whyChoos['options']) ) {
+          foreach ( $whyChoos['options'] as $row ) {
+            $vcHasAnchor = vcHasAnchor($row['title'], $row['text']);
+            ?>
+      <div class="flex-3 box-3<?php echo $vcHasAnchor; ?>">
+        <div class="box bg-blue-opacity-light">
+          <h3><?php echo $row['title']; ?></h3>
+          <?php 
+            echo wrapNonHtmlTextWithP($row['text']); 
+            //echo $row['text']; 
+            ?>
+          <?php if ( $vcHasAnchor !== false ) { ?>
+          <span class="box-link"><?php echo $row['title']; ?></span>
+          <?php } ?>
+        </div>
+      </div>
+      <?php
         }
-      }
-      ?>
+        }
+        ?>
     </div>
   </div>
 </section>
 <?php 
   }
-}
-?>
-
-
-
-
-
-
+  }
+  ?>
 <?php 
-/*
-if( is_page('hire-developers') ) :
-$tsection = get_field('tech-competency');  
-?>
+  /*
+  if( is_page('hire-developers') ) :
+  $tsection = get_field('tech-competency');  
+  ?>
 <section class="technology-tab-section  padding-t-120 padding-b-120 bg-light">
   <div class="container">
     <div id="head-hptechnology" class="head-txt text-center is-active"><?php echo $tsection['content']; ?></div>
@@ -371,9 +362,9 @@ $tsection = get_field('tech-competency');
   </div>
 </section>
 <?php 
-endif; 
-*/
-?>
+  endif; 
+  */
+  ?>
 <?php  
   $expframeworks = get_field('php_frame_work_section');
   if( $expframeworks ) :
@@ -488,28 +479,27 @@ endif;
   ?>
 <!--Technology / Framework Section Ends Here-->
 <?php 
-$showCmnTech = get_field('cmn-texpert');
-if( $showCmnTech && ($showCmnTech == "yes") ){
-echo getCmnTechExperties();   
-}
-?>
-
+  $showCmnTech = get_field('cmn-texpert');
+  if( $showCmnTech && ($showCmnTech == "yes") ){
+  echo getCmnTechExperties();   
+  }
+  ?>
 <?php 
-$disTwo = (isset($dmCTA['dis-2']) && ($dmCTA['dis-2'] == "yes")) ? true : false;
-if( $disTwo === false ) :
-?>
+  $disTwo = (isset($dmCTA['dis-2']) && ($dmCTA['dis-2'] == "yes")) ? true : false;
+  if( $disTwo === false ) :
+  ?>
 <section id="cta-dis-2" class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70">
   <div class="container">
     <div class="head-txt text-center">
       <?php       
-      if( isset($dmCTA['required']) && ($dmCTA['required'] == "yes") ){
-        echo '<h2>'.$dmCTA['title-two'].'</h2>';
-        echo '<p>'.$dmCTA['body-two'].'</p>';
-      }else{
-      echo '<h2>Need Top-tier Software Development? </h2>';
-      echo '<p>Hire our skilled developers and lead the way to innovation.</p>';  
-      }
-      ?>            
+        if( isset($dmCTA['required']) && ($dmCTA['required'] == "yes") ){
+          echo '<h2>'.$dmCTA['title-two'].'</h2>';
+          echo '<p>'.$dmCTA['body-two'].'</p>';
+        }else{
+        echo '<h2>Need Top-tier Software Development? </h2>';
+        echo '<p>Hire our skilled developers and lead the way to innovation.</p>';  
+        }
+        ?>            
     </div>
     <?php
       $ctaTxt_two = (isset($vcBtn['link-two']) && !empty($vcBtn['link-two'])) ? $vcBtn['link-two'] : 
@@ -520,13 +510,12 @@ if( $disTwo === false ) :
   </div>
 </section>
 <?php endif; ?>
-
 <?php 
-$gViewSection = get_field('gview-section');
-if( isset( $gViewSection['is_enabled'] ) && ($gViewSection['is_enabled'] == "yes") ) :
-$htContent  = $gViewSection['content'];
-$headText   = fnextractHeadins('h2', $htContent );  
-?>
+  $gViewSection = get_field('gview-section');
+  if( isset( $gViewSection['is_enabled'] ) && ($gViewSection['is_enabled'] == "yes") ) :
+  $htContent  = $gViewSection['content'];
+  $headText   = fnextractHeadins('h2', $htContent );  
+  ?>
 <section id="acf-gview-section" class="three-column-icon-section padding-t-120 padding-b-120">
   <div class="container">
     <div class="dis-flex top-content">
@@ -551,16 +540,12 @@ $headText   = fnextractHeadins('h2', $htContent );
   </div>
 </section>
 <?php endif; ?>
-
-
-
-
 <?php 
-$codeSec = get_field('cq-accord'); 
-if( isset( $codeSec['is_enable'] ) && ($codeSec['is_enable'] != "hide") ){
-if( $codeSec['is_enable'] != "no" ):
-if( isset( $codeSec['tpl-content'] ) && ($codeSec['tpl-content'] == "no") ){  
-?>
+  $codeSec = get_field('cq-accord'); 
+  if( isset( $codeSec['is_enable'] ) && ($codeSec['is_enable'] != "hide") ){
+  if( $codeSec['is_enable'] != "no" ):
+  if( isset( $codeSec['tpl-content'] ) && ($codeSec['tpl-content'] == "no") ){  
+  ?>
 <section class="accordion-section list-full padding-t-120" id="acf-code-quality-accordian-dynamic">
   <div class="dis-flex accordian-row">
     <div class="col-left">
@@ -610,13 +595,13 @@ if( isset( $codeSec['tpl-content'] ) && ($codeSec['tpl-content'] == "no") ){
       </div>
       <div class="image-wrap">
         <?php 
-        $ranpool  = ['code-quality-image01', 'code-quality-image02'];
-        $bImg = $ranpool[array_rand($ranpool)];
-        ?>  
+          $ranpool  = ['code-quality-image01', 'code-quality-image02'];
+          $bImg = $ranpool[array_rand($ranpool)];
+          ?>  
         <picture class="soft-img">
-        <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/<?php echo $bImg; ?>.webp">
-        <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/<?php echo $bImg; ?>.png">
-        <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/<?php echo $bImg; ?>.png" width="666" height="536" alt="valuecoders">
+          <source type="image/webp" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/<?php echo $bImg; ?>.webp">
+          <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/<?php echo $bImg; ?>.png">
+          <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/<?php echo $bImg; ?>.png" width="666" height="536" alt="valuecoders">
         </picture>
       </div>
     </div>
@@ -625,10 +610,8 @@ if( isset( $codeSec['tpl-content'] ) && ($codeSec['tpl-content'] == "no") ){
         <h3 class="accordion-toggle"><span>Upholding Coding Best Practices</span></h3>
         <div class="accordion-content">
           <ul>
-            
             <li>Using descriptive variable names and in-code comments for better readability and maintainability.</li>
             <li>Comprehensive documentation for every codebase, ensuring clarity and ease of future updates.</li>
-                        
           </ul>
         </div>
       </div>
@@ -644,17 +627,17 @@ if( isset( $codeSec['tpl-content'] ) && ($codeSec['tpl-content'] == "no") ){
       <div class="accordionItem">
         <h3 class="accordion-toggle"><span>Code Review Practices</span></h3>
         <div class="accordion-content">
-        <ul>
-        <li>Incorporating automated code scanning tools to detect vulnerabilities and code smells before manual review, streamlining the review process.</li>          
-        <li>Establishing a peer review culture where developers are encouraged to provide constructive feedback, promoting knowledge sharing and collaborative improvement.</li>
-        </ul>
+          <ul>
+            <li>Incorporating automated code scanning tools to detect vulnerabilities and code smells before manual review, streamlining the review process.</li>
+            <li>Establishing a peer review culture where developers are encouraged to provide constructive feedback, promoting knowledge sharing and collaborative improvement.</li>
+          </ul>
         </div>
       </div>
       <div class="accordionItem">
         <h3 class="accordion-toggle"><span>Code Quality Metrics</span></h3>
         <div class="accordion-content">
           <ul>
-            <li>Adopting complexity metrics to identify overly complex code that may be harder to maintain and test, aiming for simplicity and readability.</li>            
+            <li>Adopting complexity metrics to identify overly complex code that may be harder to maintain and test, aiming for simplicity and readability.</li>
             <li>Tracking technical debt metrics to quantify the cost of rework associated with quick fixes versus proper solutions, guiding towards long-term code health.</li>
           </ul>
         </div>
@@ -663,38 +646,37 @@ if( isset( $codeSec['tpl-content'] ) && ($codeSec['tpl-content'] == "no") ){
   </div>
 </section>
 <?php }
-endif; 
-}
-?>
+  endif; 
+  }
+  ?>
 <?php 
-$byRole = get_field('te-byrole');
-if( isset($byRole['required']) &&  $byRole['required'] == "yes" ) :
-?>
+  $byRole = get_field('te-byrole');
+  if( isset($byRole['required']) &&  $byRole['required'] == "yes" ) :
+  ?>
 <section class="padding-t-120 padding-b-120">
   <div class="container">
     <div class="head-txt text-center"><?php echo $byRole['content']; ?></div>
     <?php 
-    if( $byRole['cards'] ){
-      echo '<div class="three-column-icon-section"><div class="dis-flex col-box-outer">';
-      foreach( $byRole['cards'] as $card ){
-      echo '<div class="flex-3 box-3 has-anchor">
-              <div class="box">'.$card['content'].'            
-                <a class="box-anchor" href="'.vc_siteurl($card['link']).'"></a>
-              </div>
-            </div>';  
+      if( $byRole['cards'] ){
+        echo '<div class="three-column-icon-section"><div class="dis-flex col-box-outer">';
+        foreach( $byRole['cards'] as $card ){
+        echo '<div class="flex-3 box-3 has-anchor">
+                <div class="box">'.$card['content'].'            
+                  <a class="box-anchor" href="'.vc_siteurl($card['link']).'"></a>
+                </div>
+              </div>';  
+        }
+        echo '</div></div>';
       }
-      echo '</div></div>';
-    }
-    ?>
-  </div>  
-</section>  
+      ?>
+  </div>
+</section>
 <?php endif;  ?>
-
 <?php  
-$whyChoos = get_field('why-choose');
-if( isset( $whyChoos['is_enable'] ) && ($whyChoos['is_enable'] == "yes") ){
-if( is_page('hire-developers') ){	
-?>
+  $whyChoos = get_field('why-choose');
+  if( isset( $whyChoos['is_enable'] ) && ($whyChoos['is_enable'] == "yes") ){
+  if( is_page('hire-developers') ){	
+  ?>
 <section class="accordion-section padding-t-120 <?php echo $whyChoos['sc_background']; ?>">
   <div class="dis-flex accordian-row">
     <div class="col-left">
@@ -737,56 +719,56 @@ if( is_page('hire-developers') ){
     ?>
 <section class="client-img-section dark-client-section padding-t-120 padding-b-120">
   <div class="container">
-  <div class="dis-flex justify-sb items-center">
-  <div class="flex-2 left-box">
-    <div class="head-txt">
-      <?php echo $whyhire['content']; ?>
-      <ul>
-        <li><a href="https://www.workstatus.io/" target="_blank" class="a-dotted">Workstatus<sup>TM</sup></a> powered Proof of Work</li>
-        <li>Top 1% developers, rigorously vetted</li>
-        <li>Dedicated project manager</li>
-        <li>Flexible contracts, transparent pricing</li>
-        <li>Zero hiring fee, quick onboarding</li>
-        <li>Comprehensive code documentation</li>
-        <li>Adherence to data security practices</li>
-        <li>Language/time-zone compatible staff</li>
-      </ul>
+    <div class="dis-flex justify-sb items-center">
+      <div class="flex-2 left-box">
+        <div class="head-txt">
+          <?php echo $whyhire['content']; ?>
+          <ul>
+            <li><a href="https://www.workstatus.io/" target="_blank" class="a-dotted">Workstatus<sup>TM</sup></a> powered Proof of Work</li>
+            <li>Top 1% developers, rigorously vetted</li>
+            <li>Dedicated project manager</li>
+            <li>Flexible contracts, transparent pricing</li>
+            <li>Zero hiring fee, quick onboarding</li>
+            <li>Comprehensive code documentation</li>
+            <li>Adherence to data security practices</li>
+            <li>Language/time-zone compatible staff</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex-2 right-box"><?php get_template_part('include/clientele', 'v4.0'); ?></div>
     </div>
   </div>
-  <div class="flex-2 right-box"><?php get_template_part('include/clientele', 'v4.0'); ?></div>
-  </div>
-</div>
 </section>
 <?php 
   }
   }else{ ?>
 <section class="client-img-section dark-client-section padding-t-120 padding-b-120">
   <div class="container">
-  <div class="dis-flex justify-sb items-center">
-  <div class="flex-2 left-box">
-    <div class="head-txt">
-      <?php 
-      if( isset($whyhire['con-point']) && ($whyhire['con-point'] === "yes") ){
-      echo $whyhire['content'];   
-      }else{
-      echo $whyhire['content'];
-      ?>
-      <ul>
-        <li><a href="https://www.workstatus.io/" target="_blank" class="a-dotted">Workstatus<sup>TM</sup></a> powered Proof of Work</li>
-        <li>Top 1% developers, rigorously vetted</li>
-        <li>Dedicated project manager</li>
-        <li>Flexible contracts, transparent pricing</li>
-        <li>Zero hiring fee, quick onboarding</li>
-        <li>Comprehensive code documentation</li>
-        <li>Adherence to data security practices</li>
-        <li>Language/time-zone compatible staff</li>
-      </ul>
-      <?php } ?>
+    <div class="dis-flex justify-sb items-center">
+      <div class="flex-2 left-box">
+        <div class="head-txt">
+          <?php 
+            if( isset($whyhire['con-point']) && ($whyhire['con-point'] === "yes") ){
+            echo $whyhire['content'];   
+            }else{
+            echo $whyhire['content'];
+            ?>
+          <ul>
+            <li><a href="https://www.workstatus.io/" target="_blank" class="a-dotted">Workstatus<sup>TM</sup></a> powered Proof of Work</li>
+            <li>Top 1% developers, rigorously vetted</li>
+            <li>Dedicated project manager</li>
+            <li>Flexible contracts, transparent pricing</li>
+            <li>Zero hiring fee, quick onboarding</li>
+            <li>Comprehensive code documentation</li>
+            <li>Adherence to data security practices</li>
+            <li>Language/time-zone compatible staff</li>
+          </ul>
+          <?php } ?>
+        </div>
+      </div>
+      <div class="flex-2 right-box"><?php get_template_part('include/clientele', 'v4.0'); ?></div>
     </div>
   </div>
-  <div class="flex-2 right-box"><?php get_template_part('include/clientele', 'v4.0'); ?></div>
-</div>
-</div>
 </section>
 <?php } ?>
 <!-- WHy Hire Developer From VC -->
@@ -823,23 +805,22 @@ if( is_page('hire-developers') ){
   ?>
 <!-- ValueCoder clientele #Ends Here -->
 <?php 
-$disThree = (isset($dmCTA['dis-3']) && ($dmCTA['dis-3'] == "yes")) ? true : false;
-if( $disThree === false ) :
-$ctaTheme = ( isset($dmCTA['style']) && $dmCTA['style'] == "light" ) ? "bg-light" : "";   
-$ctaWhite = ( isset($dmCTA['style']) && $dmCTA['style'] == "light-white" ) ? "bg-light bg-white" : "";   
-?>
+  $disThree = (isset($dmCTA['dis-3']) && ($dmCTA['dis-3'] == "yes")) ? true : false;
+  if( $disThree === false ) :
+  $ctaTheme = ( isset($dmCTA['style']) && $dmCTA['style'] == "light" ) ? "bg-light" : "";   
+  $ctaWhite = ( isset($dmCTA['style']) && $dmCTA['style'] == "light-white" ) ? "bg-light bg-white" : "";   
+  ?>
 <section class="counter-column-section bg-blue-linear <?php echo $ctaTheme.$ctaWhite; ?> bg-dark padding-t-70 padding-b-70">
   <div class="container">
     <div class="dis-flex justify-sb">
       <div class="left-sec">
         <div class="head-txt">
           <?php 
-          
-          if( isset($dmCTA['required']) && ($dmCTA['required'] == "yes") ){
-            echo '<h2>'.$dmCTA['title-three'].'</h2>';
-            echo '<p>'.$dmCTA['body-three'].'</p>';
-          }else{
-          ?>
+            if( isset($dmCTA['required']) && ($dmCTA['required'] == "yes") ){
+              echo '<h2>'.$dmCTA['title-three'].'</h2>';
+              echo '<p>'.$dmCTA['body-three'].'</p>';
+            }else{
+            ?>
           <h2>
             <?php 
               //echo (isset($vcBtn['title-two']) && !empty($vcBtn['title-two'])) ? $vcBtn['title-two'] : 
@@ -1027,7 +1008,6 @@ $ctaWhite = ( isset($dmCTA['style']) && $dmCTA['style'] == "light-white" ) ? "bg
     </div>
   </section>-->
 <!-- Comparison Table Ends Here -->
-
 <?php 
   $compAnalysis 	= get_field( 'comparative_analysis_section' );
   $compSecEnable 	= $compAnalysis['is_enabled'];
@@ -1045,27 +1025,27 @@ $ctaWhite = ( isset($dmCTA['style']) && $dmCTA['style'] == "light-white" ) ? "bg
       <h2><?php echo $tablesectitle; ?></h2>
       <p><?php echo $tablesecdes; ?></p>
     </div>
-      <?php 
+    <?php 
       /*
       if( have_rows('table_section_comparative_analysis') ): ?>
-      <div class="dis-flex col-box-outer margin-t-100">
-        <?php 
+    <div class="dis-flex col-box-outer margin-t-100">
+      <?php 
         $a = 1; 
         while( have_rows('table_section_comparative_analysis') ): the_row();  ?>
-        <div <?php if ($a == 2) {?> class="flex-4 table-list bg-row-yellow"<?php } else { ?> class="flex-4 table-list"<?php } ?>>
-          <?php if( have_rows('table_item_comparative_analysis') ):   ?>
-          <ul>
-            <?php $i = 0; while( have_rows('table_item_comparative_analysis') ): the_row();   ?>
-            <li class=" <?php echo ( ($i == 0) && ( $a !== 2 )) ? " title clr-white" : ""; ?> <?php echo ( ($i == 0) && ( $a !== 1 )) ? " title" : ""; ?>">
-              <?php the_sub_field('sub_item_text_comparative_analysis'); ?>
-            </li>
-            <?php $i++; endwhile;  ?>
-          </ul>
-          <?php endif; ?>
-        </div>
-        <?php $a++; endwhile; ?>
+      <div <?php if ($a == 2) {?> class="flex-4 table-list bg-row-yellow"<?php } else { ?> class="flex-4 table-list"<?php } ?>>
+        <?php if( have_rows('table_item_comparative_analysis') ):   ?>
+        <ul>
+          <?php $i = 0; while( have_rows('table_item_comparative_analysis') ): the_row();   ?>
+          <li class=" <?php echo ( ($i == 0) && ( $a !== 2 )) ? " title clr-white" : ""; ?> <?php echo ( ($i == 0) && ( $a !== 1 )) ? " title" : ""; ?>">
+            <?php the_sub_field('sub_item_text_comparative_analysis'); ?>
+          </li>
+          <?php $i++; endwhile;  ?>
+        </ul>
+        <?php endif; ?>
       </div>
-      <?php endif; */ ?>
+      <?php $a++; endwhile; ?>
+    </div>
+    <?php endif; */ ?>
     <div class="dis-flex col-box-outer margin-t-100">
       <div class="flex-4 table-list">
         <ul>
@@ -1249,7 +1229,7 @@ $ctaWhite = ( isset($dmCTA['style']) && $dmCTA['style'] == "light-white" ) ? "bg
             Some          
           </li>
           <li class="  ">
-          Uncertain          
+            Uncertain          
           </li>
           <li class="  ">
             Uncertain          
@@ -1281,11 +1261,10 @@ $ctaWhite = ( isset($dmCTA['style']) && $dmCTA['style'] == "light-white" ) ? "bg
   <?php endif; ?>
 </section>
 <?php endif; ?>
-
 <?php 
-$processReq = get_field('pws-needed');
-if( $processReq !== "no" ) :
-?>
+  $processReq = get_field('pws-needed');
+  if( $processReq !== "no" ) :
+  ?>
 <section class="process-work padding-t-150 padding-b-150">
   <div class="container">
     <div class="dis-flex accordian-row justify-sb">
@@ -1376,7 +1355,6 @@ if( $processReq !== "no" ) :
   </div>
 </section>
 <?php endif; ?>
-
 <?php
   $developers = get_field('developers-group');
   $devEnabled = $developers['is_enabled'];
@@ -1456,10 +1434,9 @@ if( $processReq !== "no" ) :
   </div>
 </section>
 <?php endif; ?>
-
 <?php 
-if( $hasDMCta === false ) :
-?>
+  if( $hasDMCta === false ) :
+  ?>
 <section class="experts-talk-first-section bg-blue-linear padding-t-70 padding-b-70" id="dif--exp">
   <div class="container">
     <div class="head-txt text-center">
@@ -1487,7 +1464,6 @@ if( $hasDMCta === false ) :
   </div>
 </section>
 <?php endif; ?>
-
 <?php 
   /*
   $hireProcessSec = get_field('hire_php_developers');
@@ -1709,13 +1685,12 @@ if( $hasDMCta === false ) :
   </div>
 </section>
 <?php endif; ?>
-
 <?php 
-$hpTestimonails = get_field('hp-ctestimonials');
-if( $hpTestimonails !== "no" ){
-  get_template_part('include/testimonials', 'v4.0');   
-}
-?>
+  $hpTestimonails = get_field('hp-ctestimonials');
+  if( $hpTestimonails !== "no" ){
+    get_template_part('include/testimonials', 'v4.0');   
+  }
+  ?>
 <!-- Testimonail Section Ends Here -->
 <div class="free-trail-pop-up">
   <div class="pop-up-inner">
