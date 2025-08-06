@@ -1830,13 +1830,13 @@ body.page-template-template-testimonials .client-video-section iframe,
       line-height: 14px; }
   .second-level-section .form-right-box .head {
     border-radius: 10px 10px 0 0;
-    background: rgba(255, 173, 0, 0.15);
+    background: rgba(255, 173, 0, 0.35);
     padding: 25px 15px;
     text-align: center; }
     .second-level-section .form-right-box .head h3 {
       color: #0f172b;
       font-size: 34px;
-      margin: 0 0 10px;
+      margin: 0 0 15px;
       font-weight: 600; }
     .second-level-section .form-right-box .head p {
       font-weight: 500;
@@ -1964,11 +1964,11 @@ body.page-template-template-testimonials .client-video-section iframe,
         background: rgba(76, 76, 76, 0.7); }
   .second-level-section .form-right-box .gal-loader {
     position: relative;
-    padding: 20px;
+    padding: 20px 0 0;
     display: none; }
     .second-level-section .form-right-box .gal-loader.show-me {
       display: block;
-      min-height: 100px; }
+      min-height: 60px; }
     .second-level-section .form-right-box .gal-loader.active {
       background: rgba(0, 0, 0, 0.1);
       border-radius: 10px; }
@@ -1976,8 +1976,8 @@ body.page-template-template-testimonials .client-video-section iframe,
       border: 5px solid #9f9f9f;
       border-radius: 50%;
       border-top: 5px solid #3498db;
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       -webkit-animation: spin 2s linear infinite;
       animation: spin 2s linear infinite;
       margin-bottom: 10px;
@@ -2082,7 +2082,7 @@ body.page-template-template-testimonials .client-video-section iframe,
   .second-level-section .form-right-box .req {
     display: block;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     color: #0f172b;
     opacity: 0.9;
     line-height: 1;
@@ -2094,8 +2094,6 @@ body.page-template-template-testimonials .client-video-section iframe,
     opacity: 1; }
 
 @media only screen and (max-width: 1700px) {
-  .second-level-section .form-right-box .head {
-    padding: 20px 15px; }
   .second-level-section .form-right-box .form-text-cont {
     margin-top: 15px;
     padding: 0 6px; }
@@ -6643,7 +6641,7 @@ body.page-template-template-testimonials .client-video-section iframe,
         right: 4px; } }
 .second-level-section {
   background-color: #1d1c39;
-  padding: 120px 0 0;
+  padding: 120px 0 30px;
   min-height: initial;
   background-position: top center;
   background-repeat: no-repeat;
