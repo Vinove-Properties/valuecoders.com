@@ -2,53 +2,51 @@
 $formBtn 	= ( isset($args['tpl']) && !empty( $args['tpl'] ) )  ? $args['tpl'] : ""; 
 $hasBtnText = ( isset($args['btn-text']) && !empty( $args['btn-text'] ) )  ? $args['btn-text'] : ""; 
 ?>
-<form id="hire-sb-form" action="<?php bloginfo('url'); ?>/sendmail1.php" class="contact-form-section" 
+<div class="flex-2 header-form">
+            <div class="form-right-box">
+              <div class="head">
+                <h3>Get In Touch</h3>
+                <p>Our team will get back to you within 8 business hours or less.</p>
+              </div>
+              <div class="top-right-form-box">
+<form id="hire-sb-form" 
+action="<?php bloginfo('url'); ?>/sendmail1.php" 
+class="contact-form-section" 
 enctype="multipart/form-data" method="POST" onsubmit="hireFormValidation(); return false;" accept-charset="UTF-8">
 	<div class="form-inner dis-flex">
 		<div class="form-text-cont">
-			<div class="lbl-row">
-				<label for="sb_cont_name">Full Name*</label>
-			</div>
-
+			<div class="lbl-row"><label for="sb_cont_name">Full Name*</label></div>
 			<div class="user-input">
-				<input type="text" autocomplete="off" id="sb_cont_name" placeholder="Enter Your Full Name" class="input-field" value="" maxlength="50" name="user-name">
-				<small>Please Fill Name</small>
+			<input type="text" autocomplete="off" id="sb_cont_name" placeholder="Enter Your Full Name" class="input-field" value="" maxlength="50" name="user-name">
+			<small>Please Fill Name</small>
 			</div>
 		</div>
 
 		<div class="form-text-cont">
-			<div class="lbl-row">
-				<label for="sb_cont_email">Email Address*</label>
-			</div>
-
+			<div class="lbl-row"><label for="sb_cont_email">Email Address*</label></div>
 			<div class="user-input">
-				<input type="text" autocomplete="off" id="sb_cont_email" placeholder="Enter Your Email Address" class="input-field" value="" maxlength="50" name="user-email">
-				<small>Error Message</small>
+			<input type="text" autocomplete="off" id="sb_cont_email" placeholder="Enter Your Email Address" class="input-field" value="" maxlength="50" name="user-email">
+			<small>Error Message</small>
 			</div>
 		</div>
 
 		<div class="form-text-cont">
-			<div class="lbl-row">
-				<label for="sb_cont_phpne">Phone no*</label>
-			</div>
+			<div class="lbl-row"><label for="sb_cont_phpne">Phone no*</label></div>
 
 			<div class="user-input">
-				<input type="text" autocomplete="off" class="input-field" id="sb_cont_phpne" placeholder="Enter Your Phone Number" value="" maxlength="30" name="user-phone">
-				<small>Please Fill Phone</small>
+			<input type="text" autocomplete="off" class="input-field" id="sb_cont_phpne" placeholder="Enter Your Phone Number" value="" maxlength="30" name="user-phone">
+			<small>Please Fill Phone</small>
 			</div>
 		</div>
 
 		<div class="form-text-cont cont_country_section">
-			<div class="lbl-row">
-				<label for="cont_country_sb">Country*</label>
-			</div>
+			<div class="lbl-row"><label for="cont_country_sb">Country*</label></div>
 
 			<div class="user-input">
-				<input class="input-field input-skype" autocomplete="off" id="cont_country_sb" type="text" placeholder="Enter Your Country" value="" maxlength="30" name="user-country">
-				<small>Please Fill Country</small>
+			<input class="input-field input-skype" autocomplete="off" id="cont_country_sb" type="text" placeholder="Enter Your Country" value="" maxlength="30" name="user-country">
+			<small>Please Fill Country</small>
 			</div>
 		</div>
-
 		<div class="textarea-box">
 			<div class="form-text-cont width-full">
 				<div class="lbl-row">
@@ -128,3 +126,6 @@ enctype="multipart/form-data" method="POST" onsubmit="hireFormValidation(); retu
 	</div>
 	</div>
 </form>
+</div>
+</div>
+</div>

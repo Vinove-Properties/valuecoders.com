@@ -106,13 +106,13 @@
           </div> 
         </div>
       </div>
-      <div class="flex-2 right-box">
+      <div class="flex-2 header-form">
         <?php 
-        $conImage = get_field('banner_image');
+        get_template_part('inc/hire', 'form');
+        /*$conImage = get_field('banner_image');
         if( $conImage && is_array($conImage) ){
         echo vc_pictureElm( $conImage, 'ValueCoders', 'soft-img' );
-        }else{
-          
+        }else{          
         $ranpool  = ['hire-banner01','hire-banner02','hire-banner03','hire-banner04','hire-banner05'];
         $bImg = $ranpool[array_rand($ranpool)];
         ?>
@@ -121,7 +121,7 @@
         <source type="image/png" srcset="<?php bloginfo('template_url'); ?>/v4.0/images/<?php echo $bImg; ?>.png">
         <img loading="lazy" src="<?php bloginfo('template_url'); ?>/v4.0/images/<?php echo $bImg; ?>.png" alt="Valuecoders" width="689" height="477"> 
         </picture>
-        <?php } ?>
+        <?php } */ ?>
       </div>
     </div>
   </div>
