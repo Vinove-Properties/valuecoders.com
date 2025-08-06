@@ -1994,8 +1994,8 @@ function _calcReqHandlerCB(){
 	$ip_address     = get_client_ip_user();
 	
 	$serialized_form_data = maybe_serialize( $elmForms );
-	smtpEmailFunction( "nitin.baluni@mail.vinove.com", "Inquiry with ValueCoders - Cost Calculator", $markup.$costing_req, "lead", 
-	$email, [], [], [], $name, false );
+	smtpEmailFunction( "nitin.baluni@mail.vinove.com", "Inquiry with ValueCoders - Cost Calculator", 
+	$markup.$costing_req, "lead", $email, [], [], [], $name, false );
 	
 	$getUTM_source = (isset($_COOKIE['utm_source']) && !empty($_COOKIE['utm_source'])) ? $_COOKIE['utm_source'] : '';
     $getUTM_medium = (isset($_COOKIE['utm_medium']) && !empty($_COOKIE['utm_medium'])) ? $_COOKIE['utm_medium'] : '';
