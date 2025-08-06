@@ -1,15 +1,15 @@
 <?php
-//ini_set('display_errors', 1);
-//ini_set('display_startup_errors', 1);
-//error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 if( ($_SERVER['REQUEST_METHOD'] == 'GET') && realpath(__FILE__) == realpath( $_SERVER['SCRIPT_FILENAME'] ) ){
     header( 'HTTP/1.0 403 Forbidden', TRUE, 403 );
     die("HEY BOAT.. Go Away");
 }
+
 require 'countries-array.php';
 require 'vc-config.php';
 require 'vc-mailto.php';
-
 
 $is_staging = ( isset( $_SERVER['PHP_SELF'] ) && (strpos( $_SERVER['PHP_SELF'], 'staging' ) !== false) )  ?  true : false;
 $ajxData    = json_decode(file_get_contents("php://input"), true);
@@ -36,7 +36,6 @@ if( validateSpamAttacker( $_POST['user-email'], $thisIPAddr ) === false ){
 }
 
 function logSpamException( $arrPostParams, $note = '' ){ 
-    //return true;
     $user_name      = nbHasData($arrPostParams, 'user-name');
     $user_email     = nbHasData($arrPostParams, 'user-email');
     $user_phone     = nbHasData($arrPostParams, 'user-phone');
@@ -112,10 +111,12 @@ function logSpamException( $arrPostParams, $note = '' ){
     
     
     //Live
-    //smtpEmailFunction( "web@vinove.com", "Inquiry with ValueCoders - Spam Exception", $Mailbody, "lead", $user_email, [], [], [], $user_name );
+    smtpEmailFunction( "web@vinove.com", "Inquiry with ValueCoders - Spam Exception", $Mailbody, "lead", 
+    $user_email, [], [], [], $user_name );
     
     //Test
-    smtpEmailFunction("niraj.kumar@mail.vinove.com", "Inquiry with ValueCoders - Spam Exception", $Mailbody, "lead", $user_email, [], ["nitin.baluni@mail.vinove.com"], [], $user_name);
+    /*smtpEmailFunction("nitin.baluni@mail.vinove.com", "Inquiry with ValueCoders - Spam Exception", $Mailbody, "lead", 
+    $user_email, [], [], [], $user_name);*/
 }
 
 if( $isAjay === false ){ 
@@ -166,12 +167,8 @@ if( $isAjay === false ){
         die;
     }
 }
-define('CLIENT_ID','1000.BMJ414JAF95SXHD4YKRK0FJ3JC57VH');
-define('CLIENT_SECRET','e9a796ffde50de7a3198d63f134196d125bae343d0');
-define('ACESS_TOKEN','1000.cae698c21d5f8adc4f5f8e1ae60a3c39.6008000ac10c5df23ebf773f63194b81');
-define('REFRESH_TOKEN','1000.b4d2d568df487f80bc73675a27101c45.d7cc4b483d0157d16f672e86dc354d62');
 
-$arrEmail = [];
+$arrEmail = array('parvesh@vinove.com', 'akhil@valuecoders.com');
 $deny_ips = array( '146.185.253.167', '146.185.253.165' );
 
 $spamEmailManual = ['MerinoBart@o2.pl', 'ericjonesmyemail@gmail.com'];
@@ -190,10 +187,8 @@ if( isset( $_POST['user-name'] ) && in_array($_POST['user-name'], $spamNameManua
 
 
 if( $isAjay === false ){
-    $captcha = (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) ? $_POST['g-recaptcha-response'] : false;
-    if( isset($_POST['user-email']) && (strpos( $_POST['user-email'], 'spam' ) !== false) ){
-    $captcha = "1000.b4d2d568df487f80bc73675a27101c45.d7cc4b483d0157d16f672e86dc354d62";    
-    }
+$captcha = (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) ? $_POST['g-recaptcha-response'] : 
+false;
     if( $captcha !== false ){
         $isSmap = validatereCaptchaResponse( $captcha, $_POST );
         if( $isSmap === false ){
@@ -234,209 +229,12 @@ function getSpamEmailsListings( $jsonFile ){
     return $data;
 }
 
-
-
-
-
 ob_start();
 session_start();
-
 if( isset( $_SESSION["queryString"] ) && !empty( $_SESSION["queryString"] ) ){ 
     $varRefererURL = $_SESSION["queryString"];     //$_SERVER[HTTP_REFERER];
 }else{
     $varRefererURL = $_SERVER['HTTP_REFERER'];
-}
-/*
-$spamReferer    = ['so5ni.com'];
-if( $varRefererURL ){
-    foreach( $spamReferer as $spam ){
-        if( strpos( $varRefererURL, $spam ) || (strpos( $varRefererURL, $spam ) === 0) ){
-            header( 'location:thanks.php' );
-            die;
-        }
-    }
-}
-*/
-
-/*
-//Temp Remove #1
-$htFields = hiddenBoatField('list');
-foreach( $_POST as $key => $fields ){
-    if( in_array( $key, $htFields ) && ($_POST[$key] != "") ){
-        header('location:thanks.php');
-        die;
-    }
-}
-*/
-
-$varIPAdd = get_client_ip_user(); 
-//$varIPAdd = $_SERVER['REMOTE_ADDR'];
-$varBrowserInfo = $_SERVER['HTTP_USER_AGENT'];
-$varDateAdded = date('Y-m-d H:i:s');
-
-//zohocrm api v2 update --23-Dec-2019
-function zohoCrmUpdate_v2( $argArrData, $leadSource='', $owner_id = 658520861, $is_update = false ){
-    $lead_id        = 0;
-    $varEmail       = $argArrData['Email'];
-    $varLastName    = $argArrData['Last Name'];
-    $varFirstName   = $argArrData['First Name'];
-    $varPhoneNo     = $argArrData['Phone'];
-    $varLeadStatus  = $argArrData['Lead Status'];
-    $varLeadSource  = $argArrData['Lead Source'];
-
-    $varUTMSource   = $argArrData['UTM Source'];
-    $varUTMMedium   = $argArrData['UTM Medium'];
-
-    $varProperty    = $argArrData['Property'];
-    $varIPAddress   = $argArrData['IP Address'];
-    $varDescription = $argArrData['Description'];
-
-    $user_country   = $argArrData['Country'];
-    $varURL         = $argArrData['URL'];
-    $varUploadedFiles = $argArrData['File Uploaded'];
-    $varRequirements = $argArrData['Requirements'];
-    $varRefURL       = $argArrData['refurl'];
-    $postData = 'refresh_token='. REFRESH_TOKEN.'&client_id='.CLIENT_ID.'&client_secret='.CLIENT_SECRET.'&grant_type='.'refresh_token';
-    $curl           = curl_init();
-
-    curl_setopt_array($curl, array(
-        CURLOPT_URL => "https://accounts.zoho.com/oauth/v2/token",//US DC .com, IN DC .in
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => "",
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 30,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => "POST",
-        CURLOPT_POSTFIELDS => $postData,
-
-    ));
-    $response = curl_exec($curl);
-    $arrRefreshTokResponse =json_decode($response,true);
-    $varAccessToken = $arrRefreshTokResponse['access_token'];
-    $err = curl_error($curl);    
-    curl_close( $curl );
-    if(!$err){
-        $zo_requirement = "";
-        
-        if( $varURL ){
-        $zo_requirement .= "Url: ".$varURL;
-        }
-        
-        if( $varUploadedFiles ){
-        $zo_requirement .= " File Uploaded: ".$varUploadedFiles;    
-        }
-
-        if( $varRequirements ){
-        $zo_requirement .= " Requirements: ".$varRequirements;
-        }
-
-        $zoho_data = array(
-        'First_Name'    => $varFirstName,
-        'Last_Name'     => $varLastName,
-        'Email'         => $varEmail,
-        'Country1'      => $user_country,
-        'Phone'         => $varPhoneNo,
-        'Lead_Source'   => $varLeadSource,
-        'Lead_Status'   => $varLeadStatus,
-        'Owner'         => $owner_id,
-        'Description'   => $zo_requirement,
-        'Sales_Qualified_Lead' => "Yes",
-        'Is_Duplicate'  => "No",
-        'UTM_Source'    => $varUTMSource,
-        'UTM_Medium'    => $varUTMMedium,
-        'Property'      => $varProperty,
-        'IP_Address1'   => $varIPAddress,
-        'Ref_Url'       => $varRefURL
-        );
-        
-        if( $is_update !== false  ){
-            $zoho_data['id'] = $is_update;
-        }
-
-        $curl   = curl_init();        
-        $sJSON  = json_encode( $zoho_data );
-        $sJSON  = str_replace('{','[{',$sJSON);
-        $sJSON  = str_replace('}','}]',$sJSON);
-        $postLeadData = '{"data":' . $sJSON . '}';
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => "https://www.zohoapis.com/crm/v2/Leads",//US DC .com, IN DC .in
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => "",
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 30,
-            CURLOPT_HTTP_VERSION    => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST   => ($is_update !== false) ? "PUT" : "POST",
-            CURLOPT_POSTFIELDS      => $postLeadData,
-            CURLOPT_HTTPHEADER      => array(
-                "authorization: Zoho-oauthtoken $varAccessToken",
-                "cache-control: no-cache",
-                "content-type: application/json"
-            ),
-        ));
-
-        $response  = curl_exec($curl);
-        $err       = curl_error($curl);
-        curl_close($curl);
-        if( !$err ){
-            $body1          = '';
-            $crmException   = $response;
-            $response       = json_decode( $response );
-            
-            $rspCode    = ['DUPLICATE_DATA', 'SUCCESS'];
-            $statusCode = (isset($response->data[0]) && !empty($response->data[0]->code)) ? $response->data[0]->code : '';
-            
-            if( !empty( $statusCode ) && !in_array($statusCode, $rspCode) ){
-            $user_name = $varFirstName.' '.$varLastName;
-            smtpEmailFunction( "web@vinove.com", "Zoho CRM error - ValueCoders", $crmException, "lead", 
-            $varEmail, [], [], [], $user_name );
-            }
-
-            //Duplicate Lead Check.. 09.02.2023 NITIN BALUNI
-            if( isset( $response->data[0] ) &&  ($response->data[0]->code == "DUPLICATE_DATA") ) :
-                $lead_id = ( isset( $response->data[0] ) ) ? $response->data[0]->details->id : 0;
-                if( $lead_id !== 0 ){
-                    $zoho_data = array(
-                    'id'                    => $lead_id,
-                    'Lead_Status'           => "Not Contacted Yet",
-                    'Owner'                 => 720093253,
-                    'Sales_Qualified_Lead'  => "Yes",
-                    'Is_Duplicate'          => "Yes"
-                    );
-
-                    $curl   = curl_init();        
-                    $sJSON  = json_encode( $zoho_data );
-                    $sJSON  = str_replace('{','[{',$sJSON);
-                    $sJSON  = str_replace('}','}]',$sJSON);
-                    $postLeadData = '{"data":' . $sJSON . '}';
-                    curl_setopt_array($curl, array(
-                    CURLOPT_URL => "https://www.zohoapis.com/crm/v2/Leads",
-                    CURLOPT_RETURNTRANSFER => true,
-                    CURLOPT_ENCODING => "",
-                    CURLOPT_MAXREDIRS => 10,
-                    CURLOPT_TIMEOUT => 30,
-                    CURLOPT_HTTP_VERSION    => CURL_HTTP_VERSION_1_1,
-                    CURLOPT_CUSTOMREQUEST   => "PUT",
-                    CURLOPT_POSTFIELDS      => $postLeadData,
-                    CURLOPT_HTTPHEADER      => array(
-                    "authorization: Zoho-oauthtoken $varAccessToken",
-                    "cache-control: no-cache",
-                    "content-type: application/json"
-                    ),
-                    ));
-
-                    $response  = curl_exec($curl);
-                    curl_close( $curl );
-                    $response   = json_decode( $response );
-                    if( $is_update === false ){
-                        dupLeadNote( $varAccessToken, $lead_id, $varRequirements );
-                    }                    
-                    return $lead_id;
-                }           
-            endif;
-            $lead_id = ( isset( $response->data[0] ) ) ? $response->data[0]->details->id : 0;            
-        }
-    }
-    return $lead_id;
 }
 
 function checkSpamEmail($email) {
@@ -498,25 +296,6 @@ if( $isAjay === true ){
         $lead_source = "Website";
     }
 
-    /*
-    $parts = explode(" ", $ajxData['name']);
-    if(count($parts) > 1) {
-        $firstn = array_pop($parts);
-        $lastn = implode(" ", $parts);
-    }
-    else
-    {
-        $firstn = "";
-        $lastn = $user_name;
-    }
-
-    if( empty( $lastn ) ){
-        $lastn = $user_name;
-    }
-    */
-
-    //$ajxData['name']
-
     $partName   = vcGetName( $ajxData['name'] );
     $firstn     = $partName[0];
     $lastn      = ( !empty($partName[1]) ) ? $partName[1] : 'N/A';
@@ -540,7 +319,8 @@ if( $isAjay === true ){
     $eSender = splEmailData( $user_country );
     $ajxTicketID   = generateTicketID();
     if( isset( $eSender['mail_to'] ) ){
-
+    smtpEmailFunction( $eSender['mail_to'], "Inquiry with ValueCoders [".$ajxTicketID."]", $Mailbody, "lead", 
+    $ajxData['email'], [], ["parvesh@vinove.com", "nitin.baluni@mail.vinove.com"], [], $ajxData['name'] );
     }
 
     $leadReq = "How Can We Help : ".$ajxData['how_can'];
@@ -778,6 +558,7 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
     $headers .= "Content-type: text/html; charset=ISO-8859-1\r\n";
     $headers .= "From: " . $_POST["user-email"] . " <" . $_POST["user-email"] . ">" . "\r\n";
     $headers .= "Reply-To: " . $_POST["user-email"] . "\r\n";
+    //$headers .= "BCC: parvesh@vinove.com\r\n";
     for($i=0;$i<count($arrEmail);$i++){
         $headers .= "BCC: $arrEmail[$i]\r\n";
     }
@@ -846,7 +627,8 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
     */
 
     array_shift( $arrEmail );
-    $bccEmails      = ['nitin.baluni@mail.vinove.com'];
+    //$bccEmails      = ['parvesh@vinove.com', 'nitin.baluni@mail.vinove.com'];
+    $bccEmails    = ['parvesh@vinove.com'];
     $sampledata = [
     'name'          => $user_name,
     'email'         => $user_email,
@@ -890,6 +672,13 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
             if( isset( $_POST['nda'] ) ){
             $attachmentDoc = ['/home/valuecoders-com/public_html/download-pdf/ValueCoders-NDA.pdf'];    
             }
+
+            if( $arrPostParams['we-help'] == "career" ){
+            smtpEmailFunction( "careers@vinove.com", "Job Application - ValueCoders", $Mailbody, "lead", $user_email, 
+            ['parvesh@vinove.com','karma@vinove.com'], [], [], $user_name );
+            header('location:thanks');
+            die;
+            }
             
             smtpEmailFunction( $user_email, "ValueCoders - We've received your request", $autoEmailBody, "auto", $user_email, [], [], $attachmentDoc );
             $eSender = splEmailData( $user_country );
@@ -899,12 +688,17 @@ function sendmail_function($arrPostParams, $uploaded_files_names_param){
             if( isset($arrPostParams['is_free_trial']) && ($arrPostParams['is_free_trial'] == "true") ){
             $tempEmailSubject = "Request for 7-Day Trial [".$ticketID."]";    
             }
-            smtpEmailFunction( "niraj.kumar@mail.vinove.com", $tempEmailSubject, $Mailbody, "lead", $user_email, [], $bccEmails, [], $user_name, false );        
-            // $emailBBB =  $Mailbody.$bodyBr.print_r( $_COOKIE, 1 );
-            // smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Contact Us - DEV", $emailBBB, "lead", $user_email, [], [], [], $user_name );
+            // if( $eSender['mail_to'] == "pa" ){
+            // smtpEmailFunction( "parvesh@vinove.com", $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], [], [], $user_name, false );    
+            // }else{
+            // smtpEmailFunction( $eSender['mail_to'], $tempEmailSubject, $Mailbody, "lead", $user_email, $eSender['mail_cc'], $bccEmails, [], $user_name, false );        
+            // }
             
-            // $insType = (isset($arrPostParams['z-leadid']) && !empty($arrPostParams['z-leadid'])) ? $arrPostParams['z-leadid'] : false;
-            // zohoCrmUpdate_v2( $arrZoho_v2, $utm_source, $eSender['lead_to'], $insType );
+            $emailBBB =  $Mailbody.$bodyBr.print_r( $_COOKIE, 1 );
+            smtpEmailFunction( "nitin.baluni@mail.vinove.com", "ValueCoders Contact Us - DEV", $emailBBB, "lead", $user_email, [], [], [], $user_name );
+            
+            $insType = (isset($arrPostParams['z-leadid']) && !empty($arrPostParams['z-leadid'])) ? $arrPostParams['z-leadid'] : false;
+            //zohoCrmUpdate_v2( $arrZoho_v2, $utm_source, $eSender['lead_to'], $insType );
             }
     }
 
