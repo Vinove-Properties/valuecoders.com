@@ -94,8 +94,8 @@
                 <input type="hidden" name="frmqueryString" value="">
                 <input type="hidden" name="page_url" value="<?php the_permalink(); ?>">
                 <input type="hidden" name="is_free_trial" value="true">
-                <button type="submit" id="hire-submitButton" class="checkout-submit" value="Start My Trial">
-                Start My Trial</button>
+                <button type="submit" id="hire-submitButton" class="checkout-submit" value="Hire Experts">
+                Hire Experts</button>
 				<a href="javascript:void(0);" onclick="consultCTA_cb();" target="_self" class="req">
                 Book A Call</a>
               </div>
