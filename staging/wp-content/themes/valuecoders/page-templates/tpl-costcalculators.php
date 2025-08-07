@@ -52,19 +52,21 @@ get_header();
 
       <div class="user-input">
         <label>
-          <span class="fname">Company Name *</span>
-          <input type="text" name="company" id="cl-company" value="">
-          <small class="error-message"></small>
-        </label>  
-      </div>              
-
-      <div class="user-input">
-        <label>
           <span class="fname">Work Email *</span>
           <input type="email" name="email" id="cl-email" value="" data-err="Please Fill Email">
           <small class="error-message"></small>
         </label>  
       </div>           
+
+      <div class="user-input">
+        <label>
+          <span class="fname">Country *</span>
+          <input type="text" name="company" id="cl-company" value="">
+          <small class="error-message"></small>
+        </label>  
+      </div>              
+
+      
       
       <div class="user-input">   
         <label>
