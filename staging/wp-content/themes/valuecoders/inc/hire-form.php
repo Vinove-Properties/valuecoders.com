@@ -47,10 +47,11 @@
           <div class="textarea-box">
             <div class="form-text-cont width-full">
               <div class="lbl-row">
-                <label for="sb_user_req">Project Brief*</label>
+                <label for="sb_user_req">Your Requirements*</label>
               </div>
               <div class="user-input">
-                <textarea class="input-field comment-input" autocomplete="off" id="sb_user_req" placeholder="Enter your Project Brief" name="user-req"></textarea>
+                <textarea class="input-field comment-input" autocomplete="off" id="sb_user_req" 
+                placeholder="Enter your requirements" name="user-req"></textarea>
                 <small>Please Fill Requirement</small>
                 <div class="drop-input attachment_brw" id="sb-uploadcontact">
                   <div id="sb-dropcontact"></div>
