@@ -382,7 +382,7 @@ endif;
 $loop = [];
 
 $response = wp_remote_get('https://www.valuecoders.com/blog/wp-json/bposts/v1/cat-posts/'.preg_replace('/\s+/', '','ai-development-company'));
-echo 'https://www.valuecoders.com/blog/wp-json/bposts/v1/cat-posts/'.preg_replace('/\s+/', '','ai-development-company'); die;
+//echo 'https://www.valuecoders.com/blog/wp-json/bposts/v1/cat-posts/'.preg_replace('/\s+/', '','ai-development-company'); die;
 if(is_array( $response ) && !is_wp_error( $response )){
   $data   = json_decode($response['body']);
   if( is_array($data) && (count( $data ) > 1) ){
