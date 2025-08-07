@@ -96,6 +96,7 @@
                 <input type="hidden" name="is_free_trial" value="false">
                 <button type="submit" id="hire-submitButton" class="checkout-submit" value="Hire Experts">
                 Hire Experts</button>
+				<span class="devide">OR</span>
 				        <a href="javascript:void(0);" onclick="consultCTA_cb();" target="_self" class="req">
                 Book A Call</a>
               </div>
