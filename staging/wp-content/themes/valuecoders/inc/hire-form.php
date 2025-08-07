@@ -29,7 +29,9 @@
             </div>
           </div>
           <div class="form-text-cont">
-            <div class="lbl-row"><label for="sb_cont_phpne">Phone no*</label></div>
+            <div class="lbl-row">
+              <label for="sb_cont_phpne">Phone no <span style="font-size:12px;">(Optional)</span></label>
+            </div>
             <div class="user-input">
               <input type="text" autocomplete="off" class="input-field" id="sb_cont_phpne" placeholder="Enter Your Phone Number" value="" maxlength="30" name="user-phone">
               <small>Please Fill Phone</small>

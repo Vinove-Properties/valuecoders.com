@@ -64,10 +64,10 @@ sbcountriesData.addEventListener("keypress", sbcheckCont);
 sbcountriesData.addEventListener("keydown", sbvalidateStrVc);
 sbcountriesData.addEventListener("focusout", sbcheckCont);
 
-sbphone.addEventListener("keyup", sbcheckPhone);
-sbphone.addEventListener("keypress", sbcheckPhone);
-sbphone.addEventListener("keydown", sbcheckPhone);
-sbphone.addEventListener("focusout", sbcheckPhone);
+// sbphone.addEventListener("keyup", sbcheckPhone);
+// sbphone.addEventListener("keypress", sbcheckPhone);
+// sbphone.addEventListener("keydown", sbcheckPhone);
+// sbphone.addEventListener("focusout", sbcheckPhone);
 
 sbemail.addEventListener("keyup", sbcheckEmailEvent);
 sbemail.addEventListener("keydown", sbcheckEmailEvent);
@@ -167,11 +167,12 @@ function sbvcSpaceChecker( input ){
 }
 
 async function hireFormValidation(){
-	sbcheckRequired( [sbusername, sbemail, sbphone, sbcountriesData, sbuRequirement] );
+	//sbcheckRequired( [sbusername, sbemail, sbphone, sbcountriesData, sbuRequirement] );
+	sbcheckRequired( [sbusername, sbemail, sbcountriesData, sbuRequirement] );
 	if(
 		( sbvcSpaceChecker(sbemail.value.trim()) === true ) && 
 		( sbvcSpaceChecker(sbusername.value.trim()) === true ) && 
-		( sbvcSpaceChecker(sbphone.value.trim()) === true ) && 
+		//( sbvcSpaceChecker(sbphone.value.trim()) === true ) && 
 		( sbvcSpaceChecker(sbcountriesData.value.trim()) ===true ) && 
 		( sbvcSpaceChecker(sbuRequirement.value.trim()) === true ) 
 	){
